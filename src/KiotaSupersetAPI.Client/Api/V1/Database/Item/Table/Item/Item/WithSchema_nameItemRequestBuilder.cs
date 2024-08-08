@@ -41,33 +41,33 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Table.Item.Item
         /// <summary>
         /// Get database table metadata
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.TableMetadataResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.TableMetadataResponseSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.TableMetadataResponseSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.TableMetadataResponseSchema404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.TableMetadataResponseSchema422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.TableMetadataResponseSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.TableMetadataResponseSchema?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.TableMetadataResponseSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.TableMetadataResponseSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.TableMetadataResponseSchema401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.TableMetadataResponseSchema404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.TableMetadataResponseSchema422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.TableMetadataResponseSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.TableMetadataResponseSchema>(requestInfo, KClient.Models.TableMetadataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get database table metadata

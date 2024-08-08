@@ -44,10 +44,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites
         /// <returns>A <see cref="KApi.Tag.Item.Favorites.FavoritesDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Favorites422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Tag.Item.Favorites.FavoritesDeleteResponse?> DeleteAsFavoritesDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -60,10 +60,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Favorites401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Favorites404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Favorites422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Favorites500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Favorites401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Favorites422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Tag.Item.Favorites.FavoritesDeleteResponse>(requestInfo, KApi.Tag.Item.Favorites.FavoritesDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -73,10 +73,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites
         /// <returns>A <see cref="KApi.Tag.Item.Favorites.FavoritesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Favorites422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use DeleteAsFavoritesDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,10 +90,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Favorites401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Favorites404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Favorites422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Favorites500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Favorites401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Favorites422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Tag.Item.Favorites.FavoritesResponse>(requestInfo, KApi.Tag.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -103,10 +103,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites
         /// <returns>A <see cref="KApi.Tag.Item.Favorites.FavoritesPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Favorites422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Tag.Item.Favorites.FavoritesPostResponse?> PostAsFavoritesPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -119,10 +119,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Favorites401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Favorites404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Favorites422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Favorites500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Favorites401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Favorites422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Tag.Item.Favorites.FavoritesPostResponse>(requestInfo, KApi.Tag.Item.Favorites.FavoritesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -132,10 +132,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites
         /// <returns>A <see cref="KApi.Tag.Item.Favorites.FavoritesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Favorites422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PostAsFavoritesPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -149,10 +149,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Favorites401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Favorites404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Favorites422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Favorites500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Favorites401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Favorites422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Tag.Item.Favorites.FavoritesResponse>(requestInfo, KApi.Tag.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -113,10 +113,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         /// <returns>A <see cref="KApi.Database.DatabaseGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Database422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Database.DatabaseGetResponse?> GetAsDatabaseGetResponseAsync(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -129,10 +129,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Database400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Database401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Database422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Database500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Database400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Database401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Database422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Database.DatabaseGetResponse>(requestInfo, KApi.Database.DatabaseGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -142,10 +142,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         /// <returns>A <see cref="KApi.Database.DatabaseResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Database422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsDatabaseGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -159,10 +159,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Database400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Database401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Database422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Database500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Database400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Database401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Database422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Database.DatabaseResponse>(requestInfo, KApi.Database.DatabaseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -173,27 +173,27 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Database404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Database.DatabasePostResponse?> PostAsDatabasePostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.DatabasePostResponse?> PostAsDatabasePostResponseAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Database.DatabasePostResponse> PostAsDatabasePostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.DatabasePostResponse> PostAsDatabasePostResponseAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Database400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Database401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Database404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Database500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Database400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Database401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Database404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Database.DatabasePostResponse>(requestInfo, KApi.Database.DatabasePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -204,28 +204,28 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Database500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Database404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PostAsDatabasePostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Database.DatabaseResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.DatabaseResponse?> PostAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Database.DatabaseResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.DatabaseResponse> PostAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Database400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Database401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Database404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Database500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Database400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Database401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Database404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Database.DatabaseResponse>(requestInfo, KApi.Database.DatabaseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -256,11 +256,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));

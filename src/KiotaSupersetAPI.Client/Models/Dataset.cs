@@ -24,34 +24,34 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Column formats.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Dataset_column_formats? ColumnFormats { get; set; }
+        public KClient.Models.Dataset_column_formats? ColumnFormats { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Dataset_column_formats ColumnFormats { get; set; }
+        public KClient.Models.Dataset_column_formats ColumnFormats { get; set; }
 #endif
         /// <summary>Columns metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.Dataset_columns>? Columns { get; set; }
+        public List<KClient.Models.Dataset_columns>? Columns { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.Dataset_columns> Columns { get; set; }
+        public List<KClient.Models.Dataset_columns> Columns { get; set; }
 #endif
         /// <summary>Currency formats.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Dataset_currency_formats? CurrencyFormats { get; set; }
+        public KClient.Models.Dataset_currency_formats? CurrencyFormats { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Dataset_currency_formats CurrencyFormats { get; set; }
+        public KClient.Models.Dataset_currency_formats CurrencyFormats { get; set; }
 #endif
         /// <summary>Database associated with the dataset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Dataset_database? Database { get; set; }
+        public KClient.Models.Dataset_database? Database { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Dataset_database Database { get; set; }
+        public KClient.Models.Dataset_database Database { get; set; }
 #endif
         /// <summary>Dataset name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,10 +88,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>JSON string containing extra configuration elements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Dataset_extra? Extra { get; set; }
+        public KClient.Models.Dataset_extra? Extra { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Dataset_extra Extra { get; set; }
+        public KClient.Models.Dataset_extra Extra { get; set; }
 #endif
         /// <summary>Predicate used when fetching values from the dataset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -136,10 +136,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Dataset metrics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.Dataset_metrics>? Metrics { get; set; }
+        public List<KClient.Models.Dataset_metrics>? Metrics { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.Dataset_metrics> Metrics { get; set; }
+        public List<KClient.Models.Dataset_metrics> Metrics { get; set; }
 #endif
         /// <summary>Dataset name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -170,10 +170,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Extra params for the dataset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Dataset_params? Params { get; set; }
+        public KClient.Models.Dataset_params? Params { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Dataset_params Params { get; set; }
+        public KClient.Models.Dataset_params Params { get; set; }
 #endif
         /// <summary>Permission expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -218,10 +218,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Table template params.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Dataset_template_params? TemplateParams { get; set; }
+        public KClient.Models.Dataset_template_params? TemplateParams { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Dataset_template_params TemplateParams { get; set; }
+        public KClient.Models.Dataset_template_params TemplateParams { get; set; }
 #endif
         /// <summary>List of temporal granularities supported by the dataset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -250,13 +250,13 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Mapping from raw name to verbose name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Dataset_verbose_map? VerboseMap { get; set; }
+        public KClient.Models.Dataset_verbose_map? VerboseMap { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Dataset_verbose_map VerboseMap { get; set; }
+        public KClient.Models.Dataset_verbose_map VerboseMap { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.Dataset"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.Dataset"/> and sets the default values.
         /// </summary>
         public Dataset()
         {
@@ -265,12 +265,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.Dataset"/></returns>
+        /// <returns>A <see cref="KClient.Models.Dataset"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.Dataset CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.Dataset CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.Dataset();
+            return new KClient.Models.Dataset();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -281,15 +281,15 @@ namespace KiotaSupersetAPI.Client.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
-                { "column_formats", n => { ColumnFormats = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_column_formats>(global::KiotaSupersetAPI.Client.Models.Dataset_column_formats.CreateFromDiscriminatorValue); } },
-                { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Dataset_columns>(global::KiotaSupersetAPI.Client.Models.Dataset_columns.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "currency_formats", n => { CurrencyFormats = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_currency_formats>(global::KiotaSupersetAPI.Client.Models.Dataset_currency_formats.CreateFromDiscriminatorValue); } },
-                { "database", n => { Database = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_database>(global::KiotaSupersetAPI.Client.Models.Dataset_database.CreateFromDiscriminatorValue); } },
+                { "column_formats", n => { ColumnFormats = n.GetObjectValue<KClient.Models.Dataset_column_formats>(KClient.Models.Dataset_column_formats.CreateFromDiscriminatorValue); } },
+                { "columns", n => { Columns = n.GetCollectionOfObjectValues<KClient.Models.Dataset_columns>(KClient.Models.Dataset_columns.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "currency_formats", n => { CurrencyFormats = n.GetObjectValue<KClient.Models.Dataset_currency_formats>(KClient.Models.Dataset_currency_formats.CreateFromDiscriminatorValue); } },
+                { "database", n => { Database = n.GetObjectValue<KClient.Models.Dataset_database>(KClient.Models.Dataset_database.CreateFromDiscriminatorValue); } },
                 { "datasource_name", n => { DatasourceName = n.GetStringValue(); } },
                 { "default_endpoint", n => { DefaultEndpoint = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "edit_url", n => { EditUrl = n.GetStringValue(); } },
-                { "extra", n => { Extra = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_extra>(global::KiotaSupersetAPI.Client.Models.Dataset_extra.CreateFromDiscriminatorValue); } },
+                { "extra", n => { Extra = n.GetObjectValue<KClient.Models.Dataset_extra>(KClient.Models.Dataset_extra.CreateFromDiscriminatorValue); } },
                 { "fetch_values_predicate", n => { FetchValuesPredicate = n.GetStringValue(); } },
                 { "filter_select", n => { FilterSelect = n.GetBoolValue(); } },
                 { "filter_select_enabled", n => { FilterSelectEnabled = n.GetBoolValue(); } },
@@ -298,22 +298,22 @@ namespace KiotaSupersetAPI.Client.Models
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "is_sqllab_view", n => { IsSqllabView = n.GetBoolValue(); } },
                 { "main_dttm_col", n => { MainDttmCol = n.GetStringValue(); } },
-                { "metrics", n => { Metrics = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Dataset_metrics>(global::KiotaSupersetAPI.Client.Models.Dataset_metrics.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "metrics", n => { Metrics = n.GetCollectionOfObjectValues<KClient.Models.Dataset_metrics>(KClient.Models.Dataset_metrics.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "offset", n => { Offset = n.GetIntValue(); } },
                 { "order_by_choices", n => { OrderByChoices = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "owners", n => { Owners = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
-                { "params", n => { Params = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_params>(global::KiotaSupersetAPI.Client.Models.Dataset_params.CreateFromDiscriminatorValue); } },
+                { "params", n => { Params = n.GetObjectValue<KClient.Models.Dataset_params>(KClient.Models.Dataset_params.CreateFromDiscriminatorValue); } },
                 { "perm", n => { Perm = n.GetStringValue(); } },
                 { "schema", n => { Schema = n.GetStringValue(); } },
                 { "select_star", n => { SelectStar = n.GetStringValue(); } },
                 { "sql", n => { Sql = n.GetStringValue(); } },
                 { "table_name", n => { TableName = n.GetStringValue(); } },
-                { "template_params", n => { TemplateParams = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_template_params>(global::KiotaSupersetAPI.Client.Models.Dataset_template_params.CreateFromDiscriminatorValue); } },
+                { "template_params", n => { TemplateParams = n.GetObjectValue<KClient.Models.Dataset_template_params>(KClient.Models.Dataset_template_params.CreateFromDiscriminatorValue); } },
                 { "time_grain_sqla", n => { TimeGrainSqla = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "uid", n => { Uid = n.GetStringValue(); } },
-                { "verbose_map", n => { VerboseMap = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_verbose_map>(global::KiotaSupersetAPI.Client.Models.Dataset_verbose_map.CreateFromDiscriminatorValue); } },
+                { "verbose_map", n => { VerboseMap = n.GetObjectValue<KClient.Models.Dataset_verbose_map>(KClient.Models.Dataset_verbose_map.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -324,15 +324,15 @@ namespace KiotaSupersetAPI.Client.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("cache_timeout", CacheTimeout);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_column_formats>("column_formats", ColumnFormats);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Dataset_columns>("columns", Columns);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_currency_formats>("currency_formats", CurrencyFormats);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_database>("database", Database);
+            writer.WriteObjectValue<KClient.Models.Dataset_column_formats>("column_formats", ColumnFormats);
+            writer.WriteCollectionOfObjectValues<KClient.Models.Dataset_columns>("columns", Columns);
+            writer.WriteObjectValue<KClient.Models.Dataset_currency_formats>("currency_formats", CurrencyFormats);
+            writer.WriteObjectValue<KClient.Models.Dataset_database>("database", Database);
             writer.WriteStringValue("datasource_name", DatasourceName);
             writer.WriteStringValue("default_endpoint", DefaultEndpoint);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("edit_url", EditUrl);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_extra>("extra", Extra);
+            writer.WriteObjectValue<KClient.Models.Dataset_extra>("extra", Extra);
             writer.WriteStringValue("fetch_values_predicate", FetchValuesPredicate);
             writer.WriteBoolValue("filter_select", FilterSelect);
             writer.WriteBoolValue("filter_select_enabled", FilterSelectEnabled);
@@ -341,22 +341,22 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("is_sqllab_view", IsSqllabView);
             writer.WriteStringValue("main_dttm_col", MainDttmCol);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Dataset_metrics>("metrics", Metrics);
+            writer.WriteCollectionOfObjectValues<KClient.Models.Dataset_metrics>("metrics", Metrics);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("offset", Offset);
             writer.WriteObjectValue<UntypedNode>("order_by_choices", OrderByChoices);
             writer.WriteCollectionOfPrimitiveValues<int?>("owners", Owners);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_params>("params", Params);
+            writer.WriteObjectValue<KClient.Models.Dataset_params>("params", Params);
             writer.WriteStringValue("perm", Perm);
             writer.WriteStringValue("schema", Schema);
             writer.WriteStringValue("select_star", SelectStar);
             writer.WriteStringValue("sql", Sql);
             writer.WriteStringValue("table_name", TableName);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_template_params>("template_params", TemplateParams);
+            writer.WriteObjectValue<KClient.Models.Dataset_template_params>("template_params", TemplateParams);
             writer.WriteObjectValue<UntypedNode>("time_grain_sqla", TimeGrainSqla);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("uid", Uid);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset_verbose_map>("verbose_map", VerboseMap);
+            writer.WriteObjectValue<KClient.Models.Dataset_verbose_map>("verbose_map", VerboseMap);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

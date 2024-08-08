@@ -54,31 +54,31 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Data
         /// <summary>
         /// Takes a query context constructed in the client and returns payload data response for the given query.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartDataResponseSchema"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.ChartDataResponseSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.ChartDataResponseSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.ChartDataResponseSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema?> PostAsync(global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.ChartDataResponseSchema?> PostAsync(KClient.Models.ChartDataQueryContextSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema> PostAsync(global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.ChartDataResponseSchema> PostAsync(KClient.Models.ChartDataQueryContextSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema401Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.ChartDataResponseSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.ChartDataResponseSchema401Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.ChartDataResponseSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.ChartDataResponseSchema>(requestInfo, KClient.Models.ChartDataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Takes a query context constructed in the client and returns payload data response for the given query.
@@ -88,11 +88,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Data
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.ChartDataQueryContextSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.ChartDataQueryContextSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));

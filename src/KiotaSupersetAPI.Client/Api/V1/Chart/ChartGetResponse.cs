@@ -73,10 +73,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
         /// <summary>The result from the get list query</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Get_list>? Result { get; set; }
+        public List<KClient.Models.ChartRestApi.Get_list.Get_list>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Get_list> Result { get; set; }
+        public List<KClient.Models.ChartRestApi.Get_list.Get_list> Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Chart.ChartGetResponse"/> and sets the default values.
@@ -110,7 +110,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
                 { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
                 { "list_title", n => { ListTitle = n.GetStringValue(); } },
                 { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Get_list>(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.ChartRestApi.Get_list.Get_list>(KClient.Models.ChartRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -127,7 +127,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
             writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
             writer.WriteStringValue("list_title", ListTitle);
             writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Get_list>("result", Result);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartRestApi.Get_list.Get_list>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

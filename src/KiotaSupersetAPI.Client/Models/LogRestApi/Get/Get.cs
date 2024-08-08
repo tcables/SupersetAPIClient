@@ -54,15 +54,15 @@ namespace KiotaSupersetAPI.Client.Models.LogRestApi.Get
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.LogRestApi.Get.User? User { get; set; }
+        public KClient.Models.LogRestApi.Get.User? User { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.LogRestApi.Get.User User { get; set; }
+        public KClient.Models.LogRestApi.Get.User User { get; set; }
 #endif
         /// <summary>The user_id property</summary>
         public int? UserId { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.LogRestApi.Get.Get"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.LogRestApi.Get.Get"/> and sets the default values.
         /// </summary>
         public Get()
         {
@@ -71,12 +71,12 @@ namespace KiotaSupersetAPI.Client.Models.LogRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.LogRestApi.Get.Get"/></returns>
+        /// <returns>A <see cref="KClient.Models.LogRestApi.Get.Get"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.LogRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.LogRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.LogRestApi.Get.Get();
+            return new KClient.Models.LogRestApi.Get.Get();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,7 +93,7 @@ namespace KiotaSupersetAPI.Client.Models.LogRestApi.Get
                 { "json", n => { Json = n.GetStringValue(); } },
                 { "referrer", n => { Referrer = n.GetStringValue(); } },
                 { "slice_id", n => { SliceId = n.GetIntValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.LogRestApi.Get.User>(global::KiotaSupersetAPI.Client.Models.LogRestApi.Get.User.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<KClient.Models.LogRestApi.Get.User>(KClient.Models.LogRestApi.Get.User.CreateFromDiscriminatorValue); } },
                 { "user_id", n => { UserId = n.GetIntValue(); } },
             };
         }
@@ -111,7 +111,7 @@ namespace KiotaSupersetAPI.Client.Models.LogRestApi.Get
             writer.WriteStringValue("json", Json);
             writer.WriteStringValue("referrer", Referrer);
             writer.WriteIntValue("slice_id", SliceId);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.LogRestApi.Get.User>("user", User);
+            writer.WriteObjectValue<KClient.Models.LogRestApi.Get.User>("user", User);
             writer.WriteIntValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

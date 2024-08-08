@@ -48,7 +48,7 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi
         /// <summary>The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasource_id` and `datasource_type`.</summary>
         public int? DatasourceId { get; set; }
         /// <summary>The type of dataset/datasource identified on `datasource_id`.</summary>
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put_datasource_type? DatasourceType { get; set; }
+        public KClient.Models.ChartRestApi.Put_datasource_type? DatasourceType { get; set; }
         /// <summary>A description of the chart propose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,10 +104,10 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.Tag>? Tags { get; set; }
+        public List<KClient.Models.Tag>? Tags { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.Tag> Tags { get; set; }
+        public List<KClient.Models.Tag> Tags { get; set; }
 #endif
         /// <summary>The type of chart visualization used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,7 +118,7 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi
         public string VizType { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartRestApi.Put"/> and sets the default values.
         /// </summary>
         public Put()
         {
@@ -127,12 +127,12 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartRestApi.Put"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put();
+            return new KClient.Models.ChartRestApi.Put();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -147,7 +147,7 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi
                 { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
                 { "dashboards", n => { Dashboards = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
                 { "datasource_id", n => { DatasourceId = n.GetIntValue(); } },
-                { "datasource_type", n => { DatasourceType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put_datasource_type>(); } },
+                { "datasource_type", n => { DatasourceType = n.GetEnumValue<KClient.Models.ChartRestApi.Put_datasource_type>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "external_url", n => { ExternalUrl = n.GetStringValue(); } },
                 { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
@@ -156,7 +156,7 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi
                 { "query_context", n => { QueryContext = n.GetStringValue(); } },
                 { "query_context_generation", n => { QueryContextGeneration = n.GetBoolValue(); } },
                 { "slice_name", n => { SliceName = n.GetStringValue(); } },
-                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Tag>(global::KiotaSupersetAPI.Client.Models.Tag.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "tags", n => { Tags = n.GetCollectionOfObjectValues<KClient.Models.Tag>(KClient.Models.Tag.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "viz_type", n => { VizType = n.GetStringValue(); } },
             };
         }
@@ -172,7 +172,7 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi
             writer.WriteStringValue("certified_by", CertifiedBy);
             writer.WriteCollectionOfPrimitiveValues<int?>("dashboards", Dashboards);
             writer.WriteIntValue("datasource_id", DatasourceId);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put_datasource_type>("datasource_type", DatasourceType);
+            writer.WriteEnumValue<KClient.Models.ChartRestApi.Put_datasource_type>("datasource_type", DatasourceType);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("external_url", ExternalUrl);
             writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
@@ -181,7 +181,7 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi
             writer.WriteStringValue("query_context", QueryContext);
             writer.WriteBoolValue("query_context_generation", QueryContextGeneration);
             writer.WriteStringValue("slice_name", SliceName);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Tag>("tags", Tags);
+            writer.WriteCollectionOfObjectValues<KClient.Models.Tag>("tags", Tags);
             writer.WriteStringValue("viz_type", VizType);
             writer.WriteAdditionalData(AdditionalData);
         }

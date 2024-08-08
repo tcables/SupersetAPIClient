@@ -44,7 +44,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
         /// <returns>A <see cref="KApi.Me.Roles.RolesGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Roles401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Roles401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Me.Roles.RolesGetResponse?> GetAsRolesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,7 +57,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Roles401Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Roles401Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Me.Roles.RolesGetResponse>(requestInfo, KApi.Me.Roles.RolesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -67,7 +67,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
         /// <returns>A <see cref="KApi.Me.Roles.RolesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Roles401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Roles401Error">When receiving a 401 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsRolesGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,7 +81,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Roles401Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Roles401Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Me.Roles.RolesResponse>(requestInfo, KApi.Me.Roles.RolesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

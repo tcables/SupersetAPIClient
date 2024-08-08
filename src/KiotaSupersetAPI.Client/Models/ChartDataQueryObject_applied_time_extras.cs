@@ -21,7 +21,7 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_applied_time_extras"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartDataQueryObject_applied_time_extras"/> and sets the default values.
         /// </summary>
         public ChartDataQueryObject_applied_time_extras()
         {
@@ -30,12 +30,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_applied_time_extras"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartDataQueryObject_applied_time_extras"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_applied_time_extras CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartDataQueryObject_applied_time_extras CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_applied_time_extras();
+            return new KClient.Models.ChartDataQueryObject_applied_time_extras();
         }
         /// <summary>
         /// The deserialization information for the current model

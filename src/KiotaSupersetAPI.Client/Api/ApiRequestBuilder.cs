@@ -28,18 +28,18 @@ namespace KiotaSupersetAPI.Client.Api
         }
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.Item.WithVersionItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.Item.WithVersionItemRequestBuilder this[string position]
+        /// <returns>A <see cref="KClient.Api.Item.WithVersionItemRequestBuilder"/></returns>
+        public KClient.Api.Item.WithVersionItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("version", position);
-                return new global::KiotaSupersetAPI.Client.Api.Item.WithVersionItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KClient.Api.Item.WithVersionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.ApiRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Api.ApiRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -47,7 +47,7 @@ namespace KiotaSupersetAPI.Client.Api
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.ApiRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Api.ApiRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

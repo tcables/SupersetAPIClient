@@ -21,7 +21,7 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema_dataMask"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DashboardPermalinkStateSchema_dataMask"/> and sets the default values.
         /// </summary>
         public DashboardPermalinkStateSchema_dataMask()
         {
@@ -30,12 +30,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema_dataMask"/></returns>
+        /// <returns>A <see cref="KClient.Models.DashboardPermalinkStateSchema_dataMask"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema_dataMask CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DashboardPermalinkStateSchema_dataMask CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema_dataMask();
+            return new KClient.Models.DashboardPermalinkStateSchema_dataMask();
         }
         /// <summary>
         /// The deserialization information for the current model

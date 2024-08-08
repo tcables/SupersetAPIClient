@@ -113,11 +113,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
         /// <returns>A <see cref="KApi.Chart.ChartDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Chart401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Chart403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Chart404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Chart422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Chart500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Chart.ChartDeleteResponse?> DeleteAsChartDeleteResponseAsync(Action<RequestConfiguration<KApi.Chart.ChartRequestBuilder.ChartRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -130,11 +130,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Chart401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Chart403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Chart404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Chart422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Chart500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Chart401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Chart403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Chart404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Chart422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Chart500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Chart.ChartDeleteResponse>(requestInfo, KApi.Chart.ChartDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -144,11 +144,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
         /// <returns>A <see cref="KApi.Chart.ChartResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Chart401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Chart403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Chart404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Chart422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Chart500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use DeleteAsChartDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -162,11 +162,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Chart401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Chart403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Chart404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Chart422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Chart500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Chart401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Chart403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Chart404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Chart422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Chart500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Chart.ChartResponse>(requestInfo, KApi.Chart.ChartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -176,10 +176,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
         /// <returns>A <see cref="KApi.Chart.ChartGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Chart400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Chart401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Chart422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Chart500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Chart.ChartGetResponse?> GetAsChartGetResponseAsync(Action<RequestConfiguration<KApi.Chart.ChartRequestBuilder.ChartRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -192,10 +192,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Chart400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Chart401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Chart422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Chart500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Chart400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Chart401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Chart422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Chart500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Chart.ChartGetResponse>(requestInfo, KApi.Chart.ChartGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -205,10 +205,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
         /// <returns>A <see cref="KApi.Chart.ChartResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Chart400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Chart401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Chart422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Chart500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsChartGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -222,10 +222,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Chart400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Chart401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Chart422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Chart500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Chart400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Chart401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Chart422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Chart500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Chart.ChartResponse>(requestInfo, KApi.Chart.ChartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -236,29 +236,29 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Chart400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Chart401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Chart403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Chart422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Chart500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Chart.ChartPostResponse?> PostAsChartPostResponseAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.ChartPostResponse?> PostAsChartPostResponseAsync(KClient.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Chart.ChartPostResponse> PostAsChartPostResponseAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.ChartPostResponse> PostAsChartPostResponseAsync(KClient.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Chart400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Chart401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Chart403Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Chart422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Chart500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Chart400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Chart401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Chart403Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Chart422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Chart500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Chart.ChartPostResponse>(requestInfo, KApi.Chart.ChartPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -269,30 +269,30 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Chart500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Chart400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Chart401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Chart403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Chart422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Chart500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PostAsChartPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Chart.ChartResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.ChartResponse?> PostAsync(KClient.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Chart.ChartResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.ChartResponse> PostAsync(KClient.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Chart400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Chart401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Chart403Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Chart422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Chart500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Chart400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Chart401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Chart403Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Chart422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Chart500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Chart.ChartResponse>(requestInfo, KApi.Chart.ChartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -342,11 +342,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));

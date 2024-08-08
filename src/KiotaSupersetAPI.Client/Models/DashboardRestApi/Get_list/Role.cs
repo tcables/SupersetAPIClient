@@ -30,7 +30,7 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         public string Name { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Role"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DashboardRestApi.Get_list.Role"/> and sets the default values.
         /// </summary>
         public Role()
         {
@@ -39,12 +39,12 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Role"/></returns>
+        /// <returns>A <see cref="KClient.Models.DashboardRestApi.Get_list.Role"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Role CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DashboardRestApi.Get_list.Role CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Role();
+            return new KClient.Models.DashboardRestApi.Get_list.Role();
         }
         /// <summary>
         /// The deserialization information for the current model

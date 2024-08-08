@@ -20,17 +20,17 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The error_type property</summary>
-        public global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_error_type? ErrorType { get; set; }
+        public KClient.Models.QueryExecutionResponseSchema410Error_errors_error_type? ErrorType { get; set; }
         /// <summary>The extra property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_extra? Extra { get; set; }
+        public KClient.Models.QueryExecutionResponseSchema410Error_errors_extra? Extra { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_extra Extra { get; set; }
+        public KClient.Models.QueryExecutionResponseSchema410Error_errors_extra Extra { get; set; }
 #endif
         /// <summary>The level property</summary>
-        public global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_level? Level { get; set; }
+        public KClient.Models.QueryExecutionResponseSchema410Error_errors_level? Level { get; set; }
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -40,7 +40,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Message { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.QueryExecutionResponseSchema410Error_errors"/> and sets the default values.
         /// </summary>
         public QueryExecutionResponseSchema410Error_errors()
         {
@@ -49,12 +49,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors"/></returns>
+        /// <returns>A <see cref="KClient.Models.QueryExecutionResponseSchema410Error_errors"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.QueryExecutionResponseSchema410Error_errors CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors();
+            return new KClient.Models.QueryExecutionResponseSchema410Error_errors();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,9 +64,9 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "error_type", n => { ErrorType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_error_type>(); } },
-                { "extra", n => { Extra = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_extra>(global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_extra.CreateFromDiscriminatorValue); } },
-                { "level", n => { Level = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_level>(); } },
+                { "error_type", n => { ErrorType = n.GetEnumValue<KClient.Models.QueryExecutionResponseSchema410Error_errors_error_type>(); } },
+                { "extra", n => { Extra = n.GetObjectValue<KClient.Models.QueryExecutionResponseSchema410Error_errors_extra>(KClient.Models.QueryExecutionResponseSchema410Error_errors_extra.CreateFromDiscriminatorValue); } },
+                { "level", n => { Level = n.GetEnumValue<KClient.Models.QueryExecutionResponseSchema410Error_errors_level>(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
             };
         }
@@ -77,9 +77,9 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_error_type>("error_type", ErrorType);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_extra>("extra", Extra);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_level>("level", Level);
+            writer.WriteEnumValue<KClient.Models.QueryExecutionResponseSchema410Error_errors_error_type>("error_type", ErrorType);
+            writer.WriteObjectValue<KClient.Models.QueryExecutionResponseSchema410Error_errors_extra>("extra", Extra);
+            writer.WriteEnumValue<KClient.Models.QueryExecutionResponseSchema410Error_errors_level>("level", Level);
             writer.WriteStringValue("message", Message);
             writer.WriteAdditionalData(AdditionalData);
         }

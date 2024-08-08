@@ -44,7 +44,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
         /// <returns>A <see cref="KApi.Menu.MenuGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Menu401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Menu401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Menu.MenuGetResponse?> GetAsMenuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,7 +57,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Menu401Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Menu401Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Menu.MenuGetResponse>(requestInfo, KApi.Menu.MenuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -67,7 +67,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
         /// <returns>A <see cref="KApi.Menu.MenuResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Menu401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Menu401Error">When receiving a 401 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsMenuGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,7 +81,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Menu401Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Menu401Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Menu.MenuResponse>(requestInfo, KApi.Menu.MenuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

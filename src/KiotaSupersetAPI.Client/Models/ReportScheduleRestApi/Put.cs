@@ -32,7 +32,7 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi
         public string ContextMarkdown { get; set; }
 #endif
         /// <summary>Creation method is used to inform the frontend whether the report/alert was created in the dashboard, chart, or alerts and reports UI.</summary>
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_creation_method? CreationMethod { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Put_creation_method? CreationMethod { get; set; }
         /// <summary>A CRON expression.[Crontab Guru](https://crontab.guru/) is a helpful resource that can help you craft a CRON expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,10 +58,10 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi
         /// <summary>The extra property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_extra? Extra { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Put_extra? Extra { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_extra Extra { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Put_extra Extra { get; set; }
 #endif
         /// <summary>The force_screenshot property</summary>
         public bool? ForceScreenshot { get; set; }
@@ -88,13 +88,13 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi
         /// <summary>The recipients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ReportRecipient>? Recipients { get; set; }
+        public List<KClient.Models.ReportRecipient>? Recipients { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ReportRecipient> Recipients { get; set; }
+        public List<KClient.Models.ReportRecipient> Recipients { get; set; }
 #endif
         /// <summary>The report_format property</summary>
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_report_format? ReportFormat { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Put_report_format? ReportFormat { get; set; }
         /// <summary>A SQL statement that defines whether the alert should get triggered or not. The query is expected to return either NULL or a number value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,23 +104,23 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi
         public string Sql { get; set; }
 #endif
         /// <summary>A timezone string that represents the location of the timezone.</summary>
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_timezone? Timezone { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Put_timezone? Timezone { get; set; }
         /// <summary>The report schedule type</summary>
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_type? Type { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Put_type? Type { get; set; }
         /// <summary>The validator_config_json property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ValidatorConfigJSON? ValidatorConfigJson { get; set; }
+        public KClient.Models.ValidatorConfigJSON? ValidatorConfigJson { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ValidatorConfigJSON ValidatorConfigJson { get; set; }
+        public KClient.Models.ValidatorConfigJSON ValidatorConfigJson { get; set; }
 #endif
         /// <summary>Determines when to trigger alert based off value from alert query. Alerts will be triggered with these validator types:- Not Null - When the return value is Not NULL, Empty, or 0- Operator - When `sql_return_value comparison_operator threshold` is True e.g. `50 &lt;= 75`&lt;br&gt;Supports the comparison operators &lt;, &lt;=, &gt;, &gt;=, ==, and !=</summary>
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_validator_type? ValidatorType { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Put_validator_type? ValidatorType { get; set; }
         /// <summary>If an alert is staled at a working state, how long until it&apos;s state is reset to error</summary>
         public int? WorkingTimeout { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ReportScheduleRestApi.Put"/> and sets the default values.
         /// </summary>
         public Put()
         {
@@ -129,12 +129,12 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put"/></returns>
+        /// <returns>A <see cref="KClient.Models.ReportScheduleRestApi.Put"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ReportScheduleRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put();
+            return new KClient.Models.ReportScheduleRestApi.Put();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -147,25 +147,25 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "chart", n => { Chart = n.GetIntValue(); } },
                 { "context_markdown", n => { ContextMarkdown = n.GetStringValue(); } },
-                { "creation_method", n => { CreationMethod = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_creation_method>(); } },
+                { "creation_method", n => { CreationMethod = n.GetEnumValue<KClient.Models.ReportScheduleRestApi.Put_creation_method>(); } },
                 { "crontab", n => { Crontab = n.GetStringValue(); } },
                 { "custom_width", n => { CustomWidth = n.GetIntValue(); } },
                 { "dashboard", n => { Dashboard = n.GetIntValue(); } },
                 { "database", n => { Database = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "extra", n => { Extra = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_extra>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_extra.CreateFromDiscriminatorValue); } },
+                { "extra", n => { Extra = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Put_extra>(KClient.Models.ReportScheduleRestApi.Put_extra.CreateFromDiscriminatorValue); } },
                 { "force_screenshot", n => { ForceScreenshot = n.GetBoolValue(); } },
                 { "grace_period", n => { GracePeriod = n.GetIntValue(); } },
                 { "log_retention", n => { LogRetention = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "owners", n => { Owners = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
-                { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ReportRecipient>(global::KiotaSupersetAPI.Client.Models.ReportRecipient.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "report_format", n => { ReportFormat = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_report_format>(); } },
+                { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<KClient.Models.ReportRecipient>(KClient.Models.ReportRecipient.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "report_format", n => { ReportFormat = n.GetEnumValue<KClient.Models.ReportScheduleRestApi.Put_report_format>(); } },
                 { "sql", n => { Sql = n.GetStringValue(); } },
-                { "timezone", n => { Timezone = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_timezone>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_type>(); } },
-                { "validator_config_json", n => { ValidatorConfigJson = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ValidatorConfigJSON>(global::KiotaSupersetAPI.Client.Models.ValidatorConfigJSON.CreateFromDiscriminatorValue); } },
-                { "validator_type", n => { ValidatorType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_validator_type>(); } },
+                { "timezone", n => { Timezone = n.GetEnumValue<KClient.Models.ReportScheduleRestApi.Put_timezone>(); } },
+                { "type", n => { Type = n.GetEnumValue<KClient.Models.ReportScheduleRestApi.Put_type>(); } },
+                { "validator_config_json", n => { ValidatorConfigJson = n.GetObjectValue<KClient.Models.ValidatorConfigJSON>(KClient.Models.ValidatorConfigJSON.CreateFromDiscriminatorValue); } },
+                { "validator_type", n => { ValidatorType = n.GetEnumValue<KClient.Models.ReportScheduleRestApi.Put_validator_type>(); } },
                 { "working_timeout", n => { WorkingTimeout = n.GetIntValue(); } },
             };
         }
@@ -179,25 +179,25 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi
             writer.WriteBoolValue("active", Active);
             writer.WriteIntValue("chart", Chart);
             writer.WriteStringValue("context_markdown", ContextMarkdown);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_creation_method>("creation_method", CreationMethod);
+            writer.WriteEnumValue<KClient.Models.ReportScheduleRestApi.Put_creation_method>("creation_method", CreationMethod);
             writer.WriteStringValue("crontab", Crontab);
             writer.WriteIntValue("custom_width", CustomWidth);
             writer.WriteIntValue("dashboard", Dashboard);
             writer.WriteIntValue("database", Database);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_extra>("extra", Extra);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Put_extra>("extra", Extra);
             writer.WriteBoolValue("force_screenshot", ForceScreenshot);
             writer.WriteIntValue("grace_period", GracePeriod);
             writer.WriteIntValue("log_retention", LogRetention);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<int?>("owners", Owners);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ReportRecipient>("recipients", Recipients);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_report_format>("report_format", ReportFormat);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ReportRecipient>("recipients", Recipients);
+            writer.WriteEnumValue<KClient.Models.ReportScheduleRestApi.Put_report_format>("report_format", ReportFormat);
             writer.WriteStringValue("sql", Sql);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_timezone>("timezone", Timezone);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_type>("type", Type);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ValidatorConfigJSON>("validator_config_json", ValidatorConfigJson);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Put_validator_type>("validator_type", ValidatorType);
+            writer.WriteEnumValue<KClient.Models.ReportScheduleRestApi.Put_timezone>("timezone", Timezone);
+            writer.WriteEnumValue<KClient.Models.ReportScheduleRestApi.Put_type>("type", Type);
+            writer.WriteObjectValue<KClient.Models.ValidatorConfigJSON>("validator_config_json", ValidatorConfigJson);
+            writer.WriteEnumValue<KClient.Models.ReportScheduleRestApi.Put_validator_type>("validator_type", ValidatorType);
             writer.WriteIntValue("working_timeout", WorkingTimeout);
             writer.WriteAdditionalData(AdditionalData);
         }

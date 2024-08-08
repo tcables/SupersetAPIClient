@@ -34,7 +34,7 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The start_column property</summary>
         public int? StartColumn { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ValidateSQLResponse"/> and sets the default values.
         /// </summary>
         public ValidateSQLResponse()
         {
@@ -43,12 +43,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse"/></returns>
+        /// <returns>A <see cref="KClient.Models.ValidateSQLResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ValidateSQLResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse();
+            return new KClient.Models.ValidateSQLResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

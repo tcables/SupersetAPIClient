@@ -38,10 +38,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Data mask used for native filter state</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema_dataMask? DataMask { get; set; }
+        public KClient.Models.DashboardPermalinkStateSchema_dataMask? DataMask { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema_dataMask DataMask { get; set; }
+        public KClient.Models.DashboardPermalinkStateSchema_dataMask DataMask { get; set; }
 #endif
         /// <summary>URL Parameters</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -52,7 +52,7 @@ namespace KiotaSupersetAPI.Client.Models
         public UntypedNode UrlParams { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DashboardPermalinkStateSchema"/> and sets the default values.
         /// </summary>
         public DashboardPermalinkStateSchema()
         {
@@ -61,12 +61,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.DashboardPermalinkStateSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DashboardPermalinkStateSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema();
+            return new KClient.Models.DashboardPermalinkStateSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,7 +78,7 @@ namespace KiotaSupersetAPI.Client.Models
             {
                 { "activeTabs", n => { ActiveTabs = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
                 { "anchor", n => { Anchor = n.GetStringValue(); } },
-                { "dataMask", n => { DataMask = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema_dataMask>(global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema_dataMask.CreateFromDiscriminatorValue); } },
+                { "dataMask", n => { DataMask = n.GetObjectValue<KClient.Models.DashboardPermalinkStateSchema_dataMask>(KClient.Models.DashboardPermalinkStateSchema_dataMask.CreateFromDiscriminatorValue); } },
                 { "urlParams", n => { UrlParams = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
@@ -91,7 +91,7 @@ namespace KiotaSupersetAPI.Client.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("activeTabs", ActiveTabs);
             writer.WriteStringValue("anchor", Anchor);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardPermalinkStateSchema_dataMask>("dataMask", DataMask);
+            writer.WriteObjectValue<KClient.Models.DashboardPermalinkStateSchema_dataMask>("dataMask", DataMask);
             writer.WriteObjectValue<UntypedNode>("urlParams", UrlParams);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -23,10 +23,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.AvailableDomainsSchema? Result { get; set; }
+        public KClient.Models.AvailableDomainsSchema? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.AvailableDomainsSchema Result { get; set; }
+        public KClient.Models.AvailableDomainsSchema Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Available_domains.Available_domainsGetResponse"/> and sets the default values.
@@ -53,7 +53,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.AvailableDomainsSchema>(global::KiotaSupersetAPI.Client.Models.AvailableDomainsSchema.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.AvailableDomainsSchema>(KClient.Models.AvailableDomainsSchema.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -63,7 +63,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.AvailableDomainsSchema>("result", Result);
+            writer.WriteObjectValue<KClient.Models.AvailableDomainsSchema>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -82,10 +82,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Form data associated with the slice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Slice_form_data? FormData { get; set; }
+        public KClient.Models.Slice_form_data? FormData { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Slice_form_data FormData { get; set; }
+        public KClient.Models.Slice_form_data FormData { get; set; }
 #endif
         /// <summary>If the chart is managed outside externally.</summary>
         public bool? IsManagedExternally { get; set; }
@@ -108,10 +108,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The context associated with the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Slice_query_context? QueryContext { get; set; }
+        public KClient.Models.Slice_query_context? QueryContext { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Slice_query_context QueryContext { get; set; }
+        public KClient.Models.Slice_query_context QueryContext { get; set; }
 #endif
         /// <summary>The slice ID.</summary>
         public int? SliceId { get; set; }
@@ -132,7 +132,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string SliceUrl { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.Slice"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.Slice"/> and sets the default values.
         /// </summary>
         public Slice()
         {
@@ -141,12 +141,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.Slice"/></returns>
+        /// <returns>A <see cref="KClient.Models.Slice"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.Slice CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.Slice CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.Slice();
+            return new KClient.Models.Slice();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -165,11 +165,11 @@ namespace KiotaSupersetAPI.Client.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_markeddown", n => { DescriptionMarkeddown = n.GetStringValue(); } },
                 { "edit_url", n => { EditUrl = n.GetStringValue(); } },
-                { "form_data", n => { FormData = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Slice_form_data>(global::KiotaSupersetAPI.Client.Models.Slice_form_data.CreateFromDiscriminatorValue); } },
+                { "form_data", n => { FormData = n.GetObjectValue<KClient.Models.Slice_form_data>(KClient.Models.Slice_form_data.CreateFromDiscriminatorValue); } },
                 { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
                 { "modified", n => { Modified = n.GetStringValue(); } },
                 { "owners", n => { Owners = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
-                { "query_context", n => { QueryContext = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Slice_query_context>(global::KiotaSupersetAPI.Client.Models.Slice_query_context.CreateFromDiscriminatorValue); } },
+                { "query_context", n => { QueryContext = n.GetObjectValue<KClient.Models.Slice_query_context>(KClient.Models.Slice_query_context.CreateFromDiscriminatorValue); } },
                 { "slice_id", n => { SliceId = n.GetIntValue(); } },
                 { "slice_name", n => { SliceName = n.GetStringValue(); } },
                 { "slice_url", n => { SliceUrl = n.GetStringValue(); } },
@@ -191,11 +191,11 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("description_markeddown", DescriptionMarkeddown);
             writer.WriteStringValue("edit_url", EditUrl);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Slice_form_data>("form_data", FormData);
+            writer.WriteObjectValue<KClient.Models.Slice_form_data>("form_data", FormData);
             writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
             writer.WriteStringValue("modified", Modified);
             writer.WriteCollectionOfPrimitiveValues<int?>("owners", Owners);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Slice_query_context>("query_context", QueryContext);
+            writer.WriteObjectValue<KClient.Models.Slice_query_context>("query_context", QueryContext);
             writer.WriteIntValue("slice_id", SliceId);
             writer.WriteStringValue("slice_name", SliceName);
             writer.WriteStringValue("slice_url", SliceUrl);

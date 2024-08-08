@@ -32,10 +32,10 @@ namespace KiotaSupersetAPI.Client.Models.QueryRestApi.Get
         /// <summary>The database property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Database? Database { get; set; }
+        public KClient.Models.QueryRestApi.Get.Database? Database { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Database Database { get; set; }
+        public KClient.Models.QueryRestApi.Get.Database Database { get; set; }
 #endif
         /// <summary>The end_result_backend_time property</summary>
         public double? EndResultBackendTime { get; set; }
@@ -154,7 +154,7 @@ namespace KiotaSupersetAPI.Client.Models.QueryRestApi.Get
         public UntypedNode TrackingUrl { get; private set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Get"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.QueryRestApi.Get.Get"/> and sets the default values.
         /// </summary>
         public Get()
         {
@@ -163,12 +163,12 @@ namespace KiotaSupersetAPI.Client.Models.QueryRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Get"/></returns>
+        /// <returns>A <see cref="KClient.Models.QueryRestApi.Get.Get"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.QueryRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Get();
+            return new KClient.Models.QueryRestApi.Get.Get();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -180,7 +180,7 @@ namespace KiotaSupersetAPI.Client.Models.QueryRestApi.Get
             {
                 { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
-                { "database", n => { Database = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Database>(global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Database.CreateFromDiscriminatorValue); } },
+                { "database", n => { Database = n.GetObjectValue<KClient.Models.QueryRestApi.Get.Database>(KClient.Models.QueryRestApi.Get.Database.CreateFromDiscriminatorValue); } },
                 { "end_result_backend_time", n => { EndResultBackendTime = n.GetDoubleValue(); } },
                 { "end_time", n => { EndTime = n.GetDoubleValue(); } },
                 { "error_message", n => { ErrorMessage = n.GetStringValue(); } },
@@ -214,7 +214,7 @@ namespace KiotaSupersetAPI.Client.Models.QueryRestApi.Get
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
             writer.WriteStringValue("client_id", ClientId);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Database>("database", Database);
+            writer.WriteObjectValue<KClient.Models.QueryRestApi.Get.Database>("database", Database);
             writer.WriteDoubleValue("end_result_backend_time", EndResultBackendTime);
             writer.WriteDoubleValue("end_time", EndTime);
             writer.WriteStringValue("error_message", ErrorMessage);

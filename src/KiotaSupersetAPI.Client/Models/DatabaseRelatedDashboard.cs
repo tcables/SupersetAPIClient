@@ -24,10 +24,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The json_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboard_json_metadata? JsonMetadata { get; set; }
+        public KClient.Models.DatabaseRelatedDashboard_json_metadata? JsonMetadata { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboard_json_metadata JsonMetadata { get; set; }
+        public KClient.Models.DatabaseRelatedDashboard_json_metadata JsonMetadata { get; set; }
 #endif
         /// <summary>The slug property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,7 +46,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Title { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboard"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatabaseRelatedDashboard"/> and sets the default values.
         /// </summary>
         public DatabaseRelatedDashboard()
         {
@@ -55,12 +55,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboard"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseRelatedDashboard"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboard CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatabaseRelatedDashboard CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboard();
+            return new KClient.Models.DatabaseRelatedDashboard();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,7 +71,7 @@ namespace KiotaSupersetAPI.Client.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "json_metadata", n => { JsonMetadata = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboard_json_metadata>(global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboard_json_metadata.CreateFromDiscriminatorValue); } },
+                { "json_metadata", n => { JsonMetadata = n.GetObjectValue<KClient.Models.DatabaseRelatedDashboard_json_metadata>(KClient.Models.DatabaseRelatedDashboard_json_metadata.CreateFromDiscriminatorValue); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
@@ -84,7 +84,7 @@ namespace KiotaSupersetAPI.Client.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("id", Id);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboard_json_metadata>("json_metadata", JsonMetadata);
+            writer.WriteObjectValue<KClient.Models.DatabaseRelatedDashboard_json_metadata>("json_metadata", JsonMetadata);
             writer.WriteStringValue("slug", Slug);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);

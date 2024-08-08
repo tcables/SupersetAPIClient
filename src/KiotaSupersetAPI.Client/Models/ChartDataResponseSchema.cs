@@ -22,13 +22,13 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>A list of results for each corresponding query in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult>? Result { get; set; }
+        public List<KClient.Models.ChartDataResponseResult>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult> Result { get; set; }
+        public List<KClient.Models.ChartDataResponseResult> Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartDataResponseSchema"/> and sets the default values.
         /// </summary>
         public ChartDataResponseSchema()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartDataResponseSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartDataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema();
+            return new KClient.Models.ChartDataResponseSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +52,7 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult>(global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.ChartDataResponseResult>(KClient.Models.ChartDataResponseResult.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult>("result", Result);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataResponseResult>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

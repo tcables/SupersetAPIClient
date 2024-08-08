@@ -22,18 +22,18 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Annotation layers to apply to chart</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.AnnotationLayer>? AnnotationLayers { get; set; }
+        public List<KClient.Models.AnnotationLayer>? AnnotationLayers { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.AnnotationLayer> AnnotationLayers { get; set; }
+        public List<KClient.Models.AnnotationLayer> AnnotationLayers { get; set; }
 #endif
         /// <summary>A mapping of temporal extras that have been applied to the query</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_applied_time_extras? AppliedTimeExtras { get; set; }
+        public KClient.Models.ChartDataQueryObject_applied_time_extras? AppliedTimeExtras { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_applied_time_extras AppliedTimeExtras { get; set; }
+        public KClient.Models.ChartDataQueryObject_applied_time_extras AppliedTimeExtras { get; set; }
 #endif
         /// <summary>Add fetch values predicate (where clause) to query if defined in datasource</summary>
         public bool? ApplyFetchValuesPredicate { get; set; }
@@ -48,26 +48,26 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The datasource property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartDataDatasource? Datasource { get; set; }
+        public KClient.Models.ChartDataDatasource? Datasource { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartDataDatasource Datasource { get; set; }
+        public KClient.Models.ChartDataDatasource Datasource { get; set; }
 #endif
         /// <summary>Extra parameters to add to the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartDataExtras? Extras { get; set; }
+        public KClient.Models.ChartDataExtras? Extras { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartDataExtras Extras { get; set; }
+        public KClient.Models.ChartDataExtras Extras { get; set; }
 #endif
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataFilter>? Filters { get; set; }
+        public List<KClient.Models.ChartDataFilter>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataFilter> Filters { get; set; }
+        public List<KClient.Models.ChartDataFilter> Filters { get; set; }
 #endif
         /// <summary>Name of temporal column used for time filtering. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -128,13 +128,13 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Post processing operations to be applied to the result set. Operations are applied to the result set in sequential order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataPostProcessingOperation>? PostProcessing { get; set; }
+        public List<KClient.Models.ChartDataPostProcessingOperation>? PostProcessing { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataPostProcessingOperation> PostProcessing { get; set; }
+        public List<KClient.Models.ChartDataPostProcessingOperation> PostProcessing { get; set; }
 #endif
         /// <summary>The result_type property</summary>
-        public global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_result_type? ResultType { get; set; }
+        public KClient.Models.ChartDataQueryObject_result_type? ResultType { get; set; }
         /// <summary>Maximum row count (0=disabled). Default: `config[&quot;ROW_LIMIT&quot;]`</summary>
         public int? RowLimit { get; set; }
         /// <summary>Number of rows to skip. Default: `0`</summary>
@@ -194,10 +194,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Optional query parameters passed to a dashboard or Explore  view</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_url_params? UrlParams { get; set; }
+        public KClient.Models.ChartDataQueryObject_url_params? UrlParams { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_url_params UrlParams { get; set; }
+        public KClient.Models.ChartDataQueryObject_url_params UrlParams { get; set; }
 #endif
         /// <summary>WHERE clause to be added to queries using AND operator.This field is deprecated and should be passed to `extras`.</summary>
         [Obsolete("")]
@@ -209,7 +209,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Where { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartDataQueryObject"/> and sets the default values.
         /// </summary>
         public ChartDataQueryObject()
         {
@@ -218,12 +218,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartDataQueryObject"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartDataQueryObject CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject();
+            return new KClient.Models.ChartDataQueryObject();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -233,13 +233,13 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "annotation_layers", n => { AnnotationLayers = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.AnnotationLayer>(global::KiotaSupersetAPI.Client.Models.AnnotationLayer.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "applied_time_extras", n => { AppliedTimeExtras = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_applied_time_extras>(global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_applied_time_extras.CreateFromDiscriminatorValue); } },
+                { "annotation_layers", n => { AnnotationLayers = n.GetCollectionOfObjectValues<KClient.Models.AnnotationLayer>(KClient.Models.AnnotationLayer.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "applied_time_extras", n => { AppliedTimeExtras = n.GetObjectValue<KClient.Models.ChartDataQueryObject_applied_time_extras>(KClient.Models.ChartDataQueryObject_applied_time_extras.CreateFromDiscriminatorValue); } },
                 { "apply_fetch_values_predicate", n => { ApplyFetchValuesPredicate = n.GetBoolValue(); } },
                 { "columns", n => { Columns = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "datasource", n => { Datasource = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataDatasource>(global::KiotaSupersetAPI.Client.Models.ChartDataDatasource.CreateFromDiscriminatorValue); } },
-                { "extras", n => { Extras = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataExtras>(global::KiotaSupersetAPI.Client.Models.ChartDataExtras.CreateFromDiscriminatorValue); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataFilter>(global::KiotaSupersetAPI.Client.Models.ChartDataFilter.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "datasource", n => { Datasource = n.GetObjectValue<KClient.Models.ChartDataDatasource>(KClient.Models.ChartDataDatasource.CreateFromDiscriminatorValue); } },
+                { "extras", n => { Extras = n.GetObjectValue<KClient.Models.ChartDataExtras>(KClient.Models.ChartDataExtras.CreateFromDiscriminatorValue); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<KClient.Models.ChartDataFilter>(KClient.Models.ChartDataFilter.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "granularity", n => { Granularity = n.GetStringValue(); } },
                 { "granularity_sqla", n => { GranularitySqla = n.GetStringValue(); } },
                 { "groupby", n => { Groupby = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -249,8 +249,8 @@ namespace KiotaSupersetAPI.Client.Models
                 { "metrics", n => { Metrics = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "order_desc", n => { OrderDesc = n.GetBoolValue(); } },
                 { "orderby", n => { Orderby = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "post_processing", n => { PostProcessing = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataPostProcessingOperation>(global::KiotaSupersetAPI.Client.Models.ChartDataPostProcessingOperation.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "result_type", n => { ResultType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_result_type>(); } },
+                { "post_processing", n => { PostProcessing = n.GetCollectionOfObjectValues<KClient.Models.ChartDataPostProcessingOperation>(KClient.Models.ChartDataPostProcessingOperation.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result_type", n => { ResultType = n.GetEnumValue<KClient.Models.ChartDataQueryObject_result_type>(); } },
                 { "row_limit", n => { RowLimit = n.GetIntValue(); } },
                 { "row_offset", n => { RowOffset = n.GetIntValue(); } },
                 { "series_columns", n => { SeriesColumns = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -261,7 +261,7 @@ namespace KiotaSupersetAPI.Client.Models
                 { "time_shift", n => { TimeShift = n.GetStringValue(); } },
                 { "timeseries_limit", n => { TimeseriesLimit = n.GetIntValue(); } },
                 { "timeseries_limit_metric", n => { TimeseriesLimitMetric = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "url_params", n => { UrlParams = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_url_params>(global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_url_params.CreateFromDiscriminatorValue); } },
+                { "url_params", n => { UrlParams = n.GetObjectValue<KClient.Models.ChartDataQueryObject_url_params>(KClient.Models.ChartDataQueryObject_url_params.CreateFromDiscriminatorValue); } },
                 { "where", n => { Where = n.GetStringValue(); } },
             };
         }
@@ -272,13 +272,13 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.AnnotationLayer>("annotation_layers", AnnotationLayers);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_applied_time_extras>("applied_time_extras", AppliedTimeExtras);
+            writer.WriteCollectionOfObjectValues<KClient.Models.AnnotationLayer>("annotation_layers", AnnotationLayers);
+            writer.WriteObjectValue<KClient.Models.ChartDataQueryObject_applied_time_extras>("applied_time_extras", AppliedTimeExtras);
             writer.WriteBoolValue("apply_fetch_values_predicate", ApplyFetchValuesPredicate);
             writer.WriteObjectValue<UntypedNode>("columns", Columns);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataDatasource>("datasource", Datasource);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataExtras>("extras", Extras);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataFilter>("filters", Filters);
+            writer.WriteObjectValue<KClient.Models.ChartDataDatasource>("datasource", Datasource);
+            writer.WriteObjectValue<KClient.Models.ChartDataExtras>("extras", Extras);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataFilter>("filters", Filters);
             writer.WriteStringValue("granularity", Granularity);
             writer.WriteStringValue("granularity_sqla", GranularitySqla);
             writer.WriteObjectValue<UntypedNode>("groupby", Groupby);
@@ -288,8 +288,8 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteObjectValue<UntypedNode>("metrics", Metrics);
             writer.WriteObjectValue<UntypedNode>("orderby", Orderby);
             writer.WriteBoolValue("order_desc", OrderDesc);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataPostProcessingOperation>("post_processing", PostProcessing);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_result_type>("result_type", ResultType);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataPostProcessingOperation>("post_processing", PostProcessing);
+            writer.WriteEnumValue<KClient.Models.ChartDataQueryObject_result_type>("result_type", ResultType);
             writer.WriteIntValue("row_limit", RowLimit);
             writer.WriteIntValue("row_offset", RowOffset);
             writer.WriteObjectValue<UntypedNode>("series_columns", SeriesColumns);
@@ -300,7 +300,7 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteIntValue("timeseries_limit", TimeseriesLimit);
             writer.WriteObjectValue<UntypedNode>("timeseries_limit_metric", TimeseriesLimitMetric);
             writer.WriteStringValue("time_shift", TimeShift);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject_url_params>("url_params", UrlParams);
+            writer.WriteObjectValue<KClient.Models.ChartDataQueryObject_url_params>("url_params", UrlParams);
             writer.WriteStringValue("where", Where);
             writer.WriteAdditionalData(AdditionalData);
         }

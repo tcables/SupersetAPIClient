@@ -22,10 +22,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Extra data used to specify column metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse_extra? Extra { get; set; }
+        public KClient.Models.DatabaseTablesResponse_extra? Extra { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse_extra Extra { get; set; }
+        public KClient.Models.DatabaseTablesResponse_extra Extra { get; set; }
 #endif
         /// <summary>table or view</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,7 +44,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Value { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatabaseTablesResponse"/> and sets the default values.
         /// </summary>
         public DatabaseTablesResponse()
         {
@@ -53,12 +53,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseTablesResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatabaseTablesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse();
+            return new KClient.Models.DatabaseTablesResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +68,7 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "extra", n => { Extra = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse_extra>(global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse_extra.CreateFromDiscriminatorValue); } },
+                { "extra", n => { Extra = n.GetObjectValue<KClient.Models.DatabaseTablesResponse_extra>(KClient.Models.DatabaseTablesResponse_extra.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
@@ -80,7 +80,7 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse_extra>("extra", Extra);
+            writer.WriteObjectValue<KClient.Models.DatabaseTablesResponse_extra>("extra", Extra);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

@@ -58,27 +58,27 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Form_data400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Form_data401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Form_data422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Form_data500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Form_data400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Form_data401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Form_data422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Form_data500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Explore.Form_data.Form_dataPostResponse?> PostAsForm_dataPostResponseAsync(global::KiotaSupersetAPI.Client.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Form_dataPostResponse?> PostAsForm_dataPostResponseAsync(KClient.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Explore.Form_data.Form_dataPostResponse> PostAsForm_dataPostResponseAsync(global::KiotaSupersetAPI.Client.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Form_dataPostResponse> PostAsForm_dataPostResponseAsync(KClient.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Form_data400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Form_data401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Form_data422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Form_data500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Form_data400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Form_data401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Form_data422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Form_data500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Form_dataPostResponse>(requestInfo, KApi.Explore.Form_data.Form_dataPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -89,28 +89,28 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Form_data400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Form_data401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Form_data422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Form_data500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Form_data400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Form_data401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Form_data422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Form_data500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PostAsForm_dataPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Explore.Form_data.Form_dataResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Form_dataResponse?> PostAsync(KClient.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Explore.Form_data.Form_dataResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Form_dataResponse> PostAsync(KClient.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Form_data400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Form_data401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Form_data422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Form_data500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Form_data400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Form_data401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Form_data422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Form_data500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Form_dataResponse>(requestInfo, KApi.Explore.Form_data.Form_dataResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -122,11 +122,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.FormDataPostSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Form_dataRequestBuilder.Form_dataRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));

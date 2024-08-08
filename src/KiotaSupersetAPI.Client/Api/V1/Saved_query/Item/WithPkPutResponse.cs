@@ -23,10 +23,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Item
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Put? Result { get; set; }
+        public KClient.Models.SavedQueryRestApi.Put? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Put Result { get; set; }
+        public KClient.Models.SavedQueryRestApi.Put Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Saved_query.Item.WithPkPutResponse"/> and sets the default values.
@@ -53,7 +53,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Item
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Put>(global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Put.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Put>(KClient.Models.SavedQueryRestApi.Put.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -63,7 +63,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Item
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Put>("result", Result);
+            writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Put>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

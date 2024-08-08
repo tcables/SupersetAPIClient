@@ -46,9 +46,9 @@ namespace KiotaSupersetAPI.Client.Models.FilterSetRestApi
         /// <summary>The owner_id property</summary>
         public int? OwnerId { get; set; }
         /// <summary>The owner_type property</summary>
-        public global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Post_owner_type? OwnerType { get; set; }
+        public KClient.Models.FilterSetRestApi.Post_owner_type? OwnerType { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Post"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.FilterSetRestApi.Post"/> and sets the default values.
         /// </summary>
         public Post()
         {
@@ -57,12 +57,12 @@ namespace KiotaSupersetAPI.Client.Models.FilterSetRestApi
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Post"/></returns>
+        /// <returns>A <see cref="KClient.Models.FilterSetRestApi.Post"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.FilterSetRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Post();
+            return new KClient.Models.FilterSetRestApi.Post();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,7 +76,7 @@ namespace KiotaSupersetAPI.Client.Models.FilterSetRestApi
                 { "json_metadata", n => { JsonMetadata = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "owner_id", n => { OwnerId = n.GetIntValue(); } },
-                { "owner_type", n => { OwnerType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Post_owner_type>(); } },
+                { "owner_type", n => { OwnerType = n.GetEnumValue<KClient.Models.FilterSetRestApi.Post_owner_type>(); } },
             };
         }
         /// <summary>
@@ -90,7 +90,7 @@ namespace KiotaSupersetAPI.Client.Models.FilterSetRestApi
             writer.WriteStringValue("json_metadata", JsonMetadata);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("owner_id", OwnerId);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Post_owner_type>("owner_type", OwnerType);
+            writer.WriteEnumValue<KClient.Models.FilterSetRestApi.Post_owner_type>("owner_type", OwnerType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

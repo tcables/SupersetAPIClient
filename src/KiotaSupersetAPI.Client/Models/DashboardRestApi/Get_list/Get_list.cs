@@ -38,10 +38,10 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User? ChangedBy { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.User? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User ChangedBy { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.User ChangedBy { get; set; }
 #endif
         /// <summary>The changed_by_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,10 +70,10 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User1? CreatedBy { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.User1? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User1 CreatedBy { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.User1 CreatedBy { get; set; }
 #endif
         /// <summary>The created_on_delta_humanized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,10 +114,10 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         /// <summary>The owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User2? Owners { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.User2? Owners { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User2 Owners { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.User2 Owners { get; set; }
 #endif
         /// <summary>The position_json property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -132,10 +132,10 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         /// <summary>The roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Role? Roles { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.Role? Roles { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Role Roles { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.Role Roles { get; set; }
 #endif
         /// <summary>The slug property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -156,10 +156,10 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Tag? Tags { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.Tag? Tags { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Tag Tags { get; set; }
+        public KClient.Models.DashboardRestApi.Get_list.Tag Tags { get; set; }
 #endif
         /// <summary>The thumbnail_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -178,7 +178,7 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         public UntypedNode Url { get; private set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Get_list"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DashboardRestApi.Get_list.Get_list"/> and sets the default values.
         /// </summary>
         public Get_list()
         {
@@ -187,12 +187,12 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Get_list"/></returns>
+        /// <returns>A <see cref="KClient.Models.DashboardRestApi.Get_list.Get_list"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DashboardRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Get_list();
+            return new KClient.Models.DashboardRestApi.Get_list.Get_list();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -204,24 +204,24 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
             {
                 { "certification_details", n => { CertificationDetails = n.GetStringValue(); } },
                 { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User>(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.User>(KClient.Models.DashboardRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
                 { "changed_by_name", n => { ChangedByName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "changed_on_utc", n => { ChangedOnUtc = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User1>(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.User1>(KClient.Models.DashboardRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
                 { "created_on_delta_humanized", n => { CreatedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "css", n => { Css = n.GetStringValue(); } },
                 { "dashboard_title", n => { DashboardTitle = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
                 { "json_metadata", n => { JsonMetadata = n.GetStringValue(); } },
-                { "owners", n => { Owners = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User2>(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
+                { "owners", n => { Owners = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.User2>(KClient.Models.DashboardRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
                 { "position_json", n => { PositionJson = n.GetStringValue(); } },
                 { "published", n => { Published = n.GetBoolValue(); } },
-                { "roles", n => { Roles = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Role>(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Role.CreateFromDiscriminatorValue); } },
+                { "roles", n => { Roles = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.Role>(KClient.Models.DashboardRestApi.Get_list.Role.CreateFromDiscriminatorValue); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "tags", n => { Tags = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Tag>(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Tag.CreateFromDiscriminatorValue); } },
+                { "tags", n => { Tags = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.Tag>(KClient.Models.DashboardRestApi.Get_list.Tag.CreateFromDiscriminatorValue); } },
                 { "thumbnail_url", n => { ThumbnailUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
@@ -235,19 +235,19 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("certification_details", CertificationDetails);
             writer.WriteStringValue("certified_by", CertifiedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User>("changed_by", ChangedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User1>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.User>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.User1>("created_by", CreatedBy);
             writer.WriteStringValue("css", Css);
             writer.WriteStringValue("dashboard_title", DashboardTitle);
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
             writer.WriteStringValue("json_metadata", JsonMetadata);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.User2>("owners", Owners);
+            writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.User2>("owners", Owners);
             writer.WriteStringValue("position_json", PositionJson);
             writer.WriteBoolValue("published", Published);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Role>("roles", Roles);
+            writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.Role>("roles", Roles);
             writer.WriteStringValue("slug", Slug);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Tag>("tags", Tags);
+            writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.Tag>("tags", Tags);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

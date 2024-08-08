@@ -31,10 +31,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.Get? Result { get; set; }
+        public KClient.Models.AnnotationRestApi.Get.Get? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.Get Result { get; set; }
+        public KClient.Models.AnnotationRestApi.Get.Get Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse"/> and sets the default values.
@@ -62,7 +62,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.Get>(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.Get.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.AnnotationRestApi.Get.Get>(KClient.Models.AnnotationRestApi.Get.Get.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -73,7 +73,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.Get>("result", Result);
+            writer.WriteObjectValue<KClient.Models.AnnotationRestApi.Get.Get>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

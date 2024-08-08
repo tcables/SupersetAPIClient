@@ -22,7 +22,7 @@ namespace KiotaSupersetAPI.Client.Models.LogRestApi
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.LogRestApi.Post"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.LogRestApi.Post"/> and sets the default values.
         /// </summary>
         public Post()
         {
@@ -31,12 +31,12 @@ namespace KiotaSupersetAPI.Client.Models.LogRestApi
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.LogRestApi.Post"/></returns>
+        /// <returns>A <see cref="KClient.Models.LogRestApi.Post"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.LogRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.LogRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.LogRestApi.Post();
+            return new KClient.Models.LogRestApi.Post();
         }
         /// <summary>
         /// The deserialization information for the current model

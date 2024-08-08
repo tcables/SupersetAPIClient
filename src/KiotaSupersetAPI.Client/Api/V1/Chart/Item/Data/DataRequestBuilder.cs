@@ -41,29 +41,29 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item.Data
         /// <summary>
         /// Takes a chart ID and uses the query context stored when the chart was saved to return payload data response.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartDataResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.ChartDataResponseSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.ChartDataResponseSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.ChartDataResponseSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.ChartDataResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.ChartDataResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema401Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.ChartDataResponseSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.ChartDataResponseSchema401Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.ChartDataResponseSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.ChartDataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.ChartDataResponseSchema>(requestInfo, KClient.Models.ChartDataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Takes a chart ID and uses the query context stored when the chart was saved to return payload data response.

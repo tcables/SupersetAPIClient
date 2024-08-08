@@ -44,10 +44,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since
         /// <returns>A <see cref="KApi.Query.Updated_since.Updated_sinceGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Updated_since400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Updated_since401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Updated_since404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Updated_since500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Updated_since400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Updated_since401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Updated_since404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Updated_since500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Query.Updated_since.Updated_sinceGetResponse?> GetAsUpdated_sinceGetResponseAsync(Action<RequestConfiguration<KApi.Query.Updated_since.Updated_sinceRequestBuilder.Updated_sinceRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -60,10 +60,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Updated_since400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Updated_since401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Updated_since404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Updated_since500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Updated_since400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Updated_since401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Updated_since404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Updated_since500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Query.Updated_since.Updated_sinceGetResponse>(requestInfo, KApi.Query.Updated_since.Updated_sinceGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -73,10 +73,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since
         /// <returns>A <see cref="KApi.Query.Updated_since.Updated_sinceResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Updated_since400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Updated_since401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Updated_since404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Updated_since500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Updated_since400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Updated_since401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Updated_since404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Updated_since500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsUpdated_sinceGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,10 +90,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Updated_since400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Updated_since401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Updated_since404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Updated_since500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Updated_since400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Updated_since401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Updated_since404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Updated_since500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Query.Updated_since.Updated_sinceResponse>(requestInfo, KApi.Query.Updated_since.Updated_sinceResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

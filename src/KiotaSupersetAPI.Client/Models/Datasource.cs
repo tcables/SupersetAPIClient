@@ -36,7 +36,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string DatasourceName { get; set; }
 #endif
         /// <summary>The type of dataset/datasource identified on `datasource_id`.</summary>
-        public global::KiotaSupersetAPI.Client.Models.Datasource_datasource_type? DatasourceType { get; set; }
+        public KClient.Models.Datasource_datasource_type? DatasourceType { get; set; }
         /// <summary>Datasource schema</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,7 +46,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Schema { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.Datasource"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.Datasource"/> and sets the default values.
         /// </summary>
         public Datasource()
         {
@@ -55,12 +55,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.Datasource"/></returns>
+        /// <returns>A <see cref="KClient.Models.Datasource"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.Datasource CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.Datasource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.Datasource();
+            return new KClient.Models.Datasource();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,7 +72,7 @@ namespace KiotaSupersetAPI.Client.Models
             {
                 { "database_name", n => { DatabaseName = n.GetStringValue(); } },
                 { "datasource_name", n => { DatasourceName = n.GetStringValue(); } },
-                { "datasource_type", n => { DatasourceType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.Datasource_datasource_type>(); } },
+                { "datasource_type", n => { DatasourceType = n.GetEnumValue<KClient.Models.Datasource_datasource_type>(); } },
                 { "schema", n => { Schema = n.GetStringValue(); } },
             };
         }
@@ -85,7 +85,7 @@ namespace KiotaSupersetAPI.Client.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("database_name", DatabaseName);
             writer.WriteStringValue("datasource_name", DatasourceName);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.Datasource_datasource_type>("datasource_type", DatasourceType);
+            writer.WriteEnumValue<KClient.Models.Datasource_datasource_type>("datasource_type", DatasourceType);
             writer.WriteStringValue("schema", Schema);
             writer.WriteAdditionalData(AdditionalData);
         }

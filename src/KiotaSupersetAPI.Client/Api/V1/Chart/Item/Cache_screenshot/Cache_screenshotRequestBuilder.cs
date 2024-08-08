@@ -41,31 +41,31 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item.Cache_screenshot
         /// <summary>
         /// Compute and cache a screenshot
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartCacheScreenshotResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.ChartCacheScreenshotResponseSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.ChartCacheScreenshotResponseSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.ChartCacheScreenshotResponseSchema404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.ChartCacheScreenshotResponseSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder.Cache_screenshotRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.ChartCacheScreenshotResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder.Cache_screenshotRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder.Cache_screenshotRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.ChartCacheScreenshotResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder.Cache_screenshotRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.ChartCacheScreenshotResponseSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.ChartCacheScreenshotResponseSchema401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.ChartCacheScreenshotResponseSchema404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.ChartCacheScreenshotResponseSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.ChartCacheScreenshotResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.ChartCacheScreenshotResponseSchema>(requestInfo, KClient.Models.ChartCacheScreenshotResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Compute and cache a screenshot

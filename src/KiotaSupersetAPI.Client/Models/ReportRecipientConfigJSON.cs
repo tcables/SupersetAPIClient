@@ -28,7 +28,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Target { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ReportRecipientConfigJSON"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ReportRecipientConfigJSON"/> and sets the default values.
         /// </summary>
         public ReportRecipientConfigJSON()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ReportRecipientConfigJSON"/></returns>
+        /// <returns>A <see cref="KClient.Models.ReportRecipientConfigJSON"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ReportRecipientConfigJSON CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ReportRecipientConfigJSON CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ReportRecipientConfigJSON();
+            return new KClient.Models.ReportRecipientConfigJSON();
         }
         /// <summary>
         /// The deserialization information for the current model

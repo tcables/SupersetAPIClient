@@ -64,10 +64,10 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User? ChangedBy { get; set; }
+        public KClient.Models.DatabaseRestApi.Get_list.User? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User ChangedBy { get; set; }
+        public KClient.Models.DatabaseRestApi.Get_list.User ChangedBy { get; set; }
 #endif
         /// <summary>The changed_on property</summary>
         public DateTimeOffset? ChangedOn { get; set; }
@@ -82,10 +82,10 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User1? CreatedBy { get; set; }
+        public KClient.Models.DatabaseRestApi.Get_list.User1? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User1 CreatedBy { get; set; }
+        public KClient.Models.DatabaseRestApi.Get_list.User1 CreatedBy { get; set; }
 #endif
         /// <summary>The database_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -142,7 +142,7 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list
         /// <summary>The uuid property</summary>
         public Guid? Uuid { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.Get_list"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatabaseRestApi.Get_list.Get_list"/> and sets the default values.
         /// </summary>
         public Get_list()
         {
@@ -151,12 +151,12 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.Get_list"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseRestApi.Get_list.Get_list"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatabaseRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.Get_list();
+            return new KClient.Models.DatabaseRestApi.Get_list.Get_list();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -175,10 +175,10 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list
                 { "allows_subquery", n => { AllowsSubquery = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "allows_virtual_table_explore", n => { AllowsVirtualTableExplore = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "backend", n => { Backend = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User>(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.DatabaseRestApi.Get_list.User>(KClient.Models.DatabaseRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
                 { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
                 { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User1>(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.DatabaseRestApi.Get_list.User1>(KClient.Models.DatabaseRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
                 { "database_name", n => { DatabaseName = n.GetStringValue(); } },
                 { "disable_data_preview", n => { DisableDataPreview = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "engine_information", n => { EngineInformation = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -202,9 +202,9 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list
             writer.WriteBoolValue("allow_dml", AllowDml);
             writer.WriteBoolValue("allow_file_upload", AllowFileUpload);
             writer.WriteBoolValue("allow_run_async", AllowRunAsync);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.DatabaseRestApi.Get_list.User>("changed_by", ChangedBy);
             writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.User1>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.DatabaseRestApi.Get_list.User1>("created_by", CreatedBy);
             writer.WriteStringValue("database_name", DatabaseName);
             writer.WriteBoolValue("expose_in_sqllab", ExposeInSqllab);
             writer.WriteStringValue("extra", Extra);

@@ -22,18 +22,18 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The dataset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Dataset? Dataset { get; set; }
+        public KClient.Models.Dataset? Dataset { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Dataset Dataset { get; set; }
+        public KClient.Models.Dataset Dataset { get; set; }
 #endif
         /// <summary>Form data from the Explore controls used to form the chart&apos;s data query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ExploreContextSchema_form_data? FormData { get; set; }
+        public KClient.Models.ExploreContextSchema_form_data? FormData { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ExploreContextSchema_form_data FormData { get; set; }
+        public KClient.Models.ExploreContextSchema_form_data FormData { get; set; }
 #endif
         /// <summary>Any message related to the processed request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,13 +46,13 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The slice property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.Slice? Slice { get; set; }
+        public KClient.Models.Slice? Slice { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.Slice Slice { get; set; }
+        public KClient.Models.Slice Slice { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ExploreContextSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ExploreContextSchema"/> and sets the default values.
         /// </summary>
         public ExploreContextSchema()
         {
@@ -61,12 +61,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ExploreContextSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.ExploreContextSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ExploreContextSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ExploreContextSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ExploreContextSchema();
+            return new KClient.Models.ExploreContextSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,10 +76,10 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dataset", n => { Dataset = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset>(global::KiotaSupersetAPI.Client.Models.Dataset.CreateFromDiscriminatorValue); } },
-                { "form_data", n => { FormData = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ExploreContextSchema_form_data>(global::KiotaSupersetAPI.Client.Models.ExploreContextSchema_form_data.CreateFromDiscriminatorValue); } },
+                { "dataset", n => { Dataset = n.GetObjectValue<KClient.Models.Dataset>(KClient.Models.Dataset.CreateFromDiscriminatorValue); } },
+                { "form_data", n => { FormData = n.GetObjectValue<KClient.Models.ExploreContextSchema_form_data>(KClient.Models.ExploreContextSchema_form_data.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "slice", n => { Slice = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.Slice>(global::KiotaSupersetAPI.Client.Models.Slice.CreateFromDiscriminatorValue); } },
+                { "slice", n => { Slice = n.GetObjectValue<KClient.Models.Slice>(KClient.Models.Slice.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -89,10 +89,10 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Dataset>("dataset", Dataset);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ExploreContextSchema_form_data>("form_data", FormData);
+            writer.WriteObjectValue<KClient.Models.Dataset>("dataset", Dataset);
+            writer.WriteObjectValue<KClient.Models.ExploreContextSchema_form_data>("form_data", FormData);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.Slice>("slice", Slice);
+            writer.WriteObjectValue<KClient.Models.Slice>("slice", Slice);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

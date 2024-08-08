@@ -45,25 +45,25 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Validate_parameters
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Validate_parameters400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Validate_parameters422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Validate_parameters500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Validate_parameters400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Validate_parameters422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Validate_parameters500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Database.Validate_parameters.Validate_parametersPostResponse?> PostAsValidate_parametersPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Validate_parameters.Validate_parametersPostResponse?> PostAsValidate_parametersPostResponseAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Database.Validate_parameters.Validate_parametersPostResponse> PostAsValidate_parametersPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Validate_parameters.Validate_parametersPostResponse> PostAsValidate_parametersPostResponseAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Validate_parameters400Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Validate_parameters400Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Database.Validate_parameters.Validate_parametersPostResponse>(requestInfo, KApi.Database.Validate_parameters.Validate_parametersPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -74,26 +74,26 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Validate_parameters
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Validate_parameters400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Validate_parameters422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Validate_parameters500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Validate_parameters400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Validate_parameters422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Validate_parameters500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PostAsValidate_parametersPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Database.Validate_parameters.Validate_parametersResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Validate_parameters.Validate_parametersResponse?> PostAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Database.Validate_parameters.Validate_parametersResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Validate_parameters.Validate_parametersResponse> PostAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Validate_parameters400Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Validate_parameters400Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Database.Validate_parameters.Validate_parametersResponse>(requestInfo, KApi.Database.Validate_parameters.Validate_parametersResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -105,11 +105,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Validate_parameters
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));

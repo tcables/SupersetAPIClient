@@ -25,10 +25,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Report
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Post? Result { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Post? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Post Result { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Post Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Report.ReportPostResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Report
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetDoubleValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Post>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Post.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Post>(KClient.Models.ReportScheduleRestApi.Post.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Report
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("id", Id);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Post>("result", Result);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Post>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

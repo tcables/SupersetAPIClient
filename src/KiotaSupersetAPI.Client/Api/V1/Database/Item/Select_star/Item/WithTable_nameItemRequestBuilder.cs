@@ -54,33 +54,33 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Select_star.Item
         /// <summary>
         /// Get database select star for table
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.SelectStarResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.SelectStarResponseSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.SelectStarResponseSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.SelectStarResponseSchema404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.SelectStarResponseSchema422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.SelectStarResponseSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.SelectStarResponseSchema?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.SelectStarResponseSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.SelectStarResponseSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.SelectStarResponseSchema401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.SelectStarResponseSchema404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.SelectStarResponseSchema422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.SelectStarResponseSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.SelectStarResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.SelectStarResponseSchema>(requestInfo, KClient.Models.SelectStarResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get database select star for table

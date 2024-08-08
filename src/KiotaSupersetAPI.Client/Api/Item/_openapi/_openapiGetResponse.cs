@@ -20,7 +20,7 @@ namespace KiotaSupersetAPI.Client.Api.Item._openapi
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Api.Item._openapi._openapiGetResponse"/> and sets the default values.
         /// </summary>
         public _openapiGetResponse()
         {
@@ -29,12 +29,12 @@ namespace KiotaSupersetAPI.Client.Api.Item._openapi
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse"/></returns>
+        /// <returns>A <see cref="KClient.Api.Item._openapi._openapiGetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Api.Item._openapi._openapiGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse();
+            return new KClient.Api.Item._openapi._openapiGetResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

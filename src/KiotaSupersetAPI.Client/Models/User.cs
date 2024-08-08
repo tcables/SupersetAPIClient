@@ -38,7 +38,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string LastName { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.User"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.User"/> and sets the default values.
         /// </summary>
         public User()
         {
@@ -47,12 +47,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.User"/></returns>
+        /// <returns>A <see cref="KClient.Models.User"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.User CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.User CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.User();
+            return new KClient.Models.User();
         }
         /// <summary>
         /// The deserialization information for the current model

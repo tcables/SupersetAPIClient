@@ -22,10 +22,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Chart form data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ExplorePermalinkStateSchema_formData? FormData { get; set; }
+        public KClient.Models.ExplorePermalinkStateSchema_formData? FormData { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ExplorePermalinkStateSchema_formData FormData { get; set; }
+        public KClient.Models.ExplorePermalinkStateSchema_formData FormData { get; set; }
 #endif
         /// <summary>URL Parameters</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -36,7 +36,7 @@ namespace KiotaSupersetAPI.Client.Models
         public UntypedNode UrlParams { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ExplorePermalinkStateSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ExplorePermalinkStateSchema"/> and sets the default values.
         /// </summary>
         public ExplorePermalinkStateSchema()
         {
@@ -45,12 +45,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ExplorePermalinkStateSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.ExplorePermalinkStateSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ExplorePermalinkStateSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ExplorePermalinkStateSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ExplorePermalinkStateSchema();
+            return new KClient.Models.ExplorePermalinkStateSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,7 +60,7 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "formData", n => { FormData = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ExplorePermalinkStateSchema_formData>(global::KiotaSupersetAPI.Client.Models.ExplorePermalinkStateSchema_formData.CreateFromDiscriminatorValue); } },
+                { "formData", n => { FormData = n.GetObjectValue<KClient.Models.ExplorePermalinkStateSchema_formData>(KClient.Models.ExplorePermalinkStateSchema_formData.CreateFromDiscriminatorValue); } },
                 { "urlParams", n => { UrlParams = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
@@ -71,7 +71,7 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ExplorePermalinkStateSchema_formData>("formData", FormData);
+            writer.WriteObjectValue<KClient.Models.ExplorePermalinkStateSchema_formData>("formData", FormData);
             writer.WriteObjectValue<UntypedNode>("urlParams", UrlParams);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -24,10 +24,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The datasource property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartDataDatasource? Datasource { get; set; }
+        public KClient.Models.ChartDataDatasource? Datasource { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartDataDatasource Datasource { get; set; }
+        public KClient.Models.ChartDataDatasource Datasource { get; set; }
 #endif
         /// <summary>Should the queries be forced to load from the source. Default: `false`</summary>
         public bool? Force { get; set; }
@@ -42,17 +42,17 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The queries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject>? Queries { get; set; }
+        public List<KClient.Models.ChartDataQueryObject>? Queries { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject> Queries { get; set; }
+        public List<KClient.Models.ChartDataQueryObject> Queries { get; set; }
 #endif
         /// <summary>The result_format property</summary>
-        public global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema_result_format? ResultFormat { get; set; }
+        public KClient.Models.ChartDataQueryContextSchema_result_format? ResultFormat { get; set; }
         /// <summary>The result_type property</summary>
-        public global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema_result_type? ResultType { get; set; }
+        public KClient.Models.ChartDataQueryContextSchema_result_type? ResultType { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartDataQueryContextSchema"/> and sets the default values.
         /// </summary>
         public ChartDataQueryContextSchema()
         {
@@ -61,12 +61,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartDataQueryContextSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartDataQueryContextSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema();
+            return new KClient.Models.ChartDataQueryContextSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,12 +77,12 @@ namespace KiotaSupersetAPI.Client.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "custom_cache_timeout", n => { CustomCacheTimeout = n.GetIntValue(); } },
-                { "datasource", n => { Datasource = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataDatasource>(global::KiotaSupersetAPI.Client.Models.ChartDataDatasource.CreateFromDiscriminatorValue); } },
+                { "datasource", n => { Datasource = n.GetObjectValue<KClient.Models.ChartDataDatasource>(KClient.Models.ChartDataDatasource.CreateFromDiscriminatorValue); } },
                 { "force", n => { Force = n.GetBoolValue(); } },
                 { "form_data", n => { FormData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "queries", n => { Queries = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject>(global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "result_format", n => { ResultFormat = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema_result_format>(); } },
-                { "result_type", n => { ResultType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema_result_type>(); } },
+                { "queries", n => { Queries = n.GetCollectionOfObjectValues<KClient.Models.ChartDataQueryObject>(KClient.Models.ChartDataQueryObject.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result_format", n => { ResultFormat = n.GetEnumValue<KClient.Models.ChartDataQueryContextSchema_result_format>(); } },
+                { "result_type", n => { ResultType = n.GetEnumValue<KClient.Models.ChartDataQueryContextSchema_result_type>(); } },
             };
         }
         /// <summary>
@@ -93,12 +93,12 @@ namespace KiotaSupersetAPI.Client.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("custom_cache_timeout", CustomCacheTimeout);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartDataDatasource>("datasource", Datasource);
+            writer.WriteObjectValue<KClient.Models.ChartDataDatasource>("datasource", Datasource);
             writer.WriteBoolValue("force", Force);
             writer.WriteObjectValue<UntypedNode>("form_data", FormData);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataQueryObject>("queries", Queries);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema_result_format>("result_format", ResultFormat);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataQueryContextSchema_result_type>("result_type", ResultType);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataQueryObject>("queries", Queries);
+            writer.WriteEnumValue<KClient.Models.ChartDataQueryContextSchema_result_format>("result_format", ResultFormat);
+            writer.WriteEnumValue<KClient.Models.ChartDataQueryContextSchema_result_type>("result_type", ResultType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

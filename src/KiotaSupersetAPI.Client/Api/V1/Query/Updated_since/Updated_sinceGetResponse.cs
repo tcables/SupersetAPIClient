@@ -23,10 +23,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since
         /// <summary>A List of queries that changed after last_updated_ms</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Get>? Result { get; set; }
+        public List<KClient.Models.QueryRestApi.Get.Get>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Get> Result { get; set; }
+        public List<KClient.Models.QueryRestApi.Get.Get> Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Query.Updated_since.Updated_sinceGetResponse"/> and sets the default values.
@@ -53,7 +53,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Get>(global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Get.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.QueryRestApi.Get.Get>(KClient.Models.QueryRestApi.Get.Get.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -63,7 +63,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.QueryRestApi.Get.Get>("result", Result);
+            writer.WriteCollectionOfObjectValues<KClient.Models.QueryRestApi.Get.Get>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

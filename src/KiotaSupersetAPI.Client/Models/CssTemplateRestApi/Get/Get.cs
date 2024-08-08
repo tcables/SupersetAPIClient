@@ -22,10 +22,10 @@ namespace KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User1? ChangedBy { get; set; }
+        public KClient.Models.CssTemplateRestApi.Get.User1? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User1 ChangedBy { get; set; }
+        public KClient.Models.CssTemplateRestApi.Get.User1 ChangedBy { get; set; }
 #endif
         /// <summary>The changed_on_delta_humanized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,10 +38,10 @@ namespace KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User? CreatedBy { get; set; }
+        public KClient.Models.CssTemplateRestApi.Get.User? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User CreatedBy { get; set; }
+        public KClient.Models.CssTemplateRestApi.Get.User CreatedBy { get; set; }
 #endif
         /// <summary>The css property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,7 +62,7 @@ namespace KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get
         public string TemplateName { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.Get"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.CssTemplateRestApi.Get.Get"/> and sets the default values.
         /// </summary>
         public Get()
         {
@@ -71,12 +71,12 @@ namespace KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.Get"/></returns>
+        /// <returns>A <see cref="KClient.Models.CssTemplateRestApi.Get.Get"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.CssTemplateRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.Get();
+            return new KClient.Models.CssTemplateRestApi.Get.Get();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,9 +86,9 @@ namespace KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User1>(global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User1.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.CssTemplateRestApi.Get.User1>(KClient.Models.CssTemplateRestApi.Get.User1.CreateFromDiscriminatorValue); } },
                 { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User>(global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.CssTemplateRestApi.Get.User>(KClient.Models.CssTemplateRestApi.Get.User.CreateFromDiscriminatorValue); } },
                 { "css", n => { Css = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "template_name", n => { TemplateName = n.GetStringValue(); } },
@@ -101,8 +101,8 @@ namespace KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User1>("changed_by", ChangedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get.User>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.CssTemplateRestApi.Get.User1>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.CssTemplateRestApi.Get.User>("created_by", CreatedBy);
             writer.WriteStringValue("css", Css);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("template_name", TemplateName);

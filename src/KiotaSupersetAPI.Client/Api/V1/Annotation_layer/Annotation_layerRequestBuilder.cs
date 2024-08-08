@@ -83,10 +83,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
         /// <returns>A <see cref="KApi.Annotation_layer.Annotation_layerDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Annotation_layer.Annotation_layerDeleteResponse?> DeleteAsAnnotation_layerDeleteResponseAsync(Action<RequestConfiguration<KApi.Annotation_layer.Annotation_layerRequestBuilder.Annotation_layerRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -99,10 +99,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Annotation_layer404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Annotation_layer422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Annotation_layer404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Annotation_layer422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Annotation_layer.Annotation_layerDeleteResponse>(requestInfo, KApi.Annotation_layer.Annotation_layerDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -112,10 +112,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
         /// <returns>A <see cref="KApi.Annotation_layer.Annotation_layerResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use DeleteAsAnnotation_layerDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -129,10 +129,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Annotation_layer404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Annotation_layer422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Annotation_layer404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Annotation_layer422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Annotation_layer.Annotation_layerResponse>(requestInfo, KApi.Annotation_layer.Annotation_layerResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -142,10 +142,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
         /// <returns>A <see cref="KApi.Annotation_layer.Annotation_layerGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Annotation_layer.Annotation_layerGetResponse?> GetAsAnnotation_layerGetResponseAsync(Action<RequestConfiguration<KApi.Annotation_layer.Annotation_layerRequestBuilder.Annotation_layerRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -158,10 +158,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Annotation_layer400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Annotation_layer422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Annotation_layer400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Annotation_layer422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Annotation_layer.Annotation_layerGetResponse>(requestInfo, KApi.Annotation_layer.Annotation_layerGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -171,10 +171,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
         /// <returns>A <see cref="KApi.Annotation_layer.Annotation_layerResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsAnnotation_layerGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -188,10 +188,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Annotation_layer400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Annotation_layer422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Annotation_layer400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Annotation_layer422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Annotation_layer.Annotation_layerResponse>(requestInfo, KApi.Annotation_layer.Annotation_layerResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -202,27 +202,27 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Annotation_layer.Annotation_layerPostResponse?> PostAsAnnotation_layerPostResponseAsync(global::KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Annotation_layerPostResponse?> PostAsAnnotation_layerPostResponseAsync(KClient.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Annotation_layer.Annotation_layerPostResponse> PostAsAnnotation_layerPostResponseAsync(global::KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Annotation_layerPostResponse> PostAsAnnotation_layerPostResponseAsync(KClient.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Annotation_layer400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Annotation_layer404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Annotation_layer400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Annotation_layer404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Annotation_layer.Annotation_layerPostResponse>(requestInfo, KApi.Annotation_layer.Annotation_layerPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -233,28 +233,28 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PostAsAnnotation_layerPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Annotation_layer.Annotation_layerResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Annotation_layerResponse?> PostAsync(KClient.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Annotation_layer.Annotation_layerResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Annotation_layerResponse> PostAsync(KClient.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Annotation_layer400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Annotation_layer404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Annotation_layer400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Annotation_layer401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Annotation_layer404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Annotation_layer500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Annotation_layer.Annotation_layerResponse>(requestInfo, KApi.Annotation_layer.Annotation_layerResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -304,11 +304,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));

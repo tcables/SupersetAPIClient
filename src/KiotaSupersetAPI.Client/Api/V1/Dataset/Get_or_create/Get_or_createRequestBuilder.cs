@@ -45,27 +45,27 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Get_or_create400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Get_or_create401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Get_or_create422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Get_or_create500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Get_or_create400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Get_or_create401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Get_or_create422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Get_or_create500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Dataset.Get_or_create.Get_or_createPostResponse?> PostAsGet_or_createPostResponseAsync(global::KiotaSupersetAPI.Client.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Get_or_create.Get_or_createPostResponse?> PostAsGet_or_createPostResponseAsync(KClient.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Dataset.Get_or_create.Get_or_createPostResponse> PostAsGet_or_createPostResponseAsync(global::KiotaSupersetAPI.Client.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Get_or_create.Get_or_createPostResponse> PostAsGet_or_createPostResponseAsync(KClient.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Get_or_create400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Get_or_create401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Get_or_create422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Get_or_create500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Get_or_create400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Get_or_create401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Get_or_create422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Get_or_create500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dataset.Get_or_create.Get_or_createPostResponse>(requestInfo, KApi.Dataset.Get_or_create.Get_or_createPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -76,28 +76,28 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Get_or_create400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Get_or_create401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Get_or_create422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Get_or_create500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Get_or_create400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Get_or_create401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Get_or_create422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Get_or_create500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PostAsGet_or_createPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Dataset.Get_or_create.Get_or_createResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Get_or_create.Get_or_createResponse?> PostAsync(KClient.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Dataset.Get_or_create.Get_or_createResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Get_or_create.Get_or_createResponse> PostAsync(KClient.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Get_or_create400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Get_or_create401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Get_or_create422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Get_or_create500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Get_or_create400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Get_or_create401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Get_or_create422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Get_or_create500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dataset.Get_or_create.Get_or_createResponse>(requestInfo, KApi.Dataset.Get_or_create.Get_or_createResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -109,11 +109,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KClient.Models.GetOrCreateDatasetSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));

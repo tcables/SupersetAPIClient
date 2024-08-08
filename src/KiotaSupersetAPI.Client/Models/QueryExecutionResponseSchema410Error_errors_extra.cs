@@ -20,7 +20,7 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_extra"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.QueryExecutionResponseSchema410Error_errors_extra"/> and sets the default values.
         /// </summary>
         public QueryExecutionResponseSchema410Error_errors_extra()
         {
@@ -29,12 +29,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_extra"/></returns>
+        /// <returns>A <see cref="KClient.Models.QueryExecutionResponseSchema410Error_errors_extra"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_extra CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.QueryExecutionResponseSchema410Error_errors_extra CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema410Error_errors_extra();
+            return new KClient.Models.QueryExecutionResponseSchema410Error_errors_extra();
         }
         /// <summary>
         /// The deserialization information for the current model

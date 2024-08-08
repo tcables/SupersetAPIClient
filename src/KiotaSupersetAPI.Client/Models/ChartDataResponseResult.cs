@@ -22,18 +22,18 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>All requested annotation data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_annotation_data>? AnnotationData { get; set; }
+        public List<KClient.Models.ChartDataResponseResult_annotation_data>? AnnotationData { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_annotation_data> AnnotationData { get; set; }
+        public List<KClient.Models.ChartDataResponseResult_annotation_data> AnnotationData { get; set; }
 #endif
         /// <summary>A list with applied filters</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_applied_filters>? AppliedFilters { get; set; }
+        public List<KClient.Models.ChartDataResponseResult_applied_filters>? AppliedFilters { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_applied_filters> AppliedFilters { get; set; }
+        public List<KClient.Models.ChartDataResponseResult_applied_filters> AppliedFilters { get; set; }
 #endif
         /// <summary>Cache timestamp</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,10 +72,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>A list with results</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_data>? Data { get; set; }
+        public List<KClient.Models.ChartDataResponseResult_data>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_data> Data { get; set; }
+        public List<KClient.Models.ChartDataResponseResult_data> Data { get; set; }
 #endif
         /// <summary>Error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,10 +100,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>A list with rejected filters</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_rejected_filters>? RejectedFilters { get; set; }
+        public List<KClient.Models.ChartDataResponseResult_rejected_filters>? RejectedFilters { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_rejected_filters> RejectedFilters { get; set; }
+        public List<KClient.Models.ChartDataResponseResult_rejected_filters> RejectedFilters { get; set; }
 #endif
         /// <summary>Amount of rows in result set</summary>
         public int? Rowcount { get; set; }
@@ -116,11 +116,11 @@ namespace KiotaSupersetAPI.Client.Models
         public string Stacktrace { get; set; }
 #endif
         /// <summary>Status of the query</summary>
-        public global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_status? Status { get; set; }
+        public KClient.Models.ChartDataResponseResult_status? Status { get; set; }
         /// <summary>End timestamp of time range</summary>
         public int? ToDttm { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartDataResponseResult"/> and sets the default values.
         /// </summary>
         public ChartDataResponseResult()
         {
@@ -129,12 +129,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartDataResponseResult"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartDataResponseResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult();
+            return new KClient.Models.ChartDataResponseResult();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -144,22 +144,22 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "annotation_data", n => { AnnotationData = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_annotation_data>(global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_annotation_data.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "applied_filters", n => { AppliedFilters = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_applied_filters>(global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_applied_filters.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "annotation_data", n => { AnnotationData = n.GetCollectionOfObjectValues<KClient.Models.ChartDataResponseResult_annotation_data>(KClient.Models.ChartDataResponseResult_annotation_data.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "applied_filters", n => { AppliedFilters = n.GetCollectionOfObjectValues<KClient.Models.ChartDataResponseResult_applied_filters>(KClient.Models.ChartDataResponseResult_applied_filters.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "cache_key", n => { CacheKey = n.GetStringValue(); } },
                 { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
                 { "cached_dttm", n => { CachedDttm = n.GetStringValue(); } },
                 { "colnames", n => { Colnames = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
                 { "coltypes", n => { Coltypes = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_data>(global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_data.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<KClient.Models.ChartDataResponseResult_data>(KClient.Models.ChartDataResponseResult_data.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "from_dttm", n => { FromDttm = n.GetIntValue(); } },
                 { "is_cached", n => { IsCached = n.GetBoolValue(); } },
                 { "query", n => { Query = n.GetStringValue(); } },
-                { "rejected_filters", n => { RejectedFilters = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_rejected_filters>(global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_rejected_filters.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "rejected_filters", n => { RejectedFilters = n.GetCollectionOfObjectValues<KClient.Models.ChartDataResponseResult_rejected_filters>(KClient.Models.ChartDataResponseResult_rejected_filters.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "rowcount", n => { Rowcount = n.GetIntValue(); } },
                 { "stacktrace", n => { Stacktrace = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<KClient.Models.ChartDataResponseResult_status>(); } },
                 { "to_dttm", n => { ToDttm = n.GetIntValue(); } },
             };
         }
@@ -170,22 +170,22 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_annotation_data>("annotation_data", AnnotationData);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_applied_filters>("applied_filters", AppliedFilters);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataResponseResult_annotation_data>("annotation_data", AnnotationData);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataResponseResult_applied_filters>("applied_filters", AppliedFilters);
             writer.WriteStringValue("cached_dttm", CachedDttm);
             writer.WriteStringValue("cache_key", CacheKey);
             writer.WriteIntValue("cache_timeout", CacheTimeout);
             writer.WriteCollectionOfPrimitiveValues<string>("colnames", Colnames);
             writer.WriteCollectionOfPrimitiveValues<int?>("coltypes", Coltypes);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_data>("data", Data);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataResponseResult_data>("data", Data);
             writer.WriteStringValue("error", Error);
             writer.WriteIntValue("from_dttm", FromDttm);
             writer.WriteBoolValue("is_cached", IsCached);
             writer.WriteStringValue("query", Query);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_rejected_filters>("rejected_filters", RejectedFilters);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataResponseResult_rejected_filters>("rejected_filters", RejectedFilters);
             writer.WriteIntValue("rowcount", Rowcount);
             writer.WriteStringValue("stacktrace", Stacktrace);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataResponseResult_status>("status", Status);
+            writer.WriteEnumValue<KClient.Models.ChartDataResponseResult_status>("status", Status);
             writer.WriteIntValue("to_dttm", ToDttm);
             writer.WriteAdditionalData(AdditionalData);
         }

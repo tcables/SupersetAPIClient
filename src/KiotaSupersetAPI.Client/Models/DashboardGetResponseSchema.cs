@@ -38,10 +38,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.User? ChangedBy { get; set; }
+        public KClient.Models.User? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.User ChangedBy { get; set; }
+        public KClient.Models.User ChangedBy { get; set; }
 #endif
         /// <summary>The changed_by_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,10 +100,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.User>? Owners { get; set; }
+        public List<KClient.Models.User>? Owners { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.User> Owners { get; set; }
+        public List<KClient.Models.User> Owners { get; set; }
 #endif
         /// <summary>This json object describes the positioning of the widgets in the dashboard. It is dynamically generated when adjusting the widgets size and positions by using drag &amp; drop in the dashboard view</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,10 +118,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.Roles>? Roles { get; set; }
+        public List<KClient.Models.Roles>? Roles { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.Roles> Roles { get; set; }
+        public List<KClient.Models.Roles> Roles { get; set; }
 #endif
         /// <summary>The slug property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,10 +134,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.Tag1>? Tags { get; set; }
+        public List<KClient.Models.Tag1>? Tags { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.Tag1> Tags { get; set; }
+        public List<KClient.Models.Tag1> Tags { get; set; }
 #endif
         /// <summary>The thumbnail_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -156,7 +156,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Url { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DashboardGetResponseSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DashboardGetResponseSchema"/> and sets the default values.
         /// </summary>
         public DashboardGetResponseSchema()
         {
@@ -165,12 +165,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DashboardGetResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.DashboardGetResponseSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DashboardGetResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DashboardGetResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DashboardGetResponseSchema();
+            return new KClient.Models.DashboardGetResponseSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -182,7 +182,7 @@ namespace KiotaSupersetAPI.Client.Models
             {
                 { "certification_details", n => { CertificationDetails = n.GetStringValue(); } },
                 { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.User>(global::KiotaSupersetAPI.Client.Models.User.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.User>(KClient.Models.User.CreateFromDiscriminatorValue); } },
                 { "changed_by_name", n => { ChangedByName = n.GetStringValue(); } },
                 { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
                 { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetStringValue(); } },
@@ -192,12 +192,12 @@ namespace KiotaSupersetAPI.Client.Models
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
                 { "json_metadata", n => { JsonMetadata = n.GetStringValue(); } },
-                { "owners", n => { Owners = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.User>(global::KiotaSupersetAPI.Client.Models.User.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "owners", n => { Owners = n.GetCollectionOfObjectValues<KClient.Models.User>(KClient.Models.User.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "position_json", n => { PositionJson = n.GetStringValue(); } },
                 { "published", n => { Published = n.GetBoolValue(); } },
-                { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Roles>(global::KiotaSupersetAPI.Client.Models.Roles.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "roles", n => { Roles = n.GetCollectionOfObjectValues<KClient.Models.Roles>(KClient.Models.Roles.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
-                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Tag1>(global::KiotaSupersetAPI.Client.Models.Tag1.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "tags", n => { Tags = n.GetCollectionOfObjectValues<KClient.Models.Tag1>(KClient.Models.Tag1.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "thumbnail_url", n => { ThumbnailUrl = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -211,7 +211,7 @@ namespace KiotaSupersetAPI.Client.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("certification_details", CertificationDetails);
             writer.WriteStringValue("certified_by", CertifiedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.User>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.User>("changed_by", ChangedBy);
             writer.WriteStringValue("changed_by_name", ChangedByName);
             writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
             writer.WriteStringValue("changed_on_delta_humanized", ChangedOnDeltaHumanized);
@@ -221,12 +221,12 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
             writer.WriteStringValue("json_metadata", JsonMetadata);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.User>("owners", Owners);
+            writer.WriteCollectionOfObjectValues<KClient.Models.User>("owners", Owners);
             writer.WriteStringValue("position_json", PositionJson);
             writer.WriteBoolValue("published", Published);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Roles>("roles", Roles);
+            writer.WriteCollectionOfObjectValues<KClient.Models.Roles>("roles", Roles);
             writer.WriteStringValue("slug", Slug);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Tag1>("tags", Tags);
+            writer.WriteCollectionOfObjectValues<KClient.Models.Tag1>("tags", Tags);
             writer.WriteStringValue("thumbnail_url", ThumbnailUrl);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

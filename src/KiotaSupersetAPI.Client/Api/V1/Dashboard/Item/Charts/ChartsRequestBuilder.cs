@@ -44,10 +44,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Charts
         /// <returns>A <see cref="KApi.Dashboard.Item.Charts.ChartsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Charts400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Charts401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Charts403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Charts404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Charts400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Charts401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Charts403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Charts404Error">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Dashboard.Item.Charts.ChartsGetResponse?> GetAsChartsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -60,10 +60,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Charts
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Charts400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Charts401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Charts403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Charts404Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Charts400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Charts401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Charts403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Charts404Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Charts.ChartsGetResponse>(requestInfo, KApi.Dashboard.Item.Charts.ChartsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -73,10 +73,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Charts
         /// <returns>A <see cref="KApi.Dashboard.Item.Charts.ChartsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Charts400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Charts401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Charts403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Charts404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Charts400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Charts401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Charts403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Charts404Error">When receiving a 404 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsChartsGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,10 +90,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Charts
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Charts400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Charts401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Charts403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Charts404Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Charts400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Charts401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Charts403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Charts404Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Charts.ChartsResponse>(requestInfo, KApi.Dashboard.Item.Charts.ChartsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

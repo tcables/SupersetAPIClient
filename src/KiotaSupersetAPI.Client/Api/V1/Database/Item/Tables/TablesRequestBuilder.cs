@@ -44,11 +44,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Tables
         /// <returns>A <see cref="KApi.Database.Item.Tables.TablesGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Tables400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Tables401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Tables404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Tables422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Tables500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Database.Item.Tables.TablesGetResponse?> GetAsTablesGetResponseAsync(Action<RequestConfiguration<KApi.Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -61,11 +61,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Tables
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Tables400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Tables401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Tables404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Tables422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Tables500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Tables400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Tables401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Tables404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Tables422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Tables500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Database.Item.Tables.TablesGetResponse>(requestInfo, KApi.Database.Item.Tables.TablesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -75,11 +75,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Tables
         /// <returns>A <see cref="KApi.Database.Item.Tables.TablesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Tables500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Tables400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Tables401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Tables404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Tables422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Tables500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsTablesGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,11 +93,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Tables
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Tables400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Tables401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Tables404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Tables422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Tables500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Tables400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Tables401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Tables404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Tables422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Tables500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Database.Item.Tables.TablesResponse>(requestInfo, KApi.Database.Item.Tables.TablesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

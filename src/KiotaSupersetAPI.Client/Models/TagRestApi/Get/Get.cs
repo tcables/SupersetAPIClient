@@ -22,10 +22,10 @@ namespace KiotaSupersetAPI.Client.Models.TagRestApi.Get
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User1? ChangedBy { get; set; }
+        public KClient.Models.TagRestApi.Get.User1? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User1 ChangedBy { get; set; }
+        public KClient.Models.TagRestApi.Get.User1 ChangedBy { get; set; }
 #endif
         /// <summary>The changed_on_delta_humanized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,10 +38,10 @@ namespace KiotaSupersetAPI.Client.Models.TagRestApi.Get
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User? CreatedBy { get; set; }
+        public KClient.Models.TagRestApi.Get.User? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User CreatedBy { get; set; }
+        public KClient.Models.TagRestApi.Get.User CreatedBy { get; set; }
 #endif
         /// <summary>The created_on_delta_humanized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -78,7 +78,7 @@ namespace KiotaSupersetAPI.Client.Models.TagRestApi.Get
         public UntypedNode Type { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.Get"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.TagRestApi.Get.Get"/> and sets the default values.
         /// </summary>
         public Get()
         {
@@ -87,12 +87,12 @@ namespace KiotaSupersetAPI.Client.Models.TagRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.Get"/></returns>
+        /// <returns>A <see cref="KClient.Models.TagRestApi.Get.Get"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.TagRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.Get();
+            return new KClient.Models.TagRestApi.Get.Get();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,9 +102,9 @@ namespace KiotaSupersetAPI.Client.Models.TagRestApi.Get
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User1>(global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User1.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.TagRestApi.Get.User1>(KClient.Models.TagRestApi.Get.User1.CreateFromDiscriminatorValue); } },
                 { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User>(global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.TagRestApi.Get.User>(KClient.Models.TagRestApi.Get.User.CreateFromDiscriminatorValue); } },
                 { "created_on_delta_humanized", n => { CreatedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
@@ -119,8 +119,8 @@ namespace KiotaSupersetAPI.Client.Models.TagRestApi.Get
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User1>("changed_by", ChangedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.TagRestApi.Get.User>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.TagRestApi.Get.User1>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.TagRestApi.Get.User>("created_by", CreatedBy);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("name", Name);

@@ -28,11 +28,11 @@ namespace KiotaSupersetAPI.Client.Models
         public string Having { get; set; }
 #endif
         /// <summary>End time for relative time deltas. Default: `config[&quot;DEFAULT_RELATIVE_START_TIME&quot;]`</summary>
-        public global::KiotaSupersetAPI.Client.Models.ChartDataExtras_relative_end? RelativeEnd { get; set; }
+        public KClient.Models.ChartDataExtras_relative_end? RelativeEnd { get; set; }
         /// <summary>Start time for relative time deltas. Default: `config[&quot;DEFAULT_RELATIVE_START_TIME&quot;]`</summary>
-        public global::KiotaSupersetAPI.Client.Models.ChartDataExtras_relative_start? RelativeStart { get; set; }
+        public KClient.Models.ChartDataExtras_relative_start? RelativeStart { get; set; }
         /// <summary>To what level of granularity should the temporal column be aggregated. Supports [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations) durations.</summary>
-        public global::KiotaSupersetAPI.Client.Models.ChartDataExtras_time_grain_sqla? TimeGrainSqla { get; set; }
+        public KClient.Models.ChartDataExtras_time_grain_sqla? TimeGrainSqla { get; set; }
         /// <summary>WHERE clause to be added to queries using AND operator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -42,7 +42,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Where { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataExtras"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartDataExtras"/> and sets the default values.
         /// </summary>
         public ChartDataExtras()
         {
@@ -51,12 +51,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataExtras"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartDataExtras"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartDataExtras CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartDataExtras CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartDataExtras();
+            return new KClient.Models.ChartDataExtras();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,9 +67,9 @@ namespace KiotaSupersetAPI.Client.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "having", n => { Having = n.GetStringValue(); } },
-                { "relative_end", n => { RelativeEnd = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataExtras_relative_end>(); } },
-                { "relative_start", n => { RelativeStart = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataExtras_relative_start>(); } },
-                { "time_grain_sqla", n => { TimeGrainSqla = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataExtras_time_grain_sqla>(); } },
+                { "relative_end", n => { RelativeEnd = n.GetEnumValue<KClient.Models.ChartDataExtras_relative_end>(); } },
+                { "relative_start", n => { RelativeStart = n.GetEnumValue<KClient.Models.ChartDataExtras_relative_start>(); } },
+                { "time_grain_sqla", n => { TimeGrainSqla = n.GetEnumValue<KClient.Models.ChartDataExtras_time_grain_sqla>(); } },
                 { "where", n => { Where = n.GetStringValue(); } },
             };
         }
@@ -81,9 +81,9 @@ namespace KiotaSupersetAPI.Client.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("having", Having);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataExtras_relative_end>("relative_end", RelativeEnd);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataExtras_relative_start>("relative_start", RelativeStart);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataExtras_time_grain_sqla>("time_grain_sqla", TimeGrainSqla);
+            writer.WriteEnumValue<KClient.Models.ChartDataExtras_relative_end>("relative_end", RelativeEnd);
+            writer.WriteEnumValue<KClient.Models.ChartDataExtras_relative_start>("relative_start", RelativeStart);
+            writer.WriteEnumValue<KClient.Models.ChartDataExtras_time_grain_sqla>("time_grain_sqla", TimeGrainSqla);
             writer.WriteStringValue("where", Where);
             writer.WriteAdditionalData(AdditionalData);
         }

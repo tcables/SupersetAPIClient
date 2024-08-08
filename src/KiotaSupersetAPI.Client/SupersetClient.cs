@@ -25,12 +25,12 @@ namespace KiotaSupersetAPI.Client
     public partial class SupersetClient : BaseRequestBuilder
     {
         /// <summary>The api property</summary>
-        public global::KiotaSupersetAPI.Client.Api.ApiRequestBuilder Api
+        public KClient.Api.ApiRequestBuilder Api
         {
-            get => new global::KiotaSupersetAPI.Client.Api.ApiRequestBuilder(PathParameters, RequestAdapter);
+            get => new KClient.Api.ApiRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.SupersetClient"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.SupersetClient"/> and sets the default values.
         /// </summary>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
         public SupersetClient(IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}", new Dictionary<string, object>())

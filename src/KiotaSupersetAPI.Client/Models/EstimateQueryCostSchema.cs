@@ -40,13 +40,13 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The SQL query template params</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.EstimateQueryCostSchema_template_params? TemplateParams { get; set; }
+        public KClient.Models.EstimateQueryCostSchema_template_params? TemplateParams { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.EstimateQueryCostSchema_template_params TemplateParams { get; set; }
+        public KClient.Models.EstimateQueryCostSchema_template_params TemplateParams { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.EstimateQueryCostSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.EstimateQueryCostSchema"/> and sets the default values.
         /// </summary>
         public EstimateQueryCostSchema()
         {
@@ -55,12 +55,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.EstimateQueryCostSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.EstimateQueryCostSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.EstimateQueryCostSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.EstimateQueryCostSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.EstimateQueryCostSchema();
+            return new KClient.Models.EstimateQueryCostSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,7 +73,7 @@ namespace KiotaSupersetAPI.Client.Models
                 { "database_id", n => { DatabaseId = n.GetIntValue(); } },
                 { "schema", n => { Schema = n.GetStringValue(); } },
                 { "sql", n => { Sql = n.GetStringValue(); } },
-                { "template_params", n => { TemplateParams = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.EstimateQueryCostSchema_template_params>(global::KiotaSupersetAPI.Client.Models.EstimateQueryCostSchema_template_params.CreateFromDiscriminatorValue); } },
+                { "template_params", n => { TemplateParams = n.GetObjectValue<KClient.Models.EstimateQueryCostSchema_template_params>(KClient.Models.EstimateQueryCostSchema_template_params.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -86,7 +86,7 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteIntValue("database_id", DatabaseId);
             writer.WriteStringValue("schema", Schema);
             writer.WriteStringValue("sql", Sql);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.EstimateQueryCostSchema_template_params>("template_params", TemplateParams);
+            writer.WriteObjectValue<KClient.Models.EstimateQueryCostSchema_template_params>("template_params", TemplateParams);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

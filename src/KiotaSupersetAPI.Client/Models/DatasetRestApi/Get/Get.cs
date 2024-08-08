@@ -26,10 +26,10 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User? ChangedBy { get; set; }
+        public KClient.Models.DatasetRestApi.Get.User? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User ChangedBy { get; set; }
+        public KClient.Models.DatasetRestApi.Get.User ChangedBy { get; set; }
 #endif
         /// <summary>The changed_on property</summary>
         public DateTimeOffset? ChangedOn { get; set; }
@@ -52,18 +52,18 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
         /// <summary>The columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.TableColumn? Columns { get; set; }
+        public KClient.Models.DatasetRestApi.Get.TableColumn? Columns { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.TableColumn Columns { get; set; }
+        public KClient.Models.DatasetRestApi.Get.TableColumn Columns { get; set; }
 #endif
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User1? CreatedBy { get; set; }
+        public KClient.Models.DatasetRestApi.Get.User1? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User1 CreatedBy { get; set; }
+        public KClient.Models.DatasetRestApi.Get.User1 CreatedBy { get; set; }
 #endif
         /// <summary>The created_on property</summary>
         public DateTimeOffset? CreatedOn { get; set; }
@@ -86,10 +86,10 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
         /// <summary>The database property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Database? Database { get; set; }
+        public KClient.Models.DatasetRestApi.Get.Database? Database { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Database Database { get; set; }
+        public KClient.Models.DatasetRestApi.Get.Database Database { get; set; }
 #endif
         /// <summary>The datasource_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -174,10 +174,10 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
         /// <summary>The metrics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.SqlMetric? Metrics { get; set; }
+        public KClient.Models.DatasetRestApi.Get.SqlMetric? Metrics { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.SqlMetric Metrics { get; set; }
+        public KClient.Models.DatasetRestApi.Get.SqlMetric Metrics { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -202,10 +202,10 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
         /// <summary>The owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User2? Owners { get; set; }
+        public KClient.Models.DatasetRestApi.Get.User2? Owners { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User2 Owners { get; set; }
+        public KClient.Models.DatasetRestApi.Get.User2 Owners { get; set; }
 #endif
         /// <summary>The schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -280,7 +280,7 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
         public UntypedNode VerboseMap { get; private set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Get"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatasetRestApi.Get.Get"/> and sets the default values.
         /// </summary>
         public Get()
         {
@@ -289,12 +289,12 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Get"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatasetRestApi.Get.Get"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatasetRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Get();
+            return new KClient.Models.DatasetRestApi.Get.Get();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -306,16 +306,16 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
             {
                 { "always_filter_main_dttm", n => { AlwaysFilterMainDttm = n.GetBoolValue(); } },
                 { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User>(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.DatasetRestApi.Get.User>(KClient.Models.DatasetRestApi.Get.User.CreateFromDiscriminatorValue); } },
                 { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
                 { "changed_on_humanized", n => { ChangedOnHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "column_formats", n => { ColumnFormats = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "columns", n => { Columns = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.TableColumn>(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.TableColumn.CreateFromDiscriminatorValue); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User1>(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User1.CreateFromDiscriminatorValue); } },
+                { "columns", n => { Columns = n.GetObjectValue<KClient.Models.DatasetRestApi.Get.TableColumn>(KClient.Models.DatasetRestApi.Get.TableColumn.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.DatasetRestApi.Get.User1>(KClient.Models.DatasetRestApi.Get.User1.CreateFromDiscriminatorValue); } },
                 { "created_on", n => { CreatedOn = n.GetDateTimeOffsetValue(); } },
                 { "created_on_humanized", n => { CreatedOnHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "currency_formats", n => { CurrencyFormats = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "database", n => { Database = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Database>(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Database.CreateFromDiscriminatorValue); } },
+                { "database", n => { Database = n.GetObjectValue<KClient.Models.DatasetRestApi.Get.Database>(KClient.Models.DatasetRestApi.Get.Database.CreateFromDiscriminatorValue); } },
                 { "datasource_name", n => { DatasourceName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "datasource_type", n => { DatasourceType = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "default_endpoint", n => { DefaultEndpoint = n.GetStringValue(); } },
@@ -329,12 +329,12 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
                 { "is_sqllab_view", n => { IsSqllabView = n.GetBoolValue(); } },
                 { "kind", n => { Kind = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "main_dttm_col", n => { MainDttmCol = n.GetStringValue(); } },
-                { "metrics", n => { Metrics = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.SqlMetric>(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.SqlMetric.CreateFromDiscriminatorValue); } },
+                { "metrics", n => { Metrics = n.GetObjectValue<KClient.Models.DatasetRestApi.Get.SqlMetric>(KClient.Models.DatasetRestApi.Get.SqlMetric.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "normalize_columns", n => { NormalizeColumns = n.GetBoolValue(); } },
                 { "offset", n => { Offset = n.GetIntValue(); } },
                 { "order_by_choices", n => { OrderByChoices = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "owners", n => { Owners = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User2>(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User2.CreateFromDiscriminatorValue); } },
+                { "owners", n => { Owners = n.GetObjectValue<KClient.Models.DatasetRestApi.Get.User2>(KClient.Models.DatasetRestApi.Get.User2.CreateFromDiscriminatorValue); } },
                 { "schema", n => { Schema = n.GetStringValue(); } },
                 { "select_star", n => { SelectStar = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "sql", n => { Sql = n.GetStringValue(); } },
@@ -355,12 +355,12 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("always_filter_main_dttm", AlwaysFilterMainDttm);
             writer.WriteIntValue("cache_timeout", CacheTimeout);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.DatasetRestApi.Get.User>("changed_by", ChangedBy);
             writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.TableColumn>("columns", Columns);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User1>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.DatasetRestApi.Get.TableColumn>("columns", Columns);
+            writer.WriteObjectValue<KClient.Models.DatasetRestApi.Get.User1>("created_by", CreatedBy);
             writer.WriteDateTimeOffsetValue("created_on", CreatedOn);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Database>("database", Database);
+            writer.WriteObjectValue<KClient.Models.DatasetRestApi.Get.Database>("database", Database);
             writer.WriteStringValue("default_endpoint", DefaultEndpoint);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("extra", Extra);
@@ -370,10 +370,10 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
             writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
             writer.WriteBoolValue("is_sqllab_view", IsSqllabView);
             writer.WriteStringValue("main_dttm_col", MainDttmCol);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.SqlMetric>("metrics", Metrics);
+            writer.WriteObjectValue<KClient.Models.DatasetRestApi.Get.SqlMetric>("metrics", Metrics);
             writer.WriteBoolValue("normalize_columns", NormalizeColumns);
             writer.WriteIntValue("offset", Offset);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.User2>("owners", Owners);
+            writer.WriteObjectValue<KClient.Models.DatasetRestApi.Get.User2>("owners", Owners);
             writer.WriteStringValue("schema", Schema);
             writer.WriteStringValue("sql", Sql);
             writer.WriteStringValue("table_name", TableName);

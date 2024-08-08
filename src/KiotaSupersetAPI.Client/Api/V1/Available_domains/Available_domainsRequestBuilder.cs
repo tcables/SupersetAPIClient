@@ -44,8 +44,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
         /// <returns>A <see cref="KApi.Available_domains.Available_domainsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Available_domains401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Available_domains403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Available_domains401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Available_domains403Error">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Available_domains.Available_domainsGetResponse?> GetAsAvailable_domainsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,8 +58,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Available_domains401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Available_domains403Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Available_domains401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Available_domains403Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Available_domains.Available_domainsGetResponse>(requestInfo, KApi.Available_domains.Available_domainsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -69,8 +69,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
         /// <returns>A <see cref="KApi.Available_domains.Available_domainsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Available_domains401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Available_domains403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Available_domains401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Available_domains403Error">When receiving a 403 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsAvailable_domainsGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,8 +84,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Available_domains401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Available_domains403Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Available_domains401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Available_domains403Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Available_domains.Available_domainsResponse>(requestInfo, KApi.Available_domains.Available_domainsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

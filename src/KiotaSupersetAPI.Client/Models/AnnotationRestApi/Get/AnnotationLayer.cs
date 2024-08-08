@@ -30,7 +30,7 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get
         public string Name { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.AnnotationLayer"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.AnnotationRestApi.Get.AnnotationLayer"/> and sets the default values.
         /// </summary>
         public AnnotationLayer()
         {
@@ -39,12 +39,12 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.AnnotationLayer"/></returns>
+        /// <returns>A <see cref="KClient.Models.AnnotationRestApi.Get.AnnotationLayer"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.AnnotationLayer CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.AnnotationRestApi.Get.AnnotationLayer CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.AnnotationLayer();
+            return new KClient.Models.AnnotationRestApi.Get.AnnotationLayer();
         }
         /// <summary>
         /// The deserialization information for the current model

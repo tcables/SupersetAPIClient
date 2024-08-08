@@ -27,10 +27,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Put? Result { get; set; }
+        public KClient.Models.DashboardRestApi.Put? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Put Result { get; set; }
+        public KClient.Models.DashboardRestApi.Put Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Dashboard.Item.Dashboard_PutResponse"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item
             {
                 { "id", n => { Id = n.GetDoubleValue(); } },
                 { "last_modified_time", n => { LastModifiedTime = n.GetDoubleValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Put>(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Put.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.DashboardRestApi.Put>(KClient.Models.DashboardRestApi.Put.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("id", Id);
             writer.WriteDoubleValue("last_modified_time", LastModifiedTime);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Put>("result", Result);
+            writer.WriteObjectValue<KClient.Models.DashboardRestApi.Put>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -22,10 +22,10 @@ namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User1? ChangedBy { get; set; }
+        public KClient.Models.SavedQueryRestApi.Get.User1? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User1 ChangedBy { get; set; }
+        public KClient.Models.SavedQueryRestApi.Get.User1 ChangedBy { get; set; }
 #endif
         /// <summary>The changed_on property</summary>
         public DateTimeOffset? ChangedOn { get; set; }
@@ -40,18 +40,18 @@ namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User? CreatedBy { get; set; }
+        public KClient.Models.SavedQueryRestApi.Get.User? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User CreatedBy { get; set; }
+        public KClient.Models.SavedQueryRestApi.Get.User CreatedBy { get; set; }
 #endif
         /// <summary>The database property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.Database? Database { get; set; }
+        public KClient.Models.SavedQueryRestApi.Get.Database? Database { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.Database Database { get; set; }
+        public KClient.Models.SavedQueryRestApi.Get.Database Database { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,7 +104,7 @@ namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get
         public string TemplateParameters { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.Get"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.SavedQueryRestApi.Get.Get"/> and sets the default values.
         /// </summary>
         public Get()
         {
@@ -113,12 +113,12 @@ namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.Get"/></returns>
+        /// <returns>A <see cref="KClient.Models.SavedQueryRestApi.Get.Get"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.SavedQueryRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.Get();
+            return new KClient.Models.SavedQueryRestApi.Get.Get();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,11 +128,11 @@ namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User1>(global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User1.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Get.User1>(KClient.Models.SavedQueryRestApi.Get.User1.CreateFromDiscriminatorValue); } },
                 { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
                 { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User>(global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User.CreateFromDiscriminatorValue); } },
-                { "database", n => { Database = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.Database>(global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.Database.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Get.User>(KClient.Models.SavedQueryRestApi.Get.User.CreateFromDiscriminatorValue); } },
+                { "database", n => { Database = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Get.Database>(KClient.Models.SavedQueryRestApi.Get.Database.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
@@ -149,10 +149,10 @@ namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User1>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Get.User1>("changed_by", ChangedBy);
             writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User>("created_by", CreatedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.Database>("database", Database);
+            writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Get.User>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Get.Database>("database", Database);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("label", Label);

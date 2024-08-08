@@ -22,21 +22,21 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The charts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRelatedCharts? Charts { get; set; }
+        public KClient.Models.DatabaseRelatedCharts? Charts { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRelatedCharts Charts { get; set; }
+        public KClient.Models.DatabaseRelatedCharts Charts { get; set; }
 #endif
         /// <summary>The dashboards property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboards? Dashboards { get; set; }
+        public KClient.Models.DatabaseRelatedDashboards? Dashboards { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboards Dashboards { get; set; }
+        public KClient.Models.DatabaseRelatedDashboards Dashboards { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatabaseRelatedObjectsResponse"/> and sets the default values.
         /// </summary>
         public DatabaseRelatedObjectsResponse()
         {
@@ -45,12 +45,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseRelatedObjectsResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatabaseRelatedObjectsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse();
+            return new KClient.Models.DatabaseRelatedObjectsResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,8 +60,8 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "charts", n => { Charts = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRelatedCharts>(global::KiotaSupersetAPI.Client.Models.DatabaseRelatedCharts.CreateFromDiscriminatorValue); } },
-                { "dashboards", n => { Dashboards = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboards>(global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboards.CreateFromDiscriminatorValue); } },
+                { "charts", n => { Charts = n.GetObjectValue<KClient.Models.DatabaseRelatedCharts>(KClient.Models.DatabaseRelatedCharts.CreateFromDiscriminatorValue); } },
+                { "dashboards", n => { Dashboards = n.GetObjectValue<KClient.Models.DatabaseRelatedDashboards>(KClient.Models.DatabaseRelatedDashboards.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,8 +71,8 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRelatedCharts>("charts", Charts);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRelatedDashboards>("dashboards", Dashboards);
+            writer.WriteObjectValue<KClient.Models.DatabaseRelatedCharts>("charts", Charts);
+            writer.WriteObjectValue<KClient.Models.DatabaseRelatedDashboards>("dashboards", Dashboards);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

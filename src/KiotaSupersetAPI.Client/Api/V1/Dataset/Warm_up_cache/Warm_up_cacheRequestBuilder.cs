@@ -41,31 +41,31 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Warm_up_cache
         /// <summary>
         /// Warms up the cache for the table. Note for slices a force refresh occurs. In terms of the `extra_filters` these can be obtained from records in the JSON encoded `logs.json` column associated with the `explore_json` action.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatasetCacheWarmUpResponseSchema"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.DatasetCacheWarmUpResponseSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.DatasetCacheWarmUpResponseSchema404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.DatasetCacheWarmUpResponseSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema?> PutAsync(global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.DatasetCacheWarmUpResponseSchema?> PutAsync(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema> PutAsync(global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.DatasetCacheWarmUpResponseSchema> PutAsync(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema400Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.DatasetCacheWarmUpResponseSchema400Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.DatasetCacheWarmUpResponseSchema404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.DatasetCacheWarmUpResponseSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.DatasetCacheWarmUpResponseSchema>(requestInfo, KClient.Models.DatasetCacheWarmUpResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Warms up the cache for the table. Note for slices a force refresh occurs. In terms of the `extra_filters` these can be obtained from records in the JSON encoded `logs.json` column associated with the `explore_json` action.
@@ -75,11 +75,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Warm_up_cache
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));

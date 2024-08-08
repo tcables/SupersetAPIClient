@@ -47,10 +47,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get.Get? Result { get; set; }
+        public KClient.Models.ChartRestApi.Get.Get? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get.Get Result { get; set; }
+        public KClient.Models.ChartRestApi.Get.Get Result { get; set; }
 #endif
         /// <summary>A list of columns</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,7 +96,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
                 { "description_columns", n => { DescriptionColumns = n.GetObjectValue<KApi.Chart.Item.WithPkGetResponse_description_columns>(KApi.Chart.Item.WithPkGetResponse_description_columns.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label_columns", n => { LabelColumns = n.GetObjectValue<KApi.Chart.Item.WithPkGetResponse_label_columns>(KApi.Chart.Item.WithPkGetResponse_label_columns.CreateFromDiscriminatorValue); } },
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get.Get>(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get.Get.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.ChartRestApi.Get.Get>(KClient.Models.ChartRestApi.Get.Get.CreateFromDiscriminatorValue); } },
                 { "show_columns", n => { ShowColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
                 { "show_title", n => { ShowTitle = n.GetStringValue(); } },
             };
@@ -111,7 +111,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
             writer.WriteObjectValue<KApi.Chart.Item.WithPkGetResponse_description_columns>("description_columns", DescriptionColumns);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<KApi.Chart.Item.WithPkGetResponse_label_columns>("label_columns", LabelColumns);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get.Get>("result", Result);
+            writer.WriteObjectValue<KClient.Models.ChartRestApi.Get.Get>("result", Result);
             writer.WriteCollectionOfPrimitiveValues<string>("show_columns", ShowColumns);
             writer.WriteStringValue("show_title", ShowTitle);
             writer.WriteAdditionalData(AdditionalData);

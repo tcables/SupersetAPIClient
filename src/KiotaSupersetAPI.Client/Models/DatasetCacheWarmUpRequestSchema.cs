@@ -46,7 +46,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string TableName { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpRequestSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatasetCacheWarmUpRequestSchema"/> and sets the default values.
         /// </summary>
         public DatasetCacheWarmUpRequestSchema()
         {
@@ -55,12 +55,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpRequestSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatasetCacheWarmUpRequestSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpRequestSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatasetCacheWarmUpRequestSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatasetCacheWarmUpRequestSchema();
+            return new KClient.Models.DatasetCacheWarmUpRequestSchema();
         }
         /// <summary>
         /// The deserialization information for the current model

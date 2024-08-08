@@ -22,10 +22,10 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User1? ChangedBy { get; set; }
+        public KClient.Models.AnnotationRestApi.Get_list.User1? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User1 ChangedBy { get; set; }
+        public KClient.Models.AnnotationRestApi.Get_list.User1 ChangedBy { get; set; }
 #endif
         /// <summary>The changed_on_delta_humanized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,10 +38,10 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User? CreatedBy { get; set; }
+        public KClient.Models.AnnotationRestApi.Get_list.User? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User CreatedBy { get; set; }
+        public KClient.Models.AnnotationRestApi.Get_list.User CreatedBy { get; set; }
 #endif
         /// <summary>The end_dttm property</summary>
         public DateTimeOffset? EndDttm { get; set; }
@@ -66,7 +66,7 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list
         /// <summary>The start_dttm property</summary>
         public DateTimeOffset? StartDttm { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.AnnotationRestApi.Get_list.Get_list"/> and sets the default values.
         /// </summary>
         public Get_list()
         {
@@ -75,12 +75,12 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list"/></returns>
+        /// <returns>A <see cref="KClient.Models.AnnotationRestApi.Get_list.Get_list"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.AnnotationRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list();
+            return new KClient.Models.AnnotationRestApi.Get_list.Get_list();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,9 +90,9 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User1>(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.AnnotationRestApi.Get_list.User1>(KClient.Models.AnnotationRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
                 { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User>(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.AnnotationRestApi.Get_list.User>(KClient.Models.AnnotationRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
                 { "end_dttm", n => { EndDttm = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "long_descr", n => { LongDescr = n.GetStringValue(); } },
@@ -107,8 +107,8 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User1>("changed_by", ChangedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.User>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.AnnotationRestApi.Get_list.User1>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.AnnotationRestApi.Get_list.User>("created_by", CreatedBy);
             writer.WriteDateTimeOffsetValue("end_dttm", EndDttm);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("long_descr", LongDescr);

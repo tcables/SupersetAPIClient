@@ -44,11 +44,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
         /// <returns>A <see cref="KApi.Dashboard.Item.Filter_state.Item.WithKeyDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.WithKey401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyDeleteResponse?> DeleteAsWithKeyDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -61,11 +61,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.WithKey400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.WithKey401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithKey404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.WithKey400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithKey401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithKey404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Filter_state.Item.WithKeyDeleteResponse>(requestInfo, KApi.Dashboard.Item.Filter_state.Item.WithKeyDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -75,11 +75,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
         /// <returns>A <see cref="KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.WithKey401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use DeleteAsWithKeyDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,11 +93,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.WithKey400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.WithKey401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithKey404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.WithKey400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithKey401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithKey404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse>(requestInfo, KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -107,11 +107,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
         /// <returns>A <see cref="KApi.Dashboard.Item.Filter_state.Item.WithKeyGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.WithKey401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyGetResponse?> GetAsWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -124,11 +124,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.WithKey400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.WithKey401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithKey404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.WithKey400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithKey401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithKey404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Filter_state.Item.WithKeyGetResponse>(requestInfo, KApi.Dashboard.Item.Filter_state.Item.WithKeyGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -138,11 +138,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
         /// <returns>A <see cref="KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.WithKey401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsWithKeyGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -156,11 +156,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.WithKey400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.WithKey401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithKey404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.WithKey400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithKey401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithKey404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse>(requestInfo, KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -171,29 +171,29 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.WithKey401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyPutResponse?> PutAsWithKeyPutResponseAsync(global::KiotaSupersetAPI.Client.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyPutResponse?> PutAsWithKeyPutResponseAsync(KClient.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyPutResponse> PutAsWithKeyPutResponseAsync(global::KiotaSupersetAPI.Client.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyPutResponse> PutAsWithKeyPutResponseAsync(KClient.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.WithKey400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.WithKey401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithKey404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.WithKey400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithKey401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithKey404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Filter_state.Item.WithKeyPutResponse>(requestInfo, KApi.Dashboard.Item.Filter_state.Item.WithKeyPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -204,30 +204,30 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.WithKey401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PutAsWithKeyPutResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse?> PutAsync(global::KiotaSupersetAPI.Client.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse?> PutAsync(KClient.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse> PutAsync(global::KiotaSupersetAPI.Client.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse> PutAsync(KClient.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.WithKey400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.WithKey401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithKey404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.WithKey400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithKey401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithKey404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse>(requestInfo, KApi.Dashboard.Item.Filter_state.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -277,11 +277,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::KiotaSupersetAPI.Client.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(KClient.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::KiotaSupersetAPI.Client.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(KClient.Models.TemporaryCachePutSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));

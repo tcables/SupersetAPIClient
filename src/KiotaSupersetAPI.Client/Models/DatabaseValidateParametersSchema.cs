@@ -22,13 +22,13 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Gsheets specific column for managing label to sheet urls</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_catalog? Catalog { get; set; }
+        public KClient.Models.DatabaseValidateParametersSchema_catalog? Catalog { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_catalog Catalog { get; set; }
+        public KClient.Models.DatabaseValidateParametersSchema_catalog Catalog { get; set; }
 #endif
         /// <summary>Configuration_method is used on the frontend to inform the backend whether to explode parameters or to provide only a sqlalchemy_uri.</summary>
-        public global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_configuration_method? ConfigurationMethod { get; set; }
+        public KClient.Models.DatabaseValidateParametersSchema_configuration_method? ConfigurationMethod { get; set; }
         /// <summary>A database name to identify this connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,10 +76,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>DB-specific parameters for configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_parameters? Parameters { get; set; }
+        public KClient.Models.DatabaseValidateParametersSchema_parameters? Parameters { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_parameters Parameters { get; set; }
+        public KClient.Models.DatabaseValidateParametersSchema_parameters Parameters { get; set; }
 #endif
         /// <summary>&lt;p&gt;Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines.&lt;/p&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,7 +90,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string ServerCert { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatabaseValidateParametersSchema"/> and sets the default values.
         /// </summary>
         public DatabaseValidateParametersSchema()
         {
@@ -99,12 +99,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseValidateParametersSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatabaseValidateParametersSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema();
+            return new KClient.Models.DatabaseValidateParametersSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,8 +114,8 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "catalog", n => { Catalog = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_catalog>(global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_catalog.CreateFromDiscriminatorValue); } },
-                { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_configuration_method>(); } },
+                { "catalog", n => { Catalog = n.GetObjectValue<KClient.Models.DatabaseValidateParametersSchema_catalog>(KClient.Models.DatabaseValidateParametersSchema_catalog.CreateFromDiscriminatorValue); } },
+                { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<KClient.Models.DatabaseValidateParametersSchema_configuration_method>(); } },
                 { "database_name", n => { DatabaseName = n.GetStringValue(); } },
                 { "driver", n => { Driver = n.GetStringValue(); } },
                 { "engine", n => { Engine = n.GetStringValue(); } },
@@ -123,7 +123,7 @@ namespace KiotaSupersetAPI.Client.Models
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "impersonate_user", n => { ImpersonateUser = n.GetBoolValue(); } },
                 { "masked_encrypted_extra", n => { MaskedEncryptedExtra = n.GetStringValue(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_parameters>(global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_parameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<KClient.Models.DatabaseValidateParametersSchema_parameters>(KClient.Models.DatabaseValidateParametersSchema_parameters.CreateFromDiscriminatorValue); } },
                 { "server_cert", n => { ServerCert = n.GetStringValue(); } },
             };
         }
@@ -134,8 +134,8 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_catalog>("catalog", Catalog);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_configuration_method>("configuration_method", ConfigurationMethod);
+            writer.WriteObjectValue<KClient.Models.DatabaseValidateParametersSchema_catalog>("catalog", Catalog);
+            writer.WriteEnumValue<KClient.Models.DatabaseValidateParametersSchema_configuration_method>("configuration_method", ConfigurationMethod);
             writer.WriteStringValue("database_name", DatabaseName);
             writer.WriteStringValue("driver", Driver);
             writer.WriteStringValue("engine", Engine);
@@ -143,7 +143,7 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("impersonate_user", ImpersonateUser);
             writer.WriteStringValue("masked_encrypted_extra", MaskedEncryptedExtra);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseValidateParametersSchema_parameters>("parameters", Parameters);
+            writer.WriteObjectValue<KClient.Models.DatabaseValidateParametersSchema_parameters>("parameters", Parameters);
             writer.WriteStringValue("server_cert", ServerCert);
             writer.WriteAdditionalData(AdditionalData);
         }

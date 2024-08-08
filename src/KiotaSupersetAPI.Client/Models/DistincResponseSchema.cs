@@ -24,13 +24,13 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.DistinctResultResponse>? Result { get; set; }
+        public List<KClient.Models.DistinctResultResponse>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.DistinctResultResponse> Result { get; set; }
+        public List<KClient.Models.DistinctResultResponse> Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DistincResponseSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DistincResponseSchema"/> and sets the default values.
         /// </summary>
         public DistincResponseSchema()
         {
@@ -39,12 +39,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DistincResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.DistincResponseSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DistincResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DistincResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DistincResponseSchema();
+            return new KClient.Models.DistincResponseSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,7 +55,7 @@ namespace KiotaSupersetAPI.Client.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetIntValue(); } },
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DistinctResultResponse>(global::KiotaSupersetAPI.Client.Models.DistinctResultResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.DistinctResultResponse>(KClient.Models.DistinctResultResponse.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace KiotaSupersetAPI.Client.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DistinctResultResponse>("result", Result);
+            writer.WriteCollectionOfObjectValues<KClient.Models.DistinctResultResponse>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -24,10 +24,10 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User? ChangedBy { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get_list.User? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User ChangedBy { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get_list.User ChangedBy { get; set; }
 #endif
         /// <summary>The changed_on property</summary>
         public DateTimeOffset? ChangedOn { get; set; }
@@ -44,10 +44,10 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User1? CreatedBy { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get_list.User1? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User1 CreatedBy { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get_list.User1 CreatedBy { get; set; }
 #endif
         /// <summary>The created_on property</summary>
         public DateTimeOffset? CreatedOn { get; set; }
@@ -116,18 +116,18 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
         /// <summary>The owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User2? Owners { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get_list.User2? Owners { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User2 Owners { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get_list.User2 Owners { get; set; }
 #endif
         /// <summary>The recipients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.ReportRecipients? Recipients { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients? Recipients { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.ReportRecipients Recipients { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients Recipients { get; set; }
 #endif
         /// <summary>The timezone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,7 +146,7 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
         public string Type { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.Get_list"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ReportScheduleRestApi.Get_list.Get_list"/> and sets the default values.
         /// </summary>
         public Get_list()
         {
@@ -155,12 +155,12 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.Get_list"/></returns>
+        /// <returns>A <see cref="KClient.Models.ReportScheduleRestApi.Get_list.Get_list"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ReportScheduleRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.Get_list();
+            return new KClient.Models.ReportScheduleRestApi.Get_list.Get_list();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -171,11 +171,11 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get_list.User>(KClient.Models.ReportScheduleRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
                 { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
                 { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "chart_id", n => { ChartId = n.GetIntValue(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User1>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get_list.User1>(KClient.Models.ReportScheduleRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
                 { "created_on", n => { CreatedOn = n.GetDateTimeOffsetValue(); } },
                 { "creation_method", n => { CreationMethod = n.GetStringValue(); } },
                 { "crontab", n => { Crontab = n.GetStringValue(); } },
@@ -187,8 +187,8 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
                 { "last_eval_dttm", n => { LastEvalDttm = n.GetDateTimeOffsetValue(); } },
                 { "last_state", n => { LastState = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "owners", n => { Owners = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User2>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
-                { "recipients", n => { Recipients = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.ReportRecipients>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.ReportRecipients.CreateFromDiscriminatorValue); } },
+                { "owners", n => { Owners = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get_list.User2>(KClient.Models.ReportScheduleRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
+                { "recipients", n => { Recipients = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients>(KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients.CreateFromDiscriminatorValue); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -201,10 +201,10 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get_list.User>("changed_by", ChangedBy);
             writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
             writer.WriteIntValue("chart_id", ChartId);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User1>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get_list.User1>("created_by", CreatedBy);
             writer.WriteDateTimeOffsetValue("created_on", CreatedOn);
             writer.WriteStringValue("creation_method", CreationMethod);
             writer.WriteStringValue("crontab", Crontab);
@@ -214,8 +214,8 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
             writer.WriteDateTimeOffsetValue("last_eval_dttm", LastEvalDttm);
             writer.WriteStringValue("last_state", LastState);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.User2>("owners", Owners);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.ReportRecipients>("recipients", Recipients);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get_list.User2>("owners", Owners);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients>("recipients", Recipients);
             writer.WriteStringValue("timezone", Timezone);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

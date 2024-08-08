@@ -23,10 +23,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Embedded
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.EmbeddedDashboardResponseSchema? Result { get; set; }
+        public KClient.Models.EmbeddedDashboardResponseSchema? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.EmbeddedDashboardResponseSchema Result { get; set; }
+        public KClient.Models.EmbeddedDashboardResponseSchema Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Dashboard.Item.Embedded.EmbeddedPostResponse"/> and sets the default values.
@@ -53,7 +53,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Embedded
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.EmbeddedDashboardResponseSchema>(global::KiotaSupersetAPI.Client.Models.EmbeddedDashboardResponseSchema.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.EmbeddedDashboardResponseSchema>(KClient.Models.EmbeddedDashboardResponseSchema.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -63,7 +63,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Embedded
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.EmbeddedDashboardResponseSchema>("result", Result);
+            writer.WriteObjectValue<KClient.Models.EmbeddedDashboardResponseSchema>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -94,10 +94,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query
         /// <returns>A <see cref="KApi.Query.QueryGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Query400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Query401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Query422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Query500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Query400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Query401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Query422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Query500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Query.QueryGetResponse?> GetAsQueryGetResponseAsync(Action<RequestConfiguration<KApi.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -110,10 +110,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Query400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Query401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Query422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Query500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Query400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Query401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Query422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Query500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Query.QueryGetResponse>(requestInfo, KApi.Query.QueryGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -123,10 +123,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query
         /// <returns>A <see cref="KApi.Query.QueryResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Query400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Query401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Query422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Query500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Query400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Query401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Query422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Query500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsQueryGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -140,10 +140,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Query400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Query401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Query422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Query500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Query400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Query401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Query422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Query500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Query.QueryResponse>(requestInfo, KApi.Query.QueryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

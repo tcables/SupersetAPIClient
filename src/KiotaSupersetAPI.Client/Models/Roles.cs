@@ -30,7 +30,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Name { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.Roles"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.Roles"/> and sets the default values.
         /// </summary>
         public Roles()
         {
@@ -39,12 +39,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.Roles"/></returns>
+        /// <returns>A <see cref="KClient.Models.Roles"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.Roles CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.Roles CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.Roles();
+            return new KClient.Models.Roles();
         }
         /// <summary>
         /// The deserialization information for the current model

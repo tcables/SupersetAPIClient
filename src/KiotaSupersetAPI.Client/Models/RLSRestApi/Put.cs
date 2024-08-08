@@ -36,7 +36,7 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
         public string Description { get; set; }
 #endif
         /// <summary>filter_type_description</summary>
-        public global::KiotaSupersetAPI.Client.Models.RLSRestApi.Put_filter_type? FilterType { get; set; }
+        public KClient.Models.RLSRestApi.Put_filter_type? FilterType { get; set; }
         /// <summary>group_key_description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,7 +70,7 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
         public List<int?> Tables { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.RLSRestApi.Put"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.RLSRestApi.Put"/> and sets the default values.
         /// </summary>
         public Put()
         {
@@ -79,12 +79,12 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.RLSRestApi.Put"/></returns>
+        /// <returns>A <see cref="KClient.Models.RLSRestApi.Put"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.RLSRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.RLSRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.RLSRestApi.Put();
+            return new KClient.Models.RLSRestApi.Put();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,7 +96,7 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
             {
                 { "clause", n => { Clause = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "filter_type", n => { FilterType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.RLSRestApi.Put_filter_type>(); } },
+                { "filter_type", n => { FilterType = n.GetEnumValue<KClient.Models.RLSRestApi.Put_filter_type>(); } },
                 { "group_key", n => { GroupKey = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
@@ -112,7 +112,7 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("clause", Clause);
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.RLSRestApi.Put_filter_type>("filter_type", FilterType);
+            writer.WriteEnumValue<KClient.Models.RLSRestApi.Put_filter_type>("filter_type", FilterType);
             writer.WriteStringValue("group_key", GroupKey);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<int?>("roles", Roles);

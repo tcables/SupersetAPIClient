@@ -28,7 +28,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string ClientId { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.StopQuerySchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.StopQuerySchema"/> and sets the default values.
         /// </summary>
         public StopQuerySchema()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.StopQuerySchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.StopQuerySchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.StopQuerySchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.StopQuerySchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.StopQuerySchema();
+            return new KClient.Models.StopQuerySchema();
         }
         /// <summary>
         /// The deserialization information for the current model

@@ -28,10 +28,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The extra_json property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.TabState_extra_json? ExtraJson { get; set; }
+        public KClient.Models.TabState_extra_json? ExtraJson { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.TabState_extra_json ExtraJson { get; set; }
+        public KClient.Models.TabState_extra_json ExtraJson { get; set; }
 #endif
         /// <summary>The hide_left_bar property</summary>
         public bool? HideLeftBar { get; set; }
@@ -54,20 +54,20 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The latest_query property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.QueryResult? LatestQuery { get; set; }
+        public KClient.Models.QueryResult? LatestQuery { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.QueryResult LatestQuery { get; set; }
+        public KClient.Models.QueryResult LatestQuery { get; set; }
 #endif
         /// <summary>The query_limit property</summary>
         public int? QueryLimit { get; set; }
         /// <summary>The saved_query property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.TabState_saved_query? SavedQuery { get; set; }
+        public KClient.Models.TabState_saved_query? SavedQuery { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.TabState_saved_query SavedQuery { get; set; }
+        public KClient.Models.TabState_saved_query SavedQuery { get; set; }
 #endif
         /// <summary>The schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,15 +88,15 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The table_schemas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.Table>? TableSchemas { get; set; }
+        public List<KClient.Models.Table>? TableSchemas { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.Table> TableSchemas { get; set; }
+        public List<KClient.Models.Table> TableSchemas { get; set; }
 #endif
         /// <summary>The user_id property</summary>
         public int? UserId { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.TabState"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.TabState"/> and sets the default values.
         /// </summary>
         public TabState()
         {
@@ -105,12 +105,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.TabState"/></returns>
+        /// <returns>A <see cref="KClient.Models.TabState"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.TabState CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.TabState CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.TabState();
+            return new KClient.Models.TabState();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -123,16 +123,16 @@ namespace KiotaSupersetAPI.Client.Models
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "autorun", n => { Autorun = n.GetBoolValue(); } },
                 { "database_id", n => { DatabaseId = n.GetIntValue(); } },
-                { "extra_json", n => { ExtraJson = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.TabState_extra_json>(global::KiotaSupersetAPI.Client.Models.TabState_extra_json.CreateFromDiscriminatorValue); } },
+                { "extra_json", n => { ExtraJson = n.GetObjectValue<KClient.Models.TabState_extra_json>(KClient.Models.TabState_extra_json.CreateFromDiscriminatorValue); } },
                 { "hide_left_bar", n => { HideLeftBar = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "latest_query", n => { LatestQuery = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.QueryResult>(global::KiotaSupersetAPI.Client.Models.QueryResult.CreateFromDiscriminatorValue); } },
+                { "latest_query", n => { LatestQuery = n.GetObjectValue<KClient.Models.QueryResult>(KClient.Models.QueryResult.CreateFromDiscriminatorValue); } },
                 { "query_limit", n => { QueryLimit = n.GetIntValue(); } },
-                { "saved_query", n => { SavedQuery = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.TabState_saved_query>(global::KiotaSupersetAPI.Client.Models.TabState_saved_query.CreateFromDiscriminatorValue); } },
+                { "saved_query", n => { SavedQuery = n.GetObjectValue<KClient.Models.TabState_saved_query>(KClient.Models.TabState_saved_query.CreateFromDiscriminatorValue); } },
                 { "schema", n => { Schema = n.GetStringValue(); } },
                 { "sql", n => { Sql = n.GetStringValue(); } },
-                { "table_schemas", n => { TableSchemas = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Table>(global::KiotaSupersetAPI.Client.Models.Table.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "table_schemas", n => { TableSchemas = n.GetCollectionOfObjectValues<KClient.Models.Table>(KClient.Models.Table.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "user_id", n => { UserId = n.GetIntValue(); } },
             };
         }
@@ -146,16 +146,16 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteBoolValue("active", Active);
             writer.WriteBoolValue("autorun", Autorun);
             writer.WriteIntValue("database_id", DatabaseId);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.TabState_extra_json>("extra_json", ExtraJson);
+            writer.WriteObjectValue<KClient.Models.TabState_extra_json>("extra_json", ExtraJson);
             writer.WriteBoolValue("hide_left_bar", HideLeftBar);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.QueryResult>("latest_query", LatestQuery);
+            writer.WriteObjectValue<KClient.Models.QueryResult>("latest_query", LatestQuery);
             writer.WriteIntValue("query_limit", QueryLimit);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.TabState_saved_query>("saved_query", SavedQuery);
+            writer.WriteObjectValue<KClient.Models.TabState_saved_query>("saved_query", SavedQuery);
             writer.WriteStringValue("schema", Schema);
             writer.WriteStringValue("sql", Sql);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Table>("table_schemas", TableSchemas);
+            writer.WriteCollectionOfObjectValues<KClient.Models.Table>("table_schemas", TableSchemas);
             writer.WriteIntValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

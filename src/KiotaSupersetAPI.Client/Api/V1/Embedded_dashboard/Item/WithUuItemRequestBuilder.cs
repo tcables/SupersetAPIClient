@@ -44,9 +44,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
         /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithUu401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithUu404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithUu500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithUu401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithUu404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithUu500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Embedded_dashboard.Item.WithUuGetResponse?> GetAsWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -59,9 +59,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.WithUu401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithUu404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithUu500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithUu401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithUu404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithUu500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Embedded_dashboard.Item.WithUuGetResponse>(requestInfo, KApi.Embedded_dashboard.Item.WithUuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -71,9 +71,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
         /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithUu401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithUu404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithUu500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithUu401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithUu404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithUu500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsWithUuGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,9 +87,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.WithUu401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithUu404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithUu500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithUu401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithUu404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithUu500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Embedded_dashboard.Item.WithUuResponse>(requestInfo, KApi.Embedded_dashboard.Item.WithUuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

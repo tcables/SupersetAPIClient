@@ -38,7 +38,7 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         public UntypedNode Type { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Tag"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DashboardRestApi.Get_list.Tag"/> and sets the default values.
         /// </summary>
         public Tag()
         {
@@ -47,12 +47,12 @@ namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Tag"/></returns>
+        /// <returns>A <see cref="KClient.Models.DashboardRestApi.Get_list.Tag"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Tag CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DashboardRestApi.Get_list.Tag CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list.Tag();
+            return new KClient.Models.DashboardRestApi.Get_list.Tag();
         }
         /// <summary>
         /// The deserialization information for the current model

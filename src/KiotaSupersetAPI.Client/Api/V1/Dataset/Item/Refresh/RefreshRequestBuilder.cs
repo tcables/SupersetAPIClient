@@ -44,11 +44,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh
         /// <returns>A <see cref="KApi.Dataset.Item.Refresh.RefreshPutResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Refresh403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Refresh404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Refresh422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Dataset.Item.Refresh.RefreshPutResponse?> PutAsRefreshPutResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -61,11 +61,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh
             var requestInfo = ToPutRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Refresh401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Refresh403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Refresh404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Refresh422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Refresh500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Refresh401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Refresh403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Refresh404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Refresh422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dataset.Item.Refresh.RefreshPutResponse>(requestInfo, KApi.Dataset.Item.Refresh.RefreshPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -75,11 +75,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh
         /// <returns>A <see cref="KApi.Dataset.Item.Refresh.RefreshResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Refresh403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.Refresh404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Refresh422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PutAsRefreshPutResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,11 +93,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh
             var requestInfo = ToPutRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Refresh401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.Refresh403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Refresh404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.Refresh422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Refresh500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Refresh401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.Refresh403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Refresh404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.Refresh422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dataset.Item.Refresh.RefreshResponse>(requestInfo, KApi.Dataset.Item.Refresh.RefreshResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

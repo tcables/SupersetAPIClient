@@ -41,31 +41,31 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Connection
         /// <summary>
         /// Get a database connection info
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseConnectionSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.DatabaseConnectionSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.DatabaseConnectionSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.DatabaseConnectionSchema422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.DatabaseConnectionSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.DatabaseConnectionSchema?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.DatabaseConnectionSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema401Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.DatabaseConnectionSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.DatabaseConnectionSchema401Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.DatabaseConnectionSchema422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.DatabaseConnectionSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.DatabaseConnectionSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.DatabaseConnectionSchema>(requestInfo, KClient.Models.DatabaseConnectionSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a database connection info

@@ -54,10 +54,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The extra property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.QueryResult_extra? Extra { get; set; }
+        public KClient.Models.QueryResult_extra? Extra { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.QueryResult_extra Extra { get; set; }
+        public KClient.Models.QueryResult_extra Extra { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -170,7 +170,7 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The userId property</summary>
         public int? UserId { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.QueryResult"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.QueryResult"/> and sets the default values.
         /// </summary>
         public QueryResult()
         {
@@ -179,12 +179,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.QueryResult"/></returns>
+        /// <returns>A <see cref="KClient.Models.QueryResult"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.QueryResult CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.QueryResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.QueryResult();
+            return new KClient.Models.QueryResult();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -201,7 +201,7 @@ namespace KiotaSupersetAPI.Client.Models
                 { "endDttm", n => { EndDttm = n.GetDoubleValue(); } },
                 { "errorMessage", n => { ErrorMessage = n.GetStringValue(); } },
                 { "executedSql", n => { ExecutedSql = n.GetStringValue(); } },
-                { "extra", n => { Extra = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.QueryResult_extra>(global::KiotaSupersetAPI.Client.Models.QueryResult_extra.CreateFromDiscriminatorValue); } },
+                { "extra", n => { Extra = n.GetObjectValue<KClient.Models.QueryResult_extra>(KClient.Models.QueryResult_extra.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "limit", n => { Limit = n.GetIntValue(); } },
                 { "limitingFactor", n => { LimitingFactor = n.GetStringValue(); } },
@@ -237,7 +237,7 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteDoubleValue("endDttm", EndDttm);
             writer.WriteStringValue("errorMessage", ErrorMessage);
             writer.WriteStringValue("executedSql", ExecutedSql);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.QueryResult_extra>("extra", Extra);
+            writer.WriteObjectValue<KClient.Models.QueryResult_extra>("extra", Extra);
             writer.WriteStringValue("id", Id);
             writer.WriteIntValue("limit", Limit);
             writer.WriteStringValue("limitingFactor", LimitingFactor);

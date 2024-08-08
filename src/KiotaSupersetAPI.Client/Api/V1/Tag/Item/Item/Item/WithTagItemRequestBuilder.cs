@@ -44,11 +44,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
         /// <returns>A <see cref="KApi.Tag.Item.Item.Item.WithTagDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithTag401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithTag403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.WithTag404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithTag422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithTag500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Tag.Item.Item.Item.WithTagDeleteResponse?> DeleteAsWithTagDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -61,11 +61,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.WithTag401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.WithTag403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithTag404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithTag422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithTag500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithTag401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.WithTag403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithTag404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithTag422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithTag500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Tag.Item.Item.Item.WithTagDeleteResponse>(requestInfo, KApi.Tag.Item.Item.Item.WithTagDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -75,11 +75,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
         /// <returns>A <see cref="KApi.Tag.Item.Item.Item.WithTagResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithTag401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithTag403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.WithTag404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithTag422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithTag500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use DeleteAsWithTagDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,11 +93,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.WithTag401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.WithTag403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithTag404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithTag422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithTag500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithTag401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.WithTag403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithTag404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithTag422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithTag500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Tag.Item.Item.Item.WithTagResponse>(requestInfo, KApi.Tag.Item.Item.Item.WithTagResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

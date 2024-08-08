@@ -41,29 +41,29 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Related_objects
         /// <summary>
         /// Get charts and dashboards count associated to a database
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseRelatedObjectsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.DatabaseRelatedObjectsResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.DatabaseRelatedObjectsResponse404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.DatabaseRelatedObjectsResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.DatabaseRelatedObjectsResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.DatabaseRelatedObjectsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.DatabaseRelatedObjectsResponse401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.DatabaseRelatedObjectsResponse404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.DatabaseRelatedObjectsResponse500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse>(requestInfo, global::KiotaSupersetAPI.Client.Models.DatabaseRelatedObjectsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.DatabaseRelatedObjectsResponse>(requestInfo, KClient.Models.DatabaseRelatedObjectsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get charts and dashboards count associated to a database

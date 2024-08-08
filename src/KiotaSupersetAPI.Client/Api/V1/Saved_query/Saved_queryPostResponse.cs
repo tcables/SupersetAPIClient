@@ -31,10 +31,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Post? Result { get; set; }
+        public KClient.Models.SavedQueryRestApi.Post? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Post Result { get; set; }
+        public KClient.Models.SavedQueryRestApi.Post Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Saved_query.Saved_queryPostResponse"/> and sets the default values.
@@ -62,7 +62,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Post>(global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Post.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Post>(KClient.Models.SavedQueryRestApi.Post.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -73,7 +73,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Post>("result", Result);
+            writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Post>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

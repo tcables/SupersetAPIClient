@@ -34,10 +34,10 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get
         /// <summary>The layer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.AnnotationLayer? Layer { get; set; }
+        public KClient.Models.AnnotationRestApi.Get.AnnotationLayer? Layer { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.AnnotationLayer Layer { get; set; }
+        public KClient.Models.AnnotationRestApi.Get.AnnotationLayer Layer { get; set; }
 #endif
         /// <summary>The long_descr property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get
         /// <summary>The start_dttm property</summary>
         public DateTimeOffset? StartDttm { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.Get"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.AnnotationRestApi.Get.Get"/> and sets the default values.
         /// </summary>
         public Get()
         {
@@ -67,12 +67,12 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.Get"/></returns>
+        /// <returns>A <see cref="KClient.Models.AnnotationRestApi.Get.Get"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.AnnotationRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.Get();
+            return new KClient.Models.AnnotationRestApi.Get.Get();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -85,7 +85,7 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get
                 { "end_dttm", n => { EndDttm = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "json_metadata", n => { JsonMetadata = n.GetStringValue(); } },
-                { "layer", n => { Layer = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.AnnotationLayer>(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.AnnotationLayer.CreateFromDiscriminatorValue); } },
+                { "layer", n => { Layer = n.GetObjectValue<KClient.Models.AnnotationRestApi.Get.AnnotationLayer>(KClient.Models.AnnotationRestApi.Get.AnnotationLayer.CreateFromDiscriminatorValue); } },
                 { "long_descr", n => { LongDescr = n.GetStringValue(); } },
                 { "short_descr", n => { ShortDescr = n.GetStringValue(); } },
                 { "start_dttm", n => { StartDttm = n.GetDateTimeOffsetValue(); } },
@@ -101,7 +101,7 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get
             writer.WriteDateTimeOffsetValue("end_dttm", EndDttm);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("json_metadata", JsonMetadata);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get.AnnotationLayer>("layer", Layer);
+            writer.WriteObjectValue<KClient.Models.AnnotationRestApi.Get.AnnotationLayer>("layer", Layer);
             writer.WriteStringValue("long_descr", LongDescr);
             writer.WriteStringValue("short_descr", ShortDescr);
             writer.WriteDateTimeOffsetValue("start_dttm", StartDttm);

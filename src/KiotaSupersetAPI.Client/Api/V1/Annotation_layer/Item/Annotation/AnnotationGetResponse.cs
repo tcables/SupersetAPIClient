@@ -33,10 +33,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation
         /// <summary>The result from the get list query</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list>? Result { get; set; }
+        public List<KClient.Models.AnnotationRestApi.Get_list.Get_list>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list> Result { get; set; }
+        public List<KClient.Models.AnnotationRestApi.Get_list.Get_list> Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Annotation_layer.Item.Annotation.AnnotationGetResponse"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
                 { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list>(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.AnnotationRestApi.Get_list.Get_list>(KClient.Models.AnnotationRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
             writer.WriteCollectionOfPrimitiveValues<string>("ids", Ids);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list>("result", Result);
+            writer.WriteCollectionOfObjectValues<KClient.Models.AnnotationRestApi.Get_list.Get_list>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

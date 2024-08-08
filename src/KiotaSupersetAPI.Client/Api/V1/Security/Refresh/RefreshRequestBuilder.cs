@@ -44,8 +44,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Refresh
         /// <returns>A <see cref="KApi.Security.Refresh.RefreshPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Security.Refresh.RefreshPostResponse?> PostAsRefreshPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,8 +58,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Refresh
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Refresh401Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Refresh500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Refresh401Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Security.Refresh.RefreshPostResponse>(requestInfo, KApi.Security.Refresh.RefreshPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -69,8 +69,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Refresh
         /// <returns>A <see cref="KApi.Security.Refresh.RefreshResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Refresh500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PostAsRefreshPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,8 +84,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Refresh
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Refresh401Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Refresh500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Refresh401Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Security.Refresh.RefreshResponse>(requestInfo, KApi.Security.Refresh.RefreshResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

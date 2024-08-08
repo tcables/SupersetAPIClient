@@ -23,10 +23,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql
         /// <summary>A List of SQL errors found on the statement</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse>? Result { get; set; }
+        public List<KClient.Models.ValidateSQLResponse>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse> Result { get; set; }
+        public List<KClient.Models.ValidateSQLResponse> Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Database.Item.Validate_sql.Validate_sqlPostResponse"/> and sets the default values.
@@ -53,7 +53,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse>(global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.ValidateSQLResponse>(KClient.Models.ValidateSQLResponse.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -63,7 +63,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse>("result", Result);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ValidateSQLResponse>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -30,7 +30,7 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
         public string Type { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.ReportRecipients"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients"/> and sets the default values.
         /// </summary>
         public ReportRecipients()
         {
@@ -39,12 +39,12 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.ReportRecipients"/></returns>
+        /// <returns>A <see cref="KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.ReportRecipients CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list.ReportRecipients();
+            return new KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients();
         }
         /// <summary>
         /// The deserialization information for the current model

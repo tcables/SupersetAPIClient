@@ -58,10 +58,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Form data from the Explore controls used to form the chart&apos;s data query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema_form_data? FormData { get; set; }
+        public KClient.Models.ChartEntityResponseSchema_form_data? FormData { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema_form_data FormData { get; set; }
+        public KClient.Models.ChartEntityResponseSchema_form_data FormData { get; set; }
 #endif
         /// <summary>The id of the chart.</summary>
         public int? Id { get; set; }
@@ -82,7 +82,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string SliceUrl { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartEntityResponseSchema"/> and sets the default values.
         /// </summary>
         public ChartEntityResponseSchema()
         {
@@ -91,12 +91,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartEntityResponseSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartEntityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema();
+            return new KClient.Models.ChartEntityResponseSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,7 +112,7 @@ namespace KiotaSupersetAPI.Client.Models
                 { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_markeddown", n => { DescriptionMarkeddown = n.GetStringValue(); } },
-                { "form_data", n => { FormData = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema_form_data>(global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema_form_data.CreateFromDiscriminatorValue); } },
+                { "form_data", n => { FormData = n.GetObjectValue<KClient.Models.ChartEntityResponseSchema_form_data>(KClient.Models.ChartEntityResponseSchema_form_data.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "slice_name", n => { SliceName = n.GetStringValue(); } },
                 { "slice_url", n => { SliceUrl = n.GetStringValue(); } },
@@ -131,7 +131,7 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("description_markeddown", DescriptionMarkeddown);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema_form_data>("form_data", FormData);
+            writer.WriteObjectValue<KClient.Models.ChartEntityResponseSchema_form_data>("form_data", FormData);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("slice_name", SliceName);
             writer.WriteStringValue("slice_url", SliceUrl);

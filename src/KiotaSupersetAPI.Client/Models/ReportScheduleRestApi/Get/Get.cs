@@ -24,10 +24,10 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get
         /// <summary>The chart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Slice? Chart { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.Slice? Chart { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Slice Chart { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.Slice Chart { get; set; }
 #endif
         /// <summary>The context_markdown property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,18 +58,18 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get
         /// <summary>The dashboard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Dashboard? Dashboard { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.Dashboard? Dashboard { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Dashboard Dashboard { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.Dashboard Dashboard { get; set; }
 #endif
         /// <summary>The database property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Database? Database { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.Database? Database { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Database Database { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.Database Database { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,18 +126,18 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get
         /// <summary>The owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.User? Owners { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.User? Owners { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.User Owners { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.User Owners { get; set; }
 #endif
         /// <summary>The recipients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.ReportRecipients? Recipients { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.ReportRecipients? Recipients { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.ReportRecipients Recipients { get; set; }
+        public KClient.Models.ReportScheduleRestApi.Get.ReportRecipients Recipients { get; set; }
 #endif
         /// <summary>The report_format property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -190,7 +190,7 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get
         /// <summary>The working_timeout property</summary>
         public int? WorkingTimeout { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Get"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ReportScheduleRestApi.Get.Get"/> and sets the default values.
         /// </summary>
         public Get()
         {
@@ -199,12 +199,12 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Get"/></returns>
+        /// <returns>A <see cref="KClient.Models.ReportScheduleRestApi.Get.Get"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ReportScheduleRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Get();
+            return new KClient.Models.ReportScheduleRestApi.Get.Get();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -215,13 +215,13 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
-                { "chart", n => { Chart = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Slice>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Slice.CreateFromDiscriminatorValue); } },
+                { "chart", n => { Chart = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.Slice>(KClient.Models.ReportScheduleRestApi.Get.Slice.CreateFromDiscriminatorValue); } },
                 { "context_markdown", n => { ContextMarkdown = n.GetStringValue(); } },
                 { "creation_method", n => { CreationMethod = n.GetStringValue(); } },
                 { "crontab", n => { Crontab = n.GetStringValue(); } },
                 { "custom_width", n => { CustomWidth = n.GetIntValue(); } },
-                { "dashboard", n => { Dashboard = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Dashboard>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Dashboard.CreateFromDiscriminatorValue); } },
-                { "database", n => { Database = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Database>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Database.CreateFromDiscriminatorValue); } },
+                { "dashboard", n => { Dashboard = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.Dashboard>(KClient.Models.ReportScheduleRestApi.Get.Dashboard.CreateFromDiscriminatorValue); } },
+                { "database", n => { Database = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.Database>(KClient.Models.ReportScheduleRestApi.Get.Database.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "extra", n => { Extra = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "force_screenshot", n => { ForceScreenshot = n.GetBoolValue(); } },
@@ -233,8 +233,8 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get
                 { "last_value_row_json", n => { LastValueRowJson = n.GetStringValue(); } },
                 { "log_retention", n => { LogRetention = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "owners", n => { Owners = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.User>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.User.CreateFromDiscriminatorValue); } },
-                { "recipients", n => { Recipients = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.ReportRecipients>(global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.ReportRecipients.CreateFromDiscriminatorValue); } },
+                { "owners", n => { Owners = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.User>(KClient.Models.ReportScheduleRestApi.Get.User.CreateFromDiscriminatorValue); } },
+                { "recipients", n => { Recipients = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.ReportRecipients>(KClient.Models.ReportScheduleRestApi.Get.ReportRecipients.CreateFromDiscriminatorValue); } },
                 { "report_format", n => { ReportFormat = n.GetStringValue(); } },
                 { "sql", n => { Sql = n.GetStringValue(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
@@ -252,13 +252,13 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Slice>("chart", Chart);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.Slice>("chart", Chart);
             writer.WriteStringValue("context_markdown", ContextMarkdown);
             writer.WriteStringValue("creation_method", CreationMethod);
             writer.WriteStringValue("crontab", Crontab);
             writer.WriteIntValue("custom_width", CustomWidth);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Dashboard>("dashboard", Dashboard);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.Database>("database", Database);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.Dashboard>("dashboard", Dashboard);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.Database>("database", Database);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("force_screenshot", ForceScreenshot);
             writer.WriteIntValue("grace_period", GracePeriod);
@@ -269,8 +269,8 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get
             writer.WriteStringValue("last_value_row_json", LastValueRowJson);
             writer.WriteIntValue("log_retention", LogRetention);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.User>("owners", Owners);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get.ReportRecipients>("recipients", Recipients);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.User>("owners", Owners);
+            writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.ReportRecipients>("recipients", Recipients);
             writer.WriteStringValue("report_format", ReportFormat);
             writer.WriteStringValue("sql", Sql);
             writer.WriteStringValue("timezone", Timezone);

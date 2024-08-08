@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.Item._openapi
     [Obsolete("This class is obsolete. Use _openapiGetResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class _openapiResponse : global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse, IParsable
+    public partial class _openapiResponse : KClient.Api.Item._openapi._openapiGetResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiResponse"/></returns>
+        /// <returns>A <see cref="KClient.Api.Item._openapi._openapiResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KClient.Api.Item._openapi._openapiResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiResponse();
+            return new KClient.Api.Item._openapi._openapiResponse();
         }
     }
 }

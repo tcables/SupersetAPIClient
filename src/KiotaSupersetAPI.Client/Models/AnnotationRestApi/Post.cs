@@ -48,7 +48,7 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi
         /// <summary>The annotation start date time</summary>
         public DateTimeOffset? StartDttm { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Post"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.AnnotationRestApi.Post"/> and sets the default values.
         /// </summary>
         public Post()
         {
@@ -57,12 +57,12 @@ namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Post"/></returns>
+        /// <returns>A <see cref="KClient.Models.AnnotationRestApi.Post"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.AnnotationRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Post();
+            return new KClient.Models.AnnotationRestApi.Post();
         }
         /// <summary>
         /// The deserialization information for the current model

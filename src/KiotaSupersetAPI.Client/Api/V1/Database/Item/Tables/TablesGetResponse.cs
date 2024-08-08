@@ -25,10 +25,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Tables
         /// <summary>A List of tables for given database</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse>? Result { get; set; }
+        public List<KClient.Models.DatabaseTablesResponse>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse> Result { get; set; }
+        public List<KClient.Models.DatabaseTablesResponse> Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Database.Item.Tables.TablesGetResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Tables
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetIntValue(); } },
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse>(global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.DatabaseTablesResponse>(KClient.Models.DatabaseTablesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Tables
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DatabaseTablesResponse>("result", Result);
+            writer.WriteCollectionOfObjectValues<KClient.Models.DatabaseTablesResponse>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

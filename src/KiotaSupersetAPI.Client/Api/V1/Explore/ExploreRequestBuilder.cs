@@ -53,33 +53,33 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore
         /// <summary>
         /// Assembles Explore related information (form_data, slice, dataset) in a single endpoint.&lt;br/&gt;&lt;br/&gt; The information can be assembled from:&lt;br/&gt; - The cache using a form_data_key&lt;br/&gt; - The metadata database using a permalink_key&lt;br/&gt; - Build from scratch using dataset or slice identifiers.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ExploreContextSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.ExploreContextSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ExploreContextSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ExploreContextSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ExploreContextSchema404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ExploreContextSchema422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.ExploreContextSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.ExploreContextSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.ExploreContextSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.ExploreContextSchema404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.ExploreContextSchema422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.ExploreContextSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.ExploreContextSchema?> GetAsync(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.ExploreContextSchema?> GetAsync(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.ExploreContextSchema> GetAsync(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.ExploreContextSchema> GetAsync(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.ExploreContextSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.ExploreContextSchema401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.ExploreContextSchema404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.ExploreContextSchema422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.ExploreContextSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.ExploreContextSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.ExploreContextSchema401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.ExploreContextSchema404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.ExploreContextSchema422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.ExploreContextSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.ExploreContextSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.ExploreContextSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.ExploreContextSchema>(requestInfo, KClient.Models.ExploreContextSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Assembles Explore related information (form_data, slice, dataset) in a single endpoint.&lt;br/&gt;&lt;br/&gt; The information can be assembled from:&lt;br/&gt; - The cache using a form_data_key&lt;br/&gt; - The metadata database using a permalink_key&lt;br/&gt; - Build from scratch using dataset or slice identifiers.

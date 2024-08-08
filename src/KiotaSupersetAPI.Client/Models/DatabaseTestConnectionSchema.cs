@@ -20,7 +20,7 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Configuration_method is used on the frontend to inform the backend whether to explode parameters or to provide only a sqlalchemy_uri.</summary>
-        public global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema_configuration_method? ConfigurationMethod { get; set; }
+        public KClient.Models.DatabaseTestConnectionSchema_configuration_method? ConfigurationMethod { get; set; }
         /// <summary>A database name to identify this connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,10 +66,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>DB-specific parameters for configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema_parameters? Parameters { get; set; }
+        public KClient.Models.DatabaseTestConnectionSchema_parameters? Parameters { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema_parameters Parameters { get; set; }
+        public KClient.Models.DatabaseTestConnectionSchema_parameters Parameters { get; set; }
 #endif
         /// <summary>&lt;p&gt;Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines.&lt;/p&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,28 +90,28 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The ssh_tunnel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel? SshTunnel { get; set; }
+        public KClient.Models.DatabaseSSHTunnel? SshTunnel { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel SshTunnel { get; set; }
+        public KClient.Models.DatabaseSSHTunnel SshTunnel { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatabaseTestConnectionSchema"/> and sets the default values.
         /// </summary>
         public DatabaseTestConnectionSchema()
         {
             AdditionalData = new Dictionary<string, object>();
-            ConfigurationMethod = global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema_configuration_method.Sqlalchemy_form;
+            ConfigurationMethod = KClient.Models.DatabaseTestConnectionSchema_configuration_method.Sqlalchemy_form;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseTestConnectionSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatabaseTestConnectionSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema();
+            return new KClient.Models.DatabaseTestConnectionSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -121,17 +121,17 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema_configuration_method>(); } },
+                { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<KClient.Models.DatabaseTestConnectionSchema_configuration_method>(); } },
                 { "database_name", n => { DatabaseName = n.GetStringValue(); } },
                 { "driver", n => { Driver = n.GetStringValue(); } },
                 { "engine", n => { Engine = n.GetStringValue(); } },
                 { "extra", n => { Extra = n.GetStringValue(); } },
                 { "impersonate_user", n => { ImpersonateUser = n.GetBoolValue(); } },
                 { "masked_encrypted_extra", n => { MaskedEncryptedExtra = n.GetStringValue(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema_parameters>(global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema_parameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<KClient.Models.DatabaseTestConnectionSchema_parameters>(KClient.Models.DatabaseTestConnectionSchema_parameters.CreateFromDiscriminatorValue); } },
                 { "server_cert", n => { ServerCert = n.GetStringValue(); } },
                 { "sqlalchemy_uri", n => { SqlalchemyUri = n.GetStringValue(); } },
-                { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel>(global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
+                { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<KClient.Models.DatabaseSSHTunnel>(KClient.Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -141,17 +141,17 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema_configuration_method>("configuration_method", ConfigurationMethod);
+            writer.WriteEnumValue<KClient.Models.DatabaseTestConnectionSchema_configuration_method>("configuration_method", ConfigurationMethod);
             writer.WriteStringValue("database_name", DatabaseName);
             writer.WriteStringValue("driver", Driver);
             writer.WriteStringValue("engine", Engine);
             writer.WriteStringValue("extra", Extra);
             writer.WriteBoolValue("impersonate_user", ImpersonateUser);
             writer.WriteStringValue("masked_encrypted_extra", MaskedEncryptedExtra);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseTestConnectionSchema_parameters>("parameters", Parameters);
+            writer.WriteObjectValue<KClient.Models.DatabaseTestConnectionSchema_parameters>("parameters", Parameters);
             writer.WriteStringValue("server_cert", ServerCert);
             writer.WriteStringValue("sqlalchemy_uri", SqlalchemyUri);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
+            writer.WriteObjectValue<KClient.Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

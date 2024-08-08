@@ -40,10 +40,10 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
         /// <summary>The changed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User1? ChangedBy { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.User1? ChangedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User1 ChangedBy { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.User1 ChangedBy { get; set; }
 #endif
         /// <summary>The changed_by_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,10 +80,10 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User2? CreatedBy { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.User2? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User2 CreatedBy { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.User2 CreatedBy { get; set; }
 #endif
         /// <summary>The created_by_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,10 +104,10 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
         /// <summary>The dashboards property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Dashboard? Dashboards { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.Dashboard? Dashboards { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Dashboard Dashboards { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.Dashboard Dashboards { get; set; }
 #endif
         /// <summary>The datasource_id property</summary>
         public int? DatasourceId { get; set; }
@@ -176,18 +176,18 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
         /// <summary>The last_saved_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User? LastSavedBy { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.User? LastSavedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User LastSavedBy { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.User LastSavedBy { get; set; }
 #endif
         /// <summary>The owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User3? Owners { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.User3? Owners { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User3 Owners { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.User3 Owners { get; set; }
 #endif
         /// <summary>The params property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -216,18 +216,18 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
         /// <summary>The table property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.SqlaTable? Table { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.SqlaTable? Table { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.SqlaTable Table { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.SqlaTable Table { get; set; }
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Tag? Tags { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.Tag? Tags { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Tag Tags { get; set; }
+        public KClient.Models.ChartRestApi.Get_list.Tag Tags { get; set; }
 #endif
         /// <summary>The thumbnail_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -254,7 +254,7 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
         public string VizType { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Get_list"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartRestApi.Get_list.Get_list"/> and sets the default values.
         /// </summary>
         public Get_list()
         {
@@ -263,12 +263,12 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Get_list"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartRestApi.Get_list.Get_list"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Get_list();
+            return new KClient.Models.ChartRestApi.Get_list.Get_list();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -281,15 +281,15 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
                 { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
                 { "certification_details", n => { CertificationDetails = n.GetStringValue(); } },
                 { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
-                { "changed_by", n => { ChangedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User1>(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+                { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.ChartRestApi.Get_list.User1>(KClient.Models.ChartRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
                 { "changed_by_name", n => { ChangedByName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "changed_on_dttm", n => { ChangedOnDttm = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "changed_on_utc", n => { ChangedOnUtc = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User2>(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.ChartRestApi.Get_list.User2>(KClient.Models.ChartRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
                 { "created_by_name", n => { CreatedByName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "created_on_delta_humanized", n => { CreatedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "dashboards", n => { Dashboards = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Dashboard>(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Dashboard.CreateFromDiscriminatorValue); } },
+                { "dashboards", n => { Dashboards = n.GetObjectValue<KClient.Models.ChartRestApi.Get_list.Dashboard>(KClient.Models.ChartRestApi.Get_list.Dashboard.CreateFromDiscriminatorValue); } },
                 { "datasource_id", n => { DatasourceId = n.GetIntValue(); } },
                 { "datasource_name_text", n => { DatasourceNameText = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "datasource_type", n => { DatasourceType = n.GetStringValue(); } },
@@ -301,13 +301,13 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
                 { "last_saved_at", n => { LastSavedAt = n.GetDateTimeOffsetValue(); } },
-                { "last_saved_by", n => { LastSavedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User>(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
-                { "owners", n => { Owners = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User3>(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User3.CreateFromDiscriminatorValue); } },
+                { "last_saved_by", n => { LastSavedBy = n.GetObjectValue<KClient.Models.ChartRestApi.Get_list.User>(KClient.Models.ChartRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+                { "owners", n => { Owners = n.GetObjectValue<KClient.Models.ChartRestApi.Get_list.User3>(KClient.Models.ChartRestApi.Get_list.User3.CreateFromDiscriminatorValue); } },
                 { "params", n => { Params = n.GetStringValue(); } },
                 { "slice_name", n => { SliceName = n.GetStringValue(); } },
                 { "slice_url", n => { SliceUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "table", n => { Table = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.SqlaTable>(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.SqlaTable.CreateFromDiscriminatorValue); } },
-                { "tags", n => { Tags = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Tag>(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Tag.CreateFromDiscriminatorValue); } },
+                { "table", n => { Table = n.GetObjectValue<KClient.Models.ChartRestApi.Get_list.SqlaTable>(KClient.Models.ChartRestApi.Get_list.SqlaTable.CreateFromDiscriminatorValue); } },
+                { "tags", n => { Tags = n.GetObjectValue<KClient.Models.ChartRestApi.Get_list.Tag>(KClient.Models.ChartRestApi.Get_list.Tag.CreateFromDiscriminatorValue); } },
                 { "thumbnail_url", n => { ThumbnailUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "viz_type", n => { VizType = n.GetStringValue(); } },
@@ -323,21 +323,21 @@ namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list
             writer.WriteIntValue("cache_timeout", CacheTimeout);
             writer.WriteStringValue("certification_details", CertificationDetails);
             writer.WriteStringValue("certified_by", CertifiedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User1>("changed_by", ChangedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User2>("created_by", CreatedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Dashboard>("dashboards", Dashboards);
+            writer.WriteObjectValue<KClient.Models.ChartRestApi.Get_list.User1>("changed_by", ChangedBy);
+            writer.WriteObjectValue<KClient.Models.ChartRestApi.Get_list.User2>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.ChartRestApi.Get_list.Dashboard>("dashboards", Dashboards);
             writer.WriteIntValue("datasource_id", DatasourceId);
             writer.WriteStringValue("datasource_type", DatasourceType);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
             writer.WriteDateTimeOffsetValue("last_saved_at", LastSavedAt);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User>("last_saved_by", LastSavedBy);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.User3>("owners", Owners);
+            writer.WriteObjectValue<KClient.Models.ChartRestApi.Get_list.User>("last_saved_by", LastSavedBy);
+            writer.WriteObjectValue<KClient.Models.ChartRestApi.Get_list.User3>("owners", Owners);
             writer.WriteStringValue("params", Params);
             writer.WriteStringValue("slice_name", SliceName);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.SqlaTable>("table", Table);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list.Tag>("tags", Tags);
+            writer.WriteObjectValue<KClient.Models.ChartRestApi.Get_list.SqlaTable>("table", Table);
+            writer.WriteObjectValue<KClient.Models.ChartRestApi.Get_list.Tag>("tags", Tags);
             writer.WriteStringValue("viz_type", VizType);
             writer.WriteAdditionalData(AdditionalData);
         }

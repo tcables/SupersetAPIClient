@@ -24,10 +24,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.User? CreatedBy { get; set; }
+        public KClient.Models.User? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.User CreatedBy { get; set; }
+        public KClient.Models.User CreatedBy { get; set; }
 #endif
         /// <summary>The creator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,18 +50,18 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The owners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.User1>? Owners { get; set; }
+        public List<KClient.Models.User1>? Owners { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.User1> Owners { get; set; }
+        public List<KClient.Models.User1> Owners { get; set; }
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.TagGetResponseSchema>? Tags { get; set; }
+        public List<KClient.Models.TagGetResponseSchema>? Tags { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.TagGetResponseSchema> Tags { get; set; }
+        public List<KClient.Models.TagGetResponseSchema> Tags { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string Url { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.TaggedObjectEntityResponseSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.TaggedObjectEntityResponseSchema"/> and sets the default values.
         /// </summary>
         public TaggedObjectEntityResponseSchema()
         {
@@ -89,12 +89,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.TaggedObjectEntityResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.TaggedObjectEntityResponseSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.TaggedObjectEntityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.TaggedObjectEntityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.TaggedObjectEntityResponseSchema();
+            return new KClient.Models.TaggedObjectEntityResponseSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -105,12 +105,12 @@ namespace KiotaSupersetAPI.Client.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.User>(global::KiotaSupersetAPI.Client.Models.User.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.User>(KClient.Models.User.CreateFromDiscriminatorValue); } },
                 { "creator", n => { Creator = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "owners", n => { Owners = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.User1>(global::KiotaSupersetAPI.Client.Models.User1.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.TagGetResponseSchema>(global::KiotaSupersetAPI.Client.Models.TagGetResponseSchema.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "owners", n => { Owners = n.GetCollectionOfObjectValues<KClient.Models.User1>(KClient.Models.User1.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "tags", n => { Tags = n.GetCollectionOfObjectValues<KClient.Models.TagGetResponseSchema>(KClient.Models.TagGetResponseSchema.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -123,12 +123,12 @@ namespace KiotaSupersetAPI.Client.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.User>("created_by", CreatedBy);
+            writer.WriteObjectValue<KClient.Models.User>("created_by", CreatedBy);
             writer.WriteStringValue("creator", Creator);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.User1>("owners", Owners);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.TagGetResponseSchema>("tags", Tags);
+            writer.WriteCollectionOfObjectValues<KClient.Models.User1>("owners", Owners);
+            writer.WriteCollectionOfObjectValues<KClient.Models.TagGetResponseSchema>("tags", Tags);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

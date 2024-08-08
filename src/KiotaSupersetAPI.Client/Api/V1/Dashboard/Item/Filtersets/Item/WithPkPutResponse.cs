@@ -25,10 +25,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets.Item
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Put? Result { get; set; }
+        public KClient.Models.FilterSetRestApi.Put? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Put Result { get; set; }
+        public KClient.Models.FilterSetRestApi.Put Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Dashboard.Item.Filtersets.Item.WithPkPutResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets.Item
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetDoubleValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Put>(global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Put.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.FilterSetRestApi.Put>(KClient.Models.FilterSetRestApi.Put.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets.Item
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("id", Id);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Put>("result", Result);
+            writer.WriteObjectValue<KClient.Models.FilterSetRestApi.Put>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -36,7 +36,7 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
         public string Description { get; set; }
 #endif
         /// <summary>filter_type_description</summary>
-        public global::KiotaSupersetAPI.Client.Models.RLSRestApi.Get_filter_type? FilterType { get; set; }
+        public KClient.Models.RLSRestApi.Get_filter_type? FilterType { get; set; }
         /// <summary>group_key_description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,21 +58,21 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
         /// <summary>The roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.Roles1>? Roles { get; set; }
+        public List<KClient.Models.Roles1>? Roles { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.Roles1> Roles { get; set; }
+        public List<KClient.Models.Roles1> Roles { get; set; }
 #endif
         /// <summary>The tables property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.Tables>? Tables { get; set; }
+        public List<KClient.Models.Tables>? Tables { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.Tables> Tables { get; set; }
+        public List<KClient.Models.Tables> Tables { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.RLSRestApi.Get"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.RLSRestApi.Get"/> and sets the default values.
         /// </summary>
         public Get()
         {
@@ -81,12 +81,12 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.RLSRestApi.Get"/></returns>
+        /// <returns>A <see cref="KClient.Models.RLSRestApi.Get"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.RLSRestApi.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.RLSRestApi.Get CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.RLSRestApi.Get();
+            return new KClient.Models.RLSRestApi.Get();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,12 +98,12 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
             {
                 { "clause", n => { Clause = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "filter_type", n => { FilterType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.RLSRestApi.Get_filter_type>(); } },
+                { "filter_type", n => { FilterType = n.GetEnumValue<KClient.Models.RLSRestApi.Get_filter_type>(); } },
                 { "group_key", n => { GroupKey = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Roles1>(global::KiotaSupersetAPI.Client.Models.Roles1.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "tables", n => { Tables = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Tables>(global::KiotaSupersetAPI.Client.Models.Tables.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "roles", n => { Roles = n.GetCollectionOfObjectValues<KClient.Models.Roles1>(KClient.Models.Roles1.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "tables", n => { Tables = n.GetCollectionOfObjectValues<KClient.Models.Tables>(KClient.Models.Tables.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -115,12 +115,12 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("clause", Clause);
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.RLSRestApi.Get_filter_type>("filter_type", FilterType);
+            writer.WriteEnumValue<KClient.Models.RLSRestApi.Get_filter_type>("filter_type", FilterType);
             writer.WriteStringValue("group_key", GroupKey);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Roles1>("roles", Roles);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.Tables>("tables", Tables);
+            writer.WriteCollectionOfObjectValues<KClient.Models.Roles1>("roles", Roles);
+            writer.WriteCollectionOfObjectValues<KClient.Models.Tables>("tables", Tables);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

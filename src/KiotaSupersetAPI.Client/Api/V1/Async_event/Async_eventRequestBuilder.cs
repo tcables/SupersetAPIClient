@@ -44,8 +44,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Async_event
         /// <returns>A <see cref="KApi.Async_event.Async_eventGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Async_event401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Async_event500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Async_event401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Async_event500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Async_event.Async_eventGetResponse?> GetAsAsync_eventGetResponseAsync(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,8 +58,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Async_event
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Async_event401Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Async_event500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Async_event401Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Async_event500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Async_event.Async_eventGetResponse>(requestInfo, KApi.Async_event.Async_eventGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -69,8 +69,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Async_event
         /// <returns>A <see cref="KApi.Async_event.Async_eventResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Async_event401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Async_event500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Async_event401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Async_event500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsAsync_eventGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,8 +84,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Async_event
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Async_event401Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Async_event500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Async_event401Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Async_event500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Async_event.Async_eventResponse>(requestInfo, KApi.Async_event.Async_eventResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

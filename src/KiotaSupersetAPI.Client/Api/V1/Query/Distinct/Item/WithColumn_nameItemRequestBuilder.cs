@@ -41,31 +41,31 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Distinct.Item
         /// <summary>
         /// Get distinct values from field data
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DistincResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.DistincResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DistincResponseSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DistincResponseSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DistincResponseSchema404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.DistincResponseSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.DistincResponseSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.DistincResponseSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.DistincResponseSchema404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.DistincResponseSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.DistincResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Query.Distinct.Item.WithColumn_nameItemRequestBuilder.WithColumn_nameItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.DistincResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Query.Distinct.Item.WithColumn_nameItemRequestBuilder.WithColumn_nameItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.DistincResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Query.Distinct.Item.WithColumn_nameItemRequestBuilder.WithColumn_nameItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.DistincResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Query.Distinct.Item.WithColumn_nameItemRequestBuilder.WithColumn_nameItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.DistincResponseSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.DistincResponseSchema401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.DistincResponseSchema404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.DistincResponseSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.DistincResponseSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.DistincResponseSchema401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.DistincResponseSchema404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.DistincResponseSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.DistincResponseSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.DistincResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.DistincResponseSchema>(requestInfo, KClient.Models.DistincResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get distinct values from field data

@@ -22,26 +22,26 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>A list of columns and their metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.TableMetadataColumnsResponse>? Columns { get; set; }
+        public List<KClient.Models.TableMetadataColumnsResponse>? Columns { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.TableMetadataColumnsResponse> Columns { get; set; }
+        public List<KClient.Models.TableMetadataColumnsResponse> Columns { get; set; }
 #endif
         /// <summary>A list of foreign keys and their metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse>? ForeignKeys { get; set; }
+        public List<KClient.Models.TableMetadataForeignKeysIndexesResponse>? ForeignKeys { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse> ForeignKeys { get; set; }
+        public List<KClient.Models.TableMetadataForeignKeysIndexesResponse> ForeignKeys { get; set; }
 #endif
         /// <summary>A list of indexes and their metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse>? Indexes { get; set; }
+        public List<KClient.Models.TableMetadataForeignKeysIndexesResponse>? Indexes { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse> Indexes { get; set; }
+        public List<KClient.Models.TableMetadataForeignKeysIndexesResponse> Indexes { get; set; }
 #endif
         /// <summary>The name of the table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -54,10 +54,10 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Primary keys metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.TableMetadataPrimaryKeyResponse? PrimaryKey { get; set; }
+        public KClient.Models.TableMetadataPrimaryKeyResponse? PrimaryKey { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.TableMetadataPrimaryKeyResponse PrimaryKey { get; set; }
+        public KClient.Models.TableMetadataPrimaryKeyResponse PrimaryKey { get; set; }
 #endif
         /// <summary>SQL select star</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,7 +68,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string SelectStar { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.TableMetadataResponseSchema"/> and sets the default values.
         /// </summary>
         public TableMetadataResponseSchema()
         {
@@ -77,12 +77,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.TableMetadataResponseSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.TableMetadataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.TableMetadataResponseSchema();
+            return new KClient.Models.TableMetadataResponseSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,11 +92,11 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.TableMetadataColumnsResponse>(global::KiotaSupersetAPI.Client.Models.TableMetadataColumnsResponse.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "foreignKeys", n => { ForeignKeys = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse>(global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
-                { "indexes", n => { Indexes = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse>(global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "columns", n => { Columns = n.GetCollectionOfObjectValues<KClient.Models.TableMetadataColumnsResponse>(KClient.Models.TableMetadataColumnsResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "foreignKeys", n => { ForeignKeys = n.GetCollectionOfObjectValues<KClient.Models.TableMetadataForeignKeysIndexesResponse>(KClient.Models.TableMetadataForeignKeysIndexesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "indexes", n => { Indexes = n.GetCollectionOfObjectValues<KClient.Models.TableMetadataForeignKeysIndexesResponse>(KClient.Models.TableMetadataForeignKeysIndexesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "primaryKey", n => { PrimaryKey = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.TableMetadataPrimaryKeyResponse>(global::KiotaSupersetAPI.Client.Models.TableMetadataPrimaryKeyResponse.CreateFromDiscriminatorValue); } },
+                { "primaryKey", n => { PrimaryKey = n.GetObjectValue<KClient.Models.TableMetadataPrimaryKeyResponse>(KClient.Models.TableMetadataPrimaryKeyResponse.CreateFromDiscriminatorValue); } },
                 { "selectStar", n => { SelectStar = n.GetStringValue(); } },
             };
         }
@@ -107,11 +107,11 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.TableMetadataColumnsResponse>("columns", Columns);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse>("foreignKeys", ForeignKeys);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.TableMetadataForeignKeysIndexesResponse>("indexes", Indexes);
+            writer.WriteCollectionOfObjectValues<KClient.Models.TableMetadataColumnsResponse>("columns", Columns);
+            writer.WriteCollectionOfObjectValues<KClient.Models.TableMetadataForeignKeysIndexesResponse>("foreignKeys", ForeignKeys);
+            writer.WriteCollectionOfObjectValues<KClient.Models.TableMetadataForeignKeysIndexesResponse>("indexes", Indexes);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.TableMetadataPrimaryKeyResponse>("primaryKey", PrimaryKey);
+            writer.WriteObjectValue<KClient.Models.TableMetadataPrimaryKeyResponse>("primaryKey", PrimaryKey);
             writer.WriteStringValue("selectStar", SelectStar);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.Object_type422Error"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.Object_type422Error"/> and sets the default values.
         /// </summary>
         public Object_type422Error()
         {
@@ -32,12 +32,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.Object_type422Error"/></returns>
+        /// <returns>A <see cref="KClient.Models.Object_type422Error"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.Object_type422Error CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.Object_type422Error CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.Object_type422Error();
+            return new KClient.Models.Object_type422Error();
         }
         /// <summary>
         /// The deserialization information for the current model

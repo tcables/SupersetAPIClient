@@ -41,31 +41,31 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Favorite_status
         /// <summary>
         /// Check favorited charts for current user
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.GetFavStarIdsSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.GetFavStarIdsSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.GetFavStarIdsSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.GetFavStarIdsSchema404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.GetFavStarIdsSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema?> GetAsync(Action<RequestConfiguration<KApi.Chart.Favorite_status.Favorite_statusRequestBuilder.Favorite_statusRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.GetFavStarIdsSchema?> GetAsync(Action<RequestConfiguration<KApi.Chart.Favorite_status.Favorite_statusRequestBuilder.Favorite_statusRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema> GetAsync(Action<RequestConfiguration<KApi.Chart.Favorite_status.Favorite_statusRequestBuilder.Favorite_statusRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.GetFavStarIdsSchema> GetAsync(Action<RequestConfiguration<KApi.Chart.Favorite_status.Favorite_statusRequestBuilder.Favorite_statusRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.GetFavStarIdsSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.GetFavStarIdsSchema401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.GetFavStarIdsSchema404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.GetFavStarIdsSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.GetFavStarIdsSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.GetFavStarIdsSchema>(requestInfo, KClient.Models.GetFavStarIdsSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Check favorited charts for current user

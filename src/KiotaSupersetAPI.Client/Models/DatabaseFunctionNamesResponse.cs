@@ -28,7 +28,7 @@ namespace KiotaSupersetAPI.Client.Models
         public List<string> FunctionNames { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseFunctionNamesResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatabaseFunctionNamesResponse"/> and sets the default values.
         /// </summary>
         public DatabaseFunctionNamesResponse()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseFunctionNamesResponse"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseFunctionNamesResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatabaseFunctionNamesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatabaseFunctionNamesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatabaseFunctionNamesResponse();
+            return new KClient.Models.DatabaseFunctionNamesResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

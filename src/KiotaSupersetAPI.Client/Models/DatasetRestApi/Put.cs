@@ -26,10 +26,10 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi
         /// <summary>The columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.DatasetColumnsPut>? Columns { get; set; }
+        public List<KClient.Models.DatasetColumnsPut>? Columns { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.DatasetColumnsPut> Columns { get; set; }
+        public List<KClient.Models.DatasetColumnsPut> Columns { get; set; }
 #endif
         /// <summary>The database_id property</summary>
         public int? DatabaseId { get; set; }
@@ -90,10 +90,10 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi
         /// <summary>The metrics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.DatasetMetricsPut>? Metrics { get; set; }
+        public List<KClient.Models.DatasetMetricsPut>? Metrics { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.DatasetMetricsPut> Metrics { get; set; }
+        public List<KClient.Models.DatasetMetricsPut> Metrics { get; set; }
 #endif
         /// <summary>The normalize_columns property</summary>
         public bool? NormalizeColumns { get; set; }
@@ -140,7 +140,7 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi
         public string TemplateParams { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Put"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatasetRestApi.Put"/> and sets the default values.
         /// </summary>
         public Put()
         {
@@ -149,12 +149,12 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Put"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatasetRestApi.Put"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatasetRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Put();
+            return new KClient.Models.DatasetRestApi.Put();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -166,7 +166,7 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi
             {
                 { "always_filter_main_dttm", n => { AlwaysFilterMainDttm = n.GetBoolValue(); } },
                 { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
-                { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DatasetColumnsPut>(global::KiotaSupersetAPI.Client.Models.DatasetColumnsPut.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "columns", n => { Columns = n.GetCollectionOfObjectValues<KClient.Models.DatasetColumnsPut>(KClient.Models.DatasetColumnsPut.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "database_id", n => { DatabaseId = n.GetIntValue(); } },
                 { "default_endpoint", n => { DefaultEndpoint = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -177,7 +177,7 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi
                 { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
                 { "is_sqllab_view", n => { IsSqllabView = n.GetBoolValue(); } },
                 { "main_dttm_col", n => { MainDttmCol = n.GetStringValue(); } },
-                { "metrics", n => { Metrics = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DatasetMetricsPut>(global::KiotaSupersetAPI.Client.Models.DatasetMetricsPut.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "metrics", n => { Metrics = n.GetCollectionOfObjectValues<KClient.Models.DatasetMetricsPut>(KClient.Models.DatasetMetricsPut.CreateFromDiscriminatorValue)?.ToList(); } },
                 { "normalize_columns", n => { NormalizeColumns = n.GetBoolValue(); } },
                 { "offset", n => { Offset = n.GetIntValue(); } },
                 { "owners", n => { Owners = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
@@ -196,7 +196,7 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("always_filter_main_dttm", AlwaysFilterMainDttm);
             writer.WriteIntValue("cache_timeout", CacheTimeout);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DatasetColumnsPut>("columns", Columns);
+            writer.WriteCollectionOfObjectValues<KClient.Models.DatasetColumnsPut>("columns", Columns);
             writer.WriteIntValue("database_id", DatabaseId);
             writer.WriteStringValue("default_endpoint", DefaultEndpoint);
             writer.WriteStringValue("description", Description);
@@ -207,7 +207,7 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi
             writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
             writer.WriteBoolValue("is_sqllab_view", IsSqllabView);
             writer.WriteStringValue("main_dttm_col", MainDttmCol);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DatasetMetricsPut>("metrics", Metrics);
+            writer.WriteCollectionOfObjectValues<KClient.Models.DatasetMetricsPut>("metrics", Metrics);
             writer.WriteBoolValue("normalize_columns", NormalizeColumns);
             writer.WriteIntValue("offset", Offset);
             writer.WriteCollectionOfPrimitiveValues<int?>("owners", Owners);

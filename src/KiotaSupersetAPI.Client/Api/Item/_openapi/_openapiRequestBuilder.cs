@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.Item._openapi
     public partial class _openapiRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Api.Item._openapi._openapiRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.Item._openapi
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Api.Item._openapi._openapiRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,53 +41,53 @@ namespace KiotaSupersetAPI.Client.Api.Item._openapi
         /// <summary>
         /// Get the OpenAPI spec for a specific API version
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse"/></returns>
+        /// <returns>A <see cref="KClient.Api.Item._openapi._openapiGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models._openapi404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models._openapi500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models._openapi404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models._openapi500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse?> GetAs_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Api.Item._openapi._openapiGetResponse?> GetAs_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse> GetAs_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Api.Item._openapi._openapiGetResponse> GetAs_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::KiotaSupersetAPI.Client.Models._openapi404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models._openapi500Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models._openapi404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models._openapi500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Api.Item._openapi._openapiGetResponse>(requestInfo, KClient.Api.Item._openapi._openapiGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the OpenAPI spec for a specific API version
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiResponse"/></returns>
+        /// <returns>A <see cref="KClient.Api.Item._openapi._openapiResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models._openapi404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models._openapi500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models._openapi404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models._openapi500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAs_openapiGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Api.Item._openapi._openapiResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Api.Item._openapi._openapiResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::KiotaSupersetAPI.Client.Models._openapi404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models._openapi500Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models._openapi404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models._openapi500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Api.Item._openapi._openapiResponse>(requestInfo, KClient.Api.Item._openapi._openapiResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the OpenAPI spec for a specific API version
@@ -111,11 +111,11 @@ namespace KiotaSupersetAPI.Client.Api.Item._openapi
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiRequestBuilder"/></returns>
+        /// <returns>A <see cref="KClient.Api.Item._openapi._openapiRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiRequestBuilder WithUrl(string rawUrl)
+        public KClient.Api.Item._openapi._openapiRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.Item._openapi._openapiRequestBuilder(rawUrl, RequestAdapter);
+            return new KClient.Api.Item._openapi._openapiRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -25,10 +25,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema? Result { get; set; }
+        public KClient.Models.DatasetDuplicateSchema? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema Result { get; set; }
+        public KClient.Models.DatasetDuplicateSchema Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Dataset.Duplicate.DuplicatePostResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetDoubleValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema>(global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KClient.Models.DatasetDuplicateSchema>(KClient.Models.DatasetDuplicateSchema.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("id", Id);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema>("result", Result);
+            writer.WriteObjectValue<KClient.Models.DatasetDuplicateSchema>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

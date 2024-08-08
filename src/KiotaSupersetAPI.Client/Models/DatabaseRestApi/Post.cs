@@ -32,7 +32,7 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi
         /// <summary>Duration (in seconds) of the caching timeout for charts of this database. A timeout of 0 indicates that the cache never expires. Note this defaults to the global timeout if undefined.</summary>
         public int? CacheTimeout { get; set; }
         /// <summary>Configuration_method is used on the frontend to inform the backend whether to explode parameters or to provide only a sqlalchemy_uri.</summary>
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post_configuration_method? ConfigurationMethod { get; set; }
+        public KClient.Models.DatabaseRestApi.Post_configuration_method? ConfigurationMethod { get; set; }
         /// <summary>A database name to identify this connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,10 +98,10 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi
         /// <summary>DB-specific parameters for configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post_parameters? Parameters { get; set; }
+        public KClient.Models.DatabaseRestApi.Post_parameters? Parameters { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post_parameters Parameters { get; set; }
+        public KClient.Models.DatabaseRestApi.Post_parameters Parameters { get; set; }
 #endif
         /// <summary>&lt;p&gt;Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines.&lt;/p&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,10 +122,10 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi
         /// <summary>The ssh_tunnel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel? SshTunnel { get; set; }
+        public KClient.Models.DatabaseSSHTunnel? SshTunnel { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel SshTunnel { get; set; }
+        public KClient.Models.DatabaseSSHTunnel SshTunnel { get; set; }
 #endif
         /// <summary>The uuid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -136,22 +136,22 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi
         public string Uuid { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatabaseRestApi.Post"/> and sets the default values.
         /// </summary>
         public Post()
         {
             AdditionalData = new Dictionary<string, object>();
-            ConfigurationMethod = global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post_configuration_method.Sqlalchemy_form;
+            ConfigurationMethod = KClient.Models.DatabaseRestApi.Post_configuration_method.Sqlalchemy_form;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatabaseRestApi.Post"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatabaseRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post();
+            return new KClient.Models.DatabaseRestApi.Post();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -167,7 +167,7 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi
                 { "allow_file_upload", n => { AllowFileUpload = n.GetBoolValue(); } },
                 { "allow_run_async", n => { AllowRunAsync = n.GetBoolValue(); } },
                 { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
-                { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post_configuration_method>(); } },
+                { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<KClient.Models.DatabaseRestApi.Post_configuration_method>(); } },
                 { "database_name", n => { DatabaseName = n.GetStringValue(); } },
                 { "driver", n => { Driver = n.GetStringValue(); } },
                 { "engine", n => { Engine = n.GetStringValue(); } },
@@ -178,10 +178,10 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi
                 { "impersonate_user", n => { ImpersonateUser = n.GetBoolValue(); } },
                 { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
                 { "masked_encrypted_extra", n => { MaskedEncryptedExtra = n.GetStringValue(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post_parameters>(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post_parameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<KClient.Models.DatabaseRestApi.Post_parameters>(KClient.Models.DatabaseRestApi.Post_parameters.CreateFromDiscriminatorValue); } },
                 { "server_cert", n => { ServerCert = n.GetStringValue(); } },
                 { "sqlalchemy_uri", n => { SqlalchemyUri = n.GetStringValue(); } },
-                { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel>(global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
+                { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<KClient.Models.DatabaseSSHTunnel>(KClient.Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
                 { "uuid", n => { Uuid = n.GetStringValue(); } },
             };
         }
@@ -198,7 +198,7 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi
             writer.WriteBoolValue("allow_file_upload", AllowFileUpload);
             writer.WriteBoolValue("allow_run_async", AllowRunAsync);
             writer.WriteIntValue("cache_timeout", CacheTimeout);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post_configuration_method>("configuration_method", ConfigurationMethod);
+            writer.WriteEnumValue<KClient.Models.DatabaseRestApi.Post_configuration_method>("configuration_method", ConfigurationMethod);
             writer.WriteStringValue("database_name", DatabaseName);
             writer.WriteStringValue("driver", Driver);
             writer.WriteStringValue("engine", Engine);
@@ -209,10 +209,10 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi
             writer.WriteBoolValue("impersonate_user", ImpersonateUser);
             writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
             writer.WriteStringValue("masked_encrypted_extra", MaskedEncryptedExtra);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Post_parameters>("parameters", Parameters);
+            writer.WriteObjectValue<KClient.Models.DatabaseRestApi.Post_parameters>("parameters", Parameters);
             writer.WriteStringValue("server_cert", ServerCert);
             writer.WriteStringValue("sqlalchemy_uri", SqlalchemyUri);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
+            writer.WriteObjectValue<KClient.Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
             writer.WriteStringValue("uuid", Uuid);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -71,31 +71,31 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab
         /// <summary>
         /// Assembles SQLLab bootstrap data (active_tab, databases, queries, tab_state_ids) in a single endpoint. The data can be assembled from the current user&apos;s id.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.SQLLabBootstrapSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.SQLLabBootstrapSchema400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.SQLLabBootstrapSchema401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.SQLLabBootstrapSchema403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.SQLLabBootstrapSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.SQLLabBootstrapSchema?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KClient.Models.SQLLabBootstrapSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema403Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.SQLLabBootstrapSchema400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.SQLLabBootstrapSchema401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.SQLLabBootstrapSchema403Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.SQLLabBootstrapSchema500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema>(requestInfo, global::KiotaSupersetAPI.Client.Models.SQLLabBootstrapSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KClient.Models.SQLLabBootstrapSchema>(requestInfo, KClient.Models.SQLLabBootstrapSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Assembles SQLLab bootstrap data (active_tab, databases, queries, tab_state_ids) in a single endpoint. The data can be assembled from the current user&apos;s id.

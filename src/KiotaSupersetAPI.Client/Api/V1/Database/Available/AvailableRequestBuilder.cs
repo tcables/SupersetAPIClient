@@ -44,8 +44,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
         /// <returns>A List&lt;KApi.Database.Available.Available&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Available400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Available500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Available400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Available500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<List<KApi.Database.Available.Available>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,8 +58,8 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Available400Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Available500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Available400Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Available500Error.CreateFromDiscriminatorValue },
             };
             var collectionResult = await RequestAdapter.SendCollectionAsync<KApi.Database.Available.Available>(requestInfo, KApi.Database.Available.Available.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.ToList();

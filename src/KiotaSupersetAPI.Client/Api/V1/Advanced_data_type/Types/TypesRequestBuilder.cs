@@ -44,9 +44,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
         /// <returns>A <see cref="KApi.Advanced_data_type.Types.TypesGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Types401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Types404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Types500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Types401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Types404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Types500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Advanced_data_type.Types.TypesGetResponse?> GetAsTypesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -59,9 +59,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Types401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Types404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Types500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Types401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Types404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Types500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Advanced_data_type.Types.TypesGetResponse>(requestInfo, KApi.Advanced_data_type.Types.TypesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -71,9 +71,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
         /// <returns>A <see cref="KApi.Advanced_data_type.Types.TypesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Types401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Types404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Types500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Types401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Types404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Types500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsTypesGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,9 +87,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.Types401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Types404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Types500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Types401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Types404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Types500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Advanced_data_type.Types.TypesResponse>(requestInfo, KApi.Advanced_data_type.Types.TypesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

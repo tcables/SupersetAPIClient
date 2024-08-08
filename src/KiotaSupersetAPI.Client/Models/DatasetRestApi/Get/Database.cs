@@ -38,7 +38,7 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Database"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatasetRestApi.Get.Database"/> and sets the default values.
         /// </summary>
         public Database()
         {
@@ -47,12 +47,12 @@ namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Database"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatasetRestApi.Get.Database"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Database CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatasetRestApi.Get.Database CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Get.Database();
+            return new KClient.Models.DatasetRestApi.Get.Database();
         }
         /// <summary>
         /// The deserialization information for the current model

@@ -23,10 +23,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Charts
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema>? Result { get; set; }
+        public List<KClient.Models.ChartEntityResponseSchema>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema> Result { get; set; }
+        public List<KClient.Models.ChartEntityResponseSchema> Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="KApi.Dashboard.Item.Charts.ChartsGetResponse"/> and sets the default values.
@@ -53,7 +53,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Charts
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema>(global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.ChartEntityResponseSchema>(KClient.Models.ChartEntityResponseSchema.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -63,7 +63,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Charts
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.ChartEntityResponseSchema>("result", Result);
+            writer.WriteCollectionOfObjectValues<KClient.Models.ChartEntityResponseSchema>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

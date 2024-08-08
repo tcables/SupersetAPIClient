@@ -38,7 +38,7 @@ namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get
         public string LastName { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.SavedQueryRestApi.Get.User"/> and sets the default values.
         /// </summary>
         public User()
         {
@@ -47,12 +47,12 @@ namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User"/></returns>
+        /// <returns>A <see cref="KClient.Models.SavedQueryRestApi.Get.User"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.SavedQueryRestApi.Get.User CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get.User();
+            return new KClient.Models.SavedQueryRestApi.Get.User();
         }
         /// <summary>
         /// The deserialization information for the current model

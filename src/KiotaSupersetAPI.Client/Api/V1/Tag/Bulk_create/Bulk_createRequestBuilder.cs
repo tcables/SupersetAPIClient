@@ -45,10 +45,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Bulk_create
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Bulk_create400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Bulk_create401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Bulk_create404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Bulk_create500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Bulk_create400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Bulk_create401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Bulk_create404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Bulk_create500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Tag.Bulk_create.Bulk_createPostResponse?> PostAsBulk_createPostResponseAsync(KApi.Tag.Bulk_create.Bulk_createPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -62,10 +62,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Bulk_create
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Bulk_create400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Bulk_create401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Bulk_create404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Bulk_create500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Bulk_create400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Bulk_create401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Bulk_create404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Bulk_create500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Tag.Bulk_create.Bulk_createPostResponse>(requestInfo, KApi.Tag.Bulk_create.Bulk_createPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -76,10 +76,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Bulk_create
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Bulk_create400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Bulk_create401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Bulk_create404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.Bulk_create500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.Bulk_create400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.Bulk_create401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.Bulk_create404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.Bulk_create500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use PostAsBulk_createPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,10 +94,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Bulk_create
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.Bulk_create400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.Bulk_create401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.Bulk_create404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.Bulk_create500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.Bulk_create400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.Bulk_create401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.Bulk_create404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.Bulk_create500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Tag.Bulk_create.Bulk_createResponse>(requestInfo, KApi.Tag.Bulk_create.Bulk_createResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

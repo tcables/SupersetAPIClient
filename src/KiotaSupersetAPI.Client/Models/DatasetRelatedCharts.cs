@@ -24,13 +24,13 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>A list of dashboards</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Models.DatasetRelatedChart>? Result { get; set; }
+        public List<KClient.Models.DatasetRelatedChart>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Models.DatasetRelatedChart> Result { get; set; }
+        public List<KClient.Models.DatasetRelatedChart> Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.DatasetRelatedCharts"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.DatasetRelatedCharts"/> and sets the default values.
         /// </summary>
         public DatasetRelatedCharts()
         {
@@ -39,12 +39,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.DatasetRelatedCharts"/></returns>
+        /// <returns>A <see cref="KClient.Models.DatasetRelatedCharts"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.DatasetRelatedCharts CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.DatasetRelatedCharts CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.DatasetRelatedCharts();
+            return new KClient.Models.DatasetRelatedCharts();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,7 +55,7 @@ namespace KiotaSupersetAPI.Client.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetIntValue(); } },
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DatasetRelatedChart>(global::KiotaSupersetAPI.Client.Models.DatasetRelatedChart.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.DatasetRelatedChart>(KClient.Models.DatasetRelatedChart.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace KiotaSupersetAPI.Client.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Models.DatasetRelatedChart>("result", Result);
+            writer.WriteCollectionOfObjectValues<KClient.Models.DatasetRelatedChart>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

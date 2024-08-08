@@ -24,7 +24,7 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The datasource ID</summary>
         public int? DatasourceId { get; set; }
         /// <summary>The datasource type</summary>
-        public global::KiotaSupersetAPI.Client.Models.FormDataPutSchema_datasource_type? DatasourceType { get; set; }
+        public KClient.Models.FormDataPutSchema_datasource_type? DatasourceType { get; set; }
         /// <summary>Any type of JSON supported text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,7 +34,7 @@ namespace KiotaSupersetAPI.Client.Models
         public string FormData { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.FormDataPutSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.FormDataPutSchema"/> and sets the default values.
         /// </summary>
         public FormDataPutSchema()
         {
@@ -43,12 +43,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.FormDataPutSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.FormDataPutSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.FormDataPutSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.FormDataPutSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.FormDataPutSchema();
+            return new KClient.Models.FormDataPutSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,7 +60,7 @@ namespace KiotaSupersetAPI.Client.Models
             {
                 { "chart_id", n => { ChartId = n.GetIntValue(); } },
                 { "datasource_id", n => { DatasourceId = n.GetIntValue(); } },
-                { "datasource_type", n => { DatasourceType = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.FormDataPutSchema_datasource_type>(); } },
+                { "datasource_type", n => { DatasourceType = n.GetEnumValue<KClient.Models.FormDataPutSchema_datasource_type>(); } },
                 { "form_data", n => { FormData = n.GetStringValue(); } },
             };
         }
@@ -73,7 +73,7 @@ namespace KiotaSupersetAPI.Client.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("chart_id", ChartId);
             writer.WriteIntValue("datasource_id", DatasourceId);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.FormDataPutSchema_datasource_type>("datasource_type", DatasourceType);
+            writer.WriteEnumValue<KClient.Models.FormDataPutSchema_datasource_type>("datasource_type", DatasourceType);
             writer.WriteStringValue("form_data", FormData);
             writer.WriteAdditionalData(AdditionalData);
         }

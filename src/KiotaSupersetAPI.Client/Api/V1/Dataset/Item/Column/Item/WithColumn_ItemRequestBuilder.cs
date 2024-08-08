@@ -44,11 +44,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
         /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse?> DeleteAsWithColumn_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -61,11 +61,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.WithColumn_401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.WithColumn_403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithColumn_404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithColumn_401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.WithColumn_403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithColumn_404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse>(requestInfo, KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -75,11 +75,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
         /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_422Error">When receiving a 422 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_403Error">When receiving a 403 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_422Error">When receiving a 422 status code</exception>
+        /// <exception cref="KClient.Models.WithColumn_500Error">When receiving a 500 status code</exception>
         [Obsolete("This method is obsolete. Use DeleteAsWithColumn_DeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,11 +93,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::KiotaSupersetAPI.Client.Models.WithColumn_401Error.CreateFromDiscriminatorValue },
-                { "403", global::KiotaSupersetAPI.Client.Models.WithColumn_403Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithColumn_404Error.CreateFromDiscriminatorValue },
-                { "422", global::KiotaSupersetAPI.Client.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithColumn_401Error.CreateFromDiscriminatorValue },
+                { "403", KClient.Models.WithColumn_403Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithColumn_404Error.CreateFromDiscriminatorValue },
+                { "422", KClient.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<KApi.Dataset.Item.Column.Item.WithColumn_Response>(requestInfo, KApi.Dataset.Item.Column.Item.WithColumn_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

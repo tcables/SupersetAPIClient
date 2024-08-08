@@ -22,29 +22,29 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>The clustering property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_clustering? Clustering { get; set; }
+        public KClient.Models.TableExtraMetadataResponseSchema_clustering? Clustering { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_clustering Clustering { get; set; }
+        public KClient.Models.TableExtraMetadataResponseSchema_clustering Clustering { get; set; }
 #endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_metadata? Metadata { get; set; }
+        public KClient.Models.TableExtraMetadataResponseSchema_metadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_metadata Metadata { get; set; }
+        public KClient.Models.TableExtraMetadataResponseSchema_metadata Metadata { get; set; }
 #endif
         /// <summary>The partitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_partitions? Partitions { get; set; }
+        public KClient.Models.TableExtraMetadataResponseSchema_partitions? Partitions { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_partitions Partitions { get; set; }
+        public KClient.Models.TableExtraMetadataResponseSchema_partitions Partitions { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.TableExtraMetadataResponseSchema"/> and sets the default values.
         /// </summary>
         public TableExtraMetadataResponseSchema()
         {
@@ -53,12 +53,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema"/></returns>
+        /// <returns>A <see cref="KClient.Models.TableExtraMetadataResponseSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.TableExtraMetadataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema();
+            return new KClient.Models.TableExtraMetadataResponseSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,9 +68,9 @@ namespace KiotaSupersetAPI.Client.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "clustering", n => { Clustering = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_clustering>(global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_clustering.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_metadata>(global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_metadata.CreateFromDiscriminatorValue); } },
-                { "partitions", n => { Partitions = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_partitions>(global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_partitions.CreateFromDiscriminatorValue); } },
+                { "clustering", n => { Clustering = n.GetObjectValue<KClient.Models.TableExtraMetadataResponseSchema_clustering>(KClient.Models.TableExtraMetadataResponseSchema_clustering.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<KClient.Models.TableExtraMetadataResponseSchema_metadata>(KClient.Models.TableExtraMetadataResponseSchema_metadata.CreateFromDiscriminatorValue); } },
+                { "partitions", n => { Partitions = n.GetObjectValue<KClient.Models.TableExtraMetadataResponseSchema_partitions>(KClient.Models.TableExtraMetadataResponseSchema_partitions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -80,9 +80,9 @@ namespace KiotaSupersetAPI.Client.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_clustering>("clustering", Clustering);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.TableExtraMetadataResponseSchema_partitions>("partitions", Partitions);
+            writer.WriteObjectValue<KClient.Models.TableExtraMetadataResponseSchema_clustering>("clustering", Clustering);
+            writer.WriteObjectValue<KClient.Models.TableExtraMetadataResponseSchema_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<KClient.Models.TableExtraMetadataResponseSchema_partitions>("partitions", Partitions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -57,10 +57,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithObject_400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithObject_401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithObject_404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithObject_500Error">When receiving a 500 status code</exception>
+        /// <exception cref="KClient.Models.WithObject_400Error">When receiving a 400 status code</exception>
+        /// <exception cref="KClient.Models.WithObject_401Error">When receiving a 401 status code</exception>
+        /// <exception cref="KClient.Models.WithObject_404Error">When receiving a 404 status code</exception>
+        /// <exception cref="KClient.Models.WithObject_500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task PostAsync(KApi.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -74,10 +74,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::KiotaSupersetAPI.Client.Models.WithObject_400Error.CreateFromDiscriminatorValue },
-                { "401", global::KiotaSupersetAPI.Client.Models.WithObject_401Error.CreateFromDiscriminatorValue },
-                { "404", global::KiotaSupersetAPI.Client.Models.WithObject_404Error.CreateFromDiscriminatorValue },
-                { "500", global::KiotaSupersetAPI.Client.Models.WithObject_500Error.CreateFromDiscriminatorValue },
+                { "400", KClient.Models.WithObject_400Error.CreateFromDiscriminatorValue },
+                { "401", KClient.Models.WithObject_401Error.CreateFromDiscriminatorValue },
+                { "404", KClient.Models.WithObject_404Error.CreateFromDiscriminatorValue },
+                { "500", KClient.Models.WithObject_500Error.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

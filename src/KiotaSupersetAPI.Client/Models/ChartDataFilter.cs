@@ -38,7 +38,7 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>Indicates if the filter has been added by a filter component as opposed to being a part of the original query.</summary>
         public bool? IsExtra { get; set; }
         /// <summary>The comparison operator.</summary>
-        public global::KiotaSupersetAPI.Client.Models.ChartDataFilter_op? Op { get; set; }
+        public KClient.Models.ChartDataFilter_op? Op { get; set; }
         /// <summary>The value or values to compare against. Can be a string, integer, decimal, None or list, depending on the operator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,7 +48,7 @@ namespace KiotaSupersetAPI.Client.Models
         public UntypedNode Val { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataFilter"/> and sets the default values.
+        /// Instantiates a new <see cref="KClient.Models.ChartDataFilter"/> and sets the default values.
         /// </summary>
         public ChartDataFilter()
         {
@@ -57,12 +57,12 @@ namespace KiotaSupersetAPI.Client.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Models.ChartDataFilter"/></returns>
+        /// <returns>A <see cref="KClient.Models.ChartDataFilter"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Models.ChartDataFilter CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KClient.Models.ChartDataFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Models.ChartDataFilter();
+            return new KClient.Models.ChartDataFilter();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -75,7 +75,7 @@ namespace KiotaSupersetAPI.Client.Models
                 { "col", n => { Col = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "grain", n => { Grain = n.GetStringValue(); } },
                 { "isExtra", n => { IsExtra = n.GetBoolValue(); } },
-                { "op", n => { Op = n.GetEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataFilter_op>(); } },
+                { "op", n => { Op = n.GetEnumValue<KClient.Models.ChartDataFilter_op>(); } },
                 { "val", n => { Val = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
@@ -89,7 +89,7 @@ namespace KiotaSupersetAPI.Client.Models
             writer.WriteObjectValue<UntypedNode>("col", Col);
             writer.WriteStringValue("grain", Grain);
             writer.WriteBoolValue("isExtra", IsExtra);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Models.ChartDataFilter_op>("op", Op);
+            writer.WriteEnumValue<KClient.Models.ChartDataFilter_op>("op", Op);
             writer.WriteObjectValue<UntypedNode>("val", Val);
             writer.WriteAdditionalData(AdditionalData);
         }
