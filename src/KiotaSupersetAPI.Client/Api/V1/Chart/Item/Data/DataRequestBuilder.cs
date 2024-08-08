@@ -1,135 +1,133 @@
 
-using KiotaSupersetAPI.Client.Models;
-using Microsoft.Kiota.Abstractions.Extensions;
-using Microsoft.Kiota.Abstractions.Serialization;
-using Microsoft.Kiota.Abstractions;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using System.Threading;
 using System;
 using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-
+using System.Threading;
+using System.Threading.Tasks;
+using KiotaSupersetAPI.Client.Models;
+using Microsoft.Kiota.Abstractions;
+using Microsoft.Kiota.Abstractions.Extensions;
+using Microsoft.Kiota.Abstractions.Serialization;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item.Data
+namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item.Data;
+
+/// <summary>
+/// Builds and executes requests for operations under \api\v1\chart\{pk}\data
+/// </summary>
+[GeneratedCode("Kiota", "1.16.0")]
+public partial class DataRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\chart\{pk}\data
+    /// Instantiates a new <see cref="KApi.Chart.Item.Data.DataRequestBuilder"/> and sets the default values.
+    /// </summary>
+    /// <param name="pathParameters">Path parameters for the request</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public DataRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/chart/{pk}/data{?force*,format*,type*}", pathParameters)
+    {
+    }
+    /// <summary>
+    /// Instantiates a new <see cref="KApi.Chart.Item.Data.DataRequestBuilder"/> and sets the default values.
+    /// </summary>
+    /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public DataRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/chart/{pk}/data{?force*,format*,type*}", rawUrl)
+    {
+    }
+    /// <summary>
+    /// Takes a chart ID and uses the query context stored when the chart was saved to return payload data response.
+    /// </summary>
+    /// <returns>A <see cref="KClient.Models.ChartDataResponseSchema"/></returns>
+    /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+    /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+    /// <exception cref="KClient.Models.ChartDataResponseSchema400Error">When receiving a 400 status code</exception>
+    /// <exception cref="KClient.Models.ChartDataResponseSchema401Error">When receiving a 401 status code</exception>
+    /// <exception cref="KClient.Models.ChartDataResponseSchema500Error">When receiving a 500 status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+    public async Task<KClient.Models.ChartDataResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+    {
+#nullable restore
+#else
+    public async Task<KClient.Models.ChartDataResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    {
+#endif
+        var requestInfo = ToGetRequestInformation(requestConfiguration);
+        var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+        {
+            { "400", KClient.Models.ChartDataResponseSchema400Error.CreateFromDiscriminatorValue },
+            { "401", KClient.Models.ChartDataResponseSchema401Error.CreateFromDiscriminatorValue },
+            { "500", KClient.Models.ChartDataResponseSchema500Error.CreateFromDiscriminatorValue },
+        };
+        return await RequestAdapter.SendAsync<KClient.Models.ChartDataResponseSchema>(requestInfo, KClient.Models.ChartDataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+    }
+    /// <summary>
+    /// Takes a chart ID and uses the query context stored when the chart was saved to return payload data response.
+    /// </summary>
+    /// <returns>A <see cref="RequestInformation"/></returns>
+    /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+    {
+#nullable restore
+#else
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    {
+#endif
+        var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+        requestInfo.Configure(requestConfiguration);
+        requestInfo.Headers.TryAdd("Accept", "application/json");
+        return requestInfo;
+    }
+    /// <summary>
+    /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+    /// </summary>
+    /// <returns>A <see cref="KApi.Chart.Item.Data.DataRequestBuilder"/></returns>
+    /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+    public KApi.Chart.Item.Data.DataRequestBuilder WithUrl(string rawUrl)
+    {
+        return new KApi.Chart.Item.Data.DataRequestBuilder(rawUrl, RequestAdapter);
+    }
+    /// <summary>
+    /// Takes a chart ID and uses the query context stored when the chart was saved to return payload data response.
     /// </summary>
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class DataRequestBuilder : BaseRequestBuilder
+    public partial class DataRequestBuilderGetQueryParameters
     {
-        /// <summary>
-        /// Instantiates a new <see cref="KApi.Chart.Item.Data.DataRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="pathParameters">Path parameters for the request</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DataRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/chart/{pk}/data{?force*,format*,type*}", pathParameters)
-        {
-        }
-        /// <summary>
-        /// Instantiates a new <see cref="KApi.Chart.Item.Data.DataRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DataRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/chart/{pk}/data{?force*,format*,type*}", rawUrl)
-        {
-        }
-        /// <summary>
-        /// Takes a chart ID and uses the query context stored when the chart was saved to return payload data response.
-        /// </summary>
-        /// <returns>A <see cref="KClient.Models.ChartDataResponseSchema"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="KClient.Models.ChartDataResponseSchema400Error">When receiving a 400 status code</exception>
-        /// <exception cref="KClient.Models.ChartDataResponseSchema401Error">When receiving a 401 status code</exception>
-        /// <exception cref="KClient.Models.ChartDataResponseSchema500Error">When receiving a 500 status code</exception>
+        /// <summary>Should the queries be forced to load from the source</summary>
+        [QueryParameter("force")]
+        public bool? Force { get; set; }
+        /// <summary>The format in which the data should be returned</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KClient.Models.ChartDataResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
+        [QueryParameter("format")]
+        public string? Format { get; set; }
 #nullable restore
 #else
-        public async Task<KClient.Models.ChartDataResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
+        [QueryParameter("format")]
+        public string Format { get; set; }
 #endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", KClient.Models.ChartDataResponseSchema400Error.CreateFromDiscriminatorValue },
-                { "401", KClient.Models.ChartDataResponseSchema401Error.CreateFromDiscriminatorValue },
-                { "500", KClient.Models.ChartDataResponseSchema500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<KClient.Models.ChartDataResponseSchema>(requestInfo, KClient.Models.ChartDataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Takes a chart ID and uses the query context stored when the chart was saved to return payload data response.
-        /// </summary>
-        /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <summary>The type in which the data should be returned</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>>? requestConfiguration = default)
-        {
+        [QueryParameter("type")]
+        public string? Type { get; set; }
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>> requestConfiguration = default)
-        {
+        [QueryParameter("type")]
+        public string Type { get; set; }
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
-            requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
-            return requestInfo;
-        }
-        /// <summary>
-        /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
-        /// </summary>
-        /// <returns>A <see cref="KApi.Chart.Item.Data.DataRequestBuilder"/></returns>
-        /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public KApi.Chart.Item.Data.DataRequestBuilder WithUrl(string rawUrl)
-        {
-            return new KApi.Chart.Item.Data.DataRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Takes a chart ID and uses the query context stored when the chart was saved to return payload data response.
-        /// </summary>
-        [GeneratedCode("Kiota", "1.16.0")]
-        public partial class DataRequestBuilderGetQueryParameters 
-        {
-            /// <summary>Should the queries be forced to load from the source</summary>
-            [QueryParameter("force")]
-            public bool? Force { get; set; }
-            /// <summary>The format in which the data should be returned</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("format")]
-            public string? Format { get; set; }
-#nullable restore
-#else
-            [QueryParameter("format")]
-            public string Format { get; set; }
-#endif
-            /// <summary>The type in which the data should be returned</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("type")]
-            public string? Type { get; set; }
-#nullable restore
-#else
-            [QueryParameter("type")]
-            public string Type { get; set; }
-#endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [GeneratedCode("Kiota", "1.16.0")]
-        public partial class DataRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>
-        {
-        }
+    }
+    /// <summary>
+    /// Configuration for the request such as headers, query parameters, and middleware options.
+    /// </summary>
+    [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
+    [GeneratedCode("Kiota", "1.16.0")]
+    public partial class DataRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Chart.Item.Data.DataRequestBuilder.DataRequestBuilderGetQueryParameters>
+    {
     }
 }

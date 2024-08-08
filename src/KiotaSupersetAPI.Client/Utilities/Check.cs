@@ -1,13 +1,11 @@
 ﻿using System;
+using System.CodeDom.Compiler;
+using System.CodeDom.Compiler;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.CodeDom.Compiler;
 using System.Linq;
-using System.CodeDom.Compiler;
-
-using System.CodeDom.Compiler;
 using System.Linq;
-
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;
 
@@ -243,7 +241,7 @@ public static partial class Check
         {
             throw new ArgumentException($"{parameterName} is equal to zero");
         }
-        
+
         if (value < 0)
         {
             throw new ArgumentException($"{parameterName} is less than zero");
@@ -260,7 +258,7 @@ public static partial class Check
         {
             throw new ArgumentException($"{parameterName} is equal to zero");
         }
-        
+
         if (value < 0)
         {
             throw new ArgumentException($"{parameterName} is less than zero");

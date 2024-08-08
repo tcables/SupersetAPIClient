@@ -1,65 +1,63 @@
 
-using KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item;
-using Microsoft.Kiota.Abstractions.Extensions;
-using Microsoft.Kiota.Abstractions;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
 using System;
 using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-
+using System.Threading.Tasks;
+using KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item;
+using Microsoft.Kiota.Abstractions;
+using Microsoft.Kiota.Abstractions.Extensions;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column
+namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column;
+
+/// <summary>
+/// Builds and executes requests for operations under \api\v1\dataset\{pk}\column
+/// </summary>
+[GeneratedCode("Kiota", "1.16.0")]
+public partial class ColumnRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>
-    /// Builds and executes requests for operations under \api\v1\dataset\{pk}\column
-    /// </summary>
-    [GeneratedCode("Kiota", "1.16.0")]
-    public partial class ColumnRequestBuilder : BaseRequestBuilder
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.column.item collection</summary>
+    /// <param name="position">The column id for this dataset</param>
+    /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
+    public KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder this[int position]
     {
-        /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.column.item collection</summary>
-        /// <param name="position">The column id for this dataset</param>
-        /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
-        public KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder this[int position]
+        get
         {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("column_id", position);
-                return new KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
+            var urlTplParams = new Dictionary<string, object>(PathParameters);
+            urlTplParams.Add("column_id", position);
+            return new KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
-        /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.column.item collection</summary>
-        /// <param name="position">The column id for this dataset</param>
-        /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder this[string position]
+    }
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.column.item collection</summary>
+    /// <param name="position">The column id for this dataset</param>
+    /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
+    [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
+    public KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder this[string position]
+    {
+        get
         {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("column_id", position);
-                return new KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
+            var urlTplParams = new Dictionary<string, object>(PathParameters);
+            if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("column_id", position);
+            return new KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
-        /// <summary>
-        /// Instantiates a new <see cref="KApi.Dataset.Item.Column.ColumnRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="pathParameters">Path parameters for the request</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ColumnRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/dataset/{pk}/column", pathParameters)
-        {
-        }
-        /// <summary>
-        /// Instantiates a new <see cref="KApi.Dataset.Item.Column.ColumnRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ColumnRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/dataset/{pk}/column", rawUrl)
-        {
-        }
+    }
+    /// <summary>
+    /// Instantiates a new <see cref="KApi.Dataset.Item.Column.ColumnRequestBuilder"/> and sets the default values.
+    /// </summary>
+    /// <param name="pathParameters">Path parameters for the request</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public ColumnRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/dataset/{pk}/column", pathParameters)
+    {
+    }
+    /// <summary>
+    /// Instantiates a new <see cref="KApi.Dataset.Item.Column.ColumnRequestBuilder"/> and sets the default values.
+    /// </summary>
+    /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public ColumnRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/dataset/{pk}/column", rawUrl)
+    {
     }
 }

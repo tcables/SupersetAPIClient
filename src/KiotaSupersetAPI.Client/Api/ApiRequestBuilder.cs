@@ -1,58 +1,56 @@
 
-using KiotaSupersetAPI.Client.Api.Item;
-using KiotaSupersetAPI.Client.Api.V1;
-using Microsoft.Kiota.Abstractions.Extensions;
-using Microsoft.Kiota.Abstractions;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
 using System;
 using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-
+using System.Threading.Tasks;
+using KiotaSupersetAPI.Client.Api.Item;
+using KiotaSupersetAPI.Client.Api.V1;
+using Microsoft.Kiota.Abstractions;
+using Microsoft.Kiota.Abstractions.Extensions;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api
+namespace KiotaSupersetAPI.Client.Api;
+
+/// <summary>
+/// Builds and executes requests for operations under \api
+/// </summary>
+[GeneratedCode("Kiota", "1.16.0")]
+public partial class ApiRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>
-    /// Builds and executes requests for operations under \api
-    /// </summary>
-    [GeneratedCode("Kiota", "1.16.0")]
-    public partial class ApiRequestBuilder : BaseRequestBuilder
+    /// <summary>The v1 property</summary>
+    public KApi.V1RequestBuilder V1
     {
-        /// <summary>The v1 property</summary>
-        public KApi.V1RequestBuilder V1
+        get => new KApi.V1RequestBuilder(PathParameters, RequestAdapter);
+    }
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.item collection</summary>
+    /// <param name="position">Unique identifier of the item</param>
+    /// <returns>A <see cref="KClient.Api.Item.WithVersionItemRequestBuilder"/></returns>
+    public KClient.Api.Item.WithVersionItemRequestBuilder this[string position]
+    {
+        get
         {
-            get => new KApi.V1RequestBuilder(PathParameters, RequestAdapter);
+            var urlTplParams = new Dictionary<string, object>(PathParameters);
+            urlTplParams.Add("version", position);
+            return new KClient.Api.Item.WithVersionItemRequestBuilder(urlTplParams, RequestAdapter);
         }
-        /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="KClient.Api.Item.WithVersionItemRequestBuilder"/></returns>
-        public KClient.Api.Item.WithVersionItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("version", position);
-                return new KClient.Api.Item.WithVersionItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
-        /// <summary>
-        /// Instantiates a new <see cref="KClient.Api.ApiRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="pathParameters">Path parameters for the request</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ApiRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api", pathParameters)
-        {
-        }
-        /// <summary>
-        /// Instantiates a new <see cref="KClient.Api.ApiRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ApiRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api", rawUrl)
-        {
-        }
+    }
+    /// <summary>
+    /// Instantiates a new <see cref="KClient.Api.ApiRequestBuilder"/> and sets the default values.
+    /// </summary>
+    /// <param name="pathParameters">Path parameters for the request</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public ApiRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api", pathParameters)
+    {
+    }
+    /// <summary>
+    /// Instantiates a new <see cref="KClient.Api.ApiRequestBuilder"/> and sets the default values.
+    /// </summary>
+    /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public ApiRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api", rawUrl)
+    {
     }
 }

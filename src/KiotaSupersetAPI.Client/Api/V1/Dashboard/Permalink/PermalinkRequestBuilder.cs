@@ -1,52 +1,50 @@
 
-using KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink.Item;
-using Microsoft.Kiota.Abstractions.Extensions;
-using Microsoft.Kiota.Abstractions;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
 using System;
 using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-
+using System.Threading.Tasks;
+using KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink.Item;
+using Microsoft.Kiota.Abstractions;
+using Microsoft.Kiota.Abstractions.Extensions;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink
+namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink;
+
+/// <summary>
+/// Builds and executes requests for operations under \api\v1\dashboard\permalink
+/// </summary>
+[GeneratedCode("Kiota", "1.16.0")]
+public partial class PermalinkRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>
-    /// Builds and executes requests for operations under \api\v1\dashboard\permalink
-    /// </summary>
-    [GeneratedCode("Kiota", "1.16.0")]
-    public partial class PermalinkRequestBuilder : BaseRequestBuilder
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dashboard.permalink.item collection</summary>
+    /// <param name="position">Unique identifier of the item</param>
+    /// <returns>A <see cref="KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
+    public KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder this[string position]
     {
-        /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dashboard.permalink.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
-        public KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder this[string position]
+        get
         {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("key", position);
-                return new KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
+            var urlTplParams = new Dictionary<string, object>(PathParameters);
+            urlTplParams.Add("key", position);
+            return new KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
-        /// <summary>
-        /// Instantiates a new <see cref="KApi.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="pathParameters">Path parameters for the request</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PermalinkRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/dashboard/permalink", pathParameters)
-        {
-        }
-        /// <summary>
-        /// Instantiates a new <see cref="KApi.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PermalinkRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/dashboard/permalink", rawUrl)
-        {
-        }
+    }
+    /// <summary>
+    /// Instantiates a new <see cref="KApi.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+    /// </summary>
+    /// <param name="pathParameters">Path parameters for the request</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public PermalinkRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/dashboard/permalink", pathParameters)
+    {
+    }
+    /// <summary>
+    /// Instantiates a new <see cref="KApi.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+    /// </summary>
+    /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public PermalinkRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/dashboard/permalink", rawUrl)
+    {
     }
 }

@@ -1,141 +1,139 @@
 
-using KiotaSupersetAPI.Client.Models;
-using Microsoft.Kiota.Abstractions.Extensions;
-using Microsoft.Kiota.Abstractions.Serialization;
-using Microsoft.Kiota.Abstractions;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using System.Threading;
 using System;
 using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-
+using System.Threading;
+using System.Threading.Tasks;
+using KiotaSupersetAPI.Client.Models;
+using Microsoft.Kiota.Abstractions;
+using Microsoft.Kiota.Abstractions.Extensions;
+using Microsoft.Kiota.Abstractions.Serialization;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values
+namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values;
+
+/// <summary>
+/// Builds and executes requests for operations under \api\v1\datasource\{datasource_type}\{datasource_id}\column\{column_name}\values
+/// </summary>
+[GeneratedCode("Kiota", "1.16.0")]
+public partial class ValuesRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\datasource\{datasource_type}\{datasource_id}\column\{column_name}\values
+    /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/> and sets the default values.
     /// </summary>
-    [GeneratedCode("Kiota", "1.16.0")]
-    public partial class ValuesRequestBuilder : BaseRequestBuilder
+    /// <param name="pathParameters">Path parameters for the request</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public ValuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/datasource/{datasource_type}/{datasource_id}/column/{column_name}/values", pathParameters)
     {
-        /// <summary>
-        /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="pathParameters">Path parameters for the request</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ValuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/datasource/{datasource_type}/{datasource_id}/column/{column_name}/values", pathParameters)
-        {
-        }
-        /// <summary>
-        /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/> and sets the default values.
-        /// </summary>
-        /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ValuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/datasource/{datasource_type}/{datasource_id}/column/{column_name}/values", rawUrl)
-        {
-        }
-        /// <summary>
-        /// Get possible values for a datasource column
-        /// </summary>
-        /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="KClient.Models.Values400Error">When receiving a 400 status code</exception>
-        /// <exception cref="KClient.Models.Values401Error">When receiving a 401 status code</exception>
-        /// <exception cref="KClient.Models.Values403Error">When receiving a 403 status code</exception>
-        /// <exception cref="KClient.Models.Values404Error">When receiving a 404 status code</exception>
-        /// <exception cref="KClient.Models.Values500Error">When receiving a 500 status code</exception>
+    }
+    /// <summary>
+    /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/> and sets the default values.
+    /// </summary>
+    /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+    /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
+    public ValuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/datasource/{datasource_type}/{datasource_id}/column/{column_name}/values", rawUrl)
+    {
+    }
+    /// <summary>
+    /// Get possible values for a datasource column
+    /// </summary>
+    /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse"/></returns>
+    /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+    /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+    /// <exception cref="KClient.Models.Values400Error">When receiving a 400 status code</exception>
+    /// <exception cref="KClient.Models.Values401Error">When receiving a 401 status code</exception>
+    /// <exception cref="KClient.Models.Values403Error">When receiving a 403 status code</exception>
+    /// <exception cref="KClient.Models.Values404Error">When receiving a 404 status code</exception>
+    /// <exception cref="KClient.Models.Values500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse?> GetAsValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
+    public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse?> GetAsValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+    {
 #nullable restore
 #else
-        public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse> GetAsValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
+    public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse> GetAsValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    {
 #endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", KClient.Models.Values400Error.CreateFromDiscriminatorValue },
-                { "401", KClient.Models.Values401Error.CreateFromDiscriminatorValue },
-                { "403", KClient.Models.Values403Error.CreateFromDiscriminatorValue },
-                { "404", KClient.Models.Values404Error.CreateFromDiscriminatorValue },
-                { "500", KClient.Models.Values500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse>(requestInfo, KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Get possible values for a datasource column
-        /// </summary>
-        /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="KClient.Models.Values400Error">When receiving a 400 status code</exception>
-        /// <exception cref="KClient.Models.Values401Error">When receiving a 401 status code</exception>
-        /// <exception cref="KClient.Models.Values403Error">When receiving a 403 status code</exception>
-        /// <exception cref="KClient.Models.Values404Error">When receiving a 404 status code</exception>
-        /// <exception cref="KClient.Models.Values500Error">When receiving a 500 status code</exception>
-        [Obsolete("This method is obsolete. Use GetAsValuesGetResponseAsync instead.")]
+        var requestInfo = ToGetRequestInformation(requestConfiguration);
+        var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+        {
+            { "400", KClient.Models.Values400Error.CreateFromDiscriminatorValue },
+            { "401", KClient.Models.Values401Error.CreateFromDiscriminatorValue },
+            { "403", KClient.Models.Values403Error.CreateFromDiscriminatorValue },
+            { "404", KClient.Models.Values404Error.CreateFromDiscriminatorValue },
+            { "500", KClient.Models.Values500Error.CreateFromDiscriminatorValue },
+        };
+        return await RequestAdapter.SendAsync<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse>(requestInfo, KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+    }
+    /// <summary>
+    /// Get possible values for a datasource column
+    /// </summary>
+    /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse"/></returns>
+    /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+    /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+    /// <exception cref="KClient.Models.Values400Error">When receiving a 400 status code</exception>
+    /// <exception cref="KClient.Models.Values401Error">When receiving a 401 status code</exception>
+    /// <exception cref="KClient.Models.Values403Error">When receiving a 403 status code</exception>
+    /// <exception cref="KClient.Models.Values404Error">When receiving a 404 status code</exception>
+    /// <exception cref="KClient.Models.Values500Error">When receiving a 500 status code</exception>
+    [Obsolete("This method is obsolete. Use GetAsValuesGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
+    public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+    {
 #nullable restore
 #else
-        public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
+    public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    {
 #endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", KClient.Models.Values400Error.CreateFromDiscriminatorValue },
-                { "401", KClient.Models.Values401Error.CreateFromDiscriminatorValue },
-                { "403", KClient.Models.Values403Error.CreateFromDiscriminatorValue },
-                { "404", KClient.Models.Values404Error.CreateFromDiscriminatorValue },
-                { "500", KClient.Models.Values500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse>(requestInfo, KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Get possible values for a datasource column
-        /// </summary>
-        /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        var requestInfo = ToGetRequestInformation(requestConfiguration);
+        var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+        {
+            { "400", KClient.Models.Values400Error.CreateFromDiscriminatorValue },
+            { "401", KClient.Models.Values401Error.CreateFromDiscriminatorValue },
+            { "403", KClient.Models.Values403Error.CreateFromDiscriminatorValue },
+            { "404", KClient.Models.Values404Error.CreateFromDiscriminatorValue },
+            { "500", KClient.Models.Values500Error.CreateFromDiscriminatorValue },
+        };
+        return await RequestAdapter.SendAsync<KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse>(requestInfo, KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+    }
+    /// <summary>
+    /// Get possible values for a datasource column
+    /// </summary>
+    /// <returns>A <see cref="RequestInformation"/></returns>
+    /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-        {
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+    {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
-        {
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
-            requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
-            return requestInfo;
-        }
-        /// <summary>
-        /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
-        /// </summary>
-        /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/></returns>
-        /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder WithUrl(string rawUrl)
-        {
-            return new KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [GeneratedCode("Kiota", "1.16.0")]
-        public partial class ValuesRequestBuilderGetRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
-        }
+        var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+        requestInfo.Configure(requestConfiguration);
+        requestInfo.Headers.TryAdd("Accept", "application/json");
+        return requestInfo;
+    }
+    /// <summary>
+    /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+    /// </summary>
+    /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/></returns>
+    /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+    public KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder WithUrl(string rawUrl)
+    {
+        return new KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder(rawUrl, RequestAdapter);
+    }
+    /// <summary>
+    /// Configuration for the request such as headers, query parameters, and middleware options.
+    /// </summary>
+    [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
+    [GeneratedCode("Kiota", "1.16.0")]
+    public partial class ValuesRequestBuilderGetRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
+    {
     }
 }

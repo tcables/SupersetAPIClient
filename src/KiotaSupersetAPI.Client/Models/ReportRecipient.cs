@@ -1,73 +1,71 @@
 
-using Microsoft.Kiota.Abstractions.Extensions;
-using Microsoft.Kiota.Abstractions.Serialization;
-using System.Collections.Generic;
-using System.IO;
 using System;
 using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-
+using Microsoft.Kiota.Abstractions.Extensions;
+using Microsoft.Kiota.Abstractions.Serialization;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Models
+namespace KiotaSupersetAPI.Client.Models;
+
+[GeneratedCode("Kiota", "1.16.0")]
+#pragma warning disable CS1591
+public partial class ReportRecipient : IAdditionalDataHolder, IParsable
+#pragma warning restore CS1591
 {
-    [GeneratedCode("Kiota", "1.16.0")]
-    #pragma warning disable CS1591
-    public partial class ReportRecipient : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
-    {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The recipient_config_json property</summary>
+    /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+    public IDictionary<string, object> AdditionalData { get; set; }
+    /// <summary>The recipient_config_json property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public KClient.Models.ReportRecipientConfigJSON? RecipientConfigJson { get; set; }
+    public KClient.Models.ReportRecipientConfigJSON? RecipientConfigJson { get; set; }
 #nullable restore
 #else
-        public KClient.Models.ReportRecipientConfigJSON RecipientConfigJson { get; set; }
+    public KClient.Models.ReportRecipientConfigJSON RecipientConfigJson { get; set; }
 #endif
-        /// <summary>The recipient type, check spec for valid options</summary>
-        public KClient.Models.ReportRecipient_type? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="KClient.Models.ReportRecipient"/> and sets the default values.
-        /// </summary>
-        public ReportRecipient()
+    /// <summary>The recipient type, check spec for valid options</summary>
+    public KClient.Models.ReportRecipient_type? Type { get; set; }
+    /// <summary>
+    /// Instantiates a new <see cref="KClient.Models.ReportRecipient"/> and sets the default values.
+    /// </summary>
+    public ReportRecipient()
+    {
+        AdditionalData = new Dictionary<string, object>();
+    }
+    /// <summary>
+    /// Creates a new instance of the appropriate class based on discriminator value
+    /// </summary>
+    /// <returns>A <see cref="KClient.Models.ReportRecipient"/></returns>
+    /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+    public static KClient.Models.ReportRecipient CreateFromDiscriminatorValue(IParseNode parseNode)
+    {
+        _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+        return new KClient.Models.ReportRecipient();
+    }
+    /// <summary>
+    /// The deserialization information for the current model
+    /// </summary>
+    /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+    public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+    {
+        return new Dictionary<string, Action<IParseNode>>
         {
-            AdditionalData = new Dictionary<string, object>();
-        }
-        /// <summary>
-        /// Creates a new instance of the appropriate class based on discriminator value
-        /// </summary>
-        /// <returns>A <see cref="KClient.Models.ReportRecipient"/></returns>
-        /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static KClient.Models.ReportRecipient CreateFromDiscriminatorValue(IParseNode parseNode)
-        {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new KClient.Models.ReportRecipient();
-        }
-        /// <summary>
-        /// The deserialization information for the current model
-        /// </summary>
-        /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-        {
-            return new Dictionary<string, Action<IParseNode>>
-            {
-                { "recipient_config_json", n => { RecipientConfigJson = n.GetObjectValue<KClient.Models.ReportRecipientConfigJSON>(KClient.Models.ReportRecipientConfigJSON.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<KClient.Models.ReportRecipient_type>(); } },
-            };
-        }
-        /// <summary>
-        /// Serializes information the current object
-        /// </summary>
-        /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public virtual void Serialize(ISerializationWriter writer)
-        {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<KClient.Models.ReportRecipientConfigJSON>("recipient_config_json", RecipientConfigJson);
-            writer.WriteEnumValue<KClient.Models.ReportRecipient_type>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
-        }
+            { "recipient_config_json", n => { RecipientConfigJson = n.GetObjectValue<KClient.Models.ReportRecipientConfigJSON>(KClient.Models.ReportRecipientConfigJSON.CreateFromDiscriminatorValue); } },
+            { "type", n => { Type = n.GetEnumValue<KClient.Models.ReportRecipient_type>(); } },
+        };
+    }
+    /// <summary>
+    /// Serializes information the current object
+    /// </summary>
+    /// <param name="writer">Serialization writer to use to serialize this model</param>
+    public virtual void Serialize(ISerializationWriter writer)
+    {
+        _ = writer ?? throw new ArgumentNullException(nameof(writer));
+        writer.WriteObjectValue<KClient.Models.ReportRecipientConfigJSON>("recipient_config_json", RecipientConfigJson);
+        writer.WriteEnumValue<KClient.Models.ReportRecipient_type>("type", Type);
+        writer.WriteAdditionalData(AdditionalData);
     }
 }

@@ -1,70 +1,68 @@
 
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using KiotaSupersetAPI.Client.Models.QueryRestApi.Get;
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using System.Collections.Generic;
-using System.IO;
-using System;
-using System.CodeDom.Compiler;
-using System.Linq;
-
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since
+namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since;
+
+[GeneratedCode("Kiota", "1.16.0")]
+#pragma warning disable CS1591
+public partial class Updated_sinceGetResponse : IAdditionalDataHolder, IParsable
+#pragma warning restore CS1591
 {
-    [GeneratedCode("Kiota", "1.16.0")]
-    #pragma warning disable CS1591
-    public partial class Updated_sinceGetResponse : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
-    {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A List of queries that changed after last_updated_ms</summary>
+    /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+    public IDictionary<string, object> AdditionalData { get; set; }
+    /// <summary>A List of queries that changed after last_updated_ms</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<KClient.Models.QueryRestApi.Get.Get>? Result { get; set; }
+    public List<KClient.Models.QueryRestApi.Get.Get>? Result { get; set; }
 #nullable restore
 #else
-        public List<KClient.Models.QueryRestApi.Get.Get> Result { get; set; }
+    public List<KClient.Models.QueryRestApi.Get.Get> Result { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="KApi.Query.Updated_since.Updated_sinceGetResponse"/> and sets the default values.
-        /// </summary>
-        public Updated_sinceGetResponse()
+    /// <summary>
+    /// Instantiates a new <see cref="KApi.Query.Updated_since.Updated_sinceGetResponse"/> and sets the default values.
+    /// </summary>
+    public Updated_sinceGetResponse()
+    {
+        AdditionalData = new Dictionary<string, object>();
+    }
+    /// <summary>
+    /// Creates a new instance of the appropriate class based on discriminator value
+    /// </summary>
+    /// <returns>A <see cref="KApi.Query.Updated_since.Updated_sinceGetResponse"/></returns>
+    /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+    public static KApi.Query.Updated_since.Updated_sinceGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    {
+        _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+        return new KApi.Query.Updated_since.Updated_sinceGetResponse();
+    }
+    /// <summary>
+    /// The deserialization information for the current model
+    /// </summary>
+    /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+    public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+    {
+        return new Dictionary<string, Action<IParseNode>>
         {
-            AdditionalData = new Dictionary<string, object>();
-        }
-        /// <summary>
-        /// Creates a new instance of the appropriate class based on discriminator value
-        /// </summary>
-        /// <returns>A <see cref="KApi.Query.Updated_since.Updated_sinceGetResponse"/></returns>
-        /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static KApi.Query.Updated_since.Updated_sinceGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-        {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new KApi.Query.Updated_since.Updated_sinceGetResponse();
-        }
-        /// <summary>
-        /// The deserialization information for the current model
-        /// </summary>
-        /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-        {
-            return new Dictionary<string, Action<IParseNode>>
-            {
-                { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.QueryRestApi.Get.Get>(KClient.Models.QueryRestApi.Get.Get.CreateFromDiscriminatorValue)?.ToList(); } },
-            };
-        }
-        /// <summary>
-        /// Serializes information the current object
-        /// </summary>
-        /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public virtual void Serialize(ISerializationWriter writer)
-        {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<KClient.Models.QueryRestApi.Get.Get>("result", Result);
-            writer.WriteAdditionalData(AdditionalData);
-        }
+            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.QueryRestApi.Get.Get>(KClient.Models.QueryRestApi.Get.Get.CreateFromDiscriminatorValue)?.ToList(); } },
+        };
+    }
+    /// <summary>
+    /// Serializes information the current object
+    /// </summary>
+    /// <param name="writer">Serialization writer to use to serialize this model</param>
+    public virtual void Serialize(ISerializationWriter writer)
+    {
+        _ = writer ?? throw new ArgumentNullException(nameof(writer));
+        writer.WriteCollectionOfObjectValues<KClient.Models.QueryRestApi.Get.Get>("result", Result);
+        writer.WriteAdditionalData(AdditionalData);
     }
 }
