@@ -17,9 +17,9 @@ public partial class V1RequestBuilder : BaseRequestBuilder
         get => new KApi.Advanced_data_type.Advanced_data_typeRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The annotation_layer property</summary>
-    public KApi.Annotation_layer.Annotation_layerRequestBuilder Annotation_layer
+    public KApi.AnnotationLayer.Annotation_layerRequestBuilder Annotation_layer
     {
-        get => new KApi.Annotation_layer.Annotation_layerRequestBuilder(PathParameters, RequestAdapter);
+        get => new KApi.AnnotationLayer.Annotation_layerRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The assets property</summary>
     public KApi.Assets.AssetsRequestBuilder Assets
