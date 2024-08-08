@@ -2,18 +2,9 @@
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column;
-using KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric;
-using KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh;
-using KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Related_objects;
-using KiotaSupersetAPI.Client.Models;
-using KiotaSupersetAPI.Client.Models.DatasetRestApi;
 using Microsoft.Kiota.Abstractions;
-using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;

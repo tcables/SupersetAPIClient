@@ -2,17 +2,9 @@
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using KiotaSupersetAPI.Client.Api.V1.Report._info;
-using KiotaSupersetAPI.Client.Api.V1.Report.Item;
-using KiotaSupersetAPI.Client.Api.V1.Report.Related;
-using KiotaSupersetAPI.Client.Models;
-using KiotaSupersetAPI.Client.Models.ReportScheduleRestApi;
 using Microsoft.Kiota.Abstractions;
-using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;

@@ -2,18 +2,9 @@
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using KiotaSupersetAPI.Client.Api.V1.Query.Distinct;
-using KiotaSupersetAPI.Client.Api.V1.Query.Item;
-using KiotaSupersetAPI.Client.Api.V1.Query.Related;
-using KiotaSupersetAPI.Client.Api.V1.Query.Stop;
-using KiotaSupersetAPI.Client.Api.V1.Query.Updated_since;
-using KiotaSupersetAPI.Client.Models;
 using Microsoft.Kiota.Abstractions;
-using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
 using KClient = KiotaSupersetAPI.Client;

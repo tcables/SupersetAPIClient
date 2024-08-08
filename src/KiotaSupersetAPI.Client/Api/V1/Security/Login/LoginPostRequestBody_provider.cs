@@ -1,10 +1,5 @@
-
-using System;
 using System.CodeDom.Compiler;
-using System.Linq;
 using System.Runtime.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Security.Login;
 

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.CodeDom.Compiler;
-using System.CodeDom.Compiler;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Linq;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Utilities;
 

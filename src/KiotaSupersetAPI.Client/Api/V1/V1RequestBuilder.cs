@@ -1,38 +1,7 @@
-
-using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using KiotaSupersetAPI.Client.Api.V1.Advanced_data_type;
-using KiotaSupersetAPI.Client.Api.V1.Annotation_layer;
-using KiotaSupersetAPI.Client.Api.V1.Assets;
-using KiotaSupersetAPI.Client.Api.V1.Async_event;
-using KiotaSupersetAPI.Client.Api.V1.Available_domains;
-using KiotaSupersetAPI.Client.Api.V1.Cachekey;
-using KiotaSupersetAPI.Client.Api.V1.Chart;
-using KiotaSupersetAPI.Client.Api.V1.Css_template;
-using KiotaSupersetAPI.Client.Api.V1.Dashboard;
-using KiotaSupersetAPI.Client.Api.V1.Database;
-using KiotaSupersetAPI.Client.Api.V1.Dataset;
-using KiotaSupersetAPI.Client.Api.V1.Datasource;
-using KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard;
-using KiotaSupersetAPI.Client.Api.V1.Explore;
-using KiotaSupersetAPI.Client.Api.V1.Log;
-using KiotaSupersetAPI.Client.Api.V1.Me;
-using KiotaSupersetAPI.Client.Api.V1.Menu;
-using KiotaSupersetAPI.Client.Api.V1.Query;
-using KiotaSupersetAPI.Client.Api.V1.Report;
-using KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity;
-using KiotaSupersetAPI.Client.Api.V1.Saved_query;
-using KiotaSupersetAPI.Client.Api.V1.Security;
-using KiotaSupersetAPI.Client.Api.V1.Sqllab;
-using KiotaSupersetAPI.Client.Api.V1.Tag;
 using Microsoft.Kiota.Abstractions;
-using Microsoft.Kiota.Abstractions.Extensions;
 using KApi = KiotaSupersetAPI.Client.Api.V1;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Api.V1;
 
