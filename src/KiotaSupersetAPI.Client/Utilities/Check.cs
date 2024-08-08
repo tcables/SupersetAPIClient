@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.CodeDom.Compiler;
 
+using System.Linq;
+
 namespace KiotaSupersetAPI.Client.Utilities;
 
 [DebuggerStepThrough]
