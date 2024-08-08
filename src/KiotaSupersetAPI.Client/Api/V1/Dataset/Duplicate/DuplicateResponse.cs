@@ -8,6 +8,7 @@ using System.CodeDom.Compiler;
 using System.Linq;
 
 using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
 {
