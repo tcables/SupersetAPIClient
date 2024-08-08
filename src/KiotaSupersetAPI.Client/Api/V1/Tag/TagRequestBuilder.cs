@@ -94,15 +94,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tag404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Tag422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tag500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.TagDeleteResponse?> DeleteAsTagDeleteResponseAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.TagDeleteResponse> DeleteAsTagDeleteResponseAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -126,15 +120,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tag422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tag500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsTagDeleteResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.TagResponse?> DeleteAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.TagResponse> DeleteAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -156,15 +144,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tag401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Tag422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tag500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.TagGetResponse?> GetAsTagGetResponseAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.TagGetResponse> GetAsTagGetResponseAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -186,15 +168,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tag422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tag500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsTagGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.TagResponse?> GetAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.TagResponse> GetAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -216,15 +192,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tag401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Tag422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tag500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.TagPostResponse?> PostAsTagPostResponseAsync(KClient.Models.TagRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.TagPostResponse> PostAsTagPostResponseAsync(KClient.Models.TagRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -248,15 +218,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tag422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tag500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsTagPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.TagResponse?> PostAsync(KClient.Models.TagRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.TagResponse> PostAsync(KClient.Models.TagRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -273,15 +237,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -292,15 +250,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderGetQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -312,15 +264,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToPostRequestInformation(KClient.Models.TagRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToPostRequestInformation(KClient.Models.TagRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
@@ -343,15 +289,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     [GeneratedCode("Kiota", "1.16.0")]
     public partial class TagRequestBuilderDeleteQueryParameters
     {
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        [QueryParameter("q")]
-        public string? Q { get; set; }
-#nullable restore
-#else
         [QueryParameter("q")]
         public string Q { get; set; }
-#endif
+
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.
@@ -367,15 +307,9 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     [GeneratedCode("Kiota", "1.16.0")]
     public partial class TagRequestBuilderGetQueryParameters
     {
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        [QueryParameter("q")]
-        public string? Q { get; set; }
-#nullable restore
-#else
         [QueryParameter("q")]
         public string Q { get; set; }
-#endif
+
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

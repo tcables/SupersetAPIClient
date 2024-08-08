@@ -16,55 +16,25 @@ public partial class QueryExecutionResponseSchema : IAdditionalDataHolder, IPars
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.QueryExecutionResponseSchema_columns>? Columns { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.QueryExecutionResponseSchema_columns> Columns { get; set; }
-#endif
+
     /// <summary>The data property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.QueryExecutionResponseSchema_data>? Data { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.QueryExecutionResponseSchema_data> Data { get; set; }
-#endif
+
     /// <summary>The expanded_columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.QueryExecutionResponseSchema_expanded_columns>? ExpandedColumns { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.QueryExecutionResponseSchema_expanded_columns> ExpandedColumns { get; set; }
-#endif
+
     /// <summary>The query property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.QueryResult? Query { get; set; }
-#nullable restore
-#else
     public KClient.Models.QueryResult Query { get; set; }
-#endif
+
     /// <summary>The query_id property</summary>
     public int? QueryId { get; set; }
     /// <summary>The selected_columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.QueryExecutionResponseSchema_selected_columns>? SelectedColumns { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.QueryExecutionResponseSchema_selected_columns> SelectedColumns { get; set; }
-#endif
+
     /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Status { get; set; }
-#nullable restore
-#else
     public string Status { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.QueryExecutionResponseSchema"/> and sets the default values.
     /// </summary>

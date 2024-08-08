@@ -17,21 +17,11 @@ public partial class ReportRecipients : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The recipient_config_json property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? RecipientConfigJson { get; set; }
-#nullable restore
-#else
     public string RecipientConfigJson { get; set; }
-#endif
+
     /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Type { get; set; }
-#nullable restore
-#else
     public string Type { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ReportScheduleRestApi.Get.ReportRecipients"/> and sets the default values.
     /// </summary>

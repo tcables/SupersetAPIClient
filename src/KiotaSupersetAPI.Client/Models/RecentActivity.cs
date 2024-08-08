@@ -13,49 +13,24 @@ public partial class RecentActivity : IAdditionalDataHolder, IParsable
 #pragma warning restore CS1591
 {
     /// <summary>Action taken describing type of activity</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Action { get; set; }
-#nullable restore
-#else
     public string Action { get; set; }
-#endif
+
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Title of item</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ItemTitle { get; set; }
-#nullable restore
-#else
     public string ItemTitle { get; set; }
-#endif
+
     /// <summary>Type of item, e.g. slice or dashboard</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ItemType { get; set; }
-#nullable restore
-#else
     public string ItemType { get; set; }
-#endif
+
     /// <summary>URL to item</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ItemUrl { get; set; }
-#nullable restore
-#else
     public string ItemUrl { get; set; }
-#endif
+
     /// <summary>Time of activity, in epoch milliseconds</summary>
     public double? Time { get; set; }
     /// <summary>Human-readable description of how long ago activity took place.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TimeDeltaHumanized { get; set; }
-#nullable restore
-#else
     public string TimeDeltaHumanized { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.RecentActivity"/> and sets the default values.
     /// </summary>

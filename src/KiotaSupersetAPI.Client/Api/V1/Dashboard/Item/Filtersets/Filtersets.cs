@@ -15,41 +15,21 @@ public partial class Filtersets : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>A description field of the filter set</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>metadata of the filter set</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? JsonMetadata { get; set; }
-#nullable restore
-#else
     public string JsonMetadata { get; set; }
-#endif
+
     /// <summary>Name of the Filter set</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>A description field of the filter set</summary>
     public int? OwnerId { get; set; }
     /// <summary>the Type of the owner ( Dashboard/User)</summary>
     public int? OwnerType { get; set; }
     /// <summary>JSON schema defining the needed parameters</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Parameters { get; set; }
-#nullable restore
-#else
     public UntypedNode Parameters { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Dashboard.Item.Filtersets.Filtersets"/> and sets the default values.
     /// </summary>

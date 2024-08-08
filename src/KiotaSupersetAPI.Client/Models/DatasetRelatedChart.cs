@@ -17,21 +17,11 @@ public partial class DatasetRelatedChart : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The slice_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SliceName { get; set; }
-#nullable restore
-#else
     public string SliceName { get; set; }
-#endif
+
     /// <summary>The viz_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? VizType { get; set; }
-#nullable restore
-#else
     public string VizType { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetRelatedChart"/> and sets the default values.
     /// </summary>

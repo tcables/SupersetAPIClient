@@ -17,129 +17,59 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Get_list.User? ChangedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Get_list.User ChangedBy { get; set; }
-#endif
+
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The changed_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The chart_id property</summary>
     public int? ChartId { get; set; }
     /// <summary>The created_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Get_list.User1? CreatedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Get_list.User1 CreatedBy { get; set; }
-#endif
+
     /// <summary>The created_on property</summary>
     public DateTimeOffset? CreatedOn { get; set; }
     /// <summary>The creation_method property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CreationMethod { get; set; }
-#nullable restore
-#else
     public string CreationMethod { get; set; }
-#endif
+
     /// <summary>The crontab property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Crontab { get; set; }
-#nullable restore
-#else
     public string Crontab { get; set; }
-#endif
+
     /// <summary>The crontab_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? CrontabHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode CrontabHumanized { get; private set; }
-#endif
+
     /// <summary>The dashboard_id property</summary>
     public int? DashboardId { get; set; }
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Extra { get; private set; }
-#nullable restore
-#else
     public UntypedNode Extra { get; private set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The last_eval_dttm property</summary>
     public DateTimeOffset? LastEvalDttm { get; set; }
     /// <summary>The last_state property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? LastState { get; set; }
-#nullable restore
-#else
     public string LastState { get; set; }
-#endif
+
     /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Get_list.User2? Owners { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Get_list.User2 Owners { get; set; }
-#endif
+
     /// <summary>The recipients property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients? Recipients { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Get_list.ReportRecipients Recipients { get; set; }
-#endif
+
     /// <summary>The timezone property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Timezone { get; set; }
-#nullable restore
-#else
     public string Timezone { get; set; }
-#endif
+
     /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Type { get; set; }
-#nullable restore
-#else
     public string Type { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ReportScheduleRestApi.Get_list.Get_list"/> and sets the default values.
     /// </summary>

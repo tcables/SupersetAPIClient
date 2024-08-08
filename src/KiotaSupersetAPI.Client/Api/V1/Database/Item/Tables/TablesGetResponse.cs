@@ -19,13 +19,8 @@ public partial class TablesGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>The count property</summary>
     public int? Count { get; set; }
     /// <summary>A List of tables for given database</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.DatabaseTablesResponse>? Result { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.DatabaseTablesResponse> Result { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Database.Item.Tables.TablesGetResponse"/> and sets the default values.
     /// </summary>

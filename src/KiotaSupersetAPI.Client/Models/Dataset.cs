@@ -18,239 +18,99 @@ public partial class Dataset : IAdditionalDataHolder, IParsable
     /// <summary>Duration (in seconds) of the caching timeout for this dataset.</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>Column formats.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Dataset_column_formats? ColumnFormats { get; set; }
-#nullable restore
-#else
     public KClient.Models.Dataset_column_formats ColumnFormats { get; set; }
-#endif
+
     /// <summary>Columns metadata.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.Dataset_columns>? Columns { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.Dataset_columns> Columns { get; set; }
-#endif
+
     /// <summary>Currency formats.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Dataset_currency_formats? CurrencyFormats { get; set; }
-#nullable restore
-#else
     public KClient.Models.Dataset_currency_formats CurrencyFormats { get; set; }
-#endif
+
     /// <summary>Database associated with the dataset.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Dataset_database? Database { get; set; }
-#nullable restore
-#else
     public KClient.Models.Dataset_database Database { get; set; }
-#endif
+
     /// <summary>Dataset name.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DatasourceName { get; set; }
-#nullable restore
-#else
     public string DatasourceName { get; set; }
-#endif
+
     /// <summary>Default endpoint for the dataset.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DefaultEndpoint { get; set; }
-#nullable restore
-#else
     public string DefaultEndpoint { get; set; }
-#endif
+
     /// <summary>Dataset description.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The URL for editing the dataset.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? EditUrl { get; set; }
-#nullable restore
-#else
     public string EditUrl { get; set; }
-#endif
+
     /// <summary>JSON string containing extra configuration elements.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Dataset_extra? Extra { get; set; }
-#nullable restore
-#else
     public KClient.Models.Dataset_extra Extra { get; set; }
-#endif
+
     /// <summary>Predicate used when fetching values from the dataset.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? FetchValuesPredicate { get; set; }
-#nullable restore
-#else
     public string FetchValuesPredicate { get; set; }
-#endif
+
     /// <summary>SELECT filter applied to the dataset.</summary>
     public bool? FilterSelect { get; set; }
     /// <summary>If the SELECT filter is enabled.</summary>
     public bool? FilterSelectEnabled { get; set; }
     /// <summary>Name of temporal column used for time filtering for SQL datasources. This field is deprecated, use `granularity` instead.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? GranularitySqla { get; set; }
-#nullable restore
-#else
     public UntypedNode GranularitySqla { get; set; }
-#endif
+
     /// <summary>Health check message.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? HealthCheckMessage { get; set; }
-#nullable restore
-#else
     public string HealthCheckMessage { get; set; }
-#endif
+
     /// <summary>Dataset ID.</summary>
     public int? Id { get; set; }
     /// <summary>If the dataset is a SQL Lab view.</summary>
     public bool? IsSqllabView { get; set; }
     /// <summary>The main temporal column.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? MainDttmCol { get; set; }
-#nullable restore
-#else
     public string MainDttmCol { get; set; }
-#endif
+
     /// <summary>Dataset metrics.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.Dataset_metrics>? Metrics { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.Dataset_metrics> Metrics { get; set; }
-#endif
+
     /// <summary>Dataset name.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>Dataset offset.</summary>
     public int? Offset { get; set; }
     /// <summary>List of order by columns.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? OrderByChoices { get; set; }
-#nullable restore
-#else
     public UntypedNode OrderByChoices { get; set; }
-#endif
+
     /// <summary>List of owners identifiers</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Owners { get; set; }
-#nullable restore
-#else
     public List<int?> Owners { get; set; }
-#endif
+
     /// <summary>Extra params for the dataset.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Dataset_params? Params { get; set; }
-#nullable restore
-#else
     public KClient.Models.Dataset_params Params { get; set; }
-#endif
+
     /// <summary>Permission expression.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Perm { get; set; }
-#nullable restore
-#else
     public string Perm { get; set; }
-#endif
+
     /// <summary>Dataset schema.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>Select all clause.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SelectStar { get; set; }
-#nullable restore
-#else
     public string SelectStar { get; set; }
-#endif
+
     /// <summary>A SQL statement that defines the dataset.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The name of the table associated with the dataset.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TableName { get; set; }
-#nullable restore
-#else
     public string TableName { get; set; }
-#endif
+
     /// <summary>Table template params.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Dataset_template_params? TemplateParams { get; set; }
-#nullable restore
-#else
     public KClient.Models.Dataset_template_params TemplateParams { get; set; }
-#endif
+
     /// <summary>List of temporal granularities supported by the dataset.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? TimeGrainSqla { get; set; }
-#nullable restore
-#else
     public UntypedNode TimeGrainSqla { get; set; }
-#endif
+
     /// <summary>Dataset type.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Type { get; set; }
-#nullable restore
-#else
     public string Type { get; set; }
-#endif
+
     /// <summary>Dataset unique identifier.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Uid { get; set; }
-#nullable restore
-#else
     public string Uid { get; set; }
-#endif
+
     /// <summary>Mapping from raw name to verbose name.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Dataset_verbose_map? VerboseMap { get; set; }
-#nullable restore
-#else
     public KClient.Models.Dataset_verbose_map VerboseMap { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.Dataset"/> and sets the default values.
     /// </summary>

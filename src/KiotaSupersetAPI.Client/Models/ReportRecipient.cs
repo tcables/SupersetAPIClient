@@ -15,13 +15,8 @@ public partial class ReportRecipient : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The recipient_config_json property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportRecipientConfigJSON? RecipientConfigJson { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportRecipientConfigJSON RecipientConfigJson { get; set; }
-#endif
+
     /// <summary>The recipient type, check spec for valid options</summary>
     public KClient.Models.ReportRecipient_type? Type { get; set; }
     /// <summary>

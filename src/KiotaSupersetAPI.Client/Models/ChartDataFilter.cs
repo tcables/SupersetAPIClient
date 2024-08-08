@@ -15,33 +15,18 @@ public partial class ChartDataFilter : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The column to filter by. Can be either a string (physical or saved expression) or an object (adhoc column)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Col { get; set; }
-#nullable restore
-#else
     public UntypedNode Col { get; set; }
-#endif
+
     /// <summary>Optional time grain for temporal filters</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Grain { get; set; }
-#nullable restore
-#else
     public string Grain { get; set; }
-#endif
+
     /// <summary>Indicates if the filter has been added by a filter component as opposed to being a part of the original query.</summary>
     public bool? IsExtra { get; set; }
     /// <summary>The comparison operator.</summary>
     public KClient.Models.ChartDataFilter_op? Op { get; set; }
     /// <summary>The value or values to compare against. Can be a string, integer, decimal, None or list, depending on the operator.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Val { get; set; }
-#nullable restore
-#else
     public UntypedNode Val { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ChartDataFilter"/> and sets the default values.
     /// </summary>

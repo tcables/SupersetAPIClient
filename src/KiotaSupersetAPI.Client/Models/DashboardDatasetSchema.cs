@@ -20,233 +20,98 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
     /// <summary>The cache_timeout property</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>The column_formats property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DashboardDatasetSchema_column_formats? ColumnFormats { get; set; }
-#nullable restore
-#else
     public KClient.Models.DashboardDatasetSchema_column_formats ColumnFormats { get; set; }
-#endif
+
     /// <summary>The columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.DashboardDatasetSchema_columns>? Columns { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.DashboardDatasetSchema_columns> Columns { get; set; }
-#endif
+
     /// <summary>The column_types property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? ColumnTypes { get; set; }
-#nullable restore
-#else
     public List<int?> ColumnTypes { get; set; }
-#endif
+
     /// <summary>The currency_formats property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DashboardDatasetSchema_currency_formats? CurrencyFormats { get; set; }
-#nullable restore
-#else
     public KClient.Models.DashboardDatasetSchema_currency_formats CurrencyFormats { get; set; }
-#endif
+
     /// <summary>The database property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Database? Database { get; set; }
-#nullable restore
-#else
     public KClient.Models.Database Database { get; set; }
-#endif
+
     /// <summary>The datasource_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DatasourceName { get; set; }
-#nullable restore
-#else
     public string DatasourceName { get; set; }
-#endif
+
     /// <summary>The default_endpoint property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DefaultEndpoint { get; set; }
-#nullable restore
-#else
     public string DefaultEndpoint { get; set; }
-#endif
+
     /// <summary>The edit_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? EditUrl { get; set; }
-#nullable restore
-#else
     public string EditUrl { get; set; }
-#endif
+
     /// <summary>The fetch_values_predicate property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? FetchValuesPredicate { get; set; }
-#nullable restore
-#else
     public string FetchValuesPredicate { get; set; }
-#endif
+
     /// <summary>The filter_select property</summary>
     public bool? FilterSelect { get; set; }
     /// <summary>The filter_select_enabled property</summary>
     public bool? FilterSelectEnabled { get; set; }
     /// <summary>The granularity_sqla property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? GranularitySqla { get; set; }
-#nullable restore
-#else
     public UntypedNode GranularitySqla { get; set; }
-#endif
+
     /// <summary>The health_check_message property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? HealthCheckMessage { get; set; }
-#nullable restore
-#else
     public string HealthCheckMessage { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The is_sqllab_view property</summary>
     public bool? IsSqllabView { get; set; }
     /// <summary>The main_dttm_col property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? MainDttmCol { get; set; }
-#nullable restore
-#else
     public string MainDttmCol { get; set; }
-#endif
+
     /// <summary>The metrics property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.DashboardDatasetSchema_metrics>? Metrics { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.DashboardDatasetSchema_metrics> Metrics { get; set; }
-#endif
+
     /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>The normalize_columns property</summary>
     public bool? NormalizeColumns { get; set; }
     /// <summary>The offset property</summary>
     public int? Offset { get; set; }
     /// <summary>The order_by_choices property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? OrderByChoices { get; set; }
-#nullable restore
-#else
     public UntypedNode OrderByChoices { get; set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.DashboardDatasetSchema_owners>? Owners { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.DashboardDatasetSchema_owners> Owners { get; set; }
-#endif
+
     /// <summary>The params property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Params { get; set; }
-#nullable restore
-#else
     public string Params { get; set; }
-#endif
+
     /// <summary>The perm property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Perm { get; set; }
-#nullable restore
-#else
     public string Perm { get; set; }
-#endif
+
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The select_star property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SelectStar { get; set; }
-#nullable restore
-#else
     public string SelectStar { get; set; }
-#endif
+
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The table_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TableName { get; set; }
-#nullable restore
-#else
     public string TableName { get; set; }
-#endif
+
     /// <summary>The template_params property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TemplateParams { get; set; }
-#nullable restore
-#else
     public string TemplateParams { get; set; }
-#endif
+
     /// <summary>The time_grain_sqla property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? TimeGrainSqla { get; set; }
-#nullable restore
-#else
     public UntypedNode TimeGrainSqla { get; set; }
-#endif
+
     /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Type { get; set; }
-#nullable restore
-#else
     public string Type { get; set; }
-#endif
+
     /// <summary>The uid property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Uid { get; set; }
-#nullable restore
-#else
     public string Uid { get; set; }
-#endif
+
     /// <summary>The verbose_map property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DashboardDatasetSchema_verbose_map? VerboseMap { get; set; }
-#nullable restore
-#else
     public KClient.Models.DashboardDatasetSchema_verbose_map VerboseMap { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DashboardDatasetSchema"/> and sets the default values.
     /// </summary>

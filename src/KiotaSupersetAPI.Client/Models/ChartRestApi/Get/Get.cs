@@ -17,113 +17,48 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The cache_timeout property</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>The certification_details property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertificationDetails { get; set; }
-#nullable restore
-#else
     public string CertificationDetails { get; set; }
-#endif
+
     /// <summary>The certified_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertifiedBy { get; set; }
-#nullable restore
-#else
     public string CertifiedBy { get; set; }
-#endif
+
     /// <summary>The changed_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The dashboards property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get.Dashboard? Dashboards { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get.Dashboard Dashboards { get; set; }
-#endif
+
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The is_managed_externally property</summary>
     public bool? IsManagedExternally { get; set; }
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get.User? Owners { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get.User Owners { get; set; }
-#endif
+
     /// <summary>The params property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Params { get; set; }
-#nullable restore
-#else
     public string Params { get; set; }
-#endif
+
     /// <summary>The query_context property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? QueryContext { get; set; }
-#nullable restore
-#else
     public string QueryContext { get; set; }
-#endif
+
     /// <summary>The slice_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SliceName { get; set; }
-#nullable restore
-#else
     public string SliceName { get; set; }
-#endif
+
     /// <summary>The tags property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get.Tag? Tags { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get.Tag Tags { get; set; }
-#endif
+
     /// <summary>The thumbnail_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ThumbnailUrl { get; private set; }
-#nullable restore
-#else
     public UntypedNode ThumbnailUrl { get; private set; }
-#endif
+
     /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Url { get; private set; }
-#nullable restore
-#else
     public UntypedNode Url { get; private set; }
-#endif
+
     /// <summary>The viz_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? VizType { get; set; }
-#nullable restore
-#else
     public string VizType { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ChartRestApi.Get.Get"/> and sets the default values.
     /// </summary>

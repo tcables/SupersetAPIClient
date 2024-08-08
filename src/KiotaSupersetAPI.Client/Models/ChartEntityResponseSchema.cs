@@ -17,65 +17,30 @@ public partial class ChartEntityResponseSchema : IAdditionalDataHolder, IParsabl
     /// <summary>Duration (in seconds) of the caching timeout for this chart. Note this defaults to the datasource/table timeout if undefined.</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>Details of the certification</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertificationDetails { get; set; }
-#nullable restore
-#else
     public string CertificationDetails { get; set; }
-#endif
+
     /// <summary>Person or group that has certified this chart</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertifiedBy { get; set; }
-#nullable restore
-#else
     public string CertifiedBy { get; set; }
-#endif
+
     /// <summary>The ISO date that the chart was last changed.</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>A description of the chart propose.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>Sanitized HTML version of the chart description.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DescriptionMarkeddown { get; set; }
-#nullable restore
-#else
     public string DescriptionMarkeddown { get; set; }
-#endif
+
     /// <summary>Form data from the Explore controls used to form the chart&apos;s data query.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartEntityResponseSchema_form_data? FormData { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartEntityResponseSchema_form_data FormData { get; set; }
-#endif
+
     /// <summary>The id of the chart.</summary>
     public int? Id { get; set; }
     /// <summary>The name of the chart.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SliceName { get; set; }
-#nullable restore
-#else
     public string SliceName { get; set; }
-#endif
+
     /// <summary>The URL of the chart.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SliceUrl { get; set; }
-#nullable restore
-#else
     public string SliceUrl { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ChartEntityResponseSchema"/> and sets the default values.
     /// </summary>

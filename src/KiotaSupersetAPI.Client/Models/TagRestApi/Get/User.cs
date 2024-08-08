@@ -21,53 +21,28 @@ public partial class User : IAdditionalDataHolder, IParsable
     /// <summary>The created_on property</summary>
     public DateTimeOffset? CreatedOn { get; set; }
     /// <summary>The email property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Email { get; set; }
-#nullable restore
-#else
     public string Email { get; set; }
-#endif
+
     /// <summary>The fail_login_count property</summary>
     public int? FailLoginCount { get; set; }
     /// <summary>The first_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? FirstName { get; set; }
-#nullable restore
-#else
     public string FirstName { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The last_login property</summary>
     public DateTimeOffset? LastLogin { get; set; }
     /// <summary>The last_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? LastName { get; set; }
-#nullable restore
-#else
     public string LastName { get; set; }
-#endif
+
     /// <summary>The login_count property</summary>
     public int? LoginCount { get; set; }
     /// <summary>The password property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Password { get; set; }
-#nullable restore
-#else
     public string Password { get; set; }
-#endif
+
     /// <summary>The username property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Username { get; set; }
-#nullable restore
-#else
     public string Username { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.TagRestApi.Get.User"/> and sets the default values.
     /// </summary>

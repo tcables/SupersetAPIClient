@@ -15,49 +15,24 @@ public partial class TableColumn : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The advanced_data_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? AdvancedDataType { get; set; }
-#nullable restore
-#else
     public string AdvancedDataType { get; set; }
-#endif
+
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The column_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ColumnName { get; set; }
-#nullable restore
-#else
     public string ColumnName { get; set; }
-#endif
+
     /// <summary>The created_on property</summary>
     public DateTimeOffset? CreatedOn { get; set; }
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The expression property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Expression { get; set; }
-#nullable restore
-#else
     public string Expression { get; set; }
-#endif
+
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Extra { get; set; }
-#nullable restore
-#else
     public string Extra { get; set; }
-#endif
+
     /// <summary>The filterable property</summary>
     public bool? Filterable { get; set; }
     /// <summary>The groupby property</summary>
@@ -69,39 +44,19 @@ public partial class TableColumn : IAdditionalDataHolder, IParsable
     /// <summary>The is_dttm property</summary>
     public bool? IsDttm { get; set; }
     /// <summary>The python_date_format property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? PythonDateFormat { get; set; }
-#nullable restore
-#else
     public string PythonDateFormat { get; set; }
-#endif
+
     /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Type { get; set; }
-#nullable restore
-#else
     public string Type { get; set; }
-#endif
+
     /// <summary>The type_generic property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? TypeGeneric { get; private set; }
-#nullable restore
-#else
     public UntypedNode TypeGeneric { get; private set; }
-#endif
+
     /// <summary>The uuid property</summary>
     public Guid? Uuid { get; set; }
     /// <summary>The verbose_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? VerboseName { get; set; }
-#nullable restore
-#else
     public string VerboseName { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetRestApi.Get.TableColumn"/> and sets the default values.
     /// </summary>

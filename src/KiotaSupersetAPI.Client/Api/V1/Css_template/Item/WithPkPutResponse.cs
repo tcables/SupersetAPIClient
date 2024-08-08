@@ -16,13 +16,8 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.CssTemplateRestApi.Put? Result { get; set; }
-#nullable restore
-#else
     public KClient.Models.CssTemplateRestApi.Put Result { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Css_template.Item.WithPkPutResponse"/> and sets the default values.
     /// </summary>

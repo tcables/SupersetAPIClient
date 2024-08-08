@@ -17,47 +17,22 @@ public partial class DatabaseSSHTunnel : IAdditionalDataHolder, IParsable
     /// <summary>SSH Tunnel ID (for updates)</summary>
     public int? Id { get; set; }
     /// <summary>The password property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Password { get; set; }
-#nullable restore
-#else
     public string Password { get; set; }
-#endif
+
     /// <summary>The private_key property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? PrivateKey { get; set; }
-#nullable restore
-#else
     public string PrivateKey { get; set; }
-#endif
+
     /// <summary>The private_key_password property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? PrivateKeyPassword { get; set; }
-#nullable restore
-#else
     public string PrivateKeyPassword { get; set; }
-#endif
+
     /// <summary>The server_address property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ServerAddress { get; set; }
-#nullable restore
-#else
     public string ServerAddress { get; set; }
-#endif
+
     /// <summary>The server_port property</summary>
     public int? ServerPort { get; set; }
     /// <summary>The username property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Username { get; set; }
-#nullable restore
-#else
     public string Username { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatabaseSSHTunnel"/> and sets the default values.
     /// </summary>

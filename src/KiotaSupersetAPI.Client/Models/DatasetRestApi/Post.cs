@@ -20,49 +20,24 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>The database property</summary>
     public int? Database { get; set; }
     /// <summary>The external_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ExternalUrl { get; set; }
-#nullable restore
-#else
     public string ExternalUrl { get; set; }
-#endif
+
     /// <summary>The is_managed_externally property</summary>
     public bool? IsManagedExternally { get; set; }
     /// <summary>The normalize_columns property</summary>
     public bool? NormalizeColumns { get; set; }
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Owners { get; set; }
-#nullable restore
-#else
     public List<int?> Owners { get; set; }
-#endif
+
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The table_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TableName { get; set; }
-#nullable restore
-#else
     public string TableName { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetRestApi.Post"/> and sets the default values.
     /// </summary>

@@ -17,71 +17,31 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The chart property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Get.Slice? Chart { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Get.Slice Chart { get; set; }
-#endif
+
     /// <summary>The context_markdown property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ContextMarkdown { get; set; }
-#nullable restore
-#else
     public string ContextMarkdown { get; set; }
-#endif
+
     /// <summary>The creation_method property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CreationMethod { get; set; }
-#nullable restore
-#else
     public string CreationMethod { get; set; }
-#endif
+
     /// <summary>The crontab property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Crontab { get; set; }
-#nullable restore
-#else
     public string Crontab { get; set; }
-#endif
+
     /// <summary>The custom_width property</summary>
     public int? CustomWidth { get; set; }
     /// <summary>The dashboard property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Get.Dashboard? Dashboard { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Get.Dashboard Dashboard { get; set; }
-#endif
+
     /// <summary>The database property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Get.Database? Database { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Get.Database Database { get; set; }
-#endif
+
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Extra { get; private set; }
-#nullable restore
-#else
     public UntypedNode Extra { get; private set; }
-#endif
+
     /// <summary>The force_screenshot property</summary>
     public bool? ForceScreenshot { get; set; }
     /// <summary>The grace_period property</summary>
@@ -91,97 +51,42 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The last_eval_dttm property</summary>
     public DateTimeOffset? LastEvalDttm { get; set; }
     /// <summary>The last_state property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? LastState { get; set; }
-#nullable restore
-#else
     public string LastState { get; set; }
-#endif
+
     /// <summary>The last_value property</summary>
     public double? LastValue { get; set; }
     /// <summary>The last_value_row_json property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? LastValueRowJson { get; set; }
-#nullable restore
-#else
     public string LastValueRowJson { get; set; }
-#endif
+
     /// <summary>The log_retention property</summary>
     public int? LogRetention { get; set; }
     /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Get.User? Owners { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Get.User Owners { get; set; }
-#endif
+
     /// <summary>The recipients property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Get.ReportRecipients? Recipients { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Get.ReportRecipients Recipients { get; set; }
-#endif
+
     /// <summary>The report_format property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ReportFormat { get; set; }
-#nullable restore
-#else
     public string ReportFormat { get; set; }
-#endif
+
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The timezone property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Timezone { get; set; }
-#nullable restore
-#else
     public string Timezone { get; set; }
-#endif
+
     /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Type { get; set; }
-#nullable restore
-#else
     public string Type { get; set; }
-#endif
+
     /// <summary>The validator_config_json property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ValidatorConfigJson { get; set; }
-#nullable restore
-#else
     public string ValidatorConfigJson { get; set; }
-#endif
+
     /// <summary>The validator_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ValidatorType { get; set; }
-#nullable restore
-#else
     public string ValidatorType { get; set; }
-#endif
+
     /// <summary>The working_timeout property</summary>
     public int? WorkingTimeout { get; set; }
     /// <summary>

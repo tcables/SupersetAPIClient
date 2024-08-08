@@ -16,57 +16,27 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>clause_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Clause { get; set; }
-#nullable restore
-#else
     public string Clause { get; set; }
-#endif
+
     /// <summary>description_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>filter_type_description</summary>
     public KClient.Models.RLSRestApi.Get_filter_type? FilterType { get; set; }
     /// <summary>group_key_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? GroupKey { get; set; }
-#nullable restore
-#else
     public string GroupKey { get; set; }
-#endif
+
     /// <summary>id_description</summary>
     public int? Id { get; set; }
     /// <summary>name_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>The roles property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.Roles1>? Roles { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.Roles1> Roles { get; set; }
-#endif
+
     /// <summary>The tables property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.Tables>? Tables { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.Tables> Tables { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.RLSRestApi.Get"/> and sets the default values.
     /// </summary>

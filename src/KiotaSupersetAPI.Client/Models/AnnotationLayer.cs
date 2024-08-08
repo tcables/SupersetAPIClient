@@ -18,49 +18,24 @@ public partial class AnnotationLayer : IAdditionalDataHolder, IParsable
     /// <summary>Type of annotation layer</summary>
     public KClient.Models.AnnotationLayer_annotationType? AnnotationType { get; set; }
     /// <summary>Layer color</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Color { get; set; }
-#nullable restore
-#else
     public string Color { get; set; }
-#endif
+
     /// <summary>Columns to use as the description. If none are provided, all will be shown.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? DescriptionColumns { get; set; }
-#nullable restore
-#else
     public List<string> DescriptionColumns { get; set; }
-#endif
+
     /// <summary>Should line be hidden. Only applies to line annotations</summary>
     public bool? HideLine { get; set; }
     /// <summary>Column containing end of interval. Only applies to interval layers</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? IntervalEndColumn { get; set; }
-#nullable restore
-#else
     public string IntervalEndColumn { get; set; }
-#endif
+
     /// <summary>Name of layer</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>Opacity of layer</summary>
     public KClient.Models.AnnotationLayer_opacity? Opacity { get; set; }
     /// <summary>which properties should be overridable</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.AnnotationLayer_overrides? Overrides { get; set; }
-#nullable restore
-#else
     public KClient.Models.AnnotationLayer_overrides Overrides { get; set; }
-#endif
+
     /// <summary>Should the layer be shown</summary>
     public bool? Show { get; set; }
     /// <summary>Should the label always be shown</summary>
@@ -72,29 +47,14 @@ public partial class AnnotationLayer : IAdditionalDataHolder, IParsable
     /// <summary>Line style. Only applies to time-series annotations</summary>
     public KClient.Models.AnnotationLayer_style? Style { get; set; }
     /// <summary>Column with event date or interval start date</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TimeColumn { get; set; }
-#nullable restore
-#else
     public string TimeColumn { get; set; }
-#endif
+
     /// <summary>Column with title</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TitleColumn { get; set; }
-#nullable restore
-#else
     public string TitleColumn { get; set; }
-#endif
+
     /// <summary>For formula annotations, this contains the formula. For other types, this is the primary key of the source object.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Value { get; set; }
-#nullable restore
-#else
     public UntypedNode Value { get; set; }
-#endif
+
     /// <summary>Width of annotation line</summary>
     public double? Width { get; set; }
     /// <summary>

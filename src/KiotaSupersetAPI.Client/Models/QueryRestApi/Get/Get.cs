@@ -17,41 +17,21 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The client_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ClientId { get; set; }
-#nullable restore
-#else
     public string ClientId { get; set; }
-#endif
+
     /// <summary>The database property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.QueryRestApi.Get.Database? Database { get; set; }
-#nullable restore
-#else
     public KClient.Models.QueryRestApi.Get.Database Database { get; set; }
-#endif
+
     /// <summary>The end_result_backend_time property</summary>
     public double? EndResultBackendTime { get; set; }
     /// <summary>The end_time property</summary>
     public double? EndTime { get; set; }
     /// <summary>The error_message property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ErrorMessage { get; set; }
-#nullable restore
-#else
     public string ErrorMessage { get; set; }
-#endif
+
     /// <summary>The executed_sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ExecutedSql { get; set; }
-#nullable restore
-#else
     public string ExecutedSql { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The limit property</summary>
@@ -59,95 +39,45 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The progress property</summary>
     public int? Progress { get; set; }
     /// <summary>The results_key property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ResultsKey { get; set; }
-#nullable restore
-#else
     public string ResultsKey { get; set; }
-#endif
+
     /// <summary>The rows property</summary>
     public int? Rows { get; set; }
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The select_as_cta property</summary>
     public bool? SelectAsCta { get; set; }
     /// <summary>The select_as_cta_used property</summary>
     public bool? SelectAsCtaUsed { get; set; }
     /// <summary>The select_sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SelectSql { get; set; }
-#nullable restore
-#else
     public string SelectSql { get; set; }
-#endif
+
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The sql_editor_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SqlEditorId { get; set; }
-#nullable restore
-#else
     public string SqlEditorId { get; set; }
-#endif
+
     /// <summary>The start_running_time property</summary>
     public double? StartRunningTime { get; set; }
     /// <summary>The start_time property</summary>
     public double? StartTime { get; set; }
     /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Status { get; set; }
-#nullable restore
-#else
     public string Status { get; set; }
-#endif
+
     /// <summary>The tab_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TabName { get; set; }
-#nullable restore
-#else
     public string TabName { get; set; }
-#endif
+
     /// <summary>The tmp_schema_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TmpSchemaName { get; set; }
-#nullable restore
-#else
     public string TmpSchemaName { get; set; }
-#endif
+
     /// <summary>The tmp_table_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TmpTableName { get; set; }
-#nullable restore
-#else
     public string TmpTableName { get; set; }
-#endif
+
     /// <summary>The tracking_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? TrackingUrl { get; private set; }
-#nullable restore
-#else
     public UntypedNode TrackingUrl { get; private set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.QueryRestApi.Get.Get"/> and sets the default values.
     /// </summary>

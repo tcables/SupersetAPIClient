@@ -18,101 +18,46 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>Duration (in seconds) of the caching timeout for this chart. Note this defaults to the datasource/table timeout if undefined.</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>Details of the certification</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertificationDetails { get; set; }
-#nullable restore
-#else
     public string CertificationDetails { get; set; }
-#endif
+
     /// <summary>Person or group that has certified this chart</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertifiedBy { get; set; }
-#nullable restore
-#else
     public string CertifiedBy { get; set; }
-#endif
+
     /// <summary>The dashboards property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Dashboards { get; set; }
-#nullable restore
-#else
     public List<int?> Dashboards { get; set; }
-#endif
+
     /// <summary>The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasource_id` and `datasource_type`.</summary>
     public int? DatasourceId { get; set; }
     /// <summary>The datasource name.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DatasourceName { get; set; }
-#nullable restore
-#else
     public string DatasourceName { get; set; }
-#endif
+
     /// <summary>The type of dataset/datasource identified on `datasource_id`.</summary>
     public KClient.Models.ChartRestApi.Post_datasource_type? DatasourceType { get; set; }
     /// <summary>A description of the chart propose.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The external_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ExternalUrl { get; set; }
-#nullable restore
-#else
     public string ExternalUrl { get; set; }
-#endif
+
     /// <summary>The is_managed_externally property</summary>
     public bool? IsManagedExternally { get; set; }
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Owners { get; set; }
-#nullable restore
-#else
     public List<int?> Owners { get; set; }
-#endif
+
     /// <summary>Parameters are generated dynamically when clicking the save or overwrite button in the explore view. This JSON object for power users who may want to alter specific parameters.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Params { get; set; }
-#nullable restore
-#else
     public string Params { get; set; }
-#endif
+
     /// <summary>The query context represents the queries that need to run in order to generate the data the visualization, and in what format the data should be returned.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? QueryContext { get; set; }
-#nullable restore
-#else
     public string QueryContext { get; set; }
-#endif
+
     /// <summary>The query context generation represents whether the query_contextis user generated or not so that it does not update user modifiedstate.</summary>
     public bool? QueryContextGeneration { get; set; }
     /// <summary>The name of the chart.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SliceName { get; set; }
-#nullable restore
-#else
     public string SliceName { get; set; }
-#endif
+
     /// <summary>The type of chart visualization used.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? VizType { get; set; }
-#nullable restore
-#else
     public string VizType { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ChartRestApi.Post"/> and sets the default values.
     /// </summary>

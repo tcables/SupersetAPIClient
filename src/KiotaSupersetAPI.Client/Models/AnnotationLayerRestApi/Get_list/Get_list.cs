@@ -15,51 +15,26 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.AnnotationLayerRestApi.Get_list.User1? ChangedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.AnnotationLayerRestApi.Get_list.User1 ChangedBy { get; set; }
-#endif
+
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The changed_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The created_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.AnnotationLayerRestApi.Get_list.User? CreatedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.AnnotationLayerRestApi.Get_list.User CreatedBy { get; set; }
-#endif
+
     /// <summary>The created_on property</summary>
     public DateTimeOffset? CreatedOn { get; set; }
     /// <summary>The descr property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Descr { get; set; }
-#nullable restore
-#else
     public string Descr { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.AnnotationLayerRestApi.Get_list.Get_list"/> and sets the default values.
     /// </summary>

@@ -19,131 +19,56 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The cache_timeout property</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>The changed_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatasetRestApi.Get.User? ChangedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatasetRestApi.Get.User ChangedBy { get; set; }
-#endif
+
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The changed_on_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnHumanized { get; private set; }
-#endif
+
     /// <summary>The column_formats property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ColumnFormats { get; private set; }
-#nullable restore
-#else
     public UntypedNode ColumnFormats { get; private set; }
-#endif
+
     /// <summary>The columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatasetRestApi.Get.TableColumn? Columns { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatasetRestApi.Get.TableColumn Columns { get; set; }
-#endif
+
     /// <summary>The created_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatasetRestApi.Get.User1? CreatedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatasetRestApi.Get.User1 CreatedBy { get; set; }
-#endif
+
     /// <summary>The created_on property</summary>
     public DateTimeOffset? CreatedOn { get; set; }
     /// <summary>The created_on_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? CreatedOnHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode CreatedOnHumanized { get; private set; }
-#endif
+
     /// <summary>The currency_formats property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? CurrencyFormats { get; private set; }
-#nullable restore
-#else
     public UntypedNode CurrencyFormats { get; private set; }
-#endif
+
     /// <summary>The database property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatasetRestApi.Get.Database? Database { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatasetRestApi.Get.Database Database { get; set; }
-#endif
+
     /// <summary>The datasource_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? DatasourceName { get; private set; }
-#nullable restore
-#else
     public UntypedNode DatasourceName { get; private set; }
-#endif
+
     /// <summary>The datasource_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? DatasourceType { get; private set; }
-#nullable restore
-#else
     public UntypedNode DatasourceType { get; private set; }
-#endif
+
     /// <summary>The default_endpoint property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DefaultEndpoint { get; set; }
-#nullable restore
-#else
     public string DefaultEndpoint { get; set; }
-#endif
+
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Extra { get; set; }
-#nullable restore
-#else
     public string Extra { get; set; }
-#endif
+
     /// <summary>The fetch_values_predicate property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? FetchValuesPredicate { get; set; }
-#nullable restore
-#else
     public string FetchValuesPredicate { get; set; }
-#endif
+
     /// <summary>The filter_select_enabled property</summary>
     public bool? FilterSelectEnabled { get; set; }
     /// <summary>The granularity_sqla property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? GranularitySqla { get; private set; }
-#nullable restore
-#else
     public UntypedNode GranularitySqla { get; private set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The is_managed_externally property</summary>
@@ -151,129 +76,54 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The is_sqllab_view property</summary>
     public bool? IsSqllabView { get; set; }
     /// <summary>The kind property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Kind { get; private set; }
-#nullable restore
-#else
     public UntypedNode Kind { get; private set; }
-#endif
+
     /// <summary>The main_dttm_col property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? MainDttmCol { get; set; }
-#nullable restore
-#else
     public string MainDttmCol { get; set; }
-#endif
+
     /// <summary>The metrics property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatasetRestApi.Get.SqlMetric? Metrics { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatasetRestApi.Get.SqlMetric Metrics { get; set; }
-#endif
+
     /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Name { get; private set; }
-#nullable restore
-#else
     public UntypedNode Name { get; private set; }
-#endif
+
     /// <summary>The normalize_columns property</summary>
     public bool? NormalizeColumns { get; set; }
     /// <summary>The offset property</summary>
     public int? Offset { get; set; }
     /// <summary>The order_by_choices property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? OrderByChoices { get; private set; }
-#nullable restore
-#else
     public UntypedNode OrderByChoices { get; private set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatasetRestApi.Get.User2? Owners { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatasetRestApi.Get.User2 Owners { get; set; }
-#endif
+
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The select_star property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? SelectStar { get; private set; }
-#nullable restore
-#else
     public UntypedNode SelectStar { get; private set; }
-#endif
+
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The table_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TableName { get; set; }
-#nullable restore
-#else
     public string TableName { get; set; }
-#endif
+
     /// <summary>The template_params property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TemplateParams { get; set; }
-#nullable restore
-#else
     public string TemplateParams { get; set; }
-#endif
+
     /// <summary>The time_grain_sqla property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? TimeGrainSqla { get; private set; }
-#nullable restore
-#else
     public UntypedNode TimeGrainSqla { get; private set; }
-#endif
+
     /// <summary>The uid property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Uid { get; private set; }
-#nullable restore
-#else
     public UntypedNode Uid { get; private set; }
-#endif
+
     /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Url { get; private set; }
-#nullable restore
-#else
     public UntypedNode Url { get; private set; }
-#endif
+
     /// <summary>The verbose_map property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? VerboseMap { get; private set; }
-#nullable restore
-#else
     public UntypedNode VerboseMap { get; private set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetRestApi.Get.Get"/> and sets the default values.
     /// </summary>

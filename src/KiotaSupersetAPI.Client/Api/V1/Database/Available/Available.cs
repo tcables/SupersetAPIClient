@@ -16,63 +16,28 @@ public partial class Available : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Installed drivers for the engine</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? AvailableDrivers { get; set; }
-#nullable restore
-#else
     public List<string> AvailableDrivers { get; set; }
-#endif
+
     /// <summary>Default driver for the engine</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DefaultDriver { get; set; }
-#nullable restore
-#else
     public string DefaultDriver { get; set; }
-#endif
+
     /// <summary>Name of the SQLAlchemy engine</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Engine { get; set; }
-#nullable restore
-#else
     public string Engine { get; set; }
-#endif
+
     /// <summary>Dict with public properties form the DB Engine</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KApi.Database.Available.Available_engine_information? EngineInformation { get; set; }
-#nullable restore
-#else
     public KApi.Database.Available.Available_engine_information EngineInformation { get; set; }
-#endif
+
     /// <summary>Name of the database</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>JSON schema defining the needed parameters</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KApi.Database.Available.Available_parameters? Parameters { get; set; }
-#nullable restore
-#else
     public KApi.Database.Available.Available_parameters Parameters { get; set; }
-#endif
+
     /// <summary>Is the database preferred?</summary>
     public bool? Preferred { get; set; }
     /// <summary>Example placeholder for the SQLAlchemy URI</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SqlalchemyUriPlaceholder { get; set; }
-#nullable restore
-#else
     public string SqlalchemyUriPlaceholder { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Database.Available.Available"/> and sets the default values.
     /// </summary>

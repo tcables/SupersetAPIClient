@@ -15,31 +15,16 @@ public partial class Datasource : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Datasource name</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DatabaseName { get; set; }
-#nullable restore
-#else
     public string DatabaseName { get; set; }
-#endif
+
     /// <summary>The datasource name.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DatasourceName { get; set; }
-#nullable restore
-#else
     public string DatasourceName { get; set; }
-#endif
+
     /// <summary>The type of dataset/datasource identified on `datasource_id`.</summary>
     public KClient.Models.Datasource_datasource_type? DatasourceType { get; set; }
     /// <summary>Datasource schema</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.Datasource"/> and sets the default values.
     /// </summary>

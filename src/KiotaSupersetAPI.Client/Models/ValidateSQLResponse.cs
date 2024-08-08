@@ -19,13 +19,8 @@ public partial class ValidateSQLResponse : IAdditionalDataHolder, IParsable
     /// <summary>The line_number property</summary>
     public int? LineNumber { get; set; }
     /// <summary>The message property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Message { get; set; }
-#nullable restore
-#else
     public string Message { get; set; }
-#endif
+
     /// <summary>The start_column property</summary>
     public int? StartColumn { get; set; }
     /// <summary>

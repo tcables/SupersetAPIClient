@@ -13,23 +13,13 @@ public partial class LoginPostResponse : IAdditionalDataHolder, IParsable
 #pragma warning restore CS1591
 {
     /// <summary>The access_token property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? AccessToken { get; set; }
-#nullable restore
-#else
     public string AccessToken { get; set; }
-#endif
+
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The refresh_token property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? RefreshToken { get; set; }
-#nullable restore
-#else
     public string RefreshToken { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Security.Login.LoginPostResponse"/> and sets the default values.
     /// </summary>

@@ -17,23 +17,13 @@ public partial class QueryExecutionResponseSchema410Error_errors : IAdditionalDa
     /// <summary>The error_type property</summary>
     public KClient.Models.QueryExecutionResponseSchema410Error_errors_error_type? ErrorType { get; set; }
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.QueryExecutionResponseSchema410Error_errors_extra? Extra { get; set; }
-#nullable restore
-#else
     public KClient.Models.QueryExecutionResponseSchema410Error_errors_extra Extra { get; set; }
-#endif
+
     /// <summary>The level property</summary>
     public KClient.Models.QueryExecutionResponseSchema410Error_errors_level? Level { get; set; }
     /// <summary>The message property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Message { get; set; }
-#nullable restore
-#else
     public string Message { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.QueryExecutionResponseSchema410Error_errors"/> and sets the default values.
     /// </summary>

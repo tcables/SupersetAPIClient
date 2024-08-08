@@ -15,75 +15,35 @@ public partial class DatabaseValidateParametersSchema : IAdditionalDataHolder, I
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Gsheets specific column for managing label to sheet urls</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatabaseValidateParametersSchema_catalog? Catalog { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatabaseValidateParametersSchema_catalog Catalog { get; set; }
-#endif
+
     /// <summary>Configuration_method is used on the frontend to inform the backend whether to explode parameters or to provide only a sqlalchemy_uri.</summary>
     public KClient.Models.DatabaseValidateParametersSchema_configuration_method? ConfigurationMethod { get; set; }
     /// <summary>A database name to identify this connection.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DatabaseName { get; set; }
-#nullable restore
-#else
     public string DatabaseName { get; set; }
-#endif
+
     /// <summary>SQLAlchemy driver to use</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Driver { get; set; }
-#nullable restore
-#else
     public string Driver { get; set; }
-#endif
+
     /// <summary>SQLAlchemy engine to use</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Engine { get; set; }
-#nullable restore
-#else
     public string Engine { get; set; }
-#endif
+
     /// <summary>&lt;p&gt;JSON string containing extra configuration elements.&lt;br&gt;1. The &lt;code&gt;engine_params&lt;/code&gt; object gets unpacked into the &lt;a href=&quot;https://docs.sqlalchemy.org/en/latest/core/engines.html#sqlalchemy.create_engine&quot; rel=&quot;noopener noreferrer&quot;&gt;sqlalchemy.create_engine&lt;/a&gt; call, while the &lt;code&gt;metadata_params&lt;/code&gt; gets unpacked into the &lt;a href=&quot;https://docs.sqlalchemy.org/en/rel_1_0/core/metadata.html#sqlalchemy.schema.MetaData&quot; rel=&quot;noopener noreferrer&quot;&gt;sqlalchemy.MetaData&lt;/a&gt; call.&lt;br&gt;2. The &lt;code&gt;metadata_cache_timeout&lt;/code&gt; is a cache timeout setting in seconds for metadata fetch of this database. Specify it as &lt;strong&gt;&quot;metadata_cache_timeout&quot;: {&quot;schema_cache_timeout&quot;: 600, &quot;table_cache_timeout&quot;: 600}&lt;/strong&gt;. If unset, cache will not be enabled for the functionality. A timeout of 0 indicates that the cache never expires.&lt;br&gt;3. The &lt;code&gt;schemas_allowed_for_file_upload&lt;/code&gt; is a comma separated list of schemas that CSVs are allowed to upload to. Specify it as &lt;strong&gt;&quot;schemas_allowed_for_file_upload&quot;: [&quot;public&quot;, &quot;csv_upload&quot;]&lt;/strong&gt;. If database flavor does not support schema or any schema is allowed to be accessed, just leave the list empty&lt;br&gt;4. The &lt;code&gt;version&lt;/code&gt; field is a string specifying the this db&apos;s version. This should be used with Presto DBs so that the syntax is correct&lt;br&gt;5. The &lt;code&gt;allows_virtual_table_explore&lt;/code&gt; field is a boolean specifying whether or not the Explore button in SQL Lab results is shown.&lt;br&gt;6. The &lt;code&gt;disable_data_preview&lt;/code&gt; field is a boolean specifying whether or not data preview queries will be run when fetching table metadata in SQL Lab.&lt;/p&gt;</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Extra { get; set; }
-#nullable restore
-#else
     public string Extra { get; set; }
-#endif
+
     /// <summary>Database ID (for updates)</summary>
     public int? Id { get; set; }
     /// <summary>If Presto, all the queries in SQL Lab are going to be executed as the currently logged on user who must have permission to run them.&lt;br/&gt;If Hive and hive.server2.enable.doAs is enabled, will run the queries as service account, but impersonate the currently logged on user via hive.server2.proxy.user property.</summary>
     public bool? ImpersonateUser { get; set; }
     /// <summary>&lt;p&gt;JSON string containing additional connection configuration.&lt;br&gt;This is used to provide connection information for systems like Hive, Presto, and BigQuery, which do not conform to the username:password syntax normally used by SQLAlchemy.&lt;/p&gt;</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? MaskedEncryptedExtra { get; set; }
-#nullable restore
-#else
     public string MaskedEncryptedExtra { get; set; }
-#endif
+
     /// <summary>DB-specific parameters for configuration</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatabaseValidateParametersSchema_parameters? Parameters { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatabaseValidateParametersSchema_parameters Parameters { get; set; }
-#endif
+
     /// <summary>&lt;p&gt;Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines.&lt;/p&gt;</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ServerCert { get; set; }
-#nullable restore
-#else
     public string ServerCert { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatabaseValidateParametersSchema"/> and sets the default values.
     /// </summary>

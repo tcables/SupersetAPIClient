@@ -40,15 +40,9 @@ public partial class MenuRequestBuilder : BaseRequestBuilder
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Menu401Error">When receiving a 401 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Menu.MenuGetResponse?> GetAsMenuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Menu.MenuGetResponse> GetAsMenuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -64,15 +58,9 @@ public partial class MenuRequestBuilder : BaseRequestBuilder
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Menu401Error">When receiving a 401 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsMenuGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Menu.MenuResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Menu.MenuResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -85,15 +73,9 @@ public partial class MenuRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");

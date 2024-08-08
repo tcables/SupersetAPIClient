@@ -15,47 +15,22 @@ public partial class ImportPostRequestBody : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>upload file (ZIP)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? FormData { get; set; }
-#nullable restore
-#else
     public string FormData { get; set; }
-#endif
+
     /// <summary>overwrite existing saved queries?</summary>
     public bool? Overwrite { get; set; }
     /// <summary>JSON map of passwords for each featured database in the ZIP file. If the ZIP includes a database config in the path `databases/MyDatabase.yaml`, the password should be provided in the following format: `{&quot;databases/MyDatabase.yaml&quot;: &quot;my_password&quot;}`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Passwords { get; set; }
-#nullable restore
-#else
     public string Passwords { get; set; }
-#endif
+
     /// <summary>JSON map of passwords for each ssh_tunnel associated to a featured database in the ZIP file. If the ZIP includes a ssh_tunnel config in the path `databases/MyDatabase.yaml`, the password should be provided in the following format: `{&quot;databases/MyDatabase.yaml&quot;: &quot;my_password&quot;}`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SshTunnelPasswords { get; set; }
-#nullable restore
-#else
     public string SshTunnelPasswords { get; set; }
-#endif
+
     /// <summary>JSON map of private_key_passwords for each ssh_tunnel associated to a featured database in the ZIP file. If the ZIP includes a ssh_tunnel config in the path `databases/MyDatabase.yaml`, the private_key should be provided in the following format: `{&quot;databases/MyDatabase.yaml&quot;: &quot;my_private_key_password&quot;}`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SshTunnelPrivateKeyPasswords { get; set; }
-#nullable restore
-#else
     public string SshTunnelPrivateKeyPasswords { get; set; }
-#endif
+
     /// <summary>JSON map of private_keys for each ssh_tunnel associated to a featured database in the ZIP file. If the ZIP includes a ssh_tunnel config in the path `databases/MyDatabase.yaml`, the private_key should be provided in the following format: `{&quot;databases/MyDatabase.yaml&quot;: &quot;my_private_key&quot;}`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SshTunnelPrivateKeys { get; set; }
-#nullable restore
-#else
     public string SshTunnelPrivateKeys { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Saved_query.Import.ImportPostRequestBody"/> and sets the default values.
     /// </summary>

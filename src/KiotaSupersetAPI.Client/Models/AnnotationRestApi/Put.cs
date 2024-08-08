@@ -17,29 +17,14 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>The annotation end date time</summary>
     public DateTimeOffset? EndDttm { get; set; }
     /// <summary>JSON metadata</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? JsonMetadata { get; set; }
-#nullable restore
-#else
     public string JsonMetadata { get; set; }
-#endif
+
     /// <summary>A long description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? LongDescr { get; set; }
-#nullable restore
-#else
     public string LongDescr { get; set; }
-#endif
+
     /// <summary>A short description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ShortDescr { get; set; }
-#nullable restore
-#else
     public string ShortDescr { get; set; }
-#endif
+
     /// <summary>The annotation start date time</summary>
     public DateTimeOffset? StartDttm { get; set; }
     /// <summary>

@@ -16,21 +16,11 @@ public partial class Saved_queryPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Id { get; set; }
-#nullable restore
-#else
     public string Id { get; set; }
-#endif
+
     /// <summary>The result property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.SavedQueryRestApi.Post? Result { get; set; }
-#nullable restore
-#else
     public KClient.Models.SavedQueryRestApi.Post Result { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Saved_query.Saved_queryPostResponse"/> and sets the default values.
     /// </summary>

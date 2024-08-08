@@ -17,13 +17,8 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The end_dttm property</summary>
     public DateTimeOffset? EndDttm { get; set; }
     /// <summary>The error_message property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ErrorMessage { get; set; }
-#nullable restore
-#else
     public string ErrorMessage { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The scheduled_dttm property</summary>
@@ -31,25 +26,15 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The start_dttm property</summary>
     public DateTimeOffset? StartDttm { get; set; }
     /// <summary>The state property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? State { get; set; }
-#nullable restore
-#else
     public string State { get; set; }
-#endif
+
     /// <summary>The uuid property</summary>
     public Guid? Uuid { get; set; }
     /// <summary>The value property</summary>
     public double? Value { get; set; }
     /// <summary>The value_row_json property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ValueRowJson { get; set; }
-#nullable restore
-#else
     public string ValueRowJson { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ReportExecutionLogRestApi.Get_list"/> and sets the default values.
     /// </summary>

@@ -43,15 +43,9 @@ public partial class Warm_up_cacheRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.DatasetCacheWarmUpResponseSchema400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models.DatasetCacheWarmUpResponseSchema404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.DatasetCacheWarmUpResponseSchema500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KClient.Models.DatasetCacheWarmUpResponseSchema?> PutAsync(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KClient.Models.DatasetCacheWarmUpResponseSchema> PutAsync(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -68,15 +62,9 @@ public partial class Warm_up_cacheRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToPutRequestInformation(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToPutRequestInformation(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);

@@ -15,13 +15,8 @@ public partial class WithPkGetResponse_description_columns : IAdditionalDataHold
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The description for the column name. Will be translated by babel</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ColumnName { get; set; }
-#nullable restore
-#else
     public string ColumnName { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Dataset.Item.WithPkGetResponse_description_columns"/> and sets the default values.
     /// </summary>

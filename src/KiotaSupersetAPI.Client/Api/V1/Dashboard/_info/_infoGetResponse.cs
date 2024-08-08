@@ -14,39 +14,19 @@ public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
 #pragma warning restore CS1591
 {
     /// <summary>The add_columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KApi.Dashboard._info._infoGetResponse_add_columns? AddColumns { get; set; }
-#nullable restore
-#else
     public KApi.Dashboard._info._infoGetResponse_add_columns AddColumns { get; set; }
-#endif
+
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The edit_columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KApi.Dashboard._info._infoGetResponse_edit_columns? EditColumns { get; set; }
-#nullable restore
-#else
     public KApi.Dashboard._info._infoGetResponse_edit_columns EditColumns { get; set; }
-#endif
+
     /// <summary>The filters property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KApi.Dashboard._info._infoGetResponse_filters? Filters { get; set; }
-#nullable restore
-#else
     public KApi.Dashboard._info._infoGetResponse_filters Filters { get; set; }
-#endif
+
     /// <summary>The user permissions for this API resource</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? Permissions { get; set; }
-#nullable restore
-#else
     public List<string> Permissions { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Dashboard._info._infoGetResponse"/> and sets the default values.
     /// </summary>

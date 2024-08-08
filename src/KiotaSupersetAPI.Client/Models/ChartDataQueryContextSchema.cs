@@ -18,31 +18,16 @@ public partial class ChartDataQueryContextSchema : IAdditionalDataHolder, IParsa
     /// <summary>Override the default cache timeout</summary>
     public int? CustomCacheTimeout { get; set; }
     /// <summary>The datasource property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartDataDatasource? Datasource { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartDataDatasource Datasource { get; set; }
-#endif
+
     /// <summary>Should the queries be forced to load from the source. Default: `false`</summary>
     public bool? Force { get; set; }
     /// <summary>The form_data property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? FormData { get; set; }
-#nullable restore
-#else
     public UntypedNode FormData { get; set; }
-#endif
+
     /// <summary>The queries property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.ChartDataQueryObject>? Queries { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.ChartDataQueryObject> Queries { get; set; }
-#endif
+
     /// <summary>The result_format property</summary>
     public KClient.Models.ChartDataQueryContextSchema_result_format? ResultFormat { get; set; }
     /// <summary>The result_type property</summary>

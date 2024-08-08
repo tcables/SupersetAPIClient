@@ -103,15 +103,9 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Database422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Database.DatabaseGetResponse?> GetAsDatabaseGetResponseAsync(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Database.DatabaseGetResponse> GetAsDatabaseGetResponseAsync(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -133,15 +127,9 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Database422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsDatabaseGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Database.DatabaseResponse?> GetAsync(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Database.DatabaseResponse> GetAsync(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -163,15 +151,9 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Database404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Database.DatabasePostResponse?> PostAsDatabasePostResponseAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Database.DatabasePostResponse> PostAsDatabasePostResponseAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -195,15 +177,9 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Database404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsDatabasePostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Database.DatabaseResponse?> PostAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Database.DatabaseResponse> PostAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -220,15 +196,9 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -240,15 +210,9 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToPostRequestInformation(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToPostRequestInformation(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
@@ -271,15 +235,9 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     [GeneratedCode("Kiota", "1.16.0")]
     public partial class DatabaseRequestBuilderGetQueryParameters
     {
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        [QueryParameter("q")]
-        public string? Q { get; set; }
-#nullable restore
-#else
         [QueryParameter("q")]
         public string Q { get; set; }
-#endif
+
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

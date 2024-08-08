@@ -15,13 +15,8 @@ public partial class ChartDataExtras : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>HAVING clause to be added to aggregate queries using AND operator.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Having { get; set; }
-#nullable restore
-#else
     public string Having { get; set; }
-#endif
+
     /// <summary>End time for relative time deltas. Default: `config[&quot;DEFAULT_RELATIVE_START_TIME&quot;]`</summary>
     public KClient.Models.ChartDataExtras_relative_end? RelativeEnd { get; set; }
     /// <summary>Start time for relative time deltas. Default: `config[&quot;DEFAULT_RELATIVE_START_TIME&quot;]`</summary>
@@ -29,13 +24,8 @@ public partial class ChartDataExtras : IAdditionalDataHolder, IParsable
     /// <summary>To what level of granularity should the temporal column be aggregated. Supports [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations) durations.</summary>
     public KClient.Models.ChartDataExtras_time_grain_sqla? TimeGrainSqla { get; set; }
     /// <summary>WHERE clause to be added to queries using AND operator.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Where { get; set; }
-#nullable restore
-#else
     public string Where { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ChartDataExtras"/> and sets the default values.
     /// </summary>

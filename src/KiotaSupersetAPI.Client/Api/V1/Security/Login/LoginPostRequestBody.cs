@@ -15,25 +15,15 @@ public partial class LoginPostRequestBody : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The password for authentication</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Password { get; set; }
-#nullable restore
-#else
     public string Password { get; set; }
-#endif
+
     /// <summary>Choose an authentication provider</summary>
     public KApi.Security.Login.LoginPostRequestBody_provider? Provider { get; set; }
     /// <summary>If true a refresh token is provided also</summary>
     public bool? Refresh { get; set; }
     /// <summary>The username for authentication</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Username { get; set; }
-#nullable restore
-#else
     public string Username { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Security.Login.LoginPostRequestBody"/> and sets the default values.
     /// </summary>

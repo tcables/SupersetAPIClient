@@ -44,15 +44,9 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Dashboard.Item.Filtersets.Item.WithPkDeleteResponse?> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Dashboard.Item.Filtersets.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -76,15 +70,9 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithPkDeleteResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Dashboard.Item.Filtersets.Item.WithPkResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Dashboard.Item.Filtersets.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -109,15 +97,9 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Dashboard.Item.Filtersets.Item.WithPkPutResponse?> PutAsWithPkPutResponseAsync(KClient.Models.FilterSetRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Dashboard.Item.Filtersets.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(KClient.Models.FilterSetRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -145,15 +127,9 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithPkPutResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Dashboard.Item.Filtersets.Item.WithPkResponse?> PutAsync(KClient.Models.FilterSetRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Dashboard.Item.Filtersets.Item.WithPkResponse> PutAsync(KClient.Models.FilterSetRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -172,15 +148,9 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -192,15 +162,9 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToPutRequestInformation(KClient.Models.FilterSetRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToPutRequestInformation(KClient.Models.FilterSetRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);

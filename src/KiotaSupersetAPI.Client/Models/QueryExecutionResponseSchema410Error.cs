@@ -17,13 +17,8 @@ public partial class QueryExecutionResponseSchema410Error : ApiException, IAddit
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The errors property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.QueryExecutionResponseSchema410Error_errors>? Errors { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.QueryExecutionResponseSchema410Error_errors> Errors { get; set; }
-#endif
+
     /// <summary>The primary error message.</summary>
     public override string Message { get => base.Message; }
     /// <summary>

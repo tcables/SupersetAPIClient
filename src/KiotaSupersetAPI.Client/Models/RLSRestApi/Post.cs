@@ -16,55 +16,25 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>clause_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Clause { get; set; }
-#nullable restore
-#else
     public string Clause { get; set; }
-#endif
+
     /// <summary>description_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>filter_type_description</summary>
     public KClient.Models.RLSRestApi.Post_filter_type? FilterType { get; set; }
     /// <summary>group_key_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? GroupKey { get; set; }
-#nullable restore
-#else
     public string GroupKey { get; set; }
-#endif
+
     /// <summary>name_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>roles_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Roles { get; set; }
-#nullable restore
-#else
     public List<int?> Roles { get; set; }
-#endif
+
     /// <summary>tables_description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Tables { get; set; }
-#nullable restore
-#else
     public List<int?> Tables { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.RLSRestApi.Post"/> and sets the default values.
     /// </summary>

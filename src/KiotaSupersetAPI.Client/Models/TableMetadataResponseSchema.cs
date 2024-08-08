@@ -16,53 +16,23 @@ public partial class TableMetadataResponseSchema : IAdditionalDataHolder, IParsa
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>A list of columns and their metadata</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.TableMetadataColumnsResponse>? Columns { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.TableMetadataColumnsResponse> Columns { get; set; }
-#endif
+
     /// <summary>A list of foreign keys and their metadata</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.TableMetadataForeignKeysIndexesResponse>? ForeignKeys { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.TableMetadataForeignKeysIndexesResponse> ForeignKeys { get; set; }
-#endif
+
     /// <summary>A list of indexes and their metadata</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.TableMetadataForeignKeysIndexesResponse>? Indexes { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.TableMetadataForeignKeysIndexesResponse> Indexes { get; set; }
-#endif
+
     /// <summary>The name of the table</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>Primary keys metadata</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.TableMetadataPrimaryKeyResponse? PrimaryKey { get; set; }
-#nullable restore
-#else
     public KClient.Models.TableMetadataPrimaryKeyResponse PrimaryKey { get; set; }
-#endif
+
     /// <summary>SQL select star</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SelectStar { get; set; }
-#nullable restore
-#else
     public string SelectStar { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.TableMetadataResponseSchema"/> and sets the default values.
     /// </summary>

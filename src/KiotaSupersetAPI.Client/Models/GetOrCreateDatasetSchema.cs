@@ -21,29 +21,14 @@ public partial class GetOrCreateDatasetSchema : IAdditionalDataHolder, IParsable
     /// <summary>The normalize_columns property</summary>
     public bool? NormalizeColumns { get; set; }
     /// <summary>The schema the table belongs to</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>Name of table</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TableName { get; set; }
-#nullable restore
-#else
     public string TableName { get; set; }
-#endif
+
     /// <summary>Template params for the table</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TemplateParams { get; set; }
-#nullable restore
-#else
     public string TemplateParams { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.GetOrCreateDatasetSchema"/> and sets the default values.
     /// </summary>

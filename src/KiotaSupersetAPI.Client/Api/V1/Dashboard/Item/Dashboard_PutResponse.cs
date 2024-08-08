@@ -20,13 +20,8 @@ public partial class Dashboard_PutResponse : IAdditionalDataHolder, IParsable
     /// <summary>The last_modified_time property</summary>
     public double? LastModifiedTime { get; set; }
     /// <summary>The result property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DashboardRestApi.Put? Result { get; set; }
-#nullable restore
-#else
     public KClient.Models.DashboardRestApi.Put Result { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Dashboard.Item.Dashboard_PutResponse"/> and sets the default values.
     /// </summary>

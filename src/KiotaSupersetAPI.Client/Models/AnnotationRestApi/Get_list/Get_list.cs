@@ -15,49 +15,24 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.AnnotationRestApi.Get_list.User1? ChangedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.AnnotationRestApi.Get_list.User1 ChangedBy { get; set; }
-#endif
+
     /// <summary>The changed_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The created_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.AnnotationRestApi.Get_list.User? CreatedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.AnnotationRestApi.Get_list.User CreatedBy { get; set; }
-#endif
+
     /// <summary>The end_dttm property</summary>
     public DateTimeOffset? EndDttm { get; set; }
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The long_descr property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? LongDescr { get; set; }
-#nullable restore
-#else
     public string LongDescr { get; set; }
-#endif
+
     /// <summary>The short_descr property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ShortDescr { get; set; }
-#nullable restore
-#else
     public string ShortDescr { get; set; }
-#endif
+
     /// <summary>The start_dttm property</summary>
     public DateTimeOffset? StartDttm { get; set; }
     /// <summary>

@@ -16,45 +16,20 @@ public partial class MenuGetResponse_result : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The childs property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KApi.Menu.MenuGetResponse_result_childs>? Childs { get; set; }
-#nullable restore
-#else
     public List<KApi.Menu.MenuGetResponse_result_childs> Childs { get; set; }
-#endif
+
     /// <summary>Icon name to show for this menu item</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Icon { get; set; }
-#nullable restore
-#else
     public string Icon { get; set; }
-#endif
+
     /// <summary>Pretty name for the menu item</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Label { get; set; }
-#nullable restore
-#else
     public string Label { get; set; }
-#endif
+
     /// <summary>The internal menu item name, maps to permission_name</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>The URL for the menu item</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Url { get; set; }
-#nullable restore
-#else
     public string Url { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Menu.MenuGetResponse_result"/> and sets the default values.
     /// </summary>

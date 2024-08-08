@@ -56,15 +56,9 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Filter_state401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Filter_state422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Filter_state500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Dashboard.Item.Filter_state.Filter_statePostResponse?> PostAsFilter_statePostResponseAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Dashboard.Item.Filter_state.Filter_statePostResponse> PostAsFilter_statePostResponseAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -88,15 +82,9 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Filter_state422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Filter_state500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsFilter_statePostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Dashboard.Item.Filter_state.Filter_stateResponse?> PostAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Dashboard.Item.Filter_state.Filter_stateResponse> PostAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -114,15 +102,9 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToPostRequestInformation(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToPostRequestInformation(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);

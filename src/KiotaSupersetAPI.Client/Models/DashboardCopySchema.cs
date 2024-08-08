@@ -15,31 +15,16 @@ public partial class DashboardCopySchema : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Override CSS for the dashboard.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Css { get; set; }
-#nullable restore
-#else
     public string Css { get; set; }
-#endif
+
     /// <summary>A title for the dashboard.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DashboardTitle { get; set; }
-#nullable restore
-#else
     public string DashboardTitle { get; set; }
-#endif
+
     /// <summary>Whether or not to also copy all charts on the dashboard</summary>
     public bool? DuplicateSlices { get; set; }
     /// <summary>This JSON object is generated dynamically when clicking the save or overwrite button in the dashboard view. It is exposed here for reference and for power users who may want to alter  specific parameters.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? JsonMetadata { get; set; }
-#nullable restore
-#else
     public string JsonMetadata { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DashboardCopySchema"/> and sets the default values.
     /// </summary>

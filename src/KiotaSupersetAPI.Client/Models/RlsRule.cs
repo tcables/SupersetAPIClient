@@ -15,13 +15,8 @@ public partial class RlsRule : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The clause property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Clause { get; set; }
-#nullable restore
-#else
     public string Clause { get; set; }
-#endif
+
     /// <summary>The dataset property</summary>
     public int? Dataset { get; set; }
     /// <summary>

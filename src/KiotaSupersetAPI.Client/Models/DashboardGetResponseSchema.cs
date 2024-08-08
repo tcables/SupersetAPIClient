@@ -16,141 +16,61 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Details of the certification</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertificationDetails { get; set; }
-#nullable restore
-#else
     public string CertificationDetails { get; set; }
-#endif
+
     /// <summary>Person or group that has certified this dashboard</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertifiedBy { get; set; }
-#nullable restore
-#else
     public string CertifiedBy { get; set; }
-#endif
+
     /// <summary>The changed_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.User? ChangedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.User ChangedBy { get; set; }
-#endif
+
     /// <summary>The changed_by_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ChangedByName { get; set; }
-#nullable restore
-#else
     public string ChangedByName { get; set; }
-#endif
+
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The changed_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ChangedOnDeltaHumanized { get; set; }
-#nullable restore
-#else
     public string ChangedOnDeltaHumanized { get; set; }
-#endif
+
     /// <summary>The charts property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? Charts { get; set; }
-#nullable restore
-#else
     public List<string> Charts { get; set; }
-#endif
+
     /// <summary>Override CSS for the dashboard.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Css { get; set; }
-#nullable restore
-#else
     public string Css { get; set; }
-#endif
+
     /// <summary>A title for the dashboard.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DashboardTitle { get; set; }
-#nullable restore
-#else
     public string DashboardTitle { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The is_managed_externally property</summary>
     public bool? IsManagedExternally { get; set; }
     /// <summary>This JSON object is generated dynamically when clicking the save or overwrite button in the dashboard view. It is exposed here for reference and for power users who may want to alter  specific parameters.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? JsonMetadata { get; set; }
-#nullable restore
-#else
     public string JsonMetadata { get; set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.User>? Owners { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.User> Owners { get; set; }
-#endif
+
     /// <summary>This json object describes the positioning of the widgets in the dashboard. It is dynamically generated when adjusting the widgets size and positions by using drag &amp; drop in the dashboard view</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? PositionJson { get; set; }
-#nullable restore
-#else
     public string PositionJson { get; set; }
-#endif
+
     /// <summary>The published property</summary>
     public bool? Published { get; set; }
     /// <summary>The roles property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.Roles>? Roles { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.Roles> Roles { get; set; }
-#endif
+
     /// <summary>The slug property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Slug { get; set; }
-#nullable restore
-#else
     public string Slug { get; set; }
-#endif
+
     /// <summary>The tags property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.Tag1>? Tags { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.Tag1> Tags { get; set; }
-#endif
+
     /// <summary>The thumbnail_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ThumbnailUrl { get; set; }
-#nullable restore
-#else
     public string ThumbnailUrl { get; set; }
-#endif
+
     /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Url { get; set; }
-#nullable restore
-#else
     public string Url { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DashboardGetResponseSchema"/> and sets the default values.
     /// </summary>

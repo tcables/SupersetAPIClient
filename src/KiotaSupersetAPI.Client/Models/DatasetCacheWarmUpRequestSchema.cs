@@ -17,29 +17,14 @@ public partial class DatasetCacheWarmUpRequestSchema : IAdditionalDataHolder, IP
     /// <summary>The ID of the dashboard to get filters for when warming cache</summary>
     public int? DashboardId { get; set; }
     /// <summary>The name of the database where the table is located</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DbName { get; set; }
-#nullable restore
-#else
     public string DbName { get; set; }
-#endif
+
     /// <summary>Extra filters to apply when warming up cache</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ExtraFilters { get; set; }
-#nullable restore
-#else
     public string ExtraFilters { get; set; }
-#endif
+
     /// <summary>The name of the table to warm up cache for</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TableName { get; set; }
-#nullable restore
-#else
     public string TableName { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetCacheWarmUpRequestSchema"/> and sets the default values.
     /// </summary>

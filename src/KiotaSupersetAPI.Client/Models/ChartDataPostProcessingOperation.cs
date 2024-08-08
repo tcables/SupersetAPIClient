@@ -17,13 +17,8 @@ public partial class ChartDataPostProcessingOperation : IAdditionalDataHolder, I
     /// <summary>Post processing operation type</summary>
     public KClient.Models.ChartDataPostProcessingOperation_operation? Operation { get; set; }
     /// <summary>Options specifying how to perform the operation. Please refer to the respective post processing operation option schemas. For example, `ChartDataPostProcessingOperationOptions` specifies the required options for the pivot operation.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartDataPostProcessingOperation_options? Options { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartDataPostProcessingOperation_options Options { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ChartDataPostProcessingOperation"/> and sets the default values.
     /// </summary>

@@ -25,113 +25,48 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The allow_run_async property</summary>
     public bool? AllowRunAsync { get; set; }
     /// <summary>The allows_cost_estimate property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? AllowsCostEstimate { get; private set; }
-#nullable restore
-#else
     public UntypedNode AllowsCostEstimate { get; private set; }
-#endif
+
     /// <summary>The allows_subquery property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? AllowsSubquery { get; private set; }
-#nullable restore
-#else
     public UntypedNode AllowsSubquery { get; private set; }
-#endif
+
     /// <summary>The allows_virtual_table_explore property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? AllowsVirtualTableExplore { get; private set; }
-#nullable restore
-#else
     public UntypedNode AllowsVirtualTableExplore { get; private set; }
-#endif
+
     /// <summary>The backend property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Backend { get; private set; }
-#nullable restore
-#else
     public UntypedNode Backend { get; private set; }
-#endif
+
     /// <summary>The changed_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatabaseRestApi.Get_list.User? ChangedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatabaseRestApi.Get_list.User ChangedBy { get; set; }
-#endif
+
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The changed_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The created_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatabaseRestApi.Get_list.User1? CreatedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatabaseRestApi.Get_list.User1 CreatedBy { get; set; }
-#endif
+
     /// <summary>The database_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DatabaseName { get; set; }
-#nullable restore
-#else
     public string DatabaseName { get; set; }
-#endif
+
     /// <summary>The disable_data_preview property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? DisableDataPreview { get; private set; }
-#nullable restore
-#else
     public UntypedNode DisableDataPreview { get; private set; }
-#endif
+
     /// <summary>The engine_information property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? EngineInformation { get; private set; }
-#nullable restore
-#else
     public UntypedNode EngineInformation { get; private set; }
-#endif
+
     /// <summary>The explore_database_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ExploreDatabaseId { get; private set; }
-#nullable restore
-#else
     public UntypedNode ExploreDatabaseId { get; private set; }
-#endif
+
     /// <summary>The expose_in_sqllab property</summary>
     public bool? ExposeInSqllab { get; set; }
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Extra { get; set; }
-#nullable restore
-#else
     public string Extra { get; set; }
-#endif
+
     /// <summary>The force_ctas_schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ForceCtasSchema { get; set; }
-#nullable restore
-#else
     public string ForceCtasSchema { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The uuid property</summary>

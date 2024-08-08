@@ -44,15 +44,9 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Ssh_tunnel404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Ssh_tunnel422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Ssh_tunnel500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse?> DeleteAsSsh_tunnelDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse> DeleteAsSsh_tunnelDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -76,15 +70,9 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Ssh_tunnel422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Ssh_tunnel500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsSsh_tunnelDeleteResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -101,15 +89,9 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");

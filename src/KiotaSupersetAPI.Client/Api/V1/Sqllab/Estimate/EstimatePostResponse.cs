@@ -15,13 +15,8 @@ public partial class EstimatePostResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KApi.Sqllab.Estimate.EstimatePostResponse_result? Result { get; set; }
-#nullable restore
-#else
     public KApi.Sqllab.Estimate.EstimatePostResponse_result Result { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Sqllab.Estimate.EstimatePostResponse"/> and sets the default values.
     /// </summary>

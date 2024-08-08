@@ -72,15 +72,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.Item.Object_typeDeleteResponse?> DeleteAsObject_typeDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.Item.Object_typeDeleteResponse> DeleteAsObject_typeDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -100,15 +94,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsObject_typeDeleteResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.Item.Object_typeResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.Item.Object_typeResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -129,15 +117,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.Item.Object_typeGetResponse?> GetAsObject_typeGetResponseAsync(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.Item.Object_typeGetResponse> GetAsObject_typeGetResponseAsync(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -161,15 +143,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsObject_typeGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.Item.Object_typeResponse?> GetAsync(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.Item.Object_typeResponse> GetAsync(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -194,15 +170,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.Item.Object_typePutResponse?> PutAsObject_typePutResponseAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.Item.Object_typePutResponse> PutAsObject_typePutResponseAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -230,15 +200,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsObject_typePutResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Tag.Item.Object_typeResponse?> PutAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Tag.Item.Object_typeResponse> PutAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -257,15 +221,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -276,15 +234,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -296,15 +248,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToPutRequestInformation(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToPutRequestInformation(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
@@ -335,15 +281,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     [GeneratedCode("Kiota", "1.16.0")]
     public partial class Object_typeItemRequestBuilderGetQueryParameters
     {
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        [QueryParameter("q")]
-        public string? Q { get; set; }
-#nullable restore
-#else
         [QueryParameter("q")]
         public string Q { get; set; }
-#endif
+
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

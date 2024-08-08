@@ -15,21 +15,11 @@ public partial class DatasetRelatedObjectsResponse : IAdditionalDataHolder, IPar
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The charts property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatasetRelatedCharts? Charts { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatasetRelatedCharts Charts { get; set; }
-#endif
+
     /// <summary>The dashboards property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatasetRelatedDashboards? Dashboards { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatasetRelatedDashboards Dashboards { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetRelatedObjectsResponse"/> and sets the default values.
     /// </summary>

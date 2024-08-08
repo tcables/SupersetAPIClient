@@ -44,15 +44,9 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Stop401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Stop404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Stop500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Query.Stop.StopPostResponse?> PostAsStopPostResponseAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Query.Stop.StopPostResponse> PostAsStopPostResponseAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -76,15 +70,9 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Stop404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Stop500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsStopPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Query.Stop.StopResponse?> PostAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Query.Stop.StopResponse> PostAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
@@ -102,15 +90,9 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToPostRequestInformation(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToPostRequestInformation(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);

@@ -21,13 +21,8 @@ public partial class FormDataPostSchema : IAdditionalDataHolder, IParsable
     /// <summary>The datasource type</summary>
     public KClient.Models.FormDataPostSchema_datasource_type? DatasourceType { get; set; }
     /// <summary>Any type of JSON supported text.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? FormData { get; set; }
-#nullable restore
-#else
     public string FormData { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.FormDataPostSchema"/> and sets the default values.
     /// </summary>

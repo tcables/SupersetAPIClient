@@ -15,89 +15,39 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.SavedQueryRestApi.Get.User1? ChangedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.SavedQueryRestApi.Get.User1 ChangedBy { get; set; }
-#endif
+
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The changed_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The created_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.SavedQueryRestApi.Get.User? CreatedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.SavedQueryRestApi.Get.User CreatedBy { get; set; }
-#endif
+
     /// <summary>The database property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.SavedQueryRestApi.Get.Database? Database { get; set; }
-#nullable restore
-#else
     public KClient.Models.SavedQueryRestApi.Get.Database Database { get; set; }
-#endif
+
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The label property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Label { get; set; }
-#nullable restore
-#else
     public string Label { get; set; }
-#endif
+
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The sql_tables property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? SqlTables { get; private set; }
-#nullable restore
-#else
     public UntypedNode SqlTables { get; private set; }
-#endif
+
     /// <summary>The template_parameters property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TemplateParameters { get; set; }
-#nullable restore
-#else
     public string TemplateParameters { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.SavedQueryRestApi.Get.Get"/> and sets the default values.
     /// </summary>

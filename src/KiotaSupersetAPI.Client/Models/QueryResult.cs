@@ -19,149 +19,69 @@ public partial class QueryResult : IAdditionalDataHolder, IParsable
     /// <summary>The ctas property</summary>
     public bool? Ctas { get; set; }
     /// <summary>The db property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Db { get; set; }
-#nullable restore
-#else
     public string Db { get; set; }
-#endif
+
     /// <summary>The dbId property</summary>
     public int? DbId { get; set; }
     /// <summary>The endDttm property</summary>
     public double? EndDttm { get; set; }
     /// <summary>The errorMessage property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ErrorMessage { get; set; }
-#nullable restore
-#else
     public string ErrorMessage { get; set; }
-#endif
+
     /// <summary>The executedSql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ExecutedSql { get; set; }
-#nullable restore
-#else
     public string ExecutedSql { get; set; }
-#endif
+
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.QueryResult_extra? Extra { get; set; }
-#nullable restore
-#else
     public KClient.Models.QueryResult_extra Extra { get; set; }
-#endif
+
     /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Id { get; set; }
-#nullable restore
-#else
     public string Id { get; set; }
-#endif
+
     /// <summary>The limit property</summary>
     public int? Limit { get; set; }
     /// <summary>The limitingFactor property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? LimitingFactor { get; set; }
-#nullable restore
-#else
     public string LimitingFactor { get; set; }
-#endif
+
     /// <summary>The progress property</summary>
     public int? Progress { get; set; }
     /// <summary>The queryId property</summary>
     public int? QueryId { get; set; }
     /// <summary>The resultsKey property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ResultsKey { get; set; }
-#nullable restore
-#else
     public string ResultsKey { get; set; }
-#endif
+
     /// <summary>The rows property</summary>
     public int? Rows { get; set; }
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The serverId property</summary>
     public int? ServerId { get; set; }
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The sqlEditorId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SqlEditorId { get; set; }
-#nullable restore
-#else
     public string SqlEditorId { get; set; }
-#endif
+
     /// <summary>The startDttm property</summary>
     public double? StartDttm { get; set; }
     /// <summary>The state property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? State { get; set; }
-#nullable restore
-#else
     public string State { get; set; }
-#endif
+
     /// <summary>The tab property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Tab { get; set; }
-#nullable restore
-#else
     public string Tab { get; set; }
-#endif
+
     /// <summary>The tempSchema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TempSchema { get; set; }
-#nullable restore
-#else
     public string TempSchema { get; set; }
-#endif
+
     /// <summary>The tempTable property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TempTable { get; set; }
-#nullable restore
-#else
     public string TempTable { get; set; }
-#endif
+
     /// <summary>The trackingUrl property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TrackingUrl { get; set; }
-#nullable restore
-#else
     public string TrackingUrl { get; set; }
-#endif
+
     /// <summary>The user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? User { get; set; }
-#nullable restore
-#else
     public string User { get; set; }
-#endif
+
     /// <summary>The userId property</summary>
     public int? UserId { get; set; }
     /// <summary>

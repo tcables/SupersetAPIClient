@@ -18,13 +18,8 @@ public partial class DistincResponseSchema : IAdditionalDataHolder, IParsable
     /// <summary>The total number of distinct values</summary>
     public int? Count { get; set; }
     /// <summary>The result property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.DistinctResultResponse>? Result { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.DistinctResultResponse> Result { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DistincResponseSchema"/> and sets the default values.
     /// </summary>

@@ -22,73 +22,33 @@ public partial class TabState : IAdditionalDataHolder, IParsable
     /// <summary>The database_id property</summary>
     public int? DatabaseId { get; set; }
     /// <summary>The extra_json property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.TabState_extra_json? ExtraJson { get; set; }
-#nullable restore
-#else
     public KClient.Models.TabState_extra_json ExtraJson { get; set; }
-#endif
+
     /// <summary>The hide_left_bar property</summary>
     public bool? HideLeftBar { get; set; }
     /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Id { get; set; }
-#nullable restore
-#else
     public string Id { get; set; }
-#endif
+
     /// <summary>The label property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Label { get; set; }
-#nullable restore
-#else
     public string Label { get; set; }
-#endif
+
     /// <summary>The latest_query property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.QueryResult? LatestQuery { get; set; }
-#nullable restore
-#else
     public KClient.Models.QueryResult LatestQuery { get; set; }
-#endif
+
     /// <summary>The query_limit property</summary>
     public int? QueryLimit { get; set; }
     /// <summary>The saved_query property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.TabState_saved_query? SavedQuery { get; set; }
-#nullable restore
-#else
     public KClient.Models.TabState_saved_query SavedQuery { get; set; }
-#endif
+
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The table_schemas property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.Table>? TableSchemas { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.Table> TableSchemas { get; set; }
-#endif
+
     /// <summary>The user_id property</summary>
     public int? UserId { get; set; }
     /// <summary>

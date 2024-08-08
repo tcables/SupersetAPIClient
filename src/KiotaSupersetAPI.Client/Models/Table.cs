@@ -17,33 +17,18 @@ public partial class Table : IAdditionalDataHolder, IParsable
     /// <summary>The database_id property</summary>
     public int? DatabaseId { get; set; }
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The expanded property</summary>
     public bool? Expanded { get; set; }
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The table property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TableProp { get; set; }
-#nullable restore
-#else
     public string TableProp { get; set; }
-#endif
+
     /// <summary>The tab_state_id property</summary>
     public int? TabStateId { get; set; }
     /// <summary>

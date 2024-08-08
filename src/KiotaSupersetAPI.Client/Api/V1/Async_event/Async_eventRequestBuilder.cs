@@ -41,15 +41,9 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Async_event401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Async_event500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Async_event.Async_eventGetResponse?> GetAsAsync_eventGetResponseAsync(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Async_event.Async_eventGetResponse> GetAsAsync_eventGetResponseAsync(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -67,15 +61,9 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Async_event401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Async_event500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsAsync_eventGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KApi.Async_event.Async_eventResponse?> GetAsync(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KApi.Async_event.Async_eventResponse> GetAsync(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -89,15 +77,9 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -119,15 +101,9 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     public partial class Async_eventRequestBuilderGetQueryParameters
     {
         /// <summary>Last ID received by the client</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        [QueryParameter("last_id")]
-        public string? LastId { get; set; }
-#nullable restore
-#else
         [QueryParameter("last_id")]
         public string LastId { get; set; }
-#endif
+
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

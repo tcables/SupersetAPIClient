@@ -18,115 +18,50 @@ public partial class Slice : IAdditionalDataHolder, IParsable
     /// <summary>Duration (in seconds) of the caching timeout for this chart.</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>Details of the certification.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertificationDetails { get; set; }
-#nullable restore
-#else
     public string CertificationDetails { get; set; }
-#endif
+
     /// <summary>Person or group that has certified this dashboard.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertifiedBy { get; set; }
-#nullable restore
-#else
     public string CertifiedBy { get; set; }
-#endif
+
     /// <summary>Timestamp of the last modification.</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>Timestamp of the last modification in human readable form.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ChangedOnHumanized { get; set; }
-#nullable restore
-#else
     public string ChangedOnHumanized { get; set; }
-#endif
+
     /// <summary>Datasource identifier.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Datasource { get; set; }
-#nullable restore
-#else
     public string Datasource { get; set; }
-#endif
+
     /// <summary>Slice description.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>Sanitized HTML version of the chart description.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DescriptionMarkeddown { get; set; }
-#nullable restore
-#else
     public string DescriptionMarkeddown { get; set; }
-#endif
+
     /// <summary>The URL for editing the slice.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? EditUrl { get; set; }
-#nullable restore
-#else
     public string EditUrl { get; set; }
-#endif
+
     /// <summary>Form data associated with the slice.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Slice_form_data? FormData { get; set; }
-#nullable restore
-#else
     public KClient.Models.Slice_form_data FormData { get; set; }
-#endif
+
     /// <summary>If the chart is managed outside externally.</summary>
     public bool? IsManagedExternally { get; set; }
     /// <summary>Last modification in human readable form.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Modified { get; set; }
-#nullable restore
-#else
     public string Modified { get; set; }
-#endif
+
     /// <summary>Owners identifiers.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Owners { get; set; }
-#nullable restore
-#else
     public List<int?> Owners { get; set; }
-#endif
+
     /// <summary>The context associated with the query.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Slice_query_context? QueryContext { get; set; }
-#nullable restore
-#else
     public KClient.Models.Slice_query_context QueryContext { get; set; }
-#endif
+
     /// <summary>The slice ID.</summary>
     public int? SliceId { get; set; }
     /// <summary>The slice name.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SliceName { get; set; }
-#nullable restore
-#else
     public string SliceName { get; set; }
-#endif
+
     /// <summary>The slice URL.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SliceUrl { get; set; }
-#nullable restore
-#else
     public string SliceUrl { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.Slice"/> and sets the default values.
     /// </summary>

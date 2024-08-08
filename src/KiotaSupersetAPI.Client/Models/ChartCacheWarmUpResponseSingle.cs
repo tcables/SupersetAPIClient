@@ -17,21 +17,11 @@ public partial class ChartCacheWarmUpResponseSingle : IAdditionalDataHolder, IPa
     /// <summary>The ID of the chart the status belongs to</summary>
     public int? ChartId { get; set; }
     /// <summary>Error that occurred when warming cache for chart</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? VizError { get; set; }
-#nullable restore
-#else
     public string VizError { get; set; }
-#endif
+
     /// <summary>Status of the underlying query for the viz</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? VizStatus { get; set; }
-#nullable restore
-#else
     public string VizStatus { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ChartCacheWarmUpResponseSingle"/> and sets the default values.
     /// </summary>

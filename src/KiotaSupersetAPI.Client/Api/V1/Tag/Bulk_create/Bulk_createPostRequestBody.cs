@@ -16,21 +16,11 @@ public partial class Bulk_createPostRequestBody : IAdditionalDataHolder, IParsab
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>list of object names to add to object</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<UntypedNode>? ObjectsToTag { get; set; }
-#nullable restore
-#else
     public List<UntypedNode> ObjectsToTag { get; set; }
-#endif
+
     /// <summary>list of tag names to add to object</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? Tags { get; set; }
-#nullable restore
-#else
     public List<string> Tags { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Tag.Bulk_create.Bulk_createPostRequestBody"/> and sets the default values.
     /// </summary>

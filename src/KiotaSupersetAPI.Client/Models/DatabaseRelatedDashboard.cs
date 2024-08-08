@@ -17,29 +17,14 @@ public partial class DatabaseRelatedDashboard : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The json_metadata property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DatabaseRelatedDashboard_json_metadata? JsonMetadata { get; set; }
-#nullable restore
-#else
     public KClient.Models.DatabaseRelatedDashboard_json_metadata JsonMetadata { get; set; }
-#endif
+
     /// <summary>The slug property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Slug { get; set; }
-#nullable restore
-#else
     public string Slug { get; set; }
-#endif
+
     /// <summary>The title property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Title { get; set; }
-#nullable restore
-#else
     public string Title { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatabaseRelatedDashboard"/> and sets the default values.
     /// </summary>

@@ -15,21 +15,11 @@ public partial class PermalinkPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The key to retrieve the permanent link data.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Key { get; set; }
-#nullable restore
-#else
     public string Key { get; set; }
-#endif
+
     /// <summary>permanent link.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Url { get; set; }
-#nullable restore
-#else
     public string Url { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.Explore.Permalink.PermalinkPostResponse"/> and sets the default values.
     /// </summary>

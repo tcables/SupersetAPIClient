@@ -16,89 +16,39 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Details of the certification</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertificationDetails { get; set; }
-#nullable restore
-#else
     public string CertificationDetails { get; set; }
-#endif
+
     /// <summary>Person or group that has certified this dashboard</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertifiedBy { get; set; }
-#nullable restore
-#else
     public string CertifiedBy { get; set; }
-#endif
+
     /// <summary>Override CSS for the dashboard.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Css { get; set; }
-#nullable restore
-#else
     public string Css { get; set; }
-#endif
+
     /// <summary>A title for the dashboard.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DashboardTitle { get; set; }
-#nullable restore
-#else
     public string DashboardTitle { get; set; }
-#endif
+
     /// <summary>The external_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ExternalUrl { get; set; }
-#nullable restore
-#else
     public string ExternalUrl { get; set; }
-#endif
+
     /// <summary>The is_managed_externally property</summary>
     public bool? IsManagedExternally { get; set; }
     /// <summary>This JSON object is generated dynamically when clicking the save or overwrite button in the dashboard view. It is exposed here for reference and for power users who may want to alter  specific parameters.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? JsonMetadata { get; set; }
-#nullable restore
-#else
     public string JsonMetadata { get; set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Owners { get; set; }
-#nullable restore
-#else
     public List<int?> Owners { get; set; }
-#endif
+
     /// <summary>This json object describes the positioning of the widgets in the dashboard. It is dynamically generated when adjusting the widgets size and positions by using drag &amp; drop in the dashboard view</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? PositionJson { get; set; }
-#nullable restore
-#else
     public string PositionJson { get; set; }
-#endif
+
     /// <summary>Determines whether or not this dashboard is visible in the list of all dashboards.</summary>
     public bool? Published { get; set; }
     /// <summary>The roles property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Roles { get; set; }
-#nullable restore
-#else
     public List<int?> Roles { get; set; }
-#endif
+
     /// <summary>Unique identifying part for the web address of the dashboard.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Slug { get; set; }
-#nullable restore
-#else
     public string Slug { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DashboardRestApi.Post"/> and sets the default values.
     /// </summary>

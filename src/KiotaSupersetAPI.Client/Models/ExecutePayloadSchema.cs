@@ -15,21 +15,11 @@ public partial class ExecutePayloadSchema : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The client_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ClientId { get; set; }
-#nullable restore
-#else
     public string ClientId { get; set; }
-#endif
+
     /// <summary>The ctas_method property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CtasMethod { get; set; }
-#nullable restore
-#else
     public string CtasMethod { get; set; }
-#endif
+
     /// <summary>The database_id property</summary>
     public int? DatabaseId { get; set; }
     /// <summary>The expand_data property</summary>
@@ -41,55 +31,25 @@ public partial class ExecutePayloadSchema : IAdditionalDataHolder, IParsable
     /// <summary>The runAsync property</summary>
     public bool? RunAsync { get; set; }
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The select_as_cta property</summary>
     public bool? SelectAsCta { get; set; }
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The sql_editor_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SqlEditorId { get; set; }
-#nullable restore
-#else
     public string SqlEditorId { get; set; }
-#endif
+
     /// <summary>The tab property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Tab { get; set; }
-#nullable restore
-#else
     public string Tab { get; set; }
-#endif
+
     /// <summary>The templateParams property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TemplateParams { get; set; }
-#nullable restore
-#else
     public string TemplateParams { get; set; }
-#endif
+
     /// <summary>The tmp_table_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TmpTableName { get; set; }
-#nullable restore
-#else
     public string TmpTableName { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ExecutePayloadSchema"/> and sets the default values.
     /// </summary>

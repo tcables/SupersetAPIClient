@@ -18,13 +18,8 @@ public partial class AnnotationPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.AnnotationRestApi.Post? Result { get; set; }
-#nullable restore
-#else
     public KClient.Models.AnnotationRestApi.Post Result { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KApi.AnnotationLayer.Item.Annotation.AnnotationPostResponse"/> and sets the default values.
     /// </summary>

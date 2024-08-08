@@ -15,81 +15,36 @@ public partial class DatasetMetricsPut : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The currency property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Currency { get; set; }
-#nullable restore
-#else
     public string Currency { get; set; }
-#endif
+
     /// <summary>The d3format property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? D3format { get; set; }
-#nullable restore
-#else
     public string D3format { get; set; }
-#endif
+
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The expression property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Expression { get; set; }
-#nullable restore
-#else
     public string Expression { get; set; }
-#endif
+
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Extra { get; set; }
-#nullable restore
-#else
     public string Extra { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The metric_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? MetricName { get; set; }
-#nullable restore
-#else
     public string MetricName { get; set; }
-#endif
+
     /// <summary>The metric_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? MetricType { get; set; }
-#nullable restore
-#else
     public string MetricType { get; set; }
-#endif
+
     /// <summary>The uuid property</summary>
     public Guid? Uuid { get; set; }
     /// <summary>The verbose_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? VerboseName { get; set; }
-#nullable restore
-#else
     public string VerboseName { get; set; }
-#endif
+
     /// <summary>The warning_text property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? WarningText { get; set; }
-#nullable restore
-#else
     public string WarningText { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetMetricsPut"/> and sets the default values.
     /// </summary>

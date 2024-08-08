@@ -45,15 +45,9 @@ public partial class ResultsRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.QueryExecutionResponseSchema404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.QueryExecutionResponseSchema410Error">When receiving a 410 status code</exception>
     /// <exception cref="KClient.Models.QueryExecutionResponseSchema500Error">When receiving a 500 status code</exception>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public async Task<KClient.Models.QueryExecutionResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-    {
-#nullable restore
-#else
     public async Task<KClient.Models.QueryExecutionResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
-#endif
+
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
@@ -71,15 +65,9 @@ public partial class ResultsRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
-    {
-#nullable restore
-#else
     public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
-#endif
+
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
         requestInfo.Configure(requestConfiguration);
         requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -100,15 +88,9 @@ public partial class ResultsRequestBuilder : BaseRequestBuilder
     [GeneratedCode("Kiota", "1.16.0")]
     public partial class ResultsRequestBuilderGetQueryParameters
     {
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        [QueryParameter("q")]
-        public string? Q { get; set; }
-#nullable restore
-#else
         [QueryParameter("q")]
         public string Q { get; set; }
-#endif
+
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

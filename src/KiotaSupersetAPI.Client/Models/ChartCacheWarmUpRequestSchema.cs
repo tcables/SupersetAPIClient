@@ -19,13 +19,8 @@ public partial class ChartCacheWarmUpRequestSchema : IAdditionalDataHolder, IPar
     /// <summary>The ID of the dashboard to get filters for when warming cache</summary>
     public int? DashboardId { get; set; }
     /// <summary>Extra filters to apply when warming up cache</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ExtraFilters { get; set; }
-#nullable restore
-#else
     public string ExtraFilters { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ChartCacheWarmUpRequestSchema"/> and sets the default values.
     /// </summary>

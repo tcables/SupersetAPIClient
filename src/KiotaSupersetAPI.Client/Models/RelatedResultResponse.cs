@@ -15,21 +15,11 @@ public partial class RelatedResultResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The extra metadata for related item</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.RelatedResultResponse_extra? Extra { get; set; }
-#nullable restore
-#else
     public KClient.Models.RelatedResultResponse_extra Extra { get; set; }
-#endif
+
     /// <summary>The related item string representation</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Text { get; set; }
-#nullable restore
-#else
     public string Text { get; set; }
-#endif
+
     /// <summary>The related item identifier</summary>
     public int? Value { get; set; }
     /// <summary>

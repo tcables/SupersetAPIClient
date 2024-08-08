@@ -15,163 +15,68 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The certification_details property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertificationDetails { get; set; }
-#nullable restore
-#else
     public string CertificationDetails { get; set; }
-#endif
+
     /// <summary>The certified_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertifiedBy { get; set; }
-#nullable restore
-#else
     public string CertifiedBy { get; set; }
-#endif
+
     /// <summary>The changed_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DashboardRestApi.Get_list.User? ChangedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.DashboardRestApi.Get_list.User ChangedBy { get; set; }
-#endif
+
     /// <summary>The changed_by_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedByName { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedByName { get; private set; }
-#endif
+
     /// <summary>The changed_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The changed_on_utc property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnUtc { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnUtc { get; private set; }
-#endif
+
     /// <summary>The created_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DashboardRestApi.Get_list.User1? CreatedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.DashboardRestApi.Get_list.User1 CreatedBy { get; set; }
-#endif
+
     /// <summary>The created_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? CreatedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode CreatedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The css property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Css { get; set; }
-#nullable restore
-#else
     public string Css { get; set; }
-#endif
+
     /// <summary>The dashboard_title property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DashboardTitle { get; set; }
-#nullable restore
-#else
     public string DashboardTitle { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The is_managed_externally property</summary>
     public bool? IsManagedExternally { get; set; }
     /// <summary>The json_metadata property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? JsonMetadata { get; set; }
-#nullable restore
-#else
     public string JsonMetadata { get; set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DashboardRestApi.Get_list.User2? Owners { get; set; }
-#nullable restore
-#else
     public KClient.Models.DashboardRestApi.Get_list.User2 Owners { get; set; }
-#endif
+
     /// <summary>The position_json property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? PositionJson { get; set; }
-#nullable restore
-#else
     public string PositionJson { get; set; }
-#endif
+
     /// <summary>The published property</summary>
     public bool? Published { get; set; }
     /// <summary>The roles property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DashboardRestApi.Get_list.Role? Roles { get; set; }
-#nullable restore
-#else
     public KClient.Models.DashboardRestApi.Get_list.Role Roles { get; set; }
-#endif
+
     /// <summary>The slug property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Slug { get; set; }
-#nullable restore
-#else
     public string Slug { get; set; }
-#endif
+
     /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Status { get; private set; }
-#nullable restore
-#else
     public UntypedNode Status { get; private set; }
-#endif
+
     /// <summary>The tags property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.DashboardRestApi.Get_list.Tag? Tags { get; set; }
-#nullable restore
-#else
     public KClient.Models.DashboardRestApi.Get_list.Tag Tags { get; set; }
-#endif
+
     /// <summary>The thumbnail_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ThumbnailUrl { get; private set; }
-#nullable restore
-#else
     public UntypedNode ThumbnailUrl { get; private set; }
-#endif
+
     /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Url { get; private set; }
-#nullable restore
-#else
     public UntypedNode Url { get; private set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DashboardRestApi.Get_list.Get_list"/> and sets the default values.
     /// </summary>

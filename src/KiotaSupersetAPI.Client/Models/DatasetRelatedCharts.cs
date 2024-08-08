@@ -18,13 +18,8 @@ public partial class DatasetRelatedCharts : IAdditionalDataHolder, IParsable
     /// <summary>Chart count</summary>
     public int? Count { get; set; }
     /// <summary>A list of dashboards</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.DatasetRelatedChart>? Result { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.DatasetRelatedChart> Result { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetRelatedCharts"/> and sets the default values.
     /// </summary>

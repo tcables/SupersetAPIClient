@@ -16,53 +16,23 @@ public partial class Async_eventGetResponse_result : IAdditionalDataHolder, IPar
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The channel_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ChannelId { get; set; }
-#nullable restore
-#else
     public string ChannelId { get; set; }
-#endif
+
     /// <summary>The errors property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KApi.Async_event.Async_eventGetResponse_result_errors>? Errors { get; set; }
-#nullable restore
-#else
     public List<KApi.Async_event.Async_eventGetResponse_result_errors> Errors { get; set; }
-#endif
+
     /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Id { get; set; }
-#nullable restore
-#else
     public string Id { get; set; }
-#endif
+
     /// <summary>The job_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? JobId { get; set; }
-#nullable restore
-#else
     public string JobId { get; set; }
-#endif
+
     /// <summary>The result_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ResultUrl { get; set; }
-#nullable restore
-#else
     public string ResultUrl { get; set; }
-#endif
+
     /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Status { get; set; }
-#nullable restore
-#else
     public string Status { get; set; }
-#endif
+
     /// <summary>The user_id property</summary>
     public int? UserId { get; set; }
     /// <summary>

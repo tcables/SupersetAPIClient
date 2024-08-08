@@ -16,61 +16,26 @@ public partial class TableMetadataForeignKeysIndexesResponse : IAdditionalDataHo
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The column_names property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? ColumnNames { get; set; }
-#nullable restore
-#else
     public List<string> ColumnNames { get; set; }
-#endif
+
     /// <summary>The name of the foreign key or index</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>The options property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.TableMetadataOptionsResponse? Options { get; set; }
-#nullable restore
-#else
     public KClient.Models.TableMetadataOptionsResponse Options { get; set; }
-#endif
+
     /// <summary>The referred_columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? ReferredColumns { get; set; }
-#nullable restore
-#else
     public List<string> ReferredColumns { get; set; }
-#endif
+
     /// <summary>The referred_schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ReferredSchema { get; set; }
-#nullable restore
-#else
     public string ReferredSchema { get; set; }
-#endif
+
     /// <summary>The referred_table property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ReferredTable { get; set; }
-#nullable restore
-#else
     public string ReferredTable { get; set; }
-#endif
+
     /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Type { get; set; }
-#nullable restore
-#else
     public string Type { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.TableMetadataForeignKeysIndexesResponse"/> and sets the default values.
     /// </summary>

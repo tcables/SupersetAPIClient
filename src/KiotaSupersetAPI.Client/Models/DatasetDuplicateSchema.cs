@@ -17,13 +17,8 @@ public partial class DatasetDuplicateSchema : IAdditionalDataHolder, IParsable
     /// <summary>The base_model_id property</summary>
     public int? BaseModelId { get; set; }
     /// <summary>The table_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TableName { get; set; }
-#nullable restore
-#else
     public string TableName { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetDuplicateSchema"/> and sets the default values.
     /// </summary>

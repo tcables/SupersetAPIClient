@@ -16,101 +16,46 @@ public partial class ChartDataResponseResult : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>All requested annotation data</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.ChartDataResponseResult_annotation_data>? AnnotationData { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.ChartDataResponseResult_annotation_data> AnnotationData { get; set; }
-#endif
+
     /// <summary>A list with applied filters</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.ChartDataResponseResult_applied_filters>? AppliedFilters { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.ChartDataResponseResult_applied_filters> AppliedFilters { get; set; }
-#endif
+
     /// <summary>Cache timestamp</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CachedDttm { get; set; }
-#nullable restore
-#else
     public string CachedDttm { get; set; }
-#endif
+
     /// <summary>Unique cache key for query object</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CacheKey { get; set; }
-#nullable restore
-#else
     public string CacheKey { get; set; }
-#endif
+
     /// <summary>Cache timeout in following order: custom timeout, datasource timeout, cache default timeout, config default cache timeout.</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>A list of column names</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? Colnames { get; set; }
-#nullable restore
-#else
     public List<string> Colnames { get; set; }
-#endif
+
     /// <summary>A list of generic data types of each column</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Coltypes { get; set; }
-#nullable restore
-#else
     public List<int?> Coltypes { get; set; }
-#endif
+
     /// <summary>A list with results</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.ChartDataResponseResult_data>? Data { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.ChartDataResponseResult_data> Data { get; set; }
-#endif
+
     /// <summary>Error</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Error { get; set; }
-#nullable restore
-#else
     public string Error { get; set; }
-#endif
+
     /// <summary>Start timestamp of time range</summary>
     public int? FromDttm { get; set; }
     /// <summary>Is the result cached</summary>
     public bool? IsCached { get; set; }
     /// <summary>The executed query statement</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Query { get; set; }
-#nullable restore
-#else
     public string Query { get; set; }
-#endif
+
     /// <summary>A list with rejected filters</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.ChartDataResponseResult_rejected_filters>? RejectedFilters { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.ChartDataResponseResult_rejected_filters> RejectedFilters { get; set; }
-#endif
+
     /// <summary>Amount of rows in result set</summary>
     public int? Rowcount { get; set; }
     /// <summary>Stacktrace if there was an error</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Stacktrace { get; set; }
-#nullable restore
-#else
     public string Stacktrace { get; set; }
-#endif
+
     /// <summary>Status of the query</summary>
     public KClient.Models.ChartDataResponseResult_status? Status { get; set; }
     /// <summary>End timestamp of time range</summary>

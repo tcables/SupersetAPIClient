@@ -20,23 +20,13 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>The chart property</summary>
     public int? Chart { get; set; }
     /// <summary>Markdown description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ContextMarkdown { get; set; }
-#nullable restore
-#else
     public string ContextMarkdown { get; set; }
-#endif
+
     /// <summary>Creation method is used to inform the frontend whether the report/alert was created in the dashboard, chart, or alerts and reports UI.</summary>
     public KClient.Models.ReportScheduleRestApi.Post_creation_method? CreationMethod { get; set; }
     /// <summary>A CRON expression.[Crontab Guru](https://crontab.guru/) is a helpful resource that can help you craft a CRON expression.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Crontab { get; set; }
-#nullable restore
-#else
     public string Crontab { get; set; }
-#endif
+
     /// <summary>Custom width of the screenshot in pixels</summary>
     public int? CustomWidth { get; set; }
     /// <summary>The dashboard property</summary>
@@ -44,21 +34,11 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>The database property</summary>
     public int? Database { get; set; }
     /// <summary>Use a nice description to give context to this Alert/Report</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ReportScheduleRestApi.Post_extra? Extra { get; set; }
-#nullable restore
-#else
     public KClient.Models.ReportScheduleRestApi.Post_extra Extra { get; set; }
-#endif
+
     /// <summary>The force_screenshot property</summary>
     public bool? ForceScreenshot { get; set; }
     /// <summary>Once an alert is triggered, how long, in seconds, before Superset nags you again. (in seconds)</summary>
@@ -66,59 +46,29 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>How long to keep the logs around for this report (in days)</summary>
     public int? LogRetention { get; set; }
     /// <summary>The report schedule name.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Owners { get; set; }
-#nullable restore
-#else
     public List<int?> Owners { get; set; }
-#endif
+
     /// <summary>The recipients property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.ReportRecipient>? Recipients { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.ReportRecipient> Recipients { get; set; }
-#endif
+
     /// <summary>The report_format property</summary>
     public KClient.Models.ReportScheduleRestApi.Post_report_format? ReportFormat { get; set; }
     /// <summary>The selected_tabs property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? SelectedTabs { get; set; }
-#nullable restore
-#else
     public List<int?> SelectedTabs { get; set; }
-#endif
+
     /// <summary>A SQL statement that defines whether the alert should get triggered or not. The query is expected to return either NULL or a number value.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>A timezone string that represents the location of the timezone.</summary>
     public KClient.Models.ReportScheduleRestApi.Post_timezone? Timezone { get; set; }
     /// <summary>The report schedule type</summary>
     public KClient.Models.ReportScheduleRestApi.Post_type? Type { get; set; }
     /// <summary>The validator_config_json property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ValidatorConfigJSON? ValidatorConfigJson { get; set; }
-#nullable restore
-#else
     public KClient.Models.ValidatorConfigJSON ValidatorConfigJson { get; set; }
-#endif
+
     /// <summary>Determines when to trigger alert based off value from alert query. Alerts will be triggered with these validator types:- Not Null - When the return value is Not NULL, Empty, or 0- Operator - When `sql_return_value comparison_operator threshold` is True e.g. `50 &lt;= 75`&lt;br&gt;Supports the comparison operators &lt;, &lt;=, &gt;, &gt;=, ==, and !=</summary>
     public KClient.Models.ReportScheduleRestApi.Post_validator_type? ValidatorType { get; set; }
     /// <summary>If an alert is staled at a working state, how long until it&apos;s state is reset to error</summary>

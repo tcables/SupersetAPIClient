@@ -20,55 +20,25 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>The cache_timeout property</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>The columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.DatasetColumnsPut>? Columns { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.DatasetColumnsPut> Columns { get; set; }
-#endif
+
     /// <summary>The database_id property</summary>
     public int? DatabaseId { get; set; }
     /// <summary>The default_endpoint property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DefaultEndpoint { get; set; }
-#nullable restore
-#else
     public string DefaultEndpoint { get; set; }
-#endif
+
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The external_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ExternalUrl { get; set; }
-#nullable restore
-#else
     public string ExternalUrl { get; set; }
-#endif
+
     /// <summary>The extra property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Extra { get; set; }
-#nullable restore
-#else
     public string Extra { get; set; }
-#endif
+
     /// <summary>The fetch_values_predicate property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? FetchValuesPredicate { get; set; }
-#nullable restore
-#else
     public string FetchValuesPredicate { get; set; }
-#endif
+
     /// <summary>The filter_select_enabled property</summary>
     public bool? FilterSelectEnabled { get; set; }
     /// <summary>The is_managed_externally property</summary>
@@ -76,65 +46,30 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>The is_sqllab_view property</summary>
     public bool? IsSqllabView { get; set; }
     /// <summary>The main_dttm_col property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? MainDttmCol { get; set; }
-#nullable restore
-#else
     public string MainDttmCol { get; set; }
-#endif
+
     /// <summary>The metrics property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.DatasetMetricsPut>? Metrics { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.DatasetMetricsPut> Metrics { get; set; }
-#endif
+
     /// <summary>The normalize_columns property</summary>
     public bool? NormalizeColumns { get; set; }
     /// <summary>The offset property</summary>
     public int? Offset { get; set; }
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<int?>? Owners { get; set; }
-#nullable restore
-#else
     public List<int?> Owners { get; set; }
-#endif
+
     /// <summary>The schema property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Schema { get; set; }
-#nullable restore
-#else
     public string Schema { get; set; }
-#endif
+
     /// <summary>The sql property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Sql { get; set; }
-#nullable restore
-#else
     public string Sql { get; set; }
-#endif
+
     /// <summary>The table_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TableName { get; set; }
-#nullable restore
-#else
     public string TableName { get; set; }
-#endif
+
     /// <summary>The template_params property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? TemplateParams { get; set; }
-#nullable restore
-#else
     public string TemplateParams { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.DatasetRestApi.Put"/> and sets the default values.
     /// </summary>

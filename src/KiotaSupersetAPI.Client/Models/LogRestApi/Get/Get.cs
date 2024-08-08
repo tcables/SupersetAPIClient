@@ -13,13 +13,8 @@ public partial class Get : IAdditionalDataHolder, IParsable
 #pragma warning restore CS1591
 {
     /// <summary>The action property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Action { get; set; }
-#nullable restore
-#else
     public string Action { get; set; }
-#endif
+
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The dashboard_id property</summary>
@@ -29,31 +24,16 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The duration_ms property</summary>
     public int? DurationMs { get; set; }
     /// <summary>The json property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Json { get; set; }
-#nullable restore
-#else
     public string Json { get; set; }
-#endif
+
     /// <summary>The referrer property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Referrer { get; set; }
-#nullable restore
-#else
     public string Referrer { get; set; }
-#endif
+
     /// <summary>The slice_id property</summary>
     public int? SliceId { get; set; }
     /// <summary>The user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.LogRestApi.Get.User? User { get; set; }
-#nullable restore
-#else
     public KClient.Models.LogRestApi.Get.User User { get; set; }
-#endif
+
     /// <summary>The user_id property</summary>
     public int? UserId { get; set; }
     /// <summary>

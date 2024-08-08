@@ -15,21 +15,11 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Give a description for this annotation layer</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Descr { get; set; }
-#nullable restore
-#else
     public string Descr { get; set; }
-#endif
+
     /// <summary>The annotation layer name</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.AnnotationLayerRestApi.Post"/> and sets the default values.
     /// </summary>

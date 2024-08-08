@@ -18,63 +18,28 @@ public partial class TaggedObjectEntityResponseSchema : IAdditionalDataHolder, I
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The created_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.User? CreatedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.User CreatedBy { get; set; }
-#endif
+
     /// <summary>The creator property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Creator { get; set; }
-#nullable restore
-#else
     public string Creator { get; set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Name { get; set; }
-#nullable restore
-#else
     public string Name { get; set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.User1>? Owners { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.User1> Owners { get; set; }
-#endif
+
     /// <summary>The tags property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<KClient.Models.TagGetResponseSchema>? Tags { get; set; }
-#nullable restore
-#else
     public List<KClient.Models.TagGetResponseSchema> Tags { get; set; }
-#endif
+
     /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Type { get; set; }
-#nullable restore
-#else
     public string Type { get; set; }
-#endif
+
     /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Url { get; set; }
-#nullable restore
-#else
     public string Url { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.TaggedObjectEntityResponseSchema"/> and sets the default values.
     /// </summary>

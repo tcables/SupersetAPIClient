@@ -15,37 +15,17 @@ public partial class ExploreContextSchema : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The dataset property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Dataset? Dataset { get; set; }
-#nullable restore
-#else
     public KClient.Models.Dataset Dataset { get; set; }
-#endif
+
     /// <summary>Form data from the Explore controls used to form the chart&apos;s data query.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ExploreContextSchema_form_data? FormData { get; set; }
-#nullable restore
-#else
     public KClient.Models.ExploreContextSchema_form_data FormData { get; set; }
-#endif
+
     /// <summary>Any message related to the processed request.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Message { get; set; }
-#nullable restore
-#else
     public string Message { get; set; }
-#endif
+
     /// <summary>The slice property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.Slice? Slice { get; set; }
-#nullable restore
-#else
     public KClient.Models.Slice Slice { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ExploreContextSchema"/> and sets the default values.
     /// </summary>

@@ -17,151 +17,61 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The cache_timeout property</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>The certification_details property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertificationDetails { get; set; }
-#nullable restore
-#else
     public string CertificationDetails { get; set; }
-#endif
+
     /// <summary>The certified_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? CertifiedBy { get; set; }
-#nullable restore
-#else
     public string CertifiedBy { get; set; }
-#endif
+
     /// <summary>The changed_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get_list.User1? ChangedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get_list.User1 ChangedBy { get; set; }
-#endif
+
     /// <summary>The changed_by_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedByName { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedByName { get; private set; }
-#endif
+
     /// <summary>The changed_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The changed_on_dttm property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnDttm { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnDttm { get; private set; }
-#endif
+
     /// <summary>The changed_on_utc property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ChangedOnUtc { get; private set; }
-#nullable restore
-#else
     public UntypedNode ChangedOnUtc { get; private set; }
-#endif
+
     /// <summary>The created_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get_list.User2? CreatedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get_list.User2 CreatedBy { get; set; }
-#endif
+
     /// <summary>The created_by_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? CreatedByName { get; private set; }
-#nullable restore
-#else
     public UntypedNode CreatedByName { get; private set; }
-#endif
+
     /// <summary>The created_on_delta_humanized property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? CreatedOnDeltaHumanized { get; private set; }
-#nullable restore
-#else
     public UntypedNode CreatedOnDeltaHumanized { get; private set; }
-#endif
+
     /// <summary>The dashboards property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get_list.Dashboard? Dashboards { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get_list.Dashboard Dashboards { get; set; }
-#endif
+
     /// <summary>The datasource_id property</summary>
     public int? DatasourceId { get; set; }
     /// <summary>The datasource_name_text property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? DatasourceNameText { get; private set; }
-#nullable restore
-#else
     public UntypedNode DatasourceNameText { get; private set; }
-#endif
+
     /// <summary>The datasource_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? DatasourceType { get; set; }
-#nullable restore
-#else
     public string DatasourceType { get; set; }
-#endif
+
     /// <summary>The datasource_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? DatasourceUrl { get; private set; }
-#nullable restore
-#else
     public UntypedNode DatasourceUrl { get; private set; }
-#endif
+
     /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Description { get; set; }
-#nullable restore
-#else
     public string Description { get; set; }
-#endif
+
     /// <summary>The description_markeddown property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? DescriptionMarkeddown { get; private set; }
-#nullable restore
-#else
     public UntypedNode DescriptionMarkeddown { get; private set; }
-#endif
+
     /// <summary>The edit_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? EditUrl { get; private set; }
-#nullable restore
-#else
     public UntypedNode EditUrl { get; private set; }
-#endif
+
     /// <summary>The form_data property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? FormData { get; private set; }
-#nullable restore
-#else
     public UntypedNode FormData { get; private set; }
-#endif
+
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The is_managed_externally property</summary>
@@ -169,85 +79,35 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The last_saved_at property</summary>
     public DateTimeOffset? LastSavedAt { get; set; }
     /// <summary>The last_saved_by property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get_list.User? LastSavedBy { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get_list.User LastSavedBy { get; set; }
-#endif
+
     /// <summary>The owners property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get_list.User3? Owners { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get_list.User3 Owners { get; set; }
-#endif
+
     /// <summary>The params property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? Params { get; set; }
-#nullable restore
-#else
     public string Params { get; set; }
-#endif
+
     /// <summary>The slice_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? SliceName { get; set; }
-#nullable restore
-#else
     public string SliceName { get; set; }
-#endif
+
     /// <summary>The slice_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? SliceUrl { get; private set; }
-#nullable restore
-#else
     public UntypedNode SliceUrl { get; private set; }
-#endif
+
     /// <summary>The table property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get_list.SqlaTable? Table { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get_list.SqlaTable Table { get; set; }
-#endif
+
     /// <summary>The tags property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public KClient.Models.ChartRestApi.Get_list.Tag? Tags { get; set; }
-#nullable restore
-#else
     public KClient.Models.ChartRestApi.Get_list.Tag Tags { get; set; }
-#endif
+
     /// <summary>The thumbnail_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? ThumbnailUrl { get; private set; }
-#nullable restore
-#else
     public UntypedNode ThumbnailUrl { get; private set; }
-#endif
+
     /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public UntypedNode? Url { get; private set; }
-#nullable restore
-#else
     public UntypedNode Url { get; private set; }
-#endif
+
     /// <summary>The viz_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? VizType { get; set; }
-#nullable restore
-#else
     public string VizType { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="KClient.Models.ChartRestApi.Get_list.Get_list"/> and sets the default values.
     /// </summary>
