@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
     public partial class AvailableRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Available.AvailableRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Available.AvailableRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Available.AvailableRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Available.AvailableRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,18 +41,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
         /// <summary>
         /// Get names of databases currently available
         /// </summary>
-        /// <returns>A List&lt;global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available&gt;</returns>
+        /// <returns>A List&lt;KApi.Database.Available.Available&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Available400Error">When receiving a 400 status code</exception>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Available500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<KApi.Database.Available.Available>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<KApi.Database.Available.Available>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -61,7 +61,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
                 { "400", global::KiotaSupersetAPI.Client.Models.Available400Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Available500Error.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<KApi.Database.Available.Available>(requestInfo, KApi.Database.Available.Available.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.ToList();
         }
         /// <summary>
@@ -86,11 +86,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Available.AvailableRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Database.Available.AvailableRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Available.AvailableRequestBuilder WithUrl(string rawUrl)
+        public KApi.Database.Available.AvailableRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Available.AvailableRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Database.Available.AvailableRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -23,10 +23,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item
         /// <summary>The description_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_description_columns? DescriptionColumns { get; set; }
+        public KApi.Annotation_layer.Item.WithPkGetResponse_description_columns? DescriptionColumns { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_description_columns DescriptionColumns { get; set; }
+        public KApi.Annotation_layer.Item.WithPkGetResponse_description_columns DescriptionColumns { get; set; }
 #endif
         /// <summary>The item id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,10 +39,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item
         /// <summary>The label_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_label_columns? LabelColumns { get; set; }
+        public KApi.Annotation_layer.Item.WithPkGetResponse_label_columns? LabelColumns { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
+        public KApi.Annotation_layer.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
 #endif
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +69,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item
         public string ShowTitle { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Annotation_layer.Item.WithPkGetResponse"/> and sets the default values.
         /// </summary>
         public WithPkGetResponse()
         {
@@ -78,12 +78,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Item.WithPkGetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Annotation_layer.Item.WithPkGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse();
+            return new KApi.Annotation_layer.Item.WithPkGetResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,9 +93,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "description_columns", n => { DescriptionColumns = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_description_columns>(global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_description_columns.CreateFromDiscriminatorValue); } },
+                { "description_columns", n => { DescriptionColumns = n.GetObjectValue<KApi.Annotation_layer.Item.WithPkGetResponse_description_columns>(KApi.Annotation_layer.Item.WithPkGetResponse_description_columns.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "label_columns", n => { LabelColumns = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_label_columns>(global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_label_columns.CreateFromDiscriminatorValue); } },
+                { "label_columns", n => { LabelColumns = n.GetObjectValue<KApi.Annotation_layer.Item.WithPkGetResponse_label_columns>(KApi.Annotation_layer.Item.WithPkGetResponse_label_columns.CreateFromDiscriminatorValue); } },
                 { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi.Get>(global::KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi.Get.CreateFromDiscriminatorValue); } },
                 { "show_columns", n => { ShowColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
                 { "show_title", n => { ShowTitle = n.GetStringValue(); } },
@@ -108,9 +108,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_description_columns>("description_columns", DescriptionColumns);
+            writer.WriteObjectValue<KApi.Annotation_layer.Item.WithPkGetResponse_description_columns>("description_columns", DescriptionColumns);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.WithPkGetResponse_label_columns>("label_columns", LabelColumns);
+            writer.WriteObjectValue<KApi.Annotation_layer.Item.WithPkGetResponse_label_columns>("label_columns", LabelColumns);
             writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi.Get>("result", Result);
             writer.WriteCollectionOfPrimitiveValues<string>("show_columns", ShowColumns);
             writer.WriteStringValue("show_title", ShowTitle);

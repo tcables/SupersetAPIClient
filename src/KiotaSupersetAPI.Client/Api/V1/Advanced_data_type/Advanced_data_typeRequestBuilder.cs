@@ -22,17 +22,17 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type
     public partial class Advanced_data_typeRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The convert property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder Convert
+        public KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder Convert
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The types property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesRequestBuilder Types
+        public KApi.Advanced_data_type.Types.TypesRequestBuilder Types
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Advanced_data_type.Types.TypesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Advanced_data_typeRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Advanced_data_type.Advanced_data_typeRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -40,7 +40,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Advanced_data_typeRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Advanced_data_type.Advanced_data_typeRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

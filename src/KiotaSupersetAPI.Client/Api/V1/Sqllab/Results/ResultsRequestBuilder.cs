@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Results
     public partial class ResultsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Sqllab.Results.ResultsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Results
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Sqllab.Results.ResultsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -52,11 +52,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Results
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::KiotaSupersetAPI.Client.Models.QueryExecutionResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -78,11 +78,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Results
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -93,11 +93,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Results
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Sqllab.Results.ResultsRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder WithUrl(string rawUrl)
+        public KApi.Sqllab.Results.ResultsRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Sqllab.Results.ResultsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Get the result of a SQL query execution
@@ -120,7 +120,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Results
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class ResultsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>
+        public partial class ResultsRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>
         {
         }
     }

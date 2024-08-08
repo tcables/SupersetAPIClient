@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_u
     public partial class Schemas_access_for_file_uploadRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_u
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -87,11 +87,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_u
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder WithUrl(string rawUrl)
+        public KApi.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

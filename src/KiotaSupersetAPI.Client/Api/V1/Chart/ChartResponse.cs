@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart
     [Obsolete("This class is obsolete. Use ChartDeleteResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class ChartResponse : global::KiotaSupersetAPI.Client.Api.V1.Chart.ChartDeleteResponse, IParsable
+    public partial class ChartResponse : KApi.Chart.ChartDeleteResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.ChartResponse"/></returns>
+        /// <returns>A <see cref="KApi.Chart.ChartResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Chart.ChartResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Chart.ChartResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Chart.ChartResponse();
+            return new KApi.Chart.ChartResponse();
         }
     }
 }

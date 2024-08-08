@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token
     [Obsolete("This class is obsolete. Use Csrf_tokenGetResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class Csrf_tokenResponse : global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenGetResponse, IParsable
+    public partial class Csrf_tokenResponse : KApi.Security.Csrf_token.Csrf_tokenGetResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenResponse"/></returns>
+        /// <returns>A <see cref="KApi.Security.Csrf_token.Csrf_tokenResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Security.Csrf_token.Csrf_tokenResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenResponse();
+            return new KApi.Security.Csrf_token.Csrf_tokenResponse();
         }
     }
 }

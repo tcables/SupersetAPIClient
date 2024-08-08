@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
     public partial class TypesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Advanced_data_type.Types.TypesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Advanced_data_type.Types.TypesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
         /// <summary>
         /// Return a list of available advanced data types
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Advanced_data_type.Types.TypesGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Types401Error">When receiving a 401 status code</exception>
@@ -49,11 +49,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Types500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesGetResponse?> GetAsTypesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Advanced_data_type.Types.TypesGetResponse?> GetAsTypesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesGetResponse> GetAsTypesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Advanced_data_type.Types.TypesGetResponse> GetAsTypesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -63,12 +63,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
                 { "404", global::KiotaSupersetAPI.Client.Models.Types404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Types500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Advanced_data_type.Types.TypesGetResponse>(requestInfo, KApi.Advanced_data_type.Types.TypesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Return a list of available advanced data types
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesResponse"/></returns>
+        /// <returns>A <see cref="KApi.Advanced_data_type.Types.TypesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Types401Error">When receiving a 401 status code</exception>
@@ -77,11 +77,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
         [Obsolete("This method is obsolete. Use GetAsTypesGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Advanced_data_type.Types.TypesResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Advanced_data_type.Types.TypesResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -91,7 +91,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
                 { "404", global::KiotaSupersetAPI.Client.Models.Types404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Types500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Advanced_data_type.Types.TypesResponse>(requestInfo, KApi.Advanced_data_type.Types.TypesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Return a list of available advanced data types
@@ -115,11 +115,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Advanced_data_type.Types.TypesRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesRequestBuilder WithUrl(string rawUrl)
+        public KApi.Advanced_data_type.Types.TypesRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Types.TypesRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Advanced_data_type.Types.TypesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -25,10 +25,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         /// <summary>The description_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_description_columns? DescriptionColumns { get; set; }
+        public KApi.Database.DatabaseGetResponse_description_columns? DescriptionColumns { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_description_columns DescriptionColumns { get; set; }
+        public KApi.Database.DatabaseGetResponse_description_columns DescriptionColumns { get; set; }
 #endif
         /// <summary>A list of item ids, useful when you don&apos;t know the column id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         /// <summary>The label_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_label_columns? LabelColumns { get; set; }
+        public KApi.Database.DatabaseGetResponse_label_columns? LabelColumns { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_label_columns LabelColumns { get; set; }
+        public KApi.Database.DatabaseGetResponse_label_columns LabelColumns { get; set; }
 #endif
         /// <summary>A list of columns</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +79,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         public List<global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list.Get_list> Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.DatabaseGetResponse"/> and sets the default values.
         /// </summary>
         public DatabaseGetResponse()
         {
@@ -88,12 +88,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.DatabaseGetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Database.DatabaseGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse();
+            return new KApi.Database.DatabaseGetResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,9 +104,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
-                { "description_columns", n => { DescriptionColumns = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_description_columns>(global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_description_columns.CreateFromDiscriminatorValue); } },
+                { "description_columns", n => { DescriptionColumns = n.GetObjectValue<KApi.Database.DatabaseGetResponse_description_columns>(KApi.Database.DatabaseGetResponse_description_columns.CreateFromDiscriminatorValue); } },
                 { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-                { "label_columns", n => { LabelColumns = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_label_columns>(global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_label_columns.CreateFromDiscriminatorValue); } },
+                { "label_columns", n => { LabelColumns = n.GetObjectValue<KApi.Database.DatabaseGetResponse_label_columns>(KApi.Database.DatabaseGetResponse_label_columns.CreateFromDiscriminatorValue); } },
                 { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
                 { "list_title", n => { ListTitle = n.GetStringValue(); } },
                 { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
@@ -121,9 +121,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_description_columns>("description_columns", DescriptionColumns);
+            writer.WriteObjectValue<KApi.Database.DatabaseGetResponse_description_columns>("description_columns", DescriptionColumns);
             writer.WriteCollectionOfPrimitiveValues<string>("ids", Ids);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseGetResponse_label_columns>("label_columns", LabelColumns);
+            writer.WriteObjectValue<KApi.Database.DatabaseGetResponse_label_columns>("label_columns", LabelColumns);
             writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
             writer.WriteStringValue("list_title", ListTitle);
             writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);

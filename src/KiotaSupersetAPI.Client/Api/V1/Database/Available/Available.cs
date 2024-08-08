@@ -46,10 +46,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
         /// <summary>Dict with public properties form the DB Engine</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_engine_information? EngineInformation { get; set; }
+        public KApi.Database.Available.Available_engine_information? EngineInformation { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_engine_information EngineInformation { get; set; }
+        public KApi.Database.Available.Available_engine_information EngineInformation { get; set; }
 #endif
         /// <summary>Name of the database</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,10 +62,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
         /// <summary>JSON schema defining the needed parameters</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_parameters? Parameters { get; set; }
+        public KApi.Database.Available.Available_parameters? Parameters { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_parameters Parameters { get; set; }
+        public KApi.Database.Available.Available_parameters Parameters { get; set; }
 #endif
         /// <summary>Is the database preferred?</summary>
         public bool? Preferred { get; set; }
@@ -78,7 +78,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
         public string SqlalchemyUriPlaceholder { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Available.Available"/> and sets the default values.
         /// </summary>
         public Available()
         {
@@ -87,12 +87,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available"/></returns>
+        /// <returns>A <see cref="KApi.Database.Available.Available"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Database.Available.Available CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available();
+            return new KApi.Database.Available.Available();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -105,9 +105,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
                 { "available_drivers", n => { AvailableDrivers = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
                 { "default_driver", n => { DefaultDriver = n.GetStringValue(); } },
                 { "engine", n => { Engine = n.GetStringValue(); } },
-                { "engine_information", n => { EngineInformation = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_engine_information>(global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_engine_information.CreateFromDiscriminatorValue); } },
+                { "engine_information", n => { EngineInformation = n.GetObjectValue<KApi.Database.Available.Available_engine_information>(KApi.Database.Available.Available_engine_information.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_parameters>(global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_parameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<KApi.Database.Available.Available_parameters>(KApi.Database.Available.Available_parameters.CreateFromDiscriminatorValue); } },
                 { "preferred", n => { Preferred = n.GetBoolValue(); } },
                 { "sqlalchemy_uri_placeholder", n => { SqlalchemyUriPlaceholder = n.GetStringValue(); } },
             };
@@ -122,9 +122,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Available
             writer.WriteCollectionOfPrimitiveValues<string>("available_drivers", AvailableDrivers);
             writer.WriteStringValue("default_driver", DefaultDriver);
             writer.WriteStringValue("engine", Engine);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_engine_information>("engine_information", EngineInformation);
+            writer.WriteObjectValue<KApi.Database.Available.Available_engine_information>("engine_information", EngineInformation);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Database.Available.Available_parameters>("parameters", Parameters);
+            writer.WriteObjectValue<KApi.Database.Available.Available_parameters>("parameters", Parameters);
             writer.WriteBoolValue("preferred", Preferred);
             writer.WriteStringValue("sqlalchemy_uri_placeholder", SqlalchemyUriPlaceholder);
             writer.WriteAdditionalData(AdditionalData);

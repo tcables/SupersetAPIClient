@@ -24,7 +24,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Copy
         /// <summary>The last_modified_time property</summary>
         public double? LastModifiedTime { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Copy.CopyPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dashboard.Item.Copy.CopyPostResponse"/> and sets the default values.
         /// </summary>
         public CopyPostResponse()
         {
@@ -33,12 +33,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Copy
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Copy.CopyPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Copy.CopyPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Copy.CopyPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Dashboard.Item.Copy.CopyPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Copy.CopyPostResponse();
+            return new KApi.Dashboard.Item.Copy.CopyPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

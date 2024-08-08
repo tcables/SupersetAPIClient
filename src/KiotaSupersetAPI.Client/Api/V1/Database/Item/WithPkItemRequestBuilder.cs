@@ -35,62 +35,62 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
     public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The connection property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Connection.ConnectionRequestBuilder Connection
+        public KApi.Database.Item.Connection.ConnectionRequestBuilder Connection
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Connection.ConnectionRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Connection.ConnectionRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The function_names property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names.Function_namesRequestBuilder Function_names
+        public KApi.Database.Item.Function_names.Function_namesRequestBuilder Function_names
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names.Function_namesRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Function_names.Function_namesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The related_objects property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Related_objects.Related_objectsRequestBuilder Related_objects
+        public KApi.Database.Item.Related_objects.Related_objectsRequestBuilder Related_objects
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The schemas property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder Schemas
+        public KApi.Database.Item.Schemas.SchemasRequestBuilder Schemas
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Schemas.SchemasRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The schemas_access_for_file_upload property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder Schemas_access_for_file_upload
+        public KApi.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder Schemas_access_for_file_upload
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The select_star property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Select_star.Select_starRequestBuilder Select_star
+        public KApi.Database.Item.Select_star.Select_starRequestBuilder Select_star
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Select_star.Select_starRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Select_star.Select_starRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The ssh_tunnel property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder Ssh_tunnel
+        public KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder Ssh_tunnel
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The table property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table.TableRequestBuilder Table
+        public KApi.Database.Item.Table.TableRequestBuilder Table
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table.TableRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Table.TableRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The table_extra property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Table_extraRequestBuilder Table_extra
+        public KApi.Database.Item.Table_extra.Table_extraRequestBuilder Table_extra
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Table_extraRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Table_extra.Table_extraRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tables property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Tables.TablesRequestBuilder Tables
+        public KApi.Database.Item.Tables.TablesRequestBuilder Tables
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Tables.TablesRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Tables.TablesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The validate_sql property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql.Validate_sqlRequestBuilder Validate_sql
+        public KApi.Database.Item.Validate_sql.Validate_sqlRequestBuilder Validate_sql
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql.Validate_sqlRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.Item.Validate_sql.Validate_sqlRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.WithPkItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -98,7 +98,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.WithPkItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -108,7 +108,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         /// <summary>
         /// Delete a database
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.WithPkDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk401Error">When receiving a 401 status code</exception>
@@ -118,11 +118,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkDeleteResponse?> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkDeleteResponse?> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -134,12 +134,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkDeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkDeleteResponse>(requestInfo, KApi.Database.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a database
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.WithPkResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk401Error">When receiving a 401 status code</exception>
@@ -150,11 +150,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         [Obsolete("This method is obsolete. Use DeleteAsWithPkDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -166,12 +166,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkResponse>(requestInfo, KApi.Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a database
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.WithPkGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -180,11 +180,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkGetResponse?> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkGetResponse?> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkGetResponse> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkGetResponse> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -195,12 +195,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkGetResponse>(requestInfo, KApi.Database.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a database
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.WithPkResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -210,11 +210,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         [Obsolete("This method is obsolete. Use GetAsWithPkGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -225,12 +225,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkResponse>(requestInfo, KApi.Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Change a database
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkPutResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.WithPkPutResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -242,11 +242,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkPutResponse?> PutAsWithPkPutResponseAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkPutResponse?> PutAsWithPkPutResponseAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -260,12 +260,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkPutResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkPutResponse>(requestInfo, KApi.Database.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Change a database
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.WithPkResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -278,11 +278,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         [Obsolete("This method is obsolete. Use PutAsWithPkPutResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse?> PutAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkResponse?> PutAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse> PutAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.WithPkResponse> PutAsync(global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -296,7 +296,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkResponse>(requestInfo, KApi.Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a database
@@ -361,11 +361,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.WithPkItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Database.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Database.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

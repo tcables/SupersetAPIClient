@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
     [Obsolete("This class is obsolete. Use DashboardDeleteResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class DashboardResponse : global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardDeleteResponse, IParsable
+    public partial class DashboardResponse : KApi.Dashboard.DashboardDeleteResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.DashboardResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Dashboard.DashboardResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse();
+            return new KApi.Dashboard.DashboardResponse();
         }
     }
 }

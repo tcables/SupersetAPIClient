@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.Item
     public partial class WithSchema_nameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -91,11 +91,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

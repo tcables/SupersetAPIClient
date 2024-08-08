@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
     public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         /// <summary>
         /// Delete a form_data
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -51,11 +51,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyDeleteResponse?> DeleteAsWithKeyDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyDeleteResponse?> DeleteAsWithKeyDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyDeleteResponse> DeleteAsWithKeyDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyDeleteResponse> DeleteAsWithKeyDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -67,12 +67,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyDeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyDeleteResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a form_data
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse"/></returns>
+        /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -83,11 +83,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         [Obsolete("This method is obsolete. Use DeleteAsWithKeyDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -99,12 +99,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a form_data
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -114,11 +114,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyGetResponse?> GetAsWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyGetResponse?> GetAsWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyGetResponse> GetAsWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyGetResponse> GetAsWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -130,12 +130,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyGetResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a form_data
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse"/></returns>
+        /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -146,11 +146,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         [Obsolete("This method is obsolete. Use GetAsWithKeyGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -162,12 +162,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update an existing form_data
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyPutResponse"/></returns>
+        /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyPutResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -178,11 +178,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithKey500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyPutResponse?> PutAsWithKeyPutResponseAsync(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyPutResponse?> PutAsWithKeyPutResponseAsync(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyPutResponse> PutAsWithKeyPutResponseAsync(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyPutResponse> PutAsWithKeyPutResponseAsync(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -195,12 +195,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyPutResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyPutResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update an existing form_data
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse"/></returns>
+        /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -212,11 +212,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         [Obsolete("This method is obsolete. Use PutAsWithKeyPutResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse?> PutAsync(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyResponse?> PutAsync(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse> PutAsync(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Explore.Form_data.Item.WithKeyResponse> PutAsync(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -229,7 +229,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithKey422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithKey500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a form_data
@@ -277,11 +277,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::KiotaSupersetAPI.Client.Models.FormDataPutSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -294,11 +294,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
@@ -330,7 +330,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class WithKeyItemRequestBuilderPutRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>
+        public partial class WithKeyItemRequestBuilderPutRequestConfiguration : RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>
         {
         }
     }

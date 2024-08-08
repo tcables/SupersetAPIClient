@@ -20,28 +20,28 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info
         /// <summary>The add_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_add_columns? AddColumns { get; set; }
+        public KApi.Rowlevelsecurity._info._infoGetResponse_add_columns? AddColumns { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_add_columns AddColumns { get; set; }
+        public KApi.Rowlevelsecurity._info._infoGetResponse_add_columns AddColumns { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The edit_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_edit_columns? EditColumns { get; set; }
+        public KApi.Rowlevelsecurity._info._infoGetResponse_edit_columns? EditColumns { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_edit_columns EditColumns { get; set; }
+        public KApi.Rowlevelsecurity._info._infoGetResponse_edit_columns EditColumns { get; set; }
 #endif
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_filters? Filters { get; set; }
+        public KApi.Rowlevelsecurity._info._infoGetResponse_filters? Filters { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_filters Filters { get; set; }
+        public KApi.Rowlevelsecurity._info._infoGetResponse_filters Filters { get; set; }
 #endif
         /// <summary>The user permissions for this API resource</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -52,7 +52,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info
         public List<string> Permissions { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Rowlevelsecurity._info._infoGetResponse"/> and sets the default values.
         /// </summary>
         public _infoGetResponse()
         {
@@ -61,12 +61,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity._info._infoGetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Rowlevelsecurity._info._infoGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse();
+            return new KApi.Rowlevelsecurity._info._infoGetResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,9 +76,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "add_columns", n => { AddColumns = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_add_columns>(global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_add_columns.CreateFromDiscriminatorValue); } },
-                { "edit_columns", n => { EditColumns = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_edit_columns>(global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_edit_columns.CreateFromDiscriminatorValue); } },
-                { "filters", n => { Filters = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_filters>(global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_filters.CreateFromDiscriminatorValue); } },
+                { "add_columns", n => { AddColumns = n.GetObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_add_columns>(KApi.Rowlevelsecurity._info._infoGetResponse_add_columns.CreateFromDiscriminatorValue); } },
+                { "edit_columns", n => { EditColumns = n.GetObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_edit_columns>(KApi.Rowlevelsecurity._info._infoGetResponse_edit_columns.CreateFromDiscriminatorValue); } },
+                { "filters", n => { Filters = n.GetObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_filters>(KApi.Rowlevelsecurity._info._infoGetResponse_filters.CreateFromDiscriminatorValue); } },
                 { "permissions", n => { Permissions = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             };
         }
@@ -89,9 +89,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_add_columns>("add_columns", AddColumns);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_edit_columns>("edit_columns", EditColumns);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse_filters>("filters", Filters);
+            writer.WriteObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_add_columns>("add_columns", AddColumns);
+            writer.WriteObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_edit_columns>("edit_columns", EditColumns);
+            writer.WriteObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_filters>("filters", Filters);
             writer.WriteCollectionOfPrimitiveValues<string>("permissions", Permissions);
             writer.WriteAdditionalData(AdditionalData);
         }

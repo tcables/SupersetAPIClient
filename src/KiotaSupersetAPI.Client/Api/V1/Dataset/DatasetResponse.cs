@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
     [Obsolete("This class is obsolete. Use DatasetDeleteResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class DatasetResponse : global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetDeleteResponse, IParsable
+    public partial class DatasetResponse : KApi.Dataset.DatasetDeleteResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.DatasetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Dataset.DatasetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse();
+            return new KApi.Dataset.DatasetResponse();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
     public partial class RolesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Me.Roles.RolesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Me.Roles.RolesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,17 +41,17 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
         /// <summary>
         /// Gets the user roles corresponding to the agent making the request, or returns a 401 error if the user is unauthenticated.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Me.Roles.RolesGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Roles401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesGetResponse?> GetAsRolesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Me.Roles.RolesGetResponse?> GetAsRolesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesGetResponse> GetAsRolesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Me.Roles.RolesGetResponse> GetAsRolesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -59,23 +59,23 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
             {
                 { "401", global::KiotaSupersetAPI.Client.Models.Roles401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Me.Roles.RolesGetResponse>(requestInfo, KApi.Me.Roles.RolesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets the user roles corresponding to the agent making the request, or returns a 401 error if the user is unauthenticated.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesResponse"/></returns>
+        /// <returns>A <see cref="KApi.Me.Roles.RolesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Roles401Error">When receiving a 401 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsRolesGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Me.Roles.RolesResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Me.Roles.RolesResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -83,7 +83,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
             {
                 { "401", global::KiotaSupersetAPI.Client.Models.Roles401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Me.Roles.RolesResponse>(requestInfo, KApi.Me.Roles.RolesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets the user roles corresponding to the agent making the request, or returns a 401 error if the user is unauthenticated.
@@ -107,11 +107,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Me.Roles.RolesRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesRequestBuilder WithUrl(string rawUrl)
+        public KApi.Me.Roles.RolesRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Me.Roles.RolesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

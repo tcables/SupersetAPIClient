@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
     public partial class _infoRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Chart._info._infoRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Chart._info._infoRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
         /// <summary>
         /// Get metadata information about this API resource
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Chart._info._infoGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models._info400Error">When receiving a 400 status code</exception>
@@ -50,11 +50,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
         /// <exception cref="global::KiotaSupersetAPI.Client.Models._info500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoGetResponse?> GetAs_infoGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart._info._infoGetResponse?> GetAs_infoGetResponseAsync(Action<RequestConfiguration<KApi.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoGetResponse> GetAs_infoGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart._info._infoGetResponse> GetAs_infoGetResponseAsync(Action<RequestConfiguration<KApi.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -65,12 +65,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
                 { "422", global::KiotaSupersetAPI.Client.Models._info422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models._info500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Chart._info._infoGetResponse>(requestInfo, KApi.Chart._info._infoGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get metadata information about this API resource
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoResponse"/></returns>
+        /// <returns>A <see cref="KApi.Chart._info._infoResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models._info400Error">When receiving a 400 status code</exception>
@@ -80,11 +80,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
         [Obsolete("This method is obsolete. Use GetAs_infoGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoResponse?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart._info._infoResponse?> GetAsync(Action<RequestConfiguration<KApi.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoResponse> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart._info._infoResponse> GetAsync(Action<RequestConfiguration<KApi.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -95,7 +95,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
                 { "422", global::KiotaSupersetAPI.Client.Models._info422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models._info500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Chart._info._infoResponse>(requestInfo, KApi.Chart._info._infoResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get metadata information about this API resource
@@ -104,11 +104,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -119,11 +119,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Chart._info._infoRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder WithUrl(string rawUrl)
+        public KApi.Chart._info._infoRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Chart._info._infoRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Get metadata information about this API resource
@@ -146,7 +146,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart._info
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class _infoRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>
+        public partial class _infoRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Chart._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>
         {
         }
     }

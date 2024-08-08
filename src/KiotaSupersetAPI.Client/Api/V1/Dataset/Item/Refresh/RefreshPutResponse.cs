@@ -28,7 +28,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh
         public string Message { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh.RefreshPutResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Item.Refresh.RefreshPutResponse"/> and sets the default values.
         /// </summary>
         public RefreshPutResponse()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh.RefreshPutResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Item.Refresh.RefreshPutResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh.RefreshPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Dataset.Item.Refresh.RefreshPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Refresh.RefreshPutResponse();
+            return new KApi.Dataset.Item.Refresh.RefreshPutResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

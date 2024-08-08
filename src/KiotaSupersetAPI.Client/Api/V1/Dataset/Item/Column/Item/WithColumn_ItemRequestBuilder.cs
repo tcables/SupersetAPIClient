@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
     public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
         /// <summary>
         /// Delete a dataset column
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_DeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_401Error">When receiving a 401 status code</exception>
@@ -51,11 +51,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_DeleteResponse?> DeleteAsWithColumn_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse?> DeleteAsWithColumn_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_DeleteResponse> DeleteAsWithColumn_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse> DeleteAsWithColumn_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -67,12 +67,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_DeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse>(requestInfo, KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a dataset column
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_Response"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithColumn_401Error">When receiving a 401 status code</exception>
@@ -83,11 +83,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
         [Obsolete("This method is obsolete. Use DeleteAsWithColumn_DeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_Response?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Item.Column.Item.WithColumn_Response?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Item.Column.Item.WithColumn_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -99,7 +99,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_Response>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.Item.Column.Item.WithColumn_Response>(requestInfo, KApi.Dataset.Item.Column.Item.WithColumn_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a dataset column
@@ -123,11 +123,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
     [Obsolete("This class is obsolete. Use WithUuGetResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class WithUuResponse : global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuGetResponse, IParsable
+    public partial class WithUuResponse : KApi.Embedded_dashboard.Item.WithUuGetResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuResponse"/></returns>
+        /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Embedded_dashboard.Item.WithUuResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuResponse();
+            return new KApi.Embedded_dashboard.Item.WithUuResponse();
         }
     }
 }

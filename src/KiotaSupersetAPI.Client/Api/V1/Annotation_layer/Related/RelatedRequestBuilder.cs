@@ -22,18 +22,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Related
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.annotation_layer.related.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Related.Item.WithColumn_nameItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Related.Item.WithColumn_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="KApi.Annotation_layer.Related.Item.WithColumn_nameItemRequestBuilder"/></returns>
+        public KApi.Annotation_layer.Related.Item.WithColumn_nameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("column_name", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Related.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Annotation_layer.Related.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Related.RelatedRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Annotation_layer.Related.RelatedRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Related
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Related.RelatedRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Annotation_layer.Related.RelatedRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

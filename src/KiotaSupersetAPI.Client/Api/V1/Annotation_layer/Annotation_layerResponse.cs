@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
     [Obsolete("This class is obsolete. Use Annotation_layerDeleteResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class Annotation_layerResponse : global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Annotation_layerDeleteResponse, IParsable
+    public partial class Annotation_layerResponse : KApi.Annotation_layer.Annotation_layerDeleteResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Annotation_layerResponse"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Annotation_layerResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Annotation_layerResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Annotation_layer.Annotation_layerResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Annotation_layerResponse();
+            return new KApi.Annotation_layer.Annotation_layerResponse();
         }
     }
 }

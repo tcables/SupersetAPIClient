@@ -29,7 +29,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql
         public List<global::KiotaSupersetAPI.Client.Models.ValidateSQLResponse> Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql.Validate_sqlPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Validate_sql.Validate_sqlPostResponse"/> and sets the default values.
         /// </summary>
         public Validate_sqlPostResponse()
         {
@@ -38,12 +38,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql.Validate_sqlPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.Validate_sql.Validate_sqlPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql.Validate_sqlPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Database.Item.Validate_sql.Validate_sqlPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql.Validate_sqlPostResponse();
+            return new KApi.Database.Item.Validate_sql.Validate_sqlPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

@@ -39,7 +39,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation
         public List<global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list.Get_list> Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.AnnotationGetResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Annotation_layer.Item.Annotation.AnnotationGetResponse"/> and sets the default values.
         /// </summary>
         public AnnotationGetResponse()
         {
@@ -48,12 +48,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.AnnotationGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Item.Annotation.AnnotationGetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.AnnotationGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Annotation_layer.Item.Annotation.AnnotationGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.AnnotationGetResponse();
+            return new KApi.Annotation_layer.Item.Annotation.AnnotationGetResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

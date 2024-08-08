@@ -21,12 +21,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item
     public partial class WithColumn_nameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The values property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder Values
+        public KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder Values
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -34,7 +34,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

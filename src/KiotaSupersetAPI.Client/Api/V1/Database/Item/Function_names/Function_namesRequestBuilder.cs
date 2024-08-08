@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names
     public partial class Function_namesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names.Function_namesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Function_names.Function_namesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names.Function_namesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Function_names.Function_namesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -87,11 +87,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names.Function_namesRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.Function_names.Function_namesRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names.Function_namesRequestBuilder WithUrl(string rawUrl)
+        public KApi.Database.Item.Function_names.Function_namesRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Function_names.Function_namesRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Database.Item.Function_names.Function_namesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

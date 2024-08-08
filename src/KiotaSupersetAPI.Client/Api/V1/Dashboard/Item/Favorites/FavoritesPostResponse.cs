@@ -22,13 +22,13 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse_result? Result { get; set; }
+        public KApi.Dashboard.Item.Favorites.FavoritesPostResponse_result? Result { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse_result Result { get; set; }
+        public KApi.Dashboard.Item.Favorites.FavoritesPostResponse_result Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dashboard.Item.Favorites.FavoritesPostResponse"/> and sets the default values.
         /// </summary>
         public FavoritesPostResponse()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Dashboard.Item.Favorites.FavoritesPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse();
+            return new KApi.Dashboard.Item.Favorites.FavoritesPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +52,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse_result>(global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse_result.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<KApi.Dashboard.Item.Favorites.FavoritesPostResponse_result>(KApi.Dashboard.Item.Favorites.FavoritesPostResponse_result.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse_result>("result", Result);
+            writer.WriteObjectValue<KApi.Dashboard.Item.Favorites.FavoritesPostResponse_result>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

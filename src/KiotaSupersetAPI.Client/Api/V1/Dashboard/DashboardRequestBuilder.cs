@@ -31,49 +31,49 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
     public partial class DashboardRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The _info property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard._info._infoRequestBuilder _info
+        public KApi.Dashboard._info._infoRequestBuilder _info
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dashboard._info._infoRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dashboard._info._infoRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The export property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Export.ExportRequestBuilder Export
+        public KApi.Dashboard.Export.ExportRequestBuilder Export
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dashboard.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The favorite_status property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Favorite_status.Favorite_statusRequestBuilder Favorite_status
+        public KApi.Dashboard.Favorite_status.Favorite_statusRequestBuilder Favorite_status
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dashboard.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The import property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Import.ImportRequestBuilder Import
+        public KApi.Dashboard.Import.ImportRequestBuilder Import
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dashboard.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The permalink property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink.PermalinkRequestBuilder Permalink
+        public KApi.Dashboard.Permalink.PermalinkRequestBuilder Permalink
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dashboard.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The related property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Related.RelatedRequestBuilder Related
+        public KApi.Dashboard.Related.RelatedRequestBuilder Related
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dashboard.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dashboard.item collection</summary>
         /// <param name="position">Either the id of the dashboard, or its slug</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Dashboard_ItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Dashboard_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="KApi.Dashboard.Item.Dashboard_ItemRequestBuilder"/></returns>
+        public KApi.Dashboard.Item.Dashboard_ItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("dashboard_%2Did", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Dashboard_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Dashboard.Item.Dashboard_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dashboard.DashboardRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -81,7 +81,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dashboard.DashboardRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -91,7 +91,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         /// <summary>
         /// Bulk delete dashboards
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.DashboardDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dashboard401Error">When receiving a 401 status code</exception>
@@ -101,11 +101,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dashboard500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardDeleteResponse?> DeleteAsDashboardDeleteResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardDeleteResponse?> DeleteAsDashboardDeleteResponseAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardDeleteResponse> DeleteAsDashboardDeleteResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardDeleteResponse> DeleteAsDashboardDeleteResponseAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -117,12 +117,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
                 { "422", global::KiotaSupersetAPI.Client.Models.Dashboard422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dashboard500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardDeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardDeleteResponse>(requestInfo, KApi.Dashboard.DashboardDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Bulk delete dashboards
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.DashboardResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dashboard401Error">When receiving a 401 status code</exception>
@@ -133,11 +133,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         [Obsolete("This method is obsolete. Use DeleteAsDashboardDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse?> DeleteAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardResponse?> DeleteAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse> DeleteAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardResponse> DeleteAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -149,12 +149,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
                 { "422", global::KiotaSupersetAPI.Client.Models.Dashboard422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dashboard500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardResponse>(requestInfo, KApi.Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets a list of dashboards, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.DashboardGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dashboard400Error">When receiving a 400 status code</exception>
@@ -163,11 +163,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dashboard500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardGetResponse?> GetAsDashboardGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardGetResponse?> GetAsDashboardGetResponseAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardGetResponse> GetAsDashboardGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardGetResponse> GetAsDashboardGetResponseAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -178,12 +178,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
                 { "422", global::KiotaSupersetAPI.Client.Models.Dashboard422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dashboard500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardGetResponse>(requestInfo, KApi.Dashboard.DashboardGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets a list of dashboards, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.DashboardResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dashboard400Error">When receiving a 400 status code</exception>
@@ -193,11 +193,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         [Obsolete("This method is obsolete. Use GetAsDashboardGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardResponse?> GetAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardResponse> GetAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -208,12 +208,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
                 { "422", global::KiotaSupersetAPI.Client.Models.Dashboard422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dashboard500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardResponse>(requestInfo, KApi.Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new dashboard
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.DashboardPostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -223,11 +223,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dashboard500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardPostResponse?> PostAsDashboardPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardPostResponse?> PostAsDashboardPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardPostResponse> PostAsDashboardPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardPostResponse> PostAsDashboardPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -239,12 +239,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
                 { "404", global::KiotaSupersetAPI.Client.Models.Dashboard404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dashboard500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardPostResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardPostResponse>(requestInfo, KApi.Dashboard.DashboardPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new dashboard
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.DashboardResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -255,11 +255,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         [Obsolete("This method is obsolete. Use PostAsDashboardPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.DashboardResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -271,7 +271,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
                 { "404", global::KiotaSupersetAPI.Client.Models.Dashboard404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dashboard500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardResponse>(requestInfo, KApi.Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Bulk delete dashboards
@@ -280,11 +280,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
@@ -299,11 +299,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -336,11 +336,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.DashboardRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder WithUrl(string rawUrl)
+        public KApi.Dashboard.DashboardRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Dashboard.DashboardRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Bulk delete dashboards
@@ -363,7 +363,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class DashboardRequestBuilderDeleteRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>
+        public partial class DashboardRequestBuilderDeleteRequestConfiguration : RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>
         {
         }
         /// <summary>
@@ -387,7 +387,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class DashboardRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>
+        public partial class DashboardRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>
         {
         }
         /// <summary>

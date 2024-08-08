@@ -44,127 +44,127 @@ namespace KiotaSupersetAPI.Client.Api.V1
     public partial class V1RequestBuilder : BaseRequestBuilder
     {
         /// <summary>The advanced_data_type property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Advanced_data_typeRequestBuilder Advanced_data_type
+        public KApi.Advanced_data_type.Advanced_data_typeRequestBuilder Advanced_data_type
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.Advanced_data_typeRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Advanced_data_type.Advanced_data_typeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The annotation_layer property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Annotation_layerRequestBuilder Annotation_layer
+        public KApi.Annotation_layer.Annotation_layerRequestBuilder Annotation_layer
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Annotation_layerRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Annotation_layer.Annotation_layerRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The assets property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Assets.AssetsRequestBuilder Assets
+        public KApi.Assets.AssetsRequestBuilder Assets
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Assets.AssetsRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Assets.AssetsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The async_event property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Async_event.Async_eventRequestBuilder Async_event
+        public KApi.Async_event.Async_eventRequestBuilder Async_event
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Async_event.Async_eventRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Async_event.Async_eventRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The available_domains property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsRequestBuilder Available_domains
+        public KApi.Available_domains.Available_domainsRequestBuilder Available_domains
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Available_domains.Available_domainsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The cachekey property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Cachekey.CachekeyRequestBuilder Cachekey
+        public KApi.Cachekey.CachekeyRequestBuilder Cachekey
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Cachekey.CachekeyRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Cachekey.CachekeyRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The chart property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.ChartRequestBuilder Chart
+        public KApi.Chart.ChartRequestBuilder Chart
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Chart.ChartRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Chart.ChartRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The css_template property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Css_template.Css_templateRequestBuilder Css_template
+        public KApi.Css_template.Css_templateRequestBuilder Css_template
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Css_template.Css_templateRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Css_template.Css_templateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The dashboard property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder Dashboard
+        public KApi.Dashboard.DashboardRequestBuilder Dashboard
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.DashboardRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dashboard.DashboardRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The database property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseRequestBuilder Database
+        public KApi.Database.DatabaseRequestBuilder Database
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Database.DatabaseRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Database.DatabaseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The dataset property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder Dataset
+        public KApi.Dataset.DatasetRequestBuilder Dataset
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dataset.DatasetRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The datasource property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Datasource.DatasourceRequestBuilder Datasource
+        public KApi.Datasource.DatasourceRequestBuilder Datasource
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Datasource.DatasourceRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Datasource.DatasourceRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The embedded_dashboard property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Embedded_dashboardRequestBuilder Embedded_dashboard
+        public KApi.Embedded_dashboard.Embedded_dashboardRequestBuilder Embedded_dashboard
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Embedded_dashboardRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Embedded_dashboard.Embedded_dashboardRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The explore property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder Explore
+        public KApi.Explore.ExploreRequestBuilder Explore
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Explore.ExploreRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The log property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Log.LogRequestBuilder Log
+        public KApi.Log.LogRequestBuilder Log
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Log.LogRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Log.LogRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The me property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Me.MeRequestBuilder Me
+        public KApi.Me.MeRequestBuilder Me
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Me.MeRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Me.MeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The menu property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuRequestBuilder Menu
+        public KApi.Menu.MenuRequestBuilder Menu
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Menu.MenuRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The query property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Query.QueryRequestBuilder Query
+        public KApi.Query.QueryRequestBuilder Query
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Query.QueryRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Query.QueryRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The report property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Report.ReportRequestBuilder Report
+        public KApi.Report.ReportRequestBuilder Report
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Report.ReportRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Report.ReportRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The rowlevelsecurity property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder Rowlevelsecurity
+        public KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder Rowlevelsecurity
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The saved_query property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Saved_queryRequestBuilder Saved_query
+        public KApi.Saved_query.Saved_queryRequestBuilder Saved_query
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Saved_queryRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Saved_query.Saved_queryRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The security property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Security.SecurityRequestBuilder Security
+        public KApi.Security.SecurityRequestBuilder Security
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Security.SecurityRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Security.SecurityRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The sqllab property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.SqllabRequestBuilder Sqllab
+        public KApi.Sqllab.SqllabRequestBuilder Sqllab
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.SqllabRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Sqllab.SqllabRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tag property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Tag.TagRequestBuilder Tag
+        public KApi.Tag.TagRequestBuilder Tag
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Tag.TagRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Tag.TagRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.V1RequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.V1RequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -172,7 +172,7 @@ namespace KiotaSupersetAPI.Client.Api.V1
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.V1RequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.V1RequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

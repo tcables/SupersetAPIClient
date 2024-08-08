@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Validate_parameters
     [Obsolete("This class is obsolete. Use Validate_parametersPostResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class Validate_parametersResponse : global::KiotaSupersetAPI.Client.Api.V1.Database.Validate_parameters.Validate_parametersPostResponse, IParsable
+    public partial class Validate_parametersResponse : KApi.Database.Validate_parameters.Validate_parametersPostResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Validate_parameters.Validate_parametersResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Validate_parameters.Validate_parametersResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Database.Validate_parameters.Validate_parametersResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Database.Validate_parameters.Validate_parametersResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Validate_parameters.Validate_parametersResponse();
+            return new KApi.Database.Validate_parameters.Validate_parametersResponse();
         }
     }
 }

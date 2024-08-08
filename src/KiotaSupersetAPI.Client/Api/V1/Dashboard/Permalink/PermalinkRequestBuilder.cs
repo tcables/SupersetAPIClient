@@ -22,18 +22,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dashboard.permalink.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink.Item.WithKeyItemRequestBuilder this[string position]
+        /// <returns>A <see cref="KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
+        public KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("key", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

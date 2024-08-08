@@ -25,10 +25,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag
         /// <summary>The description_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_description_columns? DescriptionColumns { get; set; }
+        public KApi.Tag.TagGetResponse_description_columns? DescriptionColumns { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_description_columns DescriptionColumns { get; set; }
+        public KApi.Tag.TagGetResponse_description_columns DescriptionColumns { get; set; }
 #endif
         /// <summary>A list of item ids, useful when you don&apos;t know the column id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag
         /// <summary>The label_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_label_columns? LabelColumns { get; set; }
+        public KApi.Tag.TagGetResponse_label_columns? LabelColumns { get; set; }
 #nullable restore
 #else
-        public global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_label_columns LabelColumns { get; set; }
+        public KApi.Tag.TagGetResponse_label_columns LabelColumns { get; set; }
 #endif
         /// <summary>A list of columns</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +79,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag
         public List<global::KiotaSupersetAPI.Client.Models.TagRestApi.Get_list.Get_list> Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Tag.TagGetResponse"/> and sets the default values.
         /// </summary>
         public TagGetResponse()
         {
@@ -88,12 +88,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Tag.TagGetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Tag.TagGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse();
+            return new KApi.Tag.TagGetResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,9 +104,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
-                { "description_columns", n => { DescriptionColumns = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_description_columns>(global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_description_columns.CreateFromDiscriminatorValue); } },
+                { "description_columns", n => { DescriptionColumns = n.GetObjectValue<KApi.Tag.TagGetResponse_description_columns>(KApi.Tag.TagGetResponse_description_columns.CreateFromDiscriminatorValue); } },
                 { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-                { "label_columns", n => { LabelColumns = n.GetObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_label_columns>(global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_label_columns.CreateFromDiscriminatorValue); } },
+                { "label_columns", n => { LabelColumns = n.GetObjectValue<KApi.Tag.TagGetResponse_label_columns>(KApi.Tag.TagGetResponse_label_columns.CreateFromDiscriminatorValue); } },
                 { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
                 { "list_title", n => { ListTitle = n.GetStringValue(); } },
                 { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
@@ -121,9 +121,9 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_description_columns>("description_columns", DescriptionColumns);
+            writer.WriteObjectValue<KApi.Tag.TagGetResponse_description_columns>("description_columns", DescriptionColumns);
             writer.WriteCollectionOfPrimitiveValues<string>("ids", Ids);
-            writer.WriteObjectValue<global::KiotaSupersetAPI.Client.Api.V1.Tag.TagGetResponse_label_columns>("label_columns", LabelColumns);
+            writer.WriteObjectValue<KApi.Tag.TagGetResponse_label_columns>("label_columns", LabelColumns);
             writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
             writer.WriteStringValue("list_title", ListTitle);
             writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);

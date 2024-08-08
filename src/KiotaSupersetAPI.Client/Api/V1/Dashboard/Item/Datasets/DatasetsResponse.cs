@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Datasets
     [Obsolete("This class is obsolete. Use DatasetsGetResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class DatasetsResponse : global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Datasets.DatasetsGetResponse, IParsable
+    public partial class DatasetsResponse : KApi.Dashboard.Item.Datasets.DatasetsGetResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Datasets.DatasetsResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Datasets.DatasetsResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Datasets.DatasetsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Dashboard.Item.Datasets.DatasetsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Datasets.DatasetsResponse();
+            return new KApi.Dashboard.Item.Datasets.DatasetsResponse();
         }
     }
 }

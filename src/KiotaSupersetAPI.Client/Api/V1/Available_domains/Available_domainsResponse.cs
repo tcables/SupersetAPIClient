@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
     [Obsolete("This class is obsolete. Use Available_domainsGetResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class Available_domainsResponse : global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsGetResponse, IParsable
+    public partial class Available_domainsResponse : KApi.Available_domains.Available_domainsGetResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsResponse"/></returns>
+        /// <returns>A <see cref="KApi.Available_domains.Available_domainsResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Available_domains.Available_domainsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsResponse();
+            return new KApi.Available_domains.Available_domainsResponse();
         }
     }
 }

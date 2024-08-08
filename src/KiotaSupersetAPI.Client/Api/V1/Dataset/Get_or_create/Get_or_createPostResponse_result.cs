@@ -22,7 +22,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create
         /// <summary>The table_id property</summary>
         public int? TableId { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create.Get_or_createPostResponse_result"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Get_or_create.Get_or_createPostResponse_result"/> and sets the default values.
         /// </summary>
         public Get_or_createPostResponse_result()
         {
@@ -31,12 +31,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create.Get_or_createPostResponse_result"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Get_or_create.Get_or_createPostResponse_result"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create.Get_or_createPostResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Dataset.Get_or_create.Get_or_createPostResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create.Get_or_createPostResponse_result();
+            return new KApi.Dataset.Get_or_create.Get_or_createPostResponse_result();
         }
         /// <summary>
         /// The deserialization information for the current model

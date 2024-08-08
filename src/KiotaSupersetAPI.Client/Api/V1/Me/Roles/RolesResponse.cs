@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me.Roles
     [Obsolete("This class is obsolete. Use RolesGetResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class RolesResponse : global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesGetResponse, IParsable
+    public partial class RolesResponse : KApi.Me.Roles.RolesGetResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesResponse"/></returns>
+        /// <returns>A <see cref="KApi.Me.Roles.RolesResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Me.Roles.RolesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesResponse();
+            return new KApi.Me.Roles.RolesResponse();
         }
     }
 }

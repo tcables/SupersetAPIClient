@@ -24,12 +24,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me
     public partial class MeRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The roles property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesRequestBuilder Roles
+        public KApi.Me.Roles.RolesRequestBuilder Roles
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Me.Roles.RolesRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Me.Roles.RolesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.MeRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Me.MeRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -37,7 +37,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.MeRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Me.MeRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -47,17 +47,17 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me
         /// <summary>
         /// Gets the user object corresponding to the agent making the request, or returns a 401 error if the user is unauthenticated.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.MeGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Me.MeGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Me401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Me.MeGetResponse?> GetAsMeGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Me.MeGetResponse?> GetAsMeGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Me.MeGetResponse> GetAsMeGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Me.MeGetResponse> GetAsMeGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -65,23 +65,23 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me
             {
                 { "401", global::KiotaSupersetAPI.Client.Models.Me401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Me.MeGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Me.MeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Me.MeGetResponse>(requestInfo, KApi.Me.MeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets the user object corresponding to the agent making the request, or returns a 401 error if the user is unauthenticated.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.MeResponse"/></returns>
+        /// <returns>A <see cref="KApi.Me.MeResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Me401Error">When receiving a 401 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsMeGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Me.MeResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Me.MeResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Me.MeResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Me.MeResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -89,7 +89,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me
             {
                 { "401", global::KiotaSupersetAPI.Client.Models.Me401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Me.MeResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Me.MeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Me.MeResponse>(requestInfo, KApi.Me.MeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets the user object corresponding to the agent making the request, or returns a 401 error if the user is unauthenticated.
@@ -113,11 +113,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Me
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Me.MeRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Me.MeRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Me.MeRequestBuilder WithUrl(string rawUrl)
+        public KApi.Me.MeRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Me.MeRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Me.MeRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

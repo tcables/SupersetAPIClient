@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate
     public partial class InvalidateRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate.InvalidateRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Cachekey.Invalidate.InvalidateRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate.InvalidateRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Cachekey.Invalidate.InvalidateRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -89,11 +89,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate.InvalidateRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Cachekey.Invalidate.InvalidateRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate.InvalidateRequestBuilder WithUrl(string rawUrl)
+        public KApi.Cachekey.Invalidate.InvalidateRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate.InvalidateRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Cachekey.Invalidate.InvalidateRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites
     [Obsolete("This class is obsolete. Use FavoritesDeleteResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class FavoritesResponse : global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites.FavoritesDeleteResponse, IParsable
+    public partial class FavoritesResponse : KApi.Tag.Item.Favorites.FavoritesDeleteResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites.FavoritesResponse"/></returns>
+        /// <returns>A <see cref="KApi.Tag.Item.Favorites.FavoritesResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites.FavoritesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Tag.Item.Favorites.FavoritesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites.FavoritesResponse();
+            return new KApi.Tag.Item.Favorites.FavoritesResponse();
         }
     }
 }

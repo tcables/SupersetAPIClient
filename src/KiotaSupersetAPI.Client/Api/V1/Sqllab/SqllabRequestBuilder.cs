@@ -28,32 +28,32 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab
     public partial class SqllabRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The estimate property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Estimate.EstimateRequestBuilder Estimate
+        public KApi.Sqllab.Estimate.EstimateRequestBuilder Estimate
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Estimate.EstimateRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Sqllab.Estimate.EstimateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The execute property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Execute.ExecuteRequestBuilder Execute
+        public KApi.Sqllab.Execute.ExecuteRequestBuilder Execute
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Execute.ExecuteRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Sqllab.Execute.ExecuteRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The export property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.ExportRequestBuilder Export
+        public KApi.Sqllab.Export.ExportRequestBuilder Export
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Sqllab.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The format_sql property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlRequestBuilder Format_sql
+        public KApi.Sqllab.Format_sql.Format_sqlRequestBuilder Format_sql
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Sqllab.Format_sql.Format_sqlRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The results property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder Results
+        public KApi.Sqllab.Results.ResultsRequestBuilder Results
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Results.ResultsRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Sqllab.Results.ResultsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.SqllabRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Sqllab.SqllabRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -61,7 +61,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.SqllabRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Sqllab.SqllabRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -119,11 +119,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.SqllabRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Sqllab.SqllabRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.SqllabRequestBuilder WithUrl(string rawUrl)
+        public KApi.Sqllab.SqllabRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.SqllabRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Sqllab.SqllabRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

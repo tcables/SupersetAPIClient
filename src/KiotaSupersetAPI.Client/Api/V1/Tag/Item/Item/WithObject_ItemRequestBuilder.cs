@@ -25,18 +25,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.tag.item.item.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagItemRequestBuilder this[string position]
+        /// <returns>A <see cref="KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder"/></returns>
+        public KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("tag", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.WithObject_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Tag.Item.Item.WithObject_ItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -44,7 +44,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.WithObject_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Tag.Item.Item.WithObject_ItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -63,11 +63,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithObject_500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PostAsync(global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(KApi.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PostAsync(global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(KApi.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -89,11 +89,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KApi.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KApi.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -106,11 +106,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.WithObject_ItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Tag.Item.Item.WithObject_ItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.WithObject_ItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Tag.Item.Item.WithObject_ItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

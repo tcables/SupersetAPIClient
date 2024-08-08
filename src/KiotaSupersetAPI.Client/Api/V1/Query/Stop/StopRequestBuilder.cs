@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
     public partial class StopRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Query.Stop.StopRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Query.Stop.StopRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
         /// <summary>
         /// Manually stop a query with client_id
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Query.Stop.StopPostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,11 +51,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Stop500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse?> PostAsStopPostResponseAsync(global::KiotaSupersetAPI.Client.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Query.Stop.StopPostResponse?> PostAsStopPostResponseAsync(global::KiotaSupersetAPI.Client.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse> PostAsStopPostResponseAsync(global::KiotaSupersetAPI.Client.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Query.Stop.StopPostResponse> PostAsStopPostResponseAsync(global::KiotaSupersetAPI.Client.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -67,12 +67,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
                 { "404", global::KiotaSupersetAPI.Client.Models.Stop404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Stop500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Query.Stop.StopPostResponse>(requestInfo, KApi.Query.Stop.StopPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Manually stop a query with client_id
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopResponse"/></returns>
+        /// <returns>A <see cref="KApi.Query.Stop.StopResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -83,11 +83,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
         [Obsolete("This method is obsolete. Use PostAsStopPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Query.Stop.StopResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Query.Stop.StopResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -99,7 +99,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
                 { "404", global::KiotaSupersetAPI.Client.Models.Stop404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Stop500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Query.Stop.StopResponse>(requestInfo, KApi.Query.Stop.StopResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Manually stop a query with client_id
@@ -126,11 +126,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Query.Stop.StopRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopRequestBuilder WithUrl(string rawUrl)
+        public KApi.Query.Stop.StopRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Query.Stop.StopRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

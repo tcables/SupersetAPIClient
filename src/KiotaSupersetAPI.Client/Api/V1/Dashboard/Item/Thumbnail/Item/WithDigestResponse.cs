@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Thumbnail.Item
     [Obsolete("This class is obsolete. Use WithDigestGetResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class WithDigestResponse : global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse, IParsable
+    public partial class WithDigestResponse : KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Thumbnail.Item.WithDigestResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Thumbnail.Item.WithDigestResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Thumbnail.Item.WithDigestResponse();
+            return new KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse();
         }
     }
 }

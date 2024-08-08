@@ -25,17 +25,17 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore
     public partial class ExploreRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The form_data property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Form_dataRequestBuilder Form_data
+        public KApi.Explore.Form_data.Form_dataRequestBuilder Form_data
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Form_dataRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Explore.Form_data.Form_dataRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The permalink property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Explore.Permalink.PermalinkRequestBuilder Permalink
+        public KApi.Explore.Permalink.PermalinkRequestBuilder Permalink
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Explore.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Explore.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Explore.ExploreRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -43,7 +43,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Explore.ExploreRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -63,11 +63,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.ExploreContextSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.ExploreContextSchema?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::KiotaSupersetAPI.Client.Models.ExploreContextSchema?> GetAsync(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.ExploreContextSchema> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::KiotaSupersetAPI.Client.Models.ExploreContextSchema> GetAsync(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -88,11 +88,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -103,11 +103,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Explore.ExploreRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder WithUrl(string rawUrl)
+        public KApi.Explore.ExploreRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Explore.ExploreRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Assembles Explore related information (form_data, slice, dataset) in a single endpoint.&lt;br/&gt;&lt;br/&gt; The information can be assembled from:&lt;br/&gt; - The cache using a form_data_key&lt;br/&gt; - The metadata database using a permalink_key&lt;br/&gt; - Build from scratch using dataset or slice identifiers.
@@ -152,7 +152,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class ExploreRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>
+        public partial class ExploreRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>
         {
         }
     }

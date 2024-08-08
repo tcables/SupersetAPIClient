@@ -22,31 +22,31 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.column.item collection</summary>
         /// <param name="position">The column id for this dataset</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
+        public KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("column_id", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.column.item collection</summary>
         /// <param name="position">The column id for this dataset</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder this[string position]
+        public KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("column_id", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.ColumnRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Item.Column.ColumnRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -54,7 +54,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column.ColumnRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Item.Column.ColumnRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

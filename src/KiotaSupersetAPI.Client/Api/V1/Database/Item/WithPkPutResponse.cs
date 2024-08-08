@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         public global::KiotaSupersetAPI.Client.Models.DatabaseRestApi.Put Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkPutResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.WithPkPutResponse"/> and sets the default values.
         /// </summary>
         public WithPkPutResponse()
         {
@@ -40,12 +40,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkPutResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.WithPkPutResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Database.Item.WithPkPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.WithPkPutResponse();
+            return new KApi.Database.Item.WithPkPutResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

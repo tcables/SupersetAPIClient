@@ -22,13 +22,13 @@ namespace KiotaSupersetAPI.Client.Api.V1.Css_template._info
         /// <summary>The column_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Api.V1.Css_template._info._infoGetResponse_filters_column_name>? ColumnName { get; set; }
+        public List<KApi.Css_template._info._infoGetResponse_filters_column_name>? ColumnName { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Api.V1.Css_template._info._infoGetResponse_filters_column_name> ColumnName { get; set; }
+        public List<KApi.Css_template._info._infoGetResponse_filters_column_name> ColumnName { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Css_template._info._infoGetResponse_filters"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Css_template._info._infoGetResponse_filters"/> and sets the default values.
         /// </summary>
         public _infoGetResponse_filters()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Css_template._info
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Css_template._info._infoGetResponse_filters"/></returns>
+        /// <returns>A <see cref="KApi.Css_template._info._infoGetResponse_filters"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Css_template._info._infoGetResponse_filters CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Css_template._info._infoGetResponse_filters CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Css_template._info._infoGetResponse_filters();
+            return new KApi.Css_template._info._infoGetResponse_filters();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +52,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Css_template._info
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "column_name", n => { ColumnName = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Api.V1.Css_template._info._infoGetResponse_filters_column_name>(global::KiotaSupersetAPI.Client.Api.V1.Css_template._info._infoGetResponse_filters_column_name.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "column_name", n => { ColumnName = n.GetCollectionOfObjectValues<KApi.Css_template._info._infoGetResponse_filters_column_name>(KApi.Css_template._info._infoGetResponse_filters_column_name.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Css_template._info
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Api.V1.Css_template._info._infoGetResponse_filters_column_name>("column_name", ColumnName);
+            writer.WriteCollectionOfObjectValues<KApi.Css_template._info._infoGetResponse_filters_column_name>("column_name", ColumnName);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

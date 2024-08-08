@@ -29,32 +29,32 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
     public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The cache_screenshot property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder Cache_screenshot
+        public KApi.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder Cache_screenshot
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The data property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Data.DataRequestBuilder Data
+        public KApi.Chart.Item.Data.DataRequestBuilder Data
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Data.DataRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Chart.Item.Data.DataRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The favorites property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Favorites.FavoritesRequestBuilder Favorites
+        public KApi.Chart.Item.Favorites.FavoritesRequestBuilder Favorites
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Chart.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The screenshot property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot.ScreenshotRequestBuilder Screenshot
+        public KApi.Chart.Item.Screenshot.ScreenshotRequestBuilder Screenshot
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot.ScreenshotRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Chart.Item.Screenshot.ScreenshotRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The thumbnail property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Thumbnail.ThumbnailRequestBuilder Thumbnail
+        public KApi.Chart.Item.Thumbnail.ThumbnailRequestBuilder Thumbnail
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Chart.Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Chart.Item.WithPkItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -62,7 +62,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Chart.Item.WithPkItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -72,7 +72,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         /// <summary>
         /// Delete a chart
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Chart.Item.WithPkDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk401Error">When receiving a 401 status code</exception>
@@ -82,11 +82,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkDeleteResponse?> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkDeleteResponse?> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -98,12 +98,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkDeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkDeleteResponse>(requestInfo, KApi.Chart.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a chart
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse"/></returns>
+        /// <returns>A <see cref="KApi.Chart.Item.WithPkResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk401Error">When receiving a 401 status code</exception>
@@ -114,11 +114,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         [Obsolete("This method is obsolete. Use DeleteAsWithPkDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -130,12 +130,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkResponse>(requestInfo, KApi.Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get an item model
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Chart.Item.WithPkGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -145,11 +145,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkGetResponse?> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkGetResponse?> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkGetResponse> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkGetResponse> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -161,12 +161,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkGetResponse>(requestInfo, KApi.Chart.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get an item model
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse"/></returns>
+        /// <returns>A <see cref="KApi.Chart.Item.WithPkResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -177,11 +177,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         [Obsolete("This method is obsolete. Use GetAsWithPkGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkResponse?> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -193,12 +193,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkResponse>(requestInfo, KApi.Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a chart
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkPutResponse"/></returns>
+        /// <returns>A <see cref="KApi.Chart.Item.WithPkPutResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -210,11 +210,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithPk500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkPutResponse?> PutAsWithPkPutResponseAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkPutResponse?> PutAsWithPkPutResponseAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -228,12 +228,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkPutResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkPutResponse>(requestInfo, KApi.Chart.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a chart
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse"/></returns>
+        /// <returns>A <see cref="KApi.Chart.Item.WithPkResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -246,11 +246,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         [Obsolete("This method is obsolete. Use PutAsWithPkPutResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse?> PutAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkResponse?> PutAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse> PutAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Chart.Item.WithPkResponse> PutAsync(global::KiotaSupersetAPI.Client.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -264,7 +264,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithPk422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithPk500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkResponse>(requestInfo, KApi.Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a chart
@@ -292,11 +292,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -329,11 +329,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Chart.Item.WithPkItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Chart.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Chart.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
@@ -364,7 +364,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class WithPkItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>
+        public partial class WithPkItemRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>
         {
         }
         /// <summary>

@@ -22,18 +22,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.embedded_dashboard.item collection</summary>
         /// <param name="position">The embedded configuration uuid</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuItemRequestBuilder this[string position]
+        /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder"/></returns>
+        public KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("uuid", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Embedded_dashboardRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Embedded_dashboard.Embedded_dashboardRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Embedded_dashboardRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Embedded_dashboard.Embedded_dashboardRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

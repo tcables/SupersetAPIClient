@@ -21,12 +21,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Cachekey
     public partial class CachekeyRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The invalidate property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate.InvalidateRequestBuilder Invalidate
+        public KApi.Cachekey.Invalidate.InvalidateRequestBuilder Invalidate
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Cachekey.Invalidate.InvalidateRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Cachekey.Invalidate.InvalidateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Cachekey.CachekeyRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Cachekey.CachekeyRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -34,7 +34,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Cachekey
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Cachekey.CachekeyRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Cachekey.CachekeyRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

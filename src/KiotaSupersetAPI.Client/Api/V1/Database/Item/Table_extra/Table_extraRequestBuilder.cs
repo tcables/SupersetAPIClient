@@ -22,18 +22,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.database.item.table_extra.item collection</summary>
         /// <param name="position">Table name</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="KApi.Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder"/></returns>
+        public KApi.Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("table_name", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Table_extraRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Table_extra.Table_extraRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Table_extra.Table_extraRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Table_extra.Table_extraRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

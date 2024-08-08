@@ -37,7 +37,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query
         public global::KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Post Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Saved_queryPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Saved_query.Saved_queryPostResponse"/> and sets the default values.
         /// </summary>
         public Saved_queryPostResponse()
         {
@@ -46,12 +46,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Saved_queryPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Saved_query.Saved_queryPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Saved_queryPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Saved_query.Saved_queryPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Saved_queryPostResponse();
+            return new KApi.Saved_query.Saved_queryPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

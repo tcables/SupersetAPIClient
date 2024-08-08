@@ -25,18 +25,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Data
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.chart.data.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Data.Item.WithCache_keyItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.Data.Item.WithCache_keyItemRequestBuilder this[string position]
+        /// <returns>A <see cref="KApi.Chart.Data.Item.WithCache_keyItemRequestBuilder"/></returns>
+        public KApi.Chart.Data.Item.WithCache_keyItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("cache_key", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Chart.Data.Item.WithCache_keyItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Chart.Data.Item.WithCache_keyItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Data.DataRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Chart.Data.DataRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -44,7 +44,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Data
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Data.DataRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Chart.Data.DataRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -105,11 +105,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Data
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Data.DataRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Chart.Data.DataRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.Data.DataRequestBuilder WithUrl(string rawUrl)
+        public KApi.Chart.Data.DataRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Chart.Data.DataRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Chart.Data.DataRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

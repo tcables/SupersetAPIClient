@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         public global::KiotaSupersetAPI.Client.Models.RLSRestApi.Post Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Rowlevelsecurity.RowlevelsecurityPostResponse"/> and sets the default values.
         /// </summary>
         public RowlevelsecurityPostResponse()
         {
@@ -40,12 +40,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.RowlevelsecurityPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Rowlevelsecurity.RowlevelsecurityPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityPostResponse();
+            return new KApi.Rowlevelsecurity.RowlevelsecurityPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

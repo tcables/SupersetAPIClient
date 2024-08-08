@@ -37,7 +37,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Css_template
         public global::KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Post Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Css_template.Css_templatePostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Css_template.Css_templatePostResponse"/> and sets the default values.
         /// </summary>
         public Css_templatePostResponse()
         {
@@ -46,12 +46,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Css_template
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Css_template.Css_templatePostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Css_template.Css_templatePostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Css_template.Css_templatePostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Css_template.Css_templatePostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Css_template.Css_templatePostResponse();
+            return new KApi.Css_template.Css_templatePostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

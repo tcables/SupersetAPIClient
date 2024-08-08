@@ -33,72 +33,72 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
     public partial class DatasetRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The _info property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset._info._infoRequestBuilder _info
+        public KApi.Dataset._info._infoRequestBuilder _info
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dataset._info._infoRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dataset._info._infoRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The distinct property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Distinct.DistinctRequestBuilder Distinct
+        public KApi.Dataset.Distinct.DistinctRequestBuilder Distinct
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Distinct.DistinctRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dataset.Distinct.DistinctRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The duplicate property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateRequestBuilder Duplicate
+        public KApi.Dataset.Duplicate.DuplicateRequestBuilder Duplicate
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dataset.Duplicate.DuplicateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The export property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Export.ExportRequestBuilder Export
+        public KApi.Dataset.Export.ExportRequestBuilder Export
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dataset.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The get_or_create property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create.Get_or_createRequestBuilder Get_or_create
+        public KApi.Dataset.Get_or_create.Get_or_createRequestBuilder Get_or_create
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Get_or_create.Get_or_createRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dataset.Get_or_create.Get_or_createRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The import property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Import.ImportRequestBuilder Import
+        public KApi.Dataset.Import.ImportRequestBuilder Import
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dataset.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The related property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Related.RelatedRequestBuilder Related
+        public KApi.Dataset.Related.RelatedRequestBuilder Related
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dataset.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The warm_up_cache property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder Warm_up_cache
+        public KApi.Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder Warm_up_cache
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.WithPkItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.WithPkItemRequestBuilder this[int position]
+        /// <returns>A <see cref="KApi.Dataset.Item.WithPkItemRequestBuilder"/></returns>
+        public KApi.Dataset.Item.WithPkItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("pk", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Dataset.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.WithPkItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Item.WithPkItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.WithPkItemRequestBuilder this[string position]
+        public KApi.Dataset.Item.WithPkItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Dataset.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.DatasetRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -106,7 +106,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.DatasetRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -116,7 +116,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         /// <summary>
         /// Bulk delete datasets
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.DatasetDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dataset400Error">When receiving a 400 status code</exception>
@@ -127,11 +127,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dataset500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetDeleteResponse?> DeleteAsDatasetDeleteResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetDeleteResponse?> DeleteAsDatasetDeleteResponseAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetDeleteResponse> DeleteAsDatasetDeleteResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetDeleteResponse> DeleteAsDatasetDeleteResponseAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -144,12 +144,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
                 { "422", global::KiotaSupersetAPI.Client.Models.Dataset422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dataset500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetDeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.DatasetDeleteResponse>(requestInfo, KApi.Dataset.DatasetDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Bulk delete datasets
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.DatasetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dataset400Error">When receiving a 400 status code</exception>
@@ -161,11 +161,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         [Obsolete("This method is obsolete. Use DeleteAsDatasetDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse?> DeleteAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetResponse?> DeleteAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse> DeleteAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetResponse> DeleteAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -178,12 +178,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
                 { "422", global::KiotaSupersetAPI.Client.Models.Dataset422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dataset500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.DatasetResponse>(requestInfo, KApi.Dataset.DatasetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets a list of datasets, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.DatasetGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dataset400Error">When receiving a 400 status code</exception>
@@ -192,11 +192,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dataset500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetGetResponse?> GetAsDatasetGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetGetResponse?> GetAsDatasetGetResponseAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetGetResponse> GetAsDatasetGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetGetResponse> GetAsDatasetGetResponseAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -207,12 +207,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
                 { "422", global::KiotaSupersetAPI.Client.Models.Dataset422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dataset500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.DatasetGetResponse>(requestInfo, KApi.Dataset.DatasetGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets a list of datasets, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.DatasetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dataset400Error">When receiving a 400 status code</exception>
@@ -222,11 +222,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         [Obsolete("This method is obsolete. Use GetAsDatasetGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetResponse?> GetAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetResponse> GetAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -237,12 +237,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
                 { "422", global::KiotaSupersetAPI.Client.Models.Dataset422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dataset500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.DatasetResponse>(requestInfo, KApi.Dataset.DatasetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new dataset
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.DatasetPostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -252,11 +252,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Dataset500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetPostResponse?> PostAsDatasetPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetPostResponse?> PostAsDatasetPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetPostResponse> PostAsDatasetPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetPostResponse> PostAsDatasetPostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -268,12 +268,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
                 { "422", global::KiotaSupersetAPI.Client.Models.Dataset422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dataset500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetPostResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.DatasetPostResponse>(requestInfo, KApi.Dataset.DatasetPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new dataset
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.DatasetResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -284,11 +284,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         [Obsolete("This method is obsolete. Use PostAsDatasetPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.DatasetResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -300,7 +300,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
                 { "422", global::KiotaSupersetAPI.Client.Models.Dataset422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Dataset500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.DatasetResponse>(requestInfo, KApi.Dataset.DatasetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Bulk delete datasets
@@ -309,11 +309,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
@@ -328,11 +328,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -365,11 +365,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.DatasetRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder WithUrl(string rawUrl)
+        public KApi.Dataset.DatasetRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Dataset.DatasetRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Bulk delete datasets
@@ -392,7 +392,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class DatasetRequestBuilderDeleteRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>
+        public partial class DatasetRequestBuilderDeleteRequestConfiguration : RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>
         {
         }
         /// <summary>
@@ -416,7 +416,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class DatasetRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>
+        public partial class DatasetRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>
         {
         }
         /// <summary>

@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas
     public partial class SchemasRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Schemas.SchemasRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Schemas.SchemasRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -50,11 +50,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.SchemasResponseSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.SchemasResponseSchema?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::KiotaSupersetAPI.Client.Models.SchemasResponseSchema?> GetAsync(Action<RequestConfiguration<KApi.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.SchemasResponseSchema> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::KiotaSupersetAPI.Client.Models.SchemasResponseSchema> GetAsync(Action<RequestConfiguration<KApi.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -74,11 +74,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -89,11 +89,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.Schemas.SchemasRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder WithUrl(string rawUrl)
+        public KApi.Database.Item.Schemas.SchemasRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Database.Item.Schemas.SchemasRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Get all schemas from a database
@@ -116,7 +116,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class SchemasRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>
+        public partial class SchemasRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Database.Item.Schemas.SchemasRequestBuilder.SchemasRequestBuilderGetQueryParameters>
         {
         }
     }

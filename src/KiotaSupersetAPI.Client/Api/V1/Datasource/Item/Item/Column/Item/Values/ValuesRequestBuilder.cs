@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values
     public partial class ValuesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values
         /// <summary>
         /// Get possible values for a datasource column
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Values400Error">When receiving a 400 status code</exception>
@@ -51,11 +51,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Values500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse?> GetAsValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse?> GetAsValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse> GetAsValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse> GetAsValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -67,12 +67,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values
                 { "404", global::KiotaSupersetAPI.Client.Models.Values404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Values500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse>(requestInfo, KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get possible values for a datasource column
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesResponse"/></returns>
+        /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Values400Error">When receiving a 400 status code</exception>
@@ -83,11 +83,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values
         [Obsolete("This method is obsolete. Use GetAsValuesGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -99,7 +99,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values
                 { "404", global::KiotaSupersetAPI.Client.Models.Values404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Values500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse>(requestInfo, KApi.Datasource.Item.Item.Column.Item.Values.ValuesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get possible values for a datasource column
@@ -123,11 +123,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder WithUrl(string rawUrl)
+        public KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
     public partial class FavoritesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         /// <summary>
         /// Remove the dashboard from the user favorite list
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites401Error">When receiving a 401 status code</exception>
@@ -49,11 +49,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesDeleteResponse?> DeleteAsFavoritesDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Favorites.FavoritesDeleteResponse?> DeleteAsFavoritesDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesDeleteResponse> DeleteAsFavoritesDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Favorites.FavoritesDeleteResponse> DeleteAsFavoritesDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -63,12 +63,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
                 { "404", global::KiotaSupersetAPI.Client.Models.Favorites404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Favorites500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesDeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Favorites.FavoritesDeleteResponse>(requestInfo, KApi.Dashboard.Item.Favorites.FavoritesDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Remove the dashboard from the user favorite list
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites401Error">When receiving a 401 status code</exception>
@@ -77,11 +77,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         [Obsolete("This method is obsolete. Use DeleteAsFavoritesDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Favorites.FavoritesResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Favorites.FavoritesResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -91,12 +91,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
                 { "404", global::KiotaSupersetAPI.Client.Models.Favorites404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Favorites500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Favorites.FavoritesResponse>(requestInfo, KApi.Dashboard.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Mark the dashboard as favorite for the current user
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites401Error">When receiving a 401 status code</exception>
@@ -104,11 +104,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse?> PostAsFavoritesPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Favorites.FavoritesPostResponse?> PostAsFavoritesPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse> PostAsFavoritesPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Favorites.FavoritesPostResponse> PostAsFavoritesPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
@@ -118,12 +118,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
                 { "404", global::KiotaSupersetAPI.Client.Models.Favorites404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Favorites500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Favorites.FavoritesPostResponse>(requestInfo, KApi.Dashboard.Item.Favorites.FavoritesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Mark the dashboard as favorite for the current user
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Favorites401Error">When receiving a 401 status code</exception>
@@ -132,11 +132,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         [Obsolete("This method is obsolete. Use PostAsFavoritesPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Favorites.FavoritesResponse?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dashboard.Item.Favorites.FavoritesResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
@@ -146,7 +146,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
                 { "404", global::KiotaSupersetAPI.Client.Models.Favorites404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Favorites500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Favorites.FavoritesResponse>(requestInfo, KApi.Dashboard.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Remove the dashboard from the user favorite list
@@ -189,11 +189,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesRequestBuilder WithUrl(string rawUrl)
+        public KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Favorites.FavoritesRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

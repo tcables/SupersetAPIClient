@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets
         public global::KiotaSupersetAPI.Client.Models.FilterSetRestApi.Post Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets.FiltersetsPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dashboard.Item.Filtersets.FiltersetsPostResponse"/> and sets the default values.
         /// </summary>
         public FiltersetsPostResponse()
         {
@@ -40,12 +40,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets.FiltersetsPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dashboard.Item.Filtersets.FiltersetsPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets.FiltersetsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Dashboard.Item.Filtersets.FiltersetsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets.FiltersetsPostResponse();
+            return new KApi.Dashboard.Item.Filtersets.FiltersetsPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

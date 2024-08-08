@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
     public partial class MenuRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Menu.MenuRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Menu.MenuRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,17 +41,17 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
         /// <summary>
         /// Get the menu data structure. Returns a forest like structure with the menu the user has access to
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Menu.MenuGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Menu401Error">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse?> GetAsMenuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Menu.MenuGetResponse?> GetAsMenuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse> GetAsMenuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Menu.MenuGetResponse> GetAsMenuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -59,23 +59,23 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
             {
                 { "401", global::KiotaSupersetAPI.Client.Models.Menu401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Menu.MenuGetResponse>(requestInfo, KApi.Menu.MenuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the menu data structure. Returns a forest like structure with the menu the user has access to
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuResponse"/></returns>
+        /// <returns>A <see cref="KApi.Menu.MenuResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Menu401Error">When receiving a 401 status code</exception>
         [Obsolete("This method is obsolete. Use GetAsMenuGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Menu.MenuResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Menu.MenuResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -83,7 +83,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
             {
                 { "401", global::KiotaSupersetAPI.Client.Models.Menu401Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Menu.MenuResponse>(requestInfo, KApi.Menu.MenuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the menu data structure. Returns a forest like structure with the menu the user has access to
@@ -107,11 +107,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Menu.MenuRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuRequestBuilder WithUrl(string rawUrl)
+        public KApi.Menu.MenuRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Menu.MenuRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

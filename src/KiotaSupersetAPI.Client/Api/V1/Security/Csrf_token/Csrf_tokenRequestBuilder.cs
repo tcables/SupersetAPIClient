@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token
     public partial class Csrf_tokenRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Security.Csrf_token.Csrf_tokenRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Security.Csrf_token.Csrf_tokenRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,18 +41,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token
         /// <summary>
         /// Get the CSRF token
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Security.Csrf_token.Csrf_tokenGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Csrf_token401Error">When receiving a 401 status code</exception>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Csrf_token500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenGetResponse?> GetAsCsrf_tokenGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Security.Csrf_token.Csrf_tokenGetResponse?> GetAsCsrf_tokenGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenGetResponse> GetAsCsrf_tokenGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Security.Csrf_token.Csrf_tokenGetResponse> GetAsCsrf_tokenGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -61,12 +61,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token
                 { "401", global::KiotaSupersetAPI.Client.Models.Csrf_token401Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Csrf_token500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Security.Csrf_token.Csrf_tokenGetResponse>(requestInfo, KApi.Security.Csrf_token.Csrf_tokenGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the CSRF token
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenResponse"/></returns>
+        /// <returns>A <see cref="KApi.Security.Csrf_token.Csrf_tokenResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Csrf_token401Error">When receiving a 401 status code</exception>
@@ -74,11 +74,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token
         [Obsolete("This method is obsolete. Use GetAsCsrf_tokenGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Security.Csrf_token.Csrf_tokenResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Security.Csrf_token.Csrf_tokenResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -87,7 +87,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token
                 { "401", global::KiotaSupersetAPI.Client.Models.Csrf_token401Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Csrf_token500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Security.Csrf_token.Csrf_tokenResponse>(requestInfo, KApi.Security.Csrf_token.Csrf_tokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the CSRF token
@@ -111,11 +111,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Security.Csrf_token.Csrf_tokenRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenRequestBuilder WithUrl(string rawUrl)
+        public KApi.Security.Csrf_token.Csrf_tokenRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token.Csrf_tokenRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Security.Csrf_token.Csrf_tokenRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

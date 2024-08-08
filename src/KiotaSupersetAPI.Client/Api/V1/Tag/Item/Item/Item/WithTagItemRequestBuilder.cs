@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
     public partial class WithTagItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
         /// <summary>
         /// Delete a tagged object
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Tag.Item.Item.Item.WithTagDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag401Error">When receiving a 401 status code</exception>
@@ -51,11 +51,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagDeleteResponse?> DeleteAsWithTagDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Tag.Item.Item.Item.WithTagDeleteResponse?> DeleteAsWithTagDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagDeleteResponse> DeleteAsWithTagDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Tag.Item.Item.Item.WithTagDeleteResponse> DeleteAsWithTagDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -67,12 +67,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithTag422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithTag500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagDeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Tag.Item.Item.Item.WithTagDeleteResponse>(requestInfo, KApi.Tag.Item.Item.Item.WithTagDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a tagged object
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagResponse"/></returns>
+        /// <returns>A <see cref="KApi.Tag.Item.Item.Item.WithTagResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithTag401Error">When receiving a 401 status code</exception>
@@ -83,11 +83,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
         [Obsolete("This method is obsolete. Use DeleteAsWithTagDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Tag.Item.Item.Item.WithTagResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Tag.Item.Item.Item.WithTagResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -99,7 +99,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithTag422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithTag500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Tag.Item.Item.Item.WithTagResponse>(requestInfo, KApi.Tag.Item.Item.Item.WithTagResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a tagged object
@@ -123,11 +123,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item.Item.WithTagItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

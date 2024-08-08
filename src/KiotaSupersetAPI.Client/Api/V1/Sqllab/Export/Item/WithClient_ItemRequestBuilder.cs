@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.Item
     public partial class WithClient_ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.Item.WithClient_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Sqllab.Export.Item.WithClient_ItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.Item.WithClient_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Sqllab.Export.Item.WithClient_ItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -91,11 +91,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.Item.WithClient_ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Sqllab.Export.Item.WithClient_ItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.Item.WithClient_ItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Sqllab.Export.Item.WithClient_ItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Export.Item.WithClient_ItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Sqllab.Export.Item.WithClient_ItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

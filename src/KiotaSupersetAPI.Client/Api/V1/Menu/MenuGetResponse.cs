@@ -22,13 +22,13 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
         /// <summary>Menu items in a forest like data structure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse_result>? Result { get; set; }
+        public List<KApi.Menu.MenuGetResponse_result>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse_result> Result { get; set; }
+        public List<KApi.Menu.MenuGetResponse_result> Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Menu.MenuGetResponse"/> and sets the default values.
         /// </summary>
         public MenuGetResponse()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Menu.MenuGetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Menu.MenuGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse();
+            return new KApi.Menu.MenuGetResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +52,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse_result>(global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse_result.CreateFromDiscriminatorValue)?.ToList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<KApi.Menu.MenuGetResponse_result>(KApi.Menu.MenuGetResponse_result.CreateFromDiscriminatorValue)?.ToList(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Menu
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::KiotaSupersetAPI.Client.Api.V1.Menu.MenuGetResponse_result>("result", Result);
+            writer.WriteCollectionOfObjectValues<KApi.Menu.MenuGetResponse_result>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace
     public partial class ConvertRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -50,11 +50,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.AdvancedDataTypeSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Models.AdvancedDataTypeSchema?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::KiotaSupersetAPI.Client.Models.AdvancedDataTypeSchema?> GetAsync(Action<RequestConfiguration<KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Models.AdvancedDataTypeSchema> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::KiotaSupersetAPI.Client.Models.AdvancedDataTypeSchema> GetAsync(Action<RequestConfiguration<KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -74,11 +74,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -89,11 +89,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder WithUrl(string rawUrl)
+        public KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Returns an AdvancedDataTypeResponse object populated with the passed in args.
@@ -116,7 +116,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class ConvertRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>
+        public partial class ConvertRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>
         {
         }
     }

@@ -28,7 +28,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
         public string Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Query.Stop.StopPostResponse"/> and sets the default values.
         /// </summary>
         public StopPostResponse()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Query.Stop.StopPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Query.Stop.StopPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse();
+            return new KApi.Query.Stop.StopPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

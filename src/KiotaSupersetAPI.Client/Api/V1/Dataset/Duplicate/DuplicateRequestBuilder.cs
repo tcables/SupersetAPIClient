@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
     public partial class DuplicateRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Duplicate.DuplicateRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Duplicate.DuplicateRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
         /// <summary>
         /// Duplicate a dataset
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicatePostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Duplicate.DuplicatePostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -53,11 +53,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Duplicate500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicatePostResponse?> PostAsDuplicatePostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Duplicate.DuplicatePostResponse?> PostAsDuplicatePostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicatePostResponse> PostAsDuplicatePostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Duplicate.DuplicatePostResponse> PostAsDuplicatePostResponseAsync(global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -71,12 +71,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
                 { "422", global::KiotaSupersetAPI.Client.Models.Duplicate422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Duplicate500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicatePostResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.Duplicate.DuplicatePostResponse>(requestInfo, KApi.Dataset.Duplicate.DuplicatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Duplicate a dataset
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateResponse"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Duplicate.DuplicateResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -89,11 +89,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
         [Obsolete("This method is obsolete. Use PostAsDuplicatePostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Duplicate.DuplicateResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Dataset.Duplicate.DuplicateResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -107,7 +107,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
                 { "422", global::KiotaSupersetAPI.Client.Models.Duplicate422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Duplicate500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Dataset.Duplicate.DuplicateResponse>(requestInfo, KApi.Dataset.Duplicate.DuplicateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Duplicate a dataset
@@ -134,11 +134,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Duplicate.DuplicateRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateRequestBuilder WithUrl(string rawUrl)
+        public KApi.Dataset.Duplicate.DuplicateRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Duplicate.DuplicateRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Dataset.Duplicate.DuplicateRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

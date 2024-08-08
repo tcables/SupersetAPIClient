@@ -22,17 +22,17 @@ namespace KiotaSupersetAPI.Client.Api.V1.Assets
     public partial class AssetsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The export property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Assets.Export.ExportRequestBuilder Export
+        public KApi.Assets.Export.ExportRequestBuilder Export
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Assets.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Assets.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The import property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Assets.Import.ImportRequestBuilder Import
+        public KApi.Assets.Import.ImportRequestBuilder Import
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Assets.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Assets.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Assets.AssetsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Assets.AssetsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -40,7 +40,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Assets
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Assets.AssetsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Assets.AssetsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

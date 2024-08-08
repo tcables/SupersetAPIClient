@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item
         public global::KiotaSupersetAPI.Client.Models.TagRestApi.Put Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Object_typePutResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Tag.Item.Object_typePutResponse"/> and sets the default values.
         /// </summary>
         public Object_typePutResponse()
         {
@@ -40,12 +40,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Object_typePutResponse"/></returns>
+        /// <returns>A <see cref="KApi.Tag.Item.Object_typePutResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Object_typePutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Tag.Item.Object_typePutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Tag.Item.Object_typePutResponse();
+            return new KApi.Tag.Item.Object_typePutResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

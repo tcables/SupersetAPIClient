@@ -28,7 +28,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         public string FormData { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyGetResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Explore.Form_data.Item.WithKeyGetResponse"/> and sets the default values.
         /// </summary>
         public WithKeyGetResponse()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyGetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Explore.Form_data.Item.WithKeyGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Item.WithKeyGetResponse();
+            return new KApi.Explore.Form_data.Item.WithKeyGetResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

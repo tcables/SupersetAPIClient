@@ -28,7 +28,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Login
         public string Password { get; set; }
 #endif
         /// <summary>Choose an authentication provider</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostRequestBody_provider? Provider { get; set; }
+        public KApi.Security.Login.LoginPostRequestBody_provider? Provider { get; set; }
         /// <summary>If true a refresh token is provided also</summary>
         public bool? Refresh { get; set; }
         /// <summary>The username for authentication</summary>
@@ -40,7 +40,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Login
         public string Username { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostRequestBody"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Security.Login.LoginPostRequestBody"/> and sets the default values.
         /// </summary>
         public LoginPostRequestBody()
         {
@@ -49,12 +49,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Login
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostRequestBody"/></returns>
+        /// <returns>A <see cref="KApi.Security.Login.LoginPostRequestBody"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Security.Login.LoginPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostRequestBody();
+            return new KApi.Security.Login.LoginPostRequestBody();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,7 +65,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Login
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "password", n => { Password = n.GetStringValue(); } },
-                { "provider", n => { Provider = n.GetEnumValue<global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostRequestBody_provider>(); } },
+                { "provider", n => { Provider = n.GetEnumValue<KApi.Security.Login.LoginPostRequestBody_provider>(); } },
                 { "refresh", n => { Refresh = n.GetBoolValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
             };
@@ -78,7 +78,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Login
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("password", Password);
-            writer.WriteEnumValue<global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostRequestBody_provider>("provider", Provider);
+            writer.WriteEnumValue<KApi.Security.Login.LoginPostRequestBody_provider>("provider", Provider);
             writer.WriteBoolValue("refresh", Refresh);
             writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);

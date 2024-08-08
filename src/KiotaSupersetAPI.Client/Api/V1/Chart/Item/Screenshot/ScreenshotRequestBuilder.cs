@@ -22,18 +22,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.chart.item.screenshot.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder this[string position]
+        /// <returns>A <see cref="KApi.Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder"/></returns>
+        public KApi.Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("digest", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot.ScreenshotRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Chart.Item.Screenshot.ScreenshotRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot.ScreenshotRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Chart.Item.Screenshot.ScreenshotRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel
     public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel
         /// <summary>
         /// Delete a SSH tunnel
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Ssh_tunnel401Error">When receiving a 401 status code</exception>
@@ -51,11 +51,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Ssh_tunnel500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse?> DeleteAsSsh_tunnelDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse?> DeleteAsSsh_tunnelDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse> DeleteAsSsh_tunnelDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse> DeleteAsSsh_tunnelDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -67,12 +67,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel
                 { "422", global::KiotaSupersetAPI.Client.Models.Ssh_tunnel422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Ssh_tunnel500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse>(requestInfo, KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a SSH tunnel
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelResponse"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Ssh_tunnel401Error">When receiving a 401 status code</exception>
@@ -83,11 +83,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel
         [Obsolete("This method is obsolete. Use DeleteAsSsh_tunnelDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -99,7 +99,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel
                 { "422", global::KiotaSupersetAPI.Client.Models.Ssh_tunnel422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Ssh_tunnel500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse>(requestInfo, KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a SSH tunnel
@@ -123,11 +123,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder WithUrl(string rawUrl)
+        public KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

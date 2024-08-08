@@ -24,7 +24,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
     public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -32,7 +32,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -42,7 +42,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         /// <summary>
         /// Delete annotation layer
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
@@ -50,11 +50,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse?> DeleteAsWithAnnotation_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse?> DeleteAsWithAnnotation_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse> DeleteAsWithAnnotation_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse> DeleteAsWithAnnotation_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -64,12 +64,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse>(requestInfo, KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete annotation layer
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
@@ -78,11 +78,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         [Obsolete("This method is obsolete. Use DeleteAsWithAnnotation_DeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -92,12 +92,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response>(requestInfo, KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get an annotation layer
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
@@ -107,11 +107,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse?> GetAsWithAnnotation_GetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse?> GetAsWithAnnotation_GetResponseAsync(Action<RequestConfiguration<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse> GetAsWithAnnotation_GetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse> GetAsWithAnnotation_GetResponseAsync(Action<RequestConfiguration<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -123,12 +123,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse>(requestInfo, KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_GetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get an annotation layer
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
@@ -139,11 +139,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         [Obsolete("This method is obsolete. Use GetAsWithAnnotation_GetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response?> GetAsync(Action<RequestConfiguration<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response> GetAsync(Action<RequestConfiguration<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -155,12 +155,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
                 { "422", global::KiotaSupersetAPI.Client.Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response>(requestInfo, KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update an annotation layer
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -170,11 +170,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse?> PutAsWithAnnotation_PutResponseAsync(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse?> PutAsWithAnnotation_PutResponseAsync(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse> PutAsWithAnnotation_PutResponseAsync(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse> PutAsWithAnnotation_PutResponseAsync(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -186,12 +186,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
                 { "404", global::KiotaSupersetAPI.Client.Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse>(requestInfo, KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_PutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update an annotation layer
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -202,11 +202,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         [Obsolete("This method is obsolete. Use PutAsWithAnnotation_PutResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response?> PutAsync(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response?> PutAsync(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response> PutAsync(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response> PutAsync(global::KiotaSupersetAPI.Client.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -218,7 +218,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
                 { "404", global::KiotaSupersetAPI.Client.Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response>(requestInfo, KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete annotation layer
@@ -246,11 +246,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -283,11 +283,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
@@ -318,7 +318,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class WithAnnotation_ItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>
+        public partial class WithAnnotation_ItemRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Annotation_layer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>
         {
         }
         /// <summary>

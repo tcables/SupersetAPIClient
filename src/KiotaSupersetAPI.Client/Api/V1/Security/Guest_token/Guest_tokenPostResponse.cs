@@ -28,7 +28,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Guest_token
         public string Token { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Guest_token.Guest_tokenPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Security.Guest_token.Guest_tokenPostResponse"/> and sets the default values.
         /// </summary>
         public Guest_tokenPostResponse()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Guest_token
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Guest_token.Guest_tokenPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Security.Guest_token.Guest_tokenPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Security.Guest_token.Guest_tokenPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Security.Guest_token.Guest_tokenPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Security.Guest_token.Guest_tokenPostResponse();
+            return new KApi.Security.Guest_token.Guest_tokenPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

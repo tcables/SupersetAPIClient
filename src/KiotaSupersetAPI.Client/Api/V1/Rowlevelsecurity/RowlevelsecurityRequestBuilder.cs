@@ -27,42 +27,42 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
     public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The _info property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoRequestBuilder _info
+        public KApi.Rowlevelsecurity._info._infoRequestBuilder _info
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Rowlevelsecurity._info._infoRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The related property</summary>
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.Related.RelatedRequestBuilder Related
+        public KApi.Rowlevelsecurity.Related.RelatedRequestBuilder Related
         {
-            get => new global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+            get => new KApi.Rowlevelsecurity.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.rowlevelsecurity.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.Item.WithPkItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.Item.WithPkItemRequestBuilder this[int position]
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.Item.WithPkItemRequestBuilder"/></returns>
+        public KApi.Rowlevelsecurity.Item.WithPkItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("pk", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Rowlevelsecurity.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.rowlevelsecurity.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.Item.WithPkItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.Item.WithPkItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.Item.WithPkItemRequestBuilder this[string position]
+        public KApi.Rowlevelsecurity.Item.WithPkItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Rowlevelsecurity.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -70,7 +70,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -80,7 +80,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// <summary>
         /// Bulk delete RLS rules
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.RowlevelsecurityDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
@@ -90,11 +90,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityDeleteResponse?> DeleteAsRowlevelsecurityDeleteResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityDeleteResponse?> DeleteAsRowlevelsecurityDeleteResponseAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityDeleteResponse> DeleteAsRowlevelsecurityDeleteResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityDeleteResponse> DeleteAsRowlevelsecurityDeleteResponseAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -106,12 +106,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
                 { "422", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityDeleteResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Rowlevelsecurity.RowlevelsecurityDeleteResponse>(requestInfo, KApi.Rowlevelsecurity.RowlevelsecurityDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Bulk delete RLS rules
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.RowlevelsecurityResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
@@ -122,11 +122,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         [Obsolete("This method is obsolete. Use DeleteAsRowlevelsecurityDeleteResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse?> DeleteAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityResponse?> DeleteAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse> DeleteAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityResponse> DeleteAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -138,12 +138,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
                 { "422", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Rowlevelsecurity.RowlevelsecurityResponse>(requestInfo, KApi.Rowlevelsecurity.RowlevelsecurityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets a list of RLS, use Rison or JSON query parameters for filtering, sorting, pagination and for selecting specific columns and metadata.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.RowlevelsecurityGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
@@ -152,11 +152,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityGetResponse?> GetAsRowlevelsecurityGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityGetResponse?> GetAsRowlevelsecurityGetResponseAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityGetResponse> GetAsRowlevelsecurityGetResponseAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityGetResponse> GetAsRowlevelsecurityGetResponseAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -167,12 +167,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
                 { "422", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Rowlevelsecurity.RowlevelsecurityGetResponse>(requestInfo, KApi.Rowlevelsecurity.RowlevelsecurityGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets a list of RLS, use Rison or JSON query parameters for filtering, sorting, pagination and for selecting specific columns and metadata.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.RowlevelsecurityResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
@@ -182,11 +182,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         [Obsolete("This method is obsolete. Use GetAsRowlevelsecurityGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse?> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityResponse?> GetAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse> GetAsync(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityResponse> GetAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -197,12 +197,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
                 { "422", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Rowlevelsecurity.RowlevelsecurityResponse>(requestInfo, KApi.Rowlevelsecurity.RowlevelsecurityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new RLS rule
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.RowlevelsecurityPostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -213,11 +213,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityPostResponse?> PostAsRowlevelsecurityPostResponseAsync(global::KiotaSupersetAPI.Client.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityPostResponse?> PostAsRowlevelsecurityPostResponseAsync(global::KiotaSupersetAPI.Client.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityPostResponse> PostAsRowlevelsecurityPostResponseAsync(global::KiotaSupersetAPI.Client.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityPostResponse> PostAsRowlevelsecurityPostResponseAsync(global::KiotaSupersetAPI.Client.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -230,12 +230,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
                 { "422", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityPostResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Rowlevelsecurity.RowlevelsecurityPostResponse>(requestInfo, KApi.Rowlevelsecurity.RowlevelsecurityPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new RLS rule
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.RowlevelsecurityResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -247,11 +247,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         [Obsolete("This method is obsolete. Use PostAsRowlevelsecurityPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityResponse?> PostAsync(global::KiotaSupersetAPI.Client.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Rowlevelsecurity.RowlevelsecurityResponse> PostAsync(global::KiotaSupersetAPI.Client.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -264,7 +264,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
                 { "422", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Rowlevelsecurity.RowlevelsecurityResponse>(requestInfo, KApi.Rowlevelsecurity.RowlevelsecurityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Bulk delete RLS rules
@@ -273,11 +273,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
@@ -292,11 +292,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -329,11 +329,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder WithUrl(string rawUrl)
+        public KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Bulk delete RLS rules
@@ -356,7 +356,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class RowlevelsecurityRequestBuilderDeleteRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>
+        public partial class RowlevelsecurityRequestBuilderDeleteRequestConfiguration : RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>
         {
         }
         /// <summary>
@@ -380,7 +380,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [GeneratedCode("Kiota", "1.16.0")]
-        public partial class RowlevelsecurityRequestBuilderGetRequestConfiguration : RequestConfiguration<global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>
+        public partial class RowlevelsecurityRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>
         {
         }
         /// <summary>

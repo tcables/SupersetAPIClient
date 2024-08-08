@@ -15,18 +15,18 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Stop
     [Obsolete("This class is obsolete. Use StopPostResponse instead.")]
     [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
-    public partial class StopResponse : global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopPostResponse, IParsable
+    public partial class StopResponse : KApi.Query.Stop.StopPostResponse, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopResponse"/></returns>
+        /// <returns>A <see cref="KApi.Query.Stop.StopResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new KApi.Query.Stop.StopResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Query.Stop.StopResponse();
+            return new KApi.Query.Stop.StopResponse();
         }
     }
 }

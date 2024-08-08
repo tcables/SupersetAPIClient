@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Import
     public partial class ImportRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Saved_query.Import.ImportRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Import
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Saved_query.Import.ImportRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Import
         /// <summary>
         /// Import saved queries with associated databases
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Saved_query.Import.ImportPostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,11 +51,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Import
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Import500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostResponse?> PostAsImportPostResponseAsync(global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Saved_query.Import.ImportPostResponse?> PostAsImportPostResponseAsync(KApi.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostResponse> PostAsImportPostResponseAsync(global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Saved_query.Import.ImportPostResponse> PostAsImportPostResponseAsync(KApi.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -67,12 +67,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Import
                 { "422", global::KiotaSupersetAPI.Client.Models.Import422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Import500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Saved_query.Import.ImportPostResponse>(requestInfo, KApi.Saved_query.Import.ImportPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Import saved queries with associated databases
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportResponse"/></returns>
+        /// <returns>A <see cref="KApi.Saved_query.Import.ImportResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -83,11 +83,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Import
         [Obsolete("This method is obsolete. Use PostAsImportPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportResponse?> PostAsync(global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Saved_query.Import.ImportResponse?> PostAsync(KApi.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportResponse> PostAsync(global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Saved_query.Import.ImportResponse> PostAsync(KApi.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -99,7 +99,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Import
                 { "422", global::KiotaSupersetAPI.Client.Models.Import422Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Import500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Saved_query.Import.ImportResponse>(requestInfo, KApi.Saved_query.Import.ImportResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Import saved queries with associated databases
@@ -109,11 +109,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Import
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KApi.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(KApi.Saved_query.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Import
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Saved_query.Import.ImportRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportRequestBuilder WithUrl(string rawUrl)
+        public KApi.Saved_query.Import.ImportRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Saved_query.Import.ImportRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Saved_query.Import.ImportRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

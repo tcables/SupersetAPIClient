@@ -29,7 +29,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
         public global::KiotaSupersetAPI.Client.Models.AvailableDomainsSchema Result { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsGetResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Available_domains.Available_domainsGetResponse"/> and sets the default values.
         /// </summary>
         public Available_domainsGetResponse()
         {
@@ -38,12 +38,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Available_domains
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Available_domains.Available_domainsGetResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Available_domains.Available_domainsGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Available_domains.Available_domainsGetResponse();
+            return new KApi.Available_domains.Available_domainsGetResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

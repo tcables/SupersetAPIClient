@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
     public partial class WithUuItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
         /// <summary>
         /// Get a report schedule log
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuGetResponse"/></returns>
+        /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithUu401Error">When receiving a 401 status code</exception>
@@ -49,11 +49,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithUu500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuGetResponse?> GetAsWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Embedded_dashboard.Item.WithUuGetResponse?> GetAsWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuGetResponse> GetAsWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Embedded_dashboard.Item.WithUuGetResponse> GetAsWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -63,12 +63,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
                 { "404", global::KiotaSupersetAPI.Client.Models.WithUu404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithUu500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuGetResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Embedded_dashboard.Item.WithUuGetResponse>(requestInfo, KApi.Embedded_dashboard.Item.WithUuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a report schedule log
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuResponse"/></returns>
+        /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.WithUu401Error">When receiving a 401 status code</exception>
@@ -77,11 +77,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
         [Obsolete("This method is obsolete. Use GetAsWithUuGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Embedded_dashboard.Item.WithUuResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Embedded_dashboard.Item.WithUuResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -91,7 +91,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
                 { "404", global::KiotaSupersetAPI.Client.Models.WithUu404Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.WithUu500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Embedded_dashboard.Item.WithUuResponse>(requestInfo, KApi.Embedded_dashboard.Item.WithUuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a report schedule log
@@ -115,11 +115,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuItemRequestBuilder WithUrl(string rawUrl)
+        public KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item.WithUuItemRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

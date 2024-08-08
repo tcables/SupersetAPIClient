@@ -22,31 +22,31 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.metric.item collection</summary>
         /// <param name="position">The metric id for this dataset</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder"/></returns>
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="KApi.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder"/></returns>
+        public KApi.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 urlTplParams.Add("metric_id", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.metric.item collection</summary>
         /// <param name="position">The metric id for this dataset</param>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder"/></returns>
         [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder this[string position]
+        public KApi.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
                 if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("metric_id", position);
-                return new global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                return new KApi.Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.MetricRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Item.Metric.MetricRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -54,7 +54,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.MetricRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Dataset.Item.Metric.MetricRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

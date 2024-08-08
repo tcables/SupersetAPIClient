@@ -23,7 +23,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql
     public partial class Format_sqlRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Sqllab.Format_sql.Format_sqlRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +31,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Sqllab.Format_sql.Format_sqlRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,7 +41,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql
         /// <summary>
         /// Format SQL code
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Sqllab.Format_sql.Format_sqlPostResponse"/></returns>
         /// <param name="body">Binary request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,11 +51,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql
         /// <exception cref="global::KiotaSupersetAPI.Client.Models.Format_sql500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlPostResponse?> PostAsFormat_sqlPostResponseAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Sqllab.Format_sql.Format_sqlPostResponse?> PostAsFormat_sqlPostResponseAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlPostResponse> PostAsFormat_sqlPostResponseAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Sqllab.Format_sql.Format_sqlPostResponse> PostAsFormat_sqlPostResponseAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -67,12 +67,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql
                 { "403", global::KiotaSupersetAPI.Client.Models.Format_sql403Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Format_sql500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlPostResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Sqllab.Format_sql.Format_sqlPostResponse>(requestInfo, KApi.Sqllab.Format_sql.Format_sqlPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Format SQL code
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlResponse"/></returns>
+        /// <returns>A <see cref="KApi.Sqllab.Format_sql.Format_sqlResponse"/></returns>
         /// <param name="body">Binary request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -83,11 +83,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql
         [Obsolete("This method is obsolete. Use PostAsFormat_sqlPostResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlResponse?> PostAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Sqllab.Format_sql.Format_sqlResponse?> PostAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlResponse> PostAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<KApi.Sqllab.Format_sql.Format_sqlResponse> PostAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -99,7 +99,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql
                 { "403", global::KiotaSupersetAPI.Client.Models.Format_sql403Error.CreateFromDiscriminatorValue },
                 { "500", global::KiotaSupersetAPI.Client.Models.Format_sql500Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlResponse>(requestInfo, global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<KApi.Sqllab.Format_sql.Format_sqlResponse>(requestInfo, KApi.Sqllab.Format_sql.Format_sqlResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Format SQL code
@@ -126,11 +126,11 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlRequestBuilder"/></returns>
+        /// <returns>A <see cref="KApi.Sqllab.Format_sql.Format_sqlRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlRequestBuilder WithUrl(string rawUrl)
+        public KApi.Sqllab.Format_sql.Format_sqlRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::KiotaSupersetAPI.Client.Api.V1.Sqllab.Format_sql.Format_sqlRequestBuilder(rawUrl, RequestAdapter);
+            return new KApi.Sqllab.Format_sql.Format_sqlRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.

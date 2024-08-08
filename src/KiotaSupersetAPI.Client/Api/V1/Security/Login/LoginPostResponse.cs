@@ -36,7 +36,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Login
         public string RefreshToken { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Security.Login.LoginPostResponse"/> and sets the default values.
         /// </summary>
         public LoginPostResponse()
         {
@@ -45,12 +45,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Security.Login
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostResponse"/></returns>
+        /// <returns>A <see cref="KApi.Security.Login.LoginPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Security.Login.LoginPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Security.Login.LoginPostResponse();
+            return new KApi.Security.Login.LoginPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model

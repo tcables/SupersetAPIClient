@@ -28,7 +28,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag
         public string Message { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.TagDeleteResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="KApi.Tag.TagDeleteResponse"/> and sets the default values.
         /// </summary>
         public TagDeleteResponse()
         {
@@ -37,12 +37,12 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::KiotaSupersetAPI.Client.Api.V1.Tag.TagDeleteResponse"/></returns>
+        /// <returns>A <see cref="KApi.Tag.TagDeleteResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::KiotaSupersetAPI.Client.Api.V1.Tag.TagDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static KApi.Tag.TagDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::KiotaSupersetAPI.Client.Api.V1.Tag.TagDeleteResponse();
+            return new KApi.Tag.TagDeleteResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
