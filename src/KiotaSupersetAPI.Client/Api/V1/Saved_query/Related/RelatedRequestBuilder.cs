@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using System.Linq;
 
-using Api = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Saved_query.Related
 {
