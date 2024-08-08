@@ -7,14 +7,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
+using System.CodeDom.Compiler;
 using System.Linq;
+
+using Api = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Advanced_data_type
 {
     /// <summary>
     /// Builds and executes requests for operations under \api\v1\advanced_data_type
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.16.0")]
+    [GeneratedCode("Kiota", "1.16.0")]
     public partial class Advanced_data_typeRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The convert property</summary>

@@ -6,14 +6,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
+using System.CodeDom.Compiler;
 using System.Linq;
+
+using Api = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Chart.Item.Screenshot
 {
     /// <summary>
     /// Builds and executes requests for operations under \api\v1\chart\{pk}\screenshot
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.16.0")]
+    [GeneratedCode("Kiota", "1.16.0")]
     public partial class ScreenshotRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.chart.item.screenshot.item collection</summary>

@@ -7,14 +7,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
+using System.CodeDom.Compiler;
 using System.Linq;
+
+using Api = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Assets
 {
     /// <summary>
     /// Builds and executes requests for operations under \api\v1\assets
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.16.0")]
+    [GeneratedCode("Kiota", "1.16.0")]
     public partial class AssetsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The export property</summary>

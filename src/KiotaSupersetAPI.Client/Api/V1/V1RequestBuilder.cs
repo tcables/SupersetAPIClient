@@ -29,14 +29,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
+using System.CodeDom.Compiler;
 using System.Linq;
+
+using Api = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1
 {
     /// <summary>
     /// Builds and executes requests for operations under \api\v1
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.16.0")]
+    [GeneratedCode("Kiota", "1.16.0")]
     public partial class V1RequestBuilder : BaseRequestBuilder
     {
         /// <summary>The advanced_data_type property</summary>

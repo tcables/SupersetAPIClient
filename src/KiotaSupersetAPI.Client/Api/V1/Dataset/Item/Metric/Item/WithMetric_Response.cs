@@ -4,12 +4,15 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
+using System.CodeDom.Compiler;
 using System.Linq;
+
+using Api = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.Item
 {
     [Obsolete("This class is obsolete. Use WithMetric_DeleteResponse instead.")]
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.16.0")]
+    [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
     public partial class WithMetric_Response : global::KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Metric.Item.WithMetric_DeleteResponse, IParsable
     #pragma warning restore CS1591

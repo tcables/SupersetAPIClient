@@ -4,12 +4,15 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
+using System.CodeDom.Compiler;
 using System.Linq;
+
+using Api = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Explore.Form_data
 {
     [Obsolete("This class is obsolete. Use Form_dataPostResponse instead.")]
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.16.0")]
+    [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
     public partial class Form_dataResponse : global::KiotaSupersetAPI.Client.Api.V1.Explore.Form_data.Form_dataPostResponse, IParsable
     #pragma warning restore CS1591

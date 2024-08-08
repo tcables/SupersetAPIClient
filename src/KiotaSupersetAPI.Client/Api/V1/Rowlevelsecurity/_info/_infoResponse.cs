@@ -4,12 +4,15 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
+using System.CodeDom.Compiler;
 using System.Linq;
+
+using Api = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info
 {
     [Obsolete("This class is obsolete. Use _infoGetResponse instead.")]
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.16.0")]
+    [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
     public partial class _infoResponse : global::KiotaSupersetAPI.Client.Api.V1.Rowlevelsecurity._info._infoGetResponse, IParsable
     #pragma warning restore CS1591

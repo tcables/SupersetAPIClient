@@ -4,12 +4,15 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
+using System.CodeDom.Compiler;
 using System.Linq;
+
+using Api = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Annotation_layer
 {
     [Obsolete("This class is obsolete. Use Annotation_layerDeleteResponse instead.")]
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.16.0")]
+    [GeneratedCode("Kiota", "1.16.0")]
     #pragma warning disable CS1591
     public partial class Annotation_layerResponse : global::KiotaSupersetAPI.Client.Api.V1.Annotation_layer.Annotation_layerDeleteResponse, IParsable
     #pragma warning restore CS1591

@@ -6,14 +6,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System;
+using System.CodeDom.Compiler;
 using System.Linq;
+
+using Api = KiotaSupersetAPI.Client.Api.V1;
 
 namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item
 {
     /// <summary>
     /// Builds and executes requests for operations under \api\v1\datasource\{datasource_type}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.16.0")]
+    [GeneratedCode("Kiota", "1.16.0")]
     public partial class WithDatasource_typeItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.datasource.item.item collection</summary>
