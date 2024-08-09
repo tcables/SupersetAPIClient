@@ -8,9 +8,7 @@ using KApi = KiotaSupersetAPI.Client.API;
 namespace KiotaSupersetAPI.Client.API.Security.Refresh;
 
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class RefreshPostResponse : IAdditionalDataHolder, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>A new refreshed access token</summary>
     public string AccessToken { get; set; }

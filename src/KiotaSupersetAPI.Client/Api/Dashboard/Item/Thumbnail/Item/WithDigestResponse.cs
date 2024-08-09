@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Thumbnail.Item;
 
 [Obsolete("This class is obsolete. Use WithDigestGetResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class WithDigestResponse : KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Dataset.Get_or_create;
 
 [Obsolete("This class is obsolete. Use Get_or_createPostResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class Get_or_createResponse : KApi.Dataset.Get_or_create.Get_or_createPostResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

@@ -8,19 +8,11 @@ namespace KiotaSupersetAPI.Client.Models;
 public enum AnnotationLayer_style
 {
     [EnumMember(Value = "dashed")]
-#pragma warning disable CS1591
     Dashed,
-#pragma warning restore CS1591
     [EnumMember(Value = "dotted")]
-#pragma warning disable CS1591
     Dotted,
-#pragma warning restore CS1591
     [EnumMember(Value = "solid")]
-#pragma warning disable CS1591
     Solid,
-#pragma warning restore CS1591
     [EnumMember(Value = "longDashed")]
-#pragma warning disable CS1591
     LongDashed,
-#pragma warning restore CS1591
 }

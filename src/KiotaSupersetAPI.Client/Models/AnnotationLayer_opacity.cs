@@ -8,15 +8,9 @@ namespace KiotaSupersetAPI.Client.Models;
 public enum AnnotationLayer_opacity
 {
     [EnumMember(Value = "opacityLow")]
-#pragma warning disable CS1591
     OpacityLow,
-#pragma warning restore CS1591
     [EnumMember(Value = "opacityMedium")]
-#pragma warning disable CS1591
     OpacityMedium,
-#pragma warning restore CS1591
     [EnumMember(Value = "opacityHigh")]
-#pragma warning disable CS1591
     OpacityHigh,
-#pragma warning restore CS1591
 }

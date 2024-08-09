@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Css_template.Item;
 
 [Obsolete("This class is obsolete. Use WithPkDeleteResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class WithPkResponse : KApi.Css_template.Item.WithPkDeleteResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

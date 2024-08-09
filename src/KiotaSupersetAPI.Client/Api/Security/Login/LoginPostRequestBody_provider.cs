@@ -8,11 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Security.Login;
 public enum LoginPostRequestBody_provider
 {
     [EnumMember(Value = "db")]
-#pragma warning disable CS1591
     Db,
-#pragma warning restore CS1591
     [EnumMember(Value = "ldap")]
-#pragma warning disable CS1591
     Ldap,
-#pragma warning restore CS1591
 }

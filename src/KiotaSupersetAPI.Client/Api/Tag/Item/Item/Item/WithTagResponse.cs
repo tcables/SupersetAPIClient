@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Tag.Item.Item.Item;
 
 [Obsolete("This class is obsolete. Use WithTagDeleteResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class WithTagResponse : KApi.Tag.Item.Item.Item.WithTagDeleteResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

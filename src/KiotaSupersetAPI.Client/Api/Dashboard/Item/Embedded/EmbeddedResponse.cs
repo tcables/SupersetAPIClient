@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Embedded;
 
 [Obsolete("This class is obsolete. Use EmbeddedDeleteResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class EmbeddedResponse : KApi.Dashboard.Item.Embedded.EmbeddedDeleteResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

@@ -8,11 +8,7 @@ namespace KiotaSupersetAPI.Client.Models;
 public enum ChartDataExtras_relative_start
 {
     [EnumMember(Value = "today")]
-#pragma warning disable CS1591
     Today,
-#pragma warning restore CS1591
     [EnumMember(Value = "now")]
-#pragma warning disable CS1591
     Now,
-#pragma warning restore CS1591
 }

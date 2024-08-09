@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Dataset.Import;
 
 [Obsolete("This class is obsolete. Use ImportPostResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class ImportResponse : KApi.Dataset.Import.ImportPostResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

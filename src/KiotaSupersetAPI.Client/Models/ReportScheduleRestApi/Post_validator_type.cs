@@ -8,11 +8,7 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi;
 public enum Post_validator_type
 {
     [EnumMember(Value = "not null")]
-#pragma warning disable CS1591
     NotNull,
-#pragma warning restore CS1591
     [EnumMember(Value = "operator")]
-#pragma warning disable CS1591
     Operator,
-#pragma warning restore CS1591
 }

@@ -9,9 +9,7 @@ using KClient = KiotaSupersetAPI.Client;
 namespace KiotaSupersetAPI.Client.Models;
 
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class TabState : IAdditionalDataHolder, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>The active property</summary>
     public bool? Active { get; set; }

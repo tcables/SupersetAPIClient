@@ -8,27 +8,15 @@ namespace KiotaSupersetAPI.Client.Models;
 public enum ValidatorConfigJSON_op
 {
     [EnumMember(Value = "<")]
-#pragma warning disable CS1591
     LessThan,
-#pragma warning restore CS1591
     [EnumMember(Value = "<=")]
-#pragma warning disable CS1591
     LessThanEqual,
-#pragma warning restore CS1591
     [EnumMember(Value = ">")]
-#pragma warning disable CS1591
     GreaterThan,
-#pragma warning restore CS1591
     [EnumMember(Value = ">=")]
-#pragma warning disable CS1591
     GreaterThanEqual,
-#pragma warning restore CS1591
     [EnumMember(Value = "==")]
-#pragma warning disable CS1591
     EqualEqual,
-#pragma warning restore CS1591
     [EnumMember(Value = "!=")]
-#pragma warning disable CS1591
     ExclamationEqual,
-#pragma warning restore CS1591
 }

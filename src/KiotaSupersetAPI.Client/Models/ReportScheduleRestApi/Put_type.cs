@@ -8,11 +8,7 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi;
 public enum Put_type
 {
     [EnumMember(Value = "Alert")]
-#pragma warning disable CS1591
     Alert,
-#pragma warning restore CS1591
     [EnumMember(Value = "Report")]
-#pragma warning disable CS1591
     Report,
-#pragma warning restore CS1591
 }

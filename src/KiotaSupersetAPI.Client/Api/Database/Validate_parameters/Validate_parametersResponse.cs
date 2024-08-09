@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Database.Validate_parameters;
 
 [Obsolete("This class is obsolete. Use Validate_parametersPostResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class Validate_parametersResponse : KApi.Database.Validate_parameters.Validate_parametersPostResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Available_domains;
 
 [Obsolete("This class is obsolete. Use Available_domainsGetResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class Available_domainsResponse : KApi.Available_domains.Available_domainsGetResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

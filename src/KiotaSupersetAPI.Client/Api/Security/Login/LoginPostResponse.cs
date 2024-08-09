@@ -8,9 +8,7 @@ using KApi = KiotaSupersetAPI.Client.API;
 namespace KiotaSupersetAPI.Client.API.Security.Login;
 
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class LoginPostResponse : IAdditionalDataHolder, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>The access_token property</summary>
     public string AccessToken { get; set; }

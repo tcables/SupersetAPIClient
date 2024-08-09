@@ -8,15 +8,9 @@ namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi;
 public enum Put_creation_method
 {
     [EnumMember(Value = "charts")]
-#pragma warning disable CS1591
     Charts,
-#pragma warning restore CS1591
     [EnumMember(Value = "dashboards")]
-#pragma warning disable CS1591
     Dashboards,
-#pragma warning restore CS1591
     [EnumMember(Value = "alerts_reports")]
-#pragma warning disable CS1591
     Alerts_reports,
-#pragma warning restore CS1591
 }

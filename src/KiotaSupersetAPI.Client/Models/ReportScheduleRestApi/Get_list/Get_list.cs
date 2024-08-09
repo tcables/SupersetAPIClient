@@ -8,9 +8,7 @@ using KClient = KiotaSupersetAPI.Client;
 namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list;
 
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class Get_list : IAdditionalDataHolder, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>The active property</summary>
     public bool? Active { get; set; }

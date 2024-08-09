@@ -8,11 +8,7 @@ namespace KiotaSupersetAPI.Client.Models;
 public enum ReportRecipient_type
 {
     [EnumMember(Value = "Email")]
-#pragma warning disable CS1591
     Email,
-#pragma warning restore CS1591
     [EnumMember(Value = "Slack")]
-#pragma warning disable CS1591
     Slack,
-#pragma warning restore CS1591
 }

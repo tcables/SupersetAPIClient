@@ -233,7 +233,7 @@ public class SuperSetAuthenticationProvider : IAuthenticationProvider
         return toReturn;
     }
 
-    
+
     private async Task refreshTokenAsync(
         HttpClient client,
         CancellationToken cancellationToken = default)

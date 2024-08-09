@@ -8,11 +8,7 @@ namespace KiotaSupersetAPI.Client.Models.RLSRestApi;
 public enum Get_list_filter_type
 {
     [EnumMember(Value = "Regular")]
-#pragma warning disable CS1591
     Regular,
-#pragma warning restore CS1591
     [EnumMember(Value = "Base")]
-#pragma warning disable CS1591
     Base,
-#pragma warning restore CS1591
 }

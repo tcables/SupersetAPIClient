@@ -8,9 +8,7 @@ using KClient = KiotaSupersetAPI.Client;
 namespace KiotaSupersetAPI.Client.Models;
 
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class RecentActivity : IAdditionalDataHolder, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>Action taken describing type of activity</summary>
     public string Action { get; set; }

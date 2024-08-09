@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Css_template;
 
 [Obsolete("This class is obsolete. Use Css_templateDeleteResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class Css_templateResponse : KApi.Css_template.Css_templateDeleteResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

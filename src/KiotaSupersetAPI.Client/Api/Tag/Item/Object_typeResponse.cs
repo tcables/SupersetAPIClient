@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Tag.Item;
 
 [Obsolete("This class is obsolete. Use Object_typeDeleteResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class Object_typeResponse : KApi.Tag.Item.Object_typeDeleteResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Advanced_data_type.Types;
 
 [Obsolete("This class is obsolete. Use TypesGetResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class TypesResponse : KApi.Advanced_data_type.Types.TypesGetResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

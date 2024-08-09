@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item.Annotation;
 
 [Obsolete("This class is obsolete. Use AnnotationDeleteResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class AnnotationResponse : KApi.AnnotationLayer.Item.Annotation.AnnotationDeleteResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

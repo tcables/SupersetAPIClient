@@ -9,9 +9,7 @@ using KApi = KiotaSupersetAPI.Client.API;
 namespace KiotaSupersetAPI.Client.API.Report._info;
 
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>The add_columns property</summary>
     public KApi.Report._info._infoGetResponse_add_columns AddColumns { get; set; }

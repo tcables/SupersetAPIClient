@@ -8,9 +8,7 @@ using KApi = KiotaSupersetAPI.Client.API;
 namespace KiotaSupersetAPI.Client.API.Report;
 
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class ReportDeleteResponse : IAdditionalDataHolder, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }

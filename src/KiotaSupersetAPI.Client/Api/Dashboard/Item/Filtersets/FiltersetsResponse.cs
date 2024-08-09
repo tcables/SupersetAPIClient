@@ -8,9 +8,7 @@ namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Filtersets;
 
 [Obsolete("This class is obsolete. Use FiltersetsPostResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class FiltersetsResponse : KApi.Dashboard.Item.Filtersets.FiltersetsPostResponse, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value

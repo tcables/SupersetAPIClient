@@ -8,11 +8,7 @@ namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi;
 public enum Post_configuration_method
 {
     [EnumMember(Value = "sqlalchemy_form")]
-#pragma warning disable CS1591
     Sqlalchemy_form,
-#pragma warning restore CS1591
     [EnumMember(Value = "dynamic_form")]
-#pragma warning disable CS1591
     Dynamic_form,
-#pragma warning restore CS1591
 }

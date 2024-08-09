@@ -8,9 +8,7 @@ using KClient = KiotaSupersetAPI.Client;
 namespace KiotaSupersetAPI.Client.Models.LogRestApi.Get;
 
 [GeneratedCode("Kiota", "1.16.0")]
-#pragma warning disable CS1591
 public partial class Get : IAdditionalDataHolder, IParsable
-#pragma warning restore CS1591
 {
     /// <summary>The action property</summary>
     public string Action { get; set; }
