@@ -22,7 +22,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     public AnnotationLayer.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
-    public Models.AnnotationLayerRestApi.Get Result { get; set; }
+    public Models.AnnotationLayerRestAPI.Get Result { get; set; }
 
     /// <summary>A list of columns</summary>
     public List<string> ShowColumns { get; set; }
@@ -58,7 +58,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
             { "description_columns", n => { DescriptionColumns = n.GetObjectValue<AnnotationLayer.Item.WithPkGetResponse_description_columns>(AnnotationLayer.Item.WithPkGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "id", n => { Id = n.GetStringValue(); } },
             { "label_columns", n => { LabelColumns = n.GetObjectValue<AnnotationLayer.Item.WithPkGetResponse_label_columns>(AnnotationLayer.Item.WithPkGetResponse_label_columns.CreateFromDiscriminatorValue); } },
-            { "result", n => { Result = n.GetObjectValue<Models.AnnotationLayerRestApi.Get>(Models.AnnotationLayerRestApi.Get.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.AnnotationLayerRestAPI.Get>(Models.AnnotationLayerRestAPI.Get.CreateFromDiscriminatorValue); } },
             { "show_columns", n => { ShowColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "show_title", n => { ShowTitle = n.GetStringValue(); } },
         };
@@ -73,7 +73,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
         writer.WriteObjectValue<AnnotationLayer.Item.WithPkGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteStringValue("id", Id);
         writer.WriteObjectValue<AnnotationLayer.Item.WithPkGetResponse_label_columns>("label_columns", LabelColumns);
-        writer.WriteObjectValue<Models.AnnotationLayerRestApi.Get>("result", Result);
+        writer.WriteObjectValue<Models.AnnotationLayerRestAPI.Get>("result", Result);
         writer.WriteCollectionOfPrimitiveValues<string>("show_columns", ShowColumns);
         writer.WriteStringValue("show_title", ShowTitle);
         writer.WriteAdditionalData(AdditionalData);

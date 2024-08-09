@@ -136,7 +136,7 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.WithAnnotation_401Error">When receiving a 401 status code</exception>
     /// <exception cref="Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
-    public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_PutResponse> PutAsWithAnnotation_PutResponseAsync(Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_PutResponse> PutAsWithAnnotation_PutResponseAsync(Models.AnnotationRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -162,7 +162,7 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithAnnotation_PutResponseAsync instead.")]
-    public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response> PutAsync(Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response> PutAsync(Models.AnnotationRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -208,7 +208,7 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPutRequestInformation(Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPutRequestInformation(Models.AnnotationRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

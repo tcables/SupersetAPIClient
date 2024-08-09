@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Api.Item._openapi;
+namespace KiotaSupersetAPI.Client.API.Item._openapi;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\{version}\_openapi
@@ -16,7 +16,7 @@ namespace KiotaSupersetAPI.Client.Api.Item._openapi;
 public partial class _openapiRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="Api.Item._openapi._openapiRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="API.Item._openapi._openapiRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -24,7 +24,7 @@ public partial class _openapiRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="Api.Item._openapi._openapiRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="API.Item._openapi._openapiRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -34,18 +34,18 @@ public partial class _openapiRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get the OpenAPI spec for a specific API version
     /// </summary>
-    /// <returns>A <see cref="Api.Item._openapi._openapiGetResponse"/></returns>
+    /// <returns>A <see cref="API.Item._openapi._openapiGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="Models._openapi404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models._openapi500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-    public async Task<Api.Item._openapi._openapiGetResponse?> Get_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<API.Item._openapi._openapiGetResponse?> Get_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 #nullable restore
 #else
-    public async Task<Api.Item._openapi._openapiGetResponse> Get_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<API.Item._openapi._openapiGetResponse> Get_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 #endif
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,12 +54,12 @@ public partial class _openapiRequestBuilder : BaseRequestBuilder
             { "404", Models._openapi404Error.CreateFromDiscriminatorValue },
             { "500", Models._openapi500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<Api.Item._openapi._openapiGetResponse>(requestInfo, Api.Item._openapi._openapiGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<API.Item._openapi._openapiGetResponse>(requestInfo, API.Item._openapi._openapiGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get the OpenAPI spec for a specific API version
     /// </summary>
-    /// <returns>A <see cref="Api.Item._openapi._openapiResponse"/></returns>
+    /// <returns>A <see cref="API.Item._openapi._openapiResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="Models._openapi404Error">When receiving a 404 status code</exception>
@@ -67,11 +67,11 @@ public partial class _openapiRequestBuilder : BaseRequestBuilder
     [Obsolete("This method is obsolete. Use GetAs_openapiGetResponseAsync instead.")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-    public async Task<Api.Item._openapi._openapiResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<API.Item._openapi._openapiResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 #nullable restore
 #else
-    public async Task<Api.Item._openapi._openapiResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<API.Item._openapi._openapiResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 #endif
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -80,7 +80,7 @@ public partial class _openapiRequestBuilder : BaseRequestBuilder
             { "404", Models._openapi404Error.CreateFromDiscriminatorValue },
             { "500", Models._openapi500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<Api.Item._openapi._openapiResponse>(requestInfo, Api.Item._openapi._openapiResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<API.Item._openapi._openapiResponse>(requestInfo, API.Item._openapi._openapiResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get the OpenAPI spec for a specific API version
@@ -104,11 +104,11 @@ public partial class _openapiRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="Api.Item._openapi._openapiRequestBuilder"/></returns>
+    /// <returns>A <see cref="API.Item._openapi._openapiRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Api.Item._openapi._openapiRequestBuilder WithUrl(string rawUrl)
+    public API.Item._openapi._openapiRequestBuilder WithUrl(string rawUrl)
     {
-        return new Api.Item._openapi._openapiRequestBuilder(rawUrl, RequestAdapter);
+        return new API.Item._openapi._openapiRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

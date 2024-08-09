@@ -14,7 +14,7 @@ public partial class DatabasePostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.DatabaseRestApi.Post Result { get; set; }
+    public Models.DatabaseRestAPI.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Database.DatabasePostResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class DatabasePostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.DatabaseRestApi.Post>(Models.DatabaseRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.DatabaseRestAPI.Post>(Models.DatabaseRestAPI.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class DatabasePostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.DatabaseRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.DatabaseRestAPI.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

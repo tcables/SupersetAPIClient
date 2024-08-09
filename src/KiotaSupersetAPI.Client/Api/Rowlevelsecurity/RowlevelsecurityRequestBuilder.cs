@@ -176,7 +176,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Rowlevelsecurity404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
-    public async Task<Rowlevelsecurity.RowlevelsecurityPostResponse> PostAsRowlevelsecurityPostResponseAsync(Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Rowlevelsecurity.RowlevelsecurityPostResponse> PostAsRowlevelsecurityPostResponseAsync(Models.RLSRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -204,7 +204,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsRowlevelsecurityPostResponseAsync instead.")]
-    public async Task<Rowlevelsecurity.RowlevelsecurityResponse> PostAsync(Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Rowlevelsecurity.RowlevelsecurityResponse> PostAsync(Models.RLSRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -251,7 +251,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.RLSRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.FilterSetRestApi;
+namespace KiotaSupersetAPI.Client.Models.FilterSetRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Post : IAdditionalDataHolder, IParsable
@@ -23,9 +23,9 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>The owner_id property</summary>
     public int? OwnerId { get; set; }
     /// <summary>The owner_type property</summary>
-    public Models.FilterSetRestApi.Post_owner_type? OwnerType { get; set; }
+    public Models.FilterSetRestAPI.Post_owner_type? OwnerType { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="Models.FilterSetRestApi.Post"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.FilterSetRestAPI.Post"/> and sets the default values.
     /// </summary>
     public Post()
     {
@@ -34,12 +34,12 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.FilterSetRestApi.Post"/></returns>
+    /// <returns>A <see cref="Models.FilterSetRestAPI.Post"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.FilterSetRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.FilterSetRestAPI.Post CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.FilterSetRestApi.Post();
+        return new Models.FilterSetRestAPI.Post();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -53,7 +53,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
             { "json_metadata", n => { JsonMetadata = n.GetStringValue(); } },
             { "name", n => { Name = n.GetStringValue(); } },
             { "owner_id", n => { OwnerId = n.GetIntValue(); } },
-            { "owner_type", n => { OwnerType = n.GetEnumValue<Models.FilterSetRestApi.Post_owner_type>(); } },
+            { "owner_type", n => { OwnerType = n.GetEnumValue<Models.FilterSetRestAPI.Post_owner_type>(); } },
         };
     }
     /// <summary>
@@ -67,7 +67,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
         writer.WriteStringValue("json_metadata", JsonMetadata);
         writer.WriteStringValue("name", Name);
         writer.WriteIntValue("owner_id", OwnerId);
-        writer.WriteEnumValue<Models.FilterSetRestApi.Post_owner_type>("owner_type", OwnerType);
+        writer.WriteEnumValue<Models.FilterSetRestAPI.Post_owner_type>("owner_type", OwnerType);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

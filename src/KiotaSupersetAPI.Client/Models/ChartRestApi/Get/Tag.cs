@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get;
+namespace KiotaSupersetAPI.Client.Models.ChartRestAPI.Get;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Tag : IAdditionalDataHolder, IParsable
@@ -20,7 +20,7 @@ public partial class Tag : IAdditionalDataHolder, IParsable
     public UntypedNode Type { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.ChartRestApi.Get.Tag"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartRestAPI.Get.Tag"/> and sets the default values.
     /// </summary>
     public Tag()
     {
@@ -29,12 +29,12 @@ public partial class Tag : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.ChartRestApi.Get.Tag"/></returns>
+    /// <returns>A <see cref="Models.ChartRestAPI.Get.Tag"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.ChartRestApi.Get.Tag CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartRestAPI.Get.Tag CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.ChartRestApi.Get.Tag();
+        return new Models.ChartRestAPI.Get.Tag();
     }
     /// <summary>
     /// The deserialization information for the current model

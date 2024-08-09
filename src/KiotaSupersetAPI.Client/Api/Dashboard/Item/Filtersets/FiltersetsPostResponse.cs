@@ -14,7 +14,7 @@ public partial class FiltersetsPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.FilterSetRestApi.Post Result { get; set; }
+    public Models.FilterSetRestAPI.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.Item.Filtersets.FiltersetsPostResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class FiltersetsPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.FilterSetRestApi.Post>(Models.FilterSetRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.FilterSetRestAPI.Post>(Models.FilterSetRestAPI.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class FiltersetsPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.FilterSetRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.FilterSetRestAPI.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

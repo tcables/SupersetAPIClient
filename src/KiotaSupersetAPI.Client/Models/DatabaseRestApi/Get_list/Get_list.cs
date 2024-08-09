@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi.Get_list;
+namespace KiotaSupersetAPI.Client.Models.DatabaseRestAPI.Get_list;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Get_list : IAdditionalDataHolder, IParsable
@@ -34,7 +34,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode Backend { get; private set; }
 
     /// <summary>The changed_by property</summary>
-    public Models.DatabaseRestApi.Get_list.User ChangedBy { get; set; }
+    public Models.DatabaseRestAPI.Get_list.User ChangedBy { get; set; }
 
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
@@ -42,7 +42,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
 
     /// <summary>The created_by property</summary>
-    public Models.DatabaseRestApi.Get_list.User1 CreatedBy { get; set; }
+    public Models.DatabaseRestAPI.Get_list.User1 CreatedBy { get; set; }
 
     /// <summary>The database_name property</summary>
     public string DatabaseName { get; set; }
@@ -69,7 +69,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The uuid property</summary>
     public Guid? Uuid { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="Models.DatabaseRestApi.Get_list.Get_list"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatabaseRestAPI.Get_list.Get_list"/> and sets the default values.
     /// </summary>
     public Get_list()
     {
@@ -78,12 +78,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.DatabaseRestApi.Get_list.Get_list"/></returns>
+    /// <returns>A <see cref="Models.DatabaseRestAPI.Get_list.Get_list"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.DatabaseRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatabaseRestAPI.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.DatabaseRestApi.Get_list.Get_list();
+        return new Models.DatabaseRestAPI.Get_list.Get_list();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -102,10 +102,10 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
             { "allows_subquery", n => { AllowsSubquery = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "allows_virtual_table_explore", n => { AllowsVirtualTableExplore = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "backend", n => { Backend = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.DatabaseRestApi.Get_list.User>(Models.DatabaseRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.DatabaseRestAPI.Get_list.User>(Models.DatabaseRestAPI.Get_list.User.CreateFromDiscriminatorValue); } },
             { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.DatabaseRestApi.Get_list.User1>(Models.DatabaseRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.DatabaseRestAPI.Get_list.User1>(Models.DatabaseRestAPI.Get_list.User1.CreateFromDiscriminatorValue); } },
             { "database_name", n => { DatabaseName = n.GetStringValue(); } },
             { "disable_data_preview", n => { DisableDataPreview = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "engine_information", n => { EngineInformation = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -129,9 +129,9 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
         writer.WriteBoolValue("allow_dml", AllowDml);
         writer.WriteBoolValue("allow_file_upload", AllowFileUpload);
         writer.WriteBoolValue("allow_run_async", AllowRunAsync);
-        writer.WriteObjectValue<Models.DatabaseRestApi.Get_list.User>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.DatabaseRestAPI.Get_list.User>("changed_by", ChangedBy);
         writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
-        writer.WriteObjectValue<Models.DatabaseRestApi.Get_list.User1>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.DatabaseRestAPI.Get_list.User1>("created_by", CreatedBy);
         writer.WriteStringValue("database_name", DatabaseName);
         writer.WriteBoolValue("expose_in_sqllab", ExposeInSqllab);
         writer.WriteStringValue("extra", Extra);

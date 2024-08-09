@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get;
+namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestAPI.Get;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Slice : IAdditionalDataHolder, IParsable
@@ -20,7 +20,7 @@ public partial class Slice : IAdditionalDataHolder, IParsable
     public string VizType { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.ReportScheduleRestApi.Get.Slice"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ReportScheduleRestAPI.Get.Slice"/> and sets the default values.
     /// </summary>
     public Slice()
     {
@@ -29,12 +29,12 @@ public partial class Slice : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.ReportScheduleRestApi.Get.Slice"/></returns>
+    /// <returns>A <see cref="Models.ReportScheduleRestAPI.Get.Slice"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.ReportScheduleRestApi.Get.Slice CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ReportScheduleRestAPI.Get.Slice CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.ReportScheduleRestApi.Get.Slice();
+        return new Models.ReportScheduleRestAPI.Get.Slice();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi;
+namespace KiotaSupersetAPI.Client.Models.DatabaseRestAPI;
 
 /// <summary>
 /// DB-specific parameters for configuration
@@ -15,7 +15,7 @@ public partial class Put_parameters : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="Models.DatabaseRestApi.Put_parameters"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatabaseRestAPI.Put_parameters"/> and sets the default values.
     /// </summary>
     public Put_parameters()
     {
@@ -24,12 +24,12 @@ public partial class Put_parameters : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.DatabaseRestApi.Put_parameters"/></returns>
+    /// <returns>A <see cref="Models.DatabaseRestAPI.Put_parameters"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.DatabaseRestApi.Put_parameters CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatabaseRestAPI.Put_parameters CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.DatabaseRestApi.Put_parameters();
+        return new Models.DatabaseRestAPI.Put_parameters();
     }
     /// <summary>
     /// The deserialization information for the current model

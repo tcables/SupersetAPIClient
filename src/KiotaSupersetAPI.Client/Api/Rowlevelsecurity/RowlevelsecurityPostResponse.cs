@@ -14,7 +14,7 @@ public partial class RowlevelsecurityPostResponse : IAdditionalDataHolder, IPars
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.RLSRestApi.Post Result { get; set; }
+    public Models.RLSRestAPI.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Rowlevelsecurity.RowlevelsecurityPostResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class RowlevelsecurityPostResponse : IAdditionalDataHolder, IPars
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.RLSRestApi.Post>(Models.RLSRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.RLSRestAPI.Post>(Models.RLSRestAPI.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class RowlevelsecurityPostResponse : IAdditionalDataHolder, IPars
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.RLSRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.RLSRestAPI.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

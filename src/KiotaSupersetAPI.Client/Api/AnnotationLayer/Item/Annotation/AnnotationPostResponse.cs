@@ -14,7 +14,7 @@ public partial class AnnotationPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.AnnotationRestApi.Post Result { get; set; }
+    public Models.AnnotationRestAPI.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Item.Annotation.AnnotationPostResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class AnnotationPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.AnnotationRestApi.Post>(Models.AnnotationRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.AnnotationRestAPI.Post>(Models.AnnotationRestAPI.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class AnnotationPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.AnnotationRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.AnnotationRestAPI.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

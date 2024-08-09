@@ -33,7 +33,7 @@ public partial class ReportGetResponse : IAdditionalDataHolder, IParsable
     public List<string> OrderColumns { get; set; }
 
     /// <summary>The result from the get list query</summary>
-    public List<Models.ReportScheduleRestApi.Get_list.Get_list> Result { get; set; }
+    public List<Models.ReportScheduleRestAPI.Get_list.Get_list> Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Report.ReportGetResponse"/> and sets the default values.
@@ -67,7 +67,7 @@ public partial class ReportGetResponse : IAdditionalDataHolder, IParsable
             { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "list_title", n => { ListTitle = n.GetStringValue(); } },
             { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.ReportScheduleRestApi.Get_list.Get_list>(Models.ReportScheduleRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.ReportScheduleRestAPI.Get_list.Get_list>(Models.ReportScheduleRestAPI.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -84,7 +84,7 @@ public partial class ReportGetResponse : IAdditionalDataHolder, IParsable
         writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
         writer.WriteStringValue("list_title", ListTitle);
         writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);
-        writer.WriteCollectionOfObjectValues<Models.ReportScheduleRestApi.Get_list.Get_list>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.ReportScheduleRestAPI.Get_list.Get_list>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

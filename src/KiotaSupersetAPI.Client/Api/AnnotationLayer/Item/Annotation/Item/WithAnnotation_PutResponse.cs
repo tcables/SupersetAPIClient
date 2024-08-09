@@ -14,7 +14,7 @@ public partial class WithAnnotation_PutResponse : IAdditionalDataHolder, IParsab
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.AnnotationRestApi.Put Result { get; set; }
+    public Models.AnnotationRestAPI.Put Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_PutResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class WithAnnotation_PutResponse : IAdditionalDataHolder, IParsab
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.AnnotationRestApi.Put>(Models.AnnotationRestApi.Put.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.AnnotationRestAPI.Put>(Models.AnnotationRestAPI.Put.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class WithAnnotation_PutResponse : IAdditionalDataHolder, IParsab
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.AnnotationRestApi.Put>("result", Result);
+        writer.WriteObjectValue<Models.AnnotationRestAPI.Put>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

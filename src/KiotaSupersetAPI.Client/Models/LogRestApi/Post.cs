@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.LogRestApi;
+namespace KiotaSupersetAPI.Client.Models.LogRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Post : IAdditionalDataHolder, IParsable
@@ -14,7 +14,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="Models.LogRestApi.Post"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.LogRestAPI.Post"/> and sets the default values.
     /// </summary>
     public Post()
     {
@@ -23,12 +23,12 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.LogRestApi.Post"/></returns>
+    /// <returns>A <see cref="Models.LogRestAPI.Post"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.LogRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.LogRestAPI.Post CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.LogRestApi.Post();
+        return new Models.LogRestAPI.Post();
     }
     /// <summary>
     /// The deserialization information for the current model

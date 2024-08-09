@@ -161,7 +161,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Annotation401Error">When receiving a 401 status code</exception>
     /// <exception cref="Models.Annotation404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.Annotation500Error">When receiving a 500 status code</exception>
-    public async Task<AnnotationLayer.Item.Annotation.AnnotationPostResponse> PostAsAnnotationPostResponseAsync(Models.AnnotationRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<AnnotationLayer.Item.Annotation.AnnotationPostResponse> PostAsAnnotationPostResponseAsync(Models.AnnotationRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -187,7 +187,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Annotation404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.Annotation500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsAnnotationPostResponseAsync instead.")]
-    public async Task<AnnotationLayer.Item.Annotation.AnnotationResponse> PostAsync(Models.AnnotationRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<AnnotationLayer.Item.Annotation.AnnotationResponse> PostAsync(Models.AnnotationRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -233,7 +233,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(Models.AnnotationRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.AnnotationRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

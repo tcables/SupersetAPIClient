@@ -33,7 +33,7 @@ public partial class DatasetGetResponse : IAdditionalDataHolder, IParsable
     public List<string> OrderColumns { get; set; }
 
     /// <summary>The result from the get list query</summary>
-    public List<Models.DatasetRestApi.Get_list.Get_list> Result { get; set; }
+    public List<Models.DatasetRestAPI.Get_list.Get_list> Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dataset.DatasetGetResponse"/> and sets the default values.
@@ -67,7 +67,7 @@ public partial class DatasetGetResponse : IAdditionalDataHolder, IParsable
             { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "list_title", n => { ListTitle = n.GetStringValue(); } },
             { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.DatasetRestApi.Get_list.Get_list>(Models.DatasetRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.DatasetRestAPI.Get_list.Get_list>(Models.DatasetRestAPI.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -84,7 +84,7 @@ public partial class DatasetGetResponse : IAdditionalDataHolder, IParsable
         writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
         writer.WriteStringValue("list_title", ListTitle);
         writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);
-        writer.WriteCollectionOfObjectValues<Models.DatasetRestApi.Get_list.Get_list>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.DatasetRestAPI.Get_list.Get_list>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list;
+namespace KiotaSupersetAPI.Client.Models.ChartRestAPI.Get_list;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Get_list : IAdditionalDataHolder, IParsable
@@ -20,7 +20,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public string CertifiedBy { get; set; }
 
     /// <summary>The changed_by property</summary>
-    public Models.ChartRestApi.Get_list.User1 ChangedBy { get; set; }
+    public Models.ChartRestAPI.Get_list.User1 ChangedBy { get; set; }
 
     /// <summary>The changed_by_name property</summary>
     public UntypedNode ChangedByName { get; private set; }
@@ -35,7 +35,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode ChangedOnUtc { get; private set; }
 
     /// <summary>The created_by property</summary>
-    public Models.ChartRestApi.Get_list.User2 CreatedBy { get; set; }
+    public Models.ChartRestAPI.Get_list.User2 CreatedBy { get; set; }
 
     /// <summary>The created_by_name property</summary>
     public UntypedNode CreatedByName { get; private set; }
@@ -44,7 +44,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode CreatedOnDeltaHumanized { get; private set; }
 
     /// <summary>The dashboards property</summary>
-    public Models.ChartRestApi.Get_list.Dashboard Dashboards { get; set; }
+    public Models.ChartRestAPI.Get_list.Dashboard Dashboards { get; set; }
 
     /// <summary>The datasource_id property</summary>
     public int? DatasourceId { get; set; }
@@ -76,10 +76,10 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The last_saved_at property</summary>
     public DateTimeOffset? LastSavedAt { get; set; }
     /// <summary>The last_saved_by property</summary>
-    public Models.ChartRestApi.Get_list.User LastSavedBy { get; set; }
+    public Models.ChartRestAPI.Get_list.User LastSavedBy { get; set; }
 
     /// <summary>The owners property</summary>
-    public Models.ChartRestApi.Get_list.User3 Owners { get; set; }
+    public Models.ChartRestAPI.Get_list.User3 Owners { get; set; }
 
     /// <summary>The params property</summary>
     public string Params { get; set; }
@@ -91,10 +91,10 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode SliceUrl { get; private set; }
 
     /// <summary>The table property</summary>
-    public Models.ChartRestApi.Get_list.SqlaTable Table { get; set; }
+    public Models.ChartRestAPI.Get_list.SqlaTable Table { get; set; }
 
     /// <summary>The tags property</summary>
-    public Models.ChartRestApi.Get_list.Tag Tags { get; set; }
+    public Models.ChartRestAPI.Get_list.Tag Tags { get; set; }
 
     /// <summary>The thumbnail_url property</summary>
     public UntypedNode ThumbnailUrl { get; private set; }
@@ -106,7 +106,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public string VizType { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.ChartRestApi.Get_list.Get_list"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartRestAPI.Get_list.Get_list"/> and sets the default values.
     /// </summary>
     public Get_list()
     {
@@ -115,12 +115,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.ChartRestApi.Get_list.Get_list"/></returns>
+    /// <returns>A <see cref="Models.ChartRestAPI.Get_list.Get_list"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.ChartRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartRestAPI.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.ChartRestApi.Get_list.Get_list();
+        return new Models.ChartRestAPI.Get_list.Get_list();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -133,15 +133,15 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
             { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
             { "certification_details", n => { CertificationDetails = n.GetStringValue(); } },
             { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.ChartRestApi.Get_list.User1>(Models.ChartRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.ChartRestAPI.Get_list.User1>(Models.ChartRestAPI.Get_list.User1.CreateFromDiscriminatorValue); } },
             { "changed_by_name", n => { ChangedByName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "changed_on_dttm", n => { ChangedOnDttm = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "changed_on_utc", n => { ChangedOnUtc = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.ChartRestApi.Get_list.User2>(Models.ChartRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.ChartRestAPI.Get_list.User2>(Models.ChartRestAPI.Get_list.User2.CreateFromDiscriminatorValue); } },
             { "created_by_name", n => { CreatedByName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "created_on_delta_humanized", n => { CreatedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "dashboards", n => { Dashboards = n.GetObjectValue<Models.ChartRestApi.Get_list.Dashboard>(Models.ChartRestApi.Get_list.Dashboard.CreateFromDiscriminatorValue); } },
+            { "dashboards", n => { Dashboards = n.GetObjectValue<Models.ChartRestAPI.Get_list.Dashboard>(Models.ChartRestAPI.Get_list.Dashboard.CreateFromDiscriminatorValue); } },
             { "datasource_id", n => { DatasourceId = n.GetIntValue(); } },
             { "datasource_name_text", n => { DatasourceNameText = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "datasource_type", n => { DatasourceType = n.GetStringValue(); } },
@@ -153,13 +153,13 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
             { "id", n => { Id = n.GetIntValue(); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
             { "last_saved_at", n => { LastSavedAt = n.GetDateTimeOffsetValue(); } },
-            { "last_saved_by", n => { LastSavedBy = n.GetObjectValue<Models.ChartRestApi.Get_list.User>(Models.ChartRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
-            { "owners", n => { Owners = n.GetObjectValue<Models.ChartRestApi.Get_list.User3>(Models.ChartRestApi.Get_list.User3.CreateFromDiscriminatorValue); } },
+            { "last_saved_by", n => { LastSavedBy = n.GetObjectValue<Models.ChartRestAPI.Get_list.User>(Models.ChartRestAPI.Get_list.User.CreateFromDiscriminatorValue); } },
+            { "owners", n => { Owners = n.GetObjectValue<Models.ChartRestAPI.Get_list.User3>(Models.ChartRestAPI.Get_list.User3.CreateFromDiscriminatorValue); } },
             { "params", n => { Params = n.GetStringValue(); } },
             { "slice_name", n => { SliceName = n.GetStringValue(); } },
             { "slice_url", n => { SliceUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "table", n => { Table = n.GetObjectValue<Models.ChartRestApi.Get_list.SqlaTable>(Models.ChartRestApi.Get_list.SqlaTable.CreateFromDiscriminatorValue); } },
-            { "tags", n => { Tags = n.GetObjectValue<Models.ChartRestApi.Get_list.Tag>(Models.ChartRestApi.Get_list.Tag.CreateFromDiscriminatorValue); } },
+            { "table", n => { Table = n.GetObjectValue<Models.ChartRestAPI.Get_list.SqlaTable>(Models.ChartRestAPI.Get_list.SqlaTable.CreateFromDiscriminatorValue); } },
+            { "tags", n => { Tags = n.GetObjectValue<Models.ChartRestAPI.Get_list.Tag>(Models.ChartRestAPI.Get_list.Tag.CreateFromDiscriminatorValue); } },
             { "thumbnail_url", n => { ThumbnailUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "url", n => { Url = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "viz_type", n => { VizType = n.GetStringValue(); } },
@@ -175,21 +175,21 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
         writer.WriteIntValue("cache_timeout", CacheTimeout);
         writer.WriteStringValue("certification_details", CertificationDetails);
         writer.WriteStringValue("certified_by", CertifiedBy);
-        writer.WriteObjectValue<Models.ChartRestApi.Get_list.User1>("changed_by", ChangedBy);
-        writer.WriteObjectValue<Models.ChartRestApi.Get_list.User2>("created_by", CreatedBy);
-        writer.WriteObjectValue<Models.ChartRestApi.Get_list.Dashboard>("dashboards", Dashboards);
+        writer.WriteObjectValue<Models.ChartRestAPI.Get_list.User1>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.ChartRestAPI.Get_list.User2>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.ChartRestAPI.Get_list.Dashboard>("dashboards", Dashboards);
         writer.WriteIntValue("datasource_id", DatasourceId);
         writer.WriteStringValue("datasource_type", DatasourceType);
         writer.WriteStringValue("description", Description);
         writer.WriteIntValue("id", Id);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
         writer.WriteDateTimeOffsetValue("last_saved_at", LastSavedAt);
-        writer.WriteObjectValue<Models.ChartRestApi.Get_list.User>("last_saved_by", LastSavedBy);
-        writer.WriteObjectValue<Models.ChartRestApi.Get_list.User3>("owners", Owners);
+        writer.WriteObjectValue<Models.ChartRestAPI.Get_list.User>("last_saved_by", LastSavedBy);
+        writer.WriteObjectValue<Models.ChartRestAPI.Get_list.User3>("owners", Owners);
         writer.WriteStringValue("params", Params);
         writer.WriteStringValue("slice_name", SliceName);
-        writer.WriteObjectValue<Models.ChartRestApi.Get_list.SqlaTable>("table", Table);
-        writer.WriteObjectValue<Models.ChartRestApi.Get_list.Tag>("tags", Tags);
+        writer.WriteObjectValue<Models.ChartRestAPI.Get_list.SqlaTable>("table", Table);
+        writer.WriteObjectValue<Models.ChartRestAPI.Get_list.Tag>("tags", Tags);
         writer.WriteStringValue("viz_type", VizType);
         writer.WriteAdditionalData(AdditionalData);
     }

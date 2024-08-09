@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.TagRestApi.Get;
+namespace KiotaSupersetAPI.Client.Models.TagRestAPI.Get;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Get : IAdditionalDataHolder, IParsable
@@ -12,13 +12,13 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-    public Models.TagRestApi.Get.User1 ChangedBy { get; set; }
+    public Models.TagRestAPI.Get.User1 ChangedBy { get; set; }
 
     /// <summary>The changed_on_delta_humanized property</summary>
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
 
     /// <summary>The created_by property</summary>
-    public Models.TagRestApi.Get.User CreatedBy { get; set; }
+    public Models.TagRestAPI.Get.User CreatedBy { get; set; }
 
     /// <summary>The created_on_delta_humanized property</summary>
     public UntypedNode CreatedOnDeltaHumanized { get; private set; }
@@ -35,7 +35,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public UntypedNode Type { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.TagRestApi.Get.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TagRestAPI.Get.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -44,12 +44,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.TagRestApi.Get.Get"/></returns>
+    /// <returns>A <see cref="Models.TagRestAPI.Get.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.TagRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TagRestAPI.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.TagRestApi.Get.Get();
+        return new Models.TagRestAPI.Get.Get();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -59,9 +59,9 @@ public partial class Get : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.TagRestApi.Get.User1>(Models.TagRestApi.Get.User1.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.TagRestAPI.Get.User1>(Models.TagRestAPI.Get.User1.CreateFromDiscriminatorValue); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.TagRestApi.Get.User>(Models.TagRestApi.Get.User.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.TagRestAPI.Get.User>(Models.TagRestAPI.Get.User.CreateFromDiscriminatorValue); } },
             { "created_on_delta_humanized", n => { CreatedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "description", n => { Description = n.GetStringValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
@@ -76,8 +76,8 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<Models.TagRestApi.Get.User1>("changed_by", ChangedBy);
-        writer.WriteObjectValue<Models.TagRestApi.Get.User>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.TagRestAPI.Get.User1>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.TagRestAPI.Get.User>("created_by", CreatedBy);
         writer.WriteStringValue("description", Description);
         writer.WriteIntValue("id", Id);
         writer.WriteStringValue("name", Name);

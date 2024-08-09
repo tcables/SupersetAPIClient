@@ -14,7 +14,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.ChartRestApi.Put Result { get; set; }
+    public Models.ChartRestAPI.Put Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Chart.Item.WithPkPutResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.ChartRestApi.Put>(Models.ChartRestApi.Put.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.ChartRestAPI.Put>(Models.ChartRestAPI.Put.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.ChartRestApi.Put>("result", Result);
+        writer.WriteObjectValue<Models.ChartRestAPI.Put>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

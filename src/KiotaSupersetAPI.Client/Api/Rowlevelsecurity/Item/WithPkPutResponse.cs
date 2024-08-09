@@ -14,7 +14,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.RLSRestApi.Put Result { get; set; }
+    public Models.RLSRestAPI.Put Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Rowlevelsecurity.Item.WithPkPutResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.RLSRestApi.Put>(Models.RLSRestApi.Put.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.RLSRestAPI.Put>(Models.RLSRestAPI.Put.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.RLSRestApi.Put>("result", Result);
+        writer.WriteObjectValue<Models.RLSRestAPI.Put>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

@@ -15,7 +15,7 @@ public partial class Css_templatePostResponse : IAdditionalDataHolder, IParsable
     public string Id { get; set; }
 
     /// <summary>The result property</summary>
-    public Models.CssTemplateRestApi.Post Result { get; set; }
+    public Models.CssTemplateRestAPI.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Css_template.Css_templatePostResponse"/> and sets the default values.
@@ -43,7 +43,7 @@ public partial class Css_templatePostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetStringValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.CssTemplateRestApi.Post>(Models.CssTemplateRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.CssTemplateRestAPI.Post>(Models.CssTemplateRestAPI.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -54,7 +54,7 @@ public partial class Css_templatePostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("id", Id);
-        writer.WriteObjectValue<Models.CssTemplateRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.CssTemplateRestAPI.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

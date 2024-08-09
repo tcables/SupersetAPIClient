@@ -171,7 +171,7 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Css_template401Error">When receiving a 401 status code</exception>
     /// <exception cref="Models.Css_template422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Css_template500Error">When receiving a 500 status code</exception>
-    public async Task<Css_template.Css_templatePostResponse> PostAsCss_templatePostResponseAsync(Models.CssTemplateRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Css_template.Css_templatePostResponse> PostAsCss_templatePostResponseAsync(Models.CssTemplateRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -197,7 +197,7 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Css_template422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Css_template500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsCss_templatePostResponseAsync instead.")]
-    public async Task<Css_template.Css_templateResponse> PostAsync(Models.CssTemplateRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Css_template.Css_templateResponse> PostAsync(Models.CssTemplateRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -243,7 +243,7 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(Models.CssTemplateRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.CssTemplateRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

@@ -95,7 +95,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<Dashboard.Item.Filtersets.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(Models.FilterSetRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Filtersets.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(Models.FilterSetRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -125,7 +125,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithPkPutResponseAsync instead.")]
-    public async Task<Dashboard.Item.Filtersets.Item.WithPkResponse> PutAsync(Models.FilterSetRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Filtersets.Item.WithPkResponse> PutAsync(Models.FilterSetRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -160,7 +160,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPutRequestInformation(Models.FilterSetRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPutRequestInformation(Models.FilterSetRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

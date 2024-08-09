@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.DatasetRestApi;
+namespace KiotaSupersetAPI.Client.Models.DatasetRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Put : IAdditionalDataHolder, IParsable
@@ -68,7 +68,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
     public string TemplateParams { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.DatasetRestApi.Put"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatasetRestAPI.Put"/> and sets the default values.
     /// </summary>
     public Put()
     {
@@ -77,12 +77,12 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.DatasetRestApi.Put"/></returns>
+    /// <returns>A <see cref="Models.DatasetRestAPI.Put"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.DatasetRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatasetRestAPI.Put CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.DatasetRestApi.Put();
+        return new Models.DatasetRestAPI.Put();
     }
     /// <summary>
     /// The deserialization information for the current model

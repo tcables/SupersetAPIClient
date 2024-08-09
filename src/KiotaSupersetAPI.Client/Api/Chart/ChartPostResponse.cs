@@ -14,7 +14,7 @@ public partial class ChartPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.ChartRestApi.Post Result { get; set; }
+    public Models.ChartRestAPI.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Chart.ChartPostResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class ChartPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.ChartRestApi.Post>(Models.ChartRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.ChartRestAPI.Post>(Models.ChartRestAPI.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class ChartPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.ChartRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.ChartRestAPI.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

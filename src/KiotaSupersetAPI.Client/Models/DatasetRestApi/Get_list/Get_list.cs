@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get_list;
+namespace KiotaSupersetAPI.Client.Models.DatasetRestAPI.Get_list;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Get_list : IAdditionalDataHolder, IParsable
@@ -12,7 +12,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-    public Models.DatasetRestApi.Get_list.User1 ChangedBy { get; set; }
+    public Models.DatasetRestAPI.Get_list.User1 ChangedBy { get; set; }
 
     /// <summary>The changed_by_name property</summary>
     public UntypedNode ChangedByName { get; private set; }
@@ -24,7 +24,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode ChangedOnUtc { get; private set; }
 
     /// <summary>The database property</summary>
-    public Models.DatasetRestApi.Get_list.Database Database { get; set; }
+    public Models.DatasetRestAPI.Get_list.Database Database { get; set; }
 
     /// <summary>The datasource_type property</summary>
     public UntypedNode DatasourceType { get; private set; }
@@ -47,7 +47,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode Kind { get; private set; }
 
     /// <summary>The owners property</summary>
-    public Models.DatasetRestApi.Get_list.User Owners { get; set; }
+    public Models.DatasetRestAPI.Get_list.User Owners { get; set; }
 
     /// <summary>The schema property</summary>
     public string Schema { get; set; }
@@ -59,7 +59,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public string TableName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.DatasetRestApi.Get_list.Get_list"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatasetRestAPI.Get_list.Get_list"/> and sets the default values.
     /// </summary>
     public Get_list()
     {
@@ -68,12 +68,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.DatasetRestApi.Get_list.Get_list"/></returns>
+    /// <returns>A <see cref="Models.DatasetRestAPI.Get_list.Get_list"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.DatasetRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatasetRestAPI.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.DatasetRestApi.Get_list.Get_list();
+        return new Models.DatasetRestAPI.Get_list.Get_list();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -83,11 +83,11 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.DatasetRestApi.Get_list.User1>(Models.DatasetRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.DatasetRestAPI.Get_list.User1>(Models.DatasetRestAPI.Get_list.User1.CreateFromDiscriminatorValue); } },
             { "changed_by_name", n => { ChangedByName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "changed_on_utc", n => { ChangedOnUtc = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "database", n => { Database = n.GetObjectValue<Models.DatasetRestApi.Get_list.Database>(Models.DatasetRestApi.Get_list.Database.CreateFromDiscriminatorValue); } },
+            { "database", n => { Database = n.GetObjectValue<Models.DatasetRestAPI.Get_list.Database>(Models.DatasetRestAPI.Get_list.Database.CreateFromDiscriminatorValue); } },
             { "datasource_type", n => { DatasourceType = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "default_endpoint", n => { DefaultEndpoint = n.GetStringValue(); } },
             { "description", n => { Description = n.GetStringValue(); } },
@@ -95,7 +95,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
             { "extra", n => { Extra = n.GetStringValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
             { "kind", n => { Kind = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "owners", n => { Owners = n.GetObjectValue<Models.DatasetRestApi.Get_list.User>(Models.DatasetRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+            { "owners", n => { Owners = n.GetObjectValue<Models.DatasetRestAPI.Get_list.User>(Models.DatasetRestAPI.Get_list.User.CreateFromDiscriminatorValue); } },
             { "schema", n => { Schema = n.GetStringValue(); } },
             { "sql", n => { Sql = n.GetStringValue(); } },
             { "table_name", n => { TableName = n.GetStringValue(); } },
@@ -108,13 +108,13 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<Models.DatasetRestApi.Get_list.User1>("changed_by", ChangedBy);
-        writer.WriteObjectValue<Models.DatasetRestApi.Get_list.Database>("database", Database);
+        writer.WriteObjectValue<Models.DatasetRestAPI.Get_list.User1>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.DatasetRestAPI.Get_list.Database>("database", Database);
         writer.WriteStringValue("default_endpoint", DefaultEndpoint);
         writer.WriteStringValue("description", Description);
         writer.WriteStringValue("extra", Extra);
         writer.WriteIntValue("id", Id);
-        writer.WriteObjectValue<Models.DatasetRestApi.Get_list.User>("owners", Owners);
+        writer.WriteObjectValue<Models.DatasetRestAPI.Get_list.User>("owners", Owners);
         writer.WriteStringValue("schema", Schema);
         writer.WriteStringValue("sql", Sql);
         writer.WriteStringValue("table_name", TableName);

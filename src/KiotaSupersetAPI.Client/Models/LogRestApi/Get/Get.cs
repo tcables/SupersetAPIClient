@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.LogRestApi.Get;
+namespace KiotaSupersetAPI.Client.Models.LogRestAPI.Get;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Get : IAdditionalDataHolder, IParsable
@@ -29,12 +29,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The slice_id property</summary>
     public int? SliceId { get; set; }
     /// <summary>The user property</summary>
-    public Models.LogRestApi.Get.User User { get; set; }
+    public Models.LogRestAPI.Get.User User { get; set; }
 
     /// <summary>The user_id property</summary>
     public int? UserId { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="Models.LogRestApi.Get.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.LogRestAPI.Get.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -43,12 +43,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.LogRestApi.Get.Get"/></returns>
+    /// <returns>A <see cref="Models.LogRestAPI.Get.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.LogRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.LogRestAPI.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.LogRestApi.Get.Get();
+        return new Models.LogRestAPI.Get.Get();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -65,7 +65,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
             { "json", n => { Json = n.GetStringValue(); } },
             { "referrer", n => { Referrer = n.GetStringValue(); } },
             { "slice_id", n => { SliceId = n.GetIntValue(); } },
-            { "user", n => { User = n.GetObjectValue<Models.LogRestApi.Get.User>(Models.LogRestApi.Get.User.CreateFromDiscriminatorValue); } },
+            { "user", n => { User = n.GetObjectValue<Models.LogRestAPI.Get.User>(Models.LogRestAPI.Get.User.CreateFromDiscriminatorValue); } },
             { "user_id", n => { UserId = n.GetIntValue(); } },
         };
     }
@@ -83,7 +83,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
         writer.WriteStringValue("json", Json);
         writer.WriteStringValue("referrer", Referrer);
         writer.WriteIntValue("slice_id", SliceId);
-        writer.WriteObjectValue<Models.LogRestApi.Get.User>("user", User);
+        writer.WriteObjectValue<Models.LogRestAPI.Get.User>("user", User);
         writer.WriteIntValue("user_id", UserId);
         writer.WriteAdditionalData(AdditionalData);
     }

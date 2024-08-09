@@ -2,7 +2,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
 
-namespace KiotaSupersetAPI.Client.Api.Item;
+namespace KiotaSupersetAPI.Client.API.Item;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\{version}
@@ -11,12 +11,12 @@ namespace KiotaSupersetAPI.Client.Api.Item;
 public partial class WithVersionItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _openapi property</summary>
-    public Api.Item._openapi._openapiRequestBuilder _openapi
+    public API.Item._openapi._openapiRequestBuilder _openapi
     {
-        get => new Api.Item._openapi._openapiRequestBuilder(PathParameters, RequestAdapter);
+        get => new API.Item._openapi._openapiRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="Api.Item.WithVersionItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="API.Item.WithVersionItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -24,7 +24,7 @@ public partial class WithVersionItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="Api.Item.WithVersionItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="API.Item.WithVersionItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

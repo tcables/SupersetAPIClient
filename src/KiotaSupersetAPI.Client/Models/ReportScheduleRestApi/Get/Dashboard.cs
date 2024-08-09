@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get;
+namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestAPI.Get;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Dashboard : IAdditionalDataHolder, IParsable
@@ -17,7 +17,7 @@ public partial class Dashboard : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="Models.ReportScheduleRestApi.Get.Dashboard"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ReportScheduleRestAPI.Get.Dashboard"/> and sets the default values.
     /// </summary>
     public Dashboard()
     {
@@ -26,12 +26,12 @@ public partial class Dashboard : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.ReportScheduleRestApi.Get.Dashboard"/></returns>
+    /// <returns>A <see cref="Models.ReportScheduleRestAPI.Get.Dashboard"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.ReportScheduleRestApi.Get.Dashboard CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ReportScheduleRestAPI.Get.Dashboard CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.ReportScheduleRestApi.Get.Dashboard();
+        return new Models.ReportScheduleRestAPI.Get.Dashboard();
     }
     /// <summary>
     /// The deserialization information for the current model

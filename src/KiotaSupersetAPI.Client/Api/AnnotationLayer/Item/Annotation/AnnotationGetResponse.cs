@@ -18,7 +18,7 @@ public partial class AnnotationGetResponse : IAdditionalDataHolder, IParsable
     public List<string> Ids { get; set; }
 
     /// <summary>The result from the get list query</summary>
-    public List<Models.AnnotationRestApi.Get_list.Get_list> Result { get; set; }
+    public List<Models.AnnotationRestAPI.Get_list.Get_list> Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Item.Annotation.AnnotationGetResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ public partial class AnnotationGetResponse : IAdditionalDataHolder, IParsable
         {
             { "count", n => { Count = n.GetDoubleValue(); } },
             { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.AnnotationRestApi.Get_list.Get_list>(Models.AnnotationRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.AnnotationRestAPI.Get_list.Get_list>(Models.AnnotationRestAPI.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -59,7 +59,7 @@ public partial class AnnotationGetResponse : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("count", Count);
         writer.WriteCollectionOfPrimitiveValues<string>("ids", Ids);
-        writer.WriteCollectionOfObjectValues<Models.AnnotationRestApi.Get_list.Get_list>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.AnnotationRestAPI.Get_list.Get_list>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

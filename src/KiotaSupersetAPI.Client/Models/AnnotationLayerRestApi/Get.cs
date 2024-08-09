@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi;
+namespace KiotaSupersetAPI.Client.Models.AnnotationLayerRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Get : IAdditionalDataHolder, IParsable
@@ -20,7 +20,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string Name { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.AnnotationLayerRestApi.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.AnnotationLayerRestAPI.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -29,12 +29,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.AnnotationLayerRestApi.Get"/></returns>
+    /// <returns>A <see cref="Models.AnnotationLayerRestAPI.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.AnnotationLayerRestApi.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.AnnotationLayerRestAPI.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.AnnotationLayerRestApi.Get();
+        return new Models.AnnotationLayerRestAPI.Get();
     }
     /// <summary>
     /// The deserialization information for the current model

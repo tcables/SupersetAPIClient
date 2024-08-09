@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get_list;
+namespace KiotaSupersetAPI.Client.Models.CssTemplateRestAPI.Get_list;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class User : IAdditionalDataHolder, IParsable
@@ -20,7 +20,7 @@ public partial class User : IAdditionalDataHolder, IParsable
     public string LastName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.CssTemplateRestApi.Get_list.User"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.CssTemplateRestAPI.Get_list.User"/> and sets the default values.
     /// </summary>
     public User()
     {
@@ -29,12 +29,12 @@ public partial class User : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.CssTemplateRestApi.Get_list.User"/></returns>
+    /// <returns>A <see cref="Models.CssTemplateRestAPI.Get_list.User"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.CssTemplateRestApi.Get_list.User CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.CssTemplateRestAPI.Get_list.User CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.CssTemplateRestApi.Get_list.User();
+        return new Models.CssTemplateRestAPI.Get_list.User();
     }
     /// <summary>
     /// The deserialization information for the current model

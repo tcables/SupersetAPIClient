@@ -1,7 +1,7 @@
 using System.CodeDom.Compiler;
 using System.Runtime.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi;
+namespace KiotaSupersetAPI.Client.Models.DatabaseRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 /// <summary>Configuration_method is used on the frontend to inform the backend whether to explode parameters or to provide only a sqlalchemy_uri.</summary>

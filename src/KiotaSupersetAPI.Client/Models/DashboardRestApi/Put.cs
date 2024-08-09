@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.DashboardRestApi;
+namespace KiotaSupersetAPI.Client.Models.DashboardRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Put : IAdditionalDataHolder, IParsable
@@ -47,7 +47,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
     public string Slug { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.DashboardRestApi.Put"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DashboardRestAPI.Put"/> and sets the default values.
     /// </summary>
     public Put()
     {
@@ -56,12 +56,12 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.DashboardRestApi.Put"/></returns>
+    /// <returns>A <see cref="Models.DashboardRestAPI.Put"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.DashboardRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DashboardRestAPI.Put CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.DashboardRestApi.Put();
+        return new Models.DashboardRestAPI.Put();
     }
     /// <summary>
     /// The deserialization information for the current model

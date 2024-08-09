@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ChartRestApi;
+namespace KiotaSupersetAPI.Client.Models.ChartRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Put : IAdditionalDataHolder, IParsable
@@ -26,7 +26,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasource_id` and `datasource_type`.</summary>
     public int? DatasourceId { get; set; }
     /// <summary>The type of dataset/datasource identified on `datasource_id`.</summary>
-    public Models.ChartRestApi.Put_datasource_type? DatasourceType { get; set; }
+    public Models.ChartRestAPI.Put_datasource_type? DatasourceType { get; set; }
     /// <summary>A description of the chart propose.</summary>
     public string Description { get; set; }
 
@@ -56,7 +56,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
     public string VizType { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.ChartRestApi.Put"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartRestAPI.Put"/> and sets the default values.
     /// </summary>
     public Put()
     {
@@ -65,12 +65,12 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.ChartRestApi.Put"/></returns>
+    /// <returns>A <see cref="Models.ChartRestAPI.Put"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.ChartRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartRestAPI.Put CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.ChartRestApi.Put();
+        return new Models.ChartRestAPI.Put();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -85,7 +85,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
             { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
             { "dashboards", n => { Dashboards = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
             { "datasource_id", n => { DatasourceId = n.GetIntValue(); } },
-            { "datasource_type", n => { DatasourceType = n.GetEnumValue<Models.ChartRestApi.Put_datasource_type>(); } },
+            { "datasource_type", n => { DatasourceType = n.GetEnumValue<Models.ChartRestAPI.Put_datasource_type>(); } },
             { "description", n => { Description = n.GetStringValue(); } },
             { "external_url", n => { ExternalUrl = n.GetStringValue(); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
@@ -110,7 +110,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
         writer.WriteStringValue("certified_by", CertifiedBy);
         writer.WriteCollectionOfPrimitiveValues<int?>("dashboards", Dashboards);
         writer.WriteIntValue("datasource_id", DatasourceId);
-        writer.WriteEnumValue<Models.ChartRestApi.Put_datasource_type>("datasource_type", DatasourceType);
+        writer.WriteEnumValue<Models.ChartRestAPI.Put_datasource_type>("datasource_type", DatasourceType);
         writer.WriteStringValue("description", Description);
         writer.WriteStringValue("external_url", ExternalUrl);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);

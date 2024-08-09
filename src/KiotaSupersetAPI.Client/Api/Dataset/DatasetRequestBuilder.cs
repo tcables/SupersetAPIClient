@@ -209,7 +209,7 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Dataset401Error">When receiving a 401 status code</exception>
     /// <exception cref="Models.Dataset422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Dataset500Error">When receiving a 500 status code</exception>
-    public async Task<Dataset.DatasetPostResponse> PostAsDatasetPostResponseAsync(Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.DatasetPostResponse> PostAsDatasetPostResponseAsync(Models.DatasetRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -235,7 +235,7 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Dataset422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Dataset500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsDatasetPostResponseAsync instead.")]
-    public async Task<Dataset.DatasetResponse> PostAsync(Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.DatasetResponse> PostAsync(Models.DatasetRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -281,7 +281,7 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.DatasetRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

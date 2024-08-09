@@ -16,7 +16,7 @@ public partial class Dashboard_PutResponse : IAdditionalDataHolder, IParsable
     /// <summary>The last_modified_time property</summary>
     public double? LastModifiedTime { get; set; }
     /// <summary>The result property</summary>
-    public Models.DashboardRestApi.Put Result { get; set; }
+    public Models.DashboardRestAPI.Put Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.Item.Dashboard_PutResponse"/> and sets the default values.
@@ -45,7 +45,7 @@ public partial class Dashboard_PutResponse : IAdditionalDataHolder, IParsable
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
             { "last_modified_time", n => { LastModifiedTime = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.DashboardRestApi.Put>(Models.DashboardRestApi.Put.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.DashboardRestAPI.Put>(Models.DashboardRestAPI.Put.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -57,7 +57,7 @@ public partial class Dashboard_PutResponse : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
         writer.WriteDoubleValue("last_modified_time", LastModifiedTime);
-        writer.WriteObjectValue<Models.DashboardRestApi.Put>("result", Result);
+        writer.WriteObjectValue<Models.DashboardRestAPI.Put>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi;
+namespace KiotaSupersetAPI.Client.Models.AnnotationRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Post : IAdditionalDataHolder, IParsable
@@ -25,7 +25,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>The annotation start date time</summary>
     public DateTimeOffset? StartDttm { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="Models.AnnotationRestApi.Post"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.AnnotationRestAPI.Post"/> and sets the default values.
     /// </summary>
     public Post()
     {
@@ -34,12 +34,12 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.AnnotationRestApi.Post"/></returns>
+    /// <returns>A <see cref="Models.AnnotationRestAPI.Post"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.AnnotationRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.AnnotationRestAPI.Post CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.AnnotationRestApi.Post();
+        return new Models.AnnotationRestAPI.Post();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -14,7 +14,7 @@ public partial class DashboardPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.DashboardRestApi.Post Result { get; set; }
+    public Models.DashboardRestAPI.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.DashboardPostResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class DashboardPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.DashboardRestApi.Post>(Models.DashboardRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.DashboardRestAPI.Post>(Models.DashboardRestAPI.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class DashboardPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.DashboardRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.DashboardRestAPI.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

@@ -1,7 +1,7 @@
 using System.CodeDom.Compiler;
 using System.Runtime.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi;
+namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public enum Post_report_format

@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ReportExecutionLogRestApi;
+namespace KiotaSupersetAPI.Client.Models.ReportExecutionLogRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Get : IAdditionalDataHolder, IParsable
@@ -33,7 +33,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string ValueRowJson { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.ReportExecutionLogRestApi.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ReportExecutionLogRestAPI.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -42,12 +42,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.ReportExecutionLogRestApi.Get"/></returns>
+    /// <returns>A <see cref="Models.ReportExecutionLogRestAPI.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.ReportExecutionLogRestApi.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ReportExecutionLogRestAPI.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.ReportExecutionLogRestApi.Get();
+        return new Models.ReportExecutionLogRestAPI.Get();
     }
     /// <summary>
     /// The deserialization information for the current model

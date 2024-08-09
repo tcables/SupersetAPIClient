@@ -14,7 +14,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public Models.FilterSetRestApi.Put Result { get; set; }
+    public Models.FilterSetRestAPI.Put Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.Item.Filtersets.Item.WithPkPutResponse"/> and sets the default values.
@@ -42,7 +42,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.FilterSetRestApi.Put>(Models.FilterSetRestApi.Put.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.FilterSetRestAPI.Put>(Models.FilterSetRestAPI.Put.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -53,7 +53,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<Models.FilterSetRestApi.Put>("result", Result);
+        writer.WriteObjectValue<Models.FilterSetRestAPI.Put>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

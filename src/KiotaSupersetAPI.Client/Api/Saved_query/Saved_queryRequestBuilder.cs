@@ -186,7 +186,7 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Saved_query401Error">When receiving a 401 status code</exception>
     /// <exception cref="Models.Saved_query422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Saved_query500Error">When receiving a 500 status code</exception>
-    public async Task<Saved_query.Saved_queryPostResponse> PostAsSaved_queryPostResponseAsync(Models.SavedQueryRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Saved_query.Saved_queryPostResponse> PostAsSaved_queryPostResponseAsync(Models.SavedQueryRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -212,7 +212,7 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Saved_query422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Saved_query500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsSaved_queryPostResponseAsync instead.")]
-    public async Task<Saved_query.Saved_queryResponse> PostAsync(Models.SavedQueryRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Saved_query.Saved_queryResponse> PostAsync(Models.SavedQueryRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -258,7 +258,7 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(Models.SavedQueryRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.SavedQueryRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

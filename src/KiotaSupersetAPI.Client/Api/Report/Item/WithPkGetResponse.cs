@@ -22,7 +22,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     public Report.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
-    public Models.ReportScheduleRestApi.Get.Get Result { get; set; }
+    public Models.ReportScheduleRestAPI.Get.Get Result { get; set; }
 
     /// <summary>A list of columns</summary>
     public List<string> ShowColumns { get; set; }
@@ -58,7 +58,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
             { "description_columns", n => { DescriptionColumns = n.GetObjectValue<Report.Item.WithPkGetResponse_description_columns>(Report.Item.WithPkGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "id", n => { Id = n.GetStringValue(); } },
             { "label_columns", n => { LabelColumns = n.GetObjectValue<Report.Item.WithPkGetResponse_label_columns>(Report.Item.WithPkGetResponse_label_columns.CreateFromDiscriminatorValue); } },
-            { "result", n => { Result = n.GetObjectValue<Models.ReportScheduleRestApi.Get.Get>(Models.ReportScheduleRestApi.Get.Get.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.ReportScheduleRestAPI.Get.Get>(Models.ReportScheduleRestAPI.Get.Get.CreateFromDiscriminatorValue); } },
             { "show_columns", n => { ShowColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "show_title", n => { ShowTitle = n.GetStringValue(); } },
         };
@@ -73,7 +73,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
         writer.WriteObjectValue<Report.Item.WithPkGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteStringValue("id", Id);
         writer.WriteObjectValue<Report.Item.WithPkGetResponse_label_columns>("label_columns", LabelColumns);
-        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get.Get>("result", Result);
+        writer.WriteObjectValue<Models.ReportScheduleRestAPI.Get.Get>("result", Result);
         writer.WriteCollectionOfPrimitiveValues<string>("show_columns", ShowColumns);
         writer.WriteStringValue("show_title", ShowTitle);
         writer.WriteAdditionalData(AdditionalData);

@@ -187,7 +187,7 @@ public partial class Dashboard_ItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Dashboard_404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.Dashboard_422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Dashboard_500Error">When receiving a 500 status code</exception>
-    public async Task<Dashboard.Item.Dashboard_PutResponse> PutAsDashboard_PutResponseAsync(Models.DashboardRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Dashboard_PutResponse> PutAsDashboard_PutResponseAsync(Models.DashboardRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -217,7 +217,7 @@ public partial class Dashboard_ItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Dashboard_422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Dashboard_500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsDashboard_PutResponseAsync instead.")]
-    public async Task<Dashboard.Item.Dashboard_Response> PutAsync(Models.DashboardRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Dashboard_Response> PutAsync(Models.DashboardRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -265,7 +265,7 @@ public partial class Dashboard_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPutRequestInformation(Models.DashboardRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPutRequestInformation(Models.DashboardRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

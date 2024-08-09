@@ -201,7 +201,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Chart403Error">When receiving a 403 status code</exception>
     /// <exception cref="Models.Chart422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Chart500Error">When receiving a 500 status code</exception>
-    public async Task<Chart.ChartPostResponse> PostAsChartPostResponseAsync(Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Chart.ChartPostResponse> PostAsChartPostResponseAsync(Models.ChartRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -229,7 +229,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Chart422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Chart500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsChartPostResponseAsync instead.")]
-    public async Task<Chart.ChartResponse> PostAsync(Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Chart.ChartResponse> PostAsync(Models.ChartRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -276,7 +276,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(Models.ChartRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.ChartRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

@@ -168,7 +168,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Object_type404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Object_type500Error">When receiving a 500 status code</exception>
-    public async Task<Tag.Item.Object_typePutResponse> PutAsObject_typePutResponseAsync(Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Item.Object_typePutResponse> PutAsObject_typePutResponseAsync(Models.TagRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -198,7 +198,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsObject_typePutResponseAsync instead.")]
-    public async Task<Tag.Item.Object_typeResponse> PutAsync(Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Item.Object_typeResponse> PutAsync(Models.TagRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -246,7 +246,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPutRequestInformation(Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPutRequestInformation(Models.TagRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

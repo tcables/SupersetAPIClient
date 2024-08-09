@@ -12,7 +12,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public Models.CssTemplateRestApi.Put Result { get; set; }
+    public Models.CssTemplateRestAPI.Put Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Css_template.Item.WithPkPutResponse"/> and sets the default values.
@@ -39,7 +39,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetObjectValue<Models.CssTemplateRestApi.Put>(Models.CssTemplateRestApi.Put.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.CssTemplateRestAPI.Put>(Models.CssTemplateRestAPI.Put.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -49,7 +49,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<Models.CssTemplateRestApi.Put>("result", Result);
+        writer.WriteObjectValue<Models.CssTemplateRestAPI.Put>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

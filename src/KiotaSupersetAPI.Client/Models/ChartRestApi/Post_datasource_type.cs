@@ -1,7 +1,7 @@
 using System.CodeDom.Compiler;
 using System.Runtime.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ChartRestApi;
+namespace KiotaSupersetAPI.Client.Models.ChartRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 /// <summary>The type of dataset/datasource identified on `datasource_id`.</summary>

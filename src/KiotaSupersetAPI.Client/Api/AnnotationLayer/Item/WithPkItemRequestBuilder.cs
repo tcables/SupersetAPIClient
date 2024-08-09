@@ -141,7 +141,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.WithPk401Error">When receiving a 401 status code</exception>
     /// <exception cref="Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<AnnotationLayer.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(Models.AnnotationLayerRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<AnnotationLayer.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(Models.AnnotationLayerRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -167,7 +167,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithPkPutResponseAsync instead.")]
-    public async Task<AnnotationLayer.Item.WithPkResponse> PutAsync(Models.AnnotationLayerRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<AnnotationLayer.Item.WithPkResponse> PutAsync(Models.AnnotationLayerRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -213,7 +213,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPutRequestInformation(Models.AnnotationLayerRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPutRequestInformation(Models.AnnotationLayerRestAPI.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

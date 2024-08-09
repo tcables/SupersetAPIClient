@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get;
+namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestAPI.Get;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class ReportRecipients : IAdditionalDataHolder, IParsable
@@ -20,7 +20,7 @@ public partial class ReportRecipients : IAdditionalDataHolder, IParsable
     public string Type { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.ReportScheduleRestApi.Get.ReportRecipients"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ReportScheduleRestAPI.Get.ReportRecipients"/> and sets the default values.
     /// </summary>
     public ReportRecipients()
     {
@@ -29,12 +29,12 @@ public partial class ReportRecipients : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.ReportScheduleRestApi.Get.ReportRecipients"/></returns>
+    /// <returns>A <see cref="Models.ReportScheduleRestAPI.Get.ReportRecipients"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.ReportScheduleRestApi.Get.ReportRecipients CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ReportScheduleRestAPI.Get.ReportRecipients CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.ReportScheduleRestApi.Get.ReportRecipients();
+        return new Models.ReportScheduleRestAPI.Get.ReportRecipients();
     }
     /// <summary>
     /// The deserialization information for the current model

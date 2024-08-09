@@ -22,7 +22,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     public Query.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
-    public Models.QueryRestApi.Get.Get Result { get; set; }
+    public Models.QueryRestAPI.Get.Get Result { get; set; }
 
     /// <summary>A list of columns</summary>
     public List<string> ShowColumns { get; set; }
@@ -58,7 +58,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
             { "description_columns", n => { DescriptionColumns = n.GetObjectValue<Query.Item.WithPkGetResponse_description_columns>(Query.Item.WithPkGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "id", n => { Id = n.GetStringValue(); } },
             { "label_columns", n => { LabelColumns = n.GetObjectValue<Query.Item.WithPkGetResponse_label_columns>(Query.Item.WithPkGetResponse_label_columns.CreateFromDiscriminatorValue); } },
-            { "result", n => { Result = n.GetObjectValue<Models.QueryRestApi.Get.Get>(Models.QueryRestApi.Get.Get.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.QueryRestAPI.Get.Get>(Models.QueryRestAPI.Get.Get.CreateFromDiscriminatorValue); } },
             { "show_columns", n => { ShowColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "show_title", n => { ShowTitle = n.GetStringValue(); } },
         };
@@ -73,7 +73,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
         writer.WriteObjectValue<Query.Item.WithPkGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteStringValue("id", Id);
         writer.WriteObjectValue<Query.Item.WithPkGetResponse_label_columns>("label_columns", LabelColumns);
-        writer.WriteObjectValue<Models.QueryRestApi.Get.Get>("result", Result);
+        writer.WriteObjectValue<Models.QueryRestAPI.Get.Get>("result", Result);
         writer.WriteCollectionOfPrimitiveValues<string>("show_columns", ShowColumns);
         writer.WriteStringValue("show_title", ShowTitle);
         writer.WriteAdditionalData(AdditionalData);

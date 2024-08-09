@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get_list;
+namespace KiotaSupersetAPI.Client.Models.ChartRestAPI.Get_list;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class SqlaTable : IAdditionalDataHolder, IParsable
@@ -18,7 +18,7 @@ public partial class SqlaTable : IAdditionalDataHolder, IParsable
     public string TableName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.ChartRestApi.Get_list.SqlaTable"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartRestAPI.Get_list.SqlaTable"/> and sets the default values.
     /// </summary>
     public SqlaTable()
     {
@@ -27,12 +27,12 @@ public partial class SqlaTable : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.ChartRestApi.Get_list.SqlaTable"/></returns>
+    /// <returns>A <see cref="Models.ChartRestAPI.Get_list.SqlaTable"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.ChartRestApi.Get_list.SqlaTable CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartRestAPI.Get_list.SqlaTable CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.ChartRestApi.Get_list.SqlaTable();
+        return new Models.ChartRestAPI.Get_list.SqlaTable();
     }
     /// <summary>
     /// The deserialization information for the current model

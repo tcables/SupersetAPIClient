@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get_list;
+namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestAPI.Get_list;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Get_list : IAdditionalDataHolder, IParsable
@@ -14,7 +14,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-    public Models.ReportScheduleRestApi.Get_list.User ChangedBy { get; set; }
+    public Models.ReportScheduleRestAPI.Get_list.User ChangedBy { get; set; }
 
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
@@ -24,7 +24,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The chart_id property</summary>
     public int? ChartId { get; set; }
     /// <summary>The created_by property</summary>
-    public Models.ReportScheduleRestApi.Get_list.User1 CreatedBy { get; set; }
+    public Models.ReportScheduleRestAPI.Get_list.User1 CreatedBy { get; set; }
 
     /// <summary>The created_on property</summary>
     public DateTimeOffset? CreatedOn { get; set; }
@@ -56,10 +56,10 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public string Name { get; set; }
 
     /// <summary>The owners property</summary>
-    public Models.ReportScheduleRestApi.Get_list.User2 Owners { get; set; }
+    public Models.ReportScheduleRestAPI.Get_list.User2 Owners { get; set; }
 
     /// <summary>The recipients property</summary>
-    public Models.ReportScheduleRestApi.Get_list.ReportRecipients Recipients { get; set; }
+    public Models.ReportScheduleRestAPI.Get_list.ReportRecipients Recipients { get; set; }
 
     /// <summary>The timezone property</summary>
     public string Timezone { get; set; }
@@ -68,7 +68,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public string Type { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.ReportScheduleRestApi.Get_list.Get_list"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ReportScheduleRestAPI.Get_list.Get_list"/> and sets the default values.
     /// </summary>
     public Get_list()
     {
@@ -77,12 +77,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.ReportScheduleRestApi.Get_list.Get_list"/></returns>
+    /// <returns>A <see cref="Models.ReportScheduleRestAPI.Get_list.Get_list"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.ReportScheduleRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ReportScheduleRestAPI.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.ReportScheduleRestApi.Get_list.Get_list();
+        return new Models.ReportScheduleRestAPI.Get_list.Get_list();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -93,11 +93,11 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "active", n => { Active = n.GetBoolValue(); } },
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.ReportScheduleRestApi.Get_list.User>(Models.ReportScheduleRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.ReportScheduleRestAPI.Get_list.User>(Models.ReportScheduleRestAPI.Get_list.User.CreateFromDiscriminatorValue); } },
             { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "chart_id", n => { ChartId = n.GetIntValue(); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.ReportScheduleRestApi.Get_list.User1>(Models.ReportScheduleRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.ReportScheduleRestAPI.Get_list.User1>(Models.ReportScheduleRestAPI.Get_list.User1.CreateFromDiscriminatorValue); } },
             { "created_on", n => { CreatedOn = n.GetDateTimeOffsetValue(); } },
             { "creation_method", n => { CreationMethod = n.GetStringValue(); } },
             { "crontab", n => { Crontab = n.GetStringValue(); } },
@@ -109,8 +109,8 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
             { "last_eval_dttm", n => { LastEvalDttm = n.GetDateTimeOffsetValue(); } },
             { "last_state", n => { LastState = n.GetStringValue(); } },
             { "name", n => { Name = n.GetStringValue(); } },
-            { "owners", n => { Owners = n.GetObjectValue<Models.ReportScheduleRestApi.Get_list.User2>(Models.ReportScheduleRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
-            { "recipients", n => { Recipients = n.GetObjectValue<Models.ReportScheduleRestApi.Get_list.ReportRecipients>(Models.ReportScheduleRestApi.Get_list.ReportRecipients.CreateFromDiscriminatorValue); } },
+            { "owners", n => { Owners = n.GetObjectValue<Models.ReportScheduleRestAPI.Get_list.User2>(Models.ReportScheduleRestAPI.Get_list.User2.CreateFromDiscriminatorValue); } },
+            { "recipients", n => { Recipients = n.GetObjectValue<Models.ReportScheduleRestAPI.Get_list.ReportRecipients>(Models.ReportScheduleRestAPI.Get_list.ReportRecipients.CreateFromDiscriminatorValue); } },
             { "timezone", n => { Timezone = n.GetStringValue(); } },
             { "type", n => { Type = n.GetStringValue(); } },
         };
@@ -123,10 +123,10 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteBoolValue("active", Active);
-        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get_list.User>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.ReportScheduleRestAPI.Get_list.User>("changed_by", ChangedBy);
         writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
         writer.WriteIntValue("chart_id", ChartId);
-        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get_list.User1>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.ReportScheduleRestAPI.Get_list.User1>("created_by", CreatedBy);
         writer.WriteDateTimeOffsetValue("created_on", CreatedOn);
         writer.WriteStringValue("creation_method", CreationMethod);
         writer.WriteStringValue("crontab", Crontab);
@@ -136,8 +136,8 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
         writer.WriteDateTimeOffsetValue("last_eval_dttm", LastEvalDttm);
         writer.WriteStringValue("last_state", LastState);
         writer.WriteStringValue("name", Name);
-        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get_list.User2>("owners", Owners);
-        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get_list.ReportRecipients>("recipients", Recipients);
+        writer.WriteObjectValue<Models.ReportScheduleRestAPI.Get_list.User2>("owners", Owners);
+        writer.WriteObjectValue<Models.ReportScheduleRestAPI.Get_list.ReportRecipients>("recipients", Recipients);
         writer.WriteStringValue("timezone", Timezone);
         writer.WriteStringValue("type", Type);
         writer.WriteAdditionalData(AdditionalData);

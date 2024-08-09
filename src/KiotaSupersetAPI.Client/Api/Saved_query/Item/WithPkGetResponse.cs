@@ -22,7 +22,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     public Saved_query.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
-    public Models.SavedQueryRestApi.Get.Get Result { get; set; }
+    public Models.SavedQueryRestAPI.Get.Get Result { get; set; }
 
     /// <summary>A list of columns</summary>
     public List<string> ShowColumns { get; set; }
@@ -58,7 +58,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
             { "description_columns", n => { DescriptionColumns = n.GetObjectValue<Saved_query.Item.WithPkGetResponse_description_columns>(Saved_query.Item.WithPkGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "id", n => { Id = n.GetStringValue(); } },
             { "label_columns", n => { LabelColumns = n.GetObjectValue<Saved_query.Item.WithPkGetResponse_label_columns>(Saved_query.Item.WithPkGetResponse_label_columns.CreateFromDiscriminatorValue); } },
-            { "result", n => { Result = n.GetObjectValue<Models.SavedQueryRestApi.Get.Get>(Models.SavedQueryRestApi.Get.Get.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.SavedQueryRestAPI.Get.Get>(Models.SavedQueryRestAPI.Get.Get.CreateFromDiscriminatorValue); } },
             { "show_columns", n => { ShowColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "show_title", n => { ShowTitle = n.GetStringValue(); } },
         };
@@ -73,7 +73,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
         writer.WriteObjectValue<Saved_query.Item.WithPkGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteStringValue("id", Id);
         writer.WriteObjectValue<Saved_query.Item.WithPkGetResponse_label_columns>("label_columns", LabelColumns);
-        writer.WriteObjectValue<Models.SavedQueryRestApi.Get.Get>("result", Result);
+        writer.WriteObjectValue<Models.SavedQueryRestAPI.Get.Get>("result", Result);
         writer.WriteCollectionOfPrimitiveValues<string>("show_columns", ShowColumns);
         writer.WriteStringValue("show_title", ShowTitle);
         writer.WriteAdditionalData(AdditionalData);

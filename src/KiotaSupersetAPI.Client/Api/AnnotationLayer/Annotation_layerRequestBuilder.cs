@@ -171,7 +171,7 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Annotation_layer401Error">When receiving a 401 status code</exception>
     /// <exception cref="Models.Annotation_layer404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.Annotation_layer500Error">When receiving a 500 status code</exception>
-    public async Task<AnnotationLayer.Annotation_layerPostResponse> PostAsAnnotation_layerPostResponseAsync(Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<AnnotationLayer.Annotation_layerPostResponse> PostAsAnnotation_layerPostResponseAsync(Models.AnnotationLayerRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -197,7 +197,7 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Annotation_layer404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.Annotation_layer500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsAnnotation_layerPostResponseAsync instead.")]
-    public async Task<AnnotationLayer.Annotation_layerResponse> PostAsync(Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<AnnotationLayer.Annotation_layerResponse> PostAsync(Models.AnnotationLayerRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -243,7 +243,7 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(Models.AnnotationLayerRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.AnnotationLayerRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

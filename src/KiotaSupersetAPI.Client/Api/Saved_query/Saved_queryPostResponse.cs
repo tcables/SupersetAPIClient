@@ -15,7 +15,7 @@ public partial class Saved_queryPostResponse : IAdditionalDataHolder, IParsable
     public string Id { get; set; }
 
     /// <summary>The result property</summary>
-    public Models.SavedQueryRestApi.Post Result { get; set; }
+    public Models.SavedQueryRestAPI.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Saved_query.Saved_queryPostResponse"/> and sets the default values.
@@ -43,7 +43,7 @@ public partial class Saved_queryPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetStringValue(); } },
-            { "result", n => { Result = n.GetObjectValue<Models.SavedQueryRestApi.Post>(Models.SavedQueryRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.SavedQueryRestAPI.Post>(Models.SavedQueryRestAPI.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -54,7 +54,7 @@ public partial class Saved_queryPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("id", Id);
-        writer.WriteObjectValue<Models.SavedQueryRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.SavedQueryRestAPI.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

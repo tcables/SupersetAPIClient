@@ -65,10 +65,10 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
     /// <summary>The result from the get list query</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-    public List<Models.AnnotationLayerRestApi.Get_list.Get_list>? Result { get; set; }
+    public List<Models.AnnotationLayerRestAPI.Get_list.Get_list>? Result { get; set; }
 #nullable restore
 #else
-    public List<Models.AnnotationLayerRestApi.Get_list.Get_list> Result { get; set; }
+    public List<Models.AnnotationLayerRestAPI.Get_list.Get_list> Result { get; set; }
 #endif
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Annotation_layerGetResponse"/> and sets the default values.
@@ -102,7 +102,7 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
             { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "list_title", n => { ListTitle = n.GetStringValue(); } },
             { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.AnnotationLayerRestApi.Get_list.Get_list>(Models.AnnotationLayerRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.AnnotationLayerRestAPI.Get_list.Get_list>(Models.AnnotationLayerRestAPI.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -119,7 +119,7 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
         writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
         writer.WriteStringValue("list_title", ListTitle);
         writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);
-        writer.WriteCollectionOfObjectValues<Models.AnnotationLayerRestApi.Get_list.Get_list>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.AnnotationLayerRestAPI.Get_list.Get_list>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

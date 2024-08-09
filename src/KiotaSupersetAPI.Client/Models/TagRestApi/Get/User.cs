@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.TagRestApi.Get;
+namespace KiotaSupersetAPI.Client.Models.TagRestAPI.Get;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class User : IAdditionalDataHolder, IParsable
@@ -41,7 +41,7 @@ public partial class User : IAdditionalDataHolder, IParsable
     public string Username { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.TagRestApi.Get.User"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TagRestAPI.Get.User"/> and sets the default values.
     /// </summary>
     public User()
     {
@@ -50,12 +50,12 @@ public partial class User : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.TagRestApi.Get.User"/></returns>
+    /// <returns>A <see cref="Models.TagRestAPI.Get.User"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.TagRestApi.Get.User CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TagRestAPI.Get.User CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.TagRestApi.Get.User();
+        return new Models.TagRestAPI.Get.User();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -176,7 +176,7 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Report404Error">When receiving a 404 status code</exception>
     /// <exception cref="Models.Report422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Report500Error">When receiving a 500 status code</exception>
-    public async Task<Report.ReportPostResponse> PostAsReportPostResponseAsync(Models.ReportScheduleRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Report.ReportPostResponse> PostAsReportPostResponseAsync(Models.ReportScheduleRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -204,7 +204,7 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Report422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Report500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsReportPostResponseAsync instead.")]
-    public async Task<Report.ReportResponse> PostAsync(Models.ReportScheduleRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Report.ReportResponse> PostAsync(Models.ReportScheduleRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -251,7 +251,7 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(Models.ReportScheduleRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.ReportScheduleRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.DatasetRestApi.Get;
+namespace KiotaSupersetAPI.Client.Models.DatasetRestAPI.Get;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Get : IAdditionalDataHolder, IParsable
@@ -16,7 +16,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The cache_timeout property</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>The changed_by property</summary>
-    public Models.DatasetRestApi.Get.User ChangedBy { get; set; }
+    public Models.DatasetRestAPI.Get.User ChangedBy { get; set; }
 
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
@@ -27,10 +27,10 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public UntypedNode ColumnFormats { get; private set; }
 
     /// <summary>The columns property</summary>
-    public Models.DatasetRestApi.Get.TableColumn Columns { get; set; }
+    public Models.DatasetRestAPI.Get.TableColumn Columns { get; set; }
 
     /// <summary>The created_by property</summary>
-    public Models.DatasetRestApi.Get.User1 CreatedBy { get; set; }
+    public Models.DatasetRestAPI.Get.User1 CreatedBy { get; set; }
 
     /// <summary>The created_on property</summary>
     public DateTimeOffset? CreatedOn { get; set; }
@@ -41,7 +41,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public UntypedNode CurrencyFormats { get; private set; }
 
     /// <summary>The database property</summary>
-    public Models.DatasetRestApi.Get.Database Database { get; set; }
+    public Models.DatasetRestAPI.Get.Database Database { get; set; }
 
     /// <summary>The datasource_name property</summary>
     public UntypedNode DatasourceName { get; private set; }
@@ -79,7 +79,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string MainDttmCol { get; set; }
 
     /// <summary>The metrics property</summary>
-    public Models.DatasetRestApi.Get.SqlMetric Metrics { get; set; }
+    public Models.DatasetRestAPI.Get.SqlMetric Metrics { get; set; }
 
     /// <summary>The name property</summary>
     public UntypedNode Name { get; private set; }
@@ -92,7 +92,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public UntypedNode OrderByChoices { get; private set; }
 
     /// <summary>The owners property</summary>
-    public Models.DatasetRestApi.Get.User2 Owners { get; set; }
+    public Models.DatasetRestAPI.Get.User2 Owners { get; set; }
 
     /// <summary>The schema property</summary>
     public string Schema { get; set; }
@@ -122,7 +122,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public UntypedNode VerboseMap { get; private set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="Models.DatasetRestApi.Get.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatasetRestAPI.Get.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -131,12 +131,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.DatasetRestApi.Get.Get"/></returns>
+    /// <returns>A <see cref="Models.DatasetRestAPI.Get.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.DatasetRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatasetRestAPI.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.DatasetRestApi.Get.Get();
+        return new Models.DatasetRestAPI.Get.Get();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -148,16 +148,16 @@ public partial class Get : IAdditionalDataHolder, IParsable
         {
             { "always_filter_main_dttm", n => { AlwaysFilterMainDttm = n.GetBoolValue(); } },
             { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.DatasetRestApi.Get.User>(Models.DatasetRestApi.Get.User.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.DatasetRestAPI.Get.User>(Models.DatasetRestAPI.Get.User.CreateFromDiscriminatorValue); } },
             { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
             { "changed_on_humanized", n => { ChangedOnHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "column_formats", n => { ColumnFormats = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "columns", n => { Columns = n.GetObjectValue<Models.DatasetRestApi.Get.TableColumn>(Models.DatasetRestApi.Get.TableColumn.CreateFromDiscriminatorValue); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.DatasetRestApi.Get.User1>(Models.DatasetRestApi.Get.User1.CreateFromDiscriminatorValue); } },
+            { "columns", n => { Columns = n.GetObjectValue<Models.DatasetRestAPI.Get.TableColumn>(Models.DatasetRestAPI.Get.TableColumn.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.DatasetRestAPI.Get.User1>(Models.DatasetRestAPI.Get.User1.CreateFromDiscriminatorValue); } },
             { "created_on", n => { CreatedOn = n.GetDateTimeOffsetValue(); } },
             { "created_on_humanized", n => { CreatedOnHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "currency_formats", n => { CurrencyFormats = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "database", n => { Database = n.GetObjectValue<Models.DatasetRestApi.Get.Database>(Models.DatasetRestApi.Get.Database.CreateFromDiscriminatorValue); } },
+            { "database", n => { Database = n.GetObjectValue<Models.DatasetRestAPI.Get.Database>(Models.DatasetRestAPI.Get.Database.CreateFromDiscriminatorValue); } },
             { "datasource_name", n => { DatasourceName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "datasource_type", n => { DatasourceType = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "default_endpoint", n => { DefaultEndpoint = n.GetStringValue(); } },
@@ -171,12 +171,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
             { "is_sqllab_view", n => { IsSqllabView = n.GetBoolValue(); } },
             { "kind", n => { Kind = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "main_dttm_col", n => { MainDttmCol = n.GetStringValue(); } },
-            { "metrics", n => { Metrics = n.GetObjectValue<Models.DatasetRestApi.Get.SqlMetric>(Models.DatasetRestApi.Get.SqlMetric.CreateFromDiscriminatorValue); } },
+            { "metrics", n => { Metrics = n.GetObjectValue<Models.DatasetRestAPI.Get.SqlMetric>(Models.DatasetRestAPI.Get.SqlMetric.CreateFromDiscriminatorValue); } },
             { "name", n => { Name = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "normalize_columns", n => { NormalizeColumns = n.GetBoolValue(); } },
             { "offset", n => { Offset = n.GetIntValue(); } },
             { "order_by_choices", n => { OrderByChoices = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "owners", n => { Owners = n.GetObjectValue<Models.DatasetRestApi.Get.User2>(Models.DatasetRestApi.Get.User2.CreateFromDiscriminatorValue); } },
+            { "owners", n => { Owners = n.GetObjectValue<Models.DatasetRestAPI.Get.User2>(Models.DatasetRestAPI.Get.User2.CreateFromDiscriminatorValue); } },
             { "schema", n => { Schema = n.GetStringValue(); } },
             { "select_star", n => { SelectStar = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "sql", n => { Sql = n.GetStringValue(); } },
@@ -197,12 +197,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteBoolValue("always_filter_main_dttm", AlwaysFilterMainDttm);
         writer.WriteIntValue("cache_timeout", CacheTimeout);
-        writer.WriteObjectValue<Models.DatasetRestApi.Get.User>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.DatasetRestAPI.Get.User>("changed_by", ChangedBy);
         writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
-        writer.WriteObjectValue<Models.DatasetRestApi.Get.TableColumn>("columns", Columns);
-        writer.WriteObjectValue<Models.DatasetRestApi.Get.User1>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.DatasetRestAPI.Get.TableColumn>("columns", Columns);
+        writer.WriteObjectValue<Models.DatasetRestAPI.Get.User1>("created_by", CreatedBy);
         writer.WriteDateTimeOffsetValue("created_on", CreatedOn);
-        writer.WriteObjectValue<Models.DatasetRestApi.Get.Database>("database", Database);
+        writer.WriteObjectValue<Models.DatasetRestAPI.Get.Database>("database", Database);
         writer.WriteStringValue("default_endpoint", DefaultEndpoint);
         writer.WriteStringValue("description", Description);
         writer.WriteStringValue("extra", Extra);
@@ -212,10 +212,10 @@ public partial class Get : IAdditionalDataHolder, IParsable
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
         writer.WriteBoolValue("is_sqllab_view", IsSqllabView);
         writer.WriteStringValue("main_dttm_col", MainDttmCol);
-        writer.WriteObjectValue<Models.DatasetRestApi.Get.SqlMetric>("metrics", Metrics);
+        writer.WriteObjectValue<Models.DatasetRestAPI.Get.SqlMetric>("metrics", Metrics);
         writer.WriteBoolValue("normalize_columns", NormalizeColumns);
         writer.WriteIntValue("offset", Offset);
-        writer.WriteObjectValue<Models.DatasetRestApi.Get.User2>("owners", Owners);
+        writer.WriteObjectValue<Models.DatasetRestAPI.Get.User2>("owners", Owners);
         writer.WriteStringValue("schema", Schema);
         writer.WriteStringValue("sql", Sql);
         writer.WriteStringValue("table_name", TableName);

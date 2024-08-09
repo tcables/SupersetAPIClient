@@ -15,9 +15,9 @@ namespace KiotaSupersetAPI.Client;
 public partial class SupersetAPIClient : BaseRequestBuilder
 {
     /// <summary>The api property</summary>
-    public API.ApiRequestBuilder API
+    public API.APIRequestBuilder API
     {
-        get => new API.ApiRequestBuilder(PathParameters, RequestAdapter);
+        get => new API.APIRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="SupersetAPIClient"/> and sets the default values.

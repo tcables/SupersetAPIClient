@@ -1,7 +1,7 @@
 using System.CodeDom.Compiler;
 using System.Runtime.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.RLSRestApi;
+namespace KiotaSupersetAPI.Client.Models.RLSRestAPI;
 
 [GeneratedCode("Kiota", "1.16.0")]
 /// <summary>filter_type_description</summary>

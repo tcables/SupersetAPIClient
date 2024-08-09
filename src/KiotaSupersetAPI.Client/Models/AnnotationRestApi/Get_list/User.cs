@@ -4,7 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
 
-namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list;
+namespace KiotaSupersetAPI.Client.Models.AnnotationRestAPI.Get_list;
 
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class User : IAdditionalDataHolder, IParsable
@@ -17,7 +17,7 @@ public partial class User : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="Models.AnnotationRestApi.Get_list.User"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.AnnotationRestAPI.Get_list.User"/> and sets the default values.
     /// </summary>
     public User()
     {
@@ -26,12 +26,12 @@ public partial class User : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="Models.AnnotationRestApi.Get_list.User"/></returns>
+    /// <returns>A <see cref="Models.AnnotationRestAPI.Get_list.User"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Models.AnnotationRestApi.Get_list.User CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.AnnotationRestAPI.Get_list.User CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Models.AnnotationRestApi.Get_list.User();
+        return new Models.AnnotationRestAPI.Get_list.User();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -190,7 +190,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Tag401Error">When receiving a 401 status code</exception>
     /// <exception cref="Models.Tag422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Tag500Error">When receiving a 500 status code</exception>
-    public async Task<Tag.TagPostResponse> PostAsTagPostResponseAsync(Models.TagRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.TagPostResponse> PostAsTagPostResponseAsync(Models.TagRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -216,7 +216,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <exception cref="Models.Tag422Error">When receiving a 422 status code</exception>
     /// <exception cref="Models.Tag500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsTagPostResponseAsync instead.")]
-    public async Task<Tag.TagResponse> PostAsync(Models.TagRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.TagResponse> PostAsync(Models.TagRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -262,7 +262,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(Models.TagRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.TagRestAPI.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
