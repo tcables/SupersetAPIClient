@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Select_star;
+namespace KiotaSupersetAPI.Client.API.Database.Item.Select_star;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\database\{pk}\select_star
@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Select_star;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Select_starRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.database.item.select_star.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item.select_star.item collection</summary>
     /// <param name="position">Table name</param>
     /// <returns>A <see cref="KApi.Database.Item.Select_star.Item.WithTable_nameItemRequestBuilder"/></returns>
     public KApi.Database.Item.Select_star.Item.WithTable_nameItemRequestBuilder this[string position]

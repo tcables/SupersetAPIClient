@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Security.Csrf_token;
+namespace KiotaSupersetAPI.Client.API.Security.Csrf_token;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\security\csrf_token

@@ -3,9 +3,9 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Database.Available;
+namespace KiotaSupersetAPI.Client.API.Database.Available;
 
 /// <summary>
 /// Dict with public properties form the DB Engine

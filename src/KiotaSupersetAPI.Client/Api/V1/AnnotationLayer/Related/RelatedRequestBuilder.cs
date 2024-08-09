@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.AnnotationLayer.Related;
+namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Related;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\annotation_layer\related
@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.AnnotationLayer.Related;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class RelatedRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.AnnotationLayer.related.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.AnnotationLayer.related.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.AnnotationLayer.Related.Item.WithColumn_nameItemRequestBuilder"/></returns>
     public KApi.AnnotationLayer.Related.Item.WithColumn_nameItemRequestBuilder this[string position]

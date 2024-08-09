@@ -3,9 +3,9 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column;
+namespace KiotaSupersetAPI.Client.API.Dataset.Item.Column;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\dataset\{pk}\column
@@ -13,7 +13,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dataset.Item.Column;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class ColumnRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.column.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dataset.item.column.item collection</summary>
     /// <param name="position">The column id for this dataset</param>
     /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
     public KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder this[int position]
@@ -25,7 +25,7 @@ public partial class ColumnRequestBuilder : BaseRequestBuilder
             return new KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dataset.item.column.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dataset.item.column.item collection</summary>
     /// <param name="position">The column id for this dataset</param>
     /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

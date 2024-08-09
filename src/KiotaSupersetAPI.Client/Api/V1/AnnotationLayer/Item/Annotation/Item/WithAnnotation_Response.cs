@@ -2,9 +2,9 @@
 using System;
 using System.CodeDom.Compiler;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.AnnotationLayer.Item.Annotation.Item;
+namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item.Annotation.Item;
 
 [Obsolete("This class is obsolete. Use WithAnnotation_DeleteResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]

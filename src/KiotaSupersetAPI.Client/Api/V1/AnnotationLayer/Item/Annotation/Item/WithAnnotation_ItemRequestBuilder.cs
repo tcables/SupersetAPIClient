@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.AnnotationLayer.Item.Annotation.Item;
+namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item.Annotation.Item;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\annotation_layer\{pk}\annotation\{annotation_id}

@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column.Item;
+namespace KiotaSupersetAPI.Client.API.Datasource.Item.Item.Column.Item;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\datasource\{datasource_type}\{datasource_id}\column\{column_name}

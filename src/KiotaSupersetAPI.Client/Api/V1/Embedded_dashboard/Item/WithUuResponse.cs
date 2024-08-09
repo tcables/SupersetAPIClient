@@ -2,9 +2,9 @@
 using System;
 using System.CodeDom.Compiler;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard.Item;
+namespace KiotaSupersetAPI.Client.API.Embedded_dashboard.Item;
 
 [Obsolete("This class is obsolete. Use WithUuGetResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]

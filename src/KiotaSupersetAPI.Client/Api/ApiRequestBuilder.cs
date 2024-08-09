@@ -1,7 +1,7 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Api;

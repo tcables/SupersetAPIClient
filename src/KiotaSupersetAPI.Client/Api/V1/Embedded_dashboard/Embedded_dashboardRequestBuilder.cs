@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard;
+namespace KiotaSupersetAPI.Client.API.Embedded_dashboard;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\embedded_dashboard
@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Embedded_dashboard;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Embedded_dashboardRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.embedded_dashboard.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.embedded_dashboard.item collection</summary>
     /// <param name="position">The embedded configuration uuid</param>
     /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder"/></returns>
     public KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder this[string position]

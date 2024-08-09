@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item;
+namespace KiotaSupersetAPI.Client.API.Tag.Item.Item;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\tag\{object_type-id}\{object_id}
@@ -17,7 +17,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Item;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.tag.item.item.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item.item.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder"/></returns>
     public KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder this[string position]

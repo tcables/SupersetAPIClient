@@ -7,10 +7,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets;
+namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Filtersets;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\dashboard\{dashboard_-id}\filtersets
@@ -18,7 +18,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class FiltersetsRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dashboard.item.filtersets.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item.filtersets.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder"/></returns>
     public KApi.Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder this[int position]
@@ -30,7 +30,7 @@ public partial class FiltersetsRequestBuilder : BaseRequestBuilder
             return new KApi.Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dashboard.item.filtersets.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item.filtersets.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

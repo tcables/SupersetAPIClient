@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Chart.Data;
+namespace KiotaSupersetAPI.Client.API.Chart.Data;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\chart\data
@@ -17,7 +17,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Chart.Data;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class DataRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.chart.data.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.data.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Chart.Data.Item.WithCache_keyItemRequestBuilder"/></returns>
     public KApi.Chart.Data.Item.WithCache_keyItemRequestBuilder this[string position]

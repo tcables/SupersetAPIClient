@@ -2,9 +2,9 @@
 using System;
 using System.CodeDom.Compiler;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Database.Validate_parameters;
+namespace KiotaSupersetAPI.Client.API.Database.Validate_parameters;
 
 [Obsolete("This class is obsolete. Use Validate_parametersPostResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]

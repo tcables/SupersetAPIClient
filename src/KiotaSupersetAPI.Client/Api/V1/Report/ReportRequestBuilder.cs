@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Report;
+namespace KiotaSupersetAPI.Client.API.Report;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\report
@@ -27,7 +27,7 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     {
         get => new KApi.Report.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.report.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.report.item collection</summary>
     /// <param name="position">The report schedule pk</param>
     /// <returns>A <see cref="KApi.Report.Item.WithPkItemRequestBuilder"/></returns>
     public KApi.Report.Item.WithPkItemRequestBuilder this[int position]
@@ -39,7 +39,7 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
             return new KApi.Report.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.report.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.report.item collection</summary>
     /// <param name="position">The report schedule pk</param>
     /// <returns>A <see cref="KApi.Report.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

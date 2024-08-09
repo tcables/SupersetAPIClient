@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filtersets.Item;
+namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Filtersets.Item;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\dashboard\{dashboard_-id}\filtersets\{pk}

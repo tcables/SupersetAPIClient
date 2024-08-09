@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1;
+namespace KiotaSupersetAPI.Client.API;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1
@@ -132,7 +132,7 @@ public partial class V1RequestBuilder : BaseRequestBuilder
         get => new KApi.Tag.TagRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.V1RequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="KAPIRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -140,7 +140,7 @@ public partial class V1RequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.V1RequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="KAPIRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

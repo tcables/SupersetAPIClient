@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Explore.Permalink;
+namespace KiotaSupersetAPI.Client.API.Explore.Permalink;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\explore\permalink
@@ -17,7 +17,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Explore.Permalink;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class PermalinkRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.explore.permalink.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.explore.permalink.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
     public KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder this[string position]

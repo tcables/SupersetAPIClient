@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites;
+namespace KiotaSupersetAPI.Client.API.Tag.Item.Favorites;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\tag\{object_type-id}\favorites

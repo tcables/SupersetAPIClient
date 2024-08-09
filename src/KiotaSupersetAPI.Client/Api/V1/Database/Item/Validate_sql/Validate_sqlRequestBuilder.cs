@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql;
+namespace KiotaSupersetAPI.Client.API.Database.Item.Validate_sql;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\database\{pk}\validate_sql

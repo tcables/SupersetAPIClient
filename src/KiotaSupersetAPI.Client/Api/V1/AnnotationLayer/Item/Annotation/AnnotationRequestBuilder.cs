@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.AnnotationLayer.Item.Annotation;
+namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item.Annotation;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\annotation_layer\{pk}\annotation
@@ -17,7 +17,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.AnnotationLayer.Item.Annotation;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class AnnotationRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.AnnotationLayer.item.annotation.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.AnnotationLayer.item.annotation.item collection</summary>
     /// <param name="position">The annotation pk for this annotation</param>
     /// <returns>A <see cref="KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/></returns>
     public KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder this[int position]
@@ -29,7 +29,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
             return new KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.AnnotationLayer.item.annotation.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.AnnotationLayer.item.annotation.item collection</summary>
     /// <param name="position">The annotation pk for this annotation</param>
     /// <returns>A <see cref="KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

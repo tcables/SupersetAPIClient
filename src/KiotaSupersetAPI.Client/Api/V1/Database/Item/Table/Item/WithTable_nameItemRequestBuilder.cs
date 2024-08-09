@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Table.Item;
+namespace KiotaSupersetAPI.Client.API.Database.Item.Table.Item;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\database\{pk}\table\{table_name}
@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Table.Item;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class WithTable_nameItemRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.database.item.table.item.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item.table.item.item collection</summary>
     /// <param name="position">Table schema</param>
     /// <returns>A <see cref="KApi.Database.Item.Table.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
     public KApi.Database.Item.Table.Item.Item.WithSchema_nameItemRequestBuilder this[string position]

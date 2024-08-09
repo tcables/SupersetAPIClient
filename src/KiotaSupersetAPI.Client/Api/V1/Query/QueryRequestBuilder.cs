@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Query;
+namespace KiotaSupersetAPI.Client.API.Query;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\query
@@ -37,7 +37,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     {
         get => new KApi.Query.Updated_since.Updated_sinceRequestBuilder(PathParameters, RequestAdapter);
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.query.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.query.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Query.Item.WithPkItemRequestBuilder"/></returns>
     public KApi.Query.Item.WithPkItemRequestBuilder this[int position]
@@ -49,7 +49,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
             return new KApi.Query.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.query.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.query.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Query.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

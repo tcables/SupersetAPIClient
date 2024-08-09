@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Dashboard;
+namespace KiotaSupersetAPI.Client.API.Dashboard;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\dashboard
@@ -47,7 +47,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     {
         get => new KApi.Dashboard.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dashboard.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item collection</summary>
     /// <param name="position">Either the id of the dashboard, or its slug</param>
     /// <returns>A <see cref="KApi.Dashboard.Item.Dashboard_ItemRequestBuilder"/></returns>
     public KApi.Dashboard.Item.Dashboard_ItemRequestBuilder this[string position]

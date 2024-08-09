@@ -2,9 +2,9 @@
 using System;
 using System.CodeDom.Compiler;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Tag.Item.Favorites;
+namespace KiotaSupersetAPI.Client.API.Tag.Item.Favorites;
 
 [Obsolete("This class is obsolete. Use FavoritesDeleteResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]

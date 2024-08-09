@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Tag;
+namespace KiotaSupersetAPI.Client.API.Tag;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\tag
@@ -42,7 +42,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     {
         get => new KApi.Tag.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.tag.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Tag.Item.Object_typeItemRequestBuilder"/></returns>
     public KApi.Tag.Item.Object_typeItemRequestBuilder this[int position]
@@ -54,7 +54,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
             return new KApi.Tag.Item.Object_typeItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.tag.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Tag.Item.Object_typeItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

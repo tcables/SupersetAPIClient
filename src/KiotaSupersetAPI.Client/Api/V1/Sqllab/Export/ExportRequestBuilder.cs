@@ -3,9 +3,9 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Export;
+namespace KiotaSupersetAPI.Client.API.Sqllab.Export;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\sqllab\export
@@ -13,7 +13,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Sqllab.Export;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class ExportRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.sqllab.export.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.sqllab.export.item collection</summary>
     /// <param name="position">The SQL query result identifier</param>
     /// <returns>A <see cref="KApi.Sqllab.Export.Item.WithClient_ItemRequestBuilder"/></returns>
     public KApi.Sqllab.Export.Item.WithClient_ItemRequestBuilder this[int position]
@@ -25,7 +25,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
             return new KApi.Sqllab.Export.Item.WithClient_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.sqllab.export.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.sqllab.export.item collection</summary>
     /// <param name="position">The SQL query result identifier</param>
     /// <returns>A <see cref="KApi.Sqllab.Export.Item.WithClient_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

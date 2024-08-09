@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state;
+namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Filter_state;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\dashboard\{dashboard_-id}\filter_state
@@ -17,7 +17,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Filter_state;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class Filter_stateRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dashboard.item.filter_state.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item.filter_state.item collection</summary>
     /// <param name="position">The value key.</param>
     /// <returns>A <see cref="KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder"/></returns>
     public KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder this[string position]

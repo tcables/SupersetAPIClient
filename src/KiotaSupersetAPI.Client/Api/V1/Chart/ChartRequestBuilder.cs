@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Chart;
+namespace KiotaSupersetAPI.Client.API.Chart;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\chart
@@ -52,7 +52,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
     {
         get => new KApi.Chart.Warm_up_cache.Warm_up_cacheRequestBuilder(PathParameters, RequestAdapter);
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.chart.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Chart.Item.WithPkItemRequestBuilder"/></returns>
     public KApi.Chart.Item.WithPkItemRequestBuilder this[int position]
@@ -64,7 +64,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
             return new KApi.Chart.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.chart.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Chart.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

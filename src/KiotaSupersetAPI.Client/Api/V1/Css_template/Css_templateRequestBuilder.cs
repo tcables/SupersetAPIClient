@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Css_template;
+namespace KiotaSupersetAPI.Client.API.Css_template;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\css_template
@@ -27,7 +27,7 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     {
         get => new KApi.Css_template.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.css_template.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.css_template.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Css_template.Item.WithPkItemRequestBuilder"/></returns>
     public KApi.Css_template.Item.WithPkItemRequestBuilder this[int position]
@@ -39,7 +39,7 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
             return new KApi.Css_template.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.css_template.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.css_template.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Css_template.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

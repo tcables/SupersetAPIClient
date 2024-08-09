@@ -3,9 +3,9 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item;
+namespace KiotaSupersetAPI.Client.API.Datasource.Item;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\datasource\{datasource_type}
@@ -13,7 +13,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class WithDatasource_typeItemRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.datasource.item.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item.item collection</summary>
     /// <param name="position">The id of the datasource</param>
     /// <returns>A <see cref="KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/></returns>
     public KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder this[int position]
@@ -25,7 +25,7 @@ public partial class WithDatasource_typeItemRequestBuilder : BaseRequestBuilder
             return new KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.datasource.item.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item.item collection</summary>
     /// <param name="position">The id of the datasource</param>
     /// <returns>A <see cref="KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]

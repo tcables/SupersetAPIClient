@@ -3,10 +3,10 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Report;
+namespace KiotaSupersetAPI.Client.API.Report;
 
 [GeneratedCode("Kiota", "1.16.0")]
 #pragma warning disable CS1591

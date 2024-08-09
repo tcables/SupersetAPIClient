@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Select_star.Item;
+namespace KiotaSupersetAPI.Client.API.Database.Item.Select_star.Item;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\database\{pk}\select_star\{table_name}
@@ -17,7 +17,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Select_star.Item;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class WithTable_nameItemRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.database.item.select_star.item.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item.select_star.item.item collection</summary>
     /// <param name="position">Table schema</param>
     /// <returns>A <see cref="KApi.Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
     public KApi.Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder this[string position]

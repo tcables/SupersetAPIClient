@@ -2,9 +2,9 @@
 using System;
 using System.CodeDom.Compiler;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Query.Updated_since;
+namespace KiotaSupersetAPI.Client.API.Query.Updated_since;
 
 [Obsolete("This class is obsolete. Use Updated_sinceGetResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]

@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Datasource;
+namespace KiotaSupersetAPI.Client.API.Datasource;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\datasource
@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class DatasourceRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.datasource.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item collection</summary>
     /// <param name="position">The type of datasource</param>
     /// <returns>A <see cref="KApi.Datasource.Item.WithDatasource_typeItemRequestBuilder"/></returns>
     public KApi.Datasource.Item.WithDatasource_typeItemRequestBuilder this[string position]

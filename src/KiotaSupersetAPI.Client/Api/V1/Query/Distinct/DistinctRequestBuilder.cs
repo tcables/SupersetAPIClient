@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Query.Distinct;
+namespace KiotaSupersetAPI.Client.API.Query.Distinct;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\query\distinct
@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Query.Distinct;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class DistinctRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.query.distinct.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.query.distinct.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="KApi.Query.Distinct.Item.WithColumn_nameItemRequestBuilder"/></returns>
     public KApi.Query.Distinct.Item.WithColumn_nameItemRequestBuilder this[string position]

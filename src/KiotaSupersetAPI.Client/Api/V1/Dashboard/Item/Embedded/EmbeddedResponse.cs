@@ -2,9 +2,9 @@
 using System;
 using System.CodeDom.Compiler;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Embedded;
+namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Embedded;
 
 [Obsolete("This class is obsolete. Use EmbeddedDeleteResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]

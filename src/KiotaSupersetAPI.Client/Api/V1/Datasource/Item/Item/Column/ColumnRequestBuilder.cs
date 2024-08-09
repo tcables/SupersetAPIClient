@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column;
+namespace KiotaSupersetAPI.Client.API.Datasource.Item.Item.Column;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\datasource\{datasource_type}\{datasource_id}\column
@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Datasource.Item.Item.Column;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class ColumnRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.datasource.item.item.column.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item.item.column.item collection</summary>
     /// <param name="position">The name of the column to get values for</param>
     /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder"/></returns>
     public KApi.Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder this[string position]

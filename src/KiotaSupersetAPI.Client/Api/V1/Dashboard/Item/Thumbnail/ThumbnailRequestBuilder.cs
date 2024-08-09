@@ -1,9 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Thumbnail;
+namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Thumbnail;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\dashboard\{dashboard_-id}\thumbnail
@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.Api.V1.Dashboard.Item.Thumbnail;
 [GeneratedCode("Kiota", "1.16.0")]
 public partial class ThumbnailRequestBuilder : BaseRequestBuilder
 {
-    /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.v1.dashboard.item.thumbnail.item collection</summary>
+    /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item.thumbnail.item collection</summary>
     /// <param name="position">A hex digest that makes this dashboard unique</param>
     /// <returns>A <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
     public KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder this[string position]

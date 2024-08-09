@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Css_template.Related.Item;
+namespace KiotaSupersetAPI.Client.API.Css_template.Related.Item;
 
 /// <summary>
 /// Builds and executes requests for operations under \api\v1\css_template\related\{column_name}

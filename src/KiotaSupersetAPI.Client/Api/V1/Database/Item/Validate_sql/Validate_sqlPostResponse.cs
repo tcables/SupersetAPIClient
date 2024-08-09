@@ -4,10 +4,10 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.Api.V1;
+using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api.V1.Database.Item.Validate_sql;
+namespace KiotaSupersetAPI.Client.API.Database.Item.Validate_sql;
 
 [GeneratedCode("Kiota", "1.16.0")]
 #pragma warning disable CS1591
