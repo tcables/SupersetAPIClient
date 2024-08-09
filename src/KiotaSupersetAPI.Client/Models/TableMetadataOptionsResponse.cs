@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -23,7 +22,7 @@ public partial class TableMetadataOptionsResponse : IAdditionalDataHolder, IPars
     /// <summary>The onupdate property</summary>
     public bool? Onupdate { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.TableMetadataOptionsResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TableMetadataOptionsResponse"/> and sets the default values.
     /// </summary>
     public TableMetadataOptionsResponse()
     {
@@ -32,12 +31,12 @@ public partial class TableMetadataOptionsResponse : IAdditionalDataHolder, IPars
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TableMetadataOptionsResponse"/></returns>
+    /// <returns>A <see cref="Models.TableMetadataOptionsResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.TableMetadataOptionsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TableMetadataOptionsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.TableMetadataOptionsResponse();
+        return new Models.TableMetadataOptionsResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

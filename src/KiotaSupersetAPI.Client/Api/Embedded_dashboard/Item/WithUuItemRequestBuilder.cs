@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Embedded_dashboard.Item;
 
@@ -38,18 +37,18 @@ public partial class WithUuItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Embedded_dashboard.Item.WithUuGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithUu401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithUu404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithUu500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithUu401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithUu404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithUu500Error">When receiving a 500 status code</exception>
     public async Task<Embedded_dashboard.Item.WithUuGetResponse> GetWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.WithUu401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithUu404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithUu500Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithUu401Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithUu404Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithUu500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Embedded_dashboard.Item.WithUuGetResponse>(requestInfo, Embedded_dashboard.Item.WithUuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -59,9 +58,9 @@ public partial class WithUuItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Embedded_dashboard.Item.WithUuResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithUu401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithUu404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithUu500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithUu401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithUu404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithUu500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithUuGetResponseAsync instead.")]
     public async Task<Embedded_dashboard.Item.WithUuResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -69,9 +68,9 @@ public partial class WithUuItemRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.WithUu401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithUu404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithUu500Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithUu401Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithUu404Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithUu500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Embedded_dashboard.Item.WithUuResponse>(requestInfo, Embedded_dashboard.Item.WithUuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

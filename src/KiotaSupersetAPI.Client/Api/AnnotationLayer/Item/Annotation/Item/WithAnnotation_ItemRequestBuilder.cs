@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item.Annotation.Item;
 
@@ -38,18 +37,18 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_DeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithAnnotation_422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
     public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_DeleteResponse> DeleteAsWithAnnotation_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "404", KClient.Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<AnnotationLayer.Item.Annotation.Item.WithAnnotation_DeleteResponse>(requestInfo, AnnotationLayer.Item.Annotation.Item.WithAnnotation_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -59,9 +58,9 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithAnnotation_422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithAnnotation_DeleteResponseAsync instead.")]
     public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -69,9 +68,9 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "404", KClient.Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response>(requestInfo, AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -81,22 +80,22 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.WithAnnotation_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithAnnotation_422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
     public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse> GetWithAnnotation_GetResponseAsync(Action<RequestConfiguration<AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.WithAnnotation_400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.WithAnnotation_401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
+            { "400", Models.WithAnnotation_400Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithAnnotation_401Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse>(requestInfo, AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -106,11 +105,11 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.WithAnnotation_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithAnnotation_422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithAnnotation_GetResponseAsync instead.")]
     public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response> GetAsync(Action<RequestConfiguration<AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -118,11 +117,11 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.WithAnnotation_400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.WithAnnotation_401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
+            { "400", Models.WithAnnotation_400Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithAnnotation_401Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithAnnotation_422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response>(requestInfo, AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -133,21 +132,21 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
-    public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_PutResponse> PutAsWithAnnotation_PutResponseAsync(KClient.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.WithAnnotation_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
+    public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_PutResponse> PutAsWithAnnotation_PutResponseAsync(Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.WithAnnotation_400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.WithAnnotation_401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
+            { "400", Models.WithAnnotation_400Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithAnnotation_401Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<AnnotationLayer.Item.Annotation.Item.WithAnnotation_PutResponse>(requestInfo, AnnotationLayer.Item.Annotation.Item.WithAnnotation_PutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -158,22 +157,22 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithAnnotation_400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.WithAnnotation_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithAnnotation_PutResponseAsync instead.")]
-    public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response> PutAsync(KClient.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response> PutAsync(Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.WithAnnotation_400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.WithAnnotation_401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
+            { "400", Models.WithAnnotation_400Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithAnnotation_401Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithAnnotation_404Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithAnnotation_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response>(requestInfo, AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -209,7 +208,7 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPutRequestInformation(KClient.Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPutRequestInformation(Models.AnnotationRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

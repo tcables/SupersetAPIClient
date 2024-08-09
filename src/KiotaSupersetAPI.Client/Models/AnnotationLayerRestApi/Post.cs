@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.AnnotationLayerRestApi;
 
@@ -19,7 +18,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
     public string Name { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.AnnotationLayerRestApi.Post"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.AnnotationLayerRestApi.Post"/> and sets the default values.
     /// </summary>
     public Post()
     {
@@ -28,12 +27,12 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.AnnotationLayerRestApi.Post"/></returns>
+    /// <returns>A <see cref="Models.AnnotationLayerRestApi.Post"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.AnnotationLayerRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.AnnotationLayerRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.AnnotationLayerRestApi.Post();
+        return new Models.AnnotationLayerRestApi.Post();
     }
     /// <summary>
     /// The deserialization information for the current model

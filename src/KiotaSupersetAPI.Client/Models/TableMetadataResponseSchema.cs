@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -14,25 +13,25 @@ public partial class TableMetadataResponseSchema : IAdditionalDataHolder, IParsa
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>A list of columns and their metadata</summary>
-    public List<KClient.Models.TableMetadataColumnsResponse> Columns { get; set; }
+    public List<Models.TableMetadataColumnsResponse> Columns { get; set; }
 
     /// <summary>A list of foreign keys and their metadata</summary>
-    public List<KClient.Models.TableMetadataForeignKeysIndexesResponse> ForeignKeys { get; set; }
+    public List<Models.TableMetadataForeignKeysIndexesResponse> ForeignKeys { get; set; }
 
     /// <summary>A list of indexes and their metadata</summary>
-    public List<KClient.Models.TableMetadataForeignKeysIndexesResponse> Indexes { get; set; }
+    public List<Models.TableMetadataForeignKeysIndexesResponse> Indexes { get; set; }
 
     /// <summary>The name of the table</summary>
     public string Name { get; set; }
 
     /// <summary>Primary keys metadata</summary>
-    public KClient.Models.TableMetadataPrimaryKeyResponse PrimaryKey { get; set; }
+    public Models.TableMetadataPrimaryKeyResponse PrimaryKey { get; set; }
 
     /// <summary>SQL select star</summary>
     public string SelectStar { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.TableMetadataResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TableMetadataResponseSchema"/> and sets the default values.
     /// </summary>
     public TableMetadataResponseSchema()
     {
@@ -41,12 +40,12 @@ public partial class TableMetadataResponseSchema : IAdditionalDataHolder, IParsa
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TableMetadataResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.TableMetadataResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.TableMetadataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TableMetadataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.TableMetadataResponseSchema();
+        return new Models.TableMetadataResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -56,11 +55,11 @@ public partial class TableMetadataResponseSchema : IAdditionalDataHolder, IParsa
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "columns", n => { Columns = n.GetCollectionOfObjectValues<KClient.Models.TableMetadataColumnsResponse>(KClient.Models.TableMetadataColumnsResponse.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "foreignKeys", n => { ForeignKeys = n.GetCollectionOfObjectValues<KClient.Models.TableMetadataForeignKeysIndexesResponse>(KClient.Models.TableMetadataForeignKeysIndexesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "indexes", n => { Indexes = n.GetCollectionOfObjectValues<KClient.Models.TableMetadataForeignKeysIndexesResponse>(KClient.Models.TableMetadataForeignKeysIndexesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "columns", n => { Columns = n.GetCollectionOfObjectValues<Models.TableMetadataColumnsResponse>(Models.TableMetadataColumnsResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "foreignKeys", n => { ForeignKeys = n.GetCollectionOfObjectValues<Models.TableMetadataForeignKeysIndexesResponse>(Models.TableMetadataForeignKeysIndexesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "indexes", n => { Indexes = n.GetCollectionOfObjectValues<Models.TableMetadataForeignKeysIndexesResponse>(Models.TableMetadataForeignKeysIndexesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
             { "name", n => { Name = n.GetStringValue(); } },
-            { "primaryKey", n => { PrimaryKey = n.GetObjectValue<KClient.Models.TableMetadataPrimaryKeyResponse>(KClient.Models.TableMetadataPrimaryKeyResponse.CreateFromDiscriminatorValue); } },
+            { "primaryKey", n => { PrimaryKey = n.GetObjectValue<Models.TableMetadataPrimaryKeyResponse>(Models.TableMetadataPrimaryKeyResponse.CreateFromDiscriminatorValue); } },
             { "selectStar", n => { SelectStar = n.GetStringValue(); } },
         };
     }
@@ -71,11 +70,11 @@ public partial class TableMetadataResponseSchema : IAdditionalDataHolder, IParsa
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteCollectionOfObjectValues<KClient.Models.TableMetadataColumnsResponse>("columns", Columns);
-        writer.WriteCollectionOfObjectValues<KClient.Models.TableMetadataForeignKeysIndexesResponse>("foreignKeys", ForeignKeys);
-        writer.WriteCollectionOfObjectValues<KClient.Models.TableMetadataForeignKeysIndexesResponse>("indexes", Indexes);
+        writer.WriteCollectionOfObjectValues<Models.TableMetadataColumnsResponse>("columns", Columns);
+        writer.WriteCollectionOfObjectValues<Models.TableMetadataForeignKeysIndexesResponse>("foreignKeys", ForeignKeys);
+        writer.WriteCollectionOfObjectValues<Models.TableMetadataForeignKeysIndexesResponse>("indexes", Indexes);
         writer.WriteStringValue("name", Name);
-        writer.WriteObjectValue<KClient.Models.TableMetadataPrimaryKeyResponse>("primaryKey", PrimaryKey);
+        writer.WriteObjectValue<Models.TableMetadataPrimaryKeyResponse>("primaryKey", PrimaryKey);
         writer.WriteStringValue("selectStar", SelectStar);
         writer.WriteAdditionalData(AdditionalData);
     }

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -30,7 +29,7 @@ public partial class Table : IAdditionalDataHolder, IParsable
     /// <summary>The tab_state_id property</summary>
     public int? TabStateId { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.Table"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.Table"/> and sets the default values.
     /// </summary>
     public Table()
     {
@@ -39,12 +38,12 @@ public partial class Table : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.Table"/></returns>
+    /// <returns>A <see cref="Models.Table"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.Table CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.Table CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.Table();
+        return new Models.Table();
     }
     /// <summary>
     /// The deserialization information for the current model

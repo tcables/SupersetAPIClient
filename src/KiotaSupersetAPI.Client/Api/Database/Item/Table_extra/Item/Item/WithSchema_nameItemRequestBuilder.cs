@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Table_extra.Item.Item;
 
@@ -35,27 +34,27 @@ public partial class WithSchema_nameItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Response depends on each DB engine spec normally focused on partitions.
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TableExtraMetadataResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.TableExtraMetadataResponseSchema"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.TableExtraMetadataResponseSchema400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.TableExtraMetadataResponseSchema401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.TableExtraMetadataResponseSchema404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.TableExtraMetadataResponseSchema422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.TableExtraMetadataResponseSchema500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.TableExtraMetadataResponseSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.TableExtraMetadataResponseSchema400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.TableExtraMetadataResponseSchema401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.TableExtraMetadataResponseSchema404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.TableExtraMetadataResponseSchema422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.TableExtraMetadataResponseSchema500Error">When receiving a 500 status code</exception>
+    public async Task<Models.TableExtraMetadataResponseSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.TableExtraMetadataResponseSchema400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.TableExtraMetadataResponseSchema401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.TableExtraMetadataResponseSchema404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.TableExtraMetadataResponseSchema422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.TableExtraMetadataResponseSchema500Error.CreateFromDiscriminatorValue },
+            { "400", Models.TableExtraMetadataResponseSchema400Error.CreateFromDiscriminatorValue },
+            { "401", Models.TableExtraMetadataResponseSchema401Error.CreateFromDiscriminatorValue },
+            { "404", Models.TableExtraMetadataResponseSchema404Error.CreateFromDiscriminatorValue },
+            { "422", Models.TableExtraMetadataResponseSchema422Error.CreateFromDiscriminatorValue },
+            { "500", Models.TableExtraMetadataResponseSchema500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.TableExtraMetadataResponseSchema>(requestInfo, KClient.Models.TableExtraMetadataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.TableExtraMetadataResponseSchema>(requestInfo, Models.TableExtraMetadataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Response depends on each DB engine spec normally focused on partitions.

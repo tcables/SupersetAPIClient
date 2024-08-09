@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.ReportScheduleRestApi.Get;
 
@@ -15,7 +14,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The chart property</summary>
-    public KClient.Models.ReportScheduleRestApi.Get.Slice Chart { get; set; }
+    public Models.ReportScheduleRestApi.Get.Slice Chart { get; set; }
 
     /// <summary>The context_markdown property</summary>
     public string ContextMarkdown { get; set; }
@@ -29,10 +28,10 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The custom_width property</summary>
     public int? CustomWidth { get; set; }
     /// <summary>The dashboard property</summary>
-    public KClient.Models.ReportScheduleRestApi.Get.Dashboard Dashboard { get; set; }
+    public Models.ReportScheduleRestApi.Get.Dashboard Dashboard { get; set; }
 
     /// <summary>The database property</summary>
-    public KClient.Models.ReportScheduleRestApi.Get.Database Database { get; set; }
+    public Models.ReportScheduleRestApi.Get.Database Database { get; set; }
 
     /// <summary>The description property</summary>
     public string Description { get; set; }
@@ -62,10 +61,10 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string Name { get; set; }
 
     /// <summary>The owners property</summary>
-    public KClient.Models.ReportScheduleRestApi.Get.User Owners { get; set; }
+    public Models.ReportScheduleRestApi.Get.User Owners { get; set; }
 
     /// <summary>The recipients property</summary>
-    public KClient.Models.ReportScheduleRestApi.Get.ReportRecipients Recipients { get; set; }
+    public Models.ReportScheduleRestApi.Get.ReportRecipients Recipients { get; set; }
 
     /// <summary>The report_format property</summary>
     public string ReportFormat { get; set; }
@@ -88,7 +87,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The working_timeout property</summary>
     public int? WorkingTimeout { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ReportScheduleRestApi.Get.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ReportScheduleRestApi.Get.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -97,12 +96,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ReportScheduleRestApi.Get.Get"/></returns>
+    /// <returns>A <see cref="Models.ReportScheduleRestApi.Get.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ReportScheduleRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ReportScheduleRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ReportScheduleRestApi.Get.Get();
+        return new Models.ReportScheduleRestApi.Get.Get();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -113,13 +112,13 @@ public partial class Get : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "active", n => { Active = n.GetBoolValue(); } },
-            { "chart", n => { Chart = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.Slice>(KClient.Models.ReportScheduleRestApi.Get.Slice.CreateFromDiscriminatorValue); } },
+            { "chart", n => { Chart = n.GetObjectValue<Models.ReportScheduleRestApi.Get.Slice>(Models.ReportScheduleRestApi.Get.Slice.CreateFromDiscriminatorValue); } },
             { "context_markdown", n => { ContextMarkdown = n.GetStringValue(); } },
             { "creation_method", n => { CreationMethod = n.GetStringValue(); } },
             { "crontab", n => { Crontab = n.GetStringValue(); } },
             { "custom_width", n => { CustomWidth = n.GetIntValue(); } },
-            { "dashboard", n => { Dashboard = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.Dashboard>(KClient.Models.ReportScheduleRestApi.Get.Dashboard.CreateFromDiscriminatorValue); } },
-            { "database", n => { Database = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.Database>(KClient.Models.ReportScheduleRestApi.Get.Database.CreateFromDiscriminatorValue); } },
+            { "dashboard", n => { Dashboard = n.GetObjectValue<Models.ReportScheduleRestApi.Get.Dashboard>(Models.ReportScheduleRestApi.Get.Dashboard.CreateFromDiscriminatorValue); } },
+            { "database", n => { Database = n.GetObjectValue<Models.ReportScheduleRestApi.Get.Database>(Models.ReportScheduleRestApi.Get.Database.CreateFromDiscriminatorValue); } },
             { "description", n => { Description = n.GetStringValue(); } },
             { "extra", n => { Extra = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "force_screenshot", n => { ForceScreenshot = n.GetBoolValue(); } },
@@ -131,8 +130,8 @@ public partial class Get : IAdditionalDataHolder, IParsable
             { "last_value_row_json", n => { LastValueRowJson = n.GetStringValue(); } },
             { "log_retention", n => { LogRetention = n.GetIntValue(); } },
             { "name", n => { Name = n.GetStringValue(); } },
-            { "owners", n => { Owners = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.User>(KClient.Models.ReportScheduleRestApi.Get.User.CreateFromDiscriminatorValue); } },
-            { "recipients", n => { Recipients = n.GetObjectValue<KClient.Models.ReportScheduleRestApi.Get.ReportRecipients>(KClient.Models.ReportScheduleRestApi.Get.ReportRecipients.CreateFromDiscriminatorValue); } },
+            { "owners", n => { Owners = n.GetObjectValue<Models.ReportScheduleRestApi.Get.User>(Models.ReportScheduleRestApi.Get.User.CreateFromDiscriminatorValue); } },
+            { "recipients", n => { Recipients = n.GetObjectValue<Models.ReportScheduleRestApi.Get.ReportRecipients>(Models.ReportScheduleRestApi.Get.ReportRecipients.CreateFromDiscriminatorValue); } },
             { "report_format", n => { ReportFormat = n.GetStringValue(); } },
             { "sql", n => { Sql = n.GetStringValue(); } },
             { "timezone", n => { Timezone = n.GetStringValue(); } },
@@ -150,13 +149,13 @@ public partial class Get : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteBoolValue("active", Active);
-        writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.Slice>("chart", Chart);
+        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get.Slice>("chart", Chart);
         writer.WriteStringValue("context_markdown", ContextMarkdown);
         writer.WriteStringValue("creation_method", CreationMethod);
         writer.WriteStringValue("crontab", Crontab);
         writer.WriteIntValue("custom_width", CustomWidth);
-        writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.Dashboard>("dashboard", Dashboard);
-        writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.Database>("database", Database);
+        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get.Dashboard>("dashboard", Dashboard);
+        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get.Database>("database", Database);
         writer.WriteStringValue("description", Description);
         writer.WriteBoolValue("force_screenshot", ForceScreenshot);
         writer.WriteIntValue("grace_period", GracePeriod);
@@ -167,8 +166,8 @@ public partial class Get : IAdditionalDataHolder, IParsable
         writer.WriteStringValue("last_value_row_json", LastValueRowJson);
         writer.WriteIntValue("log_retention", LogRetention);
         writer.WriteStringValue("name", Name);
-        writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.User>("owners", Owners);
-        writer.WriteObjectValue<KClient.Models.ReportScheduleRestApi.Get.ReportRecipients>("recipients", Recipients);
+        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get.User>("owners", Owners);
+        writer.WriteObjectValue<Models.ReportScheduleRestApi.Get.ReportRecipients>("recipients", Recipients);
         writer.WriteStringValue("report_format", ReportFormat);
         writer.WriteStringValue("sql", Sql);
         writer.WriteStringValue("timezone", Timezone);

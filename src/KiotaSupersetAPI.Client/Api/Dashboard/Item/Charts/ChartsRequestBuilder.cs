@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Charts;
 
@@ -38,20 +37,20 @@ public partial class ChartsRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dashboard.Item.Charts.ChartsGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Charts400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Charts401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Charts403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Charts404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Charts400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Charts401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Charts403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Charts404Error">When receiving a 404 status code</exception>
     public async Task<Dashboard.Item.Charts.ChartsGetResponse> GetChartsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Charts400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Charts401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Charts403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Charts404Error.CreateFromDiscriminatorValue },
+            { "400", Models.Charts400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Charts401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Charts403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Charts404Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Charts.ChartsGetResponse>(requestInfo, Dashboard.Item.Charts.ChartsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -61,10 +60,10 @@ public partial class ChartsRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dashboard.Item.Charts.ChartsResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Charts400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Charts401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Charts403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Charts404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Charts400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Charts401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Charts403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Charts404Error">When receiving a 404 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsChartsGetResponseAsync instead.")]
     public async Task<Dashboard.Item.Charts.ChartsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -72,10 +71,10 @@ public partial class ChartsRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Charts400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Charts401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Charts403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Charts404Error.CreateFromDiscriminatorValue },
+            { "400", Models.Charts400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Charts401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Charts403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Charts404Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Charts.ChartsResponse>(requestInfo, Dashboard.Item.Charts.ChartsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

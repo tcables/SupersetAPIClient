@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.ChartRestApi.Get;
 
@@ -24,7 +23,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
 
     /// <summary>The dashboards property</summary>
-    public KClient.Models.ChartRestApi.Get.Dashboard Dashboards { get; set; }
+    public Models.ChartRestApi.Get.Dashboard Dashboards { get; set; }
 
     /// <summary>The description property</summary>
     public string Description { get; set; }
@@ -34,7 +33,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The is_managed_externally property</summary>
     public bool? IsManagedExternally { get; set; }
     /// <summary>The owners property</summary>
-    public KClient.Models.ChartRestApi.Get.User Owners { get; set; }
+    public Models.ChartRestApi.Get.User Owners { get; set; }
 
     /// <summary>The params property</summary>
     public string Params { get; set; }
@@ -46,7 +45,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string SliceName { get; set; }
 
     /// <summary>The tags property</summary>
-    public KClient.Models.ChartRestApi.Get.Tag Tags { get; set; }
+    public Models.ChartRestApi.Get.Tag Tags { get; set; }
 
     /// <summary>The thumbnail_url property</summary>
     public UntypedNode ThumbnailUrl { get; private set; }
@@ -58,7 +57,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string VizType { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartRestApi.Get.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartRestApi.Get.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -67,12 +66,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartRestApi.Get.Get"/></returns>
+    /// <returns>A <see cref="Models.ChartRestApi.Get.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartRestApi.Get.Get();
+        return new Models.ChartRestApi.Get.Get();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -86,15 +85,15 @@ public partial class Get : IAdditionalDataHolder, IParsable
             { "certification_details", n => { CertificationDetails = n.GetStringValue(); } },
             { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "dashboards", n => { Dashboards = n.GetObjectValue<KClient.Models.ChartRestApi.Get.Dashboard>(KClient.Models.ChartRestApi.Get.Dashboard.CreateFromDiscriminatorValue); } },
+            { "dashboards", n => { Dashboards = n.GetObjectValue<Models.ChartRestApi.Get.Dashboard>(Models.ChartRestApi.Get.Dashboard.CreateFromDiscriminatorValue); } },
             { "description", n => { Description = n.GetStringValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
-            { "owners", n => { Owners = n.GetObjectValue<KClient.Models.ChartRestApi.Get.User>(KClient.Models.ChartRestApi.Get.User.CreateFromDiscriminatorValue); } },
+            { "owners", n => { Owners = n.GetObjectValue<Models.ChartRestApi.Get.User>(Models.ChartRestApi.Get.User.CreateFromDiscriminatorValue); } },
             { "params", n => { Params = n.GetStringValue(); } },
             { "query_context", n => { QueryContext = n.GetStringValue(); } },
             { "slice_name", n => { SliceName = n.GetStringValue(); } },
-            { "tags", n => { Tags = n.GetObjectValue<KClient.Models.ChartRestApi.Get.Tag>(KClient.Models.ChartRestApi.Get.Tag.CreateFromDiscriminatorValue); } },
+            { "tags", n => { Tags = n.GetObjectValue<Models.ChartRestApi.Get.Tag>(Models.ChartRestApi.Get.Tag.CreateFromDiscriminatorValue); } },
             { "thumbnail_url", n => { ThumbnailUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "url", n => { Url = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "viz_type", n => { VizType = n.GetStringValue(); } },
@@ -110,15 +109,15 @@ public partial class Get : IAdditionalDataHolder, IParsable
         writer.WriteIntValue("cache_timeout", CacheTimeout);
         writer.WriteStringValue("certification_details", CertificationDetails);
         writer.WriteStringValue("certified_by", CertifiedBy);
-        writer.WriteObjectValue<KClient.Models.ChartRestApi.Get.Dashboard>("dashboards", Dashboards);
+        writer.WriteObjectValue<Models.ChartRestApi.Get.Dashboard>("dashboards", Dashboards);
         writer.WriteStringValue("description", Description);
         writer.WriteIntValue("id", Id);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
-        writer.WriteObjectValue<KClient.Models.ChartRestApi.Get.User>("owners", Owners);
+        writer.WriteObjectValue<Models.ChartRestApi.Get.User>("owners", Owners);
         writer.WriteStringValue("params", Params);
         writer.WriteStringValue("query_context", QueryContext);
         writer.WriteStringValue("slice_name", SliceName);
-        writer.WriteObjectValue<KClient.Models.ChartRestApi.Get.Tag>("tags", Tags);
+        writer.WriteObjectValue<Models.ChartRestApi.Get.Tag>("tags", Tags);
         writer.WriteStringValue("viz_type", VizType);
         writer.WriteAdditionalData(AdditionalData);
     }

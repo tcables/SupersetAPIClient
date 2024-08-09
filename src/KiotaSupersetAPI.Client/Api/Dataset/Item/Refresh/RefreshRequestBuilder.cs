@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Item.Refresh;
 
@@ -38,22 +37,22 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.Item.Refresh.RefreshPutResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Refresh403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Refresh404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Refresh422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Refresh401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Refresh403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Refresh404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Refresh422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Refresh500Error">When receiving a 500 status code</exception>
     public async Task<Dataset.Item.Refresh.RefreshPutResponse> PutAsRefreshPutResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToPutRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Refresh401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Refresh403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Refresh404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Refresh422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Refresh401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Refresh403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Refresh404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Refresh422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Refresh500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.Item.Refresh.RefreshPutResponse>(requestInfo, Dataset.Item.Refresh.RefreshPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -63,11 +62,11 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.Item.Refresh.RefreshResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Refresh403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Refresh404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Refresh422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Refresh401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Refresh403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Refresh404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Refresh422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Refresh500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsRefreshPutResponseAsync instead.")]
     public async Task<Dataset.Item.Refresh.RefreshResponse> PutAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -75,11 +74,11 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
         var requestInfo = ToPutRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Refresh401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Refresh403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Refresh404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Refresh422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Refresh401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Refresh403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Refresh404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Refresh422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Refresh500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.Item.Refresh.RefreshResponse>(requestInfo, Dataset.Item.Refresh.RefreshResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Security.Guest_token;
 
@@ -39,19 +38,19 @@ public partial class Guest_tokenRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Guest_token400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Guest_token401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Guest_token500Error">When receiving a 500 status code</exception>
-    public async Task<Security.Guest_token.Guest_tokenPostResponse> PostAsGuest_tokenPostResponseAsync(KClient.Models.GuestTokenCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Guest_token400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Guest_token401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Guest_token500Error">When receiving a 500 status code</exception>
+    public async Task<Security.Guest_token.Guest_tokenPostResponse> PostAsGuest_tokenPostResponseAsync(Models.GuestTokenCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Guest_token400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Guest_token401Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Guest_token500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Guest_token400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Guest_token401Error.CreateFromDiscriminatorValue },
+            { "500", Models.Guest_token500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Security.Guest_token.Guest_tokenPostResponse>(requestInfo, Security.Guest_token.Guest_tokenPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -62,20 +61,20 @@ public partial class Guest_tokenRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Guest_token400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Guest_token401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Guest_token500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Guest_token400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Guest_token401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Guest_token500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsGuest_tokenPostResponseAsync instead.")]
-    public async Task<Security.Guest_token.Guest_tokenResponse> PostAsync(KClient.Models.GuestTokenCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Security.Guest_token.Guest_tokenResponse> PostAsync(Models.GuestTokenCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Guest_token400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Guest_token401Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Guest_token500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Guest_token400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Guest_token401Error.CreateFromDiscriminatorValue },
+            { "500", Models.Guest_token500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Security.Guest_token.Guest_tokenResponse>(requestInfo, Security.Guest_token.Guest_tokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -85,7 +84,7 @@ public partial class Guest_tokenRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.GuestTokenCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.GuestTokenCreate body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

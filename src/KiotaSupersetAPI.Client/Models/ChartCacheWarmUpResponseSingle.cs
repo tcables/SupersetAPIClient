@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -21,7 +20,7 @@ public partial class ChartCacheWarmUpResponseSingle : IAdditionalDataHolder, IPa
     public string VizStatus { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartCacheWarmUpResponseSingle"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartCacheWarmUpResponseSingle"/> and sets the default values.
     /// </summary>
     public ChartCacheWarmUpResponseSingle()
     {
@@ -30,12 +29,12 @@ public partial class ChartCacheWarmUpResponseSingle : IAdditionalDataHolder, IPa
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartCacheWarmUpResponseSingle"/></returns>
+    /// <returns>A <see cref="Models.ChartCacheWarmUpResponseSingle"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartCacheWarmUpResponseSingle CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartCacheWarmUpResponseSingle CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartCacheWarmUpResponseSingle();
+        return new Models.ChartCacheWarmUpResponseSingle();
     }
     /// <summary>
     /// The deserialization information for the current model

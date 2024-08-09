@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Filter_state;
 
@@ -51,21 +50,21 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Filter_state400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Filter_state401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Filter_state422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Filter_state500Error">When receiving a 500 status code</exception>
-    public async Task<Dashboard.Item.Filter_state.Filter_statePostResponse> PostAsFilter_statePostResponseAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Filter_state400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Filter_state401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Filter_state422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Filter_state500Error">When receiving a 500 status code</exception>
+    public async Task<Dashboard.Item.Filter_state.Filter_statePostResponse> PostAsFilter_statePostResponseAsync(Models.TemporaryCachePostSchema body, Action<RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Filter_state400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Filter_state401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Filter_state422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Filter_state500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Filter_state400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Filter_state401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Filter_state422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Filter_state500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Filter_state.Filter_statePostResponse>(requestInfo, Dashboard.Item.Filter_state.Filter_statePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -76,22 +75,22 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Filter_state400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Filter_state401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Filter_state422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Filter_state500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Filter_state400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Filter_state401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Filter_state422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Filter_state500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsFilter_statePostResponseAsync instead.")]
-    public async Task<Dashboard.Item.Filter_state.Filter_stateResponse> PostAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Filter_state.Filter_stateResponse> PostAsync(Models.TemporaryCachePostSchema body, Action<RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Filter_state400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Filter_state401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Filter_state422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Filter_state500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Filter_state400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Filter_state401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Filter_state422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Filter_state500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Filter_state.Filter_stateResponse>(requestInfo, Dashboard.Item.Filter_state.Filter_stateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -101,7 +100,7 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.TemporaryCachePostSchema body, Action<RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

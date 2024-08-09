@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Export;
 
@@ -38,20 +37,20 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="string"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Export400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Export401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Export404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Export500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Export400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Export401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Export404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Export500Error">When receiving a 500 status code</exception>
     public async Task<string> GetAsync(Action<RequestConfiguration<Dataset.Export.ExportRequestBuilder.ExportRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Export400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Export401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Export404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Export500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Export400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Export401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Export404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Export500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
     }

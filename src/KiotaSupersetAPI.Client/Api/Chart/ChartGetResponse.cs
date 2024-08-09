@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Chart;
 
@@ -34,7 +33,7 @@ public partial class ChartGetResponse : IAdditionalDataHolder, IParsable
     public List<string> OrderColumns { get; set; }
 
     /// <summary>The result from the get list query</summary>
-    public List<KClient.Models.ChartRestApi.Get_list.Get_list> Result { get; set; }
+    public List<Models.ChartRestApi.Get_list.Get_list> Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Chart.ChartGetResponse"/> and sets the default values.
@@ -68,7 +67,7 @@ public partial class ChartGetResponse : IAdditionalDataHolder, IParsable
             { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "list_title", n => { ListTitle = n.GetStringValue(); } },
             { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.ChartRestApi.Get_list.Get_list>(KClient.Models.ChartRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.ChartRestApi.Get_list.Get_list>(Models.ChartRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -85,7 +84,7 @@ public partial class ChartGetResponse : IAdditionalDataHolder, IParsable
         writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
         writer.WriteStringValue("list_title", ListTitle);
         writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);
-        writer.WriteCollectionOfObjectValues<KClient.Models.ChartRestApi.Get_list.Get_list>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.ChartRestApi.Get_list.Get_list>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

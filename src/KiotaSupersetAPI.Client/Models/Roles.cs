@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -18,7 +17,7 @@ public partial class Roles : IAdditionalDataHolder, IParsable
     public string Name { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.Roles"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.Roles"/> and sets the default values.
     /// </summary>
     public Roles()
     {
@@ -27,12 +26,12 @@ public partial class Roles : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.Roles"/></returns>
+    /// <returns>A <see cref="Models.Roles"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.Roles CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.Roles CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.Roles();
+        return new Models.Roles();
     }
     /// <summary>
     /// The deserialization information for the current model

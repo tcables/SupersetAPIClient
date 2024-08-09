@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -37,7 +36,7 @@ public partial class DatabaseConnectionSchema : IAdditionalDataHolder, IParsable
     public string Driver { get; set; }
 
     /// <summary>The engine_information property</summary>
-    public KClient.Models.DatabaseConnectionSchema_engine_information EngineInformation { get; set; }
+    public Models.DatabaseConnectionSchema_engine_information EngineInformation { get; set; }
 
     /// <summary>Expose this database to SQLLab</summary>
     public bool? ExposeInSqllab { get; set; }
@@ -57,10 +56,10 @@ public partial class DatabaseConnectionSchema : IAdditionalDataHolder, IParsable
     public string MaskedEncryptedExtra { get; set; }
 
     /// <summary>DB-specific parameters for configuration</summary>
-    public KClient.Models.DatabaseConnectionSchema_parameters Parameters { get; set; }
+    public Models.DatabaseConnectionSchema_parameters Parameters { get; set; }
 
     /// <summary>JSONSchema for configuring the database by parameters instead of SQLAlchemy URI</summary>
-    public KClient.Models.DatabaseConnectionSchema_parameters_schema ParametersSchema { get; set; }
+    public Models.DatabaseConnectionSchema_parameters_schema ParametersSchema { get; set; }
 
     /// <summary>&lt;p&gt;Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines.&lt;/p&gt;</summary>
     public string ServerCert { get; set; }
@@ -69,13 +68,13 @@ public partial class DatabaseConnectionSchema : IAdditionalDataHolder, IParsable
     public string SqlalchemyUri { get; set; }
 
     /// <summary>The ssh_tunnel property</summary>
-    public KClient.Models.DatabaseSSHTunnel SshTunnel { get; set; }
+    public Models.DatabaseSSHTunnel SshTunnel { get; set; }
 
     /// <summary>The uuid property</summary>
     public string Uuid { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatabaseConnectionSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatabaseConnectionSchema"/> and sets the default values.
     /// </summary>
     public DatabaseConnectionSchema()
     {
@@ -84,12 +83,12 @@ public partial class DatabaseConnectionSchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatabaseConnectionSchema"/></returns>
+    /// <returns>A <see cref="Models.DatabaseConnectionSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatabaseConnectionSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatabaseConnectionSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatabaseConnectionSchema();
+        return new Models.DatabaseConnectionSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -109,7 +108,7 @@ public partial class DatabaseConnectionSchema : IAdditionalDataHolder, IParsable
             { "configuration_method", n => { ConfigurationMethod = n.GetStringValue(); } },
             { "database_name", n => { DatabaseName = n.GetStringValue(); } },
             { "driver", n => { Driver = n.GetStringValue(); } },
-            { "engine_information", n => { EngineInformation = n.GetObjectValue<KClient.Models.DatabaseConnectionSchema_engine_information>(KClient.Models.DatabaseConnectionSchema_engine_information.CreateFromDiscriminatorValue); } },
+            { "engine_information", n => { EngineInformation = n.GetObjectValue<Models.DatabaseConnectionSchema_engine_information>(Models.DatabaseConnectionSchema_engine_information.CreateFromDiscriminatorValue); } },
             { "expose_in_sqllab", n => { ExposeInSqllab = n.GetBoolValue(); } },
             { "extra", n => { Extra = n.GetStringValue(); } },
             { "force_ctas_schema", n => { ForceCtasSchema = n.GetStringValue(); } },
@@ -117,11 +116,11 @@ public partial class DatabaseConnectionSchema : IAdditionalDataHolder, IParsable
             { "impersonate_user", n => { ImpersonateUser = n.GetBoolValue(); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
             { "masked_encrypted_extra", n => { MaskedEncryptedExtra = n.GetStringValue(); } },
-            { "parameters", n => { Parameters = n.GetObjectValue<KClient.Models.DatabaseConnectionSchema_parameters>(KClient.Models.DatabaseConnectionSchema_parameters.CreateFromDiscriminatorValue); } },
-            { "parameters_schema", n => { ParametersSchema = n.GetObjectValue<KClient.Models.DatabaseConnectionSchema_parameters_schema>(KClient.Models.DatabaseConnectionSchema_parameters_schema.CreateFromDiscriminatorValue); } },
+            { "parameters", n => { Parameters = n.GetObjectValue<Models.DatabaseConnectionSchema_parameters>(Models.DatabaseConnectionSchema_parameters.CreateFromDiscriminatorValue); } },
+            { "parameters_schema", n => { ParametersSchema = n.GetObjectValue<Models.DatabaseConnectionSchema_parameters_schema>(Models.DatabaseConnectionSchema_parameters_schema.CreateFromDiscriminatorValue); } },
             { "server_cert", n => { ServerCert = n.GetStringValue(); } },
             { "sqlalchemy_uri", n => { SqlalchemyUri = n.GetStringValue(); } },
-            { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<KClient.Models.DatabaseSSHTunnel>(KClient.Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
+            { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<Models.DatabaseSSHTunnel>(Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
             { "uuid", n => { Uuid = n.GetStringValue(); } },
         };
     }
@@ -142,7 +141,7 @@ public partial class DatabaseConnectionSchema : IAdditionalDataHolder, IParsable
         writer.WriteStringValue("configuration_method", ConfigurationMethod);
         writer.WriteStringValue("database_name", DatabaseName);
         writer.WriteStringValue("driver", Driver);
-        writer.WriteObjectValue<KClient.Models.DatabaseConnectionSchema_engine_information>("engine_information", EngineInformation);
+        writer.WriteObjectValue<Models.DatabaseConnectionSchema_engine_information>("engine_information", EngineInformation);
         writer.WriteBoolValue("expose_in_sqllab", ExposeInSqllab);
         writer.WriteStringValue("extra", Extra);
         writer.WriteStringValue("force_ctas_schema", ForceCtasSchema);
@@ -150,11 +149,11 @@ public partial class DatabaseConnectionSchema : IAdditionalDataHolder, IParsable
         writer.WriteBoolValue("impersonate_user", ImpersonateUser);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
         writer.WriteStringValue("masked_encrypted_extra", MaskedEncryptedExtra);
-        writer.WriteObjectValue<KClient.Models.DatabaseConnectionSchema_parameters>("parameters", Parameters);
-        writer.WriteObjectValue<KClient.Models.DatabaseConnectionSchema_parameters_schema>("parameters_schema", ParametersSchema);
+        writer.WriteObjectValue<Models.DatabaseConnectionSchema_parameters>("parameters", Parameters);
+        writer.WriteObjectValue<Models.DatabaseConnectionSchema_parameters_schema>("parameters_schema", ParametersSchema);
         writer.WriteStringValue("server_cert", ServerCert);
         writer.WriteStringValue("sqlalchemy_uri", SqlalchemyUri);
-        writer.WriteObjectValue<KClient.Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
+        writer.WriteObjectValue<Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
         writer.WriteStringValue("uuid", Uuid);
         writer.WriteAdditionalData(AdditionalData);
     }

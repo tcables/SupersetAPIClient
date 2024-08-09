@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get;
 
@@ -20,7 +19,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string JsonMetadata { get; set; }
 
     /// <summary>The layer property</summary>
-    public KClient.Models.AnnotationRestApi.Get.AnnotationLayer Layer { get; set; }
+    public Models.AnnotationRestApi.Get.AnnotationLayer Layer { get; set; }
 
     /// <summary>The long_descr property</summary>
     public string LongDescr { get; set; }
@@ -31,7 +30,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>The start_dttm property</summary>
     public DateTimeOffset? StartDttm { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.AnnotationRestApi.Get.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.AnnotationRestApi.Get.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -40,12 +39,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.AnnotationRestApi.Get.Get"/></returns>
+    /// <returns>A <see cref="Models.AnnotationRestApi.Get.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.AnnotationRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.AnnotationRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.AnnotationRestApi.Get.Get();
+        return new Models.AnnotationRestApi.Get.Get();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -58,7 +57,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
             { "end_dttm", n => { EndDttm = n.GetDateTimeOffsetValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
             { "json_metadata", n => { JsonMetadata = n.GetStringValue(); } },
-            { "layer", n => { Layer = n.GetObjectValue<KClient.Models.AnnotationRestApi.Get.AnnotationLayer>(KClient.Models.AnnotationRestApi.Get.AnnotationLayer.CreateFromDiscriminatorValue); } },
+            { "layer", n => { Layer = n.GetObjectValue<Models.AnnotationRestApi.Get.AnnotationLayer>(Models.AnnotationRestApi.Get.AnnotationLayer.CreateFromDiscriminatorValue); } },
             { "long_descr", n => { LongDescr = n.GetStringValue(); } },
             { "short_descr", n => { ShortDescr = n.GetStringValue(); } },
             { "start_dttm", n => { StartDttm = n.GetDateTimeOffsetValue(); } },
@@ -74,7 +73,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
         writer.WriteDateTimeOffsetValue("end_dttm", EndDttm);
         writer.WriteIntValue("id", Id);
         writer.WriteStringValue("json_metadata", JsonMetadata);
-        writer.WriteObjectValue<KClient.Models.AnnotationRestApi.Get.AnnotationLayer>("layer", Layer);
+        writer.WriteObjectValue<Models.AnnotationRestApi.Get.AnnotationLayer>("layer", Layer);
         writer.WriteStringValue("long_descr", LongDescr);
         writer.WriteStringValue("short_descr", ShortDescr);
         writer.WriteDateTimeOffsetValue("start_dttm", StartDttm);

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item;
 
@@ -13,7 +12,7 @@ public partial class Dashboard_GetResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public KClient.Models.DashboardGetResponseSchema Result { get; set; }
+    public Models.DashboardGetResponseSchema Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.Item.Dashboard_GetResponse"/> and sets the default values.
@@ -40,7 +39,7 @@ public partial class Dashboard_GetResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.DashboardGetResponseSchema>(KClient.Models.DashboardGetResponseSchema.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.DashboardGetResponseSchema>(Models.DashboardGetResponseSchema.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -50,7 +49,7 @@ public partial class Dashboard_GetResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.DashboardGetResponseSchema>("result", Result);
+        writer.WriteObjectValue<Models.DashboardGetResponseSchema>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

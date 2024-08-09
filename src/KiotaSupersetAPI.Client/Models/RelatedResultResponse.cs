@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,7 +12,7 @@ public partial class RelatedResultResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The extra metadata for related item</summary>
-    public KClient.Models.RelatedResultResponse_extra Extra { get; set; }
+    public Models.RelatedResultResponse_extra Extra { get; set; }
 
     /// <summary>The related item string representation</summary>
     public string Text { get; set; }
@@ -21,7 +20,7 @@ public partial class RelatedResultResponse : IAdditionalDataHolder, IParsable
     /// <summary>The related item identifier</summary>
     public int? Value { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.RelatedResultResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.RelatedResultResponse"/> and sets the default values.
     /// </summary>
     public RelatedResultResponse()
     {
@@ -30,12 +29,12 @@ public partial class RelatedResultResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.RelatedResultResponse"/></returns>
+    /// <returns>A <see cref="Models.RelatedResultResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.RelatedResultResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.RelatedResultResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.RelatedResultResponse();
+        return new Models.RelatedResultResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -45,7 +44,7 @@ public partial class RelatedResultResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "extra", n => { Extra = n.GetObjectValue<KClient.Models.RelatedResultResponse_extra>(KClient.Models.RelatedResultResponse_extra.CreateFromDiscriminatorValue); } },
+            { "extra", n => { Extra = n.GetObjectValue<Models.RelatedResultResponse_extra>(Models.RelatedResultResponse_extra.CreateFromDiscriminatorValue); } },
             { "text", n => { Text = n.GetStringValue(); } },
             { "value", n => { Value = n.GetIntValue(); } },
         };
@@ -57,7 +56,7 @@ public partial class RelatedResultResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.RelatedResultResponse_extra>("extra", Extra);
+        writer.WriteObjectValue<Models.RelatedResultResponse_extra>("extra", Extra);
         writer.WriteStringValue("text", Text);
         writer.WriteIntValue("value", Value);
         writer.WriteAdditionalData(AdditionalData);

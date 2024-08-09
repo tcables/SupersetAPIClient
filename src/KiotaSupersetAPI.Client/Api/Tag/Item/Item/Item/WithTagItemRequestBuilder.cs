@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Item.Item.Item;
 
@@ -38,22 +37,22 @@ public partial class WithTagItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Tag.Item.Item.Item.WithTagDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithTag401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithTag403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.WithTag404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithTag422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithTag500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithTag401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithTag403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.WithTag404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithTag422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithTag500Error">When receiving a 500 status code</exception>
     public async Task<Tag.Item.Item.Item.WithTagDeleteResponse> DeleteAsWithTagDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.WithTag401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.WithTag403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithTag404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithTag422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithTag500Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithTag401Error.CreateFromDiscriminatorValue },
+            { "403", Models.WithTag403Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithTag404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithTag422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithTag500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Tag.Item.Item.Item.WithTagDeleteResponse>(requestInfo, Tag.Item.Item.Item.WithTagDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -63,11 +62,11 @@ public partial class WithTagItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Tag.Item.Item.Item.WithTagResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithTag401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithTag403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.WithTag404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithTag422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithTag500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithTag401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithTag403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.WithTag404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithTag422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithTag500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithTagDeleteResponseAsync instead.")]
     public async Task<Tag.Item.Item.Item.WithTagResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -75,11 +74,11 @@ public partial class WithTagItemRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.WithTag401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.WithTag403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithTag404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithTag422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithTag500Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithTag401Error.CreateFromDiscriminatorValue },
+            { "403", Models.WithTag403Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithTag404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithTag422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithTag500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Tag.Item.Item.Item.WithTagResponse>(requestInfo, Tag.Item.Item.Item.WithTagResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

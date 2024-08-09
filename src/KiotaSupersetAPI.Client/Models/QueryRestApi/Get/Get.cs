@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.QueryRestApi.Get;
 
@@ -18,7 +17,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string ClientId { get; set; }
 
     /// <summary>The database property</summary>
-    public KClient.Models.QueryRestApi.Get.Database Database { get; set; }
+    public Models.QueryRestApi.Get.Database Database { get; set; }
 
     /// <summary>The end_result_backend_time property</summary>
     public double? EndResultBackendTime { get; set; }
@@ -77,7 +76,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public UntypedNode TrackingUrl { get; private set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.QueryRestApi.Get.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.QueryRestApi.Get.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -86,12 +85,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.QueryRestApi.Get.Get"/></returns>
+    /// <returns>A <see cref="Models.QueryRestApi.Get.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.QueryRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.QueryRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.QueryRestApi.Get.Get();
+        return new Models.QueryRestApi.Get.Get();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -103,7 +102,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
         {
             { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
             { "client_id", n => { ClientId = n.GetStringValue(); } },
-            { "database", n => { Database = n.GetObjectValue<KClient.Models.QueryRestApi.Get.Database>(KClient.Models.QueryRestApi.Get.Database.CreateFromDiscriminatorValue); } },
+            { "database", n => { Database = n.GetObjectValue<Models.QueryRestApi.Get.Database>(Models.QueryRestApi.Get.Database.CreateFromDiscriminatorValue); } },
             { "end_result_backend_time", n => { EndResultBackendTime = n.GetDoubleValue(); } },
             { "end_time", n => { EndTime = n.GetDoubleValue(); } },
             { "error_message", n => { ErrorMessage = n.GetStringValue(); } },
@@ -137,7 +136,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
         writer.WriteStringValue("client_id", ClientId);
-        writer.WriteObjectValue<KClient.Models.QueryRestApi.Get.Database>("database", Database);
+        writer.WriteObjectValue<Models.QueryRestApi.Get.Database>("database", Database);
         writer.WriteDoubleValue("end_result_backend_time", EndResultBackendTime);
         writer.WriteDoubleValue("end_time", EndTime);
         writer.WriteStringValue("error_message", ErrorMessage);

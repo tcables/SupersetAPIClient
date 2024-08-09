@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,10 +15,10 @@ public partial class DistincResponseSchema : IAdditionalDataHolder, IParsable
     /// <summary>The total number of distinct values</summary>
     public int? Count { get; set; }
     /// <summary>The result property</summary>
-    public List<KClient.Models.DistinctResultResponse> Result { get; set; }
+    public List<Models.DistinctResultResponse> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DistincResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DistincResponseSchema"/> and sets the default values.
     /// </summary>
     public DistincResponseSchema()
     {
@@ -28,12 +27,12 @@ public partial class DistincResponseSchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DistincResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.DistincResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DistincResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DistincResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DistincResponseSchema();
+        return new Models.DistincResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -44,7 +43,7 @@ public partial class DistincResponseSchema : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "count", n => { Count = n.GetIntValue(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.DistinctResultResponse>(KClient.Models.DistinctResultResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.DistinctResultResponse>(Models.DistinctResultResponse.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -55,7 +54,7 @@ public partial class DistincResponseSchema : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteIntValue("count", Count);
-        writer.WriteCollectionOfObjectValues<KClient.Models.DistinctResultResponse>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.DistinctResultResponse>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

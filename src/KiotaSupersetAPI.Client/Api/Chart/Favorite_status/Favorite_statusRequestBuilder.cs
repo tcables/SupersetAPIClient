@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Chart.Favorite_status;
 
@@ -35,25 +34,25 @@ public partial class Favorite_statusRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Check favorited charts for current user
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.GetFavStarIdsSchema"/></returns>
+    /// <returns>A <see cref="Models.GetFavStarIdsSchema"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.GetFavStarIdsSchema400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.GetFavStarIdsSchema401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.GetFavStarIdsSchema404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.GetFavStarIdsSchema500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.GetFavStarIdsSchema> GetAsync(Action<RequestConfiguration<Chart.Favorite_status.Favorite_statusRequestBuilder.Favorite_statusRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.GetFavStarIdsSchema400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.GetFavStarIdsSchema401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.GetFavStarIdsSchema404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.GetFavStarIdsSchema500Error">When receiving a 500 status code</exception>
+    public async Task<Models.GetFavStarIdsSchema> GetAsync(Action<RequestConfiguration<Chart.Favorite_status.Favorite_statusRequestBuilder.Favorite_statusRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.GetFavStarIdsSchema400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.GetFavStarIdsSchema401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.GetFavStarIdsSchema404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.GetFavStarIdsSchema500Error.CreateFromDiscriminatorValue },
+            { "400", Models.GetFavStarIdsSchema400Error.CreateFromDiscriminatorValue },
+            { "401", Models.GetFavStarIdsSchema401Error.CreateFromDiscriminatorValue },
+            { "404", Models.GetFavStarIdsSchema404Error.CreateFromDiscriminatorValue },
+            { "500", Models.GetFavStarIdsSchema500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.GetFavStarIdsSchema>(requestInfo, KClient.Models.GetFavStarIdsSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.GetFavStarIdsSchema>(requestInfo, Models.GetFavStarIdsSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Check favorited charts for current user

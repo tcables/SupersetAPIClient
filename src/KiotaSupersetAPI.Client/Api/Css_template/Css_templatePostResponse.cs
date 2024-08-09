@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Css_template;
 
@@ -16,7 +15,7 @@ public partial class Css_templatePostResponse : IAdditionalDataHolder, IParsable
     public string Id { get; set; }
 
     /// <summary>The result property</summary>
-    public KClient.Models.CssTemplateRestApi.Post Result { get; set; }
+    public Models.CssTemplateRestApi.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Css_template.Css_templatePostResponse"/> and sets the default values.
@@ -44,7 +43,7 @@ public partial class Css_templatePostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetStringValue(); } },
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.CssTemplateRestApi.Post>(KClient.Models.CssTemplateRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.CssTemplateRestApi.Post>(Models.CssTemplateRestApi.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -55,7 +54,7 @@ public partial class Css_templatePostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("id", Id);
-        writer.WriteObjectValue<KClient.Models.CssTemplateRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.CssTemplateRestApi.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

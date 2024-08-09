@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -49,7 +48,7 @@ public partial class ExecutePayloadSchema : IAdditionalDataHolder, IParsable
     public string TmpTableName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ExecutePayloadSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ExecutePayloadSchema"/> and sets the default values.
     /// </summary>
     public ExecutePayloadSchema()
     {
@@ -58,12 +57,12 @@ public partial class ExecutePayloadSchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ExecutePayloadSchema"/></returns>
+    /// <returns>A <see cref="Models.ExecutePayloadSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ExecutePayloadSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ExecutePayloadSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ExecutePayloadSchema();
+        return new Models.ExecutePayloadSchema();
     }
     /// <summary>
     /// The deserialization information for the current model

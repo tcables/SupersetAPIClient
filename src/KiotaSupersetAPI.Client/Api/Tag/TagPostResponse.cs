@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag;
 
@@ -15,7 +14,7 @@ public partial class TagPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public KClient.Models.TagRestApi.Post Result { get; set; }
+    public Models.TagRestApi.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Tag.TagPostResponse"/> and sets the default values.
@@ -43,7 +42,7 @@ public partial class TagPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.TagRestApi.Post>(KClient.Models.TagRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.TagRestApi.Post>(Models.TagRestApi.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -54,7 +53,7 @@ public partial class TagPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<KClient.Models.TagRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.TagRestApi.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

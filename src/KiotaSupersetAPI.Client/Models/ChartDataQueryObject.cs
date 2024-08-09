@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -14,10 +13,10 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Annotation layers to apply to chart</summary>
-    public List<KClient.Models.AnnotationLayer> AnnotationLayers { get; set; }
+    public List<Models.AnnotationLayer> AnnotationLayers { get; set; }
 
     /// <summary>A mapping of temporal extras that have been applied to the query</summary>
-    public KClient.Models.ChartDataQueryObject_applied_time_extras AppliedTimeExtras { get; set; }
+    public Models.ChartDataQueryObject_applied_time_extras AppliedTimeExtras { get; set; }
 
     /// <summary>Add fetch values predicate (where clause) to query if defined in datasource</summary>
     public bool? ApplyFetchValuesPredicate { get; set; }
@@ -25,13 +24,13 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
     public UntypedNode Columns { get; set; }
 
     /// <summary>The datasource property</summary>
-    public KClient.Models.ChartDataDatasource Datasource { get; set; }
+    public Models.ChartDataDatasource Datasource { get; set; }
 
     /// <summary>Extra parameters to add to the query.</summary>
-    public KClient.Models.ChartDataExtras Extras { get; set; }
+    public Models.ChartDataExtras Extras { get; set; }
 
     /// <summary>The filters property</summary>
-    public List<KClient.Models.ChartDataFilter> Filters { get; set; }
+    public List<Models.ChartDataFilter> Filters { get; set; }
 
     /// <summary>Name of temporal column used for time filtering. </summary>
     public string Granularity { get; set; }
@@ -60,10 +59,10 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
     /// <summary>Reverse order. Default: `false`</summary>
     public bool? OrderDesc { get; set; }
     /// <summary>Post processing operations to be applied to the result set. Operations are applied to the result set in sequential order.</summary>
-    public List<KClient.Models.ChartDataPostProcessingOperation> PostProcessing { get; set; }
+    public List<Models.ChartDataPostProcessingOperation> PostProcessing { get; set; }
 
     /// <summary>The result_type property</summary>
-    public KClient.Models.ChartDataQueryObject_result_type? ResultType { get; set; }
+    public Models.ChartDataQueryObject_result_type? ResultType { get; set; }
     /// <summary>Maximum row count (0=disabled). Default: `config[&quot;ROW_LIMIT&quot;]`</summary>
     public int? RowLimit { get; set; }
     /// <summary>Number of rows to skip. Default: `0`</summary>
@@ -91,14 +90,14 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
     public string TimeShift { get; set; }
 
     /// <summary>Optional query parameters passed to a dashboard or Explore  view</summary>
-    public KClient.Models.ChartDataQueryObject_url_params UrlParams { get; set; }
+    public Models.ChartDataQueryObject_url_params UrlParams { get; set; }
 
     /// <summary>WHERE clause to be added to queries using AND operator.This field is deprecated and should be passed to `extras`.</summary>
     [Obsolete("")]
     public string Where { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartDataQueryObject"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartDataQueryObject"/> and sets the default values.
     /// </summary>
     public ChartDataQueryObject()
     {
@@ -107,12 +106,12 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartDataQueryObject"/></returns>
+    /// <returns>A <see cref="Models.ChartDataQueryObject"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartDataQueryObject CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartDataQueryObject CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartDataQueryObject();
+        return new Models.ChartDataQueryObject();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -122,13 +121,13 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "annotation_layers", n => { AnnotationLayers = n.GetCollectionOfObjectValues<KClient.Models.AnnotationLayer>(KClient.Models.AnnotationLayer.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "applied_time_extras", n => { AppliedTimeExtras = n.GetObjectValue<KClient.Models.ChartDataQueryObject_applied_time_extras>(KClient.Models.ChartDataQueryObject_applied_time_extras.CreateFromDiscriminatorValue); } },
+            { "annotation_layers", n => { AnnotationLayers = n.GetCollectionOfObjectValues<Models.AnnotationLayer>(Models.AnnotationLayer.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "applied_time_extras", n => { AppliedTimeExtras = n.GetObjectValue<Models.ChartDataQueryObject_applied_time_extras>(Models.ChartDataQueryObject_applied_time_extras.CreateFromDiscriminatorValue); } },
             { "apply_fetch_values_predicate", n => { ApplyFetchValuesPredicate = n.GetBoolValue(); } },
             { "columns", n => { Columns = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "datasource", n => { Datasource = n.GetObjectValue<KClient.Models.ChartDataDatasource>(KClient.Models.ChartDataDatasource.CreateFromDiscriminatorValue); } },
-            { "extras", n => { Extras = n.GetObjectValue<KClient.Models.ChartDataExtras>(KClient.Models.ChartDataExtras.CreateFromDiscriminatorValue); } },
-            { "filters", n => { Filters = n.GetCollectionOfObjectValues<KClient.Models.ChartDataFilter>(KClient.Models.ChartDataFilter.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "datasource", n => { Datasource = n.GetObjectValue<Models.ChartDataDatasource>(Models.ChartDataDatasource.CreateFromDiscriminatorValue); } },
+            { "extras", n => { Extras = n.GetObjectValue<Models.ChartDataExtras>(Models.ChartDataExtras.CreateFromDiscriminatorValue); } },
+            { "filters", n => { Filters = n.GetCollectionOfObjectValues<Models.ChartDataFilter>(Models.ChartDataFilter.CreateFromDiscriminatorValue)?.ToList(); } },
             { "granularity", n => { Granularity = n.GetStringValue(); } },
             { "granularity_sqla", n => { GranularitySqla = n.GetStringValue(); } },
             { "groupby", n => { Groupby = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -138,8 +137,8 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
             { "metrics", n => { Metrics = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "order_desc", n => { OrderDesc = n.GetBoolValue(); } },
             { "orderby", n => { Orderby = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "post_processing", n => { PostProcessing = n.GetCollectionOfObjectValues<KClient.Models.ChartDataPostProcessingOperation>(KClient.Models.ChartDataPostProcessingOperation.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "result_type", n => { ResultType = n.GetEnumValue<KClient.Models.ChartDataQueryObject_result_type>(); } },
+            { "post_processing", n => { PostProcessing = n.GetCollectionOfObjectValues<Models.ChartDataPostProcessingOperation>(Models.ChartDataPostProcessingOperation.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result_type", n => { ResultType = n.GetEnumValue<Models.ChartDataQueryObject_result_type>(); } },
             { "row_limit", n => { RowLimit = n.GetIntValue(); } },
             { "row_offset", n => { RowOffset = n.GetIntValue(); } },
             { "series_columns", n => { SeriesColumns = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -150,7 +149,7 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
             { "time_shift", n => { TimeShift = n.GetStringValue(); } },
             { "timeseries_limit", n => { TimeseriesLimit = n.GetIntValue(); } },
             { "timeseries_limit_metric", n => { TimeseriesLimitMetric = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "url_params", n => { UrlParams = n.GetObjectValue<KClient.Models.ChartDataQueryObject_url_params>(KClient.Models.ChartDataQueryObject_url_params.CreateFromDiscriminatorValue); } },
+            { "url_params", n => { UrlParams = n.GetObjectValue<Models.ChartDataQueryObject_url_params>(Models.ChartDataQueryObject_url_params.CreateFromDiscriminatorValue); } },
             { "where", n => { Where = n.GetStringValue(); } },
         };
     }
@@ -161,13 +160,13 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteCollectionOfObjectValues<KClient.Models.AnnotationLayer>("annotation_layers", AnnotationLayers);
-        writer.WriteObjectValue<KClient.Models.ChartDataQueryObject_applied_time_extras>("applied_time_extras", AppliedTimeExtras);
+        writer.WriteCollectionOfObjectValues<Models.AnnotationLayer>("annotation_layers", AnnotationLayers);
+        writer.WriteObjectValue<Models.ChartDataQueryObject_applied_time_extras>("applied_time_extras", AppliedTimeExtras);
         writer.WriteBoolValue("apply_fetch_values_predicate", ApplyFetchValuesPredicate);
         writer.WriteObjectValue<UntypedNode>("columns", Columns);
-        writer.WriteObjectValue<KClient.Models.ChartDataDatasource>("datasource", Datasource);
-        writer.WriteObjectValue<KClient.Models.ChartDataExtras>("extras", Extras);
-        writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataFilter>("filters", Filters);
+        writer.WriteObjectValue<Models.ChartDataDatasource>("datasource", Datasource);
+        writer.WriteObjectValue<Models.ChartDataExtras>("extras", Extras);
+        writer.WriteCollectionOfObjectValues<Models.ChartDataFilter>("filters", Filters);
         writer.WriteStringValue("granularity", Granularity);
         writer.WriteStringValue("granularity_sqla", GranularitySqla);
         writer.WriteObjectValue<UntypedNode>("groupby", Groupby);
@@ -177,8 +176,8 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
         writer.WriteObjectValue<UntypedNode>("metrics", Metrics);
         writer.WriteObjectValue<UntypedNode>("orderby", Orderby);
         writer.WriteBoolValue("order_desc", OrderDesc);
-        writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataPostProcessingOperation>("post_processing", PostProcessing);
-        writer.WriteEnumValue<KClient.Models.ChartDataQueryObject_result_type>("result_type", ResultType);
+        writer.WriteCollectionOfObjectValues<Models.ChartDataPostProcessingOperation>("post_processing", PostProcessing);
+        writer.WriteEnumValue<Models.ChartDataQueryObject_result_type>("result_type", ResultType);
         writer.WriteIntValue("row_limit", RowLimit);
         writer.WriteIntValue("row_offset", RowOffset);
         writer.WriteObjectValue<UntypedNode>("series_columns", SeriesColumns);
@@ -189,7 +188,7 @@ public partial class ChartDataQueryObject : IAdditionalDataHolder, IParsable
         writer.WriteIntValue("timeseries_limit", TimeseriesLimit);
         writer.WriteObjectValue<UntypedNode>("timeseries_limit_metric", TimeseriesLimitMetric);
         writer.WriteStringValue("time_shift", TimeShift);
-        writer.WriteObjectValue<KClient.Models.ChartDataQueryObject_url_params>("url_params", UrlParams);
+        writer.WriteObjectValue<Models.ChartDataQueryObject_url_params>("url_params", UrlParams);
         writer.WriteStringValue("where", Where);
         writer.WriteAdditionalData(AdditionalData);
     }

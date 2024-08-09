@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -20,13 +19,13 @@ public partial class DashboardPermalinkStateSchema : IAdditionalDataHolder, IPar
     public string Anchor { get; set; }
 
     /// <summary>Data mask used for native filter state</summary>
-    public KClient.Models.DashboardPermalinkStateSchema_dataMask DataMask { get; set; }
+    public Models.DashboardPermalinkStateSchema_dataMask DataMask { get; set; }
 
     /// <summary>URL Parameters</summary>
     public UntypedNode UrlParams { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DashboardPermalinkStateSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DashboardPermalinkStateSchema"/> and sets the default values.
     /// </summary>
     public DashboardPermalinkStateSchema()
     {
@@ -35,12 +34,12 @@ public partial class DashboardPermalinkStateSchema : IAdditionalDataHolder, IPar
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DashboardPermalinkStateSchema"/></returns>
+    /// <returns>A <see cref="Models.DashboardPermalinkStateSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DashboardPermalinkStateSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DashboardPermalinkStateSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DashboardPermalinkStateSchema();
+        return new Models.DashboardPermalinkStateSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -52,7 +51,7 @@ public partial class DashboardPermalinkStateSchema : IAdditionalDataHolder, IPar
         {
             { "activeTabs", n => { ActiveTabs = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "anchor", n => { Anchor = n.GetStringValue(); } },
-            { "dataMask", n => { DataMask = n.GetObjectValue<KClient.Models.DashboardPermalinkStateSchema_dataMask>(KClient.Models.DashboardPermalinkStateSchema_dataMask.CreateFromDiscriminatorValue); } },
+            { "dataMask", n => { DataMask = n.GetObjectValue<Models.DashboardPermalinkStateSchema_dataMask>(Models.DashboardPermalinkStateSchema_dataMask.CreateFromDiscriminatorValue); } },
             { "urlParams", n => { UrlParams = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
         };
     }
@@ -65,7 +64,7 @@ public partial class DashboardPermalinkStateSchema : IAdditionalDataHolder, IPar
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteCollectionOfPrimitiveValues<string>("activeTabs", ActiveTabs);
         writer.WriteStringValue("anchor", Anchor);
-        writer.WriteObjectValue<KClient.Models.DashboardPermalinkStateSchema_dataMask>("dataMask", DataMask);
+        writer.WriteObjectValue<Models.DashboardPermalinkStateSchema_dataMask>("dataMask", DataMask);
         writer.WriteObjectValue<UntypedNode>("urlParams", UrlParams);
         writer.WriteAdditionalData(AdditionalData);
     }

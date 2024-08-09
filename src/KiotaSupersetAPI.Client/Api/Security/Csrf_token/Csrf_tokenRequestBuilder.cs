@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Security.Csrf_token;
 
@@ -38,16 +37,16 @@ public partial class Csrf_tokenRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Security.Csrf_token.Csrf_tokenGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Csrf_token401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Csrf_token500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Csrf_token401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Csrf_token500Error">When receiving a 500 status code</exception>
     public async Task<Security.Csrf_token.Csrf_tokenGetResponse> GetCsrf_tokenGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Csrf_token401Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Csrf_token500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Csrf_token401Error.CreateFromDiscriminatorValue },
+            { "500", Models.Csrf_token500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Security.Csrf_token.Csrf_tokenGetResponse>(requestInfo, Security.Csrf_token.Csrf_tokenGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -57,8 +56,8 @@ public partial class Csrf_tokenRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Security.Csrf_token.Csrf_tokenResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Csrf_token401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Csrf_token500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Csrf_token401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Csrf_token500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsCsrf_tokenGetResponseAsync instead.")]
     public async Task<Security.Csrf_token.Csrf_tokenResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -66,8 +65,8 @@ public partial class Csrf_tokenRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Csrf_token401Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Csrf_token500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Csrf_token401Error.CreateFromDiscriminatorValue },
+            { "500", Models.Csrf_token500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Security.Csrf_token.Csrf_tokenResponse>(requestInfo, Security.Csrf_token.Csrf_tokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

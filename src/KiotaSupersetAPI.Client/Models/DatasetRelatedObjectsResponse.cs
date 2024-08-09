@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,13 +12,13 @@ public partial class DatasetRelatedObjectsResponse : IAdditionalDataHolder, IPar
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The charts property</summary>
-    public KClient.Models.DatasetRelatedCharts Charts { get; set; }
+    public Models.DatasetRelatedCharts Charts { get; set; }
 
     /// <summary>The dashboards property</summary>
-    public KClient.Models.DatasetRelatedDashboards Dashboards { get; set; }
+    public Models.DatasetRelatedDashboards Dashboards { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatasetRelatedObjectsResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatasetRelatedObjectsResponse"/> and sets the default values.
     /// </summary>
     public DatasetRelatedObjectsResponse()
     {
@@ -28,12 +27,12 @@ public partial class DatasetRelatedObjectsResponse : IAdditionalDataHolder, IPar
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatasetRelatedObjectsResponse"/></returns>
+    /// <returns>A <see cref="Models.DatasetRelatedObjectsResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatasetRelatedObjectsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatasetRelatedObjectsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatasetRelatedObjectsResponse();
+        return new Models.DatasetRelatedObjectsResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -43,8 +42,8 @@ public partial class DatasetRelatedObjectsResponse : IAdditionalDataHolder, IPar
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "charts", n => { Charts = n.GetObjectValue<KClient.Models.DatasetRelatedCharts>(KClient.Models.DatasetRelatedCharts.CreateFromDiscriminatorValue); } },
-            { "dashboards", n => { Dashboards = n.GetObjectValue<KClient.Models.DatasetRelatedDashboards>(KClient.Models.DatasetRelatedDashboards.CreateFromDiscriminatorValue); } },
+            { "charts", n => { Charts = n.GetObjectValue<Models.DatasetRelatedCharts>(Models.DatasetRelatedCharts.CreateFromDiscriminatorValue); } },
+            { "dashboards", n => { Dashboards = n.GetObjectValue<Models.DatasetRelatedDashboards>(Models.DatasetRelatedDashboards.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -54,8 +53,8 @@ public partial class DatasetRelatedObjectsResponse : IAdditionalDataHolder, IPar
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.DatasetRelatedCharts>("charts", Charts);
-        writer.WriteObjectValue<KClient.Models.DatasetRelatedDashboards>("dashboards", Dashboards);
+        writer.WriteObjectValue<Models.DatasetRelatedCharts>("charts", Charts);
+        writer.WriteObjectValue<Models.DatasetRelatedDashboards>("dashboards", Dashboards);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

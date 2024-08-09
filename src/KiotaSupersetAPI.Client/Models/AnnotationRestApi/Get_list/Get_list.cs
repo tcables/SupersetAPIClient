@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.AnnotationRestApi.Get_list;
 
@@ -13,13 +12,13 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-    public KClient.Models.AnnotationRestApi.Get_list.User1 ChangedBy { get; set; }
+    public Models.AnnotationRestApi.Get_list.User1 ChangedBy { get; set; }
 
     /// <summary>The changed_on_delta_humanized property</summary>
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
 
     /// <summary>The created_by property</summary>
-    public KClient.Models.AnnotationRestApi.Get_list.User CreatedBy { get; set; }
+    public Models.AnnotationRestApi.Get_list.User CreatedBy { get; set; }
 
     /// <summary>The end_dttm property</summary>
     public DateTimeOffset? EndDttm { get; set; }
@@ -34,7 +33,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The start_dttm property</summary>
     public DateTimeOffset? StartDttm { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.AnnotationRestApi.Get_list.Get_list"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.AnnotationRestApi.Get_list.Get_list"/> and sets the default values.
     /// </summary>
     public Get_list()
     {
@@ -43,12 +42,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.AnnotationRestApi.Get_list.Get_list"/></returns>
+    /// <returns>A <see cref="Models.AnnotationRestApi.Get_list.Get_list"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.AnnotationRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.AnnotationRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.AnnotationRestApi.Get_list.Get_list();
+        return new Models.AnnotationRestApi.Get_list.Get_list();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -58,9 +57,9 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.AnnotationRestApi.Get_list.User1>(KClient.Models.AnnotationRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.AnnotationRestApi.Get_list.User1>(Models.AnnotationRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.AnnotationRestApi.Get_list.User>(KClient.Models.AnnotationRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.AnnotationRestApi.Get_list.User>(Models.AnnotationRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
             { "end_dttm", n => { EndDttm = n.GetDateTimeOffsetValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
             { "long_descr", n => { LongDescr = n.GetStringValue(); } },
@@ -75,8 +74,8 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.AnnotationRestApi.Get_list.User1>("changed_by", ChangedBy);
-        writer.WriteObjectValue<KClient.Models.AnnotationRestApi.Get_list.User>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.AnnotationRestApi.Get_list.User1>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.AnnotationRestApi.Get_list.User>("created_by", CreatedBy);
         writer.WriteDateTimeOffsetValue("end_dttm", EndDttm);
         writer.WriteIntValue("id", Id);
         writer.WriteStringValue("long_descr", LongDescr);

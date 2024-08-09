@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Item.Item;
 
@@ -50,10 +49,10 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithObject_400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.WithObject_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithObject_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithObject_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithObject_400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.WithObject_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithObject_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithObject_500Error">When receiving a 500 status code</exception>
     public async Task PostAsync(Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
@@ -61,10 +60,10 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.WithObject_400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.WithObject_401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithObject_404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithObject_500Error.CreateFromDiscriminatorValue },
+            { "400", Models.WithObject_400Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithObject_401Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithObject_404Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithObject_500Error.CreateFromDiscriminatorValue },
         };
         await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
     }

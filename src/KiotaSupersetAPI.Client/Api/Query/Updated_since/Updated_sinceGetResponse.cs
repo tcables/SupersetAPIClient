@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Query.Updated_since;
 
@@ -14,7 +13,7 @@ public partial class Updated_sinceGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>A List of queries that changed after last_updated_ms</summary>
-    public List<KClient.Models.QueryRestApi.Get.Get> Result { get; set; }
+    public List<Models.QueryRestApi.Get.Get> Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Query.Updated_since.Updated_sinceGetResponse"/> and sets the default values.
@@ -41,7 +40,7 @@ public partial class Updated_sinceGetResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.QueryRestApi.Get.Get>(KClient.Models.QueryRestApi.Get.Get.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.QueryRestApi.Get.Get>(Models.QueryRestApi.Get.Get.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -51,7 +50,7 @@ public partial class Updated_sinceGetResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteCollectionOfObjectValues<KClient.Models.QueryRestApi.Get.Get>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.QueryRestApi.Get.Get>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

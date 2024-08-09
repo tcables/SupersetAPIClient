@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,7 +12,7 @@ public partial class DatabaseTestConnectionSchema : IAdditionalDataHolder, IPars
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Configuration_method is used on the frontend to inform the backend whether to explode parameters or to provide only a sqlalchemy_uri.</summary>
-    public KClient.Models.DatabaseTestConnectionSchema_configuration_method? ConfigurationMethod { get; set; }
+    public Models.DatabaseTestConnectionSchema_configuration_method? ConfigurationMethod { get; set; }
     /// <summary>A database name to identify this connection.</summary>
     public string DatabaseName { get; set; }
 
@@ -32,7 +31,7 @@ public partial class DatabaseTestConnectionSchema : IAdditionalDataHolder, IPars
     public string MaskedEncryptedExtra { get; set; }
 
     /// <summary>DB-specific parameters for configuration</summary>
-    public KClient.Models.DatabaseTestConnectionSchema_parameters Parameters { get; set; }
+    public Models.DatabaseTestConnectionSchema_parameters Parameters { get; set; }
 
     /// <summary>&lt;p&gt;Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines.&lt;/p&gt;</summary>
     public string ServerCert { get; set; }
@@ -41,25 +40,25 @@ public partial class DatabaseTestConnectionSchema : IAdditionalDataHolder, IPars
     public string SqlalchemyUri { get; set; }
 
     /// <summary>The ssh_tunnel property</summary>
-    public KClient.Models.DatabaseSSHTunnel SshTunnel { get; set; }
+    public Models.DatabaseSSHTunnel SshTunnel { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatabaseTestConnectionSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatabaseTestConnectionSchema"/> and sets the default values.
     /// </summary>
     public DatabaseTestConnectionSchema()
     {
         AdditionalData = new Dictionary<string, object>();
-        ConfigurationMethod = KClient.Models.DatabaseTestConnectionSchema_configuration_method.Sqlalchemy_form;
+        ConfigurationMethod = Models.DatabaseTestConnectionSchema_configuration_method.Sqlalchemy_form;
     }
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatabaseTestConnectionSchema"/></returns>
+    /// <returns>A <see cref="Models.DatabaseTestConnectionSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatabaseTestConnectionSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatabaseTestConnectionSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatabaseTestConnectionSchema();
+        return new Models.DatabaseTestConnectionSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -69,17 +68,17 @@ public partial class DatabaseTestConnectionSchema : IAdditionalDataHolder, IPars
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<KClient.Models.DatabaseTestConnectionSchema_configuration_method>(); } },
+            { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<Models.DatabaseTestConnectionSchema_configuration_method>(); } },
             { "database_name", n => { DatabaseName = n.GetStringValue(); } },
             { "driver", n => { Driver = n.GetStringValue(); } },
             { "engine", n => { Engine = n.GetStringValue(); } },
             { "extra", n => { Extra = n.GetStringValue(); } },
             { "impersonate_user", n => { ImpersonateUser = n.GetBoolValue(); } },
             { "masked_encrypted_extra", n => { MaskedEncryptedExtra = n.GetStringValue(); } },
-            { "parameters", n => { Parameters = n.GetObjectValue<KClient.Models.DatabaseTestConnectionSchema_parameters>(KClient.Models.DatabaseTestConnectionSchema_parameters.CreateFromDiscriminatorValue); } },
+            { "parameters", n => { Parameters = n.GetObjectValue<Models.DatabaseTestConnectionSchema_parameters>(Models.DatabaseTestConnectionSchema_parameters.CreateFromDiscriminatorValue); } },
             { "server_cert", n => { ServerCert = n.GetStringValue(); } },
             { "sqlalchemy_uri", n => { SqlalchemyUri = n.GetStringValue(); } },
-            { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<KClient.Models.DatabaseSSHTunnel>(KClient.Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
+            { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<Models.DatabaseSSHTunnel>(Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -89,17 +88,17 @@ public partial class DatabaseTestConnectionSchema : IAdditionalDataHolder, IPars
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteEnumValue<KClient.Models.DatabaseTestConnectionSchema_configuration_method>("configuration_method", ConfigurationMethod);
+        writer.WriteEnumValue<Models.DatabaseTestConnectionSchema_configuration_method>("configuration_method", ConfigurationMethod);
         writer.WriteStringValue("database_name", DatabaseName);
         writer.WriteStringValue("driver", Driver);
         writer.WriteStringValue("engine", Engine);
         writer.WriteStringValue("extra", Extra);
         writer.WriteBoolValue("impersonate_user", ImpersonateUser);
         writer.WriteStringValue("masked_encrypted_extra", MaskedEncryptedExtra);
-        writer.WriteObjectValue<KClient.Models.DatabaseTestConnectionSchema_parameters>("parameters", Parameters);
+        writer.WriteObjectValue<Models.DatabaseTestConnectionSchema_parameters>("parameters", Parameters);
         writer.WriteStringValue("server_cert", ServerCert);
         writer.WriteStringValue("sqlalchemy_uri", SqlalchemyUri);
-        writer.WriteObjectValue<KClient.Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
+        writer.WriteObjectValue<Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

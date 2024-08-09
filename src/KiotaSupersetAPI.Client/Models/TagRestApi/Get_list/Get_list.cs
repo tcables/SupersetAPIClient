@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.TagRestApi.Get_list;
 
@@ -13,13 +12,13 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-    public KClient.Models.TagRestApi.Get_list.User1 ChangedBy { get; set; }
+    public Models.TagRestApi.Get_list.User1 ChangedBy { get; set; }
 
     /// <summary>The changed_on_delta_humanized property</summary>
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
 
     /// <summary>The created_by property</summary>
-    public KClient.Models.TagRestApi.Get_list.User CreatedBy { get; set; }
+    public Models.TagRestApi.Get_list.User CreatedBy { get; set; }
 
     /// <summary>The created_on_delta_humanized property</summary>
     public UntypedNode CreatedOnDeltaHumanized { get; private set; }
@@ -36,7 +35,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode Type { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.TagRestApi.Get_list.Get_list"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TagRestApi.Get_list.Get_list"/> and sets the default values.
     /// </summary>
     public Get_list()
     {
@@ -45,12 +44,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TagRestApi.Get_list.Get_list"/></returns>
+    /// <returns>A <see cref="Models.TagRestApi.Get_list.Get_list"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.TagRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TagRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.TagRestApi.Get_list.Get_list();
+        return new Models.TagRestApi.Get_list.Get_list();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -60,9 +59,9 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.TagRestApi.Get_list.User1>(KClient.Models.TagRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.TagRestApi.Get_list.User1>(Models.TagRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.TagRestApi.Get_list.User>(KClient.Models.TagRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.TagRestApi.Get_list.User>(Models.TagRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
             { "created_on_delta_humanized", n => { CreatedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "description", n => { Description = n.GetStringValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
@@ -77,8 +76,8 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.TagRestApi.Get_list.User1>("changed_by", ChangedBy);
-        writer.WriteObjectValue<KClient.Models.TagRestApi.Get_list.User>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.TagRestApi.Get_list.User1>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.TagRestApi.Get_list.User>("created_by", CreatedBy);
         writer.WriteStringValue("description", Description);
         writer.WriteIntValue("id", Id);
         writer.WriteStringValue("name", Name);

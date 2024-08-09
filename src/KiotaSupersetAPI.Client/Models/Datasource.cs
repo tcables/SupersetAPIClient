@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -19,12 +18,12 @@ public partial class Datasource : IAdditionalDataHolder, IParsable
     public string DatasourceName { get; set; }
 
     /// <summary>The type of dataset/datasource identified on `datasource_id`.</summary>
-    public KClient.Models.Datasource_datasource_type? DatasourceType { get; set; }
+    public Models.Datasource_datasource_type? DatasourceType { get; set; }
     /// <summary>Datasource schema</summary>
     public string Schema { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.Datasource"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.Datasource"/> and sets the default values.
     /// </summary>
     public Datasource()
     {
@@ -33,12 +32,12 @@ public partial class Datasource : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.Datasource"/></returns>
+    /// <returns>A <see cref="Models.Datasource"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.Datasource CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.Datasource CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.Datasource();
+        return new Models.Datasource();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -50,7 +49,7 @@ public partial class Datasource : IAdditionalDataHolder, IParsable
         {
             { "database_name", n => { DatabaseName = n.GetStringValue(); } },
             { "datasource_name", n => { DatasourceName = n.GetStringValue(); } },
-            { "datasource_type", n => { DatasourceType = n.GetEnumValue<KClient.Models.Datasource_datasource_type>(); } },
+            { "datasource_type", n => { DatasourceType = n.GetEnumValue<Models.Datasource_datasource_type>(); } },
             { "schema", n => { Schema = n.GetStringValue(); } },
         };
     }
@@ -63,7 +62,7 @@ public partial class Datasource : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("database_name", DatabaseName);
         writer.WriteStringValue("datasource_name", DatasourceName);
-        writer.WriteEnumValue<KClient.Models.Datasource_datasource_type>("datasource_type", DatasourceType);
+        writer.WriteEnumValue<Models.Datasource_datasource_type>("datasource_type", DatasourceType);
         writer.WriteStringValue("schema", Schema);
         writer.WriteAdditionalData(AdditionalData);
     }

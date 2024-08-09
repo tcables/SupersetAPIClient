@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Duplicate;
 
@@ -39,25 +38,25 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Duplicate400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate500Error">When receiving a 500 status code</exception>
-    public async Task<Dataset.Duplicate.DuplicatePostResponse> PostAsDuplicatePostResponseAsync(KClient.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Duplicate400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Duplicate401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Duplicate403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Duplicate404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Duplicate422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Duplicate500Error">When receiving a 500 status code</exception>
+    public async Task<Dataset.Duplicate.DuplicatePostResponse> PostAsDuplicatePostResponseAsync(Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Duplicate400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Duplicate401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Duplicate403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Duplicate404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Duplicate422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Duplicate500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Duplicate400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Duplicate401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Duplicate403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Duplicate404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Duplicate422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Duplicate500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.Duplicate.DuplicatePostResponse>(requestInfo, Dataset.Duplicate.DuplicatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -68,26 +67,26 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Duplicate400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Duplicate500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Duplicate400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Duplicate401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Duplicate403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Duplicate404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Duplicate422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Duplicate500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsDuplicatePostResponseAsync instead.")]
-    public async Task<Dataset.Duplicate.DuplicateResponse> PostAsync(KClient.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.Duplicate.DuplicateResponse> PostAsync(Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Duplicate400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Duplicate401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Duplicate403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Duplicate404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Duplicate422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Duplicate500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Duplicate400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Duplicate401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Duplicate403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Duplicate404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Duplicate422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Duplicate500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.Duplicate.DuplicateResponse>(requestInfo, Dataset.Duplicate.DuplicateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -97,7 +96,7 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

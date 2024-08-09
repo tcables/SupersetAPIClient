@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Menu;
 
@@ -38,14 +37,14 @@ public partial class MenuRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Menu.MenuGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Menu401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Menu401Error">When receiving a 401 status code</exception>
     public async Task<Menu.MenuGetResponse> GetMenuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Menu401Error.CreateFromDiscriminatorValue },
+            { "401", Models.Menu401Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Menu.MenuGetResponse>(requestInfo, Menu.MenuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -55,7 +54,7 @@ public partial class MenuRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Menu.MenuResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Menu401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Menu401Error">When receiving a 401 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsMenuGetResponseAsync instead.")]
     public async Task<Menu.MenuResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -63,7 +62,7 @@ public partial class MenuRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Menu401Error.CreateFromDiscriminatorValue },
+            { "401", Models.Menu401Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Menu.MenuResponse>(requestInfo, Menu.MenuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

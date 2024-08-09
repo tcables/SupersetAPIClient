@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class TaggedObjectEntityResponseSchema : IAdditionalDataHolder, I
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
     /// <summary>The created_by property</summary>
-    public KClient.Models.User CreatedBy { get; set; }
+    public Models.User CreatedBy { get; set; }
 
     /// <summary>The creator property</summary>
     public string Creator { get; set; }
@@ -27,10 +26,10 @@ public partial class TaggedObjectEntityResponseSchema : IAdditionalDataHolder, I
     public string Name { get; set; }
 
     /// <summary>The owners property</summary>
-    public List<KClient.Models.User1> Owners { get; set; }
+    public List<Models.User1> Owners { get; set; }
 
     /// <summary>The tags property</summary>
-    public List<KClient.Models.TagGetResponseSchema> Tags { get; set; }
+    public List<Models.TagGetResponseSchema> Tags { get; set; }
 
     /// <summary>The type property</summary>
     public string Type { get; set; }
@@ -39,7 +38,7 @@ public partial class TaggedObjectEntityResponseSchema : IAdditionalDataHolder, I
     public string Url { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.TaggedObjectEntityResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TaggedObjectEntityResponseSchema"/> and sets the default values.
     /// </summary>
     public TaggedObjectEntityResponseSchema()
     {
@@ -48,12 +47,12 @@ public partial class TaggedObjectEntityResponseSchema : IAdditionalDataHolder, I
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TaggedObjectEntityResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.TaggedObjectEntityResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.TaggedObjectEntityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TaggedObjectEntityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.TaggedObjectEntityResponseSchema();
+        return new Models.TaggedObjectEntityResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -64,12 +63,12 @@ public partial class TaggedObjectEntityResponseSchema : IAdditionalDataHolder, I
         return new Dictionary<string, Action<IParseNode>>
         {
             { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.User>(KClient.Models.User.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.User>(Models.User.CreateFromDiscriminatorValue); } },
             { "creator", n => { Creator = n.GetStringValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
             { "name", n => { Name = n.GetStringValue(); } },
-            { "owners", n => { Owners = n.GetCollectionOfObjectValues<KClient.Models.User1>(KClient.Models.User1.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "tags", n => { Tags = n.GetCollectionOfObjectValues<KClient.Models.TagGetResponseSchema>(KClient.Models.TagGetResponseSchema.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "owners", n => { Owners = n.GetCollectionOfObjectValues<Models.User1>(Models.User1.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "tags", n => { Tags = n.GetCollectionOfObjectValues<Models.TagGetResponseSchema>(Models.TagGetResponseSchema.CreateFromDiscriminatorValue)?.ToList(); } },
             { "type", n => { Type = n.GetStringValue(); } },
             { "url", n => { Url = n.GetStringValue(); } },
         };
@@ -82,12 +81,12 @@ public partial class TaggedObjectEntityResponseSchema : IAdditionalDataHolder, I
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
-        writer.WriteObjectValue<KClient.Models.User>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.User>("created_by", CreatedBy);
         writer.WriteStringValue("creator", Creator);
         writer.WriteIntValue("id", Id);
         writer.WriteStringValue("name", Name);
-        writer.WriteCollectionOfObjectValues<KClient.Models.User1>("owners", Owners);
-        writer.WriteCollectionOfObjectValues<KClient.Models.TagGetResponseSchema>("tags", Tags);
+        writer.WriteCollectionOfObjectValues<Models.User1>("owners", Owners);
+        writer.WriteCollectionOfObjectValues<Models.TagGetResponseSchema>("tags", Tags);
         writer.WriteStringValue("type", Type);
         writer.WriteStringValue("url", Url);
         writer.WriteAdditionalData(AdditionalData);

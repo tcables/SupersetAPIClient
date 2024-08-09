@@ -5,7 +5,6 @@ using Microsoft.Kiota.Serialization.Form;
 using Microsoft.Kiota.Serialization.Json;
 using Microsoft.Kiota.Serialization.Multipart;
 using Microsoft.Kiota.Serialization.Text;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client;
 
@@ -21,7 +20,7 @@ public partial class SupersetAPIClient : BaseRequestBuilder
         get => new API.ApiRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.SupersetAPIClient"/> and sets the default values.
+    /// Instantiates a new <see cref="SupersetAPIClient"/> and sets the default values.
     /// </summary>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
     public SupersetAPIClient(IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}", new Dictionary<string, object>())

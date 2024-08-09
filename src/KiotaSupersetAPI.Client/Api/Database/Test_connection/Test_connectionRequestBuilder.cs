@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Test_connection;
 
@@ -39,19 +38,19 @@ public partial class Test_connectionRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Test_connection400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Test_connection422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Test_connection500Error">When receiving a 500 status code</exception>
-    public async Task<Database.Test_connection.Test_connectionPostResponse> PostAsTest_connectionPostResponseAsync(KClient.Models.DatabaseTestConnectionSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Test_connection400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Test_connection422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Test_connection500Error">When receiving a 500 status code</exception>
+    public async Task<Database.Test_connection.Test_connectionPostResponse> PostAsTest_connectionPostResponseAsync(Models.DatabaseTestConnectionSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Test_connection400Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Test_connection422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Test_connection500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Test_connection400Error.CreateFromDiscriminatorValue },
+            { "422", Models.Test_connection422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Test_connection500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Test_connection.Test_connectionPostResponse>(requestInfo, Database.Test_connection.Test_connectionPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -62,20 +61,20 @@ public partial class Test_connectionRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Test_connection400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Test_connection422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Test_connection500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Test_connection400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Test_connection422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Test_connection500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsTest_connectionPostResponseAsync instead.")]
-    public async Task<Database.Test_connection.Test_connectionResponse> PostAsync(KClient.Models.DatabaseTestConnectionSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Test_connection.Test_connectionResponse> PostAsync(Models.DatabaseTestConnectionSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Test_connection400Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Test_connection422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Test_connection500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Test_connection400Error.CreateFromDiscriminatorValue },
+            { "422", Models.Test_connection422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Test_connection500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Test_connection.Test_connectionResponse>(requestInfo, Database.Test_connection.Test_connectionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -85,7 +84,7 @@ public partial class Test_connectionRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.DatabaseTestConnectionSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.DatabaseTestConnectionSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

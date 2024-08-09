@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get_list;
 
@@ -18,7 +17,7 @@ public partial class Database : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.SavedQueryRestApi.Get_list.Database"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.SavedQueryRestApi.Get_list.Database"/> and sets the default values.
     /// </summary>
     public Database()
     {
@@ -27,12 +26,12 @@ public partial class Database : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.SavedQueryRestApi.Get_list.Database"/></returns>
+    /// <returns>A <see cref="Models.SavedQueryRestApi.Get_list.Database"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.SavedQueryRestApi.Get_list.Database CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.SavedQueryRestApi.Get_list.Database CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.SavedQueryRestApi.Get_list.Database();
+        return new Models.SavedQueryRestApi.Get_list.Database();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Validate_parameters;
 
@@ -39,19 +38,19 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Validate_parameters400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Validate_parameters422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Validate_parameters500Error">When receiving a 500 status code</exception>
-    public async Task<Database.Validate_parameters.Validate_parametersPostResponse> PostAsValidate_parametersPostResponseAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Validate_parameters400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Validate_parameters422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Validate_parameters500Error">When receiving a 500 status code</exception>
+    public async Task<Database.Validate_parameters.Validate_parametersPostResponse> PostAsValidate_parametersPostResponseAsync(Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Validate_parameters400Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Validate_parameters400Error.CreateFromDiscriminatorValue },
+            { "422", Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Validate_parameters.Validate_parametersPostResponse>(requestInfo, Database.Validate_parameters.Validate_parametersPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -62,20 +61,20 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Validate_parameters400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Validate_parameters422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Validate_parameters500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Validate_parameters400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Validate_parameters422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Validate_parameters500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsValidate_parametersPostResponseAsync instead.")]
-    public async Task<Database.Validate_parameters.Validate_parametersResponse> PostAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Validate_parameters.Validate_parametersResponse> PostAsync(Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Validate_parameters400Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Validate_parameters400Error.CreateFromDiscriminatorValue },
+            { "422", Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Validate_parameters.Validate_parametersResponse>(requestInfo, Database.Validate_parameters.Validate_parametersResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -85,7 +84,7 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

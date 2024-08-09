@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Saved_query;
 
@@ -88,20 +87,20 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Saved_query.Saved_queryDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Saved_query401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Saved_query401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Saved_query404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Saved_query422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Saved_query500Error">When receiving a 500 status code</exception>
     public async Task<Saved_query.Saved_queryDeleteResponse> DeleteAsSaved_queryDeleteResponseAsync(Action<RequestConfiguration<Saved_query.Saved_queryRequestBuilder.Saved_queryRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Saved_query401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Saved_query404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Saved_query422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Saved_query500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Saved_query401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Saved_query404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Saved_query422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Saved_query500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Saved_query.Saved_queryDeleteResponse>(requestInfo, Saved_query.Saved_queryDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -111,10 +110,10 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Saved_query.Saved_queryResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Saved_query401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Saved_query401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Saved_query404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Saved_query422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Saved_query500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsSaved_queryDeleteResponseAsync instead.")]
     public async Task<Saved_query.Saved_queryResponse> DeleteAsync(Action<RequestConfiguration<Saved_query.Saved_queryRequestBuilder.Saved_queryRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -122,10 +121,10 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Saved_query401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Saved_query404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Saved_query422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Saved_query500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Saved_query401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Saved_query404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Saved_query422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Saved_query500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Saved_query.Saved_queryResponse>(requestInfo, Saved_query.Saved_queryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -135,20 +134,20 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Saved_query.Saved_queryGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Saved_query400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Saved_query400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Saved_query401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Saved_query422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Saved_query500Error">When receiving a 500 status code</exception>
     public async Task<Saved_query.Saved_queryGetResponse> GetSaved_queryGetResponseAsync(Action<RequestConfiguration<Saved_query.Saved_queryRequestBuilder.Saved_queryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Saved_query400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Saved_query401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Saved_query422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Saved_query500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Saved_query400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Saved_query401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Saved_query422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Saved_query500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Saved_query.Saved_queryGetResponse>(requestInfo, Saved_query.Saved_queryGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -158,10 +157,10 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Saved_query.Saved_queryResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Saved_query400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Saved_query400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Saved_query401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Saved_query422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Saved_query500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsSaved_queryGetResponseAsync instead.")]
     public async Task<Saved_query.Saved_queryResponse> GetAsync(Action<RequestConfiguration<Saved_query.Saved_queryRequestBuilder.Saved_queryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -169,10 +168,10 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Saved_query400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Saved_query401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Saved_query422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Saved_query500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Saved_query400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Saved_query401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Saved_query422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Saved_query500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Saved_query.Saved_queryResponse>(requestInfo, Saved_query.Saved_queryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -183,21 +182,21 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Saved_query400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query500Error">When receiving a 500 status code</exception>
-    public async Task<Saved_query.Saved_queryPostResponse> PostAsSaved_queryPostResponseAsync(KClient.Models.SavedQueryRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Saved_query400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Saved_query401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Saved_query422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Saved_query500Error">When receiving a 500 status code</exception>
+    public async Task<Saved_query.Saved_queryPostResponse> PostAsSaved_queryPostResponseAsync(Models.SavedQueryRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Saved_query400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Saved_query401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Saved_query422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Saved_query500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Saved_query400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Saved_query401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Saved_query422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Saved_query500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Saved_query.Saved_queryPostResponse>(requestInfo, Saved_query.Saved_queryPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -208,22 +207,22 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Saved_query400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Saved_query500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Saved_query400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Saved_query401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Saved_query422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Saved_query500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsSaved_queryPostResponseAsync instead.")]
-    public async Task<Saved_query.Saved_queryResponse> PostAsync(KClient.Models.SavedQueryRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Saved_query.Saved_queryResponse> PostAsync(Models.SavedQueryRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Saved_query400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Saved_query401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Saved_query422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Saved_query500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Saved_query400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Saved_query401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Saved_query422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Saved_query500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Saved_query.Saved_queryResponse>(requestInfo, Saved_query.Saved_queryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -259,7 +258,7 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.SavedQueryRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.SavedQueryRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

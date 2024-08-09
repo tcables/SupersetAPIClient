@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Chart.Item.Favorites;
 
@@ -38,18 +37,18 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Chart.Item.Favorites.FavoritesDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Favorites401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Favorites404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Favorites500Error">When receiving a 500 status code</exception>
     public async Task<Chart.Item.Favorites.FavoritesDeleteResponse> DeleteAsFavoritesDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Favorites401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Favorites401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Favorites404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Favorites500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Chart.Item.Favorites.FavoritesDeleteResponse>(requestInfo, Chart.Item.Favorites.FavoritesDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -59,9 +58,9 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Chart.Item.Favorites.FavoritesResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Favorites401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Favorites404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Favorites500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsFavoritesDeleteResponseAsync instead.")]
     public async Task<Chart.Item.Favorites.FavoritesResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -69,9 +68,9 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Favorites401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Favorites401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Favorites404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Favorites500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Chart.Item.Favorites.FavoritesResponse>(requestInfo, Chart.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -81,18 +80,18 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Chart.Item.Favorites.FavoritesPostResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Favorites401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Favorites404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Favorites500Error">When receiving a 500 status code</exception>
     public async Task<Chart.Item.Favorites.FavoritesPostResponse> PostAsFavoritesPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToPostRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Favorites401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Favorites401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Favorites404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Favorites500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Chart.Item.Favorites.FavoritesPostResponse>(requestInfo, Chart.Item.Favorites.FavoritesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -102,9 +101,9 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Chart.Item.Favorites.FavoritesResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Favorites401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Favorites404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Favorites500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsFavoritesPostResponseAsync instead.")]
     public async Task<Chart.Item.Favorites.FavoritesResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -112,9 +111,9 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
         var requestInfo = ToPostRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Favorites401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Favorites401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Favorites404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Favorites500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Chart.Item.Favorites.FavoritesResponse>(requestInfo, Chart.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

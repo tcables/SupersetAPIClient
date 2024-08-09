@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.RLSRestApi;
 
@@ -20,7 +19,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string Description { get; set; }
 
     /// <summary>filter_type_description</summary>
-    public KClient.Models.RLSRestApi.Get_filter_type? FilterType { get; set; }
+    public Models.RLSRestApi.Get_filter_type? FilterType { get; set; }
     /// <summary>group_key_description</summary>
     public string GroupKey { get; set; }
 
@@ -30,13 +29,13 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string Name { get; set; }
 
     /// <summary>The roles property</summary>
-    public List<KClient.Models.Roles1> Roles { get; set; }
+    public List<Models.Roles1> Roles { get; set; }
 
     /// <summary>The tables property</summary>
-    public List<KClient.Models.Tables> Tables { get; set; }
+    public List<Models.Tables> Tables { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.RLSRestApi.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.RLSRestApi.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -45,12 +44,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.RLSRestApi.Get"/></returns>
+    /// <returns>A <see cref="Models.RLSRestApi.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.RLSRestApi.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.RLSRestApi.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.RLSRestApi.Get();
+        return new Models.RLSRestApi.Get();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -62,12 +61,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
         {
             { "clause", n => { Clause = n.GetStringValue(); } },
             { "description", n => { Description = n.GetStringValue(); } },
-            { "filter_type", n => { FilterType = n.GetEnumValue<KClient.Models.RLSRestApi.Get_filter_type>(); } },
+            { "filter_type", n => { FilterType = n.GetEnumValue<Models.RLSRestApi.Get_filter_type>(); } },
             { "group_key", n => { GroupKey = n.GetStringValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
             { "name", n => { Name = n.GetStringValue(); } },
-            { "roles", n => { Roles = n.GetCollectionOfObjectValues<KClient.Models.Roles1>(KClient.Models.Roles1.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "tables", n => { Tables = n.GetCollectionOfObjectValues<KClient.Models.Tables>(KClient.Models.Tables.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "roles", n => { Roles = n.GetCollectionOfObjectValues<Models.Roles1>(Models.Roles1.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "tables", n => { Tables = n.GetCollectionOfObjectValues<Models.Tables>(Models.Tables.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -79,12 +78,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("clause", Clause);
         writer.WriteStringValue("description", Description);
-        writer.WriteEnumValue<KClient.Models.RLSRestApi.Get_filter_type>("filter_type", FilterType);
+        writer.WriteEnumValue<Models.RLSRestApi.Get_filter_type>("filter_type", FilterType);
         writer.WriteStringValue("group_key", GroupKey);
         writer.WriteIntValue("id", Id);
         writer.WriteStringValue("name", Name);
-        writer.WriteCollectionOfObjectValues<KClient.Models.Roles1>("roles", Roles);
-        writer.WriteCollectionOfObjectValues<KClient.Models.Tables>("tables", Tables);
+        writer.WriteCollectionOfObjectValues<Models.Roles1>("roles", Roles);
+        writer.WriteCollectionOfObjectValues<Models.Tables>("tables", Tables);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

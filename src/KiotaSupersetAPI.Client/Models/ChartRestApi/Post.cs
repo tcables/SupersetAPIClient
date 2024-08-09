@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.ChartRestApi;
 
@@ -30,7 +29,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
     public string DatasourceName { get; set; }
 
     /// <summary>The type of dataset/datasource identified on `datasource_id`.</summary>
-    public KClient.Models.ChartRestApi.Post_datasource_type? DatasourceType { get; set; }
+    public Models.ChartRestApi.Post_datasource_type? DatasourceType { get; set; }
     /// <summary>A description of the chart propose.</summary>
     public string Description { get; set; }
 
@@ -57,7 +56,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
     public string VizType { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartRestApi.Post"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartRestApi.Post"/> and sets the default values.
     /// </summary>
     public Post()
     {
@@ -66,12 +65,12 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartRestApi.Post"/></returns>
+    /// <returns>A <see cref="Models.ChartRestApi.Post"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartRestApi.Post();
+        return new Models.ChartRestApi.Post();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -87,7 +86,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
             { "dashboards", n => { Dashboards = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
             { "datasource_id", n => { DatasourceId = n.GetIntValue(); } },
             { "datasource_name", n => { DatasourceName = n.GetStringValue(); } },
-            { "datasource_type", n => { DatasourceType = n.GetEnumValue<KClient.Models.ChartRestApi.Post_datasource_type>(); } },
+            { "datasource_type", n => { DatasourceType = n.GetEnumValue<Models.ChartRestApi.Post_datasource_type>(); } },
             { "description", n => { Description = n.GetStringValue(); } },
             { "external_url", n => { ExternalUrl = n.GetStringValue(); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
@@ -112,7 +111,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
         writer.WriteCollectionOfPrimitiveValues<int?>("dashboards", Dashboards);
         writer.WriteIntValue("datasource_id", DatasourceId);
         writer.WriteStringValue("datasource_name", DatasourceName);
-        writer.WriteEnumValue<KClient.Models.ChartRestApi.Post_datasource_type>("datasource_type", DatasourceType);
+        writer.WriteEnumValue<Models.ChartRestApi.Post_datasource_type>("datasource_type", DatasourceType);
         writer.WriteStringValue("description", Description);
         writer.WriteStringValue("external_url", ExternalUrl);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);

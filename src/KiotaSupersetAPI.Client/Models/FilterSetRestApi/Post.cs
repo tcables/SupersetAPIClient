@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.FilterSetRestApi;
 
@@ -24,9 +23,9 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>The owner_id property</summary>
     public int? OwnerId { get; set; }
     /// <summary>The owner_type property</summary>
-    public KClient.Models.FilterSetRestApi.Post_owner_type? OwnerType { get; set; }
+    public Models.FilterSetRestApi.Post_owner_type? OwnerType { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.FilterSetRestApi.Post"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.FilterSetRestApi.Post"/> and sets the default values.
     /// </summary>
     public Post()
     {
@@ -35,12 +34,12 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.FilterSetRestApi.Post"/></returns>
+    /// <returns>A <see cref="Models.FilterSetRestApi.Post"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.FilterSetRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.FilterSetRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.FilterSetRestApi.Post();
+        return new Models.FilterSetRestApi.Post();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -54,7 +53,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
             { "json_metadata", n => { JsonMetadata = n.GetStringValue(); } },
             { "name", n => { Name = n.GetStringValue(); } },
             { "owner_id", n => { OwnerId = n.GetIntValue(); } },
-            { "owner_type", n => { OwnerType = n.GetEnumValue<KClient.Models.FilterSetRestApi.Post_owner_type>(); } },
+            { "owner_type", n => { OwnerType = n.GetEnumValue<Models.FilterSetRestApi.Post_owner_type>(); } },
         };
     }
     /// <summary>
@@ -68,7 +67,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
         writer.WriteStringValue("json_metadata", JsonMetadata);
         writer.WriteStringValue("name", Name);
         writer.WriteIntValue("owner_id", OwnerId);
-        writer.WriteEnumValue<KClient.Models.FilterSetRestApi.Post_owner_type>("owner_type", OwnerType);
+        writer.WriteEnumValue<Models.FilterSetRestApi.Post_owner_type>("owner_type", OwnerType);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

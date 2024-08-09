@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Copy;
 
@@ -39,23 +38,23 @@ public partial class CopyRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Copy400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Copy401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Copy403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Copy404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Copy500Error">When receiving a 500 status code</exception>
-    public async Task<Dashboard.Item.Copy.CopyPostResponse> PostAsCopyPostResponseAsync(KClient.Models.DashboardCopySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Copy400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Copy401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Copy403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Copy404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Copy500Error">When receiving a 500 status code</exception>
+    public async Task<Dashboard.Item.Copy.CopyPostResponse> PostAsCopyPostResponseAsync(Models.DashboardCopySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Copy400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Copy401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Copy403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Copy404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Copy500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Copy400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Copy401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Copy403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Copy404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Copy500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Copy.CopyPostResponse>(requestInfo, Dashboard.Item.Copy.CopyPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -66,24 +65,24 @@ public partial class CopyRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Copy400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Copy401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Copy403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Copy404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Copy500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Copy400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Copy401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Copy403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Copy404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Copy500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsCopyPostResponseAsync instead.")]
-    public async Task<Dashboard.Item.Copy.CopyResponse> PostAsync(KClient.Models.DashboardCopySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Copy.CopyResponse> PostAsync(Models.DashboardCopySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Copy400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Copy401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Copy403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Copy404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Copy500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Copy400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Copy401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Copy403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Copy404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Copy500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Copy.CopyResponse>(requestInfo, Dashboard.Item.Copy.CopyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -93,7 +92,7 @@ public partial class CopyRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.DashboardCopySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.DashboardCopySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

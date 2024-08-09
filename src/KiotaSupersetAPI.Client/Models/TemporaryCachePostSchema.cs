@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class TemporaryCachePostSchema : IAdditionalDataHolder, IParsable
     public string Value { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.TemporaryCachePostSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TemporaryCachePostSchema"/> and sets the default values.
     /// </summary>
     public TemporaryCachePostSchema()
     {
@@ -25,12 +24,12 @@ public partial class TemporaryCachePostSchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TemporaryCachePostSchema"/></returns>
+    /// <returns>A <see cref="Models.TemporaryCachePostSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.TemporaryCachePostSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TemporaryCachePostSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.TemporaryCachePostSchema();
+        return new Models.TemporaryCachePostSchema();
     }
     /// <summary>
     /// The deserialization information for the current model

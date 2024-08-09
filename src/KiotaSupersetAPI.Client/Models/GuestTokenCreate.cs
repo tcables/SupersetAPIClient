@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -14,16 +13,16 @@ public partial class GuestTokenCreate : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The resources property</summary>
-    public List<KClient.Models.Resource> Resources { get; set; }
+    public List<Models.Resource> Resources { get; set; }
 
     /// <summary>The rls property</summary>
-    public List<KClient.Models.RlsRule> Rls { get; set; }
+    public List<Models.RlsRule> Rls { get; set; }
 
     /// <summary>The user property</summary>
-    public KClient.Models.User2 User { get; set; }
+    public Models.User2 User { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.GuestTokenCreate"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.GuestTokenCreate"/> and sets the default values.
     /// </summary>
     public GuestTokenCreate()
     {
@@ -32,12 +31,12 @@ public partial class GuestTokenCreate : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.GuestTokenCreate"/></returns>
+    /// <returns>A <see cref="Models.GuestTokenCreate"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.GuestTokenCreate CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.GuestTokenCreate CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.GuestTokenCreate();
+        return new Models.GuestTokenCreate();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -47,9 +46,9 @@ public partial class GuestTokenCreate : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "resources", n => { Resources = n.GetCollectionOfObjectValues<KClient.Models.Resource>(KClient.Models.Resource.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "rls", n => { Rls = n.GetCollectionOfObjectValues<KClient.Models.RlsRule>(KClient.Models.RlsRule.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "user", n => { User = n.GetObjectValue<KClient.Models.User2>(KClient.Models.User2.CreateFromDiscriminatorValue); } },
+            { "resources", n => { Resources = n.GetCollectionOfObjectValues<Models.Resource>(Models.Resource.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "rls", n => { Rls = n.GetCollectionOfObjectValues<Models.RlsRule>(Models.RlsRule.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "user", n => { User = n.GetObjectValue<Models.User2>(Models.User2.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -59,9 +58,9 @@ public partial class GuestTokenCreate : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteCollectionOfObjectValues<KClient.Models.Resource>("resources", Resources);
-        writer.WriteCollectionOfObjectValues<KClient.Models.RlsRule>("rls", Rls);
-        writer.WriteObjectValue<KClient.Models.User2>("user", User);
+        writer.WriteCollectionOfObjectValues<Models.Resource>("resources", Resources);
+        writer.WriteCollectionOfObjectValues<Models.RlsRule>("rls", Rls);
+        writer.WriteObjectValue<Models.User2>("user", User);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Datasets;
 
@@ -14,7 +13,7 @@ public partial class DatasetsGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public List<KClient.Models.DashboardDatasetSchema> Result { get; set; }
+    public List<Models.DashboardDatasetSchema> Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.Item.Datasets.DatasetsGetResponse"/> and sets the default values.
@@ -41,7 +40,7 @@ public partial class DatasetsGetResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.DashboardDatasetSchema>(KClient.Models.DashboardDatasetSchema.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.DashboardDatasetSchema>(Models.DashboardDatasetSchema.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -51,7 +50,7 @@ public partial class DatasetsGetResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteCollectionOfObjectValues<KClient.Models.DashboardDatasetSchema>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.DashboardDatasetSchema>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

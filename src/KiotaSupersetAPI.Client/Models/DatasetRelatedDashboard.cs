@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -15,7 +14,7 @@ public partial class DatasetRelatedDashboard : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public int? Id { get; set; }
     /// <summary>The json_metadata property</summary>
-    public KClient.Models.DatasetRelatedDashboard_json_metadata JsonMetadata { get; set; }
+    public Models.DatasetRelatedDashboard_json_metadata JsonMetadata { get; set; }
 
     /// <summary>The slug property</summary>
     public string Slug { get; set; }
@@ -24,7 +23,7 @@ public partial class DatasetRelatedDashboard : IAdditionalDataHolder, IParsable
     public string Title { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatasetRelatedDashboard"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatasetRelatedDashboard"/> and sets the default values.
     /// </summary>
     public DatasetRelatedDashboard()
     {
@@ -33,12 +32,12 @@ public partial class DatasetRelatedDashboard : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatasetRelatedDashboard"/></returns>
+    /// <returns>A <see cref="Models.DatasetRelatedDashboard"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatasetRelatedDashboard CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatasetRelatedDashboard CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatasetRelatedDashboard();
+        return new Models.DatasetRelatedDashboard();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -49,7 +48,7 @@ public partial class DatasetRelatedDashboard : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetIntValue(); } },
-            { "json_metadata", n => { JsonMetadata = n.GetObjectValue<KClient.Models.DatasetRelatedDashboard_json_metadata>(KClient.Models.DatasetRelatedDashboard_json_metadata.CreateFromDiscriminatorValue); } },
+            { "json_metadata", n => { JsonMetadata = n.GetObjectValue<Models.DatasetRelatedDashboard_json_metadata>(Models.DatasetRelatedDashboard_json_metadata.CreateFromDiscriminatorValue); } },
             { "slug", n => { Slug = n.GetStringValue(); } },
             { "title", n => { Title = n.GetStringValue(); } },
         };
@@ -62,7 +61,7 @@ public partial class DatasetRelatedDashboard : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteIntValue("id", Id);
-        writer.WriteObjectValue<KClient.Models.DatasetRelatedDashboard_json_metadata>("json_metadata", JsonMetadata);
+        writer.WriteObjectValue<Models.DatasetRelatedDashboard_json_metadata>("json_metadata", JsonMetadata);
         writer.WriteStringValue("slug", Slug);
         writer.WriteStringValue("title", Title);
         writer.WriteAdditionalData(AdditionalData);

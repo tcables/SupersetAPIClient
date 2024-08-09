@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -17,7 +16,7 @@ public partial class EmbeddedDashboardConfig : IAdditionalDataHolder, IParsable
     public List<string> AllowedDomains { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.EmbeddedDashboardConfig"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.EmbeddedDashboardConfig"/> and sets the default values.
     /// </summary>
     public EmbeddedDashboardConfig()
     {
@@ -26,12 +25,12 @@ public partial class EmbeddedDashboardConfig : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.EmbeddedDashboardConfig"/></returns>
+    /// <returns>A <see cref="Models.EmbeddedDashboardConfig"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.EmbeddedDashboardConfig CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.EmbeddedDashboardConfig CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.EmbeddedDashboardConfig();
+        return new Models.EmbeddedDashboardConfig();
     }
     /// <summary>
     /// The deserialization information for the current model

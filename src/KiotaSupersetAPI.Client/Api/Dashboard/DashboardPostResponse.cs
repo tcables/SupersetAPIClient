@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard;
 
@@ -15,7 +14,7 @@ public partial class DashboardPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public KClient.Models.DashboardRestApi.Post Result { get; set; }
+    public Models.DashboardRestApi.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.DashboardPostResponse"/> and sets the default values.
@@ -43,7 +42,7 @@ public partial class DashboardPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.DashboardRestApi.Post>(KClient.Models.DashboardRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.DashboardRestApi.Post>(Models.DashboardRestApi.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -54,7 +53,7 @@ public partial class DashboardPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<KClient.Models.DashboardRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.DashboardRestApi.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

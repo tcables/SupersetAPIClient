@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Distinct.Item;
 
@@ -35,25 +34,25 @@ public partial class WithColumn_nameItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get distinct values from field data
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DistincResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.DistincResponseSchema"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.DistincResponseSchema400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.DistincResponseSchema401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.DistincResponseSchema404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.DistincResponseSchema500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.DistincResponseSchema> GetAsync(Action<RequestConfiguration<Dataset.Distinct.Item.WithColumn_nameItemRequestBuilder.WithColumn_nameItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.DistincResponseSchema400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.DistincResponseSchema401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.DistincResponseSchema404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.DistincResponseSchema500Error">When receiving a 500 status code</exception>
+    public async Task<Models.DistincResponseSchema> GetAsync(Action<RequestConfiguration<Dataset.Distinct.Item.WithColumn_nameItemRequestBuilder.WithColumn_nameItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.DistincResponseSchema400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.DistincResponseSchema401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.DistincResponseSchema404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.DistincResponseSchema500Error.CreateFromDiscriminatorValue },
+            { "400", Models.DistincResponseSchema400Error.CreateFromDiscriminatorValue },
+            { "401", Models.DistincResponseSchema401Error.CreateFromDiscriminatorValue },
+            { "404", Models.DistincResponseSchema404Error.CreateFromDiscriminatorValue },
+            { "500", Models.DistincResponseSchema500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.DistincResponseSchema>(requestInfo, KClient.Models.DistincResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.DistincResponseSchema>(requestInfo, Models.DistincResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get distinct values from field data

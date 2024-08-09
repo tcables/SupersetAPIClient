@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Permalink;
 
@@ -39,21 +38,21 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Permalink400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Permalink401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Permalink422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Permalink500Error">When receiving a 500 status code</exception>
-    public async Task<Dashboard.Item.Permalink.PermalinkPostResponse> PostAsPermalinkPostResponseAsync(KClient.Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Permalink400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Permalink401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Permalink422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Permalink500Error">When receiving a 500 status code</exception>
+    public async Task<Dashboard.Item.Permalink.PermalinkPostResponse> PostAsPermalinkPostResponseAsync(Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Permalink400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Permalink401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Permalink422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Permalink500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Permalink400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Permalink401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Permalink422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Permalink500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Permalink.PermalinkPostResponse>(requestInfo, Dashboard.Item.Permalink.PermalinkPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -64,22 +63,22 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Permalink400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Permalink401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Permalink422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Permalink500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Permalink400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Permalink401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Permalink422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Permalink500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsPermalinkPostResponseAsync instead.")]
-    public async Task<Dashboard.Item.Permalink.PermalinkResponse> PostAsync(KClient.Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Permalink.PermalinkResponse> PostAsync(Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Permalink400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Permalink401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Permalink422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Permalink500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Permalink400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Permalink401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Permalink422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Permalink500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Permalink.PermalinkResponse>(requestInfo, Dashboard.Item.Permalink.PermalinkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -89,7 +88,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

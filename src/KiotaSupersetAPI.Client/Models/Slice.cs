@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -39,7 +38,7 @@ public partial class Slice : IAdditionalDataHolder, IParsable
     public string EditUrl { get; set; }
 
     /// <summary>Form data associated with the slice.</summary>
-    public KClient.Models.Slice_form_data FormData { get; set; }
+    public Models.Slice_form_data FormData { get; set; }
 
     /// <summary>If the chart is managed outside externally.</summary>
     public bool? IsManagedExternally { get; set; }
@@ -50,7 +49,7 @@ public partial class Slice : IAdditionalDataHolder, IParsable
     public List<int?> Owners { get; set; }
 
     /// <summary>The context associated with the query.</summary>
-    public KClient.Models.Slice_query_context QueryContext { get; set; }
+    public Models.Slice_query_context QueryContext { get; set; }
 
     /// <summary>The slice ID.</summary>
     public int? SliceId { get; set; }
@@ -61,7 +60,7 @@ public partial class Slice : IAdditionalDataHolder, IParsable
     public string SliceUrl { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.Slice"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.Slice"/> and sets the default values.
     /// </summary>
     public Slice()
     {
@@ -70,12 +69,12 @@ public partial class Slice : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.Slice"/></returns>
+    /// <returns>A <see cref="Models.Slice"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.Slice CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.Slice CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.Slice();
+        return new Models.Slice();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -94,11 +93,11 @@ public partial class Slice : IAdditionalDataHolder, IParsable
             { "description", n => { Description = n.GetStringValue(); } },
             { "description_markeddown", n => { DescriptionMarkeddown = n.GetStringValue(); } },
             { "edit_url", n => { EditUrl = n.GetStringValue(); } },
-            { "form_data", n => { FormData = n.GetObjectValue<KClient.Models.Slice_form_data>(KClient.Models.Slice_form_data.CreateFromDiscriminatorValue); } },
+            { "form_data", n => { FormData = n.GetObjectValue<Models.Slice_form_data>(Models.Slice_form_data.CreateFromDiscriminatorValue); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
             { "modified", n => { Modified = n.GetStringValue(); } },
             { "owners", n => { Owners = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
-            { "query_context", n => { QueryContext = n.GetObjectValue<KClient.Models.Slice_query_context>(KClient.Models.Slice_query_context.CreateFromDiscriminatorValue); } },
+            { "query_context", n => { QueryContext = n.GetObjectValue<Models.Slice_query_context>(Models.Slice_query_context.CreateFromDiscriminatorValue); } },
             { "slice_id", n => { SliceId = n.GetIntValue(); } },
             { "slice_name", n => { SliceName = n.GetStringValue(); } },
             { "slice_url", n => { SliceUrl = n.GetStringValue(); } },
@@ -120,11 +119,11 @@ public partial class Slice : IAdditionalDataHolder, IParsable
         writer.WriteStringValue("description", Description);
         writer.WriteStringValue("description_markeddown", DescriptionMarkeddown);
         writer.WriteStringValue("edit_url", EditUrl);
-        writer.WriteObjectValue<KClient.Models.Slice_form_data>("form_data", FormData);
+        writer.WriteObjectValue<Models.Slice_form_data>("form_data", FormData);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
         writer.WriteStringValue("modified", Modified);
         writer.WriteCollectionOfPrimitiveValues<int?>("owners", Owners);
-        writer.WriteObjectValue<KClient.Models.Slice_query_context>("query_context", QueryContext);
+        writer.WriteObjectValue<Models.Slice_query_context>("query_context", QueryContext);
         writer.WriteIntValue("slice_id", SliceId);
         writer.WriteStringValue("slice_name", SliceName);
         writer.WriteStringValue("slice_url", SliceUrl);

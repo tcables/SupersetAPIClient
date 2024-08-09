@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Query.Updated_since;
 
@@ -38,20 +37,20 @@ public partial class Updated_sinceRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Query.Updated_since.Updated_sinceGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Updated_since400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Updated_since401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Updated_since404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Updated_since500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Updated_since400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Updated_since401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Updated_since404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Updated_since500Error">When receiving a 500 status code</exception>
     public async Task<Query.Updated_since.Updated_sinceGetResponse> GetUpdated_sinceGetResponseAsync(Action<RequestConfiguration<Query.Updated_since.Updated_sinceRequestBuilder.Updated_sinceRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Updated_since400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Updated_since401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Updated_since404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Updated_since500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Updated_since400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Updated_since401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Updated_since404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Updated_since500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Query.Updated_since.Updated_sinceGetResponse>(requestInfo, Query.Updated_since.Updated_sinceGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -61,10 +60,10 @@ public partial class Updated_sinceRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Query.Updated_since.Updated_sinceResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Updated_since400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Updated_since401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Updated_since404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Updated_since500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Updated_since400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Updated_since401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Updated_since404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Updated_since500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsUpdated_sinceGetResponseAsync instead.")]
     public async Task<Query.Updated_since.Updated_sinceResponse> GetAsync(Action<RequestConfiguration<Query.Updated_since.Updated_sinceRequestBuilder.Updated_sinceRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -72,10 +71,10 @@ public partial class Updated_sinceRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Updated_since400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Updated_since401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Updated_since404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Updated_since500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Updated_since400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Updated_since401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Updated_since404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Updated_since500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Query.Updated_since.Updated_sinceResponse>(requestInfo, Query.Updated_since.Updated_sinceResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

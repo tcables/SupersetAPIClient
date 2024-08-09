@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -17,7 +16,7 @@ public partial class SchemasResponseSchema : IAdditionalDataHolder, IParsable
     public List<string> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.SchemasResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.SchemasResponseSchema"/> and sets the default values.
     /// </summary>
     public SchemasResponseSchema()
     {
@@ -26,12 +25,12 @@ public partial class SchemasResponseSchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.SchemasResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.SchemasResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.SchemasResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.SchemasResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.SchemasResponseSchema();
+        return new Models.SchemasResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model

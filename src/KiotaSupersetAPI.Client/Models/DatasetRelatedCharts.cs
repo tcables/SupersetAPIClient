@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,10 +15,10 @@ public partial class DatasetRelatedCharts : IAdditionalDataHolder, IParsable
     /// <summary>Chart count</summary>
     public int? Count { get; set; }
     /// <summary>A list of dashboards</summary>
-    public List<KClient.Models.DatasetRelatedChart> Result { get; set; }
+    public List<Models.DatasetRelatedChart> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatasetRelatedCharts"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatasetRelatedCharts"/> and sets the default values.
     /// </summary>
     public DatasetRelatedCharts()
     {
@@ -28,12 +27,12 @@ public partial class DatasetRelatedCharts : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatasetRelatedCharts"/></returns>
+    /// <returns>A <see cref="Models.DatasetRelatedCharts"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatasetRelatedCharts CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatasetRelatedCharts CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatasetRelatedCharts();
+        return new Models.DatasetRelatedCharts();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -44,7 +43,7 @@ public partial class DatasetRelatedCharts : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "count", n => { Count = n.GetIntValue(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.DatasetRelatedChart>(KClient.Models.DatasetRelatedChart.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.DatasetRelatedChart>(Models.DatasetRelatedChart.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -55,7 +54,7 @@ public partial class DatasetRelatedCharts : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteIntValue("count", Count);
-        writer.WriteCollectionOfObjectValues<KClient.Models.DatasetRelatedChart>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.DatasetRelatedChart>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

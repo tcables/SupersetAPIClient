@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Item.Metric.Item;
 
@@ -38,22 +37,22 @@ public partial class WithMetric_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.Item.Metric.Item.WithMetric_DeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithMetric_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithMetric_403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.WithMetric_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithMetric_422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithMetric_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithMetric_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithMetric_403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.WithMetric_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithMetric_422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithMetric_500Error">When receiving a 500 status code</exception>
     public async Task<Dataset.Item.Metric.Item.WithMetric_DeleteResponse> DeleteAsWithMetric_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.WithMetric_401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.WithMetric_403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithMetric_404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithMetric_422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithMetric_500Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithMetric_401Error.CreateFromDiscriminatorValue },
+            { "403", Models.WithMetric_403Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithMetric_404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithMetric_422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithMetric_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.Item.Metric.Item.WithMetric_DeleteResponse>(requestInfo, Dataset.Item.Metric.Item.WithMetric_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -63,11 +62,11 @@ public partial class WithMetric_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.Item.Metric.Item.WithMetric_Response"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithMetric_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithMetric_403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.WithMetric_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithMetric_422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithMetric_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithMetric_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithMetric_403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.WithMetric_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithMetric_422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithMetric_500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithMetric_DeleteResponseAsync instead.")]
     public async Task<Dataset.Item.Metric.Item.WithMetric_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -75,11 +74,11 @@ public partial class WithMetric_ItemRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.WithMetric_401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.WithMetric_403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithMetric_404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithMetric_422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithMetric_500Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithMetric_401Error.CreateFromDiscriminatorValue },
+            { "403", Models.WithMetric_403Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithMetric_404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithMetric_422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithMetric_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.Item.Metric.Item.WithMetric_Response>(requestInfo, Dataset.Item.Metric.Item.WithMetric_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

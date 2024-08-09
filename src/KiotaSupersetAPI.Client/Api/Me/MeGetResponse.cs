@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Me;
 
@@ -13,7 +12,7 @@ public partial class MeGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public KClient.Models.UserResponseSchema Result { get; set; }
+    public Models.UserResponseSchema Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Me.MeGetResponse"/> and sets the default values.
@@ -40,7 +39,7 @@ public partial class MeGetResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.UserResponseSchema>(KClient.Models.UserResponseSchema.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.UserResponseSchema>(Models.UserResponseSchema.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -50,7 +49,7 @@ public partial class MeGetResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.UserResponseSchema>("result", Result);
+        writer.WriteObjectValue<Models.UserResponseSchema>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

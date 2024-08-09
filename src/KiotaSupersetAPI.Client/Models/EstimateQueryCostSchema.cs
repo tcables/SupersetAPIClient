@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -21,10 +20,10 @@ public partial class EstimateQueryCostSchema : IAdditionalDataHolder, IParsable
     public string Sql { get; set; }
 
     /// <summary>The SQL query template params</summary>
-    public KClient.Models.EstimateQueryCostSchema_template_params TemplateParams { get; set; }
+    public Models.EstimateQueryCostSchema_template_params TemplateParams { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.EstimateQueryCostSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.EstimateQueryCostSchema"/> and sets the default values.
     /// </summary>
     public EstimateQueryCostSchema()
     {
@@ -33,12 +32,12 @@ public partial class EstimateQueryCostSchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.EstimateQueryCostSchema"/></returns>
+    /// <returns>A <see cref="Models.EstimateQueryCostSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.EstimateQueryCostSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.EstimateQueryCostSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.EstimateQueryCostSchema();
+        return new Models.EstimateQueryCostSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -51,7 +50,7 @@ public partial class EstimateQueryCostSchema : IAdditionalDataHolder, IParsable
             { "database_id", n => { DatabaseId = n.GetIntValue(); } },
             { "schema", n => { Schema = n.GetStringValue(); } },
             { "sql", n => { Sql = n.GetStringValue(); } },
-            { "template_params", n => { TemplateParams = n.GetObjectValue<KClient.Models.EstimateQueryCostSchema_template_params>(KClient.Models.EstimateQueryCostSchema_template_params.CreateFromDiscriminatorValue); } },
+            { "template_params", n => { TemplateParams = n.GetObjectValue<Models.EstimateQueryCostSchema_template_params>(Models.EstimateQueryCostSchema_template_params.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -64,7 +63,7 @@ public partial class EstimateQueryCostSchema : IAdditionalDataHolder, IParsable
         writer.WriteIntValue("database_id", DatabaseId);
         writer.WriteStringValue("schema", Schema);
         writer.WriteStringValue("sql", Sql);
-        writer.WriteObjectValue<KClient.Models.EstimateQueryCostSchema_template_params>("template_params", TemplateParams);
+        writer.WriteObjectValue<Models.EstimateQueryCostSchema_template_params>("template_params", TemplateParams);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -14,10 +13,10 @@ public partial class ChartDataResponseSchema : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>A list of results for each corresponding query in the request.</summary>
-    public List<KClient.Models.ChartDataResponseResult> Result { get; set; }
+    public List<Models.ChartDataResponseResult> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartDataResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartDataResponseSchema"/> and sets the default values.
     /// </summary>
     public ChartDataResponseSchema()
     {
@@ -26,12 +25,12 @@ public partial class ChartDataResponseSchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartDataResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.ChartDataResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartDataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartDataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartDataResponseSchema();
+        return new Models.ChartDataResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -41,7 +40,7 @@ public partial class ChartDataResponseSchema : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.ChartDataResponseResult>(KClient.Models.ChartDataResponseResult.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.ChartDataResponseResult>(Models.ChartDataResponseResult.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -51,7 +50,7 @@ public partial class ChartDataResponseSchema : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataResponseResult>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.ChartDataResponseResult>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

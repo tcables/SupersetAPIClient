@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,13 +12,13 @@ public partial class ExplorePermalinkStateSchema : IAdditionalDataHolder, IParsa
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Chart form data</summary>
-    public KClient.Models.ExplorePermalinkStateSchema_formData FormData { get; set; }
+    public Models.ExplorePermalinkStateSchema_formData FormData { get; set; }
 
     /// <summary>URL Parameters</summary>
     public UntypedNode UrlParams { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ExplorePermalinkStateSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ExplorePermalinkStateSchema"/> and sets the default values.
     /// </summary>
     public ExplorePermalinkStateSchema()
     {
@@ -28,12 +27,12 @@ public partial class ExplorePermalinkStateSchema : IAdditionalDataHolder, IParsa
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ExplorePermalinkStateSchema"/></returns>
+    /// <returns>A <see cref="Models.ExplorePermalinkStateSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ExplorePermalinkStateSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ExplorePermalinkStateSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ExplorePermalinkStateSchema();
+        return new Models.ExplorePermalinkStateSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -43,7 +42,7 @@ public partial class ExplorePermalinkStateSchema : IAdditionalDataHolder, IParsa
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "formData", n => { FormData = n.GetObjectValue<KClient.Models.ExplorePermalinkStateSchema_formData>(KClient.Models.ExplorePermalinkStateSchema_formData.CreateFromDiscriminatorValue); } },
+            { "formData", n => { FormData = n.GetObjectValue<Models.ExplorePermalinkStateSchema_formData>(Models.ExplorePermalinkStateSchema_formData.CreateFromDiscriminatorValue); } },
             { "urlParams", n => { UrlParams = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
         };
     }
@@ -54,7 +53,7 @@ public partial class ExplorePermalinkStateSchema : IAdditionalDataHolder, IParsa
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.ExplorePermalinkStateSchema_formData>("formData", FormData);
+        writer.WriteObjectValue<Models.ExplorePermalinkStateSchema_formData>("formData", FormData);
         writer.WriteObjectValue<UntypedNode>("urlParams", UrlParams);
         writer.WriteAdditionalData(AdditionalData);
     }

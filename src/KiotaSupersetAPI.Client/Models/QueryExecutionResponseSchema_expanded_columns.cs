@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,7 +12,7 @@ public partial class QueryExecutionResponseSchema_expanded_columns : IAdditional
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.QueryExecutionResponseSchema_expanded_columns"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.QueryExecutionResponseSchema_expanded_columns"/> and sets the default values.
     /// </summary>
     public QueryExecutionResponseSchema_expanded_columns()
     {
@@ -22,12 +21,12 @@ public partial class QueryExecutionResponseSchema_expanded_columns : IAdditional
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.QueryExecutionResponseSchema_expanded_columns"/></returns>
+    /// <returns>A <see cref="Models.QueryExecutionResponseSchema_expanded_columns"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.QueryExecutionResponseSchema_expanded_columns CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.QueryExecutionResponseSchema_expanded_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.QueryExecutionResponseSchema_expanded_columns();
+        return new Models.QueryExecutionResponseSchema_expanded_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

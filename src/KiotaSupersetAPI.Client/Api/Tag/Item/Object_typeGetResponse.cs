@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Item;
 
@@ -23,7 +22,7 @@ public partial class Object_typeGetResponse : IAdditionalDataHolder, IParsable
     public Tag.Item.Object_typeGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
-    public KClient.Models.TagRestApi.Get.Get Result { get; set; }
+    public Models.TagRestApi.Get.Get Result { get; set; }
 
     /// <summary>A list of columns</summary>
     public List<string> ShowColumns { get; set; }
@@ -59,7 +58,7 @@ public partial class Object_typeGetResponse : IAdditionalDataHolder, IParsable
             { "description_columns", n => { DescriptionColumns = n.GetObjectValue<Tag.Item.Object_typeGetResponse_description_columns>(Tag.Item.Object_typeGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "id", n => { Id = n.GetStringValue(); } },
             { "label_columns", n => { LabelColumns = n.GetObjectValue<Tag.Item.Object_typeGetResponse_label_columns>(Tag.Item.Object_typeGetResponse_label_columns.CreateFromDiscriminatorValue); } },
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.TagRestApi.Get.Get>(KClient.Models.TagRestApi.Get.Get.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.TagRestApi.Get.Get>(Models.TagRestApi.Get.Get.CreateFromDiscriminatorValue); } },
             { "show_columns", n => { ShowColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "show_title", n => { ShowTitle = n.GetStringValue(); } },
         };
@@ -74,7 +73,7 @@ public partial class Object_typeGetResponse : IAdditionalDataHolder, IParsable
         writer.WriteObjectValue<Tag.Item.Object_typeGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteStringValue("id", Id);
         writer.WriteObjectValue<Tag.Item.Object_typeGetResponse_label_columns>("label_columns", LabelColumns);
-        writer.WriteObjectValue<KClient.Models.TagRestApi.Get.Get>("result", Result);
+        writer.WriteObjectValue<Models.TagRestApi.Get.Get>("result", Result);
         writer.WriteCollectionOfPrimitiveValues<string>("show_columns", ShowColumns);
         writer.WriteStringValue("show_title", ShowTitle);
         writer.WriteAdditionalData(AdditionalData);

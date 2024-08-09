@@ -7,7 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Sqllab.Export.Item;
 
@@ -39,22 +38,22 @@ public partial class WithClient_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Stream"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithClient_400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.WithClient_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithClient_403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.WithClient_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithClient_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithClient_400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.WithClient_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithClient_403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.WithClient_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithClient_500Error">When receiving a 500 status code</exception>
     public async Task<Stream> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.WithClient_400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.WithClient_401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.WithClient_403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithClient_404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithClient_500Error.CreateFromDiscriminatorValue },
+            { "400", Models.WithClient_400Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithClient_401Error.CreateFromDiscriminatorValue },
+            { "403", Models.WithClient_403Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithClient_404Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithClient_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
     }

@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Validate_sql;
 
@@ -14,7 +13,7 @@ public partial class Validate_sqlPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>A List of SQL errors found on the statement</summary>
-    public List<KClient.Models.ValidateSQLResponse> Result { get; set; }
+    public List<Models.ValidateSQLResponse> Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Database.Item.Validate_sql.Validate_sqlPostResponse"/> and sets the default values.
@@ -41,7 +40,7 @@ public partial class Validate_sqlPostResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.ValidateSQLResponse>(KClient.Models.ValidateSQLResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.ValidateSQLResponse>(Models.ValidateSQLResponse.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -51,7 +50,7 @@ public partial class Validate_sqlPostResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteCollectionOfObjectValues<KClient.Models.ValidateSQLResponse>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.ValidateSQLResponse>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

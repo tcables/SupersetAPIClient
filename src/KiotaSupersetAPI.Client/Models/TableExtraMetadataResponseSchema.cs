@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,16 +12,16 @@ public partial class TableExtraMetadataResponseSchema : IAdditionalDataHolder, I
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The clustering property</summary>
-    public KClient.Models.TableExtraMetadataResponseSchema_clustering Clustering { get; set; }
+    public Models.TableExtraMetadataResponseSchema_clustering Clustering { get; set; }
 
     /// <summary>The metadata property</summary>
-    public KClient.Models.TableExtraMetadataResponseSchema_metadata Metadata { get; set; }
+    public Models.TableExtraMetadataResponseSchema_metadata Metadata { get; set; }
 
     /// <summary>The partitions property</summary>
-    public KClient.Models.TableExtraMetadataResponseSchema_partitions Partitions { get; set; }
+    public Models.TableExtraMetadataResponseSchema_partitions Partitions { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.TableExtraMetadataResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TableExtraMetadataResponseSchema"/> and sets the default values.
     /// </summary>
     public TableExtraMetadataResponseSchema()
     {
@@ -31,12 +30,12 @@ public partial class TableExtraMetadataResponseSchema : IAdditionalDataHolder, I
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TableExtraMetadataResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.TableExtraMetadataResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.TableExtraMetadataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TableExtraMetadataResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.TableExtraMetadataResponseSchema();
+        return new Models.TableExtraMetadataResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -46,9 +45,9 @@ public partial class TableExtraMetadataResponseSchema : IAdditionalDataHolder, I
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "clustering", n => { Clustering = n.GetObjectValue<KClient.Models.TableExtraMetadataResponseSchema_clustering>(KClient.Models.TableExtraMetadataResponseSchema_clustering.CreateFromDiscriminatorValue); } },
-            { "metadata", n => { Metadata = n.GetObjectValue<KClient.Models.TableExtraMetadataResponseSchema_metadata>(KClient.Models.TableExtraMetadataResponseSchema_metadata.CreateFromDiscriminatorValue); } },
-            { "partitions", n => { Partitions = n.GetObjectValue<KClient.Models.TableExtraMetadataResponseSchema_partitions>(KClient.Models.TableExtraMetadataResponseSchema_partitions.CreateFromDiscriminatorValue); } },
+            { "clustering", n => { Clustering = n.GetObjectValue<Models.TableExtraMetadataResponseSchema_clustering>(Models.TableExtraMetadataResponseSchema_clustering.CreateFromDiscriminatorValue); } },
+            { "metadata", n => { Metadata = n.GetObjectValue<Models.TableExtraMetadataResponseSchema_metadata>(Models.TableExtraMetadataResponseSchema_metadata.CreateFromDiscriminatorValue); } },
+            { "partitions", n => { Partitions = n.GetObjectValue<Models.TableExtraMetadataResponseSchema_partitions>(Models.TableExtraMetadataResponseSchema_partitions.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -58,9 +57,9 @@ public partial class TableExtraMetadataResponseSchema : IAdditionalDataHolder, I
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.TableExtraMetadataResponseSchema_clustering>("clustering", Clustering);
-        writer.WriteObjectValue<KClient.Models.TableExtraMetadataResponseSchema_metadata>("metadata", Metadata);
-        writer.WriteObjectValue<KClient.Models.TableExtraMetadataResponseSchema_partitions>("partitions", Partitions);
+        writer.WriteObjectValue<Models.TableExtraMetadataResponseSchema_clustering>("clustering", Clustering);
+        writer.WriteObjectValue<Models.TableExtraMetadataResponseSchema_metadata>("metadata", Metadata);
+        writer.WriteObjectValue<Models.TableExtraMetadataResponseSchema_partitions>("partitions", Partitions);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

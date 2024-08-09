@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -20,7 +19,7 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
     public string CertifiedBy { get; set; }
 
     /// <summary>The changed_by property</summary>
-    public KClient.Models.User ChangedBy { get; set; }
+    public Models.User ChangedBy { get; set; }
 
     /// <summary>The changed_by_name property</summary>
     public string ChangedByName { get; set; }
@@ -47,7 +46,7 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
     public string JsonMetadata { get; set; }
 
     /// <summary>The owners property</summary>
-    public List<KClient.Models.User> Owners { get; set; }
+    public List<Models.User> Owners { get; set; }
 
     /// <summary>This json object describes the positioning of the widgets in the dashboard. It is dynamically generated when adjusting the widgets size and positions by using drag &amp; drop in the dashboard view</summary>
     public string PositionJson { get; set; }
@@ -55,13 +54,13 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
     /// <summary>The published property</summary>
     public bool? Published { get; set; }
     /// <summary>The roles property</summary>
-    public List<KClient.Models.Roles> Roles { get; set; }
+    public List<Models.Roles> Roles { get; set; }
 
     /// <summary>The slug property</summary>
     public string Slug { get; set; }
 
     /// <summary>The tags property</summary>
-    public List<KClient.Models.Tag1> Tags { get; set; }
+    public List<Models.Tag1> Tags { get; set; }
 
     /// <summary>The thumbnail_url property</summary>
     public string ThumbnailUrl { get; set; }
@@ -70,7 +69,7 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
     public string Url { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DashboardGetResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DashboardGetResponseSchema"/> and sets the default values.
     /// </summary>
     public DashboardGetResponseSchema()
     {
@@ -79,12 +78,12 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DashboardGetResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.DashboardGetResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DashboardGetResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DashboardGetResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DashboardGetResponseSchema();
+        return new Models.DashboardGetResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -96,7 +95,7 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
         {
             { "certification_details", n => { CertificationDetails = n.GetStringValue(); } },
             { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.User>(KClient.Models.User.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.User>(Models.User.CreateFromDiscriminatorValue); } },
             { "changed_by_name", n => { ChangedByName = n.GetStringValue(); } },
             { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetStringValue(); } },
@@ -106,12 +105,12 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
             { "id", n => { Id = n.GetIntValue(); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
             { "json_metadata", n => { JsonMetadata = n.GetStringValue(); } },
-            { "owners", n => { Owners = n.GetCollectionOfObjectValues<KClient.Models.User>(KClient.Models.User.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "owners", n => { Owners = n.GetCollectionOfObjectValues<Models.User>(Models.User.CreateFromDiscriminatorValue)?.ToList(); } },
             { "position_json", n => { PositionJson = n.GetStringValue(); } },
             { "published", n => { Published = n.GetBoolValue(); } },
-            { "roles", n => { Roles = n.GetCollectionOfObjectValues<KClient.Models.Roles>(KClient.Models.Roles.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "roles", n => { Roles = n.GetCollectionOfObjectValues<Models.Roles>(Models.Roles.CreateFromDiscriminatorValue)?.ToList(); } },
             { "slug", n => { Slug = n.GetStringValue(); } },
-            { "tags", n => { Tags = n.GetCollectionOfObjectValues<KClient.Models.Tag1>(KClient.Models.Tag1.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "tags", n => { Tags = n.GetCollectionOfObjectValues<Models.Tag1>(Models.Tag1.CreateFromDiscriminatorValue)?.ToList(); } },
             { "thumbnail_url", n => { ThumbnailUrl = n.GetStringValue(); } },
             { "url", n => { Url = n.GetStringValue(); } },
         };
@@ -125,7 +124,7 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("certification_details", CertificationDetails);
         writer.WriteStringValue("certified_by", CertifiedBy);
-        writer.WriteObjectValue<KClient.Models.User>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.User>("changed_by", ChangedBy);
         writer.WriteStringValue("changed_by_name", ChangedByName);
         writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
         writer.WriteStringValue("changed_on_delta_humanized", ChangedOnDeltaHumanized);
@@ -135,12 +134,12 @@ public partial class DashboardGetResponseSchema : IAdditionalDataHolder, IParsab
         writer.WriteIntValue("id", Id);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
         writer.WriteStringValue("json_metadata", JsonMetadata);
-        writer.WriteCollectionOfObjectValues<KClient.Models.User>("owners", Owners);
+        writer.WriteCollectionOfObjectValues<Models.User>("owners", Owners);
         writer.WriteStringValue("position_json", PositionJson);
         writer.WriteBoolValue("published", Published);
-        writer.WriteCollectionOfObjectValues<KClient.Models.Roles>("roles", Roles);
+        writer.WriteCollectionOfObjectValues<Models.Roles>("roles", Roles);
         writer.WriteStringValue("slug", Slug);
-        writer.WriteCollectionOfObjectValues<KClient.Models.Tag1>("tags", Tags);
+        writer.WriteCollectionOfObjectValues<Models.Tag1>("tags", Tags);
         writer.WriteStringValue("thumbnail_url", ThumbnailUrl);
         writer.WriteStringValue("url", Url);
         writer.WriteAdditionalData(AdditionalData);

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,7 +12,7 @@ public partial class DashboardDatasetSchema_currency_formats : IAdditionalDataHo
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DashboardDatasetSchema_currency_formats"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DashboardDatasetSchema_currency_formats"/> and sets the default values.
     /// </summary>
     public DashboardDatasetSchema_currency_formats()
     {
@@ -22,12 +21,12 @@ public partial class DashboardDatasetSchema_currency_formats : IAdditionalDataHo
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DashboardDatasetSchema_currency_formats"/></returns>
+    /// <returns>A <see cref="Models.DashboardDatasetSchema_currency_formats"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DashboardDatasetSchema_currency_formats CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DashboardDatasetSchema_currency_formats CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DashboardDatasetSchema_currency_formats();
+        return new Models.DashboardDatasetSchema_currency_formats();
     }
     /// <summary>
     /// The deserialization information for the current model

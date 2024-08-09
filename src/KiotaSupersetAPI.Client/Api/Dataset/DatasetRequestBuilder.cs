@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset;
 
@@ -103,24 +102,24 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.DatasetDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dataset400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dataset401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dataset403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Dataset404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Dataset422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dataset500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dataset400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dataset401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dataset403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Dataset404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Dataset422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dataset500Error">When receiving a 500 status code</exception>
     public async Task<Dataset.DatasetDeleteResponse> DeleteAsDatasetDeleteResponseAsync(Action<RequestConfiguration<Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dataset400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dataset401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Dataset403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Dataset404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dataset422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dataset500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dataset400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dataset401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Dataset403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Dataset404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dataset422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dataset500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.DatasetDeleteResponse>(requestInfo, Dataset.DatasetDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -130,12 +129,12 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.DatasetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dataset400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dataset401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dataset403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Dataset404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Dataset422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dataset500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dataset400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dataset401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dataset403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Dataset404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Dataset422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dataset500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsDatasetDeleteResponseAsync instead.")]
     public async Task<Dataset.DatasetResponse> DeleteAsync(Action<RequestConfiguration<Dataset.DatasetRequestBuilder.DatasetRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -143,12 +142,12 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dataset400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dataset401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Dataset403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Dataset404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dataset422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dataset500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dataset400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dataset401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Dataset403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Dataset404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dataset422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dataset500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.DatasetResponse>(requestInfo, Dataset.DatasetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -158,20 +157,20 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.DatasetGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dataset400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dataset401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dataset422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dataset500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dataset400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dataset401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dataset422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dataset500Error">When receiving a 500 status code</exception>
     public async Task<Dataset.DatasetGetResponse> GetDatasetGetResponseAsync(Action<RequestConfiguration<Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dataset400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dataset401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dataset422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dataset500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dataset400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dataset401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dataset422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dataset500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.DatasetGetResponse>(requestInfo, Dataset.DatasetGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -181,10 +180,10 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.DatasetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dataset400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dataset401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dataset422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dataset500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dataset400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dataset401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dataset422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dataset500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsDatasetGetResponseAsync instead.")]
     public async Task<Dataset.DatasetResponse> GetAsync(Action<RequestConfiguration<Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -192,10 +191,10 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dataset400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dataset401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dataset422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dataset500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dataset400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dataset401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dataset422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dataset500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.DatasetResponse>(requestInfo, Dataset.DatasetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -206,21 +205,21 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dataset400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dataset401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dataset422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dataset500Error">When receiving a 500 status code</exception>
-    public async Task<Dataset.DatasetPostResponse> PostAsDatasetPostResponseAsync(KClient.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Dataset400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dataset401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dataset422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dataset500Error">When receiving a 500 status code</exception>
+    public async Task<Dataset.DatasetPostResponse> PostAsDatasetPostResponseAsync(Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dataset400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dataset401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dataset422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dataset500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dataset400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dataset401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dataset422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dataset500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.DatasetPostResponse>(requestInfo, Dataset.DatasetPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -231,22 +230,22 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dataset400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dataset401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dataset422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dataset500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dataset400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dataset401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dataset422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dataset500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsDatasetPostResponseAsync instead.")]
-    public async Task<Dataset.DatasetResponse> PostAsync(KClient.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.DatasetResponse> PostAsync(Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dataset400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dataset401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dataset422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dataset500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dataset400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dataset401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dataset422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dataset500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.DatasetResponse>(requestInfo, Dataset.DatasetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -282,7 +281,7 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.DatasetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

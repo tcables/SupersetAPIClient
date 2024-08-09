@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -29,7 +28,7 @@ public partial class TableMetadataColumnsResponse : IAdditionalDataHolder, IPars
     public string Type { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.TableMetadataColumnsResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TableMetadataColumnsResponse"/> and sets the default values.
     /// </summary>
     public TableMetadataColumnsResponse()
     {
@@ -38,12 +37,12 @@ public partial class TableMetadataColumnsResponse : IAdditionalDataHolder, IPars
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TableMetadataColumnsResponse"/></returns>
+    /// <returns>A <see cref="Models.TableMetadataColumnsResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.TableMetadataColumnsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TableMetadataColumnsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.TableMetadataColumnsResponse();
+        return new Models.TableMetadataColumnsResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

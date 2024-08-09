@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,10 +12,10 @@ public partial class DatabaseValidateParametersSchema : IAdditionalDataHolder, I
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Gsheets specific column for managing label to sheet urls</summary>
-    public KClient.Models.DatabaseValidateParametersSchema_catalog Catalog { get; set; }
+    public Models.DatabaseValidateParametersSchema_catalog Catalog { get; set; }
 
     /// <summary>Configuration_method is used on the frontend to inform the backend whether to explode parameters or to provide only a sqlalchemy_uri.</summary>
-    public KClient.Models.DatabaseValidateParametersSchema_configuration_method? ConfigurationMethod { get; set; }
+    public Models.DatabaseValidateParametersSchema_configuration_method? ConfigurationMethod { get; set; }
     /// <summary>A database name to identify this connection.</summary>
     public string DatabaseName { get; set; }
 
@@ -37,13 +36,13 @@ public partial class DatabaseValidateParametersSchema : IAdditionalDataHolder, I
     public string MaskedEncryptedExtra { get; set; }
 
     /// <summary>DB-specific parameters for configuration</summary>
-    public KClient.Models.DatabaseValidateParametersSchema_parameters Parameters { get; set; }
+    public Models.DatabaseValidateParametersSchema_parameters Parameters { get; set; }
 
     /// <summary>&lt;p&gt;Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines.&lt;/p&gt;</summary>
     public string ServerCert { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatabaseValidateParametersSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatabaseValidateParametersSchema"/> and sets the default values.
     /// </summary>
     public DatabaseValidateParametersSchema()
     {
@@ -52,12 +51,12 @@ public partial class DatabaseValidateParametersSchema : IAdditionalDataHolder, I
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatabaseValidateParametersSchema"/></returns>
+    /// <returns>A <see cref="Models.DatabaseValidateParametersSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatabaseValidateParametersSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatabaseValidateParametersSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatabaseValidateParametersSchema();
+        return new Models.DatabaseValidateParametersSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -67,8 +66,8 @@ public partial class DatabaseValidateParametersSchema : IAdditionalDataHolder, I
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "catalog", n => { Catalog = n.GetObjectValue<KClient.Models.DatabaseValidateParametersSchema_catalog>(KClient.Models.DatabaseValidateParametersSchema_catalog.CreateFromDiscriminatorValue); } },
-            { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<KClient.Models.DatabaseValidateParametersSchema_configuration_method>(); } },
+            { "catalog", n => { Catalog = n.GetObjectValue<Models.DatabaseValidateParametersSchema_catalog>(Models.DatabaseValidateParametersSchema_catalog.CreateFromDiscriminatorValue); } },
+            { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<Models.DatabaseValidateParametersSchema_configuration_method>(); } },
             { "database_name", n => { DatabaseName = n.GetStringValue(); } },
             { "driver", n => { Driver = n.GetStringValue(); } },
             { "engine", n => { Engine = n.GetStringValue(); } },
@@ -76,7 +75,7 @@ public partial class DatabaseValidateParametersSchema : IAdditionalDataHolder, I
             { "id", n => { Id = n.GetIntValue(); } },
             { "impersonate_user", n => { ImpersonateUser = n.GetBoolValue(); } },
             { "masked_encrypted_extra", n => { MaskedEncryptedExtra = n.GetStringValue(); } },
-            { "parameters", n => { Parameters = n.GetObjectValue<KClient.Models.DatabaseValidateParametersSchema_parameters>(KClient.Models.DatabaseValidateParametersSchema_parameters.CreateFromDiscriminatorValue); } },
+            { "parameters", n => { Parameters = n.GetObjectValue<Models.DatabaseValidateParametersSchema_parameters>(Models.DatabaseValidateParametersSchema_parameters.CreateFromDiscriminatorValue); } },
             { "server_cert", n => { ServerCert = n.GetStringValue(); } },
         };
     }
@@ -87,8 +86,8 @@ public partial class DatabaseValidateParametersSchema : IAdditionalDataHolder, I
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.DatabaseValidateParametersSchema_catalog>("catalog", Catalog);
-        writer.WriteEnumValue<KClient.Models.DatabaseValidateParametersSchema_configuration_method>("configuration_method", ConfigurationMethod);
+        writer.WriteObjectValue<Models.DatabaseValidateParametersSchema_catalog>("catalog", Catalog);
+        writer.WriteEnumValue<Models.DatabaseValidateParametersSchema_configuration_method>("configuration_method", ConfigurationMethod);
         writer.WriteStringValue("database_name", DatabaseName);
         writer.WriteStringValue("driver", Driver);
         writer.WriteStringValue("engine", Engine);
@@ -96,7 +95,7 @@ public partial class DatabaseValidateParametersSchema : IAdditionalDataHolder, I
         writer.WriteIntValue("id", Id);
         writer.WriteBoolValue("impersonate_user", ImpersonateUser);
         writer.WriteStringValue("masked_encrypted_extra", MaskedEncryptedExtra);
-        writer.WriteObjectValue<KClient.Models.DatabaseValidateParametersSchema_parameters>("parameters", Parameters);
+        writer.WriteObjectValue<Models.DatabaseValidateParametersSchema_parameters>("parameters", Parameters);
         writer.WriteStringValue("server_cert", ServerCert);
         writer.WriteAdditionalData(AdditionalData);
     }

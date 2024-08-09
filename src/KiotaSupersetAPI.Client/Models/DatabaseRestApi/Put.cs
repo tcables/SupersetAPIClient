@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.DatabaseRestApi;
 
@@ -25,7 +24,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>Duration (in seconds) of the caching timeout for charts of this database. A timeout of 0 indicates that the cache never expires. Note this defaults to the global timeout if undefined.</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>Configuration_method is used on the frontend to inform the backend whether to explode parameters or to provide only a sqlalchemy_uri.</summary>
-    public KClient.Models.DatabaseRestApi.Put_configuration_method? ConfigurationMethod { get; set; }
+    public Models.DatabaseRestApi.Put_configuration_method? ConfigurationMethod { get; set; }
     /// <summary>A database name to identify this connection.</summary>
     public string DatabaseName { get; set; }
 
@@ -54,7 +53,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
     public string MaskedEncryptedExtra { get; set; }
 
     /// <summary>DB-specific parameters for configuration</summary>
-    public KClient.Models.DatabaseRestApi.Put_parameters Parameters { get; set; }
+    public Models.DatabaseRestApi.Put_parameters Parameters { get; set; }
 
     /// <summary>&lt;p&gt;Optional CA_BUNDLE contents to validate HTTPS requests. Only available on certain database engines.&lt;/p&gt;</summary>
     public string ServerCert { get; set; }
@@ -63,28 +62,28 @@ public partial class Put : IAdditionalDataHolder, IParsable
     public string SqlalchemyUri { get; set; }
 
     /// <summary>The ssh_tunnel property</summary>
-    public KClient.Models.DatabaseSSHTunnel SshTunnel { get; set; }
+    public Models.DatabaseSSHTunnel SshTunnel { get; set; }
 
     /// <summary>The uuid property</summary>
     public string Uuid { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatabaseRestApi.Put"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatabaseRestApi.Put"/> and sets the default values.
     /// </summary>
     public Put()
     {
         AdditionalData = new Dictionary<string, object>();
-        ConfigurationMethod = KClient.Models.DatabaseRestApi.Put_configuration_method.Sqlalchemy_form;
+        ConfigurationMethod = Models.DatabaseRestApi.Put_configuration_method.Sqlalchemy_form;
     }
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatabaseRestApi.Put"/></returns>
+    /// <returns>A <see cref="Models.DatabaseRestApi.Put"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatabaseRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatabaseRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatabaseRestApi.Put();
+        return new Models.DatabaseRestApi.Put();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -100,7 +99,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
             { "allow_file_upload", n => { AllowFileUpload = n.GetBoolValue(); } },
             { "allow_run_async", n => { AllowRunAsync = n.GetBoolValue(); } },
             { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
-            { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<KClient.Models.DatabaseRestApi.Put_configuration_method>(); } },
+            { "configuration_method", n => { ConfigurationMethod = n.GetEnumValue<Models.DatabaseRestApi.Put_configuration_method>(); } },
             { "database_name", n => { DatabaseName = n.GetStringValue(); } },
             { "driver", n => { Driver = n.GetStringValue(); } },
             { "engine", n => { Engine = n.GetStringValue(); } },
@@ -111,10 +110,10 @@ public partial class Put : IAdditionalDataHolder, IParsable
             { "impersonate_user", n => { ImpersonateUser = n.GetBoolValue(); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
             { "masked_encrypted_extra", n => { MaskedEncryptedExtra = n.GetStringValue(); } },
-            { "parameters", n => { Parameters = n.GetObjectValue<KClient.Models.DatabaseRestApi.Put_parameters>(KClient.Models.DatabaseRestApi.Put_parameters.CreateFromDiscriminatorValue); } },
+            { "parameters", n => { Parameters = n.GetObjectValue<Models.DatabaseRestApi.Put_parameters>(Models.DatabaseRestApi.Put_parameters.CreateFromDiscriminatorValue); } },
             { "server_cert", n => { ServerCert = n.GetStringValue(); } },
             { "sqlalchemy_uri", n => { SqlalchemyUri = n.GetStringValue(); } },
-            { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<KClient.Models.DatabaseSSHTunnel>(KClient.Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
+            { "ssh_tunnel", n => { SshTunnel = n.GetObjectValue<Models.DatabaseSSHTunnel>(Models.DatabaseSSHTunnel.CreateFromDiscriminatorValue); } },
             { "uuid", n => { Uuid = n.GetStringValue(); } },
         };
     }
@@ -131,7 +130,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
         writer.WriteBoolValue("allow_file_upload", AllowFileUpload);
         writer.WriteBoolValue("allow_run_async", AllowRunAsync);
         writer.WriteIntValue("cache_timeout", CacheTimeout);
-        writer.WriteEnumValue<KClient.Models.DatabaseRestApi.Put_configuration_method>("configuration_method", ConfigurationMethod);
+        writer.WriteEnumValue<Models.DatabaseRestApi.Put_configuration_method>("configuration_method", ConfigurationMethod);
         writer.WriteStringValue("database_name", DatabaseName);
         writer.WriteStringValue("driver", Driver);
         writer.WriteStringValue("engine", Engine);
@@ -142,10 +141,10 @@ public partial class Put : IAdditionalDataHolder, IParsable
         writer.WriteBoolValue("impersonate_user", ImpersonateUser);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
         writer.WriteStringValue("masked_encrypted_extra", MaskedEncryptedExtra);
-        writer.WriteObjectValue<KClient.Models.DatabaseRestApi.Put_parameters>("parameters", Parameters);
+        writer.WriteObjectValue<Models.DatabaseRestApi.Put_parameters>("parameters", Parameters);
         writer.WriteStringValue("server_cert", ServerCert);
         writer.WriteStringValue("sqlalchemy_uri", SqlalchemyUri);
-        writer.WriteObjectValue<KClient.Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
+        writer.WriteObjectValue<Models.DatabaseSSHTunnel>("ssh_tunnel", SshTunnel);
         writer.WriteStringValue("uuid", Uuid);
         writer.WriteAdditionalData(AdditionalData);
     }

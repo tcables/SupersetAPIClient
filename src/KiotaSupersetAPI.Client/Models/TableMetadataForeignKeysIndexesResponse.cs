@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -20,7 +19,7 @@ public partial class TableMetadataForeignKeysIndexesResponse : IAdditionalDataHo
     public string Name { get; set; }
 
     /// <summary>The options property</summary>
-    public KClient.Models.TableMetadataOptionsResponse Options { get; set; }
+    public Models.TableMetadataOptionsResponse Options { get; set; }
 
     /// <summary>The referred_columns property</summary>
     public List<string> ReferredColumns { get; set; }
@@ -35,7 +34,7 @@ public partial class TableMetadataForeignKeysIndexesResponse : IAdditionalDataHo
     public string Type { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.TableMetadataForeignKeysIndexesResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.TableMetadataForeignKeysIndexesResponse"/> and sets the default values.
     /// </summary>
     public TableMetadataForeignKeysIndexesResponse()
     {
@@ -44,12 +43,12 @@ public partial class TableMetadataForeignKeysIndexesResponse : IAdditionalDataHo
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TableMetadataForeignKeysIndexesResponse"/></returns>
+    /// <returns>A <see cref="Models.TableMetadataForeignKeysIndexesResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.TableMetadataForeignKeysIndexesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.TableMetadataForeignKeysIndexesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.TableMetadataForeignKeysIndexesResponse();
+        return new Models.TableMetadataForeignKeysIndexesResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -61,7 +60,7 @@ public partial class TableMetadataForeignKeysIndexesResponse : IAdditionalDataHo
         {
             { "column_names", n => { ColumnNames = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "name", n => { Name = n.GetStringValue(); } },
-            { "options", n => { Options = n.GetObjectValue<KClient.Models.TableMetadataOptionsResponse>(KClient.Models.TableMetadataOptionsResponse.CreateFromDiscriminatorValue); } },
+            { "options", n => { Options = n.GetObjectValue<Models.TableMetadataOptionsResponse>(Models.TableMetadataOptionsResponse.CreateFromDiscriminatorValue); } },
             { "referred_columns", n => { ReferredColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "referred_schema", n => { ReferredSchema = n.GetStringValue(); } },
             { "referred_table", n => { ReferredTable = n.GetStringValue(); } },
@@ -77,7 +76,7 @@ public partial class TableMetadataForeignKeysIndexesResponse : IAdditionalDataHo
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteCollectionOfPrimitiveValues<string>("column_names", ColumnNames);
         writer.WriteStringValue("name", Name);
-        writer.WriteObjectValue<KClient.Models.TableMetadataOptionsResponse>("options", Options);
+        writer.WriteObjectValue<Models.TableMetadataOptionsResponse>("options", Options);
         writer.WriteCollectionOfPrimitiveValues<string>("referred_columns", ReferredColumns);
         writer.WriteStringValue("referred_schema", ReferredSchema);
         writer.WriteStringValue("referred_table", ReferredTable);

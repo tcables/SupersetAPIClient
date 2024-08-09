@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,12 +12,12 @@ public partial class ReportRecipient : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The recipient_config_json property</summary>
-    public KClient.Models.ReportRecipientConfigJSON RecipientConfigJson { get; set; }
+    public Models.ReportRecipientConfigJSON RecipientConfigJson { get; set; }
 
     /// <summary>The recipient type, check spec for valid options</summary>
-    public KClient.Models.ReportRecipient_type? Type { get; set; }
+    public Models.ReportRecipient_type? Type { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ReportRecipient"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ReportRecipient"/> and sets the default values.
     /// </summary>
     public ReportRecipient()
     {
@@ -27,12 +26,12 @@ public partial class ReportRecipient : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ReportRecipient"/></returns>
+    /// <returns>A <see cref="Models.ReportRecipient"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ReportRecipient CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ReportRecipient CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ReportRecipient();
+        return new Models.ReportRecipient();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -42,8 +41,8 @@ public partial class ReportRecipient : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "recipient_config_json", n => { RecipientConfigJson = n.GetObjectValue<KClient.Models.ReportRecipientConfigJSON>(KClient.Models.ReportRecipientConfigJSON.CreateFromDiscriminatorValue); } },
-            { "type", n => { Type = n.GetEnumValue<KClient.Models.ReportRecipient_type>(); } },
+            { "recipient_config_json", n => { RecipientConfigJson = n.GetObjectValue<Models.ReportRecipientConfigJSON>(Models.ReportRecipientConfigJSON.CreateFromDiscriminatorValue); } },
+            { "type", n => { Type = n.GetEnumValue<Models.ReportRecipient_type>(); } },
         };
     }
     /// <summary>
@@ -53,8 +52,8 @@ public partial class ReportRecipient : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.ReportRecipientConfigJSON>("recipient_config_json", RecipientConfigJson);
-        writer.WriteEnumValue<KClient.Models.ReportRecipient_type>("type", Type);
+        writer.WriteObjectValue<Models.ReportRecipientConfigJSON>("recipient_config_json", RecipientConfigJson);
+        writer.WriteEnumValue<Models.ReportRecipient_type>("type", Type);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

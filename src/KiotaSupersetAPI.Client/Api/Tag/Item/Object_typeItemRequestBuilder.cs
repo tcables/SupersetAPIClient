@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Item;
 
@@ -68,18 +67,18 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Tag.Item.Object_typeDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Object_type404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Object_type422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Object_type500Error">When receiving a 500 status code</exception>
     public async Task<Tag.Item.Object_typeDeleteResponse> DeleteAsObject_typeDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "404", KClient.Models.Object_type404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
+            { "404", Models.Object_type404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Object_type422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Tag.Item.Object_typeDeleteResponse>(requestInfo, Tag.Item.Object_typeDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -89,9 +88,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Tag.Item.Object_typeResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Object_type404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Object_type422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsObject_typeDeleteResponseAsync instead.")]
     public async Task<Tag.Item.Object_typeResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -99,9 +98,9 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "404", KClient.Models.Object_type404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
+            { "404", Models.Object_type404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Object_type422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Tag.Item.Object_typeResponse>(requestInfo, Tag.Item.Object_typeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -111,22 +110,22 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Tag.Item.Object_typeGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Object_type400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Object_type401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Object_type400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Object_type401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Object_type404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Object_type422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Object_type500Error">When receiving a 500 status code</exception>
     public async Task<Tag.Item.Object_typeGetResponse> GetObject_typeGetResponseAsync(Action<RequestConfiguration<Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Object_type400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Object_type401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Object_type404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Object_type400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Object_type401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Object_type404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Object_type422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Tag.Item.Object_typeGetResponse>(requestInfo, Tag.Item.Object_typeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -136,11 +135,11 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Tag.Item.Object_typeResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Object_type400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Object_type401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Object_type400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Object_type401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Object_type404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Object_type422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsObject_typeGetResponseAsync instead.")]
     public async Task<Tag.Item.Object_typeResponse> GetAsync(Action<RequestConfiguration<Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -148,11 +147,11 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Object_type400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Object_type401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Object_type404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Object_type400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Object_type401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Object_type404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Object_type422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Tag.Item.Object_typeResponse>(requestInfo, Tag.Item.Object_typeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -163,25 +162,25 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Object_type400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Object_type401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Object_type403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
-    public async Task<Tag.Item.Object_typePutResponse> PutAsObject_typePutResponseAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Object_type400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Object_type401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Object_type403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Object_type404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Object_type422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Object_type500Error">When receiving a 500 status code</exception>
+    public async Task<Tag.Item.Object_typePutResponse> PutAsObject_typePutResponseAsync(Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Object_type400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Object_type401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Object_type403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Object_type404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Object_type400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Object_type401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Object_type403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Object_type404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Object_type422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Tag.Item.Object_typePutResponse>(requestInfo, Tag.Item.Object_typePutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -192,26 +191,26 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Object_type400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Object_type401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Object_type403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Object_type400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Object_type401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Object_type403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Object_type404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Object_type422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsObject_typePutResponseAsync instead.")]
-    public async Task<Tag.Item.Object_typeResponse> PutAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Item.Object_typeResponse> PutAsync(Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Object_type400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Object_type401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Object_type403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Object_type404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Object_type400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Object_type401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Object_type403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Object_type404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Object_type422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Tag.Item.Object_typeResponse>(requestInfo, Tag.Item.Object_typeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -247,7 +246,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPutRequestInformation(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPutRequestInformation(Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

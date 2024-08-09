@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class ChartDataQueryContextSchema : IAdditionalDataHolder, IParsa
     /// <summary>Override the default cache timeout</summary>
     public int? CustomCacheTimeout { get; set; }
     /// <summary>The datasource property</summary>
-    public KClient.Models.ChartDataDatasource Datasource { get; set; }
+    public Models.ChartDataDatasource Datasource { get; set; }
 
     /// <summary>Should the queries be forced to load from the source. Default: `false`</summary>
     public bool? Force { get; set; }
@@ -24,14 +23,14 @@ public partial class ChartDataQueryContextSchema : IAdditionalDataHolder, IParsa
     public UntypedNode FormData { get; set; }
 
     /// <summary>The queries property</summary>
-    public List<KClient.Models.ChartDataQueryObject> Queries { get; set; }
+    public List<Models.ChartDataQueryObject> Queries { get; set; }
 
     /// <summary>The result_format property</summary>
-    public KClient.Models.ChartDataQueryContextSchema_result_format? ResultFormat { get; set; }
+    public Models.ChartDataQueryContextSchema_result_format? ResultFormat { get; set; }
     /// <summary>The result_type property</summary>
-    public KClient.Models.ChartDataQueryContextSchema_result_type? ResultType { get; set; }
+    public Models.ChartDataQueryContextSchema_result_type? ResultType { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartDataQueryContextSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartDataQueryContextSchema"/> and sets the default values.
     /// </summary>
     public ChartDataQueryContextSchema()
     {
@@ -40,12 +39,12 @@ public partial class ChartDataQueryContextSchema : IAdditionalDataHolder, IParsa
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartDataQueryContextSchema"/></returns>
+    /// <returns>A <see cref="Models.ChartDataQueryContextSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartDataQueryContextSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartDataQueryContextSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartDataQueryContextSchema();
+        return new Models.ChartDataQueryContextSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -56,12 +55,12 @@ public partial class ChartDataQueryContextSchema : IAdditionalDataHolder, IParsa
         return new Dictionary<string, Action<IParseNode>>
         {
             { "custom_cache_timeout", n => { CustomCacheTimeout = n.GetIntValue(); } },
-            { "datasource", n => { Datasource = n.GetObjectValue<KClient.Models.ChartDataDatasource>(KClient.Models.ChartDataDatasource.CreateFromDiscriminatorValue); } },
+            { "datasource", n => { Datasource = n.GetObjectValue<Models.ChartDataDatasource>(Models.ChartDataDatasource.CreateFromDiscriminatorValue); } },
             { "force", n => { Force = n.GetBoolValue(); } },
             { "form_data", n => { FormData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "queries", n => { Queries = n.GetCollectionOfObjectValues<KClient.Models.ChartDataQueryObject>(KClient.Models.ChartDataQueryObject.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "result_format", n => { ResultFormat = n.GetEnumValue<KClient.Models.ChartDataQueryContextSchema_result_format>(); } },
-            { "result_type", n => { ResultType = n.GetEnumValue<KClient.Models.ChartDataQueryContextSchema_result_type>(); } },
+            { "queries", n => { Queries = n.GetCollectionOfObjectValues<Models.ChartDataQueryObject>(Models.ChartDataQueryObject.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result_format", n => { ResultFormat = n.GetEnumValue<Models.ChartDataQueryContextSchema_result_format>(); } },
+            { "result_type", n => { ResultType = n.GetEnumValue<Models.ChartDataQueryContextSchema_result_type>(); } },
         };
     }
     /// <summary>
@@ -72,12 +71,12 @@ public partial class ChartDataQueryContextSchema : IAdditionalDataHolder, IParsa
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteIntValue("custom_cache_timeout", CustomCacheTimeout);
-        writer.WriteObjectValue<KClient.Models.ChartDataDatasource>("datasource", Datasource);
+        writer.WriteObjectValue<Models.ChartDataDatasource>("datasource", Datasource);
         writer.WriteBoolValue("force", Force);
         writer.WriteObjectValue<UntypedNode>("form_data", FormData);
-        writer.WriteCollectionOfObjectValues<KClient.Models.ChartDataQueryObject>("queries", Queries);
-        writer.WriteEnumValue<KClient.Models.ChartDataQueryContextSchema_result_format>("result_format", ResultFormat);
-        writer.WriteEnumValue<KClient.Models.ChartDataQueryContextSchema_result_type>("result_type", ResultType);
+        writer.WriteCollectionOfObjectValues<Models.ChartDataQueryObject>("queries", Queries);
+        writer.WriteEnumValue<Models.ChartDataQueryContextSchema_result_format>("result_format", ResultFormat);
+        writer.WriteEnumValue<Models.ChartDataQueryContextSchema_result_type>("result_type", ResultType);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

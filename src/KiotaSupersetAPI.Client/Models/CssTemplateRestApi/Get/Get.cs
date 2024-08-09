@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.CssTemplateRestApi.Get;
 
@@ -13,13 +12,13 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-    public KClient.Models.CssTemplateRestApi.Get.User1 ChangedBy { get; set; }
+    public Models.CssTemplateRestApi.Get.User1 ChangedBy { get; set; }
 
     /// <summary>The changed_on_delta_humanized property</summary>
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
 
     /// <summary>The created_by property</summary>
-    public KClient.Models.CssTemplateRestApi.Get.User CreatedBy { get; set; }
+    public Models.CssTemplateRestApi.Get.User CreatedBy { get; set; }
 
     /// <summary>The css property</summary>
     public string Css { get; set; }
@@ -30,7 +29,7 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public string TemplateName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.CssTemplateRestApi.Get.Get"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.CssTemplateRestApi.Get.Get"/> and sets the default values.
     /// </summary>
     public Get()
     {
@@ -39,12 +38,12 @@ public partial class Get : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.CssTemplateRestApi.Get.Get"/></returns>
+    /// <returns>A <see cref="Models.CssTemplateRestApi.Get.Get"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.CssTemplateRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.CssTemplateRestApi.Get.Get CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.CssTemplateRestApi.Get.Get();
+        return new Models.CssTemplateRestApi.Get.Get();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -54,9 +53,9 @@ public partial class Get : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.CssTemplateRestApi.Get.User1>(KClient.Models.CssTemplateRestApi.Get.User1.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.CssTemplateRestApi.Get.User1>(Models.CssTemplateRestApi.Get.User1.CreateFromDiscriminatorValue); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.CssTemplateRestApi.Get.User>(KClient.Models.CssTemplateRestApi.Get.User.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.CssTemplateRestApi.Get.User>(Models.CssTemplateRestApi.Get.User.CreateFromDiscriminatorValue); } },
             { "css", n => { Css = n.GetStringValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
             { "template_name", n => { TemplateName = n.GetStringValue(); } },
@@ -69,8 +68,8 @@ public partial class Get : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.CssTemplateRestApi.Get.User1>("changed_by", ChangedBy);
-        writer.WriteObjectValue<KClient.Models.CssTemplateRestApi.Get.User>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.CssTemplateRestApi.Get.User1>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.CssTemplateRestApi.Get.User>("created_by", CreatedBy);
         writer.WriteStringValue("css", Css);
         writer.WriteIntValue("id", Id);
         writer.WriteStringValue("template_name", TemplateName);

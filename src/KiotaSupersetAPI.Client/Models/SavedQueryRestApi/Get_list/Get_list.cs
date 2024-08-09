@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.SavedQueryRestApi.Get_list;
 
@@ -13,7 +12,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The changed_by property</summary>
-    public KClient.Models.SavedQueryRestApi.Get_list.User1 ChangedBy { get; set; }
+    public Models.SavedQueryRestApi.Get_list.User1 ChangedBy { get; set; }
 
     /// <summary>The changed_on property</summary>
     public DateTimeOffset? ChangedOn { get; set; }
@@ -21,12 +20,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode ChangedOnDeltaHumanized { get; private set; }
 
     /// <summary>The created_by property</summary>
-    public KClient.Models.SavedQueryRestApi.Get_list.User CreatedBy { get; set; }
+    public Models.SavedQueryRestApi.Get_list.User CreatedBy { get; set; }
 
     /// <summary>The created_on property</summary>
     public DateTimeOffset? CreatedOn { get; set; }
     /// <summary>The database property</summary>
-    public KClient.Models.SavedQueryRestApi.Get_list.Database Database { get; set; }
+    public Models.SavedQueryRestApi.Get_list.Database Database { get; set; }
 
     /// <summary>The db_id property</summary>
     public int? DbId { get; set; }
@@ -56,7 +55,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode SqlTables { get; private set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.SavedQueryRestApi.Get_list.Get_list"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.SavedQueryRestApi.Get_list.Get_list"/> and sets the default values.
     /// </summary>
     public Get_list()
     {
@@ -65,12 +64,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.SavedQueryRestApi.Get_list.Get_list"/></returns>
+    /// <returns>A <see cref="Models.SavedQueryRestApi.Get_list.Get_list"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.SavedQueryRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.SavedQueryRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.SavedQueryRestApi.Get_list.Get_list();
+        return new Models.SavedQueryRestApi.Get_list.Get_list();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -80,12 +79,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Get_list.User1>(KClient.Models.SavedQueryRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.SavedQueryRestApi.Get_list.User1>(Models.SavedQueryRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
             { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Get_list.User>(KClient.Models.SavedQueryRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.SavedQueryRestApi.Get_list.User>(Models.SavedQueryRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
             { "created_on", n => { CreatedOn = n.GetDateTimeOffsetValue(); } },
-            { "database", n => { Database = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Get_list.Database>(KClient.Models.SavedQueryRestApi.Get_list.Database.CreateFromDiscriminatorValue); } },
+            { "database", n => { Database = n.GetObjectValue<Models.SavedQueryRestApi.Get_list.Database>(Models.SavedQueryRestApi.Get_list.Database.CreateFromDiscriminatorValue); } },
             { "db_id", n => { DbId = n.GetIntValue(); } },
             { "description", n => { Description = n.GetStringValue(); } },
             { "extra", n => { Extra = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -105,11 +104,11 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Get_list.User1>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.SavedQueryRestApi.Get_list.User1>("changed_by", ChangedBy);
         writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
-        writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Get_list.User>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.SavedQueryRestApi.Get_list.User>("created_by", CreatedBy);
         writer.WriteDateTimeOffsetValue("created_on", CreatedOn);
-        writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Get_list.Database>("database", Database);
+        writer.WriteObjectValue<Models.SavedQueryRestApi.Get_list.Database>("database", Database);
         writer.WriteIntValue("db_id", DbId);
         writer.WriteStringValue("description", Description);
         writer.WriteIntValue("id", Id);

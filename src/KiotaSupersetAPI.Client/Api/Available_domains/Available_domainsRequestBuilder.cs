@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Available_domains;
 
@@ -38,16 +37,16 @@ public partial class Available_domainsRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Available_domains.Available_domainsGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Available_domains401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Available_domains403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Available_domains401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Available_domains403Error">When receiving a 403 status code</exception>
     public async Task<Available_domains.Available_domainsGetResponse> GetAvailable_domainsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Available_domains401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Available_domains403Error.CreateFromDiscriminatorValue },
+            { "401", Models.Available_domains401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Available_domains403Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Available_domains.Available_domainsGetResponse>(requestInfo, Available_domains.Available_domainsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -57,8 +56,8 @@ public partial class Available_domainsRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Available_domains.Available_domainsResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Available_domains401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Available_domains403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Available_domains401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Available_domains403Error">When receiving a 403 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsAvailable_domainsGetResponseAsync instead.")]
     public async Task<Available_domains.Available_domainsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -66,8 +65,8 @@ public partial class Available_domainsRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Available_domains401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Available_domains403Error.CreateFromDiscriminatorValue },
+            { "401", Models.Available_domains401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Available_domains403Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Available_domains.Available_domainsResponse>(requestInfo, Available_domains.Available_domainsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

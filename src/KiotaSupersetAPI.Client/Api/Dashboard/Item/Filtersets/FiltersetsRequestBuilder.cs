@@ -7,7 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Filtersets;
 
@@ -64,18 +63,18 @@ public partial class FiltersetsRequestBuilder : BaseRequestBuilder
     /// <returns>A List&lt;Dashboard.Item.Filtersets.Filtersets&gt;</returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Filtersets400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Filtersets401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Filtersets404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Filtersets400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Filtersets401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Filtersets404Error">When receiving a 404 status code</exception>
     public async Task<List<Dashboard.Item.Filtersets.Filtersets>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Filtersets400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Filtersets401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Filtersets404Error.CreateFromDiscriminatorValue },
+            { "400", Models.Filtersets400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Filtersets401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Filtersets404Error.CreateFromDiscriminatorValue },
         };
         var collectionResult = await RequestAdapter.SendCollectionAsync<Dashboard.Item.Filtersets.Filtersets>(requestInfo, Dashboard.Item.Filtersets.Filtersets.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         return collectionResult?.ToList();
@@ -87,21 +86,21 @@ public partial class FiltersetsRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Filtersets400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Filtersets401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Filtersets404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Filtersets500Error">When receiving a 500 status code</exception>
-    public async Task<Dashboard.Item.Filtersets.FiltersetsPostResponse> PostAsFiltersetsPostResponseAsync(KClient.Models.FilterSetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Filtersets400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Filtersets401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Filtersets404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Filtersets500Error">When receiving a 500 status code</exception>
+    public async Task<Dashboard.Item.Filtersets.FiltersetsPostResponse> PostAsFiltersetsPostResponseAsync(Models.FilterSetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Filtersets400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Filtersets401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Filtersets404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Filtersets500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Filtersets400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Filtersets401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Filtersets404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Filtersets500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Filtersets.FiltersetsPostResponse>(requestInfo, Dashboard.Item.Filtersets.FiltersetsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -112,22 +111,22 @@ public partial class FiltersetsRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Filtersets400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Filtersets401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Filtersets404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Filtersets500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Filtersets400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Filtersets401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Filtersets404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Filtersets500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsFiltersetsPostResponseAsync instead.")]
-    public async Task<Dashboard.Item.Filtersets.FiltersetsResponse> PostAsync(KClient.Models.FilterSetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Filtersets.FiltersetsResponse> PostAsync(Models.FilterSetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Filtersets400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Filtersets401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Filtersets404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Filtersets500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Filtersets400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Filtersets401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Filtersets404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Filtersets500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.Item.Filtersets.FiltersetsResponse>(requestInfo, Dashboard.Item.Filtersets.FiltersetsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -150,7 +149,7 @@ public partial class FiltersetsRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.FilterSetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.FilterSetRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

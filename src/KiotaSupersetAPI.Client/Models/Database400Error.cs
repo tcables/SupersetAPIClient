@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class Database400Error : ApiException, IAdditionalDataHolder, IPa
     /// <summary>The primary error message.</summary>
     public override string Message { get => base.Message; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.Database400Error"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.Database400Error"/> and sets the default values.
     /// </summary>
     public Database400Error()
     {
@@ -25,12 +24,12 @@ public partial class Database400Error : ApiException, IAdditionalDataHolder, IPa
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.Database400Error"/></returns>
+    /// <returns>A <see cref="Models.Database400Error"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.Database400Error CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.Database400Error CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.Database400Error();
+        return new Models.Database400Error();
     }
     /// <summary>
     /// The deserialization information for the current model

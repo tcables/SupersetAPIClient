@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Validate_sql;
 
@@ -39,21 +38,21 @@ public partial class Validate_sqlRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Validate_sql400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Validate_sql401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Validate_sql404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Validate_sql500Error">When receiving a 500 status code</exception>
-    public async Task<Database.Item.Validate_sql.Validate_sqlPostResponse> PostAsValidate_sqlPostResponseAsync(KClient.Models.ValidateSQLRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Validate_sql400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Validate_sql401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Validate_sql404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Validate_sql500Error">When receiving a 500 status code</exception>
+    public async Task<Database.Item.Validate_sql.Validate_sqlPostResponse> PostAsValidate_sqlPostResponseAsync(Models.ValidateSQLRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Validate_sql400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Validate_sql401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Validate_sql404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Validate_sql500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Validate_sql400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Validate_sql401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Validate_sql404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Validate_sql500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Item.Validate_sql.Validate_sqlPostResponse>(requestInfo, Database.Item.Validate_sql.Validate_sqlPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -64,22 +63,22 @@ public partial class Validate_sqlRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Validate_sql400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Validate_sql401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Validate_sql404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Validate_sql500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Validate_sql400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Validate_sql401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Validate_sql404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Validate_sql500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsValidate_sqlPostResponseAsync instead.")]
-    public async Task<Database.Item.Validate_sql.Validate_sqlResponse> PostAsync(KClient.Models.ValidateSQLRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.Validate_sql.Validate_sqlResponse> PostAsync(Models.ValidateSQLRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Validate_sql400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Validate_sql401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Validate_sql404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Validate_sql500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Validate_sql400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Validate_sql401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Validate_sql404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Validate_sql500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Item.Validate_sql.Validate_sqlResponse>(requestInfo, Database.Item.Validate_sql.Validate_sqlResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -89,7 +88,7 @@ public partial class Validate_sqlRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.ValidateSQLRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.ValidateSQLRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

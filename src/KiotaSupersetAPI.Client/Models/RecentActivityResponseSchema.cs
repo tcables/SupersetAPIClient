@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -14,10 +13,10 @@ public partial class RecentActivityResponseSchema : IAdditionalDataHolder, IPars
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>A list of recent activity objects</summary>
-    public List<KClient.Models.RecentActivity> Result { get; set; }
+    public List<Models.RecentActivity> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.RecentActivityResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.RecentActivityResponseSchema"/> and sets the default values.
     /// </summary>
     public RecentActivityResponseSchema()
     {
@@ -26,12 +25,12 @@ public partial class RecentActivityResponseSchema : IAdditionalDataHolder, IPars
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.RecentActivityResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.RecentActivityResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.RecentActivityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.RecentActivityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.RecentActivityResponseSchema();
+        return new Models.RecentActivityResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -41,7 +40,7 @@ public partial class RecentActivityResponseSchema : IAdditionalDataHolder, IPars
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.RecentActivity>(KClient.Models.RecentActivity.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.RecentActivity>(Models.RecentActivity.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -51,7 +50,7 @@ public partial class RecentActivityResponseSchema : IAdditionalDataHolder, IPars
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteCollectionOfObjectValues<KClient.Models.RecentActivity>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.RecentActivity>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

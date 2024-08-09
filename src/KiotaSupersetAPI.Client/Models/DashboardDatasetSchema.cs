@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -18,19 +17,19 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
     /// <summary>The cache_timeout property</summary>
     public int? CacheTimeout { get; set; }
     /// <summary>The column_formats property</summary>
-    public KClient.Models.DashboardDatasetSchema_column_formats ColumnFormats { get; set; }
+    public Models.DashboardDatasetSchema_column_formats ColumnFormats { get; set; }
 
     /// <summary>The columns property</summary>
-    public List<KClient.Models.DashboardDatasetSchema_columns> Columns { get; set; }
+    public List<Models.DashboardDatasetSchema_columns> Columns { get; set; }
 
     /// <summary>The column_types property</summary>
     public List<int?> ColumnTypes { get; set; }
 
     /// <summary>The currency_formats property</summary>
-    public KClient.Models.DashboardDatasetSchema_currency_formats CurrencyFormats { get; set; }
+    public Models.DashboardDatasetSchema_currency_formats CurrencyFormats { get; set; }
 
     /// <summary>The database property</summary>
-    public KClient.Models.Database Database { get; set; }
+    public Models.Database Database { get; set; }
 
     /// <summary>The datasource_name property</summary>
     public string DatasourceName { get; set; }
@@ -62,7 +61,7 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
     public string MainDttmCol { get; set; }
 
     /// <summary>The metrics property</summary>
-    public List<KClient.Models.DashboardDatasetSchema_metrics> Metrics { get; set; }
+    public List<Models.DashboardDatasetSchema_metrics> Metrics { get; set; }
 
     /// <summary>The name property</summary>
     public string Name { get; set; }
@@ -75,7 +74,7 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
     public UntypedNode OrderByChoices { get; set; }
 
     /// <summary>The owners property</summary>
-    public List<KClient.Models.DashboardDatasetSchema_owners> Owners { get; set; }
+    public List<Models.DashboardDatasetSchema_owners> Owners { get; set; }
 
     /// <summary>The params property</summary>
     public string Params { get; set; }
@@ -108,10 +107,10 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
     public string Uid { get; set; }
 
     /// <summary>The verbose_map property</summary>
-    public KClient.Models.DashboardDatasetSchema_verbose_map VerboseMap { get; set; }
+    public Models.DashboardDatasetSchema_verbose_map VerboseMap { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DashboardDatasetSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DashboardDatasetSchema"/> and sets the default values.
     /// </summary>
     public DashboardDatasetSchema()
     {
@@ -120,12 +119,12 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DashboardDatasetSchema"/></returns>
+    /// <returns>A <see cref="Models.DashboardDatasetSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DashboardDatasetSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DashboardDatasetSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DashboardDatasetSchema();
+        return new Models.DashboardDatasetSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -137,11 +136,11 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
         {
             { "always_filter_main_dttm", n => { AlwaysFilterMainDttm = n.GetBoolValue(); } },
             { "cache_timeout", n => { CacheTimeout = n.GetIntValue(); } },
-            { "column_formats", n => { ColumnFormats = n.GetObjectValue<KClient.Models.DashboardDatasetSchema_column_formats>(KClient.Models.DashboardDatasetSchema_column_formats.CreateFromDiscriminatorValue); } },
+            { "column_formats", n => { ColumnFormats = n.GetObjectValue<Models.DashboardDatasetSchema_column_formats>(Models.DashboardDatasetSchema_column_formats.CreateFromDiscriminatorValue); } },
             { "column_types", n => { ColumnTypes = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
-            { "columns", n => { Columns = n.GetCollectionOfObjectValues<KClient.Models.DashboardDatasetSchema_columns>(KClient.Models.DashboardDatasetSchema_columns.CreateFromDiscriminatorValue)?.ToList(); } },
-            { "currency_formats", n => { CurrencyFormats = n.GetObjectValue<KClient.Models.DashboardDatasetSchema_currency_formats>(KClient.Models.DashboardDatasetSchema_currency_formats.CreateFromDiscriminatorValue); } },
-            { "database", n => { Database = n.GetObjectValue<KClient.Models.Database>(KClient.Models.Database.CreateFromDiscriminatorValue); } },
+            { "columns", n => { Columns = n.GetCollectionOfObjectValues<Models.DashboardDatasetSchema_columns>(Models.DashboardDatasetSchema_columns.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "currency_formats", n => { CurrencyFormats = n.GetObjectValue<Models.DashboardDatasetSchema_currency_formats>(Models.DashboardDatasetSchema_currency_formats.CreateFromDiscriminatorValue); } },
+            { "database", n => { Database = n.GetObjectValue<Models.Database>(Models.Database.CreateFromDiscriminatorValue); } },
             { "datasource_name", n => { DatasourceName = n.GetStringValue(); } },
             { "default_endpoint", n => { DefaultEndpoint = n.GetStringValue(); } },
             { "edit_url", n => { EditUrl = n.GetStringValue(); } },
@@ -153,12 +152,12 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
             { "id", n => { Id = n.GetIntValue(); } },
             { "is_sqllab_view", n => { IsSqllabView = n.GetBoolValue(); } },
             { "main_dttm_col", n => { MainDttmCol = n.GetStringValue(); } },
-            { "metrics", n => { Metrics = n.GetCollectionOfObjectValues<KClient.Models.DashboardDatasetSchema_metrics>(KClient.Models.DashboardDatasetSchema_metrics.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "metrics", n => { Metrics = n.GetCollectionOfObjectValues<Models.DashboardDatasetSchema_metrics>(Models.DashboardDatasetSchema_metrics.CreateFromDiscriminatorValue)?.ToList(); } },
             { "name", n => { Name = n.GetStringValue(); } },
             { "normalize_columns", n => { NormalizeColumns = n.GetBoolValue(); } },
             { "offset", n => { Offset = n.GetIntValue(); } },
             { "order_by_choices", n => { OrderByChoices = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "owners", n => { Owners = n.GetCollectionOfObjectValues<KClient.Models.DashboardDatasetSchema_owners>(KClient.Models.DashboardDatasetSchema_owners.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "owners", n => { Owners = n.GetCollectionOfObjectValues<Models.DashboardDatasetSchema_owners>(Models.DashboardDatasetSchema_owners.CreateFromDiscriminatorValue)?.ToList(); } },
             { "params", n => { Params = n.GetStringValue(); } },
             { "perm", n => { Perm = n.GetStringValue(); } },
             { "schema", n => { Schema = n.GetStringValue(); } },
@@ -169,7 +168,7 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
             { "time_grain_sqla", n => { TimeGrainSqla = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "type", n => { Type = n.GetStringValue(); } },
             { "uid", n => { Uid = n.GetStringValue(); } },
-            { "verbose_map", n => { VerboseMap = n.GetObjectValue<KClient.Models.DashboardDatasetSchema_verbose_map>(KClient.Models.DashboardDatasetSchema_verbose_map.CreateFromDiscriminatorValue); } },
+            { "verbose_map", n => { VerboseMap = n.GetObjectValue<Models.DashboardDatasetSchema_verbose_map>(Models.DashboardDatasetSchema_verbose_map.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -181,11 +180,11 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteBoolValue("always_filter_main_dttm", AlwaysFilterMainDttm);
         writer.WriteIntValue("cache_timeout", CacheTimeout);
-        writer.WriteObjectValue<KClient.Models.DashboardDatasetSchema_column_formats>("column_formats", ColumnFormats);
-        writer.WriteCollectionOfObjectValues<KClient.Models.DashboardDatasetSchema_columns>("columns", Columns);
+        writer.WriteObjectValue<Models.DashboardDatasetSchema_column_formats>("column_formats", ColumnFormats);
+        writer.WriteCollectionOfObjectValues<Models.DashboardDatasetSchema_columns>("columns", Columns);
         writer.WriteCollectionOfPrimitiveValues<int?>("column_types", ColumnTypes);
-        writer.WriteObjectValue<KClient.Models.DashboardDatasetSchema_currency_formats>("currency_formats", CurrencyFormats);
-        writer.WriteObjectValue<KClient.Models.Database>("database", Database);
+        writer.WriteObjectValue<Models.DashboardDatasetSchema_currency_formats>("currency_formats", CurrencyFormats);
+        writer.WriteObjectValue<Models.Database>("database", Database);
         writer.WriteStringValue("datasource_name", DatasourceName);
         writer.WriteStringValue("default_endpoint", DefaultEndpoint);
         writer.WriteStringValue("edit_url", EditUrl);
@@ -197,12 +196,12 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
         writer.WriteIntValue("id", Id);
         writer.WriteBoolValue("is_sqllab_view", IsSqllabView);
         writer.WriteStringValue("main_dttm_col", MainDttmCol);
-        writer.WriteCollectionOfObjectValues<KClient.Models.DashboardDatasetSchema_metrics>("metrics", Metrics);
+        writer.WriteCollectionOfObjectValues<Models.DashboardDatasetSchema_metrics>("metrics", Metrics);
         writer.WriteStringValue("name", Name);
         writer.WriteBoolValue("normalize_columns", NormalizeColumns);
         writer.WriteIntValue("offset", Offset);
         writer.WriteObjectValue<UntypedNode>("order_by_choices", OrderByChoices);
-        writer.WriteCollectionOfObjectValues<KClient.Models.DashboardDatasetSchema_owners>("owners", Owners);
+        writer.WriteCollectionOfObjectValues<Models.DashboardDatasetSchema_owners>("owners", Owners);
         writer.WriteStringValue("params", Params);
         writer.WriteStringValue("perm", Perm);
         writer.WriteStringValue("schema", Schema);
@@ -213,7 +212,7 @@ public partial class DashboardDatasetSchema : IAdditionalDataHolder, IParsable
         writer.WriteObjectValue<UntypedNode>("time_grain_sqla", TimeGrainSqla);
         writer.WriteStringValue("type", Type);
         writer.WriteStringValue("uid", Uid);
-        writer.WriteObjectValue<KClient.Models.DashboardDatasetSchema_verbose_map>("verbose_map", VerboseMap);
+        writer.WriteObjectValue<Models.DashboardDatasetSchema_verbose_map>("verbose_map", VerboseMap);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

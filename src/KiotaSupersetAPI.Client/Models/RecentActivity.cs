@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -30,7 +29,7 @@ public partial class RecentActivity : IAdditionalDataHolder, IParsable
     public string TimeDeltaHumanized { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.RecentActivity"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.RecentActivity"/> and sets the default values.
     /// </summary>
     public RecentActivity()
     {
@@ -39,12 +38,12 @@ public partial class RecentActivity : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.RecentActivity"/></returns>
+    /// <returns>A <see cref="Models.RecentActivity"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.RecentActivity CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.RecentActivity CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.RecentActivity();
+        return new Models.RecentActivity();
     }
     /// <summary>
     /// The deserialization information for the current model

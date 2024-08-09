@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Schemas_access_for_file_upload;
 
@@ -35,23 +34,23 @@ public partial class Schemas_access_for_file_uploadRequestBuilder : BaseRequestB
     /// <summary>
     /// The list of the database schemas where to upload information
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatabaseSchemaAccessForFileUploadResponse"/></returns>
+    /// <returns>A <see cref="Models.DatabaseSchemaAccessForFileUploadResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.DatabaseSchemaAccessForFileUploadResponse401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.DatabaseSchemaAccessForFileUploadResponse404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.DatabaseSchemaAccessForFileUploadResponse500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.DatabaseSchemaAccessForFileUploadResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.DatabaseSchemaAccessForFileUploadResponse401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.DatabaseSchemaAccessForFileUploadResponse404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.DatabaseSchemaAccessForFileUploadResponse500Error">When receiving a 500 status code</exception>
+    public async Task<Models.DatabaseSchemaAccessForFileUploadResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.DatabaseSchemaAccessForFileUploadResponse401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.DatabaseSchemaAccessForFileUploadResponse404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.DatabaseSchemaAccessForFileUploadResponse500Error.CreateFromDiscriminatorValue },
+            { "401", Models.DatabaseSchemaAccessForFileUploadResponse401Error.CreateFromDiscriminatorValue },
+            { "404", Models.DatabaseSchemaAccessForFileUploadResponse404Error.CreateFromDiscriminatorValue },
+            { "500", Models.DatabaseSchemaAccessForFileUploadResponse500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.DatabaseSchemaAccessForFileUploadResponse>(requestInfo, KClient.Models.DatabaseSchemaAccessForFileUploadResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.DatabaseSchemaAccessForFileUploadResponse>(requestInfo, Models.DatabaseSchemaAccessForFileUploadResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// The list of the database schemas where to upload information

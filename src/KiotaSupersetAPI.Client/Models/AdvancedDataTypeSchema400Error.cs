@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class AdvancedDataTypeSchema400Error : ApiException, IAdditionalD
     /// <summary>The primary error message.</summary>
     public override string Message { get => base.Message; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.AdvancedDataTypeSchema400Error"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.AdvancedDataTypeSchema400Error"/> and sets the default values.
     /// </summary>
     public AdvancedDataTypeSchema400Error()
     {
@@ -25,12 +24,12 @@ public partial class AdvancedDataTypeSchema400Error : ApiException, IAdditionalD
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.AdvancedDataTypeSchema400Error"/></returns>
+    /// <returns>A <see cref="Models.AdvancedDataTypeSchema400Error"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.AdvancedDataTypeSchema400Error CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.AdvancedDataTypeSchema400Error CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.AdvancedDataTypeSchema400Error();
+        return new Models.AdvancedDataTypeSchema400Error();
     }
     /// <summary>
     /// The deserialization information for the current model

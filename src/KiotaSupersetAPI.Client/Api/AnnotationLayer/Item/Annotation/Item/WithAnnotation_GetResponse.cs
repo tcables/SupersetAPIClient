@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item.Annotation.Item;
 
@@ -16,7 +15,7 @@ public partial class WithAnnotation_GetResponse : IAdditionalDataHolder, IParsab
     public string Id { get; set; }
 
     /// <summary>The result property</summary>
-    public KClient.Models.AnnotationRestApi.Get.Get Result { get; set; }
+    public Models.AnnotationRestApi.Get.Get Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse"/> and sets the default values.
@@ -44,7 +43,7 @@ public partial class WithAnnotation_GetResponse : IAdditionalDataHolder, IParsab
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetStringValue(); } },
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.AnnotationRestApi.Get.Get>(KClient.Models.AnnotationRestApi.Get.Get.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.AnnotationRestApi.Get.Get>(Models.AnnotationRestApi.Get.Get.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -55,7 +54,7 @@ public partial class WithAnnotation_GetResponse : IAdditionalDataHolder, IParsab
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("id", Id);
-        writer.WriteObjectValue<KClient.Models.AnnotationRestApi.Get.Get>("result", Result);
+        writer.WriteObjectValue<Models.AnnotationRestApi.Get.Get>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.RLSRestApi;
 
@@ -20,7 +19,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
     public string Description { get; set; }
 
     /// <summary>filter_type_description</summary>
-    public KClient.Models.RLSRestApi.Post_filter_type? FilterType { get; set; }
+    public Models.RLSRestApi.Post_filter_type? FilterType { get; set; }
     /// <summary>group_key_description</summary>
     public string GroupKey { get; set; }
 
@@ -34,7 +33,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
     public List<int?> Tables { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.RLSRestApi.Post"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.RLSRestApi.Post"/> and sets the default values.
     /// </summary>
     public Post()
     {
@@ -43,12 +42,12 @@ public partial class Post : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.RLSRestApi.Post"/></returns>
+    /// <returns>A <see cref="Models.RLSRestApi.Post"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.RLSRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.RLSRestApi.Post CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.RLSRestApi.Post();
+        return new Models.RLSRestApi.Post();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -60,7 +59,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
         {
             { "clause", n => { Clause = n.GetStringValue(); } },
             { "description", n => { Description = n.GetStringValue(); } },
-            { "filter_type", n => { FilterType = n.GetEnumValue<KClient.Models.RLSRestApi.Post_filter_type>(); } },
+            { "filter_type", n => { FilterType = n.GetEnumValue<Models.RLSRestApi.Post_filter_type>(); } },
             { "group_key", n => { GroupKey = n.GetStringValue(); } },
             { "name", n => { Name = n.GetStringValue(); } },
             { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
@@ -76,7 +75,7 @@ public partial class Post : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("clause", Clause);
         writer.WriteStringValue("description", Description);
-        writer.WriteEnumValue<KClient.Models.RLSRestApi.Post_filter_type>("filter_type", FilterType);
+        writer.WriteEnumValue<Models.RLSRestApi.Post_filter_type>("filter_type", FilterType);
         writer.WriteStringValue("group_key", GroupKey);
         writer.WriteStringValue("name", Name);
         writer.WriteCollectionOfPrimitiveValues<int?>("roles", Roles);

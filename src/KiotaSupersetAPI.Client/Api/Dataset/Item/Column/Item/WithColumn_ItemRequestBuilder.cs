@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Item.Column.Item;
 
@@ -38,22 +37,22 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.Item.Column.Item.WithColumn_DeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithColumn_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithColumn_403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.WithColumn_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithColumn_422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithColumn_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithColumn_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithColumn_403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.WithColumn_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithColumn_422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithColumn_500Error">When receiving a 500 status code</exception>
     public async Task<Dataset.Item.Column.Item.WithColumn_DeleteResponse> DeleteAsWithColumn_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.WithColumn_401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.WithColumn_403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithColumn_404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithColumn_401Error.CreateFromDiscriminatorValue },
+            { "403", Models.WithColumn_403Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithColumn_404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithColumn_422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithColumn_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.Item.Column.Item.WithColumn_DeleteResponse>(requestInfo, Dataset.Item.Column.Item.WithColumn_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -63,11 +62,11 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dataset.Item.Column.Item.WithColumn_Response"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.WithColumn_401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.WithColumn_403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.WithColumn_404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.WithColumn_422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.WithColumn_500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.WithColumn_401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.WithColumn_403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.WithColumn_404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.WithColumn_422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.WithColumn_500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithColumn_DeleteResponseAsync instead.")]
     public async Task<Dataset.Item.Column.Item.WithColumn_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -75,11 +74,11 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.WithColumn_401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.WithColumn_403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.WithColumn_404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
+            { "401", Models.WithColumn_401Error.CreateFromDiscriminatorValue },
+            { "403", Models.WithColumn_403Error.CreateFromDiscriminatorValue },
+            { "404", Models.WithColumn_404Error.CreateFromDiscriminatorValue },
+            { "422", Models.WithColumn_422Error.CreateFromDiscriminatorValue },
+            { "500", Models.WithColumn_500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dataset.Item.Column.Item.WithColumn_Response>(requestInfo, Dataset.Item.Column.Item.WithColumn_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

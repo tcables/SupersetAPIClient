@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Css_template;
 
@@ -73,20 +72,20 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Css_template.Css_templateDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Css_template401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Css_template404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Css_template422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Css_template500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Css_template401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Css_template404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Css_template422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Css_template500Error">When receiving a 500 status code</exception>
     public async Task<Css_template.Css_templateDeleteResponse> DeleteAsCss_templateDeleteResponseAsync(Action<RequestConfiguration<Css_template.Css_templateRequestBuilder.Css_templateRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Css_template401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Css_template404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Css_template422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Css_template500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Css_template401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Css_template404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Css_template422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Css_template500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Css_template.Css_templateDeleteResponse>(requestInfo, Css_template.Css_templateDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -96,10 +95,10 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Css_template.Css_templateResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Css_template401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Css_template404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Css_template422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Css_template500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Css_template401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Css_template404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Css_template422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Css_template500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsCss_templateDeleteResponseAsync instead.")]
     public async Task<Css_template.Css_templateResponse> DeleteAsync(Action<RequestConfiguration<Css_template.Css_templateRequestBuilder.Css_templateRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -107,10 +106,10 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Css_template401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Css_template404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Css_template422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Css_template500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Css_template401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Css_template404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Css_template422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Css_template500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Css_template.Css_templateResponse>(requestInfo, Css_template.Css_templateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -120,20 +119,20 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Css_template.Css_templateGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Css_template400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Css_template401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Css_template422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Css_template500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Css_template400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Css_template401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Css_template422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Css_template500Error">When receiving a 500 status code</exception>
     public async Task<Css_template.Css_templateGetResponse> GetCss_templateGetResponseAsync(Action<RequestConfiguration<Css_template.Css_templateRequestBuilder.Css_templateRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Css_template400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Css_template401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Css_template422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Css_template500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Css_template400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Css_template401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Css_template422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Css_template500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Css_template.Css_templateGetResponse>(requestInfo, Css_template.Css_templateGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -143,10 +142,10 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Css_template.Css_templateResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Css_template400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Css_template401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Css_template422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Css_template500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Css_template400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Css_template401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Css_template422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Css_template500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsCss_templateGetResponseAsync instead.")]
     public async Task<Css_template.Css_templateResponse> GetAsync(Action<RequestConfiguration<Css_template.Css_templateRequestBuilder.Css_templateRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -154,10 +153,10 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Css_template400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Css_template401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Css_template422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Css_template500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Css_template400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Css_template401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Css_template422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Css_template500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Css_template.Css_templateResponse>(requestInfo, Css_template.Css_templateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -168,21 +167,21 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Css_template400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Css_template401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Css_template422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Css_template500Error">When receiving a 500 status code</exception>
-    public async Task<Css_template.Css_templatePostResponse> PostAsCss_templatePostResponseAsync(KClient.Models.CssTemplateRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Css_template400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Css_template401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Css_template422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Css_template500Error">When receiving a 500 status code</exception>
+    public async Task<Css_template.Css_templatePostResponse> PostAsCss_templatePostResponseAsync(Models.CssTemplateRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Css_template400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Css_template401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Css_template422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Css_template500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Css_template400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Css_template401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Css_template422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Css_template500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Css_template.Css_templatePostResponse>(requestInfo, Css_template.Css_templatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -193,22 +192,22 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Css_template400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Css_template401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Css_template422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Css_template500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Css_template400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Css_template401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Css_template422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Css_template500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsCss_templatePostResponseAsync instead.")]
-    public async Task<Css_template.Css_templateResponse> PostAsync(KClient.Models.CssTemplateRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Css_template.Css_templateResponse> PostAsync(Models.CssTemplateRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Css_template400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Css_template401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Css_template422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Css_template500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Css_template400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Css_template401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Css_template422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Css_template500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Css_template.Css_templateResponse>(requestInfo, Css_template.Css_templateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -244,7 +243,7 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.CssTemplateRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.CssTemplateRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

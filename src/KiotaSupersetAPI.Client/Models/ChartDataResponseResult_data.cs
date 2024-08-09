@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,7 +12,7 @@ public partial class ChartDataResponseResult_data : IAdditionalDataHolder, IPars
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartDataResponseResult_data"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartDataResponseResult_data"/> and sets the default values.
     /// </summary>
     public ChartDataResponseResult_data()
     {
@@ -22,12 +21,12 @@ public partial class ChartDataResponseResult_data : IAdditionalDataHolder, IPars
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartDataResponseResult_data"/></returns>
+    /// <returns>A <see cref="Models.ChartDataResponseResult_data"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartDataResponseResult_data CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartDataResponseResult_data CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartDataResponseResult_data();
+        return new Models.ChartDataResponseResult_data();
     }
     /// <summary>
     /// The deserialization information for the current model

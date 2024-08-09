@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class ExploreContextSchema_form_data : IAdditionalDataHolder, IPa
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ExploreContextSchema_form_data"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ExploreContextSchema_form_data"/> and sets the default values.
     /// </summary>
     public ExploreContextSchema_form_data()
     {
@@ -25,12 +24,12 @@ public partial class ExploreContextSchema_form_data : IAdditionalDataHolder, IPa
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ExploreContextSchema_form_data"/></returns>
+    /// <returns>A <see cref="Models.ExploreContextSchema_form_data"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ExploreContextSchema_form_data CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ExploreContextSchema_form_data CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ExploreContextSchema_form_data();
+        return new Models.ExploreContextSchema_form_data();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Table.Item.Item;
 
@@ -35,27 +34,27 @@ public partial class WithSchema_nameItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get database table metadata
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.TableMetadataResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.TableMetadataResponseSchema"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.TableMetadataResponseSchema400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.TableMetadataResponseSchema401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.TableMetadataResponseSchema404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.TableMetadataResponseSchema422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.TableMetadataResponseSchema500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.TableMetadataResponseSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.TableMetadataResponseSchema400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.TableMetadataResponseSchema401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.TableMetadataResponseSchema404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.TableMetadataResponseSchema422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.TableMetadataResponseSchema500Error">When receiving a 500 status code</exception>
+    public async Task<Models.TableMetadataResponseSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.TableMetadataResponseSchema400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.TableMetadataResponseSchema401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.TableMetadataResponseSchema404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.TableMetadataResponseSchema422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.TableMetadataResponseSchema500Error.CreateFromDiscriminatorValue },
+            { "400", Models.TableMetadataResponseSchema400Error.CreateFromDiscriminatorValue },
+            { "401", Models.TableMetadataResponseSchema401Error.CreateFromDiscriminatorValue },
+            { "404", Models.TableMetadataResponseSchema404Error.CreateFromDiscriminatorValue },
+            { "422", Models.TableMetadataResponseSchema422Error.CreateFromDiscriminatorValue },
+            { "500", Models.TableMetadataResponseSchema500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.TableMetadataResponseSchema>(requestInfo, KClient.Models.TableMetadataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.TableMetadataResponseSchema>(requestInfo, Models.TableMetadataResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get database table metadata

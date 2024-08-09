@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -21,7 +20,7 @@ public partial class DatasetRelatedChart : IAdditionalDataHolder, IParsable
     public string VizType { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatasetRelatedChart"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatasetRelatedChart"/> and sets the default values.
     /// </summary>
     public DatasetRelatedChart()
     {
@@ -30,12 +29,12 @@ public partial class DatasetRelatedChart : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatasetRelatedChart"/></returns>
+    /// <returns>A <see cref="Models.DatasetRelatedChart"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatasetRelatedChart CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatasetRelatedChart CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatasetRelatedChart();
+        return new Models.DatasetRelatedChart();
     }
     /// <summary>
     /// The deserialization information for the current model

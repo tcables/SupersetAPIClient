@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class Slice_query_context : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.Slice_query_context"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.Slice_query_context"/> and sets the default values.
     /// </summary>
     public Slice_query_context()
     {
@@ -25,12 +24,12 @@ public partial class Slice_query_context : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.Slice_query_context"/></returns>
+    /// <returns>A <see cref="Models.Slice_query_context"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.Slice_query_context CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.Slice_query_context CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.Slice_query_context();
+        return new Models.Slice_query_context();
     }
     /// <summary>
     /// The deserialization information for the current model

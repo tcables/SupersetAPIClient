@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -21,12 +20,12 @@ public partial class ChartDataFilter : IAdditionalDataHolder, IParsable
     /// <summary>Indicates if the filter has been added by a filter component as opposed to being a part of the original query.</summary>
     public bool? IsExtra { get; set; }
     /// <summary>The comparison operator.</summary>
-    public KClient.Models.ChartDataFilter_op? Op { get; set; }
+    public Models.ChartDataFilter_op? Op { get; set; }
     /// <summary>The value or values to compare against. Can be a string, integer, decimal, None or list, depending on the operator.</summary>
     public UntypedNode Val { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartDataFilter"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartDataFilter"/> and sets the default values.
     /// </summary>
     public ChartDataFilter()
     {
@@ -35,12 +34,12 @@ public partial class ChartDataFilter : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartDataFilter"/></returns>
+    /// <returns>A <see cref="Models.ChartDataFilter"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartDataFilter CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartDataFilter CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartDataFilter();
+        return new Models.ChartDataFilter();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -53,7 +52,7 @@ public partial class ChartDataFilter : IAdditionalDataHolder, IParsable
             { "col", n => { Col = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "grain", n => { Grain = n.GetStringValue(); } },
             { "isExtra", n => { IsExtra = n.GetBoolValue(); } },
-            { "op", n => { Op = n.GetEnumValue<KClient.Models.ChartDataFilter_op>(); } },
+            { "op", n => { Op = n.GetEnumValue<Models.ChartDataFilter_op>(); } },
             { "val", n => { Val = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
         };
     }
@@ -67,7 +66,7 @@ public partial class ChartDataFilter : IAdditionalDataHolder, IParsable
         writer.WriteObjectValue<UntypedNode>("col", Col);
         writer.WriteStringValue("grain", Grain);
         writer.WriteBoolValue("isExtra", IsExtra);
-        writer.WriteEnumValue<KClient.Models.ChartDataFilter_op>("op", Op);
+        writer.WriteEnumValue<Models.ChartDataFilter_op>("op", Op);
         writer.WriteObjectValue<UntypedNode>("val", Val);
         writer.WriteAdditionalData(AdditionalData);
     }

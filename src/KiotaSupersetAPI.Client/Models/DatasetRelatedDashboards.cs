@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,10 +15,10 @@ public partial class DatasetRelatedDashboards : IAdditionalDataHolder, IParsable
     /// <summary>Dashboard count</summary>
     public int? Count { get; set; }
     /// <summary>A list of dashboards</summary>
-    public List<KClient.Models.DatasetRelatedDashboard> Result { get; set; }
+    public List<Models.DatasetRelatedDashboard> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatasetRelatedDashboards"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatasetRelatedDashboards"/> and sets the default values.
     /// </summary>
     public DatasetRelatedDashboards()
     {
@@ -28,12 +27,12 @@ public partial class DatasetRelatedDashboards : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatasetRelatedDashboards"/></returns>
+    /// <returns>A <see cref="Models.DatasetRelatedDashboards"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatasetRelatedDashboards CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatasetRelatedDashboards CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatasetRelatedDashboards();
+        return new Models.DatasetRelatedDashboards();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -44,7 +43,7 @@ public partial class DatasetRelatedDashboards : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "count", n => { Count = n.GetIntValue(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.DatasetRelatedDashboard>(KClient.Models.DatasetRelatedDashboard.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.DatasetRelatedDashboard>(Models.DatasetRelatedDashboard.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -55,7 +54,7 @@ public partial class DatasetRelatedDashboards : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteIntValue("count", Count);
-        writer.WriteCollectionOfObjectValues<KClient.Models.DatasetRelatedDashboard>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.DatasetRelatedDashboard>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

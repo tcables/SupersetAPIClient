@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Security.Refresh;
 
@@ -38,16 +37,16 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Security.Refresh.RefreshPostResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Refresh401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Refresh500Error">When receiving a 500 status code</exception>
     public async Task<Security.Refresh.RefreshPostResponse> PostAsRefreshPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToPostRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Refresh401Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Refresh401Error.CreateFromDiscriminatorValue },
+            { "500", Models.Refresh500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Security.Refresh.RefreshPostResponse>(requestInfo, Security.Refresh.RefreshPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -57,8 +56,8 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Security.Refresh.RefreshResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Refresh401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Refresh500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsRefreshPostResponseAsync instead.")]
     public async Task<Security.Refresh.RefreshResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -66,8 +65,8 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
         var requestInfo = ToPostRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Refresh401Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Refresh401Error.CreateFromDiscriminatorValue },
+            { "500", Models.Refresh500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Security.Refresh.RefreshResponse>(requestInfo, Security.Refresh.RefreshResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

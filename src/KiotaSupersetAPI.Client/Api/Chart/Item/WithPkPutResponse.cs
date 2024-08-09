@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Chart.Item;
 
@@ -15,7 +14,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public KClient.Models.ChartRestApi.Put Result { get; set; }
+    public Models.ChartRestApi.Put Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Chart.Item.WithPkPutResponse"/> and sets the default values.
@@ -43,7 +42,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.ChartRestApi.Put>(KClient.Models.ChartRestApi.Put.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.ChartRestApi.Put>(Models.ChartRestApi.Put.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -54,7 +53,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<KClient.Models.ChartRestApi.Put>("result", Result);
+        writer.WriteObjectValue<Models.ChartRestApi.Put>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

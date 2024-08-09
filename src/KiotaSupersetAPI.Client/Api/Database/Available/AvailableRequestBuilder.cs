@@ -7,7 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Available;
 
@@ -39,16 +38,16 @@ public partial class AvailableRequestBuilder : BaseRequestBuilder
     /// <returns>A List&lt;Database.Available.Available&gt;</returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Available400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Available500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Available400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Available500Error">When receiving a 500 status code</exception>
     public async Task<List<Database.Available.Available>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Available400Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Available500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Available400Error.CreateFromDiscriminatorValue },
+            { "500", Models.Available500Error.CreateFromDiscriminatorValue },
         };
         var collectionResult = await RequestAdapter.SendCollectionAsync<Database.Available.Available>(requestInfo, Database.Available.Available.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         return collectionResult?.ToList();

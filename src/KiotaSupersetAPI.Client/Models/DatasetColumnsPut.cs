@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -49,7 +48,7 @@ public partial class DatasetColumnsPut : IAdditionalDataHolder, IParsable
     public string VerboseName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatasetColumnsPut"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatasetColumnsPut"/> and sets the default values.
     /// </summary>
     public DatasetColumnsPut()
     {
@@ -58,12 +57,12 @@ public partial class DatasetColumnsPut : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatasetColumnsPut"/></returns>
+    /// <returns>A <see cref="Models.DatasetColumnsPut"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatasetColumnsPut CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatasetColumnsPut CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatasetColumnsPut();
+        return new Models.DatasetColumnsPut();
     }
     /// <summary>
     /// The deserialization information for the current model

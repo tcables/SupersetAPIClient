@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Warm_up_cache;
 
@@ -35,25 +34,25 @@ public partial class Warm_up_cacheRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Warms up the cache for the table. Note for slices a force refresh occurs. In terms of the `extra_filters` these can be obtained from records in the JSON encoded `logs.json` column associated with the `explore_json` action.
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatasetCacheWarmUpResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.DatasetCacheWarmUpResponseSchema"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.DatasetCacheWarmUpResponseSchema400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.DatasetCacheWarmUpResponseSchema404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.DatasetCacheWarmUpResponseSchema500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.DatasetCacheWarmUpResponseSchema> PutAsync(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.DatasetCacheWarmUpResponseSchema400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.DatasetCacheWarmUpResponseSchema404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.DatasetCacheWarmUpResponseSchema500Error">When receiving a 500 status code</exception>
+    public async Task<Models.DatasetCacheWarmUpResponseSchema> PutAsync(Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPutRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.DatasetCacheWarmUpResponseSchema400Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.DatasetCacheWarmUpResponseSchema404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.DatasetCacheWarmUpResponseSchema500Error.CreateFromDiscriminatorValue },
+            { "400", Models.DatasetCacheWarmUpResponseSchema400Error.CreateFromDiscriminatorValue },
+            { "404", Models.DatasetCacheWarmUpResponseSchema404Error.CreateFromDiscriminatorValue },
+            { "500", Models.DatasetCacheWarmUpResponseSchema500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.DatasetCacheWarmUpResponseSchema>(requestInfo, KClient.Models.DatasetCacheWarmUpResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.DatasetCacheWarmUpResponseSchema>(requestInfo, Models.DatasetCacheWarmUpResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Warms up the cache for the table. Note for slices a force refresh occurs. In terms of the `extra_filters` these can be obtained from records in the JSON encoded `logs.json` column associated with the `explore_json` action.
@@ -61,7 +60,7 @@ public partial class Warm_up_cacheRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPutRequestInformation(KClient.Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPutRequestInformation(Models.DatasetCacheWarmUpRequestSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

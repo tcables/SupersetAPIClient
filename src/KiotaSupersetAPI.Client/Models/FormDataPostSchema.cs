@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -17,12 +16,12 @@ public partial class FormDataPostSchema : IAdditionalDataHolder, IParsable
     /// <summary>The datasource ID</summary>
     public int? DatasourceId { get; set; }
     /// <summary>The datasource type</summary>
-    public KClient.Models.FormDataPostSchema_datasource_type? DatasourceType { get; set; }
+    public Models.FormDataPostSchema_datasource_type? DatasourceType { get; set; }
     /// <summary>Any type of JSON supported text.</summary>
     public string FormData { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.FormDataPostSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.FormDataPostSchema"/> and sets the default values.
     /// </summary>
     public FormDataPostSchema()
     {
@@ -31,12 +30,12 @@ public partial class FormDataPostSchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.FormDataPostSchema"/></returns>
+    /// <returns>A <see cref="Models.FormDataPostSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.FormDataPostSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.FormDataPostSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.FormDataPostSchema();
+        return new Models.FormDataPostSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -48,7 +47,7 @@ public partial class FormDataPostSchema : IAdditionalDataHolder, IParsable
         {
             { "chart_id", n => { ChartId = n.GetIntValue(); } },
             { "datasource_id", n => { DatasourceId = n.GetIntValue(); } },
-            { "datasource_type", n => { DatasourceType = n.GetEnumValue<KClient.Models.FormDataPostSchema_datasource_type>(); } },
+            { "datasource_type", n => { DatasourceType = n.GetEnumValue<Models.FormDataPostSchema_datasource_type>(); } },
             { "form_data", n => { FormData = n.GetStringValue(); } },
         };
     }
@@ -61,7 +60,7 @@ public partial class FormDataPostSchema : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteIntValue("chart_id", ChartId);
         writer.WriteIntValue("datasource_id", DatasourceId);
-        writer.WriteEnumValue<KClient.Models.FormDataPostSchema_datasource_type>("datasource_type", DatasourceType);
+        writer.WriteEnumValue<Models.FormDataPostSchema_datasource_type>("datasource_type", DatasourceType);
         writer.WriteStringValue("form_data", FormData);
         writer.WriteAdditionalData(AdditionalData);
     }

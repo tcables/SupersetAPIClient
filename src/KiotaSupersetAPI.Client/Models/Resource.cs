@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,9 +15,9 @@ public partial class Resource : IAdditionalDataHolder, IParsable
     public string Id { get; set; }
 
     /// <summary>The type property</summary>
-    public KClient.Models.Resource_type? Type { get; set; }
+    public Models.Resource_type? Type { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.Resource"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.Resource"/> and sets the default values.
     /// </summary>
     public Resource()
     {
@@ -27,12 +26,12 @@ public partial class Resource : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.Resource"/></returns>
+    /// <returns>A <see cref="Models.Resource"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.Resource CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.Resource CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.Resource();
+        return new Models.Resource();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -43,7 +42,7 @@ public partial class Resource : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetStringValue(); } },
-            { "type", n => { Type = n.GetEnumValue<KClient.Models.Resource_type>(); } },
+            { "type", n => { Type = n.GetEnumValue<Models.Resource_type>(); } },
         };
     }
     /// <summary>
@@ -54,7 +53,7 @@ public partial class Resource : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("id", Id);
-        writer.WriteEnumValue<KClient.Models.Resource_type>("type", Type);
+        writer.WriteEnumValue<Models.Resource_type>("type", Type);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

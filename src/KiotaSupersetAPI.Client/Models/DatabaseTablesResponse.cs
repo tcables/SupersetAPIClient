@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -13,7 +12,7 @@ public partial class DatabaseTablesResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Extra data used to specify column metadata</summary>
-    public KClient.Models.DatabaseTablesResponse_extra Extra { get; set; }
+    public Models.DatabaseTablesResponse_extra Extra { get; set; }
 
     /// <summary>table or view</summary>
     public string Type { get; set; }
@@ -22,7 +21,7 @@ public partial class DatabaseTablesResponse : IAdditionalDataHolder, IParsable
     public string Value { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatabaseTablesResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatabaseTablesResponse"/> and sets the default values.
     /// </summary>
     public DatabaseTablesResponse()
     {
@@ -31,12 +30,12 @@ public partial class DatabaseTablesResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatabaseTablesResponse"/></returns>
+    /// <returns>A <see cref="Models.DatabaseTablesResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatabaseTablesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatabaseTablesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatabaseTablesResponse();
+        return new Models.DatabaseTablesResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -46,7 +45,7 @@ public partial class DatabaseTablesResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "extra", n => { Extra = n.GetObjectValue<KClient.Models.DatabaseTablesResponse_extra>(KClient.Models.DatabaseTablesResponse_extra.CreateFromDiscriminatorValue); } },
+            { "extra", n => { Extra = n.GetObjectValue<Models.DatabaseTablesResponse_extra>(Models.DatabaseTablesResponse_extra.CreateFromDiscriminatorValue); } },
             { "type", n => { Type = n.GetStringValue(); } },
             { "value", n => { Value = n.GetStringValue(); } },
         };
@@ -58,7 +57,7 @@ public partial class DatabaseTablesResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.DatabaseTablesResponse_extra>("extra", Extra);
+        writer.WriteObjectValue<Models.DatabaseTablesResponse_extra>("extra", Extra);
         writer.WriteStringValue("type", Type);
         writer.WriteStringValue("value", Value);
         writer.WriteAdditionalData(AdditionalData);

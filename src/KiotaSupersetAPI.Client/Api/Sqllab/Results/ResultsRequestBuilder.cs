@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Sqllab.Results;
 
@@ -35,29 +34,29 @@ public partial class ResultsRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get the result of a SQL query execution
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.QueryExecutionResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.QueryExecutionResponseSchema"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.QueryExecutionResponseSchema400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.QueryExecutionResponseSchema401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.QueryExecutionResponseSchema403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.QueryExecutionResponseSchema404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.QueryExecutionResponseSchema410Error">When receiving a 410 status code</exception>
-    /// <exception cref="KClient.Models.QueryExecutionResponseSchema500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.QueryExecutionResponseSchema> GetAsync(Action<RequestConfiguration<Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.QueryExecutionResponseSchema400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.QueryExecutionResponseSchema401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.QueryExecutionResponseSchema403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.QueryExecutionResponseSchema404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.QueryExecutionResponseSchema410Error">When receiving a 410 status code</exception>
+    /// <exception cref="Models.QueryExecutionResponseSchema500Error">When receiving a 500 status code</exception>
+    public async Task<Models.QueryExecutionResponseSchema> GetAsync(Action<RequestConfiguration<Sqllab.Results.ResultsRequestBuilder.ResultsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.QueryExecutionResponseSchema400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.QueryExecutionResponseSchema401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.QueryExecutionResponseSchema403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.QueryExecutionResponseSchema404Error.CreateFromDiscriminatorValue },
-            { "410", KClient.Models.QueryExecutionResponseSchema410Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.QueryExecutionResponseSchema500Error.CreateFromDiscriminatorValue },
+            { "400", Models.QueryExecutionResponseSchema400Error.CreateFromDiscriminatorValue },
+            { "401", Models.QueryExecutionResponseSchema401Error.CreateFromDiscriminatorValue },
+            { "403", Models.QueryExecutionResponseSchema403Error.CreateFromDiscriminatorValue },
+            { "404", Models.QueryExecutionResponseSchema404Error.CreateFromDiscriminatorValue },
+            { "410", Models.QueryExecutionResponseSchema410Error.CreateFromDiscriminatorValue },
+            { "500", Models.QueryExecutionResponseSchema500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.QueryExecutionResponseSchema>(requestInfo, KClient.Models.QueryExecutionResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.QueryExecutionResponseSchema>(requestInfo, Models.QueryExecutionResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get the result of a SQL query execution

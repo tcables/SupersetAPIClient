@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Item.Related_objects;
 
@@ -35,23 +34,23 @@ public partial class Related_objectsRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get charts and dashboards count associated to a dataset
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatasetRelatedObjectsResponse"/></returns>
+    /// <returns>A <see cref="Models.DatasetRelatedObjectsResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.DatasetRelatedObjectsResponse401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.DatasetRelatedObjectsResponse404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.DatasetRelatedObjectsResponse500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.DatasetRelatedObjectsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.DatasetRelatedObjectsResponse401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.DatasetRelatedObjectsResponse404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.DatasetRelatedObjectsResponse500Error">When receiving a 500 status code</exception>
+    public async Task<Models.DatasetRelatedObjectsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.DatasetRelatedObjectsResponse401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.DatasetRelatedObjectsResponse404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.DatasetRelatedObjectsResponse500Error.CreateFromDiscriminatorValue },
+            { "401", Models.DatasetRelatedObjectsResponse401Error.CreateFromDiscriminatorValue },
+            { "404", Models.DatasetRelatedObjectsResponse404Error.CreateFromDiscriminatorValue },
+            { "500", Models.DatasetRelatedObjectsResponse500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.DatasetRelatedObjectsResponse>(requestInfo, KClient.Models.DatasetRelatedObjectsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.DatasetRelatedObjectsResponse>(requestInfo, Models.DatasetRelatedObjectsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get charts and dashboards count associated to a dataset

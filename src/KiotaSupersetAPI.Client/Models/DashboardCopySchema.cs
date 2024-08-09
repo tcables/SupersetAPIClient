@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -24,7 +23,7 @@ public partial class DashboardCopySchema : IAdditionalDataHolder, IParsable
     public string JsonMetadata { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DashboardCopySchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DashboardCopySchema"/> and sets the default values.
     /// </summary>
     public DashboardCopySchema()
     {
@@ -33,12 +32,12 @@ public partial class DashboardCopySchema : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DashboardCopySchema"/></returns>
+    /// <returns>A <see cref="Models.DashboardCopySchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DashboardCopySchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DashboardCopySchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DashboardCopySchema();
+        return new Models.DashboardCopySchema();
     }
     /// <summary>
     /// The deserialization information for the current model

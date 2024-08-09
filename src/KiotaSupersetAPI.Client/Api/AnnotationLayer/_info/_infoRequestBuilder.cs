@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.AnnotationLayer._info;
 
@@ -38,20 +37,20 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="AnnotationLayer._info._infoGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models._info400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models._info401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models._info422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models._info500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models._info400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models._info401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models._info422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models._info500Error">When receiving a 500 status code</exception>
     public async Task<AnnotationLayer._info._infoGetResponse> Get_infoGetResponseAsync(Action<RequestConfiguration<AnnotationLayer._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models._info400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models._info401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models._info422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models._info500Error.CreateFromDiscriminatorValue },
+            { "400", Models._info400Error.CreateFromDiscriminatorValue },
+            { "401", Models._info401Error.CreateFromDiscriminatorValue },
+            { "422", Models._info422Error.CreateFromDiscriminatorValue },
+            { "500", Models._info500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<AnnotationLayer._info._infoGetResponse>(requestInfo, AnnotationLayer._info._infoGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -61,10 +60,10 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="AnnotationLayer._info._infoResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models._info400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models._info401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models._info422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models._info500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models._info400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models._info401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models._info422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models._info500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAs_infoGetResponseAsync instead.")]
     public async Task<AnnotationLayer._info._infoResponse> GetAsync(Action<RequestConfiguration<AnnotationLayer._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -72,10 +71,10 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models._info400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models._info401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models._info422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models._info500Error.CreateFromDiscriminatorValue },
+            { "400", Models._info400Error.CreateFromDiscriminatorValue },
+            { "401", Models._info401Error.CreateFromDiscriminatorValue },
+            { "422", Models._info422Error.CreateFromDiscriminatorValue },
+            { "500", Models._info500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<AnnotationLayer._info._infoResponse>(requestInfo, AnnotationLayer._info._infoResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Available_domains;
 
@@ -13,7 +12,7 @@ public partial class Available_domainsGetResponse : IAdditionalDataHolder, IPars
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public KClient.Models.AvailableDomainsSchema Result { get; set; }
+    public Models.AvailableDomainsSchema Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Available_domains.Available_domainsGetResponse"/> and sets the default values.
@@ -40,7 +39,7 @@ public partial class Available_domainsGetResponse : IAdditionalDataHolder, IPars
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.AvailableDomainsSchema>(KClient.Models.AvailableDomainsSchema.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.AvailableDomainsSchema>(Models.AvailableDomainsSchema.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -50,7 +49,7 @@ public partial class Available_domainsGetResponse : IAdditionalDataHolder, IPars
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KClient.Models.AvailableDomainsSchema>("result", Result);
+        writer.WriteObjectValue<Models.AvailableDomainsSchema>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

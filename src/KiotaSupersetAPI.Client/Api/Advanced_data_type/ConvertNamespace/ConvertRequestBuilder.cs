@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Advanced_data_type.ConvertNamespace;
 
@@ -35,31 +34,31 @@ public partial class ConvertRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns an AdvancedDataTypeResponse object populated with the passed in args.
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.AdvancedDataTypeSchema"/></returns>
+    /// <returns>A <see cref="Models.AdvancedDataTypeSchema"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.AdvancedDataTypeSchema400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.AdvancedDataTypeSchema401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.AdvancedDataTypeSchema404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.AdvancedDataTypeSchema500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.AdvancedDataTypeSchema400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.AdvancedDataTypeSchema401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.AdvancedDataTypeSchema404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.AdvancedDataTypeSchema500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-    public async Task<KClient.Models.AdvancedDataTypeSchema?> GetAsync(Action<RequestConfiguration<Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Models.AdvancedDataTypeSchema?> GetAsync(Action<RequestConfiguration<Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 #nullable restore
 #else
-    public async Task<KClient.Models.AdvancedDataTypeSchema> GetAsync(Action<RequestConfiguration<Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Models.AdvancedDataTypeSchema> GetAsync(Action<RequestConfiguration<Advanced_data_type.ConvertNamespace.ConvertRequestBuilder.ConvertRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 #endif
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.AdvancedDataTypeSchema400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.AdvancedDataTypeSchema401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.AdvancedDataTypeSchema404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.AdvancedDataTypeSchema500Error.CreateFromDiscriminatorValue },
+            { "400", Models.AdvancedDataTypeSchema400Error.CreateFromDiscriminatorValue },
+            { "401", Models.AdvancedDataTypeSchema401Error.CreateFromDiscriminatorValue },
+            { "404", Models.AdvancedDataTypeSchema404Error.CreateFromDiscriminatorValue },
+            { "500", Models.AdvancedDataTypeSchema500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.AdvancedDataTypeSchema>(requestInfo, KClient.Models.AdvancedDataTypeSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.AdvancedDataTypeSchema>(requestInfo, Models.AdvancedDataTypeSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Returns an AdvancedDataTypeResponse object populated with the passed in args.

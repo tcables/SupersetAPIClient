@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Report;
 
@@ -73,22 +72,22 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Report.ReportDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Report401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Report403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Report404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Report422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Report500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Report401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Report403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Report404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Report422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Report500Error">When receiving a 500 status code</exception>
     public async Task<Report.ReportDeleteResponse> DeleteAsReportDeleteResponseAsync(Action<RequestConfiguration<Report.ReportRequestBuilder.ReportRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Report401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Report403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Report404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Report422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Report500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Report401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Report403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Report404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Report422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Report500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Report.ReportDeleteResponse>(requestInfo, Report.ReportDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -98,11 +97,11 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Report.ReportResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Report401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Report403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Report404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Report422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Report500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Report401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Report403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Report404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Report422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Report500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsReportDeleteResponseAsync instead.")]
     public async Task<Report.ReportResponse> DeleteAsync(Action<RequestConfiguration<Report.ReportRequestBuilder.ReportRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -110,11 +109,11 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Report401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Report403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Report404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Report422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Report500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Report401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Report403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Report404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Report422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Report500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Report.ReportResponse>(requestInfo, Report.ReportResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -124,20 +123,20 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Report.ReportGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Report400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Report401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Report422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Report500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Report400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Report401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Report422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Report500Error">When receiving a 500 status code</exception>
     public async Task<Report.ReportGetResponse> GetReportGetResponseAsync(Action<RequestConfiguration<Report.ReportRequestBuilder.ReportRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Report400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Report401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Report422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Report500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Report400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Report401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Report422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Report500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Report.ReportGetResponse>(requestInfo, Report.ReportGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -147,10 +146,10 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Report.ReportResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Report400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Report401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Report422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Report500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Report400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Report401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Report422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Report500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsReportGetResponseAsync instead.")]
     public async Task<Report.ReportResponse> GetAsync(Action<RequestConfiguration<Report.ReportRequestBuilder.ReportRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -158,10 +157,10 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Report400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Report401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Report422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Report500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Report400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Report401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Report422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Report500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Report.ReportResponse>(requestInfo, Report.ReportResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -172,23 +171,23 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Report400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Report401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Report404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Report422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Report500Error">When receiving a 500 status code</exception>
-    public async Task<Report.ReportPostResponse> PostAsReportPostResponseAsync(KClient.Models.ReportScheduleRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Report400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Report401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Report404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Report422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Report500Error">When receiving a 500 status code</exception>
+    public async Task<Report.ReportPostResponse> PostAsReportPostResponseAsync(Models.ReportScheduleRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Report400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Report401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Report404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Report422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Report500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Report400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Report401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Report404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Report422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Report500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Report.ReportPostResponse>(requestInfo, Report.ReportPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -199,24 +198,24 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Report400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Report401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Report404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Report422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Report500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Report400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Report401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Report404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Report422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Report500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsReportPostResponseAsync instead.")]
-    public async Task<Report.ReportResponse> PostAsync(KClient.Models.ReportScheduleRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Report.ReportResponse> PostAsync(Models.ReportScheduleRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Report400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Report401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Report404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Report422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Report500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Report400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Report401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Report404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Report422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Report500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Report.ReportResponse>(requestInfo, Report.ReportResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -252,7 +251,7 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.ReportScheduleRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.ReportScheduleRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Saved_query;
 
@@ -16,7 +15,7 @@ public partial class Saved_queryPostResponse : IAdditionalDataHolder, IParsable
     public string Id { get; set; }
 
     /// <summary>The result property</summary>
-    public KClient.Models.SavedQueryRestApi.Post Result { get; set; }
+    public Models.SavedQueryRestApi.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Saved_query.Saved_queryPostResponse"/> and sets the default values.
@@ -44,7 +43,7 @@ public partial class Saved_queryPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetStringValue(); } },
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Post>(KClient.Models.SavedQueryRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.SavedQueryRestApi.Post>(Models.SavedQueryRestApi.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -55,7 +54,7 @@ public partial class Saved_queryPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("id", Id);
-        writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.SavedQueryRestApi.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

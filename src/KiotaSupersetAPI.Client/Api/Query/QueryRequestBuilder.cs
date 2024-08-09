@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Query;
 
@@ -83,20 +82,20 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Query.QueryGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Query400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Query401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Query422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Query500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Query400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Query401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Query422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Query500Error">When receiving a 500 status code</exception>
     public async Task<Query.QueryGetResponse> GetQueryGetResponseAsync(Action<RequestConfiguration<Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Query400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Query401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Query422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Query500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Query400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Query401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Query422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Query500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Query.QueryGetResponse>(requestInfo, Query.QueryGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -106,10 +105,10 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Query.QueryResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Query400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Query401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Query422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Query500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Query400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Query401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Query422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Query500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsQueryGetResponseAsync instead.")]
     public async Task<Query.QueryResponse> GetAsync(Action<RequestConfiguration<Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -117,10 +116,10 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Query400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Query401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Query422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Query500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Query400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Query401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Query422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Query500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Query.QueryResponse>(requestInfo, Query.QueryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

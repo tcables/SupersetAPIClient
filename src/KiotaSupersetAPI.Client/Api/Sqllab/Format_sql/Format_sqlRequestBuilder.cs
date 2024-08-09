@@ -7,7 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Sqllab.Format_sql;
 
@@ -40,10 +39,10 @@ public partial class Format_sqlRequestBuilder : BaseRequestBuilder
     /// <param name="body">Binary request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Format_sql400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Format_sql401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Format_sql403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Format_sql500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Format_sql400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Format_sql401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Format_sql403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Format_sql500Error">When receiving a 500 status code</exception>
     public async Task<Sqllab.Format_sql.Format_sqlPostResponse> PostAsFormat_sqlPostResponseAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
@@ -51,10 +50,10 @@ public partial class Format_sqlRequestBuilder : BaseRequestBuilder
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Format_sql400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Format_sql401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Format_sql403Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Format_sql500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Format_sql400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Format_sql401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Format_sql403Error.CreateFromDiscriminatorValue },
+            { "500", Models.Format_sql500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Sqllab.Format_sql.Format_sqlPostResponse>(requestInfo, Sqllab.Format_sql.Format_sqlPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -65,10 +64,10 @@ public partial class Format_sqlRequestBuilder : BaseRequestBuilder
     /// <param name="body">Binary request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Format_sql400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Format_sql401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Format_sql403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Format_sql500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Format_sql400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Format_sql401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Format_sql403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Format_sql500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsFormat_sqlPostResponseAsync instead.")]
     public async Task<Sqllab.Format_sql.Format_sqlResponse> PostAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -77,10 +76,10 @@ public partial class Format_sqlRequestBuilder : BaseRequestBuilder
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Format_sql400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Format_sql401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Format_sql403Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Format_sql500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Format_sql400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Format_sql401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Format_sql403Error.CreateFromDiscriminatorValue },
+            { "500", Models.Format_sql500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Sqllab.Format_sql.Format_sqlResponse>(requestInfo, Sqllab.Format_sql.Format_sqlResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

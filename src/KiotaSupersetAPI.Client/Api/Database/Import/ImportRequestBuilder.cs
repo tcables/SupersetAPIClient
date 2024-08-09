@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Import;
 
@@ -39,10 +38,10 @@ public partial class ImportRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Import400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Import401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Import422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Import500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Import400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Import401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Import422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Import500Error">When receiving a 500 status code</exception>
     public async Task<Database.Import.ImportPostResponse> PostAsImportPostResponseAsync(Database.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
@@ -50,10 +49,10 @@ public partial class ImportRequestBuilder : BaseRequestBuilder
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Import400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Import401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Import422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Import500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Import400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Import401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Import422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Import500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Import.ImportPostResponse>(requestInfo, Database.Import.ImportPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -64,10 +63,10 @@ public partial class ImportRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Import400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Import401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Import422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Import500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Import400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Import401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Import422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Import500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsImportPostResponseAsync instead.")]
     public async Task<Database.Import.ImportResponse> PostAsync(Database.Import.ImportPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -76,10 +75,10 @@ public partial class ImportRequestBuilder : BaseRequestBuilder
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Import400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Import401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Import422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Import500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Import400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Import401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Import422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Import500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Import.ImportResponse>(requestInfo, Database.Import.ImportResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

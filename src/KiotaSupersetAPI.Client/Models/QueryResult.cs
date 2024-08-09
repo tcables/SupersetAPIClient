@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -30,7 +29,7 @@ public partial class QueryResult : IAdditionalDataHolder, IParsable
     public string ExecutedSql { get; set; }
 
     /// <summary>The extra property</summary>
-    public KClient.Models.QueryResult_extra Extra { get; set; }
+    public Models.QueryResult_extra Extra { get; set; }
 
     /// <summary>The id property</summary>
     public string Id { get; set; }
@@ -83,7 +82,7 @@ public partial class QueryResult : IAdditionalDataHolder, IParsable
     /// <summary>The userId property</summary>
     public int? UserId { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.QueryResult"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.QueryResult"/> and sets the default values.
     /// </summary>
     public QueryResult()
     {
@@ -92,12 +91,12 @@ public partial class QueryResult : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.QueryResult"/></returns>
+    /// <returns>A <see cref="Models.QueryResult"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.QueryResult CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.QueryResult CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.QueryResult();
+        return new Models.QueryResult();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -114,7 +113,7 @@ public partial class QueryResult : IAdditionalDataHolder, IParsable
             { "endDttm", n => { EndDttm = n.GetDoubleValue(); } },
             { "errorMessage", n => { ErrorMessage = n.GetStringValue(); } },
             { "executedSql", n => { ExecutedSql = n.GetStringValue(); } },
-            { "extra", n => { Extra = n.GetObjectValue<KClient.Models.QueryResult_extra>(KClient.Models.QueryResult_extra.CreateFromDiscriminatorValue); } },
+            { "extra", n => { Extra = n.GetObjectValue<Models.QueryResult_extra>(Models.QueryResult_extra.CreateFromDiscriminatorValue); } },
             { "id", n => { Id = n.GetStringValue(); } },
             { "limit", n => { Limit = n.GetIntValue(); } },
             { "limitingFactor", n => { LimitingFactor = n.GetStringValue(); } },
@@ -150,7 +149,7 @@ public partial class QueryResult : IAdditionalDataHolder, IParsable
         writer.WriteDoubleValue("endDttm", EndDttm);
         writer.WriteStringValue("errorMessage", ErrorMessage);
         writer.WriteStringValue("executedSql", ExecutedSql);
-        writer.WriteObjectValue<KClient.Models.QueryResult_extra>("extra", Extra);
+        writer.WriteObjectValue<Models.QueryResult_extra>("extra", Extra);
         writer.WriteStringValue("id", Id);
         writer.WriteIntValue("limit", Limit);
         writer.WriteStringValue("limitingFactor", LimitingFactor);

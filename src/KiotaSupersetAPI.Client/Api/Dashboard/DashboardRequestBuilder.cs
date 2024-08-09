@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard;
 
@@ -80,22 +79,22 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dashboard.DashboardDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dashboard401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dashboard403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Dashboard404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Dashboard422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dashboard500Error">When receiving a 500 status code</exception>
     public async Task<Dashboard.DashboardDeleteResponse> DeleteAsDashboardDeleteResponseAsync(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Dashboard401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Dashboard403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Dashboard404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dashboard422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dashboard401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Dashboard403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Dashboard404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dashboard422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.DashboardDeleteResponse>(requestInfo, Dashboard.DashboardDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -105,11 +104,11 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dashboard.DashboardResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dashboard401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dashboard403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Dashboard404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Dashboard422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dashboard500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsDashboardDeleteResponseAsync instead.")]
     public async Task<Dashboard.DashboardResponse> DeleteAsync(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -117,11 +116,11 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Dashboard401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Dashboard403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Dashboard404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dashboard422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dashboard401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Dashboard403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Dashboard404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dashboard422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.DashboardResponse>(requestInfo, Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -131,20 +130,20 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dashboard.DashboardGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dashboard400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dashboard400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dashboard401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dashboard422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dashboard500Error">When receiving a 500 status code</exception>
     public async Task<Dashboard.DashboardGetResponse> GetDashboardGetResponseAsync(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dashboard400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dashboard401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dashboard422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dashboard400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dashboard401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dashboard422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.DashboardGetResponse>(requestInfo, Dashboard.DashboardGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -154,10 +153,10 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Dashboard.DashboardResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dashboard400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dashboard400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dashboard401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dashboard422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Dashboard500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsDashboardGetResponseAsync instead.")]
     public async Task<Dashboard.DashboardResponse> GetAsync(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -165,10 +164,10 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dashboard400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dashboard401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Dashboard422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dashboard400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dashboard401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Dashboard422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.DashboardResponse>(requestInfo, Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -179,21 +178,21 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dashboard400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
-    public async Task<Dashboard.DashboardPostResponse> PostAsDashboardPostResponseAsync(KClient.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Dashboard400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dashboard401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dashboard404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Dashboard500Error">When receiving a 500 status code</exception>
+    public async Task<Dashboard.DashboardPostResponse> PostAsDashboardPostResponseAsync(Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dashboard400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dashboard401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Dashboard404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dashboard400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dashboard401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Dashboard404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.DashboardPostResponse>(requestInfo, Dashboard.DashboardPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -204,22 +203,22 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Dashboard400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Dashboard400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Dashboard401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Dashboard404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Dashboard500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsDashboardPostResponseAsync instead.")]
-    public async Task<Dashboard.DashboardResponse> PostAsync(KClient.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.DashboardResponse> PostAsync(Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Dashboard400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Dashboard401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Dashboard404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Dashboard400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Dashboard401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Dashboard404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Dashboard.DashboardResponse>(requestInfo, Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -255,7 +254,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

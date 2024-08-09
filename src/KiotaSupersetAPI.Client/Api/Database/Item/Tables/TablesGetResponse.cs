@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Tables;
 
@@ -16,7 +15,7 @@ public partial class TablesGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>The count property</summary>
     public int? Count { get; set; }
     /// <summary>A List of tables for given database</summary>
-    public List<KClient.Models.DatabaseTablesResponse> Result { get; set; }
+    public List<Models.DatabaseTablesResponse> Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Database.Item.Tables.TablesGetResponse"/> and sets the default values.
@@ -44,7 +43,7 @@ public partial class TablesGetResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "count", n => { Count = n.GetIntValue(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.DatabaseTablesResponse>(KClient.Models.DatabaseTablesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.DatabaseTablesResponse>(Models.DatabaseTablesResponse.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -55,7 +54,7 @@ public partial class TablesGetResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteIntValue("count", Count);
-        writer.WriteCollectionOfObjectValues<KClient.Models.DatabaseTablesResponse>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.DatabaseTablesResponse>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

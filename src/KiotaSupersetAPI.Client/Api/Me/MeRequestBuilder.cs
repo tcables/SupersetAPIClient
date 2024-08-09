@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Me;
 
@@ -43,14 +42,14 @@ public partial class MeRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Me.MeGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Me401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Me401Error">When receiving a 401 status code</exception>
     public async Task<Me.MeGetResponse> GetMeGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Me401Error.CreateFromDiscriminatorValue },
+            { "401", Models.Me401Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Me.MeGetResponse>(requestInfo, Me.MeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -60,7 +59,7 @@ public partial class MeRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Me.MeResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Me401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Me401Error">When receiving a 401 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsMeGetResponseAsync instead.")]
     public async Task<Me.MeResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -68,7 +67,7 @@ public partial class MeRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Me401Error.CreateFromDiscriminatorValue },
+            { "401", Models.Me401Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Me.MeResponse>(requestInfo, Me.MeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

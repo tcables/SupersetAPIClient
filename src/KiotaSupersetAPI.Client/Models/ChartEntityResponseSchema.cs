@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -29,7 +28,7 @@ public partial class ChartEntityResponseSchema : IAdditionalDataHolder, IParsabl
     public string DescriptionMarkeddown { get; set; }
 
     /// <summary>Form data from the Explore controls used to form the chart&apos;s data query.</summary>
-    public KClient.Models.ChartEntityResponseSchema_form_data FormData { get; set; }
+    public Models.ChartEntityResponseSchema_form_data FormData { get; set; }
 
     /// <summary>The id of the chart.</summary>
     public int? Id { get; set; }
@@ -40,7 +39,7 @@ public partial class ChartEntityResponseSchema : IAdditionalDataHolder, IParsabl
     public string SliceUrl { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartEntityResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartEntityResponseSchema"/> and sets the default values.
     /// </summary>
     public ChartEntityResponseSchema()
     {
@@ -49,12 +48,12 @@ public partial class ChartEntityResponseSchema : IAdditionalDataHolder, IParsabl
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartEntityResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.ChartEntityResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartEntityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartEntityResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartEntityResponseSchema();
+        return new Models.ChartEntityResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -70,7 +69,7 @@ public partial class ChartEntityResponseSchema : IAdditionalDataHolder, IParsabl
             { "changed_on", n => { ChangedOn = n.GetDateTimeOffsetValue(); } },
             { "description", n => { Description = n.GetStringValue(); } },
             { "description_markeddown", n => { DescriptionMarkeddown = n.GetStringValue(); } },
-            { "form_data", n => { FormData = n.GetObjectValue<KClient.Models.ChartEntityResponseSchema_form_data>(KClient.Models.ChartEntityResponseSchema_form_data.CreateFromDiscriminatorValue); } },
+            { "form_data", n => { FormData = n.GetObjectValue<Models.ChartEntityResponseSchema_form_data>(Models.ChartEntityResponseSchema_form_data.CreateFromDiscriminatorValue); } },
             { "id", n => { Id = n.GetIntValue(); } },
             { "slice_name", n => { SliceName = n.GetStringValue(); } },
             { "slice_url", n => { SliceUrl = n.GetStringValue(); } },
@@ -89,7 +88,7 @@ public partial class ChartEntityResponseSchema : IAdditionalDataHolder, IParsabl
         writer.WriteDateTimeOffsetValue("changed_on", ChangedOn);
         writer.WriteStringValue("description", Description);
         writer.WriteStringValue("description_markeddown", DescriptionMarkeddown);
-        writer.WriteObjectValue<KClient.Models.ChartEntityResponseSchema_form_data>("form_data", FormData);
+        writer.WriteObjectValue<Models.ChartEntityResponseSchema_form_data>("form_data", FormData);
         writer.WriteIntValue("id", Id);
         writer.WriteStringValue("slice_name", SliceName);
         writer.WriteStringValue("slice_url", SliceUrl);

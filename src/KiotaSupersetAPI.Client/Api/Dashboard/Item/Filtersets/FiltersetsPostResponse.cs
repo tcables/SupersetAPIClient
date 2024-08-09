@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Filtersets;
 
@@ -15,7 +14,7 @@ public partial class FiltersetsPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public KClient.Models.FilterSetRestApi.Post Result { get; set; }
+    public Models.FilterSetRestApi.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.Item.Filtersets.FiltersetsPostResponse"/> and sets the default values.
@@ -43,7 +42,7 @@ public partial class FiltersetsPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.FilterSetRestApi.Post>(KClient.Models.FilterSetRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.FilterSetRestApi.Post>(Models.FilterSetRestApi.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -54,7 +53,7 @@ public partial class FiltersetsPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<KClient.Models.FilterSetRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.FilterSetRestApi.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

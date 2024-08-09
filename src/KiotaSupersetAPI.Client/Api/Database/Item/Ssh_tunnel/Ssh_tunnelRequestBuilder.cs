@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Ssh_tunnel;
 
@@ -38,22 +37,22 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Ssh_tunnel401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Ssh_tunnel403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Ssh_tunnel404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Ssh_tunnel422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Ssh_tunnel500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel500Error">When receiving a 500 status code</exception>
     public async Task<Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse> DeleteAsSsh_tunnelDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Ssh_tunnel401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Ssh_tunnel403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Ssh_tunnel404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Ssh_tunnel422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Ssh_tunnel500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Ssh_tunnel401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Ssh_tunnel403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Ssh_tunnel404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Ssh_tunnel422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Ssh_tunnel500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse>(requestInfo, Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -63,11 +62,11 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Database.Item.Ssh_tunnel.Ssh_tunnelResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Ssh_tunnel401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Ssh_tunnel403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Ssh_tunnel404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Ssh_tunnel422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Ssh_tunnel500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Ssh_tunnel500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsSsh_tunnelDeleteResponseAsync instead.")]
     public async Task<Database.Item.Ssh_tunnel.Ssh_tunnelResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -75,11 +74,11 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Ssh_tunnel401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Ssh_tunnel403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Ssh_tunnel404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Ssh_tunnel422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Ssh_tunnel500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Ssh_tunnel401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Ssh_tunnel403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Ssh_tunnel404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Ssh_tunnel422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Ssh_tunnel500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.Item.Ssh_tunnel.Ssh_tunnelResponse>(requestInfo, Database.Item.Ssh_tunnel.Ssh_tunnelResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

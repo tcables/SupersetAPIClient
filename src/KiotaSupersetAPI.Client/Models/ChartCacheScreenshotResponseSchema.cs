@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -22,7 +21,7 @@ public partial class ChartCacheScreenshotResponseSchema : IAdditionalDataHolder,
     public string ImageUrl { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartCacheScreenshotResponseSchema"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartCacheScreenshotResponseSchema"/> and sets the default values.
     /// </summary>
     public ChartCacheScreenshotResponseSchema()
     {
@@ -31,12 +30,12 @@ public partial class ChartCacheScreenshotResponseSchema : IAdditionalDataHolder,
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartCacheScreenshotResponseSchema"/></returns>
+    /// <returns>A <see cref="Models.ChartCacheScreenshotResponseSchema"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartCacheScreenshotResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartCacheScreenshotResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartCacheScreenshotResponseSchema();
+        return new Models.ChartCacheScreenshotResponseSchema();
     }
     /// <summary>
     /// The deserialization information for the current model

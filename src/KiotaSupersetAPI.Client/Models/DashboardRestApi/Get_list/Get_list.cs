@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.DashboardRestApi.Get_list;
 
@@ -19,7 +18,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public string CertifiedBy { get; set; }
 
     /// <summary>The changed_by property</summary>
-    public KClient.Models.DashboardRestApi.Get_list.User ChangedBy { get; set; }
+    public Models.DashboardRestApi.Get_list.User ChangedBy { get; set; }
 
     /// <summary>The changed_by_name property</summary>
     public UntypedNode ChangedByName { get; private set; }
@@ -31,7 +30,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode ChangedOnUtc { get; private set; }
 
     /// <summary>The created_by property</summary>
-    public KClient.Models.DashboardRestApi.Get_list.User1 CreatedBy { get; set; }
+    public Models.DashboardRestApi.Get_list.User1 CreatedBy { get; set; }
 
     /// <summary>The created_on_delta_humanized property</summary>
     public UntypedNode CreatedOnDeltaHumanized { get; private set; }
@@ -50,7 +49,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public string JsonMetadata { get; set; }
 
     /// <summary>The owners property</summary>
-    public KClient.Models.DashboardRestApi.Get_list.User2 Owners { get; set; }
+    public Models.DashboardRestApi.Get_list.User2 Owners { get; set; }
 
     /// <summary>The position_json property</summary>
     public string PositionJson { get; set; }
@@ -58,7 +57,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>The published property</summary>
     public bool? Published { get; set; }
     /// <summary>The roles property</summary>
-    public KClient.Models.DashboardRestApi.Get_list.Role Roles { get; set; }
+    public Models.DashboardRestApi.Get_list.Role Roles { get; set; }
 
     /// <summary>The slug property</summary>
     public string Slug { get; set; }
@@ -67,7 +66,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode Status { get; private set; }
 
     /// <summary>The tags property</summary>
-    public KClient.Models.DashboardRestApi.Get_list.Tag Tags { get; set; }
+    public Models.DashboardRestApi.Get_list.Tag Tags { get; set; }
 
     /// <summary>The thumbnail_url property</summary>
     public UntypedNode ThumbnailUrl { get; private set; }
@@ -76,7 +75,7 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     public UntypedNode Url { get; private set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DashboardRestApi.Get_list.Get_list"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DashboardRestApi.Get_list.Get_list"/> and sets the default values.
     /// </summary>
     public Get_list()
     {
@@ -85,12 +84,12 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DashboardRestApi.Get_list.Get_list"/></returns>
+    /// <returns>A <see cref="Models.DashboardRestApi.Get_list.Get_list"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DashboardRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DashboardRestApi.Get_list.Get_list CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DashboardRestApi.Get_list.Get_list();
+        return new Models.DashboardRestApi.Get_list.Get_list();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -102,24 +101,24 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
         {
             { "certification_details", n => { CertificationDetails = n.GetStringValue(); } },
             { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
-            { "changed_by", n => { ChangedBy = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.User>(KClient.Models.DashboardRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
+            { "changed_by", n => { ChangedBy = n.GetObjectValue<Models.DashboardRestApi.Get_list.User>(Models.DashboardRestApi.Get_list.User.CreateFromDiscriminatorValue); } },
             { "changed_by_name", n => { ChangedByName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "changed_on_delta_humanized", n => { ChangedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "changed_on_utc", n => { ChangedOnUtc = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "created_by", n => { CreatedBy = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.User1>(KClient.Models.DashboardRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
+            { "created_by", n => { CreatedBy = n.GetObjectValue<Models.DashboardRestApi.Get_list.User1>(Models.DashboardRestApi.Get_list.User1.CreateFromDiscriminatorValue); } },
             { "created_on_delta_humanized", n => { CreatedOnDeltaHumanized = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "css", n => { Css = n.GetStringValue(); } },
             { "dashboard_title", n => { DashboardTitle = n.GetStringValue(); } },
             { "id", n => { Id = n.GetIntValue(); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
             { "json_metadata", n => { JsonMetadata = n.GetStringValue(); } },
-            { "owners", n => { Owners = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.User2>(KClient.Models.DashboardRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
+            { "owners", n => { Owners = n.GetObjectValue<Models.DashboardRestApi.Get_list.User2>(Models.DashboardRestApi.Get_list.User2.CreateFromDiscriminatorValue); } },
             { "position_json", n => { PositionJson = n.GetStringValue(); } },
             { "published", n => { Published = n.GetBoolValue(); } },
-            { "roles", n => { Roles = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.Role>(KClient.Models.DashboardRestApi.Get_list.Role.CreateFromDiscriminatorValue); } },
+            { "roles", n => { Roles = n.GetObjectValue<Models.DashboardRestApi.Get_list.Role>(Models.DashboardRestApi.Get_list.Role.CreateFromDiscriminatorValue); } },
             { "slug", n => { Slug = n.GetStringValue(); } },
             { "status", n => { Status = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-            { "tags", n => { Tags = n.GetObjectValue<KClient.Models.DashboardRestApi.Get_list.Tag>(KClient.Models.DashboardRestApi.Get_list.Tag.CreateFromDiscriminatorValue); } },
+            { "tags", n => { Tags = n.GetObjectValue<Models.DashboardRestApi.Get_list.Tag>(Models.DashboardRestApi.Get_list.Tag.CreateFromDiscriminatorValue); } },
             { "thumbnail_url", n => { ThumbnailUrl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             { "url", n => { Url = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
         };
@@ -133,19 +132,19 @@ public partial class Get_list : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("certification_details", CertificationDetails);
         writer.WriteStringValue("certified_by", CertifiedBy);
-        writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.User>("changed_by", ChangedBy);
-        writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.User1>("created_by", CreatedBy);
+        writer.WriteObjectValue<Models.DashboardRestApi.Get_list.User>("changed_by", ChangedBy);
+        writer.WriteObjectValue<Models.DashboardRestApi.Get_list.User1>("created_by", CreatedBy);
         writer.WriteStringValue("css", Css);
         writer.WriteStringValue("dashboard_title", DashboardTitle);
         writer.WriteIntValue("id", Id);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
         writer.WriteStringValue("json_metadata", JsonMetadata);
-        writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.User2>("owners", Owners);
+        writer.WriteObjectValue<Models.DashboardRestApi.Get_list.User2>("owners", Owners);
         writer.WriteStringValue("position_json", PositionJson);
         writer.WriteBoolValue("published", Published);
-        writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.Role>("roles", Roles);
+        writer.WriteObjectValue<Models.DashboardRestApi.Get_list.Role>("roles", Roles);
         writer.WriteStringValue("slug", Slug);
-        writer.WriteObjectValue<KClient.Models.DashboardRestApi.Get_list.Tag>("tags", Tags);
+        writer.WriteObjectValue<Models.DashboardRestApi.Get_list.Tag>("tags", Tags);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

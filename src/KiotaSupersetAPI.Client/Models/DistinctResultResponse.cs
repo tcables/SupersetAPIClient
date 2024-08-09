@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class DistinctResultResponse : IAdditionalDataHolder, IParsable
     public string Text { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DistinctResultResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DistinctResultResponse"/> and sets the default values.
     /// </summary>
     public DistinctResultResponse()
     {
@@ -25,12 +24,12 @@ public partial class DistinctResultResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DistinctResultResponse"/></returns>
+    /// <returns>A <see cref="Models.DistinctResultResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DistinctResultResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DistinctResultResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DistinctResultResponse();
+        return new Models.DistinctResultResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

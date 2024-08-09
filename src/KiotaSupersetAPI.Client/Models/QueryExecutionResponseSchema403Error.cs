@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class QueryExecutionResponseSchema403Error : ApiException, IAddit
     /// <summary>The primary error message.</summary>
     public override string Message { get => base.Message; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.QueryExecutionResponseSchema403Error"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.QueryExecutionResponseSchema403Error"/> and sets the default values.
     /// </summary>
     public QueryExecutionResponseSchema403Error()
     {
@@ -25,12 +24,12 @@ public partial class QueryExecutionResponseSchema403Error : ApiException, IAddit
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.QueryExecutionResponseSchema403Error"/></returns>
+    /// <returns>A <see cref="Models.QueryExecutionResponseSchema403Error"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.QueryExecutionResponseSchema403Error CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.QueryExecutionResponseSchema403Error CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.QueryExecutionResponseSchema403Error();
+        return new Models.QueryExecutionResponseSchema403Error();
     }
     /// <summary>
     /// The deserialization information for the current model

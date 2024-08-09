@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Query.Stop;
 
@@ -39,21 +38,21 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Stop400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Stop401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Stop404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Stop500Error">When receiving a 500 status code</exception>
-    public async Task<Query.Stop.StopPostResponse> PostAsStopPostResponseAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Stop400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Stop401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Stop404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Stop500Error">When receiving a 500 status code</exception>
+    public async Task<Query.Stop.StopPostResponse> PostAsStopPostResponseAsync(Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Stop400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Stop401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Stop404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Stop500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Stop400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Stop401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Stop404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Stop500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Query.Stop.StopPostResponse>(requestInfo, Query.Stop.StopPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -64,22 +63,22 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Stop400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Stop401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Stop404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Stop500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Stop400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Stop401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Stop404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Stop500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsStopPostResponseAsync instead.")]
-    public async Task<Query.Stop.StopResponse> PostAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Query.Stop.StopResponse> PostAsync(Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Stop400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Stop401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Stop404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Stop500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Stop400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Stop401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Stop404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Stop500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Query.Stop.StopResponse>(requestInfo, Query.Stop.StopResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -89,7 +88,7 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

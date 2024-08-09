@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database;
 
@@ -98,20 +97,20 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Database.DatabaseGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Database422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Database400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Database401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Database422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Database500Error">When receiving a 500 status code</exception>
     public async Task<Database.DatabaseGetResponse> GetDatabaseGetResponseAsync(Action<RequestConfiguration<Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Database400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Database401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Database422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Database400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Database401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Database422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Database500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.DatabaseGetResponse>(requestInfo, Database.DatabaseGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -121,10 +120,10 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Database.DatabaseResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Database422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Database400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Database401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Database422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Database500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsDatabaseGetResponseAsync instead.")]
     public async Task<Database.DatabaseResponse> GetAsync(Action<RequestConfiguration<Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -132,10 +131,10 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Database400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Database401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Database422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Database400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Database401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Database422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Database500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.DatabaseResponse>(requestInfo, Database.DatabaseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -146,21 +145,21 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Database404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
-    public async Task<Database.DatabasePostResponse> PostAsDatabasePostResponseAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Database400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Database401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Database404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Database500Error">When receiving a 500 status code</exception>
+    public async Task<Database.DatabasePostResponse> PostAsDatabasePostResponseAsync(Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Database400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Database401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Database404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Database400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Database401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Database404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Database500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.DatabasePostResponse>(requestInfo, Database.DatabasePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -171,22 +170,22 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Database404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Database400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Database401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Database404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Database500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsDatabasePostResponseAsync instead.")]
-    public async Task<Database.DatabaseResponse> PostAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.DatabaseResponse> PostAsync(Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Database400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Database401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Database404Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Database400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Database401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Database404Error.CreateFromDiscriminatorValue },
+            { "500", Models.Database500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Database.DatabaseResponse>(requestInfo, Database.DatabaseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -209,7 +208,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

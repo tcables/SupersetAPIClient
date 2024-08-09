@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class DatabaseValidateParametersSchema_catalog : IAdditionalDataH
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.DatabaseValidateParametersSchema_catalog"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.DatabaseValidateParametersSchema_catalog"/> and sets the default values.
     /// </summary>
     public DatabaseValidateParametersSchema_catalog()
     {
@@ -25,12 +24,12 @@ public partial class DatabaseValidateParametersSchema_catalog : IAdditionalDataH
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.DatabaseValidateParametersSchema_catalog"/></returns>
+    /// <returns>A <see cref="Models.DatabaseValidateParametersSchema_catalog"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.DatabaseValidateParametersSchema_catalog CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.DatabaseValidateParametersSchema_catalog CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.DatabaseValidateParametersSchema_catalog();
+        return new Models.DatabaseValidateParametersSchema_catalog();
     }
     /// <summary>
     /// The deserialization information for the current model

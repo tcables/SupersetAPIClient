@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Async_event;
 
@@ -38,16 +37,16 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Async_event.Async_eventGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Async_event401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Async_event500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Async_event401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Async_event500Error">When receiving a 500 status code</exception>
     public async Task<Async_event.Async_eventGetResponse> GetAsync_eventGetResponseAsync(Action<RequestConfiguration<Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Async_event401Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Async_event500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Async_event401Error.CreateFromDiscriminatorValue },
+            { "500", Models.Async_event500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Async_event.Async_eventGetResponse>(requestInfo, Async_event.Async_eventGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -57,8 +56,8 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Async_event.Async_eventResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Async_event401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Async_event500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Async_event401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Async_event500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsAsync_eventGetResponseAsync instead.")]
     public async Task<Async_event.Async_eventResponse> GetAsync(Action<RequestConfiguration<Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -66,8 +65,8 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Async_event401Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Async_event500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Async_event401Error.CreateFromDiscriminatorValue },
+            { "500", Models.Async_event500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Async_event.Async_eventResponse>(requestInfo, Async_event.Async_eventResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }

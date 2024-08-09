@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item.Annotation;
 
@@ -15,7 +14,7 @@ public partial class AnnotationPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>The id property</summary>
     public double? Id { get; set; }
     /// <summary>The result property</summary>
-    public KClient.Models.AnnotationRestApi.Post Result { get; set; }
+    public Models.AnnotationRestApi.Post Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Item.Annotation.AnnotationPostResponse"/> and sets the default values.
@@ -43,7 +42,7 @@ public partial class AnnotationPostResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetDoubleValue(); } },
-            { "result", n => { Result = n.GetObjectValue<KClient.Models.AnnotationRestApi.Post>(KClient.Models.AnnotationRestApi.Post.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Models.AnnotationRestApi.Post>(Models.AnnotationRestApi.Post.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -54,7 +53,7 @@ public partial class AnnotationPostResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("id", Id);
-        writer.WriteObjectValue<KClient.Models.AnnotationRestApi.Post>("result", Result);
+        writer.WriteObjectValue<Models.AnnotationRestApi.Post>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

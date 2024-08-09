@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -14,7 +13,7 @@ public partial class AnnotationLayer : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>Type of annotation layer</summary>
-    public KClient.Models.AnnotationLayer_annotationType? AnnotationType { get; set; }
+    public Models.AnnotationLayer_annotationType? AnnotationType { get; set; }
     /// <summary>Layer color</summary>
     public string Color { get; set; }
 
@@ -30,9 +29,9 @@ public partial class AnnotationLayer : IAdditionalDataHolder, IParsable
     public string Name { get; set; }
 
     /// <summary>Opacity of layer</summary>
-    public KClient.Models.AnnotationLayer_opacity? Opacity { get; set; }
+    public Models.AnnotationLayer_opacity? Opacity { get; set; }
     /// <summary>which properties should be overridable</summary>
-    public KClient.Models.AnnotationLayer_overrides Overrides { get; set; }
+    public Models.AnnotationLayer_overrides Overrides { get; set; }
 
     /// <summary>Should the layer be shown</summary>
     public bool? Show { get; set; }
@@ -41,9 +40,9 @@ public partial class AnnotationLayer : IAdditionalDataHolder, IParsable
     /// <summary>Should markers be shown. Only applies to line annotations.</summary>
     public bool? ShowMarkers { get; set; }
     /// <summary>Type of source for annotation data</summary>
-    public KClient.Models.AnnotationLayer_sourceType? SourceType { get; set; }
+    public Models.AnnotationLayer_sourceType? SourceType { get; set; }
     /// <summary>Line style. Only applies to time-series annotations</summary>
-    public KClient.Models.AnnotationLayer_style? Style { get; set; }
+    public Models.AnnotationLayer_style? Style { get; set; }
     /// <summary>Column with event date or interval start date</summary>
     public string TimeColumn { get; set; }
 
@@ -56,7 +55,7 @@ public partial class AnnotationLayer : IAdditionalDataHolder, IParsable
     /// <summary>Width of annotation line</summary>
     public double? Width { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.AnnotationLayer"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.AnnotationLayer"/> and sets the default values.
     /// </summary>
     public AnnotationLayer()
     {
@@ -65,12 +64,12 @@ public partial class AnnotationLayer : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.AnnotationLayer"/></returns>
+    /// <returns>A <see cref="Models.AnnotationLayer"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.AnnotationLayer CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.AnnotationLayer CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.AnnotationLayer();
+        return new Models.AnnotationLayer();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -80,19 +79,19 @@ public partial class AnnotationLayer : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "annotationType", n => { AnnotationType = n.GetEnumValue<KClient.Models.AnnotationLayer_annotationType>(); } },
+            { "annotationType", n => { AnnotationType = n.GetEnumValue<Models.AnnotationLayer_annotationType>(); } },
             { "color", n => { Color = n.GetStringValue(); } },
             { "descriptionColumns", n => { DescriptionColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "hideLine", n => { HideLine = n.GetBoolValue(); } },
             { "intervalEndColumn", n => { IntervalEndColumn = n.GetStringValue(); } },
             { "name", n => { Name = n.GetStringValue(); } },
-            { "opacity", n => { Opacity = n.GetEnumValue<KClient.Models.AnnotationLayer_opacity>(); } },
-            { "overrides", n => { Overrides = n.GetObjectValue<KClient.Models.AnnotationLayer_overrides>(KClient.Models.AnnotationLayer_overrides.CreateFromDiscriminatorValue); } },
+            { "opacity", n => { Opacity = n.GetEnumValue<Models.AnnotationLayer_opacity>(); } },
+            { "overrides", n => { Overrides = n.GetObjectValue<Models.AnnotationLayer_overrides>(Models.AnnotationLayer_overrides.CreateFromDiscriminatorValue); } },
             { "show", n => { Show = n.GetBoolValue(); } },
             { "showLabel", n => { ShowLabel = n.GetBoolValue(); } },
             { "showMarkers", n => { ShowMarkers = n.GetBoolValue(); } },
-            { "sourceType", n => { SourceType = n.GetEnumValue<KClient.Models.AnnotationLayer_sourceType>(); } },
-            { "style", n => { Style = n.GetEnumValue<KClient.Models.AnnotationLayer_style>(); } },
+            { "sourceType", n => { SourceType = n.GetEnumValue<Models.AnnotationLayer_sourceType>(); } },
+            { "style", n => { Style = n.GetEnumValue<Models.AnnotationLayer_style>(); } },
             { "timeColumn", n => { TimeColumn = n.GetStringValue(); } },
             { "titleColumn", n => { TitleColumn = n.GetStringValue(); } },
             { "value", n => { Value = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -106,19 +105,19 @@ public partial class AnnotationLayer : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteEnumValue<KClient.Models.AnnotationLayer_annotationType>("annotationType", AnnotationType);
+        writer.WriteEnumValue<Models.AnnotationLayer_annotationType>("annotationType", AnnotationType);
         writer.WriteStringValue("color", Color);
         writer.WriteCollectionOfPrimitiveValues<string>("descriptionColumns", DescriptionColumns);
         writer.WriteBoolValue("hideLine", HideLine);
         writer.WriteStringValue("intervalEndColumn", IntervalEndColumn);
         writer.WriteStringValue("name", Name);
-        writer.WriteEnumValue<KClient.Models.AnnotationLayer_opacity>("opacity", Opacity);
-        writer.WriteObjectValue<KClient.Models.AnnotationLayer_overrides>("overrides", Overrides);
+        writer.WriteEnumValue<Models.AnnotationLayer_opacity>("opacity", Opacity);
+        writer.WriteObjectValue<Models.AnnotationLayer_overrides>("overrides", Overrides);
         writer.WriteBoolValue("show", Show);
         writer.WriteBoolValue("showLabel", ShowLabel);
         writer.WriteBoolValue("showMarkers", ShowMarkers);
-        writer.WriteEnumValue<KClient.Models.AnnotationLayer_sourceType>("sourceType", SourceType);
-        writer.WriteEnumValue<KClient.Models.AnnotationLayer_style>("style", Style);
+        writer.WriteEnumValue<Models.AnnotationLayer_sourceType>("sourceType", SourceType);
+        writer.WriteEnumValue<Models.AnnotationLayer_style>("style", Style);
         writer.WriteStringValue("timeColumn", TimeColumn);
         writer.WriteStringValue("titleColumn", TitleColumn);
         writer.WriteObjectValue<UntypedNode>("value", Value);

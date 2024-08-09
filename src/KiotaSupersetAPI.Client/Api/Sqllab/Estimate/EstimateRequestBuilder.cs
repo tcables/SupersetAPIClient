@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Sqllab.Estimate;
 
@@ -39,21 +38,21 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Estimate400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Estimate401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Estimate403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Estimate500Error">When receiving a 500 status code</exception>
-    public async Task<Sqllab.Estimate.EstimatePostResponse> PostAsEstimatePostResponseAsync(KClient.Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Estimate400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Estimate401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Estimate403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Estimate500Error">When receiving a 500 status code</exception>
+    public async Task<Sqllab.Estimate.EstimatePostResponse> PostAsEstimatePostResponseAsync(Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Estimate400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Estimate401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Estimate403Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Estimate500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Estimate400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Estimate401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Estimate403Error.CreateFromDiscriminatorValue },
+            { "500", Models.Estimate500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Sqllab.Estimate.EstimatePostResponse>(requestInfo, Sqllab.Estimate.EstimatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -64,22 +63,22 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Estimate400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Estimate401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Estimate403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Estimate500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Estimate400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Estimate401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Estimate403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Estimate500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsEstimatePostResponseAsync instead.")]
-    public async Task<Sqllab.Estimate.EstimateResponse> PostAsync(KClient.Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Sqllab.Estimate.EstimateResponse> PostAsync(Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Estimate400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Estimate401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Estimate403Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Estimate500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Estimate400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Estimate401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Estimate403Error.CreateFromDiscriminatorValue },
+            { "500", Models.Estimate500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Sqllab.Estimate.EstimateResponse>(requestInfo, Sqllab.Estimate.EstimateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -89,7 +88,7 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

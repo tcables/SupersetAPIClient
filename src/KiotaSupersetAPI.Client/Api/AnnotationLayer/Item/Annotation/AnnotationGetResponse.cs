@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item.Annotation;
 
@@ -19,7 +18,7 @@ public partial class AnnotationGetResponse : IAdditionalDataHolder, IParsable
     public List<string> Ids { get; set; }
 
     /// <summary>The result from the get list query</summary>
-    public List<KClient.Models.AnnotationRestApi.Get_list.Get_list> Result { get; set; }
+    public List<Models.AnnotationRestApi.Get_list.Get_list> Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Item.Annotation.AnnotationGetResponse"/> and sets the default values.
@@ -48,7 +47,7 @@ public partial class AnnotationGetResponse : IAdditionalDataHolder, IParsable
         {
             { "count", n => { Count = n.GetDoubleValue(); } },
             { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-            { "result", n => { Result = n.GetCollectionOfObjectValues<KClient.Models.AnnotationRestApi.Get_list.Get_list>(KClient.Models.AnnotationRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "result", n => { Result = n.GetCollectionOfObjectValues<Models.AnnotationRestApi.Get_list.Get_list>(Models.AnnotationRestApi.Get_list.Get_list.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -60,7 +59,7 @@ public partial class AnnotationGetResponse : IAdditionalDataHolder, IParsable
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("count", Count);
         writer.WriteCollectionOfPrimitiveValues<string>("ids", Ids);
-        writer.WriteCollectionOfObjectValues<KClient.Models.AnnotationRestApi.Get_list.Get_list>("result", Result);
+        writer.WriteCollectionOfObjectValues<Models.AnnotationRestApi.Get_list.Get_list>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Rowlevelsecurity;
 
@@ -73,22 +72,22 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Rowlevelsecurity.RowlevelsecurityDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
     public async Task<Rowlevelsecurity.RowlevelsecurityDeleteResponse> DeleteAsRowlevelsecurityDeleteResponseAsync(Action<RequestConfiguration<Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Rowlevelsecurity403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Rowlevelsecurity404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Rowlevelsecurity403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Rowlevelsecurity404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Rowlevelsecurity.RowlevelsecurityDeleteResponse>(requestInfo, Rowlevelsecurity.RowlevelsecurityDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -98,11 +97,11 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Rowlevelsecurity.RowlevelsecurityResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity403Error">When receiving a 403 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity403Error">When receiving a 403 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsRowlevelsecurityDeleteResponseAsync instead.")]
     public async Task<Rowlevelsecurity.RowlevelsecurityResponse> DeleteAsync(Action<RequestConfiguration<Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -110,11 +109,11 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "401", KClient.Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
-            { "403", KClient.Models.Rowlevelsecurity403Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Rowlevelsecurity404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
+            { "401", Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
+            { "403", Models.Rowlevelsecurity403Error.CreateFromDiscriminatorValue },
+            { "404", Models.Rowlevelsecurity404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Rowlevelsecurity.RowlevelsecurityResponse>(requestInfo, Rowlevelsecurity.RowlevelsecurityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -124,20 +123,20 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Rowlevelsecurity.RowlevelsecurityGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
     public async Task<Rowlevelsecurity.RowlevelsecurityGetResponse> GetRowlevelsecurityGetResponseAsync(Action<RequestConfiguration<Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Rowlevelsecurity400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Rowlevelsecurity400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Rowlevelsecurity.RowlevelsecurityGetResponse>(requestInfo, Rowlevelsecurity.RowlevelsecurityGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -147,10 +146,10 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="Rowlevelsecurity.RowlevelsecurityResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsRowlevelsecurityGetResponseAsync instead.")]
     public async Task<Rowlevelsecurity.RowlevelsecurityResponse> GetAsync(Action<RequestConfiguration<Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
@@ -158,10 +157,10 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Rowlevelsecurity400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Rowlevelsecurity400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
+            { "422", Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Rowlevelsecurity.RowlevelsecurityResponse>(requestInfo, Rowlevelsecurity.RowlevelsecurityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -172,23 +171,23 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
-    public async Task<Rowlevelsecurity.RowlevelsecurityPostResponse> PostAsRowlevelsecurityPostResponseAsync(KClient.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
+    public async Task<Rowlevelsecurity.RowlevelsecurityPostResponse> PostAsRowlevelsecurityPostResponseAsync(Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Rowlevelsecurity400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Rowlevelsecurity404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Rowlevelsecurity400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Rowlevelsecurity404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Rowlevelsecurity.RowlevelsecurityPostResponse>(requestInfo, Rowlevelsecurity.RowlevelsecurityPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -199,24 +198,24 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsRowlevelsecurityPostResponseAsync instead.")]
-    public async Task<Rowlevelsecurity.RowlevelsecurityResponse> PostAsync(KClient.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Rowlevelsecurity.RowlevelsecurityResponse> PostAsync(Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
         var requestInfo = ToPostRequestInformation(body, requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.Rowlevelsecurity400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.Rowlevelsecurity404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
+            { "400", Models.Rowlevelsecurity400Error.CreateFromDiscriminatorValue },
+            { "401", Models.Rowlevelsecurity401Error.CreateFromDiscriminatorValue },
+            { "404", Models.Rowlevelsecurity404Error.CreateFromDiscriminatorValue },
+            { "422", Models.Rowlevelsecurity422Error.CreateFromDiscriminatorValue },
+            { "500", Models.Rowlevelsecurity500Error.CreateFromDiscriminatorValue },
         };
         return await RequestAdapter.SendAsync<Rowlevelsecurity.RowlevelsecurityResponse>(requestInfo, Rowlevelsecurity.RowlevelsecurityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
@@ -252,7 +251,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Models.RLSRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));

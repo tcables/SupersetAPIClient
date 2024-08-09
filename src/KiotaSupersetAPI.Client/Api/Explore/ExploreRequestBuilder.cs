@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Explore;
 
@@ -45,27 +44,27 @@ public partial class ExploreRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Assembles Explore related information (form_data, slice, dataset) in a single endpoint.&lt;br/&gt;&lt;br/&gt; The information can be assembled from:&lt;br/&gt; - The cache using a form_data_key&lt;br/&gt; - The metadata database using a permalink_key&lt;br/&gt; - Build from scratch using dataset or slice identifiers.
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ExploreContextSchema"/></returns>
+    /// <returns>A <see cref="Models.ExploreContextSchema"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    /// <exception cref="KClient.Models.ExploreContextSchema400Error">When receiving a 400 status code</exception>
-    /// <exception cref="KClient.Models.ExploreContextSchema401Error">When receiving a 401 status code</exception>
-    /// <exception cref="KClient.Models.ExploreContextSchema404Error">When receiving a 404 status code</exception>
-    /// <exception cref="KClient.Models.ExploreContextSchema422Error">When receiving a 422 status code</exception>
-    /// <exception cref="KClient.Models.ExploreContextSchema500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.ExploreContextSchema> GetAsync(Action<RequestConfiguration<Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    /// <exception cref="Models.ExploreContextSchema400Error">When receiving a 400 status code</exception>
+    /// <exception cref="Models.ExploreContextSchema401Error">When receiving a 401 status code</exception>
+    /// <exception cref="Models.ExploreContextSchema404Error">When receiving a 404 status code</exception>
+    /// <exception cref="Models.ExploreContextSchema422Error">When receiving a 422 status code</exception>
+    /// <exception cref="Models.ExploreContextSchema500Error">When receiving a 500 status code</exception>
+    public async Task<Models.ExploreContextSchema> GetAsync(Action<RequestConfiguration<Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
         var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
         {
-            { "400", KClient.Models.ExploreContextSchema400Error.CreateFromDiscriminatorValue },
-            { "401", KClient.Models.ExploreContextSchema401Error.CreateFromDiscriminatorValue },
-            { "404", KClient.Models.ExploreContextSchema404Error.CreateFromDiscriminatorValue },
-            { "422", KClient.Models.ExploreContextSchema422Error.CreateFromDiscriminatorValue },
-            { "500", KClient.Models.ExploreContextSchema500Error.CreateFromDiscriminatorValue },
+            { "400", Models.ExploreContextSchema400Error.CreateFromDiscriminatorValue },
+            { "401", Models.ExploreContextSchema401Error.CreateFromDiscriminatorValue },
+            { "404", Models.ExploreContextSchema404Error.CreateFromDiscriminatorValue },
+            { "422", Models.ExploreContextSchema422Error.CreateFromDiscriminatorValue },
+            { "500", Models.ExploreContextSchema500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KClient.Models.ExploreContextSchema>(requestInfo, KClient.Models.ExploreContextSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Models.ExploreContextSchema>(requestInfo, Models.ExploreContextSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Assembles Explore related information (form_data, slice, dataset) in a single endpoint.&lt;br/&gt;&lt;br/&gt; The information can be assembled from:&lt;br/&gt; - The cache using a form_data_key&lt;br/&gt; - The metadata database using a permalink_key&lt;br/&gt; - Build from scratch using dataset or slice identifiers.

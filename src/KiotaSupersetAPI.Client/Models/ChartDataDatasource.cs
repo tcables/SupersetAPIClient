@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -15,9 +14,9 @@ public partial class ChartDataDatasource : IAdditionalDataHolder, IParsable
     /// <summary>Datasource id</summary>
     public int? Id { get; set; }
     /// <summary>Datasource type</summary>
-    public KClient.Models.ChartDataDatasource_type? Type { get; set; }
+    public Models.ChartDataDatasource_type? Type { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartDataDatasource"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartDataDatasource"/> and sets the default values.
     /// </summary>
     public ChartDataDatasource()
     {
@@ -26,12 +25,12 @@ public partial class ChartDataDatasource : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartDataDatasource"/></returns>
+    /// <returns>A <see cref="Models.ChartDataDatasource"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartDataDatasource CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartDataDatasource CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartDataDatasource();
+        return new Models.ChartDataDatasource();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -42,7 +41,7 @@ public partial class ChartDataDatasource : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "id", n => { Id = n.GetIntValue(); } },
-            { "type", n => { Type = n.GetEnumValue<KClient.Models.ChartDataDatasource_type>(); } },
+            { "type", n => { Type = n.GetEnumValue<Models.ChartDataDatasource_type>(); } },
         };
     }
     /// <summary>
@@ -53,7 +52,7 @@ public partial class ChartDataDatasource : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteIntValue("id", Id);
-        writer.WriteEnumValue<KClient.Models.ChartDataDatasource_type>("type", Type);
+        writer.WriteEnumValue<Models.ChartDataDatasource_type>("type", Type);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

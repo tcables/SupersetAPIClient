@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models;
 
@@ -16,7 +15,7 @@ public partial class Favorites401Error : ApiException, IAdditionalDataHolder, IP
     /// <summary>The primary error message.</summary>
     public override string Message { get => base.Message; }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.Favorites401Error"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.Favorites401Error"/> and sets the default values.
     /// </summary>
     public Favorites401Error()
     {
@@ -25,12 +24,12 @@ public partial class Favorites401Error : ApiException, IAdditionalDataHolder, IP
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.Favorites401Error"/></returns>
+    /// <returns>A <see cref="Models.Favorites401Error"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.Favorites401Error CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.Favorites401Error CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.Favorites401Error();
+        return new Models.Favorites401Error();
     }
     /// <summary>
     /// The deserialization information for the current model

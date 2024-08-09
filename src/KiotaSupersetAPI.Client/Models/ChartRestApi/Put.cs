@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.Models.ChartRestApi;
 
@@ -27,7 +26,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasource_id` and `datasource_type`.</summary>
     public int? DatasourceId { get; set; }
     /// <summary>The type of dataset/datasource identified on `datasource_id`.</summary>
-    public KClient.Models.ChartRestApi.Put_datasource_type? DatasourceType { get; set; }
+    public Models.ChartRestApi.Put_datasource_type? DatasourceType { get; set; }
     /// <summary>A description of the chart propose.</summary>
     public string Description { get; set; }
 
@@ -51,13 +50,13 @@ public partial class Put : IAdditionalDataHolder, IParsable
     public string SliceName { get; set; }
 
     /// <summary>The tags property</summary>
-    public List<KClient.Models.Tag> Tags { get; set; }
+    public List<Models.Tag> Tags { get; set; }
 
     /// <summary>The type of chart visualization used.</summary>
     public string VizType { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KClient.Models.ChartRestApi.Put"/> and sets the default values.
+    /// Instantiates a new <see cref="Models.ChartRestApi.Put"/> and sets the default values.
     /// </summary>
     public Put()
     {
@@ -66,12 +65,12 @@ public partial class Put : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KClient.Models.ChartRestApi.Put"/></returns>
+    /// <returns>A <see cref="Models.ChartRestApi.Put"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KClient.Models.ChartRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Models.ChartRestApi.Put CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KClient.Models.ChartRestApi.Put();
+        return new Models.ChartRestApi.Put();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -86,7 +85,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
             { "certified_by", n => { CertifiedBy = n.GetStringValue(); } },
             { "dashboards", n => { Dashboards = n.GetCollectionOfPrimitiveValues<int?>()?.ToList(); } },
             { "datasource_id", n => { DatasourceId = n.GetIntValue(); } },
-            { "datasource_type", n => { DatasourceType = n.GetEnumValue<KClient.Models.ChartRestApi.Put_datasource_type>(); } },
+            { "datasource_type", n => { DatasourceType = n.GetEnumValue<Models.ChartRestApi.Put_datasource_type>(); } },
             { "description", n => { Description = n.GetStringValue(); } },
             { "external_url", n => { ExternalUrl = n.GetStringValue(); } },
             { "is_managed_externally", n => { IsManagedExternally = n.GetBoolValue(); } },
@@ -95,7 +94,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
             { "query_context", n => { QueryContext = n.GetStringValue(); } },
             { "query_context_generation", n => { QueryContextGeneration = n.GetBoolValue(); } },
             { "slice_name", n => { SliceName = n.GetStringValue(); } },
-            { "tags", n => { Tags = n.GetCollectionOfObjectValues<KClient.Models.Tag>(KClient.Models.Tag.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "tags", n => { Tags = n.GetCollectionOfObjectValues<Models.Tag>(Models.Tag.CreateFromDiscriminatorValue)?.ToList(); } },
             { "viz_type", n => { VizType = n.GetStringValue(); } },
         };
     }
@@ -111,7 +110,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
         writer.WriteStringValue("certified_by", CertifiedBy);
         writer.WriteCollectionOfPrimitiveValues<int?>("dashboards", Dashboards);
         writer.WriteIntValue("datasource_id", DatasourceId);
-        writer.WriteEnumValue<KClient.Models.ChartRestApi.Put_datasource_type>("datasource_type", DatasourceType);
+        writer.WriteEnumValue<Models.ChartRestApi.Put_datasource_type>("datasource_type", DatasourceType);
         writer.WriteStringValue("description", Description);
         writer.WriteStringValue("external_url", ExternalUrl);
         writer.WriteBoolValue("is_managed_externally", IsManagedExternally);
@@ -120,7 +119,7 @@ public partial class Put : IAdditionalDataHolder, IParsable
         writer.WriteStringValue("query_context", QueryContext);
         writer.WriteBoolValue("query_context_generation", QueryContextGeneration);
         writer.WriteStringValue("slice_name", SliceName);
-        writer.WriteCollectionOfObjectValues<KClient.Models.Tag>("tags", Tags);
+        writer.WriteCollectionOfObjectValues<Models.Tag>("tags", Tags);
         writer.WriteStringValue("viz_type", VizType);
         writer.WriteAdditionalData(AdditionalData);
     }
