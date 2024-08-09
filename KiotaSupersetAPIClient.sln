@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KiotaSupersetAPI.Client", "src\KiotaSupersetAPI.Client\KiotaSupersetAPI.Client.csproj", "{2B39FDBC-68D9-4522-B916-EBBC8903514C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KiotaSupersetAPI.Client", "src\KiotaSupersetAPI.Client\KiotaSupersetAPI.Client.csproj", "{2B39FDBC-68D9-4522-B916-EBBC8903514C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KiotaSupersetAPI.Entities", "src\KiotaSupersetAPI.Entities\KiotaSupersetAPI.Entities.csproj", "{F20DB180-9432-4148-B2DA-7AA96343169D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2B39FDBC-68D9-4522-B916-EBBC8903514C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B39FDBC-68D9-4522-B916-EBBC8903514C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B39FDBC-68D9-4522-B916-EBBC8903514C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F20DB180-9432-4148-B2DA-7AA96343169D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F20DB180-9432-4148-B2DA-7AA96343169D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F20DB180-9432-4148-B2DA-7AA96343169D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F20DB180-9432-4148-B2DA-7AA96343169D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
