@@ -40,7 +40,7 @@ public partial class RolesRequestBuilder : BaseRequestBuilder
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Roles401Error">When receiving a 401 status code</exception>
-    public async Task<KApi.Me.Roles.RolesGetResponse> GetAsRolesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Me.Roles.RolesGetResponse> GetRolesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

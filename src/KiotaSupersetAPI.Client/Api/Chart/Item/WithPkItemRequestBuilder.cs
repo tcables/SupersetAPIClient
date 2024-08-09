@@ -120,7 +120,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Chart.Item.WithPkGetResponse> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Chart.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

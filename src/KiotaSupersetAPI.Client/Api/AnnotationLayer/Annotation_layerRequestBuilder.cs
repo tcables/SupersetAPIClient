@@ -125,7 +125,7 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Annotation_layer401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Annotation_layer422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Annotation_layer500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.AnnotationLayer.Annotation_layerGetResponse> GetAsAnnotation_layerGetResponseAsync(Action<RequestConfiguration<KApi.AnnotationLayer.Annotation_layerRequestBuilder.Annotation_layerRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.AnnotationLayer.Annotation_layerGetResponse> GetAnnotation_layerGetResponseAsync(Action<RequestConfiguration<KApi.AnnotationLayer.Annotation_layerRequestBuilder.Annotation_layerRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

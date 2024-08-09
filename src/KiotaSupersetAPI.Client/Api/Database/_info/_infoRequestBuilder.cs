@@ -43,7 +43,7 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models._info401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models._info422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models._info500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database._info._infoGetResponse> GetAs_infoGetResponseAsync(Action<RequestConfiguration<KApi.Database._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Database._info._infoGetResponse> Get_infoGetResponseAsync(Action<RequestConfiguration<KApi.Database._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

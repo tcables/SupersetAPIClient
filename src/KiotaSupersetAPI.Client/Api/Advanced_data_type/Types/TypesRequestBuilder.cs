@@ -42,7 +42,7 @@ public partial class TypesRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Types401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Types404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Types500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Advanced_data_type.Types.TypesGetResponse> GetAsTypesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Advanced_data_type.Types.TypesGetResponse> GetTypesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

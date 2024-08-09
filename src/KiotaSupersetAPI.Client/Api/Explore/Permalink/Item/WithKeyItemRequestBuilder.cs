@@ -44,7 +44,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Explore.Permalink.Item.WithKeyGetResponse> GetAsWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Explore.Permalink.Item.WithKeyGetResponse> GetWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

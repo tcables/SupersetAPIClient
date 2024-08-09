@@ -129,7 +129,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Rowlevelsecurity401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Rowlevelsecurity422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Rowlevelsecurity500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Rowlevelsecurity.RowlevelsecurityGetResponse> GetAsRowlevelsecurityGetResponseAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Rowlevelsecurity.RowlevelsecurityGetResponse> GetRowlevelsecurityGetResponseAsync(Action<RequestConfiguration<KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder.RowlevelsecurityRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

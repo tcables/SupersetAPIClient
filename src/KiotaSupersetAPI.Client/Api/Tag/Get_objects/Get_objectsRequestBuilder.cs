@@ -43,7 +43,7 @@ public partial class Get_objectsRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Get_objects401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Get_objects404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Get_objects500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Tag.Get_objects.Get_objectsGetResponse> GetAsGet_objectsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Tag.Get_objects.Get_objectsGetResponse> GetGet_objectsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

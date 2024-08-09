@@ -129,7 +129,7 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Report401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Report422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Report500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Report.ReportGetResponse> GetAsReportGetResponseAsync(Action<RequestConfiguration<KApi.Report.ReportRequestBuilder.ReportRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Report.ReportGetResponse> GetReportGetResponseAsync(Action<RequestConfiguration<KApi.Report.ReportRequestBuilder.ReportRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

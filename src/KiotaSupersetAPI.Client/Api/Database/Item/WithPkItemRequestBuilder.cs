@@ -149,7 +149,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.Item.WithPkGetResponse> GetAsWithPkGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Database.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

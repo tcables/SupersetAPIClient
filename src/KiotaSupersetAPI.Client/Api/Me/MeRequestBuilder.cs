@@ -45,7 +45,7 @@ public partial class MeRequestBuilder : BaseRequestBuilder
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Me401Error">When receiving a 401 status code</exception>
-    public async Task<KApi.Me.MeGetResponse> GetAsMeGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Me.MeGetResponse> GetMeGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

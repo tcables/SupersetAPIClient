@@ -103,7 +103,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Database422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.DatabaseGetResponse> GetAsDatabaseGetResponseAsync(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Database.DatabaseGetResponse> GetDatabaseGetResponseAsync(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

@@ -80,7 +80,7 @@ public partial class EmbeddedRequestBuilder : BaseRequestBuilder
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Embedded401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Embedded500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.Item.Embedded.EmbeddedGetResponse> GetAsEmbeddedGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Dashboard.Item.Embedded.EmbeddedGetResponse> GetEmbeddedGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

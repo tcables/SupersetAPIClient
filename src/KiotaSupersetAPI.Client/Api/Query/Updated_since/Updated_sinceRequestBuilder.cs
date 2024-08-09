@@ -43,7 +43,7 @@ public partial class Updated_sinceRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Updated_since401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Updated_since404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Updated_since500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Query.Updated_since.Updated_sinceGetResponse> GetAsUpdated_sinceGetResponseAsync(Action<RequestConfiguration<KApi.Query.Updated_since.Updated_sinceRequestBuilder.Updated_sinceRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Query.Updated_since.Updated_sinceGetResponse> GetUpdated_sinceGetResponseAsync(Action<RequestConfiguration<KApi.Query.Updated_since.Updated_sinceRequestBuilder.Updated_sinceRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

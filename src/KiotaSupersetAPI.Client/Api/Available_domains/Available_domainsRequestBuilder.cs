@@ -41,7 +41,7 @@ public partial class Available_domainsRequestBuilder : BaseRequestBuilder
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Available_domains401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Available_domains403Error">When receiving a 403 status code</exception>
-    public async Task<KApi.Available_domains.Available_domainsGetResponse> GetAsAvailable_domainsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Available_domains.Available_domainsGetResponse> GetAvailable_domainsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

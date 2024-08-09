@@ -88,7 +88,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Query401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Query422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Query500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Query.QueryGetResponse> GetAsQueryGetResponseAsync(Action<RequestConfiguration<KApi.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Query.QueryGetResponse> GetQueryGetResponseAsync(Action<RequestConfiguration<KApi.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

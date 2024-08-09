@@ -44,7 +44,7 @@ public partial class ValuesRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Values403Error">When receiving a 403 status code</exception>
     /// <exception cref="KClient.Models.Values404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Values500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse> GetAsValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse> GetValuesGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

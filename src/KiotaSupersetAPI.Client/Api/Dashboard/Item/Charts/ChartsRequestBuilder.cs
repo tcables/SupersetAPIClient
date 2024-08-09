@@ -43,7 +43,7 @@ public partial class ChartsRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Charts401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Charts403Error">When receiving a 403 status code</exception>
     /// <exception cref="KClient.Models.Charts404Error">When receiving a 404 status code</exception>
-    public async Task<KApi.Dashboard.Item.Charts.ChartsGetResponse> GetAsChartsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Dashboard.Item.Charts.ChartsGetResponse> GetChartsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

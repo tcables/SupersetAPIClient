@@ -41,7 +41,7 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Async_event401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Async_event500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Async_event.Async_eventGetResponse> GetAsAsync_eventGetResponseAsync(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Async_event.Async_eventGetResponse> GetAsync_eventGetResponseAsync(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

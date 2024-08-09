@@ -163,7 +163,7 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Dataset401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Dataset422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Dataset500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dataset.DatasetGetResponse> GetAsDatasetGetResponseAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Dataset.DatasetGetResponse> GetDatasetGetResponseAsync(Action<RequestConfiguration<KApi.Dataset.DatasetRequestBuilder.DatasetRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

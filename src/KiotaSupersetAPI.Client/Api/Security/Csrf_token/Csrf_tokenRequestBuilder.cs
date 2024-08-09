@@ -41,7 +41,7 @@ public partial class Csrf_tokenRequestBuilder : BaseRequestBuilder
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Csrf_token401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Csrf_token500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Security.Csrf_token.Csrf_tokenGetResponse> GetAsCsrf_tokenGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Security.Csrf_token.Csrf_tokenGetResponse> GetCsrf_tokenGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

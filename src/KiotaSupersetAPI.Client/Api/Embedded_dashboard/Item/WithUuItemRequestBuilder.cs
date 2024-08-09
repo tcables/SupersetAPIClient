@@ -42,7 +42,7 @@ public partial class WithUuItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithUu401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.WithUu404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithUu500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Embedded_dashboard.Item.WithUuGetResponse> GetAsWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Embedded_dashboard.Item.WithUuGetResponse> GetWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

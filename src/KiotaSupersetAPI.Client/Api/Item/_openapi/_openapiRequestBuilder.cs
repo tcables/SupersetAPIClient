@@ -42,11 +42,11 @@ public partial class _openapiRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models._openapi500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-    public async Task<KClient.Api.Item._openapi._openapiGetResponse?> GetAs_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KClient.Api.Item._openapi._openapiGetResponse?> Get_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 #nullable restore
 #else
-    public async Task<KClient.Api.Item._openapi._openapiGetResponse> GetAs_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KClient.Api.Item._openapi._openapiGetResponse> Get_openapiGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 #endif
         var requestInfo = ToGetRequestInformation(requestConfiguration);

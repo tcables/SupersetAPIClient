@@ -43,7 +43,7 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithDigest404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithDigest422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithDigest500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse> GetAsWithDigestGetResponseAsync(Action<RequestConfiguration<KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse> GetWithDigestGetResponseAsync(Action<RequestConfiguration<KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

@@ -139,7 +139,7 @@ public partial class Dashboard_ItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Dashboard_401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Dashboard_403Error">When receiving a 403 status code</exception>
     /// <exception cref="KClient.Models.Dashboard_404Error">When receiving a 404 status code</exception>
-    public async Task<KApi.Dashboard.Item.Dashboard_GetResponse> GetAsDashboard_GetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Dashboard.Item.Dashboard_GetResponse> GetDashboard_GetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

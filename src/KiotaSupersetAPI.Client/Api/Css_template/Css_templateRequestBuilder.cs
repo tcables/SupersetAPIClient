@@ -125,7 +125,7 @@ public partial class Css_templateRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Css_template401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Css_template422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Css_template500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Css_template.Css_templateGetResponse> GetAsCss_templateGetResponseAsync(Action<RequestConfiguration<KApi.Css_template.Css_templateRequestBuilder.Css_templateRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Css_template.Css_templateGetResponse> GetCss_templateGetResponseAsync(Action<RequestConfiguration<KApi.Css_template.Css_templateRequestBuilder.Css_templateRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

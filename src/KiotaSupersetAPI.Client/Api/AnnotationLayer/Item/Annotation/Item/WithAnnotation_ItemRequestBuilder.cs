@@ -87,7 +87,7 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithAnnotation_404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithAnnotation_422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithAnnotation_500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse> GetAsWithAnnotation_GetResponseAsync(Action<RequestConfiguration<KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse> GetWithAnnotation_GetResponseAsync(Action<RequestConfiguration<KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder.WithAnnotation_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

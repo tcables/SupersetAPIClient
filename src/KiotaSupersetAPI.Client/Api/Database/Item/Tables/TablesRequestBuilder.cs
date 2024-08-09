@@ -44,7 +44,7 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tables404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Tables422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tables500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.Item.Tables.TablesGetResponse> GetAsTablesGetResponseAsync(Action<RequestConfiguration<KApi.Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Database.Item.Tables.TablesGetResponse> GetTablesGetResponseAsync(Action<RequestConfiguration<KApi.Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

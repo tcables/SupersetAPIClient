@@ -43,7 +43,7 @@ public partial class DatasetsRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Datasets401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Datasets403Error">When receiving a 403 status code</exception>
     /// <exception cref="KClient.Models.Datasets404Error">When receiving a 404 status code</exception>
-    public async Task<KApi.Dashboard.Item.Datasets.DatasetsGetResponse> GetAsDatasetsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Dashboard.Item.Datasets.DatasetsGetResponse> GetDatasetsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

@@ -144,7 +144,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tag401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Tag422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tag500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Tag.TagGetResponse> GetAsTagGetResponseAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Tag.TagGetResponse> GetTagGetResponseAsync(Action<RequestConfiguration<KApi.Tag.TagRequestBuilder.TagRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

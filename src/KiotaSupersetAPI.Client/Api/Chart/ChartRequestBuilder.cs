@@ -154,7 +154,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Chart401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Chart422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Chart500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Chart.ChartGetResponse> GetAsChartGetResponseAsync(Action<RequestConfiguration<KApi.Chart.ChartRequestBuilder.ChartRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Chart.ChartGetResponse> GetChartGetResponseAsync(Action<RequestConfiguration<KApi.Chart.ChartRequestBuilder.ChartRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

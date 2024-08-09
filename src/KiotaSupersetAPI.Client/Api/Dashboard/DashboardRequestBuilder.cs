@@ -136,7 +136,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Dashboard422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.DashboardGetResponse> GetAsDashboardGetResponseAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Dashboard.DashboardGetResponse> GetDashboardGetResponseAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

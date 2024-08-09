@@ -117,7 +117,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Tag.Item.Object_typeGetResponse> GetAsObject_typeGetResponseAsync(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Tag.Item.Object_typeGetResponse> GetObject_typeGetResponseAsync(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);

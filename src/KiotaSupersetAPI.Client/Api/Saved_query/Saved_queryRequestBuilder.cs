@@ -140,7 +140,7 @@ public partial class Saved_queryRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Saved_query401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Saved_query422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Saved_query500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Saved_query.Saved_queryGetResponse> GetAsSaved_queryGetResponseAsync(Action<RequestConfiguration<KApi.Saved_query.Saved_queryRequestBuilder.Saved_queryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KApi.Saved_query.Saved_queryGetResponse> GetSaved_queryGetResponseAsync(Action<RequestConfiguration<KApi.Saved_query.Saved_queryRequestBuilder.Saved_queryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
