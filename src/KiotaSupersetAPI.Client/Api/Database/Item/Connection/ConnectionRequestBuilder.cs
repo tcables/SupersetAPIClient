@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Connection;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Database.Item.Connection;
 public partial class ConnectionRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Connection.ConnectionRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Connection.ConnectionRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class ConnectionRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Connection.ConnectionRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Connection.ConnectionRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -72,11 +71,11 @@ public partial class ConnectionRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.Connection.ConnectionRequestBuilder"/></returns>
+    /// <returns>A <see cref="Database.Item.Connection.ConnectionRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Database.Item.Connection.ConnectionRequestBuilder WithUrl(string rawUrl)
+    public Database.Item.Connection.ConnectionRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Database.Item.Connection.ConnectionRequestBuilder(rawUrl, RequestAdapter);
+        return new Database.Item.Connection.ConnectionRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

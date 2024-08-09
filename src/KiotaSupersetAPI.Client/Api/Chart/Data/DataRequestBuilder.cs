@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Chart.Data;
@@ -19,18 +18,18 @@ public partial class DataRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.data.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Chart.Data.Item.WithCache_keyItemRequestBuilder"/></returns>
-    public KApi.Chart.Data.Item.WithCache_keyItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Chart.Data.Item.WithCache_keyItemRequestBuilder"/></returns>
+    public Chart.Data.Item.WithCache_keyItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("cache_key", position);
-            return new KApi.Chart.Data.Item.WithCache_keyItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Chart.Data.Item.WithCache_keyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.Data.DataRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.Data.DataRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -38,7 +37,7 @@ public partial class DataRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.Data.DataRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.Data.DataRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -87,11 +86,11 @@ public partial class DataRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.Data.DataRequestBuilder"/></returns>
+    /// <returns>A <see cref="Chart.Data.DataRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Chart.Data.DataRequestBuilder WithUrl(string rawUrl)
+    public Chart.Data.DataRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Chart.Data.DataRequestBuilder(rawUrl, RequestAdapter);
+        return new Chart.Data.DataRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

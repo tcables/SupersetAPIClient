@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Item;
@@ -18,37 +17,37 @@ namespace KiotaSupersetAPI.Client.API.Tag.Item;
 public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The favorites property</summary>
-    public KApi.Tag.Item.Favorites.FavoritesRequestBuilder Favorites
+    public Tag.Item.Favorites.FavoritesRequestBuilder Favorites
     {
-        get => new KApi.Tag.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Tag.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
-    public KApi.Tag.Item.Item.WithObject_ItemRequestBuilder this[int position]
+    /// <returns>A <see cref="Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
+    public Tag.Item.Item.WithObject_ItemRequestBuilder this[int position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("object_id", position);
-            return new KApi.Tag.Item.Item.WithObject_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Tag.Item.Item.WithObject_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public KApi.Tag.Item.Item.WithObject_ItemRequestBuilder this[string position]
+    public Tag.Item.Item.WithObject_ItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("object_id", position);
-            return new KApi.Tag.Item.Item.WithObject_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Tag.Item.Item.WithObject_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Item.Object_typeItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Item.Object_typeItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -56,7 +55,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Item.Object_typeItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Item.Object_typeItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -66,13 +65,13 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Delete a tag
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Item.Object_typeDeleteResponse"/></returns>
+    /// <returns>A <see cref="Tag.Item.Object_typeDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Tag.Item.Object_typeDeleteResponse> DeleteAsObject_typeDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Item.Object_typeDeleteResponse> DeleteAsObject_typeDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -82,19 +81,19 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Item.Object_typeDeleteResponse>(requestInfo, KApi.Tag.Item.Object_typeDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Item.Object_typeDeleteResponse>(requestInfo, Tag.Item.Object_typeDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a tag
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Item.Object_typeResponse"/></returns>
+    /// <returns>A <see cref="Tag.Item.Object_typeResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsObject_typeDeleteResponseAsync instead.")]
-    public async Task<KApi.Tag.Item.Object_typeResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Item.Object_typeResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -104,12 +103,12 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Item.Object_typeResponse>(requestInfo, KApi.Tag.Item.Object_typeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Item.Object_typeResponse>(requestInfo, Tag.Item.Object_typeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get an item model
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Item.Object_typeGetResponse"/></returns>
+    /// <returns>A <see cref="Tag.Item.Object_typeGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Object_type400Error">When receiving a 400 status code</exception>
@@ -117,7 +116,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Tag.Item.Object_typeGetResponse> GetObject_typeGetResponseAsync(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Item.Object_typeGetResponse> GetObject_typeGetResponseAsync(Action<RequestConfiguration<Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -129,12 +128,12 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Item.Object_typeGetResponse>(requestInfo, KApi.Tag.Item.Object_typeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Item.Object_typeGetResponse>(requestInfo, Tag.Item.Object_typeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get an item model
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Item.Object_typeResponse"/></returns>
+    /// <returns>A <see cref="Tag.Item.Object_typeResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Object_type400Error">When receiving a 400 status code</exception>
@@ -143,7 +142,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsObject_typeGetResponseAsync instead.")]
-    public async Task<KApi.Tag.Item.Object_typeResponse> GetAsync(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Item.Object_typeResponse> GetAsync(Action<RequestConfiguration<Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -155,12 +154,12 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Item.Object_typeResponse>(requestInfo, KApi.Tag.Item.Object_typeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Item.Object_typeResponse>(requestInfo, Tag.Item.Object_typeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Changes a Tag.
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Item.Object_typePutResponse"/></returns>
+    /// <returns>A <see cref="Tag.Item.Object_typePutResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -170,7 +169,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Tag.Item.Object_typePutResponse> PutAsObject_typePutResponseAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Item.Object_typePutResponse> PutAsObject_typePutResponseAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -184,12 +183,12 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Item.Object_typePutResponse>(requestInfo, KApi.Tag.Item.Object_typePutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Item.Object_typePutResponse>(requestInfo, Tag.Item.Object_typePutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Changes a Tag.
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Item.Object_typeResponse"/></returns>
+    /// <returns>A <see cref="Tag.Item.Object_typeResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -200,7 +199,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Object_type422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Object_type500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsObject_typePutResponseAsync instead.")]
-    public async Task<KApi.Tag.Item.Object_typeResponse> PutAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Item.Object_typeResponse> PutAsync(KClient.Models.TagRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -214,7 +213,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Object_type422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Object_type500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Item.Object_typeResponse>(requestInfo, KApi.Tag.Item.Object_typeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Item.Object_typeResponse>(requestInfo, Tag.Item.Object_typeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a tag
@@ -234,7 +233,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -261,11 +260,11 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Item.Object_typeItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Tag.Item.Object_typeItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Tag.Item.Object_typeItemRequestBuilder WithUrl(string rawUrl)
+    public Tag.Item.Object_typeItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Tag.Item.Object_typeItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Tag.Item.Object_typeItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.
@@ -290,7 +289,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class Object_typeItemRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>
+    public partial class Object_typeItemRequestBuilderGetRequestConfiguration : RequestConfiguration<Tag.Item.Object_typeItemRequestBuilder.Object_typeItemRequestBuilderGetQueryParameters>
     {
     }
     /// <summary>

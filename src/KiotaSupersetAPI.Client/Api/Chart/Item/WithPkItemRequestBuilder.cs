@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Chart.Item;
@@ -18,32 +17,32 @@ namespace KiotaSupersetAPI.Client.API.Chart.Item;
 public partial class WithPkItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The cache_screenshot property</summary>
-    public KApi.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder Cache_screenshot
+    public Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder Cache_screenshot
     {
-        get => new KApi.Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder(PathParameters, RequestAdapter);
+        get => new Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The data property</summary>
-    public KApi.Chart.Item.Data.DataRequestBuilder Data
+    public Chart.Item.Data.DataRequestBuilder Data
     {
-        get => new KApi.Chart.Item.Data.DataRequestBuilder(PathParameters, RequestAdapter);
+        get => new Chart.Item.Data.DataRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorites property</summary>
-    public KApi.Chart.Item.Favorites.FavoritesRequestBuilder Favorites
+    public Chart.Item.Favorites.FavoritesRequestBuilder Favorites
     {
-        get => new KApi.Chart.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Chart.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The screenshot property</summary>
-    public KApi.Chart.Item.Screenshot.ScreenshotRequestBuilder Screenshot
+    public Chart.Item.Screenshot.ScreenshotRequestBuilder Screenshot
     {
-        get => new KApi.Chart.Item.Screenshot.ScreenshotRequestBuilder(PathParameters, RequestAdapter);
+        get => new Chart.Item.Screenshot.ScreenshotRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The thumbnail property</summary>
-    public KApi.Chart.Item.Thumbnail.ThumbnailRequestBuilder Thumbnail
+    public Chart.Item.Thumbnail.ThumbnailRequestBuilder Thumbnail
     {
-        get => new KApi.Chart.Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
+        get => new Chart.Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.Item.WithPkItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.Item.WithPkItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -51,7 +50,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.Item.WithPkItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.Item.WithPkItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -61,7 +60,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Delete a chart
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.Item.WithPkDeleteResponse"/></returns>
+    /// <returns>A <see cref="Chart.Item.WithPkDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk401Error">When receiving a 401 status code</exception>
@@ -69,7 +68,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Chart.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Chart.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -81,12 +80,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkDeleteResponse>(requestInfo, KApi.Chart.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Chart.Item.WithPkDeleteResponse>(requestInfo, Chart.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a chart
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Chart.Item.WithPkResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk401Error">When receiving a 401 status code</exception>
@@ -95,7 +94,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithPkDeleteResponseAsync instead.")]
-    public async Task<KApi.Chart.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Chart.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -107,12 +106,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkResponse>(requestInfo, KApi.Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Chart.Item.WithPkResponse>(requestInfo, Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get an item model
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.Item.WithPkGetResponse"/></returns>
+    /// <returns>A <see cref="Chart.Item.WithPkGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -120,7 +119,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Chart.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Chart.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -132,12 +131,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkGetResponse>(requestInfo, KApi.Chart.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Chart.Item.WithPkGetResponse>(requestInfo, Chart.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get an item model
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Chart.Item.WithPkResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -146,7 +145,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithPkGetResponseAsync instead.")]
-    public async Task<KApi.Chart.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Chart.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -158,12 +157,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkResponse>(requestInfo, KApi.Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Chart.Item.WithPkResponse>(requestInfo, Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Update a chart
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.Item.WithPkPutResponse"/></returns>
+    /// <returns>A <see cref="Chart.Item.WithPkPutResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -173,7 +172,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Chart.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(KClient.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Chart.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(KClient.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -187,12 +186,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkPutResponse>(requestInfo, KApi.Chart.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Chart.Item.WithPkPutResponse>(requestInfo, Chart.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Update a chart
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Chart.Item.WithPkResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -203,7 +202,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithPkPutResponseAsync instead.")]
-    public async Task<KApi.Chart.Item.WithPkResponse> PutAsync(KClient.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Chart.Item.WithPkResponse> PutAsync(KClient.Models.ChartRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -217,7 +216,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Chart.Item.WithPkResponse>(requestInfo, KApi.Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Chart.Item.WithPkResponse>(requestInfo, Chart.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a chart
@@ -237,7 +236,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -264,11 +263,11 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.Item.WithPkItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Chart.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Chart.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public Chart.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Chart.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Chart.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.
@@ -293,7 +292,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class WithPkItemRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>
+    public partial class WithPkItemRequestBuilderGetRequestConfiguration : RequestConfiguration<Chart.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>
     {
     }
     /// <summary>

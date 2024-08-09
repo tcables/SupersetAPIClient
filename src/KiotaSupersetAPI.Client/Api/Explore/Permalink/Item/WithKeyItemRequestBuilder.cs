@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Explore.Permalink.Item;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Explore.Permalink.Item;
 public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Explore.Permalink.Item.WithKeyItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Explore.Permalink.Item.WithKeyItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get chart&apos;s permanent link state
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Permalink.Item.WithKeyGetResponse"/></returns>
+    /// <returns>A <see cref="Explore.Permalink.Item.WithKeyGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -44,7 +43,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Explore.Permalink.Item.WithKeyGetResponse> GetWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Permalink.Item.WithKeyGetResponse> GetWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -56,12 +55,12 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Permalink.Item.WithKeyGetResponse>(requestInfo, KApi.Explore.Permalink.Item.WithKeyGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Permalink.Item.WithKeyGetResponse>(requestInfo, Explore.Permalink.Item.WithKeyGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get chart&apos;s permanent link state
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Permalink.Item.WithKeyResponse"/></returns>
+    /// <returns>A <see cref="Explore.Permalink.Item.WithKeyResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -70,7 +69,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithKeyGetResponseAsync instead.")]
-    public async Task<KApi.Explore.Permalink.Item.WithKeyResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Permalink.Item.WithKeyResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -82,7 +81,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Permalink.Item.WithKeyResponse>(requestInfo, KApi.Explore.Permalink.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Permalink.Item.WithKeyResponse>(requestInfo, Explore.Permalink.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get chart&apos;s permanent link state
@@ -100,11 +99,11 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Explore.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
+    public Explore.Permalink.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Explore.Permalink.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Css_template._info;
 
@@ -14,10 +13,10 @@ public partial class _infoGetResponse_filters : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The column_name property</summary>
-    public List<KApi.Css_template._info._infoGetResponse_filters_column_name> ColumnName { get; set; }
+    public List<Css_template._info._infoGetResponse_filters_column_name> ColumnName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Css_template._info._infoGetResponse_filters"/> and sets the default values.
+    /// Instantiates a new <see cref="Css_template._info._infoGetResponse_filters"/> and sets the default values.
     /// </summary>
     public _infoGetResponse_filters()
     {
@@ -26,12 +25,12 @@ public partial class _infoGetResponse_filters : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Css_template._info._infoGetResponse_filters"/></returns>
+    /// <returns>A <see cref="Css_template._info._infoGetResponse_filters"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Css_template._info._infoGetResponse_filters CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Css_template._info._infoGetResponse_filters CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Css_template._info._infoGetResponse_filters();
+        return new Css_template._info._infoGetResponse_filters();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -41,7 +40,7 @@ public partial class _infoGetResponse_filters : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "column_name", n => { ColumnName = n.GetCollectionOfObjectValues<KApi.Css_template._info._infoGetResponse_filters_column_name>(KApi.Css_template._info._infoGetResponse_filters_column_name.CreateFromDiscriminatorValue)?.ToList(); } },
+            { "column_name", n => { ColumnName = n.GetCollectionOfObjectValues<Css_template._info._infoGetResponse_filters_column_name>(Css_template._info._infoGetResponse_filters_column_name.CreateFromDiscriminatorValue)?.ToList(); } },
         };
     }
     /// <summary>
@@ -51,7 +50,7 @@ public partial class _infoGetResponse_filters : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteCollectionOfObjectValues<KApi.Css_template._info._infoGetResponse_filters_column_name>("column_name", ColumnName);
+        writer.WriteCollectionOfObjectValues<Css_template._info._infoGetResponse_filters_column_name>("column_name", ColumnName);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

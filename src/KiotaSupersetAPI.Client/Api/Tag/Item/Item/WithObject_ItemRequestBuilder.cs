@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Item.Item;
@@ -19,18 +18,18 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item.item.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder"/></returns>
-    public KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Tag.Item.Item.Item.WithTagItemRequestBuilder"/></returns>
+    public Tag.Item.Item.Item.WithTagItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("tag", position);
-            return new KApi.Tag.Item.Item.Item.WithTagItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Tag.Item.Item.Item.WithTagItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Item.Item.WithObject_ItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Item.Item.WithObject_ItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -38,7 +37,7 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Item.Item.WithObject_ItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Item.Item.WithObject_ItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -55,7 +54,7 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithObject_401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.WithObject_404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithObject_500Error">When receiving a 500 status code</exception>
-    public async Task PostAsync(KApi.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task PostAsync(Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -75,7 +74,7 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KApi.Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Tag.Item.Item.WithObject_PostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -88,11 +87,11 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Tag.Item.Item.WithObject_ItemRequestBuilder WithUrl(string rawUrl)
+    public Tag.Item.Item.WithObject_ItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Tag.Item.Item.WithObject_ItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Tag.Item.Item.WithObject_ItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Permalink.Item;
 
@@ -16,7 +15,7 @@ public partial class WithKeyGetResponse_state : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Permalink.Item.WithKeyGetResponse_state"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Permalink.Item.WithKeyGetResponse_state"/> and sets the default values.
     /// </summary>
     public WithKeyGetResponse_state()
     {
@@ -25,12 +24,12 @@ public partial class WithKeyGetResponse_state : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Permalink.Item.WithKeyGetResponse_state"/></returns>
+    /// <returns>A <see cref="Dashboard.Permalink.Item.WithKeyGetResponse_state"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Dashboard.Permalink.Item.WithKeyGetResponse_state CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Dashboard.Permalink.Item.WithKeyGetResponse_state CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Dashboard.Permalink.Item.WithKeyGetResponse_state();
+        return new Dashboard.Permalink.Item.WithKeyGetResponse_state();
     }
     /// <summary>
     /// The deserialization information for the current model

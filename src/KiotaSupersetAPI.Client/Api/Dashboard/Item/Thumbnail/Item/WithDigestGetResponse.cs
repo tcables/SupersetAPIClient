@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Thumbnail.Item;
 
@@ -16,7 +15,7 @@ public partial class WithDigestGetResponse : IAdditionalDataHolder, IParsable
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Thumbnail.Item.WithDigestGetResponse"/> and sets the default values.
     /// </summary>
     public WithDigestGetResponse()
     {
@@ -25,12 +24,12 @@ public partial class WithDigestGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Dashboard.Item.Thumbnail.Item.WithDigestGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse();
+        return new Dashboard.Item.Thumbnail.Item.WithDigestGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

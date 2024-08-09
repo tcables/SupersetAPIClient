@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Saved_query;
@@ -20,7 +19,7 @@ public partial class Saved_queryPostResponse : IAdditionalDataHolder, IParsable
     public KClient.Models.SavedQueryRestApi.Post Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Saved_query.Saved_queryPostResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Saved_query.Saved_queryPostResponse"/> and sets the default values.
     /// </summary>
     public Saved_queryPostResponse()
     {
@@ -29,12 +28,12 @@ public partial class Saved_queryPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Saved_query.Saved_queryPostResponse"/></returns>
+    /// <returns>A <see cref="Saved_query.Saved_queryPostResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Saved_query.Saved_queryPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Saved_query.Saved_queryPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Saved_query.Saved_queryPostResponse();
+        return new Saved_query.Saved_queryPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

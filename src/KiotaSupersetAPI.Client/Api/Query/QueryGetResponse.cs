@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Query;
@@ -17,13 +16,13 @@ public partial class QueryGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>The total record count on the backend</summary>
     public double? Count { get; set; }
     /// <summary>The description_columns property</summary>
-    public KApi.Query.QueryGetResponse_description_columns DescriptionColumns { get; set; }
+    public Query.QueryGetResponse_description_columns DescriptionColumns { get; set; }
 
     /// <summary>A list of item ids, useful when you don&apos;t know the column id</summary>
     public List<string> Ids { get; set; }
 
     /// <summary>The label_columns property</summary>
-    public KApi.Query.QueryGetResponse_label_columns LabelColumns { get; set; }
+    public Query.QueryGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>A list of columns</summary>
     public List<string> ListColumns { get; set; }
@@ -38,7 +37,7 @@ public partial class QueryGetResponse : IAdditionalDataHolder, IParsable
     public List<KClient.Models.QueryRestApi.Get_list> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Query.QueryGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Query.QueryGetResponse"/> and sets the default values.
     /// </summary>
     public QueryGetResponse()
     {
@@ -47,12 +46,12 @@ public partial class QueryGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Query.QueryGetResponse"/></returns>
+    /// <returns>A <see cref="Query.QueryGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Query.QueryGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Query.QueryGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Query.QueryGetResponse();
+        return new Query.QueryGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -63,9 +62,9 @@ public partial class QueryGetResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "count", n => { Count = n.GetDoubleValue(); } },
-            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<KApi.Query.QueryGetResponse_description_columns>(KApi.Query.QueryGetResponse_description_columns.CreateFromDiscriminatorValue); } },
+            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<Query.QueryGetResponse_description_columns>(Query.QueryGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-            { "label_columns", n => { LabelColumns = n.GetObjectValue<KApi.Query.QueryGetResponse_label_columns>(KApi.Query.QueryGetResponse_label_columns.CreateFromDiscriminatorValue); } },
+            { "label_columns", n => { LabelColumns = n.GetObjectValue<Query.QueryGetResponse_label_columns>(Query.QueryGetResponse_label_columns.CreateFromDiscriminatorValue); } },
             { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "list_title", n => { ListTitle = n.GetStringValue(); } },
             { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
@@ -80,9 +79,9 @@ public partial class QueryGetResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("count", Count);
-        writer.WriteObjectValue<KApi.Query.QueryGetResponse_description_columns>("description_columns", DescriptionColumns);
+        writer.WriteObjectValue<Query.QueryGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteCollectionOfPrimitiveValues<string>("ids", Ids);
-        writer.WriteObjectValue<KApi.Query.QueryGetResponse_label_columns>("label_columns", LabelColumns);
+        writer.WriteObjectValue<Query.QueryGetResponse_label_columns>("label_columns", LabelColumns);
         writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
         writer.WriteStringValue("list_title", ListTitle);
         writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);

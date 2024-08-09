@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Query.Updated_since;
@@ -18,7 +17,7 @@ public partial class Updated_sinceGetResponse : IAdditionalDataHolder, IParsable
     public List<KClient.Models.QueryRestApi.Get.Get> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Query.Updated_since.Updated_sinceGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Query.Updated_since.Updated_sinceGetResponse"/> and sets the default values.
     /// </summary>
     public Updated_sinceGetResponse()
     {
@@ -27,12 +26,12 @@ public partial class Updated_sinceGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Query.Updated_since.Updated_sinceGetResponse"/></returns>
+    /// <returns>A <see cref="Query.Updated_since.Updated_sinceGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Query.Updated_since.Updated_sinceGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Query.Updated_since.Updated_sinceGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Query.Updated_since.Updated_sinceGetResponse();
+        return new Query.Updated_since.Updated_sinceGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

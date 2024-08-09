@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Tag;
 
@@ -16,7 +15,7 @@ public partial class TagDeleteResponse : IAdditionalDataHolder, IParsable
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.TagDeleteResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.TagDeleteResponse"/> and sets the default values.
     /// </summary>
     public TagDeleteResponse()
     {
@@ -25,12 +24,12 @@ public partial class TagDeleteResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.TagDeleteResponse"/></returns>
+    /// <returns>A <see cref="Tag.TagDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Tag.TagDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Tag.TagDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Tag.TagDeleteResponse();
+        return new Tag.TagDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

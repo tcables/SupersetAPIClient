@@ -1,10 +1,9 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
-namespace KiotaSupersetAPI.Client.Api;
+namespace KiotaSupersetAPI.Client.API;
 
 /// <summary>
 /// Builds and executes requests for operations under \api
@@ -13,9 +12,9 @@ namespace KiotaSupersetAPI.Client.Api;
 public partial class ApiRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The v1 property</summary>
-    public KApi.SwaggerV1RequestBuilder V1
+    public SwaggerV1RequestBuilder V1
     {
-        get => new KApi.SwaggerV1RequestBuilder(PathParameters, RequestAdapter);
+        get => new SwaggerV1RequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>

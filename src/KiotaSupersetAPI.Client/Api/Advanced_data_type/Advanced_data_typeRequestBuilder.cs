@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Advanced_data_type;
 
@@ -12,17 +11,17 @@ namespace KiotaSupersetAPI.Client.API.Advanced_data_type;
 public partial class Advanced_data_typeRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The convert property</summary>
-    public KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder Convert
+    public Advanced_data_type.ConvertNamespace.ConvertRequestBuilder Convert
     {
-        get => new KApi.Advanced_data_type.ConvertNamespace.ConvertRequestBuilder(PathParameters, RequestAdapter);
+        get => new Advanced_data_type.ConvertNamespace.ConvertRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The types property</summary>
-    public KApi.Advanced_data_type.Types.TypesRequestBuilder Types
+    public Advanced_data_type.Types.TypesRequestBuilder Types
     {
-        get => new KApi.Advanced_data_type.Types.TypesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Advanced_data_type.Types.TypesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Advanced_data_type.Advanced_data_typeRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Advanced_data_type.Advanced_data_typeRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -30,7 +29,7 @@ public partial class Advanced_data_typeRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Advanced_data_type.Advanced_data_typeRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Advanced_data_type.Advanced_data_typeRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

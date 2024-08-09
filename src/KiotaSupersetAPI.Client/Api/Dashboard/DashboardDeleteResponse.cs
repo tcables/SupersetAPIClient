@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard;
 
@@ -16,7 +15,7 @@ public partial class DashboardDeleteResponse : IAdditionalDataHolder, IParsable
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.DashboardDeleteResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.DashboardDeleteResponse"/> and sets the default values.
     /// </summary>
     public DashboardDeleteResponse()
     {
@@ -25,12 +24,12 @@ public partial class DashboardDeleteResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.DashboardDeleteResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.DashboardDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Dashboard.DashboardDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Dashboard.DashboardDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Dashboard.DashboardDeleteResponse();
+        return new Dashboard.DashboardDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

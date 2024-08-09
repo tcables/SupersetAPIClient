@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Database.Available;
 
@@ -16,7 +15,7 @@ public partial class Available_parameters : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Available.Available_parameters"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Available.Available_parameters"/> and sets the default values.
     /// </summary>
     public Available_parameters()
     {
@@ -25,12 +24,12 @@ public partial class Available_parameters : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Available.Available_parameters"/></returns>
+    /// <returns>A <see cref="Database.Available.Available_parameters"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Database.Available.Available_parameters CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Database.Available.Available_parameters CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Database.Available.Available_parameters();
+        return new Database.Available.Available_parameters();
     }
     /// <summary>
     /// The deserialization information for the current model

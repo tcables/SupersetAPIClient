@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Saved_query._info;
 
@@ -12,21 +11,21 @@ namespace KiotaSupersetAPI.Client.API.Saved_query._info;
 public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
 {
     /// <summary>The add_columns property</summary>
-    public KApi.Saved_query._info._infoGetResponse_add_columns AddColumns { get; set; }
+    public Saved_query._info._infoGetResponse_add_columns AddColumns { get; set; }
 
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The edit_columns property</summary>
-    public KApi.Saved_query._info._infoGetResponse_edit_columns EditColumns { get; set; }
+    public Saved_query._info._infoGetResponse_edit_columns EditColumns { get; set; }
 
     /// <summary>The filters property</summary>
-    public KApi.Saved_query._info._infoGetResponse_filters Filters { get; set; }
+    public Saved_query._info._infoGetResponse_filters Filters { get; set; }
 
     /// <summary>The user permissions for this API resource</summary>
     public List<string> Permissions { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Saved_query._info._infoGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Saved_query._info._infoGetResponse"/> and sets the default values.
     /// </summary>
     public _infoGetResponse()
     {
@@ -35,12 +34,12 @@ public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Saved_query._info._infoGetResponse"/></returns>
+    /// <returns>A <see cref="Saved_query._info._infoGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Saved_query._info._infoGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Saved_query._info._infoGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Saved_query._info._infoGetResponse();
+        return new Saved_query._info._infoGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -50,9 +49,9 @@ public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "add_columns", n => { AddColumns = n.GetObjectValue<KApi.Saved_query._info._infoGetResponse_add_columns>(KApi.Saved_query._info._infoGetResponse_add_columns.CreateFromDiscriminatorValue); } },
-            { "edit_columns", n => { EditColumns = n.GetObjectValue<KApi.Saved_query._info._infoGetResponse_edit_columns>(KApi.Saved_query._info._infoGetResponse_edit_columns.CreateFromDiscriminatorValue); } },
-            { "filters", n => { Filters = n.GetObjectValue<KApi.Saved_query._info._infoGetResponse_filters>(KApi.Saved_query._info._infoGetResponse_filters.CreateFromDiscriminatorValue); } },
+            { "add_columns", n => { AddColumns = n.GetObjectValue<Saved_query._info._infoGetResponse_add_columns>(Saved_query._info._infoGetResponse_add_columns.CreateFromDiscriminatorValue); } },
+            { "edit_columns", n => { EditColumns = n.GetObjectValue<Saved_query._info._infoGetResponse_edit_columns>(Saved_query._info._infoGetResponse_edit_columns.CreateFromDiscriminatorValue); } },
+            { "filters", n => { Filters = n.GetObjectValue<Saved_query._info._infoGetResponse_filters>(Saved_query._info._infoGetResponse_filters.CreateFromDiscriminatorValue); } },
             { "permissions", n => { Permissions = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
         };
     }
@@ -63,9 +62,9 @@ public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KApi.Saved_query._info._infoGetResponse_add_columns>("add_columns", AddColumns);
-        writer.WriteObjectValue<KApi.Saved_query._info._infoGetResponse_edit_columns>("edit_columns", EditColumns);
-        writer.WriteObjectValue<KApi.Saved_query._info._infoGetResponse_filters>("filters", Filters);
+        writer.WriteObjectValue<Saved_query._info._infoGetResponse_add_columns>("add_columns", AddColumns);
+        writer.WriteObjectValue<Saved_query._info._infoGetResponse_edit_columns>("edit_columns", EditColumns);
+        writer.WriteObjectValue<Saved_query._info._infoGetResponse_filters>("filters", Filters);
         writer.WriteCollectionOfPrimitiveValues<string>("permissions", Permissions);
         writer.WriteAdditionalData(AdditionalData);
     }

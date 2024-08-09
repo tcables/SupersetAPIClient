@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Sqllab.Estimate;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Sqllab.Estimate;
 public partial class EstimateRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Sqllab.Estimate.EstimateRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Sqllab.Estimate.EstimateRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Sqllab.Estimate.EstimateRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Sqllab.Estimate.EstimateRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Estimate the SQL query execution cost
     /// </summary>
-    /// <returns>A <see cref="KApi.Sqllab.Estimate.EstimatePostResponse"/></returns>
+    /// <returns>A <see cref="Sqllab.Estimate.EstimatePostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -44,7 +43,7 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Estimate401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Estimate403Error">When receiving a 403 status code</exception>
     /// <exception cref="KClient.Models.Estimate500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Sqllab.Estimate.EstimatePostResponse> PostAsEstimatePostResponseAsync(KClient.Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Sqllab.Estimate.EstimatePostResponse> PostAsEstimatePostResponseAsync(KClient.Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -56,12 +55,12 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
             { "403", KClient.Models.Estimate403Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Estimate500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Sqllab.Estimate.EstimatePostResponse>(requestInfo, KApi.Sqllab.Estimate.EstimatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Sqllab.Estimate.EstimatePostResponse>(requestInfo, Sqllab.Estimate.EstimatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Estimate the SQL query execution cost
     /// </summary>
-    /// <returns>A <see cref="KApi.Sqllab.Estimate.EstimateResponse"/></returns>
+    /// <returns>A <see cref="Sqllab.Estimate.EstimateResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -70,7 +69,7 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Estimate403Error">When receiving a 403 status code</exception>
     /// <exception cref="KClient.Models.Estimate500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsEstimatePostResponseAsync instead.")]
-    public async Task<KApi.Sqllab.Estimate.EstimateResponse> PostAsync(KClient.Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Sqllab.Estimate.EstimateResponse> PostAsync(KClient.Models.EstimateQueryCostSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -82,7 +81,7 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
             { "403", KClient.Models.Estimate403Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Estimate500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Sqllab.Estimate.EstimateResponse>(requestInfo, KApi.Sqllab.Estimate.EstimateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Sqllab.Estimate.EstimateResponse>(requestInfo, Sqllab.Estimate.EstimateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Estimate the SQL query execution cost
@@ -103,11 +102,11 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Sqllab.Estimate.EstimateRequestBuilder"/></returns>
+    /// <returns>A <see cref="Sqllab.Estimate.EstimateRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Sqllab.Estimate.EstimateRequestBuilder WithUrl(string rawUrl)
+    public Sqllab.Estimate.EstimateRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Sqllab.Estimate.EstimateRequestBuilder(rawUrl, RequestAdapter);
+        return new Sqllab.Estimate.EstimateRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

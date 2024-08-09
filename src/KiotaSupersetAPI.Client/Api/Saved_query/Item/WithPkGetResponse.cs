@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Saved_query.Item;
@@ -15,13 +14,13 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The description_columns property</summary>
-    public KApi.Saved_query.Item.WithPkGetResponse_description_columns DescriptionColumns { get; set; }
+    public Saved_query.Item.WithPkGetResponse_description_columns DescriptionColumns { get; set; }
 
     /// <summary>The item id</summary>
     public string Id { get; set; }
 
     /// <summary>The label_columns property</summary>
-    public KApi.Saved_query.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
+    public Saved_query.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
     public KClient.Models.SavedQueryRestApi.Get.Get Result { get; set; }
@@ -33,7 +32,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     public string ShowTitle { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Saved_query.Item.WithPkGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Saved_query.Item.WithPkGetResponse"/> and sets the default values.
     /// </summary>
     public WithPkGetResponse()
     {
@@ -42,12 +41,12 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Saved_query.Item.WithPkGetResponse"/></returns>
+    /// <returns>A <see cref="Saved_query.Item.WithPkGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Saved_query.Item.WithPkGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Saved_query.Item.WithPkGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Saved_query.Item.WithPkGetResponse();
+        return new Saved_query.Item.WithPkGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -57,9 +56,9 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<KApi.Saved_query.Item.WithPkGetResponse_description_columns>(KApi.Saved_query.Item.WithPkGetResponse_description_columns.CreateFromDiscriminatorValue); } },
+            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<Saved_query.Item.WithPkGetResponse_description_columns>(Saved_query.Item.WithPkGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "id", n => { Id = n.GetStringValue(); } },
-            { "label_columns", n => { LabelColumns = n.GetObjectValue<KApi.Saved_query.Item.WithPkGetResponse_label_columns>(KApi.Saved_query.Item.WithPkGetResponse_label_columns.CreateFromDiscriminatorValue); } },
+            { "label_columns", n => { LabelColumns = n.GetObjectValue<Saved_query.Item.WithPkGetResponse_label_columns>(Saved_query.Item.WithPkGetResponse_label_columns.CreateFromDiscriminatorValue); } },
             { "result", n => { Result = n.GetObjectValue<KClient.Models.SavedQueryRestApi.Get.Get>(KClient.Models.SavedQueryRestApi.Get.Get.CreateFromDiscriminatorValue); } },
             { "show_columns", n => { ShowColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "show_title", n => { ShowTitle = n.GetStringValue(); } },
@@ -72,9 +71,9 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KApi.Saved_query.Item.WithPkGetResponse_description_columns>("description_columns", DescriptionColumns);
+        writer.WriteObjectValue<Saved_query.Item.WithPkGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteStringValue("id", Id);
-        writer.WriteObjectValue<KApi.Saved_query.Item.WithPkGetResponse_label_columns>("label_columns", LabelColumns);
+        writer.WriteObjectValue<Saved_query.Item.WithPkGetResponse_label_columns>("label_columns", LabelColumns);
         writer.WriteObjectValue<KClient.Models.SavedQueryRestApi.Get.Get>("result", Result);
         writer.WriteCollectionOfPrimitiveValues<string>("show_columns", ShowColumns);
         writer.WriteStringValue("show_title", ShowTitle);

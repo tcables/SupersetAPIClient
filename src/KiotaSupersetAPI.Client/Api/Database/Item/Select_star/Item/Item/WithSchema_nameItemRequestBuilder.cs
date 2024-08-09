@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Select_star.Item.Item;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Database.Item.Select_star.Item.Item;
 public partial class WithSchema_nameItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class WithSchema_nameItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -74,11 +73,11 @@ public partial class WithSchema_nameItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder WithUrl(string rawUrl)
+    public Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

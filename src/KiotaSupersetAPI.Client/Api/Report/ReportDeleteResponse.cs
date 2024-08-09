@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Report;
 
@@ -16,7 +15,7 @@ public partial class ReportDeleteResponse : IAdditionalDataHolder, IParsable
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Report.ReportDeleteResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Report.ReportDeleteResponse"/> and sets the default values.
     /// </summary>
     public ReportDeleteResponse()
     {
@@ -25,12 +24,12 @@ public partial class ReportDeleteResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Report.ReportDeleteResponse"/></returns>
+    /// <returns>A <see cref="Report.ReportDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Report.ReportDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Report.ReportDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Report.ReportDeleteResponse();
+        return new Report.ReportDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

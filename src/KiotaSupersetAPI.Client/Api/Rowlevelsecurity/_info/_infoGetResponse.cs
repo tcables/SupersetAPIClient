@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Rowlevelsecurity._info;
 
@@ -12,21 +11,21 @@ namespace KiotaSupersetAPI.Client.API.Rowlevelsecurity._info;
 public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
 {
     /// <summary>The add_columns property</summary>
-    public KApi.Rowlevelsecurity._info._infoGetResponse_add_columns AddColumns { get; set; }
+    public Rowlevelsecurity._info._infoGetResponse_add_columns AddColumns { get; set; }
 
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The edit_columns property</summary>
-    public KApi.Rowlevelsecurity._info._infoGetResponse_edit_columns EditColumns { get; set; }
+    public Rowlevelsecurity._info._infoGetResponse_edit_columns EditColumns { get; set; }
 
     /// <summary>The filters property</summary>
-    public KApi.Rowlevelsecurity._info._infoGetResponse_filters Filters { get; set; }
+    public Rowlevelsecurity._info._infoGetResponse_filters Filters { get; set; }
 
     /// <summary>The user permissions for this API resource</summary>
     public List<string> Permissions { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Rowlevelsecurity._info._infoGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Rowlevelsecurity._info._infoGetResponse"/> and sets the default values.
     /// </summary>
     public _infoGetResponse()
     {
@@ -35,12 +34,12 @@ public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Rowlevelsecurity._info._infoGetResponse"/></returns>
+    /// <returns>A <see cref="Rowlevelsecurity._info._infoGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Rowlevelsecurity._info._infoGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Rowlevelsecurity._info._infoGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Rowlevelsecurity._info._infoGetResponse();
+        return new Rowlevelsecurity._info._infoGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -50,9 +49,9 @@ public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "add_columns", n => { AddColumns = n.GetObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_add_columns>(KApi.Rowlevelsecurity._info._infoGetResponse_add_columns.CreateFromDiscriminatorValue); } },
-            { "edit_columns", n => { EditColumns = n.GetObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_edit_columns>(KApi.Rowlevelsecurity._info._infoGetResponse_edit_columns.CreateFromDiscriminatorValue); } },
-            { "filters", n => { Filters = n.GetObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_filters>(KApi.Rowlevelsecurity._info._infoGetResponse_filters.CreateFromDiscriminatorValue); } },
+            { "add_columns", n => { AddColumns = n.GetObjectValue<Rowlevelsecurity._info._infoGetResponse_add_columns>(Rowlevelsecurity._info._infoGetResponse_add_columns.CreateFromDiscriminatorValue); } },
+            { "edit_columns", n => { EditColumns = n.GetObjectValue<Rowlevelsecurity._info._infoGetResponse_edit_columns>(Rowlevelsecurity._info._infoGetResponse_edit_columns.CreateFromDiscriminatorValue); } },
+            { "filters", n => { Filters = n.GetObjectValue<Rowlevelsecurity._info._infoGetResponse_filters>(Rowlevelsecurity._info._infoGetResponse_filters.CreateFromDiscriminatorValue); } },
             { "permissions", n => { Permissions = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
         };
     }
@@ -63,9 +62,9 @@ public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_add_columns>("add_columns", AddColumns);
-        writer.WriteObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_edit_columns>("edit_columns", EditColumns);
-        writer.WriteObjectValue<KApi.Rowlevelsecurity._info._infoGetResponse_filters>("filters", Filters);
+        writer.WriteObjectValue<Rowlevelsecurity._info._infoGetResponse_add_columns>("add_columns", AddColumns);
+        writer.WriteObjectValue<Rowlevelsecurity._info._infoGetResponse_edit_columns>("edit_columns", EditColumns);
+        writer.WriteObjectValue<Rowlevelsecurity._info._infoGetResponse_filters>("filters", Filters);
         writer.WriteCollectionOfPrimitiveValues<string>("permissions", Permissions);
         writer.WriteAdditionalData(AdditionalData);
     }

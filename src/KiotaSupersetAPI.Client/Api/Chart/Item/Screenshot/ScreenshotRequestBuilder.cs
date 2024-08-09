@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Chart.Item.Screenshot;
 
@@ -13,18 +12,18 @@ public partial class ScreenshotRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.item.screenshot.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder"/></returns>
-    public KApi.Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder"/></returns>
+    public Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("digest", position);
-            return new KApi.Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.Item.Screenshot.ScreenshotRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.Item.Screenshot.ScreenshotRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -32,7 +31,7 @@ public partial class ScreenshotRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.Item.Screenshot.ScreenshotRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.Item.Screenshot.ScreenshotRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

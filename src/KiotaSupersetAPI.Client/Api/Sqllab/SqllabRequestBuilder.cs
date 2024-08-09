@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Sqllab;
@@ -18,32 +17,32 @@ namespace KiotaSupersetAPI.Client.API.Sqllab;
 public partial class SqllabRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The estimate property</summary>
-    public KApi.Sqllab.Estimate.EstimateRequestBuilder Estimate
+    public Sqllab.Estimate.EstimateRequestBuilder Estimate
     {
-        get => new KApi.Sqllab.Estimate.EstimateRequestBuilder(PathParameters, RequestAdapter);
+        get => new Sqllab.Estimate.EstimateRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The execute property</summary>
-    public KApi.Sqllab.Execute.ExecuteRequestBuilder Execute
+    public Sqllab.Execute.ExecuteRequestBuilder Execute
     {
-        get => new KApi.Sqllab.Execute.ExecuteRequestBuilder(PathParameters, RequestAdapter);
+        get => new Sqllab.Execute.ExecuteRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
-    public KApi.Sqllab.Export.ExportRequestBuilder Export
+    public Sqllab.Export.ExportRequestBuilder Export
     {
-        get => new KApi.Sqllab.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Sqllab.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The format_sql property</summary>
-    public KApi.Sqllab.Format_sql.Format_sqlRequestBuilder Format_sql
+    public Sqllab.Format_sql.Format_sqlRequestBuilder Format_sql
     {
-        get => new KApi.Sqllab.Format_sql.Format_sqlRequestBuilder(PathParameters, RequestAdapter);
+        get => new Sqllab.Format_sql.Format_sqlRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The results property</summary>
-    public KApi.Sqllab.Results.ResultsRequestBuilder Results
+    public Sqllab.Results.ResultsRequestBuilder Results
     {
-        get => new KApi.Sqllab.Results.ResultsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Sqllab.Results.ResultsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Sqllab.SqllabRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Sqllab.SqllabRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -51,7 +50,7 @@ public partial class SqllabRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Sqllab.SqllabRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Sqllab.SqllabRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -97,11 +96,11 @@ public partial class SqllabRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Sqllab.SqllabRequestBuilder"/></returns>
+    /// <returns>A <see cref="Sqllab.SqllabRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Sqllab.SqllabRequestBuilder WithUrl(string rawUrl)
+    public Sqllab.SqllabRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Sqllab.SqllabRequestBuilder(rawUrl, RequestAdapter);
+        return new Sqllab.SqllabRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

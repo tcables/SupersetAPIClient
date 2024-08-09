@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Get_objects;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Tag.Get_objects;
 public partial class Get_objectsRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Get_objects.Get_objectsRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Get_objects.Get_objectsRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class Get_objectsRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Get_objects.Get_objectsRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Get_objects.Get_objectsRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,14 +35,14 @@ public partial class Get_objectsRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get all objects associated with a tag
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Get_objects.Get_objectsGetResponse"/></returns>
+    /// <returns>A <see cref="Tag.Get_objects.Get_objectsGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Get_objects400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models.Get_objects401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Get_objects404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Get_objects500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Tag.Get_objects.Get_objectsGetResponse> GetGet_objectsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Get_objects.Get_objectsGetResponse> GetGet_objectsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,12 +53,12 @@ public partial class Get_objectsRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Get_objects404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Get_objects500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Get_objects.Get_objectsGetResponse>(requestInfo, KApi.Tag.Get_objects.Get_objectsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Get_objects.Get_objectsGetResponse>(requestInfo, Tag.Get_objects.Get_objectsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get all objects associated with a tag
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Get_objects.Get_objectsResponse"/></returns>
+    /// <returns>A <see cref="Tag.Get_objects.Get_objectsResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Get_objects400Error">When receiving a 400 status code</exception>
@@ -67,7 +66,7 @@ public partial class Get_objectsRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Get_objects404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Get_objects500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsGet_objectsGetResponseAsync instead.")]
-    public async Task<KApi.Tag.Get_objects.Get_objectsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Get_objects.Get_objectsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -78,7 +77,7 @@ public partial class Get_objectsRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Get_objects404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Get_objects500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Get_objects.Get_objectsResponse>(requestInfo, KApi.Tag.Get_objects.Get_objectsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Get_objects.Get_objectsResponse>(requestInfo, Tag.Get_objects.Get_objectsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get all objects associated with a tag
@@ -96,11 +95,11 @@ public partial class Get_objectsRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Get_objects.Get_objectsRequestBuilder"/></returns>
+    /// <returns>A <see cref="Tag.Get_objects.Get_objectsRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Tag.Get_objects.Get_objectsRequestBuilder WithUrl(string rawUrl)
+    public Tag.Get_objects.Get_objectsRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Tag.Get_objects.Get_objectsRequestBuilder(rawUrl, RequestAdapter);
+        return new Tag.Get_objects.Get_objectsRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

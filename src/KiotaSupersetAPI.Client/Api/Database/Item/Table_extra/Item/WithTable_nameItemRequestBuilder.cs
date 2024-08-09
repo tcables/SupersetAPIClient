@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Table_extra.Item;
 
@@ -13,18 +12,18 @@ public partial class WithTable_nameItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item.table_extra.item.item collection</summary>
     /// <param name="position">Table schema</param>
-    /// <returns>A <see cref="KApi.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
-    public KApi.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
+    public Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("schema_name", position);
-            return new KApi.Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -32,7 +31,7 @@ public partial class WithTable_nameItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Table_extra.Item.WithTable_nameItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

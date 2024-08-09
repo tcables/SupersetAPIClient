@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Async_event;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Async_event;
 public partial class Async_eventRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Async_event.Async_eventRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Async_event.Async_eventRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Async_event.Async_eventRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Async_event.Async_eventRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,12 +35,12 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Reads off of the Redis events stream, using the user&apos;s JWT token and optional query params for last event received.
     /// </summary>
-    /// <returns>A <see cref="KApi.Async_event.Async_eventGetResponse"/></returns>
+    /// <returns>A <see cref="Async_event.Async_eventGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Async_event401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Async_event500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Async_event.Async_eventGetResponse> GetAsync_eventGetResponseAsync(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Async_event.Async_eventGetResponse> GetAsync_eventGetResponseAsync(Action<RequestConfiguration<Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -50,18 +49,18 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
             { "401", KClient.Models.Async_event401Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Async_event500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Async_event.Async_eventGetResponse>(requestInfo, KApi.Async_event.Async_eventGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Async_event.Async_eventGetResponse>(requestInfo, Async_event.Async_eventGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Reads off of the Redis events stream, using the user&apos;s JWT token and optional query params for last event received.
     /// </summary>
-    /// <returns>A <see cref="KApi.Async_event.Async_eventResponse"/></returns>
+    /// <returns>A <see cref="Async_event.Async_eventResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Async_event401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Async_event500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsAsync_eventGetResponseAsync instead.")]
-    public async Task<KApi.Async_event.Async_eventResponse> GetAsync(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Async_event.Async_eventResponse> GetAsync(Action<RequestConfiguration<Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -70,14 +69,14 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
             { "401", KClient.Models.Async_event401Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Async_event500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Async_event.Async_eventResponse>(requestInfo, KApi.Async_event.Async_eventResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Async_event.Async_eventResponse>(requestInfo, Async_event.Async_eventResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Reads off of the Redis events stream, using the user&apos;s JWT token and optional query params for last event received.
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -88,11 +87,11 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Async_event.Async_eventRequestBuilder"/></returns>
+    /// <returns>A <see cref="Async_event.Async_eventRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Async_event.Async_eventRequestBuilder WithUrl(string rawUrl)
+    public Async_event.Async_eventRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Async_event.Async_eventRequestBuilder(rawUrl, RequestAdapter);
+        return new Async_event.Async_eventRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Reads off of the Redis events stream, using the user&apos;s JWT token and optional query params for last event received.
@@ -110,7 +109,7 @@ public partial class Async_eventRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class Async_eventRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>
+    public partial class Async_eventRequestBuilderGetRequestConfiguration : RequestConfiguration<Async_event.Async_eventRequestBuilder.Async_eventRequestBuilderGetQueryParameters>
     {
     }
 }

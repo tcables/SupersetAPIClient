@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Permalink;
 
@@ -13,18 +12,18 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.permalink.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
-    public KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Dashboard.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
+    public Dashboard.Permalink.Item.WithKeyItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("key", position);
-            return new KApi.Dashboard.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Dashboard.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -32,7 +31,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Permalink.PermalinkRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

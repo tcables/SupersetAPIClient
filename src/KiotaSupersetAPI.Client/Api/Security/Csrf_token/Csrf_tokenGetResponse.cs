@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Security.Csrf_token;
 
@@ -16,7 +15,7 @@ public partial class Csrf_tokenGetResponse : IAdditionalDataHolder, IParsable
     public string Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Security.Csrf_token.Csrf_tokenGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Security.Csrf_token.Csrf_tokenGetResponse"/> and sets the default values.
     /// </summary>
     public Csrf_tokenGetResponse()
     {
@@ -25,12 +24,12 @@ public partial class Csrf_tokenGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Security.Csrf_token.Csrf_tokenGetResponse"/></returns>
+    /// <returns>A <see cref="Security.Csrf_token.Csrf_tokenGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Security.Csrf_token.Csrf_tokenGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Security.Csrf_token.Csrf_tokenGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Security.Csrf_token.Csrf_tokenGetResponse();
+        return new Security.Csrf_token.Csrf_tokenGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Security.Login;
 
@@ -19,7 +18,7 @@ public partial class LoginPostResponse : IAdditionalDataHolder, IParsable
     public string RefreshToken { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Security.Login.LoginPostResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Security.Login.LoginPostResponse"/> and sets the default values.
     /// </summary>
     public LoginPostResponse()
     {
@@ -28,12 +27,12 @@ public partial class LoginPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Security.Login.LoginPostResponse"/></returns>
+    /// <returns>A <see cref="Security.Login.LoginPostResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Security.Login.LoginPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Security.Login.LoginPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Security.Login.LoginPostResponse();
+        return new Security.Login.LoginPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

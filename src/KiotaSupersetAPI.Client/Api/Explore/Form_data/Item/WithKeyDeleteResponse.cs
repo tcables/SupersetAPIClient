@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Explore.Form_data.Item;
 
@@ -16,7 +15,7 @@ public partial class WithKeyDeleteResponse : IAdditionalDataHolder, IParsable
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Explore.Form_data.Item.WithKeyDeleteResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Explore.Form_data.Item.WithKeyDeleteResponse"/> and sets the default values.
     /// </summary>
     public WithKeyDeleteResponse()
     {
@@ -25,12 +24,12 @@ public partial class WithKeyDeleteResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyDeleteResponse"/></returns>
+    /// <returns>A <see cref="Explore.Form_data.Item.WithKeyDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Explore.Form_data.Item.WithKeyDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Explore.Form_data.Item.WithKeyDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Explore.Form_data.Item.WithKeyDeleteResponse();
+        return new Explore.Form_data.Item.WithKeyDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

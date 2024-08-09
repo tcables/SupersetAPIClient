@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Query.Stop;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Query.Stop;
 public partial class StopRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Query.Stop.StopRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Query.Stop.StopRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Query.Stop.StopRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Query.Stop.StopRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Manually stop a query with client_id
     /// </summary>
-    /// <returns>A <see cref="KApi.Query.Stop.StopPostResponse"/></returns>
+    /// <returns>A <see cref="Query.Stop.StopPostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -44,7 +43,7 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Stop401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Stop404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Stop500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Query.Stop.StopPostResponse> PostAsStopPostResponseAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Query.Stop.StopPostResponse> PostAsStopPostResponseAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -56,12 +55,12 @@ public partial class StopRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Stop404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Stop500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Query.Stop.StopPostResponse>(requestInfo, KApi.Query.Stop.StopPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Query.Stop.StopPostResponse>(requestInfo, Query.Stop.StopPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Manually stop a query with client_id
     /// </summary>
-    /// <returns>A <see cref="KApi.Query.Stop.StopResponse"/></returns>
+    /// <returns>A <see cref="Query.Stop.StopResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -70,7 +69,7 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Stop404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Stop500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsStopPostResponseAsync instead.")]
-    public async Task<KApi.Query.Stop.StopResponse> PostAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Query.Stop.StopResponse> PostAsync(KClient.Models.StopQuerySchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -82,7 +81,7 @@ public partial class StopRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Stop404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Stop500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Query.Stop.StopResponse>(requestInfo, KApi.Query.Stop.StopResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Query.Stop.StopResponse>(requestInfo, Query.Stop.StopResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Manually stop a query with client_id
@@ -103,11 +102,11 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Query.Stop.StopRequestBuilder"/></returns>
+    /// <returns>A <see cref="Query.Stop.StopRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Query.Stop.StopRequestBuilder WithUrl(string rawUrl)
+    public Query.Stop.StopRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Query.Stop.StopRequestBuilder(rawUrl, RequestAdapter);
+        return new Query.Stop.StopRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

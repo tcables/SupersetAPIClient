@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Embedded_dashboard.Item;
@@ -17,7 +16,7 @@ public partial class WithUuGetResponse : IAdditionalDataHolder, IParsable
     public KClient.Models.EmbeddedDashboardResponseSchema Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Embedded_dashboard.Item.WithUuGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Embedded_dashboard.Item.WithUuGetResponse"/> and sets the default values.
     /// </summary>
     public WithUuGetResponse()
     {
@@ -26,12 +25,12 @@ public partial class WithUuGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuGetResponse"/></returns>
+    /// <returns>A <see cref="Embedded_dashboard.Item.WithUuGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Embedded_dashboard.Item.WithUuGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Embedded_dashboard.Item.WithUuGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Embedded_dashboard.Item.WithUuGetResponse();
+        return new Embedded_dashboard.Item.WithUuGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

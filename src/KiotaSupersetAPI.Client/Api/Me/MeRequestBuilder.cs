@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Me;
@@ -18,12 +17,12 @@ namespace KiotaSupersetAPI.Client.API.Me;
 public partial class MeRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The roles property</summary>
-    public KApi.Me.Roles.RolesRequestBuilder Roles
+    public Me.Roles.RolesRequestBuilder Roles
     {
-        get => new KApi.Me.Roles.RolesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Me.Roles.RolesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Me.MeRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Me.MeRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +30,7 @@ public partial class MeRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Me.MeRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Me.MeRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,11 +40,11 @@ public partial class MeRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Gets the user object corresponding to the agent making the request, or returns a 401 error if the user is unauthenticated.
     /// </summary>
-    /// <returns>A <see cref="KApi.Me.MeGetResponse"/></returns>
+    /// <returns>A <see cref="Me.MeGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Me401Error">When receiving a 401 status code</exception>
-    public async Task<KApi.Me.MeGetResponse> GetMeGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Me.MeGetResponse> GetMeGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -53,17 +52,17 @@ public partial class MeRequestBuilder : BaseRequestBuilder
         {
             { "401", KClient.Models.Me401Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Me.MeGetResponse>(requestInfo, KApi.Me.MeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Me.MeGetResponse>(requestInfo, Me.MeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Gets the user object corresponding to the agent making the request, or returns a 401 error if the user is unauthenticated.
     /// </summary>
-    /// <returns>A <see cref="KApi.Me.MeResponse"/></returns>
+    /// <returns>A <see cref="Me.MeResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Me401Error">When receiving a 401 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsMeGetResponseAsync instead.")]
-    public async Task<KApi.Me.MeResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Me.MeResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -71,7 +70,7 @@ public partial class MeRequestBuilder : BaseRequestBuilder
         {
             { "401", KClient.Models.Me401Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Me.MeResponse>(requestInfo, KApi.Me.MeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Me.MeResponse>(requestInfo, Me.MeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Gets the user object corresponding to the agent making the request, or returns a 401 error if the user is unauthenticated.
@@ -89,11 +88,11 @@ public partial class MeRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Me.MeRequestBuilder"/></returns>
+    /// <returns>A <see cref="Me.MeRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Me.MeRequestBuilder WithUrl(string rawUrl)
+    public Me.MeRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Me.MeRequestBuilder(rawUrl, RequestAdapter);
+        return new Me.MeRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

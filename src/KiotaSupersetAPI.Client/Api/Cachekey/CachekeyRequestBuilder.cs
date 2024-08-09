@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Cachekey;
 
@@ -12,12 +11,12 @@ namespace KiotaSupersetAPI.Client.API.Cachekey;
 public partial class CachekeyRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The invalidate property</summary>
-    public KApi.Cachekey.Invalidate.InvalidateRequestBuilder Invalidate
+    public Cachekey.Invalidate.InvalidateRequestBuilder Invalidate
     {
-        get => new KApi.Cachekey.Invalidate.InvalidateRequestBuilder(PathParameters, RequestAdapter);
+        get => new Cachekey.Invalidate.InvalidateRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Cachekey.CachekeyRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Cachekey.CachekeyRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -25,7 +24,7 @@ public partial class CachekeyRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Cachekey.CachekeyRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Cachekey.CachekeyRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Database.Import;
 
@@ -30,7 +29,7 @@ public partial class ImportPostRequestBody : IAdditionalDataHolder, IParsable
     public string SshTunnelPrivateKeys { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Import.ImportPostRequestBody"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Import.ImportPostRequestBody"/> and sets the default values.
     /// </summary>
     public ImportPostRequestBody()
     {
@@ -39,12 +38,12 @@ public partial class ImportPostRequestBody : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Import.ImportPostRequestBody"/></returns>
+    /// <returns>A <see cref="Database.Import.ImportPostRequestBody"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Database.Import.ImportPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Database.Import.ImportPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Database.Import.ImportPostRequestBody();
+        return new Database.Import.ImportPostRequestBody();
     }
     /// <summary>
     /// The deserialization information for the current model

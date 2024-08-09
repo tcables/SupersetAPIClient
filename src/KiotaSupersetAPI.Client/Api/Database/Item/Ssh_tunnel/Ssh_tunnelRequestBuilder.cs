@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Ssh_tunnel;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Database.Item.Ssh_tunnel;
 public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Delete a SSH tunnel
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Ssh_tunnel401Error">When receiving a 401 status code</exception>
@@ -44,7 +43,7 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Ssh_tunnel404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Ssh_tunnel422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Ssh_tunnel500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse> DeleteAsSsh_tunnelDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse> DeleteAsSsh_tunnelDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -56,12 +55,12 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Ssh_tunnel422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Ssh_tunnel500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse>(requestInfo, KApi.Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse>(requestInfo, Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a SSH tunnel
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.Ssh_tunnel.Ssh_tunnelResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Ssh_tunnel401Error">When receiving a 401 status code</exception>
@@ -70,7 +69,7 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Ssh_tunnel422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Ssh_tunnel500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsSsh_tunnelDeleteResponseAsync instead.")]
-    public async Task<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.Ssh_tunnel.Ssh_tunnelResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -82,7 +81,7 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Ssh_tunnel422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Ssh_tunnel500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse>(requestInfo, KApi.Database.Item.Ssh_tunnel.Ssh_tunnelResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.Ssh_tunnel.Ssh_tunnelResponse>(requestInfo, Database.Item.Ssh_tunnel.Ssh_tunnelResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a SSH tunnel
@@ -100,11 +99,11 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/></returns>
+    /// <returns>A <see cref="Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder WithUrl(string rawUrl)
+    public Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(rawUrl, RequestAdapter);
+        return new Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

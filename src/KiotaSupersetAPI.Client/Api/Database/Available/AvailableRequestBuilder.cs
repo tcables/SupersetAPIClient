@@ -7,7 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Available;
@@ -19,7 +18,7 @@ namespace KiotaSupersetAPI.Client.API.Database.Available;
 public partial class AvailableRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Available.AvailableRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Available.AvailableRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -27,7 +26,7 @@ public partial class AvailableRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Available.AvailableRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Available.AvailableRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -37,12 +36,12 @@ public partial class AvailableRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get names of databases currently available
     /// </summary>
-    /// <returns>A List&lt;KApi.Database.Available.Available&gt;</returns>
+    /// <returns>A List&lt;Database.Available.Available&gt;</returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Available400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models.Available500Error">When receiving a 500 status code</exception>
-    public async Task<List<KApi.Database.Available.Available>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<List<Database.Available.Available>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -51,7 +50,7 @@ public partial class AvailableRequestBuilder : BaseRequestBuilder
             { "400", KClient.Models.Available400Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Available500Error.CreateFromDiscriminatorValue },
         };
-        var collectionResult = await RequestAdapter.SendCollectionAsync<KApi.Database.Available.Available>(requestInfo, KApi.Database.Available.Available.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        var collectionResult = await RequestAdapter.SendCollectionAsync<Database.Available.Available>(requestInfo, Database.Available.Available.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         return collectionResult?.ToList();
     }
     /// <summary>
@@ -70,11 +69,11 @@ public partial class AvailableRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Available.AvailableRequestBuilder"/></returns>
+    /// <returns>A <see cref="Database.Available.AvailableRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Database.Available.AvailableRequestBuilder WithUrl(string rawUrl)
+    public Database.Available.AvailableRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Database.Available.AvailableRequestBuilder(rawUrl, RequestAdapter);
+        return new Database.Available.AvailableRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

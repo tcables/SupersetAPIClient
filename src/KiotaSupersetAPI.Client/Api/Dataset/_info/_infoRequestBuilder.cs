@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset._info;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Dataset._info;
 public partial class _infoRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset._info._infoRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset._info._infoRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset._info._infoRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset._info._infoRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,14 +35,14 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get metadata information about this API resource
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset._info._infoGetResponse"/></returns>
+    /// <returns>A <see cref="Dataset._info._infoGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models._info400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models._info401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models._info422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models._info500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dataset._info._infoGetResponse> Get_infoGetResponseAsync(Action<RequestConfiguration<KApi.Dataset._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset._info._infoGetResponse> Get_infoGetResponseAsync(Action<RequestConfiguration<Dataset._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,12 +53,12 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models._info422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models._info500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dataset._info._infoGetResponse>(requestInfo, KApi.Dataset._info._infoGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dataset._info._infoGetResponse>(requestInfo, Dataset._info._infoGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get metadata information about this API resource
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset._info._infoResponse"/></returns>
+    /// <returns>A <see cref="Dataset._info._infoResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models._info400Error">When receiving a 400 status code</exception>
@@ -67,7 +66,7 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models._info422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models._info500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAs_infoGetResponseAsync instead.")]
-    public async Task<KApi.Dataset._info._infoResponse> GetAsync(Action<RequestConfiguration<KApi.Dataset._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset._info._infoResponse> GetAsync(Action<RequestConfiguration<Dataset._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -78,14 +77,14 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models._info422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models._info500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dataset._info._infoResponse>(requestInfo, KApi.Dataset._info._infoResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dataset._info._infoResponse>(requestInfo, Dataset._info._infoResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get metadata information about this API resource
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Dataset._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Dataset._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -96,11 +95,11 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset._info._infoRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dataset._info._infoRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dataset._info._infoRequestBuilder WithUrl(string rawUrl)
+    public Dataset._info._infoRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dataset._info._infoRequestBuilder(rawUrl, RequestAdapter);
+        return new Dataset._info._infoRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Get metadata information about this API resource
@@ -117,7 +116,7 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class _infoRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Dataset._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>
+    public partial class _infoRequestBuilderGetRequestConfiguration : RequestConfiguration<Dataset._info._infoRequestBuilder._infoRequestBuilderGetQueryParameters>
     {
     }
 }

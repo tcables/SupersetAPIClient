@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Bulk_create;
 
@@ -20,7 +19,7 @@ public partial class Bulk_createPostRequestBody : IAdditionalDataHolder, IParsab
     public List<string> Tags { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Bulk_create.Bulk_createPostRequestBody"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Bulk_create.Bulk_createPostRequestBody"/> and sets the default values.
     /// </summary>
     public Bulk_createPostRequestBody()
     {
@@ -29,12 +28,12 @@ public partial class Bulk_createPostRequestBody : IAdditionalDataHolder, IParsab
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Bulk_create.Bulk_createPostRequestBody"/></returns>
+    /// <returns>A <see cref="Tag.Bulk_create.Bulk_createPostRequestBody"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Tag.Bulk_create.Bulk_createPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Tag.Bulk_create.Bulk_createPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Tag.Bulk_create.Bulk_createPostRequestBody();
+        return new Tag.Bulk_create.Bulk_createPostRequestBody();
     }
     /// <summary>
     /// The deserialization information for the current model

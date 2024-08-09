@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Chart;
 
@@ -16,7 +15,7 @@ public partial class ChartGetResponse_label_columns : IAdditionalDataHolder, IPa
     public string ColumnName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.ChartGetResponse_label_columns"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.ChartGetResponse_label_columns"/> and sets the default values.
     /// </summary>
     public ChartGetResponse_label_columns()
     {
@@ -25,12 +24,12 @@ public partial class ChartGetResponse_label_columns : IAdditionalDataHolder, IPa
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.ChartGetResponse_label_columns"/></returns>
+    /// <returns>A <see cref="Chart.ChartGetResponse_label_columns"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Chart.ChartGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Chart.ChartGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Chart.ChartGetResponse_label_columns();
+        return new Chart.ChartGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

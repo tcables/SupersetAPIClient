@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Explore;
@@ -18,17 +17,17 @@ namespace KiotaSupersetAPI.Client.API.Explore;
 public partial class ExploreRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The form_data property</summary>
-    public KApi.Explore.Form_data.Form_dataRequestBuilder Form_data
+    public Explore.Form_data.Form_dataRequestBuilder Form_data
     {
-        get => new KApi.Explore.Form_data.Form_dataRequestBuilder(PathParameters, RequestAdapter);
+        get => new Explore.Form_data.Form_dataRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The permalink property</summary>
-    public KApi.Explore.Permalink.PermalinkRequestBuilder Permalink
+    public Explore.Permalink.PermalinkRequestBuilder Permalink
     {
-        get => new KApi.Explore.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
+        get => new Explore.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Explore.ExploreRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Explore.ExploreRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class ExploreRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Explore.ExploreRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Explore.ExploreRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -54,7 +53,7 @@ public partial class ExploreRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.ExploreContextSchema404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.ExploreContextSchema422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.ExploreContextSchema500Error">When receiving a 500 status code</exception>
-    public async Task<KClient.Models.ExploreContextSchema> GetAsync(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<KClient.Models.ExploreContextSchema> GetAsync(Action<RequestConfiguration<Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -73,7 +72,7 @@ public partial class ExploreRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -84,11 +83,11 @@ public partial class ExploreRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.ExploreRequestBuilder"/></returns>
+    /// <returns>A <see cref="Explore.ExploreRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Explore.ExploreRequestBuilder WithUrl(string rawUrl)
+    public Explore.ExploreRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Explore.ExploreRequestBuilder(rawUrl, RequestAdapter);
+        return new Explore.ExploreRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Assembles Explore related information (form_data, slice, dataset) in a single endpoint.&lt;br/&gt;&lt;br/&gt; The information can be assembled from:&lt;br/&gt; - The cache using a form_data_key&lt;br/&gt; - The metadata database using a permalink_key&lt;br/&gt; - Build from scratch using dataset or slice identifiers.
@@ -115,7 +114,7 @@ public partial class ExploreRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class ExploreRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>
+    public partial class ExploreRequestBuilderGetRequestConfiguration : RequestConfiguration<Explore.ExploreRequestBuilder.ExploreRequestBuilderGetQueryParameters>
     {
     }
 }

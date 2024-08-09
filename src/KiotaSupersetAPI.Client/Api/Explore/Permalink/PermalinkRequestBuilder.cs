@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Explore.Permalink;
@@ -19,18 +18,18 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.explore.permalink.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
-    public KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Explore.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
+    public Explore.Permalink.Item.WithKeyItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("key", position);
-            return new KApi.Explore.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Explore.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Explore.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Explore.Permalink.PermalinkRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -38,7 +37,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Explore.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Explore.Permalink.PermalinkRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -48,7 +47,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Create a new permanent link
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Permalink.PermalinkPostResponse"/></returns>
+    /// <returns>A <see cref="Explore.Permalink.PermalinkPostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -56,7 +55,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Permalink401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Permalink422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Permalink500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Explore.Permalink.PermalinkPostResponse> PostAsPermalinkPostResponseAsync(KClient.Models.ExplorePermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Permalink.PermalinkPostResponse> PostAsPermalinkPostResponseAsync(KClient.Models.ExplorePermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -68,12 +67,12 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Permalink422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Permalink500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Permalink.PermalinkPostResponse>(requestInfo, KApi.Explore.Permalink.PermalinkPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Permalink.PermalinkPostResponse>(requestInfo, Explore.Permalink.PermalinkPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a new permanent link
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Permalink.PermalinkResponse"/></returns>
+    /// <returns>A <see cref="Explore.Permalink.PermalinkResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -82,7 +81,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Permalink422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Permalink500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsPermalinkPostResponseAsync instead.")]
-    public async Task<KApi.Explore.Permalink.PermalinkResponse> PostAsync(KClient.Models.ExplorePermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Permalink.PermalinkResponse> PostAsync(KClient.Models.ExplorePermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -94,7 +93,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Permalink422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Permalink500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Permalink.PermalinkResponse>(requestInfo, KApi.Explore.Permalink.PermalinkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Permalink.PermalinkResponse>(requestInfo, Explore.Permalink.PermalinkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a new permanent link
@@ -115,11 +114,11 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Permalink.PermalinkRequestBuilder"/></returns>
+    /// <returns>A <see cref="Explore.Permalink.PermalinkRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Explore.Permalink.PermalinkRequestBuilder WithUrl(string rawUrl)
+    public Explore.Permalink.PermalinkRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Explore.Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
+        return new Explore.Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

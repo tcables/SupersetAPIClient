@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Validate_parameters;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Database.Validate_parameters;
 public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Validate_parameters.Validate_parametersRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Validate_parameters.Validate_parametersRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Validate_parameters.Validate_parametersRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Validate_parameters.Validate_parametersRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,14 +35,14 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Validate database connection parameters
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Validate_parameters.Validate_parametersPostResponse"/></returns>
+    /// <returns>A <see cref="Database.Validate_parameters.Validate_parametersPostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Validate_parameters400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models.Validate_parameters422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Validate_parameters500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.Validate_parameters.Validate_parametersPostResponse> PostAsValidate_parametersPostResponseAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Validate_parameters.Validate_parametersPostResponse> PostAsValidate_parametersPostResponseAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -54,12 +53,12 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Validate_parameters.Validate_parametersPostResponse>(requestInfo, KApi.Database.Validate_parameters.Validate_parametersPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Validate_parameters.Validate_parametersPostResponse>(requestInfo, Database.Validate_parameters.Validate_parametersPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Validate database connection parameters
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Validate_parameters.Validate_parametersResponse"/></returns>
+    /// <returns>A <see cref="Database.Validate_parameters.Validate_parametersResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -67,7 +66,7 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Validate_parameters422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Validate_parameters500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsValidate_parametersPostResponseAsync instead.")]
-    public async Task<KApi.Database.Validate_parameters.Validate_parametersResponse> PostAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Validate_parameters.Validate_parametersResponse> PostAsync(KClient.Models.DatabaseValidateParametersSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -78,7 +77,7 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Validate_parameters422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Validate_parameters500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Validate_parameters.Validate_parametersResponse>(requestInfo, KApi.Database.Validate_parameters.Validate_parametersResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Validate_parameters.Validate_parametersResponse>(requestInfo, Database.Validate_parameters.Validate_parametersResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Validate database connection parameters
@@ -99,11 +98,11 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Validate_parameters.Validate_parametersRequestBuilder"/></returns>
+    /// <returns>A <see cref="Database.Validate_parameters.Validate_parametersRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Database.Validate_parameters.Validate_parametersRequestBuilder WithUrl(string rawUrl)
+    public Database.Validate_parameters.Validate_parametersRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Database.Validate_parameters.Validate_parametersRequestBuilder(rawUrl, RequestAdapter);
+        return new Database.Validate_parameters.Validate_parametersRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

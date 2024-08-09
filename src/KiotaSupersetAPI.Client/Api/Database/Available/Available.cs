@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Database.Available;
 
@@ -23,13 +22,13 @@ public partial class Available : IAdditionalDataHolder, IParsable
     public string Engine { get; set; }
 
     /// <summary>Dict with public properties form the DB Engine</summary>
-    public KApi.Database.Available.Available_engine_information EngineInformation { get; set; }
+    public Database.Available.Available_engine_information EngineInformation { get; set; }
 
     /// <summary>Name of the database</summary>
     public string Name { get; set; }
 
     /// <summary>JSON schema defining the needed parameters</summary>
-    public KApi.Database.Available.Available_parameters Parameters { get; set; }
+    public Database.Available.Available_parameters Parameters { get; set; }
 
     /// <summary>Is the database preferred?</summary>
     public bool? Preferred { get; set; }
@@ -37,7 +36,7 @@ public partial class Available : IAdditionalDataHolder, IParsable
     public string SqlalchemyUriPlaceholder { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Available.Available"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Available.Available"/> and sets the default values.
     /// </summary>
     public Available()
     {
@@ -46,12 +45,12 @@ public partial class Available : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Available.Available"/></returns>
+    /// <returns>A <see cref="Database.Available.Available"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Database.Available.Available CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Database.Available.Available CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Database.Available.Available();
+        return new Database.Available.Available();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -64,9 +63,9 @@ public partial class Available : IAdditionalDataHolder, IParsable
             { "available_drivers", n => { AvailableDrivers = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "default_driver", n => { DefaultDriver = n.GetStringValue(); } },
             { "engine", n => { Engine = n.GetStringValue(); } },
-            { "engine_information", n => { EngineInformation = n.GetObjectValue<KApi.Database.Available.Available_engine_information>(KApi.Database.Available.Available_engine_information.CreateFromDiscriminatorValue); } },
+            { "engine_information", n => { EngineInformation = n.GetObjectValue<Database.Available.Available_engine_information>(Database.Available.Available_engine_information.CreateFromDiscriminatorValue); } },
             { "name", n => { Name = n.GetStringValue(); } },
-            { "parameters", n => { Parameters = n.GetObjectValue<KApi.Database.Available.Available_parameters>(KApi.Database.Available.Available_parameters.CreateFromDiscriminatorValue); } },
+            { "parameters", n => { Parameters = n.GetObjectValue<Database.Available.Available_parameters>(Database.Available.Available_parameters.CreateFromDiscriminatorValue); } },
             { "preferred", n => { Preferred = n.GetBoolValue(); } },
             { "sqlalchemy_uri_placeholder", n => { SqlalchemyUriPlaceholder = n.GetStringValue(); } },
         };
@@ -81,9 +80,9 @@ public partial class Available : IAdditionalDataHolder, IParsable
         writer.WriteCollectionOfPrimitiveValues<string>("available_drivers", AvailableDrivers);
         writer.WriteStringValue("default_driver", DefaultDriver);
         writer.WriteStringValue("engine", Engine);
-        writer.WriteObjectValue<KApi.Database.Available.Available_engine_information>("engine_information", EngineInformation);
+        writer.WriteObjectValue<Database.Available.Available_engine_information>("engine_information", EngineInformation);
         writer.WriteStringValue("name", Name);
-        writer.WriteObjectValue<KApi.Database.Available.Available_parameters>("parameters", Parameters);
+        writer.WriteObjectValue<Database.Available.Available_parameters>("parameters", Parameters);
         writer.WriteBoolValue("preferred", Preferred);
         writer.WriteStringValue("sqlalchemy_uri_placeholder", SqlalchemyUriPlaceholder);
         writer.WriteAdditionalData(AdditionalData);

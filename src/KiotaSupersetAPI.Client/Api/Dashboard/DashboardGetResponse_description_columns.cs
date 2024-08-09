@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard;
 
@@ -16,7 +15,7 @@ public partial class DashboardGetResponse_description_columns : IAdditionalDataH
     public string ColumnName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.DashboardGetResponse_description_columns"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.DashboardGetResponse_description_columns"/> and sets the default values.
     /// </summary>
     public DashboardGetResponse_description_columns()
     {
@@ -25,12 +24,12 @@ public partial class DashboardGetResponse_description_columns : IAdditionalDataH
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.DashboardGetResponse_description_columns"/></returns>
+    /// <returns>A <see cref="Dashboard.DashboardGetResponse_description_columns"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Dashboard.DashboardGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Dashboard.DashboardGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Dashboard.DashboardGetResponse_description_columns();
+        return new Dashboard.DashboardGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

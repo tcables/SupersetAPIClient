@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database;
@@ -18,67 +17,67 @@ namespace KiotaSupersetAPI.Client.API.Database;
 public partial class DatabaseRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _info property</summary>
-    public KApi.Database._info._infoRequestBuilder _info
+    public Database._info._infoRequestBuilder _info
     {
-        get => new KApi.Database._info._infoRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database._info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The available property</summary>
-    public KApi.Database.Available.AvailableRequestBuilder Available
+    public Database.Available.AvailableRequestBuilder Available
     {
-        get => new KApi.Database.Available.AvailableRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Available.AvailableRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
-    public KApi.Database.Export.ExportRequestBuilder Export
+    public Database.Export.ExportRequestBuilder Export
     {
-        get => new KApi.Database.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The import property</summary>
-    public KApi.Database.Import.ImportRequestBuilder Import
+    public Database.Import.ImportRequestBuilder Import
     {
-        get => new KApi.Database.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public KApi.Database.Related.RelatedRequestBuilder Related
+    public Database.Related.RelatedRequestBuilder Related
     {
-        get => new KApi.Database.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The test_connection property</summary>
-    public KApi.Database.Test_connection.Test_connectionRequestBuilder Test_connection
+    public Database.Test_connection.Test_connectionRequestBuilder Test_connection
     {
-        get => new KApi.Database.Test_connection.Test_connectionRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Test_connection.Test_connectionRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The validate_parameters property</summary>
-    public KApi.Database.Validate_parameters.Validate_parametersRequestBuilder Validate_parameters
+    public Database.Validate_parameters.Validate_parametersRequestBuilder Validate_parameters
     {
-        get => new KApi.Database.Validate_parameters.Validate_parametersRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Validate_parameters.Validate_parametersRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Database.Item.WithPkItemRequestBuilder"/></returns>
-    public KApi.Database.Item.WithPkItemRequestBuilder this[int position]
+    /// <returns>A <see cref="Database.Item.WithPkItemRequestBuilder"/></returns>
+    public Database.Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("pk", position);
-            return new KApi.Database.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Database.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Database.Item.WithPkItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Database.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public KApi.Database.Item.WithPkItemRequestBuilder this[string position]
+    public Database.Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-            return new KApi.Database.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Database.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.DatabaseRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.DatabaseRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -86,7 +85,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.DatabaseRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.DatabaseRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -96,14 +95,14 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Gets a list of databases, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.DatabaseGetResponse"/></returns>
+    /// <returns>A <see cref="Database.DatabaseGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Database422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.DatabaseGetResponse> GetDatabaseGetResponseAsync(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.DatabaseGetResponse> GetDatabaseGetResponseAsync(Action<RequestConfiguration<Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -114,12 +113,12 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Database422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.DatabaseGetResponse>(requestInfo, KApi.Database.DatabaseGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.DatabaseGetResponse>(requestInfo, Database.DatabaseGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Gets a list of databases, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.DatabaseResponse"/></returns>
+    /// <returns>A <see cref="Database.DatabaseResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Database400Error">When receiving a 400 status code</exception>
@@ -127,7 +126,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Database422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsDatabaseGetResponseAsync instead.")]
-    public async Task<KApi.Database.DatabaseResponse> GetAsync(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.DatabaseResponse> GetAsync(Action<RequestConfiguration<Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -138,12 +137,12 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Database422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.DatabaseResponse>(requestInfo, KApi.Database.DatabaseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.DatabaseResponse>(requestInfo, Database.DatabaseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a new database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.DatabasePostResponse"/></returns>
+    /// <returns>A <see cref="Database.DatabasePostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -151,7 +150,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Database401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Database404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.DatabasePostResponse> PostAsDatabasePostResponseAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.DatabasePostResponse> PostAsDatabasePostResponseAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -163,12 +162,12 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Database404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.DatabasePostResponse>(requestInfo, KApi.Database.DatabasePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.DatabasePostResponse>(requestInfo, Database.DatabasePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a new database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.DatabaseResponse"/></returns>
+    /// <returns>A <see cref="Database.DatabaseResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -177,7 +176,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Database404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Database500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsDatabasePostResponseAsync instead.")]
-    public async Task<KApi.Database.DatabaseResponse> PostAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.DatabaseResponse> PostAsync(KClient.Models.DatabaseRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -189,14 +188,14 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Database404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Database500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.DatabaseResponse>(requestInfo, KApi.Database.DatabaseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.DatabaseResponse>(requestInfo, Database.DatabaseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Gets a list of databases, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -223,11 +222,11 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.DatabaseRequestBuilder"/></returns>
+    /// <returns>A <see cref="Database.DatabaseRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Database.DatabaseRequestBuilder WithUrl(string rawUrl)
+    public Database.DatabaseRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Database.DatabaseRequestBuilder(rawUrl, RequestAdapter);
+        return new Database.DatabaseRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Gets a list of databases, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
@@ -244,7 +243,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class DatabaseRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>
+    public partial class DatabaseRequestBuilderGetRequestConfiguration : RequestConfiguration<Database.DatabaseRequestBuilder.DatabaseRequestBuilderGetQueryParameters>
     {
     }
     /// <summary>

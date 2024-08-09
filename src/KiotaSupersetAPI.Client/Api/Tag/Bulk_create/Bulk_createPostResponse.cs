@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Bulk_create;
 
@@ -13,10 +12,10 @@ public partial class Bulk_createPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public KApi.Tag.Bulk_create.Bulk_createPostResponse_result Result { get; set; }
+    public Tag.Bulk_create.Bulk_createPostResponse_result Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Bulk_create.Bulk_createPostResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Bulk_create.Bulk_createPostResponse"/> and sets the default values.
     /// </summary>
     public Bulk_createPostResponse()
     {
@@ -25,12 +24,12 @@ public partial class Bulk_createPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Bulk_create.Bulk_createPostResponse"/></returns>
+    /// <returns>A <see cref="Tag.Bulk_create.Bulk_createPostResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Tag.Bulk_create.Bulk_createPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Tag.Bulk_create.Bulk_createPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Tag.Bulk_create.Bulk_createPostResponse();
+        return new Tag.Bulk_create.Bulk_createPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -40,7 +39,7 @@ public partial class Bulk_createPostResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "result", n => { Result = n.GetObjectValue<KApi.Tag.Bulk_create.Bulk_createPostResponse_result>(KApi.Tag.Bulk_create.Bulk_createPostResponse_result.CreateFromDiscriminatorValue); } },
+            { "result", n => { Result = n.GetObjectValue<Tag.Bulk_create.Bulk_createPostResponse_result>(Tag.Bulk_create.Bulk_createPostResponse_result.CreateFromDiscriminatorValue); } },
         };
     }
     /// <summary>
@@ -50,7 +49,7 @@ public partial class Bulk_createPostResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KApi.Tag.Bulk_create.Bulk_createPostResponse_result>("result", Result);
+        writer.WriteObjectValue<Tag.Bulk_create.Bulk_createPostResponse_result>("result", Result);
         writer.WriteAdditionalData(AdditionalData);
     }
 }

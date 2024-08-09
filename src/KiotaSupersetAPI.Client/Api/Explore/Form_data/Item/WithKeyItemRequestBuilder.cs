@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Explore.Form_data.Item;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Explore.Form_data.Item;
 public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Explore.Form_data.Item.WithKeyItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Explore.Form_data.Item.WithKeyItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Delete a form_data
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyDeleteResponse"/></returns>
+    /// <returns>A <see cref="Explore.Form_data.Item.WithKeyDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -44,7 +43,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Explore.Form_data.Item.WithKeyDeleteResponse> DeleteAsWithKeyDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Form_data.Item.WithKeyDeleteResponse> DeleteAsWithKeyDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -56,12 +55,12 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyDeleteResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Form_data.Item.WithKeyDeleteResponse>(requestInfo, Explore.Form_data.Item.WithKeyDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a form_data
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyResponse"/></returns>
+    /// <returns>A <see cref="Explore.Form_data.Item.WithKeyResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -70,7 +69,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithKeyDeleteResponseAsync instead.")]
-    public async Task<KApi.Explore.Form_data.Item.WithKeyResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Form_data.Item.WithKeyResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -82,12 +81,12 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Form_data.Item.WithKeyResponse>(requestInfo, Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get a form_data
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyGetResponse"/></returns>
+    /// <returns>A <see cref="Explore.Form_data.Item.WithKeyGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -95,7 +94,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Explore.Form_data.Item.WithKeyGetResponse> GetWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Form_data.Item.WithKeyGetResponse> GetWithKeyGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -107,12 +106,12 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyGetResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Form_data.Item.WithKeyGetResponse>(requestInfo, Explore.Form_data.Item.WithKeyGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get a form_data
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyResponse"/></returns>
+    /// <returns>A <see cref="Explore.Form_data.Item.WithKeyResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithKey400Error">When receiving a 400 status code</exception>
@@ -121,7 +120,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithKeyGetResponseAsync instead.")]
-    public async Task<KApi.Explore.Form_data.Item.WithKeyResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Form_data.Item.WithKeyResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -133,12 +132,12 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Form_data.Item.WithKeyResponse>(requestInfo, Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Update an existing form_data
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyPutResponse"/></returns>
+    /// <returns>A <see cref="Explore.Form_data.Item.WithKeyPutResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -147,7 +146,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithKey404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Explore.Form_data.Item.WithKeyPutResponse> PutAsWithKeyPutResponseAsync(KClient.Models.FormDataPutSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Form_data.Item.WithKeyPutResponse> PutAsWithKeyPutResponseAsync(KClient.Models.FormDataPutSchema body, Action<RequestConfiguration<Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -160,12 +159,12 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyPutResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Form_data.Item.WithKeyPutResponse>(requestInfo, Explore.Form_data.Item.WithKeyPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Update an existing form_data
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyResponse"/></returns>
+    /// <returns>A <see cref="Explore.Form_data.Item.WithKeyResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -175,7 +174,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithKey422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithKey500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithKeyPutResponseAsync instead.")]
-    public async Task<KApi.Explore.Form_data.Item.WithKeyResponse> PutAsync(KClient.Models.FormDataPutSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Explore.Form_data.Item.WithKeyResponse> PutAsync(KClient.Models.FormDataPutSchema body, Action<RequestConfiguration<Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -188,7 +187,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithKey422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithKey500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Explore.Form_data.Item.WithKeyResponse>(requestInfo, KApi.Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Explore.Form_data.Item.WithKeyResponse>(requestInfo, Explore.Form_data.Item.WithKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a form_data
@@ -222,7 +221,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPutRequestInformation(KClient.Models.FormDataPutSchema body, Action<RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPutRequestInformation(KClient.Models.FormDataPutSchema body, Action<RequestConfiguration<Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -235,11 +234,11 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Explore.Form_data.Item.WithKeyItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
+    public Explore.Form_data.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Explore.Form_data.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.
@@ -271,7 +270,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class WithKeyItemRequestBuilderPutRequestConfiguration : RequestConfiguration<KApi.Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>
+    public partial class WithKeyItemRequestBuilderPutRequestConfiguration : RequestConfiguration<Explore.Form_data.Item.WithKeyItemRequestBuilder.WithKeyItemRequestBuilderPutQueryParameters>
     {
     }
 }

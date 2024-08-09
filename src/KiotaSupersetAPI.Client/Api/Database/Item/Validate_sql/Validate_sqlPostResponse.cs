@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Validate_sql;
@@ -18,7 +17,7 @@ public partial class Validate_sqlPostResponse : IAdditionalDataHolder, IParsable
     public List<KClient.Models.ValidateSQLResponse> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Validate_sql.Validate_sqlPostResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Validate_sql.Validate_sqlPostResponse"/> and sets the default values.
     /// </summary>
     public Validate_sqlPostResponse()
     {
@@ -27,12 +26,12 @@ public partial class Validate_sqlPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.Validate_sql.Validate_sqlPostResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.Validate_sql.Validate_sqlPostResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Database.Item.Validate_sql.Validate_sqlPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Database.Item.Validate_sql.Validate_sqlPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Database.Item.Validate_sql.Validate_sqlPostResponse();
+        return new Database.Item.Validate_sql.Validate_sqlPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

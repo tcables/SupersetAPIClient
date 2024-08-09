@@ -13,18 +13,18 @@ namespace KiotaSupersetAPI.Client;
 /// The main entry point of the SDK, exposes the configuration and the fluent API.
 /// </summary>
 [GeneratedCode("Kiota", "1.16.0")]
-public partial class SupersetClient : BaseRequestBuilder
+public partial class SupersetAPIClient : BaseRequestBuilder
 {
     /// <summary>The api property</summary>
-    public KClient.Api.ApiRequestBuilder Api
+    public API.ApiRequestBuilder API
     {
-        get => new KClient.Api.ApiRequestBuilder(PathParameters, RequestAdapter);
+        get => new API.ApiRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KClient.SupersetClient"/> and sets the default values.
+    /// Instantiates a new <see cref="KClient.SupersetAPIClient"/> and sets the default values.
     /// </summary>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-    public SupersetClient(IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}", new Dictionary<string, object>())
+    public SupersetAPIClient(IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}", new Dictionary<string, object>())
     {
         ApiClientBuilder.RegisterDefaultSerializer<JsonSerializationWriterFactory>();
         ApiClientBuilder.RegisterDefaultSerializer<TextSerializationWriterFactory>();

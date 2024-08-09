@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Embedded_dashboard.Item;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Embedded_dashboard.Item;
 public partial class WithUuItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Embedded_dashboard.Item.WithUuItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class WithUuItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Embedded_dashboard.Item.WithUuItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,13 +35,13 @@ public partial class WithUuItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get a report schedule log
     /// </summary>
-    /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuGetResponse"/></returns>
+    /// <returns>A <see cref="Embedded_dashboard.Item.WithUuGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithUu401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.WithUu404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithUu500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Embedded_dashboard.Item.WithUuGetResponse> GetWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Embedded_dashboard.Item.WithUuGetResponse> GetWithUuGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -52,19 +51,19 @@ public partial class WithUuItemRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.WithUu404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithUu500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Embedded_dashboard.Item.WithUuGetResponse>(requestInfo, KApi.Embedded_dashboard.Item.WithUuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Embedded_dashboard.Item.WithUuGetResponse>(requestInfo, Embedded_dashboard.Item.WithUuGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get a report schedule log
     /// </summary>
-    /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuResponse"/></returns>
+    /// <returns>A <see cref="Embedded_dashboard.Item.WithUuResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithUu401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.WithUu404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithUu500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithUuGetResponseAsync instead.")]
-    public async Task<KApi.Embedded_dashboard.Item.WithUuResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Embedded_dashboard.Item.WithUuResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -74,7 +73,7 @@ public partial class WithUuItemRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.WithUu404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithUu500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Embedded_dashboard.Item.WithUuResponse>(requestInfo, KApi.Embedded_dashboard.Item.WithUuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Embedded_dashboard.Item.WithUuResponse>(requestInfo, Embedded_dashboard.Item.WithUuResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get a report schedule log
@@ -92,11 +91,11 @@ public partial class WithUuItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Embedded_dashboard.Item.WithUuItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder WithUrl(string rawUrl)
+    public Embedded_dashboard.Item.WithUuItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Embedded_dashboard.Item.WithUuItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Embedded_dashboard.Item.WithUuItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Item.Refresh;
 
@@ -16,7 +15,7 @@ public partial class RefreshPutResponse : IAdditionalDataHolder, IParsable
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset.Item.Refresh.RefreshPutResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset.Item.Refresh.RefreshPutResponse"/> and sets the default values.
     /// </summary>
     public RefreshPutResponse()
     {
@@ -25,12 +24,12 @@ public partial class RefreshPutResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Item.Refresh.RefreshPutResponse"/></returns>
+    /// <returns>A <see cref="Dataset.Item.Refresh.RefreshPutResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Dataset.Item.Refresh.RefreshPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Dataset.Item.Refresh.RefreshPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Dataset.Item.Refresh.RefreshPutResponse();
+        return new Dataset.Item.Refresh.RefreshPutResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Item;
@@ -15,13 +14,13 @@ public partial class Object_typeGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The description_columns property</summary>
-    public KApi.Tag.Item.Object_typeGetResponse_description_columns DescriptionColumns { get; set; }
+    public Tag.Item.Object_typeGetResponse_description_columns DescriptionColumns { get; set; }
 
     /// <summary>The item id</summary>
     public string Id { get; set; }
 
     /// <summary>The label_columns property</summary>
-    public KApi.Tag.Item.Object_typeGetResponse_label_columns LabelColumns { get; set; }
+    public Tag.Item.Object_typeGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
     public KClient.Models.TagRestApi.Get.Get Result { get; set; }
@@ -33,7 +32,7 @@ public partial class Object_typeGetResponse : IAdditionalDataHolder, IParsable
     public string ShowTitle { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Item.Object_typeGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Item.Object_typeGetResponse"/> and sets the default values.
     /// </summary>
     public Object_typeGetResponse()
     {
@@ -42,12 +41,12 @@ public partial class Object_typeGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Item.Object_typeGetResponse"/></returns>
+    /// <returns>A <see cref="Tag.Item.Object_typeGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Tag.Item.Object_typeGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Tag.Item.Object_typeGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Tag.Item.Object_typeGetResponse();
+        return new Tag.Item.Object_typeGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -57,9 +56,9 @@ public partial class Object_typeGetResponse : IAdditionalDataHolder, IParsable
     {
         return new Dictionary<string, Action<IParseNode>>
         {
-            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<KApi.Tag.Item.Object_typeGetResponse_description_columns>(KApi.Tag.Item.Object_typeGetResponse_description_columns.CreateFromDiscriminatorValue); } },
+            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<Tag.Item.Object_typeGetResponse_description_columns>(Tag.Item.Object_typeGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "id", n => { Id = n.GetStringValue(); } },
-            { "label_columns", n => { LabelColumns = n.GetObjectValue<KApi.Tag.Item.Object_typeGetResponse_label_columns>(KApi.Tag.Item.Object_typeGetResponse_label_columns.CreateFromDiscriminatorValue); } },
+            { "label_columns", n => { LabelColumns = n.GetObjectValue<Tag.Item.Object_typeGetResponse_label_columns>(Tag.Item.Object_typeGetResponse_label_columns.CreateFromDiscriminatorValue); } },
             { "result", n => { Result = n.GetObjectValue<KClient.Models.TagRestApi.Get.Get>(KClient.Models.TagRestApi.Get.Get.CreateFromDiscriminatorValue); } },
             { "show_columns", n => { ShowColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "show_title", n => { ShowTitle = n.GetStringValue(); } },
@@ -72,9 +71,9 @@ public partial class Object_typeGetResponse : IAdditionalDataHolder, IParsable
     public virtual void Serialize(ISerializationWriter writer)
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
-        writer.WriteObjectValue<KApi.Tag.Item.Object_typeGetResponse_description_columns>("description_columns", DescriptionColumns);
+        writer.WriteObjectValue<Tag.Item.Object_typeGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteStringValue("id", Id);
-        writer.WriteObjectValue<KApi.Tag.Item.Object_typeGetResponse_label_columns>("label_columns", LabelColumns);
+        writer.WriteObjectValue<Tag.Item.Object_typeGetResponse_label_columns>("label_columns", LabelColumns);
         writer.WriteObjectValue<KClient.Models.TagRestApi.Get.Get>("result", Result);
         writer.WriteCollectionOfPrimitiveValues<string>("show_columns", ShowColumns);
         writer.WriteStringValue("show_title", ShowTitle);

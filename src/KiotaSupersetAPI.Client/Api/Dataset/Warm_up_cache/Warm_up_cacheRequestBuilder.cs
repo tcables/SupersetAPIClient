@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Warm_up_cache;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Dataset.Warm_up_cache;
 public partial class Warm_up_cacheRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class Warm_up_cacheRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -75,11 +74,11 @@ public partial class Warm_up_cacheRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder WithUrl(string rawUrl)
+    public Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder(rawUrl, RequestAdapter);
+        return new Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Database.Available;
 
@@ -20,7 +19,7 @@ public partial class Available_engine_information : IAdditionalDataHolder, IPars
     /// <summary>Whether the engine supports file uploads</summary>
     public bool? SupportsFileUpload { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Available.Available_engine_information"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Available.Available_engine_information"/> and sets the default values.
     /// </summary>
     public Available_engine_information()
     {
@@ -29,12 +28,12 @@ public partial class Available_engine_information : IAdditionalDataHolder, IPars
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Available.Available_engine_information"/></returns>
+    /// <returns>A <see cref="Database.Available.Available_engine_information"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Database.Available.Available_engine_information CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Database.Available.Available_engine_information CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Database.Available.Available_engine_information();
+        return new Database.Available.Available_engine_information();
     }
     /// <summary>
     /// The deserialization information for the current model

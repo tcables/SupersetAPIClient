@@ -7,7 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Assets.Export;
@@ -19,7 +18,7 @@ namespace KiotaSupersetAPI.Client.API.Assets.Export;
 public partial class ExportRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Assets.Export.ExportRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Assets.Export.ExportRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -27,7 +26,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Assets.Export.ExportRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Assets.Export.ExportRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -71,11 +70,11 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Assets.Export.ExportRequestBuilder"/></returns>
+    /// <returns>A <see cref="Assets.Export.ExportRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Assets.Export.ExportRequestBuilder WithUrl(string rawUrl)
+    public Assets.Export.ExportRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Assets.Export.ExportRequestBuilder(rawUrl, RequestAdapter);
+        return new Assets.Export.ExportRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -2,22 +2,21 @@
 using System;
 using System.CodeDom.Compiler;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Thumbnail.Item;
 
 [Obsolete("This class is obsolete. Use WithDigestGetResponse instead.")]
 [GeneratedCode("Kiota", "1.16.0")]
-public partial class WithDigestResponse : KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse, IParsable
+public partial class WithDigestResponse : Dashboard.Item.Thumbnail.Item.WithDigestGetResponse, IParsable
 {
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Dashboard.Item.Thumbnail.Item.WithDigestResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse();
+        return new Dashboard.Item.Thumbnail.Item.WithDigestResponse();
     }
 }

@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Query;
@@ -18,52 +17,52 @@ namespace KiotaSupersetAPI.Client.API.Query;
 public partial class QueryRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The distinct property</summary>
-    public KApi.Query.Distinct.DistinctRequestBuilder Distinct
+    public Query.Distinct.DistinctRequestBuilder Distinct
     {
-        get => new KApi.Query.Distinct.DistinctRequestBuilder(PathParameters, RequestAdapter);
+        get => new Query.Distinct.DistinctRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public KApi.Query.Related.RelatedRequestBuilder Related
+    public Query.Related.RelatedRequestBuilder Related
     {
-        get => new KApi.Query.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Query.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The stop property</summary>
-    public KApi.Query.Stop.StopRequestBuilder Stop
+    public Query.Stop.StopRequestBuilder Stop
     {
-        get => new KApi.Query.Stop.StopRequestBuilder(PathParameters, RequestAdapter);
+        get => new Query.Stop.StopRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The updated_since property</summary>
-    public KApi.Query.Updated_since.Updated_sinceRequestBuilder Updated_since
+    public Query.Updated_since.Updated_sinceRequestBuilder Updated_since
     {
-        get => new KApi.Query.Updated_since.Updated_sinceRequestBuilder(PathParameters, RequestAdapter);
+        get => new Query.Updated_since.Updated_sinceRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.query.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Query.Item.WithPkItemRequestBuilder"/></returns>
-    public KApi.Query.Item.WithPkItemRequestBuilder this[int position]
+    /// <returns>A <see cref="Query.Item.WithPkItemRequestBuilder"/></returns>
+    public Query.Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("pk", position);
-            return new KApi.Query.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Query.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.query.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Query.Item.WithPkItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Query.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public KApi.Query.Item.WithPkItemRequestBuilder this[string position]
+    public Query.Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-            return new KApi.Query.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Query.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Query.QueryRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Query.QueryRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -71,7 +70,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Query.QueryRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Query.QueryRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -81,14 +80,14 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Gets a list of queries, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
     /// </summary>
-    /// <returns>A <see cref="KApi.Query.QueryGetResponse"/></returns>
+    /// <returns>A <see cref="Query.QueryGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Query400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models.Query401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Query422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Query500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Query.QueryGetResponse> GetQueryGetResponseAsync(Action<RequestConfiguration<KApi.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Query.QueryGetResponse> GetQueryGetResponseAsync(Action<RequestConfiguration<Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -99,12 +98,12 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Query422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Query500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Query.QueryGetResponse>(requestInfo, KApi.Query.QueryGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Query.QueryGetResponse>(requestInfo, Query.QueryGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Gets a list of queries, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
     /// </summary>
-    /// <returns>A <see cref="KApi.Query.QueryResponse"/></returns>
+    /// <returns>A <see cref="Query.QueryResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Query400Error">When receiving a 400 status code</exception>
@@ -112,7 +111,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Query422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Query500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsQueryGetResponseAsync instead.")]
-    public async Task<KApi.Query.QueryResponse> GetAsync(Action<RequestConfiguration<KApi.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Query.QueryResponse> GetAsync(Action<RequestConfiguration<Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -123,14 +122,14 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Query422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Query500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Query.QueryResponse>(requestInfo, KApi.Query.QueryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Query.QueryResponse>(requestInfo, Query.QueryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Gets a list of queries, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -141,11 +140,11 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Query.QueryRequestBuilder"/></returns>
+    /// <returns>A <see cref="Query.QueryRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Query.QueryRequestBuilder WithUrl(string rawUrl)
+    public Query.QueryRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Query.QueryRequestBuilder(rawUrl, RequestAdapter);
+        return new Query.QueryRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Gets a list of queries, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
@@ -162,7 +161,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class QueryRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>
+    public partial class QueryRequestBuilderGetRequestConfiguration : RequestConfiguration<Query.QueryRequestBuilder.QueryRequestBuilderGetQueryParameters>
     {
     }
 }

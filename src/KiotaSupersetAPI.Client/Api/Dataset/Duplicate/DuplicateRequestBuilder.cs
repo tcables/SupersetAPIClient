@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Duplicate;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Dataset.Duplicate;
 public partial class DuplicateRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset.Duplicate.DuplicateRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset.Duplicate.DuplicateRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset.Duplicate.DuplicateRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset.Duplicate.DuplicateRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Duplicate a dataset
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Duplicate.DuplicatePostResponse"/></returns>
+    /// <returns>A <see cref="Dataset.Duplicate.DuplicatePostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -46,7 +45,7 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Duplicate404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Duplicate422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Duplicate500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dataset.Duplicate.DuplicatePostResponse> PostAsDuplicatePostResponseAsync(KClient.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.Duplicate.DuplicatePostResponse> PostAsDuplicatePostResponseAsync(KClient.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -60,12 +59,12 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Duplicate422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Duplicate500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dataset.Duplicate.DuplicatePostResponse>(requestInfo, KApi.Dataset.Duplicate.DuplicatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dataset.Duplicate.DuplicatePostResponse>(requestInfo, Dataset.Duplicate.DuplicatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Duplicate a dataset
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Duplicate.DuplicateResponse"/></returns>
+    /// <returns>A <see cref="Dataset.Duplicate.DuplicateResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -76,7 +75,7 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Duplicate422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Duplicate500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsDuplicatePostResponseAsync instead.")]
-    public async Task<KApi.Dataset.Duplicate.DuplicateResponse> PostAsync(KClient.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.Duplicate.DuplicateResponse> PostAsync(KClient.Models.DatasetDuplicateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -90,7 +89,7 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Duplicate422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Duplicate500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dataset.Duplicate.DuplicateResponse>(requestInfo, KApi.Dataset.Duplicate.DuplicateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dataset.Duplicate.DuplicateResponse>(requestInfo, Dataset.Duplicate.DuplicateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Duplicate a dataset
@@ -111,11 +110,11 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Duplicate.DuplicateRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dataset.Duplicate.DuplicateRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dataset.Duplicate.DuplicateRequestBuilder WithUrl(string rawUrl)
+    public Dataset.Duplicate.DuplicateRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dataset.Duplicate.DuplicateRequestBuilder(rawUrl, RequestAdapter);
+        return new Dataset.Duplicate.DuplicateRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

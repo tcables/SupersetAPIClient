@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Advanced_data_type.Types;
 
@@ -17,7 +16,7 @@ public partial class TypesGetResponse : IAdditionalDataHolder, IParsable
     public List<string> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Advanced_data_type.Types.TypesGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Advanced_data_type.Types.TypesGetResponse"/> and sets the default values.
     /// </summary>
     public TypesGetResponse()
     {
@@ -26,12 +25,12 @@ public partial class TypesGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Advanced_data_type.Types.TypesGetResponse"/></returns>
+    /// <returns>A <see cref="Advanced_data_type.Types.TypesGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Advanced_data_type.Types.TypesGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Advanced_data_type.Types.TypesGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Advanced_data_type.Types.TypesGetResponse();
+        return new Advanced_data_type.Types.TypesGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

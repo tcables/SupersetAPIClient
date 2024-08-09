@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item.Tables;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Database.Item.Tables;
 public partial class TablesRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Tables.TablesRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Tables.TablesRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.Tables.TablesRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.Tables.TablesRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get a list of tables for given database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.Tables.TablesGetResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.Tables.TablesGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Tables400Error">When receiving a 400 status code</exception>
@@ -44,7 +43,7 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tables404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Tables422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tables500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.Item.Tables.TablesGetResponse> GetTablesGetResponseAsync(Action<RequestConfiguration<KApi.Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.Tables.TablesGetResponse> GetTablesGetResponseAsync(Action<RequestConfiguration<Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -56,12 +55,12 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Tables422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Tables500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.Tables.TablesGetResponse>(requestInfo, KApi.Database.Item.Tables.TablesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.Tables.TablesGetResponse>(requestInfo, Database.Item.Tables.TablesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get a list of tables for given database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.Tables.TablesResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.Tables.TablesResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Tables400Error">When receiving a 400 status code</exception>
@@ -70,7 +69,7 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Tables422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Tables500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsTablesGetResponseAsync instead.")]
-    public async Task<KApi.Database.Item.Tables.TablesResponse> GetAsync(Action<RequestConfiguration<KApi.Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.Tables.TablesResponse> GetAsync(Action<RequestConfiguration<Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -82,14 +81,14 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Tables422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Tables500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.Tables.TablesResponse>(requestInfo, KApi.Database.Item.Tables.TablesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.Tables.TablesResponse>(requestInfo, Database.Item.Tables.TablesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get a list of tables for given database
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -100,11 +99,11 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.Tables.TablesRequestBuilder"/></returns>
+    /// <returns>A <see cref="Database.Item.Tables.TablesRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Database.Item.Tables.TablesRequestBuilder WithUrl(string rawUrl)
+    public Database.Item.Tables.TablesRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Database.Item.Tables.TablesRequestBuilder(rawUrl, RequestAdapter);
+        return new Database.Item.Tables.TablesRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Get a list of tables for given database
@@ -121,7 +120,7 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class TablesRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>
+    public partial class TablesRequestBuilderGetRequestConfiguration : RequestConfiguration<Database.Item.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>
     {
     }
 }

@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Datasource.Item.Item.Column.Item.Values;
 
@@ -17,7 +16,7 @@ public partial class ValuesGetResponse : IAdditionalDataHolder, IParsable
     public List<string> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Datasource.Item.Item.Column.Item.Values.ValuesGetResponse"/> and sets the default values.
     /// </summary>
     public ValuesGetResponse()
     {
@@ -26,12 +25,12 @@ public partial class ValuesGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse"/></returns>
+    /// <returns>A <see cref="Datasource.Item.Item.Column.Item.Values.ValuesGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Datasource.Item.Item.Column.Item.Values.ValuesGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Datasource.Item.Item.Column.Item.Values.ValuesGetResponse();
+        return new Datasource.Item.Item.Column.Item.Values.ValuesGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

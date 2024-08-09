@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.AnnotationLayer;
@@ -19,10 +18,10 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
     /// <summary>The description_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-    public KApi.AnnotationLayer.Annotation_layerGetResponse_description_columns? DescriptionColumns { get; set; }
+    public AnnotationLayer.Annotation_layerGetResponse_description_columns? DescriptionColumns { get; set; }
 #nullable restore
 #else
-    public KApi.AnnotationLayer.Annotation_layerGetResponse_description_columns DescriptionColumns { get; set; }
+    public AnnotationLayer.Annotation_layerGetResponse_description_columns DescriptionColumns { get; set; }
 #endif
     /// <summary>A list of item ids, useful when you don&apos;t know the column id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,10 +34,10 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
     /// <summary>The label_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-    public KApi.AnnotationLayer.Annotation_layerGetResponse_label_columns? LabelColumns { get; set; }
+    public AnnotationLayer.Annotation_layerGetResponse_label_columns? LabelColumns { get; set; }
 #nullable restore
 #else
-    public KApi.AnnotationLayer.Annotation_layerGetResponse_label_columns LabelColumns { get; set; }
+    public AnnotationLayer.Annotation_layerGetResponse_label_columns LabelColumns { get; set; }
 #endif
     /// <summary>A list of columns</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +72,7 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
     public List<KClient.Models.AnnotationLayerRestApi.Get_list.Get_list> Result { get; set; }
 #endif
     /// <summary>
-    /// Instantiates a new <see cref="KApi.AnnotationLayer.Annotation_layerGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="AnnotationLayer.Annotation_layerGetResponse"/> and sets the default values.
     /// </summary>
     public Annotation_layerGetResponse()
     {
@@ -82,12 +81,12 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.AnnotationLayer.Annotation_layerGetResponse"/></returns>
+    /// <returns>A <see cref="AnnotationLayer.Annotation_layerGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.AnnotationLayer.Annotation_layerGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static AnnotationLayer.Annotation_layerGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.AnnotationLayer.Annotation_layerGetResponse();
+        return new AnnotationLayer.Annotation_layerGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -98,9 +97,9 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
         return new Dictionary<string, Action<IParseNode>>
         {
             { "count", n => { Count = n.GetDoubleValue(); } },
-            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<KApi.AnnotationLayer.Annotation_layerGetResponse_description_columns>(KApi.AnnotationLayer.Annotation_layerGetResponse_description_columns.CreateFromDiscriminatorValue); } },
+            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<AnnotationLayer.Annotation_layerGetResponse_description_columns>(AnnotationLayer.Annotation_layerGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-            { "label_columns", n => { LabelColumns = n.GetObjectValue<KApi.AnnotationLayer.Annotation_layerGetResponse_label_columns>(KApi.AnnotationLayer.Annotation_layerGetResponse_label_columns.CreateFromDiscriminatorValue); } },
+            { "label_columns", n => { LabelColumns = n.GetObjectValue<AnnotationLayer.Annotation_layerGetResponse_label_columns>(AnnotationLayer.Annotation_layerGetResponse_label_columns.CreateFromDiscriminatorValue); } },
             { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "list_title", n => { ListTitle = n.GetStringValue(); } },
             { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
@@ -115,9 +114,9 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("count", Count);
-        writer.WriteObjectValue<KApi.AnnotationLayer.Annotation_layerGetResponse_description_columns>("description_columns", DescriptionColumns);
+        writer.WriteObjectValue<AnnotationLayer.Annotation_layerGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteCollectionOfPrimitiveValues<string>("ids", Ids);
-        writer.WriteObjectValue<KApi.AnnotationLayer.Annotation_layerGetResponse_label_columns>("label_columns", LabelColumns);
+        writer.WriteObjectValue<AnnotationLayer.Annotation_layerGetResponse_label_columns>("label_columns", LabelColumns);
         writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
         writer.WriteStringValue("list_title", ListTitle);
         writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);

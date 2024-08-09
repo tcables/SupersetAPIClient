@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Thumbnail.Item;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Thumbnail.Item;
 public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,14 +35,14 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Computes async or get already computed dashboard thumbnail from cache.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithDigest401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.WithDigest404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithDigest422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithDigest500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse> GetWithDigestGetResponseAsync(Action<RequestConfiguration<KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Thumbnail.Item.WithDigestGetResponse> GetWithDigestGetResponseAsync(Action<RequestConfiguration<Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,12 +53,12 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithDigest422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithDigest500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse>(requestInfo, KApi.Dashboard.Item.Thumbnail.Item.WithDigestGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Thumbnail.Item.WithDigestGetResponse>(requestInfo, Dashboard.Item.Thumbnail.Item.WithDigestGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Computes async or get already computed dashboard thumbnail from cache.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithDigest401Error">When receiving a 401 status code</exception>
@@ -67,7 +66,7 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithDigest422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithDigest500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithDigestGetResponseAsync instead.")]
-    public async Task<KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse> GetAsync(Action<RequestConfiguration<KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Thumbnail.Item.WithDigestResponse> GetAsync(Action<RequestConfiguration<Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -78,14 +77,14 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithDigest422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithDigest500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse>(requestInfo, KApi.Dashboard.Item.Thumbnail.Item.WithDigestResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Thumbnail.Item.WithDigestResponse>(requestInfo, Dashboard.Item.Thumbnail.Item.WithDigestResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Computes async or get already computed dashboard thumbnail from cache.
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -96,11 +95,11 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder WithUrl(string rawUrl)
+    public Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Computes async or get already computed dashboard thumbnail from cache.
@@ -117,7 +116,7 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class WithDigestItemRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>
+    public partial class WithDigestItemRequestBuilderGetRequestConfiguration : RequestConfiguration<Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder.WithDigestItemRequestBuilderGetQueryParameters>
     {
     }
 }

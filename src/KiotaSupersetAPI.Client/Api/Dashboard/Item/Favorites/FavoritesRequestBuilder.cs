@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Favorites;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Favorites;
 public partial class FavoritesRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Favorites.FavoritesRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Favorites.FavoritesRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,13 +35,13 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Remove the dashboard from the user favorite list
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesDeleteResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Favorites.FavoritesDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.Item.Favorites.FavoritesDeleteResponse> DeleteAsFavoritesDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Favorites.FavoritesDeleteResponse> DeleteAsFavoritesDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -52,19 +51,19 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Favorites.FavoritesDeleteResponse>(requestInfo, KApi.Dashboard.Item.Favorites.FavoritesDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Favorites.FavoritesDeleteResponse>(requestInfo, Dashboard.Item.Favorites.FavoritesDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Remove the dashboard from the user favorite list
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Favorites.FavoritesResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsFavoritesDeleteResponseAsync instead.")]
-    public async Task<KApi.Dashboard.Item.Favorites.FavoritesResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Favorites.FavoritesResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -74,18 +73,18 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Favorites.FavoritesResponse>(requestInfo, KApi.Dashboard.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Favorites.FavoritesResponse>(requestInfo, Dashboard.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Mark the dashboard as favorite for the current user
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesPostResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Favorites.FavoritesPostResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.Item.Favorites.FavoritesPostResponse> PostAsFavoritesPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Favorites.FavoritesPostResponse> PostAsFavoritesPostResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToPostRequestInformation(requestConfiguration);
@@ -95,19 +94,19 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Favorites.FavoritesPostResponse>(requestInfo, KApi.Dashboard.Item.Favorites.FavoritesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Favorites.FavoritesPostResponse>(requestInfo, Dashboard.Item.Favorites.FavoritesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Mark the dashboard as favorite for the current user
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Favorites.FavoritesResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Favorites401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Favorites404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Favorites500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsFavoritesPostResponseAsync instead.")]
-    public async Task<KApi.Dashboard.Item.Favorites.FavoritesResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Favorites.FavoritesResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToPostRequestInformation(requestConfiguration);
@@ -117,7 +116,7 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Favorites404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Favorites500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Favorites.FavoritesResponse>(requestInfo, KApi.Dashboard.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Favorites.FavoritesResponse>(requestInfo, Dashboard.Item.Favorites.FavoritesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Remove the dashboard from the user favorite list
@@ -148,11 +147,11 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Favorites.FavoritesRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder WithUrl(string rawUrl)
+    public Dashboard.Item.Favorites.FavoritesRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dashboard.Item.Favorites.FavoritesRequestBuilder(rawUrl, RequestAdapter);
+        return new Dashboard.Item.Favorites.FavoritesRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

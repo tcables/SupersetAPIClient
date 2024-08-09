@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Permalink;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Permalink;
 public partial class PermalinkRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Permalink.PermalinkRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Permalink.PermalinkRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Permalink.PermalinkRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Create a new dashboard&apos;s permanent link
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Permalink.PermalinkPostResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Permalink.PermalinkPostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -44,7 +43,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Permalink401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Permalink422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Permalink500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.Item.Permalink.PermalinkPostResponse> PostAsPermalinkPostResponseAsync(KClient.Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Permalink.PermalinkPostResponse> PostAsPermalinkPostResponseAsync(KClient.Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -56,12 +55,12 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Permalink422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Permalink500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Permalink.PermalinkPostResponse>(requestInfo, KApi.Dashboard.Item.Permalink.PermalinkPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Permalink.PermalinkPostResponse>(requestInfo, Dashboard.Item.Permalink.PermalinkPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a new dashboard&apos;s permanent link
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Permalink.PermalinkResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Permalink.PermalinkResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -70,7 +69,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Permalink422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Permalink500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsPermalinkPostResponseAsync instead.")]
-    public async Task<KApi.Dashboard.Item.Permalink.PermalinkResponse> PostAsync(KClient.Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Permalink.PermalinkResponse> PostAsync(KClient.Models.DashboardPermalinkStateSchema body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -82,7 +81,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Permalink422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Permalink500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Permalink.PermalinkResponse>(requestInfo, KApi.Dashboard.Item.Permalink.PermalinkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Permalink.PermalinkResponse>(requestInfo, Dashboard.Item.Permalink.PermalinkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a new dashboard&apos;s permanent link
@@ -103,11 +102,11 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Permalink.PermalinkRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Permalink.PermalinkRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dashboard.Item.Permalink.PermalinkRequestBuilder WithUrl(string rawUrl)
+    public Dashboard.Item.Permalink.PermalinkRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dashboard.Item.Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
+        return new Dashboard.Item.Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

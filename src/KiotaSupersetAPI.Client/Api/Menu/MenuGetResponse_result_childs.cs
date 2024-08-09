@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Menu;
 
@@ -13,7 +12,7 @@ public partial class MenuGetResponse_result_childs : IAdditionalDataHolder, IPar
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Menu.MenuGetResponse_result_childs"/> and sets the default values.
+    /// Instantiates a new <see cref="Menu.MenuGetResponse_result_childs"/> and sets the default values.
     /// </summary>
     public MenuGetResponse_result_childs()
     {
@@ -22,12 +21,12 @@ public partial class MenuGetResponse_result_childs : IAdditionalDataHolder, IPar
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Menu.MenuGetResponse_result_childs"/></returns>
+    /// <returns>A <see cref="Menu.MenuGetResponse_result_childs"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Menu.MenuGetResponse_result_childs CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Menu.MenuGetResponse_result_childs CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Menu.MenuGetResponse_result_childs();
+        return new Menu.MenuGetResponse_result_childs();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.AnnotationLayer;
 
@@ -16,7 +15,7 @@ public partial class Annotation_layerDeleteResponse : IAdditionalDataHolder, IPa
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.AnnotationLayer.Annotation_layerDeleteResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="AnnotationLayer.Annotation_layerDeleteResponse"/> and sets the default values.
     /// </summary>
     public Annotation_layerDeleteResponse()
     {
@@ -25,12 +24,12 @@ public partial class Annotation_layerDeleteResponse : IAdditionalDataHolder, IPa
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.AnnotationLayer.Annotation_layerDeleteResponse"/></returns>
+    /// <returns>A <see cref="AnnotationLayer.Annotation_layerDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.AnnotationLayer.Annotation_layerDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static AnnotationLayer.Annotation_layerDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.AnnotationLayer.Annotation_layerDeleteResponse();
+        return new AnnotationLayer.Annotation_layerDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

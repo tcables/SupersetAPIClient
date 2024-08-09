@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item.Annotation.Item;
@@ -20,7 +19,7 @@ public partial class WithAnnotation_GetResponse : IAdditionalDataHolder, IParsab
     public KClient.Models.AnnotationRestApi.Get.Get Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse"/> and sets the default values.
     /// </summary>
     public WithAnnotation_GetResponse()
     {
@@ -29,12 +28,12 @@ public partial class WithAnnotation_GetResponse : IAdditionalDataHolder, IParsab
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse"/></returns>
+    /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse();
+        return new AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

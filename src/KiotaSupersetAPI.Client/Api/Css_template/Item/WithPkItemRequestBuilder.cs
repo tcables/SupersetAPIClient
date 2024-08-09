@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Css_template.Item;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Css_template.Item;
 public partial class WithPkItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Css_template.Item.WithPkItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Css_template.Item.WithPkItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Css_template.Item.WithPkItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Css_template.Item.WithPkItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,13 +35,13 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Delete a CSS template
     /// </summary>
-    /// <returns>A <see cref="KApi.Css_template.Item.WithPkDeleteResponse"/></returns>
+    /// <returns>A <see cref="Css_template.Item.WithPkDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Css_template.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Css_template.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -52,19 +51,19 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Css_template.Item.WithPkDeleteResponse>(requestInfo, KApi.Css_template.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Css_template.Item.WithPkDeleteResponse>(requestInfo, Css_template.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a CSS template
     /// </summary>
-    /// <returns>A <see cref="KApi.Css_template.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Css_template.Item.WithPkResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithPkDeleteResponseAsync instead.")]
-    public async Task<KApi.Css_template.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Css_template.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -74,12 +73,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Css_template.Item.WithPkResponse>(requestInfo, KApi.Css_template.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Css_template.Item.WithPkResponse>(requestInfo, Css_template.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get an item model
     /// </summary>
-    /// <returns>A <see cref="KApi.Css_template.Item.WithPkGetResponse"/></returns>
+    /// <returns>A <see cref="Css_template.Item.WithPkGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -87,7 +86,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Css_template.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<KApi.Css_template.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Css_template.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<Css_template.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -99,12 +98,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Css_template.Item.WithPkGetResponse>(requestInfo, KApi.Css_template.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Css_template.Item.WithPkGetResponse>(requestInfo, Css_template.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get an item model
     /// </summary>
-    /// <returns>A <see cref="KApi.Css_template.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Css_template.Item.WithPkResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -113,7 +112,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithPkGetResponseAsync instead.")]
-    public async Task<KApi.Css_template.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<KApi.Css_template.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Css_template.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<Css_template.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -125,12 +124,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Css_template.Item.WithPkResponse>(requestInfo, KApi.Css_template.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Css_template.Item.WithPkResponse>(requestInfo, Css_template.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Update a CSS template
     /// </summary>
-    /// <returns>A <see cref="KApi.Css_template.Item.WithPkPutResponse"/></returns>
+    /// <returns>A <see cref="Css_template.Item.WithPkPutResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -139,7 +138,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Css_template.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(KClient.Models.CssTemplateRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Css_template.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(KClient.Models.CssTemplateRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -152,12 +151,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Css_template.Item.WithPkPutResponse>(requestInfo, KApi.Css_template.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Css_template.Item.WithPkPutResponse>(requestInfo, Css_template.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Update a CSS template
     /// </summary>
-    /// <returns>A <see cref="KApi.Css_template.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Css_template.Item.WithPkResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -167,7 +166,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithPkPutResponseAsync instead.")]
-    public async Task<KApi.Css_template.Item.WithPkResponse> PutAsync(KClient.Models.CssTemplateRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Css_template.Item.WithPkResponse> PutAsync(KClient.Models.CssTemplateRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -180,7 +179,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Css_template.Item.WithPkResponse>(requestInfo, KApi.Css_template.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Css_template.Item.WithPkResponse>(requestInfo, Css_template.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a CSS template
@@ -200,7 +199,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Css_template.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Css_template.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -227,11 +226,11 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Css_template.Item.WithPkItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Css_template.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Css_template.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public Css_template.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Css_template.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Css_template.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.
@@ -256,7 +255,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class WithPkItemRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Css_template.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>
+    public partial class WithPkItemRequestBuilderGetRequestConfiguration : RequestConfiguration<Css_template.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>
     {
     }
     /// <summary>

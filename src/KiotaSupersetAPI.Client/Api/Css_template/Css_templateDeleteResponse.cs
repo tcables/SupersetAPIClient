@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Css_template;
 
@@ -16,7 +15,7 @@ public partial class Css_templateDeleteResponse : IAdditionalDataHolder, IParsab
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Css_template.Css_templateDeleteResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Css_template.Css_templateDeleteResponse"/> and sets the default values.
     /// </summary>
     public Css_templateDeleteResponse()
     {
@@ -25,12 +24,12 @@ public partial class Css_templateDeleteResponse : IAdditionalDataHolder, IParsab
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Css_template.Css_templateDeleteResponse"/></returns>
+    /// <returns>A <see cref="Css_template.Css_templateDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Css_template.Css_templateDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Css_template.Css_templateDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Css_template.Css_templateDeleteResponse();
+        return new Css_template.Css_templateDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

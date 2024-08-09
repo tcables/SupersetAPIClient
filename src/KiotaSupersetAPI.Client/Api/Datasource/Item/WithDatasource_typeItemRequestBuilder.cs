@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Datasource.Item;
 
@@ -15,31 +14,31 @@ public partial class WithDatasource_typeItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item.item collection</summary>
     /// <param name="position">The id of the datasource</param>
-    /// <returns>A <see cref="KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/></returns>
-    public KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder this[int position]
+    /// <returns>A <see cref="Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/></returns>
+    public Datasource.Item.Item.WithDatasource_ItemRequestBuilder this[int position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("datasource_id", position);
-            return new KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Datasource.Item.Item.WithDatasource_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item.item collection</summary>
     /// <param name="position">The id of the datasource</param>
-    /// <returns>A <see cref="KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder this[string position]
+    public Datasource.Item.Item.WithDatasource_ItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("datasource_id", position);
-            return new KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Datasource.Item.Item.WithDatasource_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Datasource.Item.WithDatasource_typeItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Datasource.Item.WithDatasource_typeItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -47,7 +46,7 @@ public partial class WithDatasource_typeItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Datasource.Item.WithDatasource_typeItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Datasource.Item.WithDatasource_typeItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

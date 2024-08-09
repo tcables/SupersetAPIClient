@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Database;
 
@@ -16,7 +15,7 @@ public partial class DatabaseGetResponse_label_columns : IAdditionalDataHolder, 
     public string ColumnName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.DatabaseGetResponse_label_columns"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.DatabaseGetResponse_label_columns"/> and sets the default values.
     /// </summary>
     public DatabaseGetResponse_label_columns()
     {
@@ -25,12 +24,12 @@ public partial class DatabaseGetResponse_label_columns : IAdditionalDataHolder, 
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.DatabaseGetResponse_label_columns"/></returns>
+    /// <returns>A <see cref="Database.DatabaseGetResponse_label_columns"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Database.DatabaseGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Database.DatabaseGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Database.DatabaseGetResponse_label_columns();
+        return new Database.DatabaseGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

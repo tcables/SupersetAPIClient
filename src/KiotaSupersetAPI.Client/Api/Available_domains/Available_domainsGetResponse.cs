@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Available_domains;
@@ -17,7 +16,7 @@ public partial class Available_domainsGetResponse : IAdditionalDataHolder, IPars
     public KClient.Models.AvailableDomainsSchema Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Available_domains.Available_domainsGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Available_domains.Available_domainsGetResponse"/> and sets the default values.
     /// </summary>
     public Available_domainsGetResponse()
     {
@@ -26,12 +25,12 @@ public partial class Available_domainsGetResponse : IAdditionalDataHolder, IPars
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Available_domains.Available_domainsGetResponse"/></returns>
+    /// <returns>A <see cref="Available_domains.Available_domainsGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Available_domains.Available_domainsGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Available_domains.Available_domainsGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Available_domains.Available_domainsGetResponse();
+        return new Available_domains.Available_domainsGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

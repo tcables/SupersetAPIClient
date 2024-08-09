@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Filtersets;
@@ -19,7 +18,7 @@ public partial class FiltersetsPostResponse : IAdditionalDataHolder, IParsable
     public KClient.Models.FilterSetRestApi.Post Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Filtersets.FiltersetsPostResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Filtersets.FiltersetsPostResponse"/> and sets the default values.
     /// </summary>
     public FiltersetsPostResponse()
     {
@@ -28,12 +27,12 @@ public partial class FiltersetsPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Filtersets.FiltersetsPostResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Filtersets.FiltersetsPostResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Dashboard.Item.Filtersets.FiltersetsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Dashboard.Item.Filtersets.FiltersetsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Dashboard.Item.Filtersets.FiltersetsPostResponse();
+        return new Dashboard.Item.Filtersets.FiltersetsPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

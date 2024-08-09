@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Item.Column.Item;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Dataset.Item.Column.Item;
 public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Delete a dataset column
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse"/></returns>
+    /// <returns>A <see cref="Dataset.Item.Column.Item.WithColumn_DeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithColumn_401Error">When receiving a 401 status code</exception>
@@ -44,7 +43,7 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithColumn_404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithColumn_422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithColumn_500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse> DeleteAsWithColumn_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.Item.Column.Item.WithColumn_DeleteResponse> DeleteAsWithColumn_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -56,12 +55,12 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse>(requestInfo, KApi.Dataset.Item.Column.Item.WithColumn_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dataset.Item.Column.Item.WithColumn_DeleteResponse>(requestInfo, Dataset.Item.Column.Item.WithColumn_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a dataset column
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_Response"/></returns>
+    /// <returns>A <see cref="Dataset.Item.Column.Item.WithColumn_Response"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithColumn_401Error">When receiving a 401 status code</exception>
@@ -70,7 +69,7 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithColumn_422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithColumn_500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithColumn_DeleteResponseAsync instead.")]
-    public async Task<KApi.Dataset.Item.Column.Item.WithColumn_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.Item.Column.Item.WithColumn_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -82,7 +81,7 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithColumn_422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithColumn_500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dataset.Item.Column.Item.WithColumn_Response>(requestInfo, KApi.Dataset.Item.Column.Item.WithColumn_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dataset.Item.Column.Item.WithColumn_Response>(requestInfo, Dataset.Item.Column.Item.WithColumn_Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a dataset column
@@ -100,11 +99,11 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder WithUrl(string rawUrl)
+    public Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

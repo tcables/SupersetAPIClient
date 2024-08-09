@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Security.Guest_token;
 
@@ -16,7 +15,7 @@ public partial class Guest_tokenPostResponse : IAdditionalDataHolder, IParsable
     public string Token { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Security.Guest_token.Guest_tokenPostResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Security.Guest_token.Guest_tokenPostResponse"/> and sets the default values.
     /// </summary>
     public Guest_tokenPostResponse()
     {
@@ -25,12 +24,12 @@ public partial class Guest_tokenPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Security.Guest_token.Guest_tokenPostResponse"/></returns>
+    /// <returns>A <see cref="Security.Guest_token.Guest_tokenPostResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Security.Guest_token.Guest_tokenPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Security.Guest_token.Guest_tokenPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Security.Guest_token.Guest_tokenPostResponse();
+        return new Security.Guest_token.Guest_tokenPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

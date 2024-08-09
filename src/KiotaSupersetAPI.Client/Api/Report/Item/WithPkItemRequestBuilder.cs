@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Report.Item;
@@ -18,12 +17,12 @@ namespace KiotaSupersetAPI.Client.API.Report.Item;
 public partial class WithPkItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The log property</summary>
-    public KApi.Report.Item.Log.LogRequestBuilder Log
+    public Report.Item.Log.LogRequestBuilder Log
     {
-        get => new KApi.Report.Item.Log.LogRequestBuilder(PathParameters, RequestAdapter);
+        get => new Report.Item.Log.LogRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Report.Item.WithPkItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Report.Item.WithPkItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -31,7 +30,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Report.Item.WithPkItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Report.Item.WithPkItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -41,14 +40,14 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Delete a report schedule
     /// </summary>
-    /// <returns>A <see cref="KApi.Report.Item.WithPkDeleteResponse"/></returns>
+    /// <returns>A <see cref="Report.Item.WithPkDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk403Error">When receiving a 403 status code</exception>
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Report.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Report.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -59,12 +58,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Report.Item.WithPkDeleteResponse>(requestInfo, KApi.Report.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Report.Item.WithPkDeleteResponse>(requestInfo, Report.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a report schedule
     /// </summary>
-    /// <returns>A <see cref="KApi.Report.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Report.Item.WithPkResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk403Error">When receiving a 403 status code</exception>
@@ -72,7 +71,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithPkDeleteResponseAsync instead.")]
-    public async Task<KApi.Report.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Report.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -83,12 +82,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Report.Item.WithPkResponse>(requestInfo, KApi.Report.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Report.Item.WithPkResponse>(requestInfo, Report.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get an item model
     /// </summary>
-    /// <returns>A <see cref="KApi.Report.Item.WithPkGetResponse"/></returns>
+    /// <returns>A <see cref="Report.Item.WithPkGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -96,7 +95,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Report.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<KApi.Report.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Report.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<Report.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -108,12 +107,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Report.Item.WithPkGetResponse>(requestInfo, KApi.Report.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Report.Item.WithPkGetResponse>(requestInfo, Report.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get an item model
     /// </summary>
-    /// <returns>A <see cref="KApi.Report.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Report.Item.WithPkResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -122,7 +121,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithPkGetResponseAsync instead.")]
-    public async Task<KApi.Report.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<KApi.Report.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Report.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<Report.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -134,12 +133,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Report.Item.WithPkResponse>(requestInfo, KApi.Report.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Report.Item.WithPkResponse>(requestInfo, Report.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Update a report schedule
     /// </summary>
-    /// <returns>A <see cref="KApi.Report.Item.WithPkPutResponse"/></returns>
+    /// <returns>A <see cref="Report.Item.WithPkPutResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -149,7 +148,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Report.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(KClient.Models.ReportScheduleRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Report.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(KClient.Models.ReportScheduleRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -163,12 +162,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Report.Item.WithPkPutResponse>(requestInfo, KApi.Report.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Report.Item.WithPkPutResponse>(requestInfo, Report.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Update a report schedule
     /// </summary>
-    /// <returns>A <see cref="KApi.Report.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Report.Item.WithPkResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -179,7 +178,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithPkPutResponseAsync instead.")]
-    public async Task<KApi.Report.Item.WithPkResponse> PutAsync(KClient.Models.ReportScheduleRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Report.Item.WithPkResponse> PutAsync(KClient.Models.ReportScheduleRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -193,7 +192,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Report.Item.WithPkResponse>(requestInfo, KApi.Report.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Report.Item.WithPkResponse>(requestInfo, Report.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a report schedule
@@ -213,7 +212,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Report.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Report.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -240,11 +239,11 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Report.Item.WithPkItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Report.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Report.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public Report.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Report.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Report.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.
@@ -269,7 +268,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class WithPkItemRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Report.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>
+    public partial class WithPkItemRequestBuilderGetRequestConfiguration : RequestConfiguration<Report.Item.WithPkItemRequestBuilder.WithPkItemRequestBuilderGetQueryParameters>
     {
     }
     /// <summary>

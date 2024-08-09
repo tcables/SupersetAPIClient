@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Chart;
 
@@ -16,7 +15,7 @@ public partial class ChartDeleteResponse : IAdditionalDataHolder, IParsable
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.ChartDeleteResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.ChartDeleteResponse"/> and sets the default values.
     /// </summary>
     public ChartDeleteResponse()
     {
@@ -25,12 +24,12 @@ public partial class ChartDeleteResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.ChartDeleteResponse"/></returns>
+    /// <returns>A <see cref="Chart.ChartDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Chart.ChartDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Chart.ChartDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Chart.ChartDeleteResponse();
+        return new Chart.ChartDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

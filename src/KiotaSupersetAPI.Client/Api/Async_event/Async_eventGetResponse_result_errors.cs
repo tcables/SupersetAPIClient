@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Async_event;
 
@@ -13,7 +12,7 @@ public partial class Async_eventGetResponse_result_errors : IAdditionalDataHolde
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Async_event.Async_eventGetResponse_result_errors"/> and sets the default values.
+    /// Instantiates a new <see cref="Async_event.Async_eventGetResponse_result_errors"/> and sets the default values.
     /// </summary>
     public Async_eventGetResponse_result_errors()
     {
@@ -22,12 +21,12 @@ public partial class Async_eventGetResponse_result_errors : IAdditionalDataHolde
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Async_event.Async_eventGetResponse_result_errors"/></returns>
+    /// <returns>A <see cref="Async_event.Async_eventGetResponse_result_errors"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Async_event.Async_eventGetResponse_result_errors CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Async_event.Async_eventGetResponse_result_errors CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Async_event.Async_eventGetResponse_result_errors();
+        return new Async_event.Async_eventGetResponse_result_errors();
     }
     /// <summary>
     /// The deserialization information for the current model

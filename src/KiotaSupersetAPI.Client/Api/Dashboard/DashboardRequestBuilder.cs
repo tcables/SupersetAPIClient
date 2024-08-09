@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard;
@@ -18,49 +17,49 @@ namespace KiotaSupersetAPI.Client.API.Dashboard;
 public partial class DashboardRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _info property</summary>
-    public KApi.Dashboard._info._infoRequestBuilder _info
+    public Dashboard._info._infoRequestBuilder _info
     {
-        get => new KApi.Dashboard._info._infoRequestBuilder(PathParameters, RequestAdapter);
+        get => new Dashboard._info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
-    public KApi.Dashboard.Export.ExportRequestBuilder Export
+    public Dashboard.Export.ExportRequestBuilder Export
     {
-        get => new KApi.Dashboard.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Dashboard.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorite_status property</summary>
-    public KApi.Dashboard.Favorite_status.Favorite_statusRequestBuilder Favorite_status
+    public Dashboard.Favorite_status.Favorite_statusRequestBuilder Favorite_status
     {
-        get => new KApi.Dashboard.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
+        get => new Dashboard.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The import property</summary>
-    public KApi.Dashboard.Import.ImportRequestBuilder Import
+    public Dashboard.Import.ImportRequestBuilder Import
     {
-        get => new KApi.Dashboard.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Dashboard.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The permalink property</summary>
-    public KApi.Dashboard.Permalink.PermalinkRequestBuilder Permalink
+    public Dashboard.Permalink.PermalinkRequestBuilder Permalink
     {
-        get => new KApi.Dashboard.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
+        get => new Dashboard.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public KApi.Dashboard.Related.RelatedRequestBuilder Related
+    public Dashboard.Related.RelatedRequestBuilder Related
     {
-        get => new KApi.Dashboard.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Dashboard.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item collection</summary>
     /// <param name="position">Either the id of the dashboard, or its slug</param>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Dashboard_ItemRequestBuilder"/></returns>
-    public KApi.Dashboard.Item.Dashboard_ItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Dashboard.Item.Dashboard_ItemRequestBuilder"/></returns>
+    public Dashboard.Item.Dashboard_ItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("dashboard_%2Did", position);
-            return new KApi.Dashboard.Item.Dashboard_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Dashboard.Item.Dashboard_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.DashboardRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.DashboardRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -68,7 +67,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.DashboardRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.DashboardRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -78,7 +77,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Bulk delete dashboards
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.DashboardDeleteResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.DashboardDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
@@ -86,7 +85,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Dashboard404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Dashboard422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.DashboardDeleteResponse> DeleteAsDashboardDeleteResponseAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.DashboardDeleteResponse> DeleteAsDashboardDeleteResponseAsync(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -98,12 +97,12 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Dashboard422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardDeleteResponse>(requestInfo, KApi.Dashboard.DashboardDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.DashboardDeleteResponse>(requestInfo, Dashboard.DashboardDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Bulk delete dashboards
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.DashboardResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.DashboardResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
@@ -112,7 +111,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Dashboard422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsDashboardDeleteResponseAsync instead.")]
-    public async Task<KApi.Dashboard.DashboardResponse> DeleteAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.DashboardResponse> DeleteAsync(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -124,19 +123,19 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Dashboard422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardResponse>(requestInfo, KApi.Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.DashboardResponse>(requestInfo, Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Gets a list of dashboards, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.DashboardGetResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.DashboardGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Dashboard400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Dashboard422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.DashboardGetResponse> GetDashboardGetResponseAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.DashboardGetResponse> GetDashboardGetResponseAsync(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -147,12 +146,12 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Dashboard422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardGetResponse>(requestInfo, KApi.Dashboard.DashboardGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.DashboardGetResponse>(requestInfo, Dashboard.DashboardGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Gets a list of dashboards, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.DashboardResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.DashboardResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Dashboard400Error">When receiving a 400 status code</exception>
@@ -160,7 +159,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Dashboard422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsDashboardGetResponseAsync instead.")]
-    public async Task<KApi.Dashboard.DashboardResponse> GetAsync(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.DashboardResponse> GetAsync(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -171,12 +170,12 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Dashboard422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardResponse>(requestInfo, KApi.Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.DashboardResponse>(requestInfo, Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a new dashboard
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.DashboardPostResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.DashboardPostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -184,7 +183,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Dashboard401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Dashboard404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.DashboardPostResponse> PostAsDashboardPostResponseAsync(KClient.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.DashboardPostResponse> PostAsDashboardPostResponseAsync(KClient.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -196,12 +195,12 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Dashboard404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardPostResponse>(requestInfo, KApi.Dashboard.DashboardPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.DashboardPostResponse>(requestInfo, Dashboard.DashboardPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a new dashboard
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.DashboardResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.DashboardResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -210,7 +209,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Dashboard404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Dashboard500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsDashboardPostResponseAsync instead.")]
-    public async Task<KApi.Dashboard.DashboardResponse> PostAsync(KClient.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.DashboardResponse> PostAsync(KClient.Models.DashboardRestApi.Post body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -222,14 +221,14 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Dashboard404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Dashboard500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.DashboardResponse>(requestInfo, KApi.Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.DashboardResponse>(requestInfo, Dashboard.DashboardResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Bulk delete dashboards
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
@@ -242,7 +241,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>> requestConfiguration = default)
     {
 
         var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -269,11 +268,11 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.DashboardRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dashboard.DashboardRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dashboard.DashboardRequestBuilder WithUrl(string rawUrl)
+    public Dashboard.DashboardRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dashboard.DashboardRequestBuilder(rawUrl, RequestAdapter);
+        return new Dashboard.DashboardRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Bulk delete dashboards
@@ -290,7 +289,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class DashboardRequestBuilderDeleteRequestConfiguration : RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>
+    public partial class DashboardRequestBuilderDeleteRequestConfiguration : RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderDeleteQueryParameters>
     {
     }
     /// <summary>
@@ -308,7 +307,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class DashboardRequestBuilderGetRequestConfiguration : RequestConfiguration<KApi.Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>
+    public partial class DashboardRequestBuilderGetRequestConfiguration : RequestConfiguration<Dashboard.DashboardRequestBuilder.DashboardRequestBuilderGetQueryParameters>
     {
     }
     /// <summary>

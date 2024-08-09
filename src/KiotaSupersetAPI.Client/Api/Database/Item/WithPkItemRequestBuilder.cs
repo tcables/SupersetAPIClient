@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Database.Item;
@@ -18,62 +17,62 @@ namespace KiotaSupersetAPI.Client.API.Database.Item;
 public partial class WithPkItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The connection property</summary>
-    public KApi.Database.Item.Connection.ConnectionRequestBuilder Connection
+    public Database.Item.Connection.ConnectionRequestBuilder Connection
     {
-        get => new KApi.Database.Item.Connection.ConnectionRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Connection.ConnectionRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The function_names property</summary>
-    public KApi.Database.Item.Function_names.Function_namesRequestBuilder Function_names
+    public Database.Item.Function_names.Function_namesRequestBuilder Function_names
     {
-        get => new KApi.Database.Item.Function_names.Function_namesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Function_names.Function_namesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related_objects property</summary>
-    public KApi.Database.Item.Related_objects.Related_objectsRequestBuilder Related_objects
+    public Database.Item.Related_objects.Related_objectsRequestBuilder Related_objects
     {
-        get => new KApi.Database.Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The schemas property</summary>
-    public KApi.Database.Item.Schemas.SchemasRequestBuilder Schemas
+    public Database.Item.Schemas.SchemasRequestBuilder Schemas
     {
-        get => new KApi.Database.Item.Schemas.SchemasRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Schemas.SchemasRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The schemas_access_for_file_upload property</summary>
-    public KApi.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder Schemas_access_for_file_upload
+    public Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder Schemas_access_for_file_upload
     {
-        get => new KApi.Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The select_star property</summary>
-    public KApi.Database.Item.Select_star.Select_starRequestBuilder Select_star
+    public Database.Item.Select_star.Select_starRequestBuilder Select_star
     {
-        get => new KApi.Database.Item.Select_star.Select_starRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Select_star.Select_starRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The ssh_tunnel property</summary>
-    public KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder Ssh_tunnel
+    public Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder Ssh_tunnel
     {
-        get => new KApi.Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The table property</summary>
-    public KApi.Database.Item.Table.TableRequestBuilder Table
+    public Database.Item.Table.TableRequestBuilder Table
     {
-        get => new KApi.Database.Item.Table.TableRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Table.TableRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The table_extra property</summary>
-    public KApi.Database.Item.Table_extra.Table_extraRequestBuilder Table_extra
+    public Database.Item.Table_extra.Table_extraRequestBuilder Table_extra
     {
-        get => new KApi.Database.Item.Table_extra.Table_extraRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Table_extra.Table_extraRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The tables property</summary>
-    public KApi.Database.Item.Tables.TablesRequestBuilder Tables
+    public Database.Item.Tables.TablesRequestBuilder Tables
     {
-        get => new KApi.Database.Item.Tables.TablesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Tables.TablesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The validate_sql property</summary>
-    public KApi.Database.Item.Validate_sql.Validate_sqlRequestBuilder Validate_sql
+    public Database.Item.Validate_sql.Validate_sqlRequestBuilder Validate_sql
     {
-        get => new KApi.Database.Item.Validate_sql.Validate_sqlRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.Item.Validate_sql.Validate_sqlRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.WithPkItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.WithPkItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -81,7 +80,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Database.Item.WithPkItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Database.Item.WithPkItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -91,7 +90,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Delete a database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.WithPkDeleteResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.WithPkDeleteResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk401Error">When receiving a 401 status code</exception>
@@ -99,7 +98,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.WithPkDeleteResponse> DeleteAsWithPkDeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -111,12 +110,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkDeleteResponse>(requestInfo, KApi.Database.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.WithPkDeleteResponse>(requestInfo, Database.Item.WithPkDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.WithPkResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk401Error">When receiving a 401 status code</exception>
@@ -125,7 +124,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use DeleteAsWithPkDeleteResponseAsync instead.")]
-    public async Task<KApi.Database.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.WithPkResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -137,19 +136,19 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkResponse>(requestInfo, KApi.Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.WithPkResponse>(requestInfo, Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get a database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.WithPkGetResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.WithPkGetResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models.WithPk401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.WithPkGetResponse> GetWithPkGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -160,12 +159,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkGetResponse>(requestInfo, KApi.Database.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.WithPkGetResponse>(requestInfo, Database.Item.WithPkGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get a database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.WithPkResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.WithPk400Error">When receiving a 400 status code</exception>
@@ -173,7 +172,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use GetAsWithPkGetResponseAsync instead.")]
-    public async Task<KApi.Database.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.WithPkResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -184,12 +183,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkResponse>(requestInfo, KApi.Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.WithPkResponse>(requestInfo, Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Change a database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.WithPkPutResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.WithPkPutResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -199,7 +198,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Database.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(KClient.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.WithPkPutResponse> PutAsWithPkPutResponseAsync(KClient.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -213,12 +212,12 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkPutResponse>(requestInfo, KApi.Database.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.WithPkPutResponse>(requestInfo, Database.Item.WithPkPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Change a database
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.WithPkResponse"/></returns>
+    /// <returns>A <see cref="Database.Item.WithPkResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -229,7 +228,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.WithPk422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.WithPk500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsWithPkPutResponseAsync instead.")]
-    public async Task<KApi.Database.Item.WithPkResponse> PutAsync(KClient.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Database.Item.WithPkResponse> PutAsync(KClient.Models.DatabaseRestApi.Put body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -243,7 +242,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.WithPk422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.WithPk500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Database.Item.WithPkResponse>(requestInfo, KApi.Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Database.Item.WithPkResponse>(requestInfo, Database.Item.WithPkResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Delete a database
@@ -290,11 +289,11 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Database.Item.WithPkItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Database.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Database.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public Database.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Database.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Database.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

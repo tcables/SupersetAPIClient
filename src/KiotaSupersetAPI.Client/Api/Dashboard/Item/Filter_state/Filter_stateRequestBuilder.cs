@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Filter_state;
@@ -19,18 +18,18 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item.filter_state.item collection</summary>
     /// <param name="position">The value key.</param>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder"/></returns>
-    public KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder"/></returns>
+    public Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("key", position);
-            return new KApi.Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Filter_state.Filter_stateRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -38,7 +37,7 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Filter_state.Filter_stateRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -48,7 +47,7 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Create a dashboard&apos;s filter state
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Filter_state.Filter_statePostResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Filter_state.Filter_statePostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -56,7 +55,7 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Filter_state401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Filter_state422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Filter_state500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dashboard.Item.Filter_state.Filter_statePostResponse> PostAsFilter_statePostResponseAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Filter_state.Filter_statePostResponse> PostAsFilter_statePostResponseAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -68,12 +67,12 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Filter_state422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Filter_state500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Filter_state.Filter_statePostResponse>(requestInfo, KApi.Dashboard.Item.Filter_state.Filter_statePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Filter_state.Filter_statePostResponse>(requestInfo, Dashboard.Item.Filter_state.Filter_statePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a dashboard&apos;s filter state
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Filter_state.Filter_stateResponse"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Filter_state.Filter_stateResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -82,7 +81,7 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Filter_state422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Filter_state500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsFilter_statePostResponseAsync instead.")]
-    public async Task<KApi.Dashboard.Item.Filter_state.Filter_stateResponse> PostAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dashboard.Item.Filter_state.Filter_stateResponse> PostAsync(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -94,7 +93,7 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Filter_state422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Filter_state500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dashboard.Item.Filter_state.Filter_stateResponse>(requestInfo, KApi.Dashboard.Item.Filter_state.Filter_stateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dashboard.Item.Filter_state.Filter_stateResponse>(requestInfo, Dashboard.Item.Filter_state.Filter_stateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Create a dashboard&apos;s filter state
@@ -102,7 +101,7 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(KClient.Models.TemporaryCachePostSchema body, Action<RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -115,11 +114,11 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dashboard.Item.Filter_state.Filter_stateRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder WithUrl(string rawUrl)
+    public Dashboard.Item.Filter_state.Filter_stateRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder(rawUrl, RequestAdapter);
+        return new Dashboard.Item.Filter_state.Filter_stateRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Create a dashboard&apos;s filter state
@@ -135,7 +134,7 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// </summary>
     [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
     [GeneratedCode("Kiota", "1.16.0")]
-    public partial class Filter_stateRequestBuilderPostRequestConfiguration : RequestConfiguration<KApi.Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>
+    public partial class Filter_stateRequestBuilderPostRequestConfiguration : RequestConfiguration<Dashboard.Item.Filter_state.Filter_stateRequestBuilder.Filter_stateRequestBuilderPostQueryParameters>
     {
     }
 }

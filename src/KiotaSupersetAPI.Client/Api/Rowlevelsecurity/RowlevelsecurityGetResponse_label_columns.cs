@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Rowlevelsecurity;
 
@@ -16,7 +15,7 @@ public partial class RowlevelsecurityGetResponse_label_columns : IAdditionalData
     public string ColumnName { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns"/> and sets the default values.
+    /// Instantiates a new <see cref="Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns"/> and sets the default values.
     /// </summary>
     public RowlevelsecurityGetResponse_label_columns()
     {
@@ -25,12 +24,12 @@ public partial class RowlevelsecurityGetResponse_label_columns : IAdditionalData
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns"/></returns>
+    /// <returns>A <see cref="Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns();
+        return new Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

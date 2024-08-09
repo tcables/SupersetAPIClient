@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Dashboard.Item.Thumbnail;
 
@@ -13,18 +12,18 @@ public partial class ThumbnailRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item.thumbnail.item collection</summary>
     /// <param name="position">A hex digest that makes this dashboard unique</param>
-    /// <returns>A <see cref="KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
-    public KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
+    public Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("digest", position);
-            return new KApi.Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Thumbnail.ThumbnailRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Thumbnail.ThumbnailRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -32,7 +31,7 @@ public partial class ThumbnailRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dashboard.Item.Thumbnail.ThumbnailRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dashboard.Item.Thumbnail.ThumbnailRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

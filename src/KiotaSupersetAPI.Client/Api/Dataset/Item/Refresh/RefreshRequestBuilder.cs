@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Dataset.Item.Refresh;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Dataset.Item.Refresh;
 public partial class RefreshRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset.Item.Refresh.RefreshRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset.Item.Refresh.RefreshRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Dataset.Item.Refresh.RefreshRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Dataset.Item.Refresh.RefreshRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Refresh and update columns of a dataset
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Item.Refresh.RefreshPutResponse"/></returns>
+    /// <returns>A <see cref="Dataset.Item.Refresh.RefreshPutResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
@@ -44,7 +43,7 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Refresh404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Refresh422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Dataset.Item.Refresh.RefreshPutResponse> PutAsRefreshPutResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.Item.Refresh.RefreshPutResponse> PutAsRefreshPutResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToPutRequestInformation(requestConfiguration);
@@ -56,12 +55,12 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Refresh422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dataset.Item.Refresh.RefreshPutResponse>(requestInfo, KApi.Dataset.Item.Refresh.RefreshPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dataset.Item.Refresh.RefreshPutResponse>(requestInfo, Dataset.Item.Refresh.RefreshPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Refresh and update columns of a dataset
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Item.Refresh.RefreshResponse"/></returns>
+    /// <returns>A <see cref="Dataset.Item.Refresh.RefreshResponse"/></returns>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Refresh401Error">When receiving a 401 status code</exception>
@@ -70,7 +69,7 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Refresh422Error">When receiving a 422 status code</exception>
     /// <exception cref="KClient.Models.Refresh500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PutAsRefreshPutResponseAsync instead.")]
-    public async Task<KApi.Dataset.Item.Refresh.RefreshResponse> PutAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Dataset.Item.Refresh.RefreshResponse> PutAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         var requestInfo = ToPutRequestInformation(requestConfiguration);
@@ -82,7 +81,7 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
             { "422", KClient.Models.Refresh422Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Refresh500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Dataset.Item.Refresh.RefreshResponse>(requestInfo, KApi.Dataset.Item.Refresh.RefreshResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Dataset.Item.Refresh.RefreshResponse>(requestInfo, Dataset.Item.Refresh.RefreshResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Refresh and update columns of a dataset
@@ -100,11 +99,11 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Dataset.Item.Refresh.RefreshRequestBuilder"/></returns>
+    /// <returns>A <see cref="Dataset.Item.Refresh.RefreshRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Dataset.Item.Refresh.RefreshRequestBuilder WithUrl(string rawUrl)
+    public Dataset.Item.Refresh.RefreshRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Dataset.Item.Refresh.RefreshRequestBuilder(rawUrl, RequestAdapter);
+        return new Dataset.Item.Refresh.RefreshRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

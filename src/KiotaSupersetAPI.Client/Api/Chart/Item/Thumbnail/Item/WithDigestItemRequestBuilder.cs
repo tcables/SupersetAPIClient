@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Chart.Item.Thumbnail.Item;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Chart.Item.Thumbnail.Item;
 public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -71,11 +70,11 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
+    /// <returns>A <see cref="Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder WithUrl(string rawUrl)
+    public Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

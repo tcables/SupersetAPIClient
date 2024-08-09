@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Datasource.Item.Item;
 
@@ -12,12 +11,12 @@ namespace KiotaSupersetAPI.Client.API.Datasource.Item.Item;
 public partial class WithDatasource_ItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The column property</summary>
-    public KApi.Datasource.Item.Item.Column.ColumnRequestBuilder Column
+    public Datasource.Item.Item.Column.ColumnRequestBuilder Column
     {
-        get => new KApi.Datasource.Item.Item.Column.ColumnRequestBuilder(PathParameters, RequestAdapter);
+        get => new Datasource.Item.Item.Column.ColumnRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -25,7 +24,7 @@ public partial class WithDatasource_ItemRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

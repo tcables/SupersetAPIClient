@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Query.Distinct;
 
@@ -13,18 +12,18 @@ public partial class DistinctRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.query.distinct.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
-    /// <returns>A <see cref="KApi.Query.Distinct.Item.WithColumn_nameItemRequestBuilder"/></returns>
-    public KApi.Query.Distinct.Item.WithColumn_nameItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Query.Distinct.Item.WithColumn_nameItemRequestBuilder"/></returns>
+    public Query.Distinct.Item.WithColumn_nameItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("column_name", position);
-            return new KApi.Query.Distinct.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Query.Distinct.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Query.Distinct.DistinctRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Query.Distinct.DistinctRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -32,7 +31,7 @@ public partial class DistinctRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Query.Distinct.DistinctRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Query.Distinct.DistinctRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

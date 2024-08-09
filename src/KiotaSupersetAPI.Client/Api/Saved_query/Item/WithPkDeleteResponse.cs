@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Saved_query.Item;
 
@@ -16,7 +15,7 @@ public partial class WithPkDeleteResponse : IAdditionalDataHolder, IParsable
     public string Message { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Saved_query.Item.WithPkDeleteResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Saved_query.Item.WithPkDeleteResponse"/> and sets the default values.
     /// </summary>
     public WithPkDeleteResponse()
     {
@@ -25,12 +24,12 @@ public partial class WithPkDeleteResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Saved_query.Item.WithPkDeleteResponse"/></returns>
+    /// <returns>A <see cref="Saved_query.Item.WithPkDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Saved_query.Item.WithPkDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Saved_query.Item.WithPkDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Saved_query.Item.WithPkDeleteResponse();
+        return new Saved_query.Item.WithPkDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

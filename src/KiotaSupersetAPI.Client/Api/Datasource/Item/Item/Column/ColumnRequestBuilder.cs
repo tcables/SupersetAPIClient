@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Datasource.Item.Item.Column;
 
@@ -13,18 +12,18 @@ public partial class ColumnRequestBuilder : BaseRequestBuilder
 {
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item.item.column.item collection</summary>
     /// <param name="position">The name of the column to get values for</param>
-    /// <returns>A <see cref="KApi.Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder"/></returns>
-    public KApi.Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder this[string position]
+    /// <returns>A <see cref="Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder"/></returns>
+    public Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("column_name", position);
-            return new KApi.Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.ColumnRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Datasource.Item.Item.Column.ColumnRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -32,7 +31,7 @@ public partial class ColumnRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Datasource.Item.Item.Column.ColumnRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Datasource.Item.Item.Column.ColumnRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>

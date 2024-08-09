@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Security.Login;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Security.Login;
 public partial class LoginRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Security.Login.LoginRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Security.Login.LoginRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class LoginRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Security.Login.LoginRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Security.Login.LoginRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,14 +35,14 @@ public partial class LoginRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Authenticate and get a JWT access and refresh token
     /// </summary>
-    /// <returns>A <see cref="KApi.Security.Login.LoginPostResponse"/></returns>
+    /// <returns>A <see cref="Security.Login.LoginPostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
     /// <exception cref="KClient.Models.Login400Error">When receiving a 400 status code</exception>
     /// <exception cref="KClient.Models.Login401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Login500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Security.Login.LoginPostResponse> PostAsLoginPostResponseAsync(KApi.Security.Login.LoginPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Security.Login.LoginPostResponse> PostAsLoginPostResponseAsync(Security.Login.LoginPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -54,12 +53,12 @@ public partial class LoginRequestBuilder : BaseRequestBuilder
             { "401", KClient.Models.Login401Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Login500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Security.Login.LoginPostResponse>(requestInfo, KApi.Security.Login.LoginPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Security.Login.LoginPostResponse>(requestInfo, Security.Login.LoginPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Authenticate and get a JWT access and refresh token
     /// </summary>
-    /// <returns>A <see cref="KApi.Security.Login.LoginResponse"/></returns>
+    /// <returns>A <see cref="Security.Login.LoginResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -67,7 +66,7 @@ public partial class LoginRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Login401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Login500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsLoginPostResponseAsync instead.")]
-    public async Task<KApi.Security.Login.LoginResponse> PostAsync(KApi.Security.Login.LoginPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Security.Login.LoginResponse> PostAsync(Security.Login.LoginPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -78,7 +77,7 @@ public partial class LoginRequestBuilder : BaseRequestBuilder
             { "401", KClient.Models.Login401Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Login500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Security.Login.LoginResponse>(requestInfo, KApi.Security.Login.LoginResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Security.Login.LoginResponse>(requestInfo, Security.Login.LoginResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Authenticate and get a JWT access and refresh token
@@ -86,7 +85,7 @@ public partial class LoginRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KApi.Security.Login.LoginPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Security.Login.LoginPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -99,11 +98,11 @@ public partial class LoginRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Security.Login.LoginRequestBuilder"/></returns>
+    /// <returns>A <see cref="Security.Login.LoginRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Security.Login.LoginRequestBuilder WithUrl(string rawUrl)
+    public Security.Login.LoginRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Security.Login.LoginRequestBuilder(rawUrl, RequestAdapter);
+        return new Security.Login.LoginRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

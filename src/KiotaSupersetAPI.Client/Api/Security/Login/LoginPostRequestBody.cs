@@ -3,7 +3,6 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API.Security.Login;
 
@@ -16,14 +15,14 @@ public partial class LoginPostRequestBody : IAdditionalDataHolder, IParsable
     public string Password { get; set; }
 
     /// <summary>Choose an authentication provider</summary>
-    public KApi.Security.Login.LoginPostRequestBody_provider? Provider { get; set; }
+    public Security.Login.LoginPostRequestBody_provider? Provider { get; set; }
     /// <summary>If true a refresh token is provided also</summary>
     public bool? Refresh { get; set; }
     /// <summary>The username for authentication</summary>
     public string Username { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Security.Login.LoginPostRequestBody"/> and sets the default values.
+    /// Instantiates a new <see cref="Security.Login.LoginPostRequestBody"/> and sets the default values.
     /// </summary>
     public LoginPostRequestBody()
     {
@@ -32,12 +31,12 @@ public partial class LoginPostRequestBody : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Security.Login.LoginPostRequestBody"/></returns>
+    /// <returns>A <see cref="Security.Login.LoginPostRequestBody"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Security.Login.LoginPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Security.Login.LoginPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Security.Login.LoginPostRequestBody();
+        return new Security.Login.LoginPostRequestBody();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -48,7 +47,7 @@ public partial class LoginPostRequestBody : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "password", n => { Password = n.GetStringValue(); } },
-            { "provider", n => { Provider = n.GetEnumValue<KApi.Security.Login.LoginPostRequestBody_provider>(); } },
+            { "provider", n => { Provider = n.GetEnumValue<Security.Login.LoginPostRequestBody_provider>(); } },
             { "refresh", n => { Refresh = n.GetBoolValue(); } },
             { "username", n => { Username = n.GetStringValue(); } },
         };
@@ -61,7 +60,7 @@ public partial class LoginPostRequestBody : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteStringValue("password", Password);
-        writer.WriteEnumValue<KApi.Security.Login.LoginPostRequestBody_provider>("provider", Provider);
+        writer.WriteEnumValue<Security.Login.LoginPostRequestBody_provider>("provider", Provider);
         writer.WriteBoolValue("refresh", Refresh);
         writer.WriteStringValue("username", Username);
         writer.WriteAdditionalData(AdditionalData);

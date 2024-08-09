@@ -4,7 +4,6 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Report;
@@ -17,13 +16,13 @@ public partial class ReportGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>The total record count on the backend</summary>
     public double? Count { get; set; }
     /// <summary>The description_columns property</summary>
-    public KApi.Report.ReportGetResponse_description_columns DescriptionColumns { get; set; }
+    public Report.ReportGetResponse_description_columns DescriptionColumns { get; set; }
 
     /// <summary>A list of item ids, useful when you don&apos;t know the column id</summary>
     public List<string> Ids { get; set; }
 
     /// <summary>The label_columns property</summary>
-    public KApi.Report.ReportGetResponse_label_columns LabelColumns { get; set; }
+    public Report.ReportGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>A list of columns</summary>
     public List<string> ListColumns { get; set; }
@@ -38,7 +37,7 @@ public partial class ReportGetResponse : IAdditionalDataHolder, IParsable
     public List<KClient.Models.ReportScheduleRestApi.Get_list.Get_list> Result { get; set; }
 
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Report.ReportGetResponse"/> and sets the default values.
+    /// Instantiates a new <see cref="Report.ReportGetResponse"/> and sets the default values.
     /// </summary>
     public ReportGetResponse()
     {
@@ -47,12 +46,12 @@ public partial class ReportGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>
     /// Creates a new instance of the appropriate class based on discriminator value
     /// </summary>
-    /// <returns>A <see cref="KApi.Report.ReportGetResponse"/></returns>
+    /// <returns>A <see cref="Report.ReportGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static KApi.Report.ReportGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Report.ReportGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new KApi.Report.ReportGetResponse();
+        return new Report.ReportGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model
@@ -63,9 +62,9 @@ public partial class ReportGetResponse : IAdditionalDataHolder, IParsable
         return new Dictionary<string, Action<IParseNode>>
         {
             { "count", n => { Count = n.GetDoubleValue(); } },
-            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<KApi.Report.ReportGetResponse_description_columns>(KApi.Report.ReportGetResponse_description_columns.CreateFromDiscriminatorValue); } },
+            { "description_columns", n => { DescriptionColumns = n.GetObjectValue<Report.ReportGetResponse_description_columns>(Report.ReportGetResponse_description_columns.CreateFromDiscriminatorValue); } },
             { "ids", n => { Ids = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
-            { "label_columns", n => { LabelColumns = n.GetObjectValue<KApi.Report.ReportGetResponse_label_columns>(KApi.Report.ReportGetResponse_label_columns.CreateFromDiscriminatorValue); } },
+            { "label_columns", n => { LabelColumns = n.GetObjectValue<Report.ReportGetResponse_label_columns>(Report.ReportGetResponse_label_columns.CreateFromDiscriminatorValue); } },
             { "list_columns", n => { ListColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
             { "list_title", n => { ListTitle = n.GetStringValue(); } },
             { "order_columns", n => { OrderColumns = n.GetCollectionOfPrimitiveValues<string>()?.ToList(); } },
@@ -80,9 +79,9 @@ public partial class ReportGetResponse : IAdditionalDataHolder, IParsable
     {
         _ = writer ?? throw new ArgumentNullException(nameof(writer));
         writer.WriteDoubleValue("count", Count);
-        writer.WriteObjectValue<KApi.Report.ReportGetResponse_description_columns>("description_columns", DescriptionColumns);
+        writer.WriteObjectValue<Report.ReportGetResponse_description_columns>("description_columns", DescriptionColumns);
         writer.WriteCollectionOfPrimitiveValues<string>("ids", Ids);
-        writer.WriteObjectValue<KApi.Report.ReportGetResponse_label_columns>("label_columns", LabelColumns);
+        writer.WriteObjectValue<Report.ReportGetResponse_label_columns>("label_columns", LabelColumns);
         writer.WriteCollectionOfPrimitiveValues<string>("list_columns", ListColumns);
         writer.WriteStringValue("list_title", ListTitle);
         writer.WriteCollectionOfPrimitiveValues<string>("order_columns", OrderColumns);

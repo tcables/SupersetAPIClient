@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using KApi = KiotaSupersetAPI.Client.API;
 using KClient = KiotaSupersetAPI.Client;
 
 namespace KiotaSupersetAPI.Client.API.Tag.Bulk_create;
@@ -18,7 +17,7 @@ namespace KiotaSupersetAPI.Client.API.Tag.Bulk_create;
 public partial class Bulk_createRequestBuilder : BaseRequestBuilder
 {
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Bulk_create.Bulk_createRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Bulk_create.Bulk_createRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -26,7 +25,7 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
     {
     }
     /// <summary>
-    /// Instantiates a new <see cref="KApi.Tag.Bulk_create.Bulk_createRequestBuilder"/> and sets the default values.
+    /// Instantiates a new <see cref="Tag.Bulk_create.Bulk_createRequestBuilder"/> and sets the default values.
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
@@ -36,7 +35,7 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Get all objects associated with a tag
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Bulk_create.Bulk_createPostResponse"/></returns>
+    /// <returns>A <see cref="Tag.Bulk_create.Bulk_createPostResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -44,7 +43,7 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Bulk_create401Error">When receiving a 401 status code</exception>
     /// <exception cref="KClient.Models.Bulk_create404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Bulk_create500Error">When receiving a 500 status code</exception>
-    public async Task<KApi.Tag.Bulk_create.Bulk_createPostResponse> PostAsBulk_createPostResponseAsync(KApi.Tag.Bulk_create.Bulk_createPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Bulk_create.Bulk_createPostResponse> PostAsBulk_createPostResponseAsync(Tag.Bulk_create.Bulk_createPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -56,12 +55,12 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Bulk_create404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Bulk_create500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Bulk_create.Bulk_createPostResponse>(requestInfo, KApi.Tag.Bulk_create.Bulk_createPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Bulk_create.Bulk_createPostResponse>(requestInfo, Tag.Bulk_create.Bulk_createPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get all objects associated with a tag
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Bulk_create.Bulk_createResponse"/></returns>
+    /// <returns>A <see cref="Tag.Bulk_create.Bulk_createResponse"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -70,7 +69,7 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
     /// <exception cref="KClient.Models.Bulk_create404Error">When receiving a 404 status code</exception>
     /// <exception cref="KClient.Models.Bulk_create500Error">When receiving a 500 status code</exception>
     [Obsolete("This method is obsolete. Use PostAsBulk_createPostResponseAsync instead.")]
-    public async Task<KApi.Tag.Bulk_create.Bulk_createResponse> PostAsync(KApi.Tag.Bulk_create.Bulk_createPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+    public async Task<Tag.Bulk_create.Bulk_createResponse> PostAsync(Tag.Bulk_create.Bulk_createPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -82,7 +81,7 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
             { "404", KClient.Models.Bulk_create404Error.CreateFromDiscriminatorValue },
             { "500", KClient.Models.Bulk_create500Error.CreateFromDiscriminatorValue },
         };
-        return await RequestAdapter.SendAsync<KApi.Tag.Bulk_create.Bulk_createResponse>(requestInfo, KApi.Tag.Bulk_create.Bulk_createResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        return await RequestAdapter.SendAsync<Tag.Bulk_create.Bulk_createResponse>(requestInfo, Tag.Bulk_create.Bulk_createResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
     /// <summary>
     /// Get all objects associated with a tag
@@ -90,7 +89,7 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
     /// <returns>A <see cref="RequestInformation"/></returns>
     /// <param name="body">The request body</param>
     /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-    public RequestInformation ToPostRequestInformation(KApi.Tag.Bulk_create.Bulk_createPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+    public RequestInformation ToPostRequestInformation(Tag.Bulk_create.Bulk_createPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
     {
 
         _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -103,11 +102,11 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
     /// <summary>
     /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
     /// </summary>
-    /// <returns>A <see cref="KApi.Tag.Bulk_create.Bulk_createRequestBuilder"/></returns>
+    /// <returns>A <see cref="Tag.Bulk_create.Bulk_createRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public KApi.Tag.Bulk_create.Bulk_createRequestBuilder WithUrl(string rawUrl)
+    public Tag.Bulk_create.Bulk_createRequestBuilder WithUrl(string rawUrl)
     {
-        return new KApi.Tag.Bulk_create.Bulk_createRequestBuilder(rawUrl, RequestAdapter);
+        return new Tag.Bulk_create.Bulk_createRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

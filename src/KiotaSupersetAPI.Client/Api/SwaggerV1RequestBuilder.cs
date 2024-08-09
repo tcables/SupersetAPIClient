@@ -1,7 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using Microsoft.Kiota.Abstractions;
-using KApi = KiotaSupersetAPI.Client.API;
 
 namespace KiotaSupersetAPI.Client.API;
 
@@ -12,124 +11,124 @@ namespace KiotaSupersetAPI.Client.API;
 public partial class SwaggerV1RequestBuilder : BaseRequestBuilder
 {
     /// <summary>The advanced_data_type property</summary>
-    public KApi.Advanced_data_type.Advanced_data_typeRequestBuilder Advanced_data_type
+    public Advanced_data_type.Advanced_data_typeRequestBuilder Advanced_data_type
     {
-        get => new KApi.Advanced_data_type.Advanced_data_typeRequestBuilder(PathParameters, RequestAdapter);
+        get => new Advanced_data_type.Advanced_data_typeRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The annotation_layer property</summary>
-    public KApi.AnnotationLayer.Annotation_layerRequestBuilder Annotation_layer
+    public AnnotationLayer.Annotation_layerRequestBuilder Annotation_layer
     {
-        get => new KApi.AnnotationLayer.Annotation_layerRequestBuilder(PathParameters, RequestAdapter);
+        get => new AnnotationLayer.Annotation_layerRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The assets property</summary>
-    public KApi.Assets.AssetsRequestBuilder Assets
+    public Assets.AssetsRequestBuilder Assets
     {
-        get => new KApi.Assets.AssetsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Assets.AssetsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The async_event property</summary>
-    public KApi.Async_event.Async_eventRequestBuilder Async_event
+    public Async_event.Async_eventRequestBuilder Async_event
     {
-        get => new KApi.Async_event.Async_eventRequestBuilder(PathParameters, RequestAdapter);
+        get => new Async_event.Async_eventRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The available_domains property</summary>
-    public KApi.Available_domains.Available_domainsRequestBuilder Available_domains
+    public Available_domains.Available_domainsRequestBuilder Available_domains
     {
-        get => new KApi.Available_domains.Available_domainsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Available_domains.Available_domainsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The cachekey property</summary>
-    public KApi.Cachekey.CachekeyRequestBuilder Cachekey
+    public Cachekey.CachekeyRequestBuilder Cachekey
     {
-        get => new KApi.Cachekey.CachekeyRequestBuilder(PathParameters, RequestAdapter);
+        get => new Cachekey.CachekeyRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The chart property</summary>
-    public KApi.Chart.ChartRequestBuilder Chart
+    public Chart.ChartRequestBuilder Chart
     {
-        get => new KApi.Chart.ChartRequestBuilder(PathParameters, RequestAdapter);
+        get => new Chart.ChartRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The css_template property</summary>
-    public KApi.Css_template.Css_templateRequestBuilder Css_template
+    public Css_template.Css_templateRequestBuilder Css_template
     {
-        get => new KApi.Css_template.Css_templateRequestBuilder(PathParameters, RequestAdapter);
+        get => new Css_template.Css_templateRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The dashboard property</summary>
-    public KApi.Dashboard.DashboardRequestBuilder Dashboard
+    public Dashboard.DashboardRequestBuilder Dashboard
     {
-        get => new KApi.Dashboard.DashboardRequestBuilder(PathParameters, RequestAdapter);
+        get => new Dashboard.DashboardRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The database property</summary>
-    public KApi.Database.DatabaseRequestBuilder Database
+    public Database.DatabaseRequestBuilder Database
     {
-        get => new KApi.Database.DatabaseRequestBuilder(PathParameters, RequestAdapter);
+        get => new Database.DatabaseRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The dataset property</summary>
-    public KApi.Dataset.DatasetRequestBuilder Dataset
+    public Dataset.DatasetRequestBuilder Dataset
     {
-        get => new KApi.Dataset.DatasetRequestBuilder(PathParameters, RequestAdapter);
+        get => new Dataset.DatasetRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The datasource property</summary>
-    public KApi.Datasource.DatasourceRequestBuilder Datasource
+    public Datasource.DatasourceRequestBuilder Datasource
     {
-        get => new KApi.Datasource.DatasourceRequestBuilder(PathParameters, RequestAdapter);
+        get => new Datasource.DatasourceRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The embedded_dashboard property</summary>
-    public KApi.Embedded_dashboard.Embedded_dashboardRequestBuilder Embedded_dashboard
+    public Embedded_dashboard.Embedded_dashboardRequestBuilder Embedded_dashboard
     {
-        get => new KApi.Embedded_dashboard.Embedded_dashboardRequestBuilder(PathParameters, RequestAdapter);
+        get => new Embedded_dashboard.Embedded_dashboardRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The explore property</summary>
-    public KApi.Explore.ExploreRequestBuilder Explore
+    public Explore.ExploreRequestBuilder Explore
     {
-        get => new KApi.Explore.ExploreRequestBuilder(PathParameters, RequestAdapter);
+        get => new Explore.ExploreRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The log property</summary>
-    public KApi.Log.LogRequestBuilder Log
+    public Log.LogRequestBuilder Log
     {
-        get => new KApi.Log.LogRequestBuilder(PathParameters, RequestAdapter);
+        get => new Log.LogRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The me property</summary>
-    public KApi.Me.MeRequestBuilder Me
+    public Me.MeRequestBuilder Me
     {
-        get => new KApi.Me.MeRequestBuilder(PathParameters, RequestAdapter);
+        get => new Me.MeRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The menu property</summary>
-    public KApi.Menu.MenuRequestBuilder Menu
+    public Menu.MenuRequestBuilder Menu
     {
-        get => new KApi.Menu.MenuRequestBuilder(PathParameters, RequestAdapter);
+        get => new Menu.MenuRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The query property</summary>
-    public KApi.Query.QueryRequestBuilder Query
+    public Query.QueryRequestBuilder Query
     {
-        get => new KApi.Query.QueryRequestBuilder(PathParameters, RequestAdapter);
+        get => new Query.QueryRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The report property</summary>
-    public KApi.Report.ReportRequestBuilder Report
+    public Report.ReportRequestBuilder Report
     {
-        get => new KApi.Report.ReportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Report.ReportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The rowlevelsecurity property</summary>
-    public KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder Rowlevelsecurity
+    public Rowlevelsecurity.RowlevelsecurityRequestBuilder Rowlevelsecurity
     {
-        get => new KApi.Rowlevelsecurity.RowlevelsecurityRequestBuilder(PathParameters, RequestAdapter);
+        get => new Rowlevelsecurity.RowlevelsecurityRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The saved_query property</summary>
-    public KApi.Saved_query.Saved_queryRequestBuilder Saved_query
+    public Saved_query.Saved_queryRequestBuilder Saved_query
     {
-        get => new KApi.Saved_query.Saved_queryRequestBuilder(PathParameters, RequestAdapter);
+        get => new Saved_query.Saved_queryRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The security property</summary>
-    public KApi.Security.SecurityRequestBuilder Security
+    public Security.SecurityRequestBuilder Security
     {
-        get => new KApi.Security.SecurityRequestBuilder(PathParameters, RequestAdapter);
+        get => new Security.SecurityRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The sqllab property</summary>
-    public KApi.Sqllab.SqllabRequestBuilder Sqllab
+    public Sqllab.SqllabRequestBuilder Sqllab
     {
-        get => new KApi.Sqllab.SqllabRequestBuilder(PathParameters, RequestAdapter);
+        get => new Sqllab.SqllabRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The tag property</summary>
-    public KApi.Tag.TagRequestBuilder Tag
+    public Tag.TagRequestBuilder Tag
     {
-        get => new KApi.Tag.TagRequestBuilder(PathParameters, RequestAdapter);
+        get => new Tag.TagRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="KAPIRequestBuilder"/> and sets the default values.
