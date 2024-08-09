@@ -13,9 +13,9 @@ namespace KiotaSupersetAPI.Client.Api;
 public partial class ApiRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The v1 property</summary>
-    public KApi.V1RequestBuilder V1
+    public KApi.SwaggerV1RequestBuilder V1
     {
-        get => new KApi.V1RequestBuilder(PathParameters, RequestAdapter);
+        get => new KApi.SwaggerV1RequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>

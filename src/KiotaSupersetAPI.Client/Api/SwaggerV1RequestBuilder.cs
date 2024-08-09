@@ -9,7 +9,7 @@ namespace KiotaSupersetAPI.Client.API;
 /// Builds and executes requests for operations under \api\v1
 /// </summary>
 [GeneratedCode("Kiota", "1.16.0")]
-public partial class V1RequestBuilder : BaseRequestBuilder
+public partial class SwaggerV1RequestBuilder : BaseRequestBuilder
 {
     /// <summary>The advanced_data_type property</summary>
     public KApi.Advanced_data_type.Advanced_data_typeRequestBuilder Advanced_data_type
@@ -136,7 +136,7 @@ public partial class V1RequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <param name="pathParameters">Path parameters for the request</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-    public V1RequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1", pathParameters)
+    public SwaggerV1RequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1", pathParameters)
     {
     }
     /// <summary>
@@ -144,7 +144,7 @@ public partial class V1RequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-    public V1RequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1", rawUrl)
+    public SwaggerV1RequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1", rawUrl)
     {
     }
 }
