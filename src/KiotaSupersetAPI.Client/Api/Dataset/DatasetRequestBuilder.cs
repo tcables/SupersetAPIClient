@@ -4,6 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using KiotaSupersetAPI.Client.Utilities;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Serialization;
 
@@ -174,6 +175,20 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
         };
         return await RequestAdapter.SendAsync<Dataset.DatasetGetResponse>(requestInfo, Dataset.DatasetGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
     }
+
+    public async Task<DatasetGetResponse> GetDatasetsPagedGetResponseAsync(
+        GetPagedQueryParametersBase parameters)
+    {
+        Check.NotNull(parameters, nameof(parameters));
+
+        var getResponse = await GetDatasetGetResponseAsync((c) => {
+
+            c.QueryParameters.Q = parameters.GetSerializedAndEscaped();
+        });
+
+        return getResponse;
+    }
+
     /// <summary>
     /// Gets a list of datasets, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.
     /// </summary>
