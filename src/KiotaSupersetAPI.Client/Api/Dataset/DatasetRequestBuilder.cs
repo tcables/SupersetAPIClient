@@ -183,7 +183,7 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
 
         var getResponse = await GetDatasetGetResponseAsync((c) => {
 
-            c.QueryParameters.Q = parameters.GetSerializedAndEscaped();
+            c.QueryParameters.Q = parameters.GetSerialized(); //json serialized string gets automatically escaped
         });
 
         return getResponse;
