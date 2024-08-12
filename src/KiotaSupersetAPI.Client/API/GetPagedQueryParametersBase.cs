@@ -16,12 +16,19 @@ public class GetPagedQueryParametersBase
     {
         Check.InRange(page, nameof(page), 1);
 
-        Page = page -1; //i dont know why they chose page 0 as the first page
+        if (page == 0)
+            Page = 0; //prevent negative page numbers
+        else
+            Page = page -1; //i dont know why they chose page 0 as the first page
+
         PageSize = Check.InRange(pageSize, nameof(pageSize), 1);
     }
 
 
     [JsonProperty("page")]
+    /// <summary>
+    /// page is always 0 based
+    /// </summary>
     public int Page { get; protected set; }
 
     [JsonProperty("page_size")]
