@@ -74,7 +74,7 @@ public partial class ConnectionRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Connection.ConnectionRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.Connection.ConnectionRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Connection.ConnectionRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

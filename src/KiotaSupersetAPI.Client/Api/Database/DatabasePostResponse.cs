@@ -31,7 +31,7 @@ public partial class DatabasePostResponse : IAdditionalDataHolder, IParsable
     public static Database.DatabasePostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.DatabasePostResponse();
+        return new DatabasePostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

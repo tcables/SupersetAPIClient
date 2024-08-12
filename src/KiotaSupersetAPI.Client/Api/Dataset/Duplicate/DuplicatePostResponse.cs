@@ -31,7 +31,7 @@ public partial class DuplicatePostResponse : IAdditionalDataHolder, IParsable
     public static Dataset.Duplicate.DuplicatePostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.Duplicate.DuplicatePostResponse();
+        return new Duplicate.DuplicatePostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

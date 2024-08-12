@@ -30,7 +30,7 @@ public partial class Updated_sinceGetResponse : IAdditionalDataHolder, IParsable
     public static Query.Updated_since.Updated_sinceGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Query.Updated_since.Updated_sinceGetResponse();
+        return new Updated_since.Updated_sinceGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

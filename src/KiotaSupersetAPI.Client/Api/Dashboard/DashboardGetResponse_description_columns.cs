@@ -29,7 +29,7 @@ public partial class DashboardGetResponse_description_columns : IAdditionalDataH
     public static Dashboard.DashboardGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.DashboardGetResponse_description_columns();
+        return new DashboardGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

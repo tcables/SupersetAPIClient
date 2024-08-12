@@ -31,7 +31,7 @@ public partial class DashboardPostResponse : IAdditionalDataHolder, IParsable
     public static Dashboard.DashboardPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.DashboardPostResponse();
+        return new DashboardPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

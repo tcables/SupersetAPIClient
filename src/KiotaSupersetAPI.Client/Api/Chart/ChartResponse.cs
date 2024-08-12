@@ -14,9 +14,9 @@ public partial class ChartResponse : Chart.ChartDeleteResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Chart.ChartResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Chart.ChartResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new ChartResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.ChartResponse();
+        return new ChartResponse();
     }
 }

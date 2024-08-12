@@ -14,9 +14,9 @@ public partial class DatasetResponse : Dataset.DatasetDeleteResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Dataset.DatasetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dataset.DatasetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new DatasetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.DatasetResponse();
+        return new DatasetResponse();
     }
 }

@@ -29,7 +29,7 @@ public partial class WithPkDeleteResponse : IAdditionalDataHolder, IParsable
     public static Report.Item.WithPkDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Report.Item.WithPkDeleteResponse();
+        return new Item.WithPkDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

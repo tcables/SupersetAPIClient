@@ -105,7 +105,7 @@ public partial class StopRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public StopRequestBuilder WithUrl(string rawUrl)
     {
-        return new Query.Stop.StopRequestBuilder(rawUrl, RequestAdapter);
+        return new Stop.StopRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -14,9 +14,9 @@ public partial class Validate_parametersResponse : Database.Validate_parameters.
     /// </summary>
     /// <returns>A <see cref="Database.Validate_parameters.Validate_parametersResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Database.Validate_parameters.Validate_parametersResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Validate_parameters.Validate_parametersResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Validate_parameters.Validate_parametersResponse();
+        return new Validate_parameters.Validate_parametersResponse();
     }
 }

@@ -29,7 +29,7 @@ public partial class Validate_parametersPostResponse : IAdditionalDataHolder, IP
     public static Database.Validate_parameters.Validate_parametersPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Validate_parameters.Validate_parametersPostResponse();
+        return new Validate_parameters.Validate_parametersPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

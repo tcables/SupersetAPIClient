@@ -31,7 +31,7 @@ public partial class RowlevelsecurityPostResponse : IAdditionalDataHolder, IPars
     public static Rowlevelsecurity.RowlevelsecurityPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Rowlevelsecurity.RowlevelsecurityPostResponse();
+        return new RowlevelsecurityPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

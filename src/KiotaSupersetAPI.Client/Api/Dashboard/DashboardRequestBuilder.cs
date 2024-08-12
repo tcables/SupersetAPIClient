@@ -18,32 +18,32 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <summary>The _info property</summary>
     public _info._infoRequestBuilder _info
     {
-        get => new Dashboard._info._infoRequestBuilder(PathParameters, RequestAdapter);
+        get => new _info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
     public Export.ExportRequestBuilder Export
     {
-        get => new Dashboard.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorite_status property</summary>
     public Favorite_status.Favorite_statusRequestBuilder Favorite_status
     {
-        get => new Dashboard.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
+        get => new Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The import property</summary>
     public Import.ImportRequestBuilder Import
     {
-        get => new Dashboard.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Import.ImportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The permalink property</summary>
     public Permalink.PermalinkRequestBuilder Permalink
     {
-        get => new Dashboard.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
+        get => new Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
     public Related.RelatedRequestBuilder Related
     {
-        get => new Dashboard.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item collection</summary>
     /// <param name="position">Either the id of the dashboard, or its slug</param>
@@ -54,7 +54,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("dashboard_%2Did", position);
-            return new Dashboard.Item.Dashboard_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.Dashboard_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -271,7 +271,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public DashboardRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.DashboardRequestBuilder(rawUrl, RequestAdapter);
+        return new DashboardRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Bulk delete dashboards

@@ -29,7 +29,7 @@ public partial class Ssh_tunnelDeleteResponse : IAdditionalDataHolder, IParsable
     public static Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Item.Ssh_tunnel.Ssh_tunnelDeleteResponse();
+        return new Item.Ssh_tunnel.Ssh_tunnelDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

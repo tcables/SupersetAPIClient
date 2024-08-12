@@ -14,9 +14,9 @@ public partial class DashboardResponse : Dashboard.DashboardDeleteResponse, IPar
     /// </summary>
     /// <returns>A <see cref="Dashboard.DashboardResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dashboard.DashboardResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new DashboardResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.DashboardResponse();
+        return new DashboardResponse();
     }
 }

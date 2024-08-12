@@ -30,10 +30,10 @@ public partial class Available_engine_information : IAdditionalDataHolder, IPars
     /// </summary>
     /// <returns>A <see cref="Database.Available.Available_engine_information"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Database.Available.Available_engine_information CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Available_engine_information CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Available.Available_engine_information();
+        return new Available_engine_information();
     }
     /// <summary>
     /// The deserialization information for the current model

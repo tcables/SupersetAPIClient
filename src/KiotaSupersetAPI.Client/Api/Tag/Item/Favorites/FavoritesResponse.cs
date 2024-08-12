@@ -14,9 +14,9 @@ public partial class FavoritesResponse : Tag.Item.Favorites.FavoritesDeleteRespo
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Favorites.FavoritesResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Tag.Item.Favorites.FavoritesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new FavoritesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Item.Favorites.FavoritesResponse();
+        return new FavoritesResponse();
     }
 }

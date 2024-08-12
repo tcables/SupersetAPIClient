@@ -14,9 +14,9 @@ public partial class Csrf_tokenResponse : Security.Csrf_token.Csrf_tokenGetRespo
     /// </summary>
     /// <returns>A <see cref="Security.Csrf_token.Csrf_tokenResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Security.Csrf_token.Csrf_tokenResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Csrf_token.Csrf_tokenResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Security.Csrf_token.Csrf_tokenResponse();
+        return new Csrf_token.Csrf_tokenResponse();
     }
 }

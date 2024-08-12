@@ -32,7 +32,7 @@ public partial class _infoGetResponse_filters_column_name : IAdditionalDataHolde
     public static AnnotationLayer._info._infoGetResponse_filters_column_name CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer._info._infoGetResponse_filters_column_name();
+        return new _info._infoGetResponse_filters_column_name();
     }
     /// <summary>
     /// The deserialization information for the current model

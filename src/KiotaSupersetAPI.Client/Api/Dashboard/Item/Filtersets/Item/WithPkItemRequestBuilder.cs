@@ -177,7 +177,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

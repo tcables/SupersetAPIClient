@@ -28,10 +28,10 @@ public partial class FiltersetsPostResponse : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filtersets.FiltersetsPostResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Dashboard.Item.Filtersets.FiltersetsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static FiltersetsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Filtersets.FiltersetsPostResponse();
+        return new FiltersetsPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

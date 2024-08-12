@@ -72,7 +72,7 @@ public partial class Function_namesRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Function_names.Function_namesRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.Function_names.Function_namesRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Function_names.Function_namesRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

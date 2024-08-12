@@ -18,22 +18,22 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>The column property</summary>
     public Column.ColumnRequestBuilder Column
     {
-        get => new Dataset.Item.Column.ColumnRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Column.ColumnRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The metric property</summary>
     public Metric.MetricRequestBuilder Metric
     {
-        get => new Dataset.Item.Metric.MetricRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Metric.MetricRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The refresh property</summary>
     public Refresh.RefreshRequestBuilder Refresh
     {
-        get => new Dataset.Item.Refresh.RefreshRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Refresh.RefreshRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related_objects property</summary>
     public Related_objects.Related_objectsRequestBuilder Related_objects
     {
-        get => new Dataset.Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Dataset.Item.WithPkItemRequestBuilder"/> and sets the default values.
@@ -261,7 +261,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dataset.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

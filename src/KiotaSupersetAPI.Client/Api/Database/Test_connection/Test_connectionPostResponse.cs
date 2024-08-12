@@ -29,7 +29,7 @@ public partial class Test_connectionPostResponse : IAdditionalDataHolder, IParsa
     public static Database.Test_connection.Test_connectionPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Test_connection.Test_connectionPostResponse();
+        return new Test_connection.Test_connectionPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

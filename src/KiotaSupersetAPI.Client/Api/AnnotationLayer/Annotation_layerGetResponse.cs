@@ -15,61 +15,26 @@ public partial class Annotation_layerGetResponse : IAdditionalDataHolder, IParsa
     /// <summary>The total record count on the backend</summary>
     public double? Count { get; set; }
     /// <summary>The description_columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public AnnotationLayer.Annotation_layerGetResponse_description_columns? DescriptionColumns { get; set; }
-#nullable restore
-#else
     public AnnotationLayer.Annotation_layerGetResponse_description_columns DescriptionColumns { get; set; }
-#endif
+
     /// <summary>A list of item ids, useful when you don&apos;t know the column id</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? Ids { get; set; }
-#nullable restore
-#else
     public List<string> Ids { get; set; }
-#endif
+
     /// <summary>The label_columns property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public AnnotationLayer.Annotation_layerGetResponse_label_columns? LabelColumns { get; set; }
-#nullable restore
-#else
     public AnnotationLayer.Annotation_layerGetResponse_label_columns LabelColumns { get; set; }
-#endif
+
     /// <summary>A list of columns</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? ListColumns { get; set; }
-#nullable restore
-#else
     public List<string> ListColumns { get; set; }
-#endif
+
     /// <summary>A title to render. Will be translated by babel</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ListTitle { get; set; }
-#nullable restore
-#else
     public string ListTitle { get; set; }
-#endif
+
     /// <summary>A list of allowed columns to sort</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<string>? OrderColumns { get; set; }
-#nullable restore
-#else
     public List<string> OrderColumns { get; set; }
-#endif
+
     /// <summary>The result from the get list query</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public List<Models.AnnotationLayerRestAPI.Get_list.Get_list>? Result { get; set; }
-#nullable restore
-#else
     public List<Models.AnnotationLayerRestAPI.Get_list.Get_list> Result { get; set; }
-#endif
+
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Annotation_layerGetResponse"/> and sets the default values.
     /// </summary>

@@ -29,7 +29,7 @@ public partial class EmbeddedPostResponse : IAdditionalDataHolder, IParsable
     public static Dashboard.Item.Embedded.EmbeddedPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Embedded.EmbeddedPostResponse();
+        return new Item.Embedded.EmbeddedPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -14,9 +14,9 @@ public partial class RolesResponse : Me.Roles.RolesGetResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Me.Roles.RolesResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Me.Roles.RolesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Roles.RolesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Me.Roles.RolesResponse();
+        return new Roles.RolesResponse();
     }
 }

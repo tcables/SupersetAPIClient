@@ -29,7 +29,7 @@ public partial class ReportDeleteResponse : IAdditionalDataHolder, IParsable
     public static Report.ReportDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Report.ReportDeleteResponse();
+        return new ReportDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

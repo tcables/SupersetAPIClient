@@ -86,7 +86,7 @@ public partial class MenuRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public MenuRequestBuilder WithUrl(string rawUrl)
     {
-        return new Menu.MenuRequestBuilder(rawUrl, RequestAdapter);
+        return new MenuRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

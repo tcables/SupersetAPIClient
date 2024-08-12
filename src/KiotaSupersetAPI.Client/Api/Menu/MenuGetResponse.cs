@@ -30,7 +30,7 @@ public partial class MenuGetResponse : IAdditionalDataHolder, IParsable
     public static Menu.MenuGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Menu.MenuGetResponse();
+        return new MenuGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

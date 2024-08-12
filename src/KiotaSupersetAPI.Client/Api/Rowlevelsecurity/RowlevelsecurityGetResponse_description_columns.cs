@@ -29,7 +29,7 @@ public partial class RowlevelsecurityGetResponse_description_columns : IAddition
     public static Rowlevelsecurity.RowlevelsecurityGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Rowlevelsecurity.RowlevelsecurityGetResponse_description_columns();
+        return new RowlevelsecurityGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -32,7 +32,7 @@ public partial class TablesGetResponse : IAdditionalDataHolder, IParsable
     public static Database.Item.Tables.TablesGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Item.Tables.TablesGetResponse();
+        return new Item.Tables.TablesGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

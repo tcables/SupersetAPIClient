@@ -113,7 +113,7 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public DuplicateRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dataset.Duplicate.DuplicateRequestBuilder(rawUrl, RequestAdapter);
+        return new Duplicate.DuplicateRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

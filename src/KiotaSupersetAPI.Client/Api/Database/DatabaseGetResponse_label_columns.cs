@@ -29,7 +29,7 @@ public partial class DatabaseGetResponse_label_columns : IAdditionalDataHolder, 
     public static Database.DatabaseGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.DatabaseGetResponse_label_columns();
+        return new DatabaseGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

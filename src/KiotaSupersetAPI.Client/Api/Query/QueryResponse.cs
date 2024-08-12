@@ -14,9 +14,9 @@ public partial class QueryResponse : Query.QueryGetResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Query.QueryResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Query.QueryResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new QueryResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Query.QueryResponse();
+        return new QueryResponse();
     }
 }

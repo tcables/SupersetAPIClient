@@ -29,7 +29,7 @@ public partial class WithPkGetResponse_description_columns : IAdditionalDataHold
     public static Query.Item.WithPkGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Query.Item.WithPkGetResponse_description_columns();
+        return new Item.WithPkGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

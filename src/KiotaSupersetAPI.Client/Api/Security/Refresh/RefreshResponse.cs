@@ -14,9 +14,9 @@ public partial class RefreshResponse : Security.Refresh.RefreshPostResponse, IPa
     /// </summary>
     /// <returns>A <see cref="Security.Refresh.RefreshResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Security.Refresh.RefreshResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Refresh.RefreshResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Security.Refresh.RefreshResponse();
+        return new Refresh.RefreshResponse();
     }
 }

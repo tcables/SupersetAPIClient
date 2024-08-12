@@ -14,9 +14,9 @@ public partial class WithMetric_Response : Dataset.Item.Metric.Item.WithMetric_D
     /// </summary>
     /// <returns>A <see cref="Dataset.Item.Metric.Item.WithMetric_Response"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dataset.Item.Metric.Item.WithMetric_Response CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Metric.Item.WithMetric_Response CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.Item.Metric.Item.WithMetric_Response();
+        return new Metric.Item.WithMetric_Response();
     }
 }

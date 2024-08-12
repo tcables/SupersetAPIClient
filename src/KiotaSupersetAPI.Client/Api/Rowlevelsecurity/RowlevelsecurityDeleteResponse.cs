@@ -29,7 +29,7 @@ public partial class RowlevelsecurityDeleteResponse : IAdditionalDataHolder, IPa
     public static Rowlevelsecurity.RowlevelsecurityDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Rowlevelsecurity.RowlevelsecurityDeleteResponse();
+        return new RowlevelsecurityDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

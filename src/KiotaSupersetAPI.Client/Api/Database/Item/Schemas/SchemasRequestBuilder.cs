@@ -74,7 +74,7 @@ public partial class SchemasRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Schemas.SchemasRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.Schemas.SchemasRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Schemas.SchemasRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Get all schemas from a database

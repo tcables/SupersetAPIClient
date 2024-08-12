@@ -29,7 +29,7 @@ public partial class StopPostResponse : IAdditionalDataHolder, IParsable
     public static Query.Stop.StopPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Query.Stop.StopPostResponse();
+        return new Stop.StopPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

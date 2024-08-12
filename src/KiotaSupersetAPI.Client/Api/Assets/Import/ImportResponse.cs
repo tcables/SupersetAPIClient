@@ -14,9 +14,9 @@ public partial class ImportResponse : Assets.Import.ImportPostResponse, IParsabl
     /// </summary>
     /// <returns>A <see cref="Assets.Import.ImportResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Assets.Import.ImportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Import.ImportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Assets.Import.ImportResponse();
+        return new Import.ImportResponse();
     }
 }

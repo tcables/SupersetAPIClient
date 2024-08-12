@@ -18,22 +18,22 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// <summary>The distinct property</summary>
     public Distinct.DistinctRequestBuilder Distinct
     {
-        get => new Query.Distinct.DistinctRequestBuilder(PathParameters, RequestAdapter);
+        get => new Distinct.DistinctRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
     public Related.RelatedRequestBuilder Related
     {
-        get => new Query.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The stop property</summary>
     public Stop.StopRequestBuilder Stop
     {
-        get => new Query.Stop.StopRequestBuilder(PathParameters, RequestAdapter);
+        get => new Stop.StopRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The updated_since property</summary>
     public Updated_since.Updated_sinceRequestBuilder Updated_since
     {
-        get => new Query.Updated_since.Updated_sinceRequestBuilder(PathParameters, RequestAdapter);
+        get => new Updated_since.Updated_sinceRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.query.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
@@ -44,7 +44,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("pk", position);
-            return new Query.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.query.item collection</summary>
@@ -57,7 +57,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-            return new Query.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -143,7 +143,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public QueryRequestBuilder WithUrl(string rawUrl)
     {
-        return new Query.QueryRequestBuilder(rawUrl, RequestAdapter);
+        return new QueryRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Gets a list of queries, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.

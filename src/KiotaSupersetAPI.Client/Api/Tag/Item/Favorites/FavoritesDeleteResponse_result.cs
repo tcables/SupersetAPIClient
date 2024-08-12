@@ -23,10 +23,10 @@ public partial class FavoritesDeleteResponse_result : IAdditionalDataHolder, IPa
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Favorites.FavoritesDeleteResponse_result"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Tag.Item.Favorites.FavoritesDeleteResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static FavoritesDeleteResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Item.Favorites.FavoritesDeleteResponse_result();
+        return new FavoritesDeleteResponse_result();
     }
     /// <summary>
     /// The deserialization information for the current model

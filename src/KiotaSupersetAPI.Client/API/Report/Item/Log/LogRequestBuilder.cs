@@ -18,26 +18,26 @@ public partial class LogRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.report.item.log.item collection</summary>
     /// <param name="position">The log pk</param>
     /// <returns>A <see cref="API.Report.Item.Log.Item.WithLog_ItemRequestBuilder"/></returns>
-    public Log.Item.WithLog_ItemRequestBuilder this[int position]
+    public Item.WithLog_ItemRequestBuilder this[int position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("log_id", position);
-            return new Report.Item.Log.Item.WithLog_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithLog_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.report.item.log.item collection</summary>
     /// <param name="position">The log pk</param>
     /// <returns>A <see cref="API.Report.Item.Log.Item.WithLog_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Log.Item.WithLog_ItemRequestBuilder this[string position]
+    public Item.WithLog_ItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("log_id", position);
-            return new Report.Item.Log.Item.WithLog_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithLog_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -124,9 +124,9 @@ public partial class LogRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="API.Report.Item.Log.LogRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Log.LogRequestBuilder WithUrl(string rawUrl)
+    public LogRequestBuilder WithUrl(string rawUrl)
     {
-        return new Report.Item.Log.LogRequestBuilder(rawUrl, RequestAdapter);
+        return new LogRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Gets a list of report schedule logs, use Rison or JSON query parameters for filtering, sorting, pagination and for selecting specific columns and metadata.

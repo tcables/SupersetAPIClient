@@ -14,9 +14,9 @@ public partial class Guest_tokenResponse : Security.Guest_token.Guest_tokenPostR
     /// </summary>
     /// <returns>A <see cref="Security.Guest_token.Guest_tokenResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Security.Guest_token.Guest_tokenResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Guest_token.Guest_tokenResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Security.Guest_token.Guest_tokenResponse();
+        return new Guest_token.Guest_tokenResponse();
     }
 }

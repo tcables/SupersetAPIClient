@@ -13,7 +13,7 @@ public partial class WithVersionItemRequestBuilder : BaseRequestBuilder
     /// <summary>The _openapi property</summary>
     public _openapi._openapiRequestBuilder _openapi
     {
-        get => new API.Item._openapi._openapiRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item._openapi._openapiRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="API.Item.WithVersionItemRequestBuilder"/> and sets the default values.

@@ -18,7 +18,7 @@ public partial class LogRequestBuilder : BaseRequestBuilder
     /// <summary>The recent_activity property</summary>
     public Recent_activity.Recent_activityRequestBuilder Recent_activity
     {
-        get => new Log.Recent_activity.Recent_activityRequestBuilder(PathParameters, RequestAdapter);
+        get => new Recent_activity.Recent_activityRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.log.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
@@ -29,7 +29,7 @@ public partial class LogRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("pk", position);
-            return new Log.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.log.item collection</summary>
@@ -42,7 +42,7 @@ public partial class LogRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-            return new Log.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -192,7 +192,7 @@ public partial class LogRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public LogRequestBuilder WithUrl(string rawUrl)
     {
-        return new Log.LogRequestBuilder(rawUrl, RequestAdapter);
+        return new LogRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Gets a list of logs, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.

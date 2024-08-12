@@ -13,13 +13,13 @@ public partial class ScreenshotRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.item.screenshot.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder"/></returns>
-    public Screenshot.Item.WithDigestItemRequestBuilder this[string position]
+    public Item.WithDigestItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("digest", position);
-            return new Chart.Item.Screenshot.Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

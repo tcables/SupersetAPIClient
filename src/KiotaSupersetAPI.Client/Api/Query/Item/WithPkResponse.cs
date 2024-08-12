@@ -14,9 +14,9 @@ public partial class WithPkResponse : Query.Item.WithPkGetResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Query.Item.WithPkResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Query.Item.WithPkResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.WithPkResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Query.Item.WithPkResponse();
+        return new Item.WithPkResponse();
     }
 }

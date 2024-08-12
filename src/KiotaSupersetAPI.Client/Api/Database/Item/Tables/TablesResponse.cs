@@ -14,9 +14,9 @@ public partial class TablesResponse : Database.Item.Tables.TablesGetResponse, IP
     /// </summary>
     /// <returns>A <see cref="Database.Item.Tables.TablesResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Database.Item.Tables.TablesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.Tables.TablesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Item.Tables.TablesResponse();
+        return new Item.Tables.TablesResponse();
     }
 }

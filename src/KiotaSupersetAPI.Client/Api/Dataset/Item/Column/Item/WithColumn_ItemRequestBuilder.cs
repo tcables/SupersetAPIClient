@@ -100,9 +100,9 @@ public partial class WithColumn_ItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Column.Item.WithColumn_ItemRequestBuilder WithUrl(string rawUrl)
+    public WithColumn_ItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(rawUrl, RequestAdapter);
+        return new WithColumn_ItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

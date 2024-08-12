@@ -50,7 +50,7 @@ public partial class DatasetGetResponse : IAdditionalDataHolder, IParsable
     public static Dataset.DatasetGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.DatasetGetResponse();
+        return new DatasetGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

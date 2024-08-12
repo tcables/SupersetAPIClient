@@ -24,7 +24,7 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("tag", position);
-            return new Tag.Item.Item.Item.WithTagItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithTagItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -90,7 +90,7 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public WithObject_ItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Tag.Item.Item.WithObject_ItemRequestBuilder(rawUrl, RequestAdapter);
+        return new WithObject_ItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

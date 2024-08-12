@@ -18,27 +18,27 @@ public partial class SqllabRequestBuilder : BaseRequestBuilder
     /// <summary>The estimate property</summary>
     public Estimate.EstimateRequestBuilder Estimate
     {
-        get => new Sqllab.Estimate.EstimateRequestBuilder(PathParameters, RequestAdapter);
+        get => new Estimate.EstimateRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The execute property</summary>
     public Execute.ExecuteRequestBuilder Execute
     {
-        get => new Sqllab.Execute.ExecuteRequestBuilder(PathParameters, RequestAdapter);
+        get => new Execute.ExecuteRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
     public Export.ExportRequestBuilder Export
     {
-        get => new Sqllab.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The format_sql property</summary>
     public Format_sql.Format_sqlRequestBuilder Format_sql
     {
-        get => new Sqllab.Format_sql.Format_sqlRequestBuilder(PathParameters, RequestAdapter);
+        get => new Format_sql.Format_sqlRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The results property</summary>
     public Results.ResultsRequestBuilder Results
     {
-        get => new Sqllab.Results.ResultsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Results.ResultsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Sqllab.SqllabRequestBuilder"/> and sets the default values.
@@ -99,7 +99,7 @@ public partial class SqllabRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public SqllabRequestBuilder WithUrl(string rawUrl)
     {
-        return new Sqllab.SqllabRequestBuilder(rawUrl, RequestAdapter);
+        return new SqllabRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

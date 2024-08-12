@@ -50,7 +50,7 @@ public partial class TagGetResponse : IAdditionalDataHolder, IParsable
     public static Tag.TagGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.TagGetResponse();
+        return new TagGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

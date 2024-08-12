@@ -29,7 +29,7 @@ public partial class WithKeyDeleteResponse : IAdditionalDataHolder, IParsable
     public static Explore.Form_data.Item.WithKeyDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Explore.Form_data.Item.WithKeyDeleteResponse();
+        return new Form_data.Item.WithKeyDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -24,7 +24,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("annotation_id", position);
-            return new AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Annotation.Item.WithAnnotation_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.AnnotationLayer.item.annotation.item collection</summary>
@@ -37,7 +37,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("annotation_id", position);
-            return new AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Annotation.Item.WithAnnotation_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -250,7 +250,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Annotation.AnnotationRequestBuilder WithUrl(string rawUrl)
     {
-        return new AnnotationLayer.Item.Annotation.AnnotationRequestBuilder(rawUrl, RequestAdapter);
+        return new Annotation.AnnotationRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Bulk delete annotation layers

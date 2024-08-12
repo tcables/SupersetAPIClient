@@ -13,13 +13,13 @@ public partial class Select_starRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item.select_star.item collection</summary>
     /// <param name="position">Table name</param>
     /// <returns>A <see cref="Database.Item.Select_star.Item.WithTable_nameItemRequestBuilder"/></returns>
-    public Select_star.Item.WithTable_nameItemRequestBuilder this[string position]
+    public Item.WithTable_nameItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("table_name", position);
-            return new Database.Item.Select_star.Item.WithTable_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithTable_nameItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

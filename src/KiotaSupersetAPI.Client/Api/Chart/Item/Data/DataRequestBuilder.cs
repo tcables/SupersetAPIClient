@@ -72,7 +72,7 @@ public partial class DataRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Data.DataRequestBuilder WithUrl(string rawUrl)
     {
-        return new Chart.Item.Data.DataRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Data.DataRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Takes a chart ID and uses the query context stored when the chart was saved to return payload data response.

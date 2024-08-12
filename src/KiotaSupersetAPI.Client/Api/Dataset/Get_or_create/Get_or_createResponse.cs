@@ -14,9 +14,9 @@ public partial class Get_or_createResponse : Dataset.Get_or_create.Get_or_create
     /// </summary>
     /// <returns>A <see cref="Dataset.Get_or_create.Get_or_createResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dataset.Get_or_create.Get_or_createResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Get_or_create.Get_or_createResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.Get_or_create.Get_or_createResponse();
+        return new Get_or_create.Get_or_createResponse();
     }
 }

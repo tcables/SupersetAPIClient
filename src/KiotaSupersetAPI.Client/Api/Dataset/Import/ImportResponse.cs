@@ -14,9 +14,9 @@ public partial class ImportResponse : Dataset.Import.ImportPostResponse, IParsab
     /// </summary>
     /// <returns>A <see cref="Dataset.Import.ImportResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dataset.Import.ImportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Import.ImportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.Import.ImportResponse();
+        return new Import.ImportResponse();
     }
 }

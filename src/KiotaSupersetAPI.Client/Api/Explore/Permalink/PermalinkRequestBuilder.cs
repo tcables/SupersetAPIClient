@@ -24,7 +24,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("key", position);
-            return new Explore.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -117,7 +117,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public PermalinkRequestBuilder WithUrl(string rawUrl)
     {
-        return new Explore.Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
+        return new Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

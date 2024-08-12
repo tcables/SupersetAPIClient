@@ -102,7 +102,7 @@ public partial class WithTagItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Item.WithTagItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Tag.Item.Item.Item.WithTagItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.WithTagItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -21,7 +21,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("client_id", position);
-            return new Sqllab.Export.Item.WithClient_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Export.Item.WithClient_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.sqllab.export.item collection</summary>
@@ -34,7 +34,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("client_id", position);
-            return new Sqllab.Export.Item.WithClient_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Export.Item.WithClient_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

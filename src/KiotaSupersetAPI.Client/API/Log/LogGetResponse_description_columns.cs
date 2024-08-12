@@ -30,7 +30,7 @@ public partial class LogGetResponse_description_columns : IAdditionalDataHolder,
     public static Log.LogGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Log.LogGetResponse_description_columns();
+        return new LogGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

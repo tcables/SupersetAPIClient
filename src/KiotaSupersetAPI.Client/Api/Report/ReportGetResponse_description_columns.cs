@@ -29,7 +29,7 @@ public partial class ReportGetResponse_description_columns : IAdditionalDataHold
     public static Report.ReportGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Report.ReportGetResponse_description_columns();
+        return new ReportGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

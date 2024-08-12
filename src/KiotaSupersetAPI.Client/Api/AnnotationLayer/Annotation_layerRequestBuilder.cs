@@ -18,12 +18,12 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
     /// <summary>The _info property</summary>
     public _info._infoRequestBuilder _info
     {
-        get => new AnnotationLayer._info._infoRequestBuilder(PathParameters, RequestAdapter);
+        get => new _info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
     public Related.RelatedRequestBuilder Related
     {
-        get => new AnnotationLayer.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.AnnotationLayer.item collection</summary>
     /// <param name="position">The annotation layer pk for this annotation</param>
@@ -34,7 +34,7 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("pk", position);
-            return new AnnotationLayer.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.AnnotationLayer.item collection</summary>
@@ -47,7 +47,7 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-            return new AnnotationLayer.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -260,7 +260,7 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Annotation_layerRequestBuilder WithUrl(string rawUrl)
     {
-        return new AnnotationLayer.Annotation_layerRequestBuilder(rawUrl, RequestAdapter);
+        return new Annotation_layerRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Delete multiple annotation layers in a bulk operation

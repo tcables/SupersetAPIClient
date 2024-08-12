@@ -19,7 +19,7 @@ public partial class RelatedRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("column_name", position);
-            return new Database.Related.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Related.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

@@ -98,7 +98,7 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public _info._infoRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database._info._infoRequestBuilder(rawUrl, RequestAdapter);
+        return new _info._infoRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Get metadata information about this API resource

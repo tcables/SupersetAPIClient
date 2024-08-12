@@ -31,7 +31,7 @@ public partial class ChartPostResponse : IAdditionalDataHolder, IParsable
     public static Chart.ChartPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.ChartPostResponse();
+        return new ChartPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -101,7 +101,7 @@ public partial class Guest_tokenRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Guest_token.Guest_tokenRequestBuilder WithUrl(string rawUrl)
     {
-        return new Security.Guest_token.Guest_tokenRequestBuilder(rawUrl, RequestAdapter);
+        return new Guest_token.Guest_tokenRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

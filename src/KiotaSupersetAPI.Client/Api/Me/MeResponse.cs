@@ -14,9 +14,9 @@ public partial class MeResponse : Me.MeGetResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Me.MeResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Me.MeResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new MeResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Me.MeResponse();
+        return new MeResponse();
     }
 }

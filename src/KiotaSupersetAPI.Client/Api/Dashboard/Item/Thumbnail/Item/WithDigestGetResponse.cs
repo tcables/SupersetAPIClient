@@ -26,10 +26,10 @@ public partial class WithDigestGetResponse : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Dashboard.Item.Thumbnail.Item.WithDigestGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static WithDigestGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Thumbnail.Item.WithDigestGetResponse();
+        return new WithDigestGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

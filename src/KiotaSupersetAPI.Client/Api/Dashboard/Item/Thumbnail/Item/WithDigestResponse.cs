@@ -14,9 +14,9 @@ public partial class WithDigestResponse : Dashboard.Item.Thumbnail.Item.WithDige
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dashboard.Item.Thumbnail.Item.WithDigestResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Thumbnail.Item.WithDigestResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Thumbnail.Item.WithDigestResponse();
+        return new Thumbnail.Item.WithDigestResponse();
     }
 }

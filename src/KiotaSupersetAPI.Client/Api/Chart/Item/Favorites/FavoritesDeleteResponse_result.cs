@@ -26,7 +26,7 @@ public partial class FavoritesDeleteResponse_result : IAdditionalDataHolder, IPa
     public static Chart.Item.Favorites.FavoritesDeleteResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.Item.Favorites.FavoritesDeleteResponse_result();
+        return new Item.Favorites.FavoritesDeleteResponse_result();
     }
     /// <summary>
     /// The deserialization information for the current model

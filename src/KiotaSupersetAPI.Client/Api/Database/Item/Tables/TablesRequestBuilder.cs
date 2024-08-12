@@ -102,7 +102,7 @@ public partial class TablesRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Tables.TablesRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.Tables.TablesRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Tables.TablesRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Get a list of tables for given database

@@ -14,9 +14,9 @@ public partial class Object_typeResponse : Tag.Item.Object_typeDeleteResponse, I
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Object_typeResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Tag.Item.Object_typeResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Object_typeResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Item.Object_typeResponse();
+        return new Object_typeResponse();
     }
 }

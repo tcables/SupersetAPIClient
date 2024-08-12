@@ -18,7 +18,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>The log property</summary>
     public Log.LogRequestBuilder Log
     {
-        get => new Report.Item.Log.LogRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Log.LogRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Report.Item.WithPkItemRequestBuilder"/> and sets the default values.
@@ -242,7 +242,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Report.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

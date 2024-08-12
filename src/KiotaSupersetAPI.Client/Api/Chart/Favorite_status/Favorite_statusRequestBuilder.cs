@@ -74,7 +74,7 @@ public partial class Favorite_statusRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Favorite_status.Favorite_statusRequestBuilder WithUrl(string rawUrl)
     {
-        return new Chart.Favorite_status.Favorite_statusRequestBuilder(rawUrl, RequestAdapter);
+        return new Favorite_status.Favorite_statusRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Check favorited charts for current user

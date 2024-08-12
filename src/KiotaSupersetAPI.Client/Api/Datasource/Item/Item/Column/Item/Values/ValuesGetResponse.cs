@@ -27,10 +27,10 @@ public partial class ValuesGetResponse : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="Datasource.Item.Item.Column.Item.Values.ValuesGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Datasource.Item.Item.Column.Item.Values.ValuesGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static ValuesGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Datasource.Item.Item.Column.Item.Values.ValuesGetResponse();
+        return new ValuesGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

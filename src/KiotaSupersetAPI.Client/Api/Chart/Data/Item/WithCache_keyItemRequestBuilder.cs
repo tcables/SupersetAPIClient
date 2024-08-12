@@ -76,7 +76,7 @@ public partial class WithCache_keyItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Item.WithCache_keyItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Chart.Data.Item.WithCache_keyItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Data.Item.WithCache_keyItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -98,7 +98,7 @@ public partial class Get_objectsRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Get_objects.Get_objectsRequestBuilder WithUrl(string rawUrl)
     {
-        return new Tag.Get_objects.Get_objectsRequestBuilder(rawUrl, RequestAdapter);
+        return new Get_objects.Get_objectsRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

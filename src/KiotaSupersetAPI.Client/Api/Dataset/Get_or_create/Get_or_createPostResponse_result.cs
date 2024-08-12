@@ -28,7 +28,7 @@ public partial class Get_or_createPostResponse_result : IAdditionalDataHolder, I
     public static Dataset.Get_or_create.Get_or_createPostResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.Get_or_create.Get_or_createPostResponse_result();
+        return new Get_or_create.Get_or_createPostResponse_result();
     }
     /// <summary>
     /// The deserialization information for the current model

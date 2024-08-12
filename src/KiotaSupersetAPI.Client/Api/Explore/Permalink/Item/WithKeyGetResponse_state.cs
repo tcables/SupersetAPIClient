@@ -29,7 +29,7 @@ public partial class WithKeyGetResponse_state : IAdditionalDataHolder, IParsable
     public static Explore.Permalink.Item.WithKeyGetResponse_state CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Explore.Permalink.Item.WithKeyGetResponse_state();
+        return new Permalink.Item.WithKeyGetResponse_state();
     }
     /// <summary>
     /// The deserialization information for the current model

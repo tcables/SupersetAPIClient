@@ -51,7 +51,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     public static Log.Item.WithPkGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Log.Item.WithPkGetResponse();
+        return new Item.WithPkGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

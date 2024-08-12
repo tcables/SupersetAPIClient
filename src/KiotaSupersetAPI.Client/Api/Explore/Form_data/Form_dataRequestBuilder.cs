@@ -24,7 +24,7 @@ public partial class Form_dataRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("key", position);
-            return new Explore.Form_data.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Form_data.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -117,7 +117,7 @@ public partial class Form_dataRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Form_data.Form_dataRequestBuilder WithUrl(string rawUrl)
     {
-        return new Explore.Form_data.Form_dataRequestBuilder(rawUrl, RequestAdapter);
+        return new Form_data.Form_dataRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Create a new form_data

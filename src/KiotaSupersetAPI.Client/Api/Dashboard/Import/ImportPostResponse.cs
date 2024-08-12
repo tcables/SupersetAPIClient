@@ -29,7 +29,7 @@ public partial class ImportPostResponse : IAdditionalDataHolder, IParsable
     public static Dashboard.Import.ImportPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Import.ImportPostResponse();
+        return new Import.ImportPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

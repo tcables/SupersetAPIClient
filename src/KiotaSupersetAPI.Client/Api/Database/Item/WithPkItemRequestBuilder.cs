@@ -18,57 +18,57 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>The connection property</summary>
     public Connection.ConnectionRequestBuilder Connection
     {
-        get => new Database.Item.Connection.ConnectionRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Connection.ConnectionRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The function_names property</summary>
     public Function_names.Function_namesRequestBuilder Function_names
     {
-        get => new Database.Item.Function_names.Function_namesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Function_names.Function_namesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related_objects property</summary>
     public Related_objects.Related_objectsRequestBuilder Related_objects
     {
-        get => new Database.Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The schemas property</summary>
     public Schemas.SchemasRequestBuilder Schemas
     {
-        get => new Database.Item.Schemas.SchemasRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Schemas.SchemasRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The schemas_access_for_file_upload property</summary>
     public Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder Schemas_access_for_file_upload
     {
-        get => new Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The select_star property</summary>
     public Select_star.Select_starRequestBuilder Select_star
     {
-        get => new Database.Item.Select_star.Select_starRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Select_star.Select_starRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The ssh_tunnel property</summary>
     public Ssh_tunnel.Ssh_tunnelRequestBuilder Ssh_tunnel
     {
-        get => new Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The table property</summary>
     public Table.TableRequestBuilder Table
     {
-        get => new Database.Item.Table.TableRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Table.TableRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The table_extra property</summary>
     public Table_extra.Table_extraRequestBuilder Table_extra
     {
-        get => new Database.Item.Table_extra.Table_extraRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Table_extra.Table_extraRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The tables property</summary>
     public Tables.TablesRequestBuilder Tables
     {
-        get => new Database.Item.Tables.TablesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Tables.TablesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The validate_sql property</summary>
     public Validate_sql.Validate_sqlRequestBuilder Validate_sql
     {
-        get => new Database.Item.Validate_sql.Validate_sqlRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Validate_sql.Validate_sqlRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Database.Item.WithPkItemRequestBuilder"/> and sets the default values.
@@ -292,7 +292,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

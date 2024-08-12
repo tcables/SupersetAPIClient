@@ -14,9 +14,9 @@ public partial class LogResponse : KiotaSupersetAPI.Client.API.Report.Item.Log.L
     /// </summary>
     /// <returns>A <see cref="API.Report.Item.Log.LogResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Report.Item.Log.LogResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Log.LogResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Report.Item.Log.LogResponse();
+        return new Log.LogResponse();
     }
 }

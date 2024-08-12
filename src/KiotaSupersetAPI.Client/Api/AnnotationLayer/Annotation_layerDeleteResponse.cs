@@ -29,7 +29,7 @@ public partial class Annotation_layerDeleteResponse : IAdditionalDataHolder, IPa
     public static AnnotationLayer.Annotation_layerDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Annotation_layerDeleteResponse();
+        return new Annotation_layerDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

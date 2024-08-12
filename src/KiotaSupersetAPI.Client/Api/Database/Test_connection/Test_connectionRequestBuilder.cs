@@ -101,7 +101,7 @@ public partial class Test_connectionRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Test_connection.Test_connectionRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Test_connection.Test_connectionRequestBuilder(rawUrl, RequestAdapter);
+        return new Test_connection.Test_connectionRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -72,7 +72,7 @@ public partial class AvailableRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public AvailableRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Available.AvailableRequestBuilder(rawUrl, RequestAdapter);
+        return new AvailableRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

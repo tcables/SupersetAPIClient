@@ -14,9 +14,9 @@ public partial class Form_dataResponse : Explore.Form_data.Form_dataPostResponse
     /// </summary>
     /// <returns>A <see cref="Explore.Form_data.Form_dataResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Explore.Form_data.Form_dataResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Form_data.Form_dataResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Explore.Form_data.Form_dataResponse();
+        return new Form_data.Form_dataResponse();
     }
 }

@@ -14,9 +14,9 @@ public partial class DuplicateResponse : Dataset.Duplicate.DuplicatePostResponse
     /// </summary>
     /// <returns>A <see cref="Dataset.Duplicate.DuplicateResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dataset.Duplicate.DuplicateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Duplicate.DuplicateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.Duplicate.DuplicateResponse();
+        return new Duplicate.DuplicateResponse();
     }
 }

@@ -74,7 +74,7 @@ public partial class WithColumn_nameItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Item.WithColumn_nameItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Report.Related.Item.WithColumn_nameItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Related.Item.WithColumn_nameItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Get related fields data

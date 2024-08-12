@@ -105,7 +105,7 @@ public partial class ImportRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public ImportRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Import.ImportRequestBuilder(rawUrl, RequestAdapter);
+        return new Import.ImportRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

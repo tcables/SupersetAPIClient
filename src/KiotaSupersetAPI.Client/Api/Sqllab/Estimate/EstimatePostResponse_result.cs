@@ -26,7 +26,7 @@ public partial class EstimatePostResponse_result : IAdditionalDataHolder, IParsa
     public static Sqllab.Estimate.EstimatePostResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Sqllab.Estimate.EstimatePostResponse_result();
+        return new Estimate.EstimatePostResponse_result();
     }
     /// <summary>
     /// The deserialization information for the current model

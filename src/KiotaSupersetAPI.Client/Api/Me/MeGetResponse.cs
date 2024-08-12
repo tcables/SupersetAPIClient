@@ -29,7 +29,7 @@ public partial class MeGetResponse : IAdditionalDataHolder, IParsable
     public static Me.MeGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Me.MeGetResponse();
+        return new MeGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

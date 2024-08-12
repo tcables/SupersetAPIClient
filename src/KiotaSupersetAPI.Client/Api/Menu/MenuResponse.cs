@@ -14,9 +14,9 @@ public partial class MenuResponse : Menu.MenuGetResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Menu.MenuResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Menu.MenuResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new MenuResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Menu.MenuResponse();
+        return new MenuResponse();
     }
 }

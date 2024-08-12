@@ -29,7 +29,7 @@ public partial class Guest_tokenPostResponse : IAdditionalDataHolder, IParsable
     public static Security.Guest_token.Guest_tokenPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Security.Guest_token.Guest_tokenPostResponse();
+        return new Guest_token.Guest_tokenPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

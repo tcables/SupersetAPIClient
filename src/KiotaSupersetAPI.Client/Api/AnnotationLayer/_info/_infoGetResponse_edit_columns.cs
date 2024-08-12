@@ -26,7 +26,7 @@ public partial class _infoGetResponse_edit_columns : IAdditionalDataHolder, IPar
     public static AnnotationLayer._info._infoGetResponse_edit_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer._info._infoGetResponse_edit_columns();
+        return new _info._infoGetResponse_edit_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

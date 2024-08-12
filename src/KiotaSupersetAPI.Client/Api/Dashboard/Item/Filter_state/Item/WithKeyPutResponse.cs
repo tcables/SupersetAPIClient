@@ -26,10 +26,10 @@ public partial class WithKeyPutResponse : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filter_state.Item.WithKeyPutResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Dashboard.Item.Filter_state.Item.WithKeyPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Item.WithKeyPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Filter_state.Item.WithKeyPutResponse();
+        return new Item.WithKeyPutResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

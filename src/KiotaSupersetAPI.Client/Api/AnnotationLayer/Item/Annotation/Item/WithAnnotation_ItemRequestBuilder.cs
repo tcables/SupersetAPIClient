@@ -223,9 +223,9 @@ public partial class WithAnnotation_ItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Annotation.Item.WithAnnotation_ItemRequestBuilder WithUrl(string rawUrl)
+    public Item.WithAnnotation_ItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.WithAnnotation_ItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

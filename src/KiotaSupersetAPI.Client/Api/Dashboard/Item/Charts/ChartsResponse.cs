@@ -14,9 +14,9 @@ public partial class ChartsResponse : Dashboard.Item.Charts.ChartsGetResponse, I
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Charts.ChartsResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dashboard.Item.Charts.ChartsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.Charts.ChartsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Charts.ChartsResponse();
+        return new Item.Charts.ChartsResponse();
     }
 }

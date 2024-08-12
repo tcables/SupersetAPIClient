@@ -14,9 +14,9 @@ public partial class Validate_sqlResponse : Database.Item.Validate_sql.Validate_
     /// </summary>
     /// <returns>A <see cref="Database.Item.Validate_sql.Validate_sqlResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Database.Item.Validate_sql.Validate_sqlResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.Validate_sql.Validate_sqlResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Item.Validate_sql.Validate_sqlResponse();
+        return new Item.Validate_sql.Validate_sqlResponse();
     }
 }

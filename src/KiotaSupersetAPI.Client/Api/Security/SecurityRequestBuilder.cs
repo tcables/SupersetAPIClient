@@ -13,22 +13,22 @@ public partial class SecurityRequestBuilder : BaseRequestBuilder
     /// <summary>The csrf_token property</summary>
     public Csrf_token.Csrf_tokenRequestBuilder Csrf_token
     {
-        get => new Security.Csrf_token.Csrf_tokenRequestBuilder(PathParameters, RequestAdapter);
+        get => new Csrf_token.Csrf_tokenRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The guest_token property</summary>
     public Guest_token.Guest_tokenRequestBuilder Guest_token
     {
-        get => new Security.Guest_token.Guest_tokenRequestBuilder(PathParameters, RequestAdapter);
+        get => new Guest_token.Guest_tokenRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The login property</summary>
     public Login.LoginRequestBuilder Login
     {
-        get => new Security.Login.LoginRequestBuilder(PathParameters, RequestAdapter);
+        get => new Login.LoginRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The refresh property</summary>
     public Refresh.RefreshRequestBuilder Refresh
     {
-        get => new Security.Refresh.RefreshRequestBuilder(PathParameters, RequestAdapter);
+        get => new Refresh.RefreshRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Security.SecurityRequestBuilder"/> and sets the default values.

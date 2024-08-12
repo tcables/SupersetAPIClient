@@ -14,9 +14,9 @@ public partial class WithKeyResponse : Explore.Form_data.Item.WithKeyDeleteRespo
     /// </summary>
     /// <returns>A <see cref="Explore.Form_data.Item.WithKeyResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Explore.Form_data.Item.WithKeyResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Form_data.Item.WithKeyResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Explore.Form_data.Item.WithKeyResponse();
+        return new Form_data.Item.WithKeyResponse();
     }
 }

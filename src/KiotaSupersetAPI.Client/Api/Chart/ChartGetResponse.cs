@@ -50,7 +50,7 @@ public partial class ChartGetResponse : IAdditionalDataHolder, IParsable
     public static Chart.ChartGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.ChartGetResponse();
+        return new ChartGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

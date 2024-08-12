@@ -29,7 +29,7 @@ public partial class ChartDeleteResponse : IAdditionalDataHolder, IParsable
     public static Chart.ChartDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.ChartDeleteResponse();
+        return new ChartDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

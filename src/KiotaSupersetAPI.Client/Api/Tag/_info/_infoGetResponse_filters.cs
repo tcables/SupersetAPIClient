@@ -30,7 +30,7 @@ public partial class _infoGetResponse_filters : IAdditionalDataHolder, IParsable
     public static Tag._info._infoGetResponse_filters CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag._info._infoGetResponse_filters();
+        return new _info._infoGetResponse_filters();
     }
     /// <summary>
     /// The deserialization information for the current model

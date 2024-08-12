@@ -26,7 +26,7 @@ public partial class _openapiGetResponse : IAdditionalDataHolder, IParsable
     public static API.Item._openapi._openapiGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new API.Item._openapi._openapiGetResponse();
+        return new Item._openapi._openapiGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

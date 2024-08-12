@@ -30,7 +30,7 @@ public partial class Get_objectsGetResponse : IAdditionalDataHolder, IParsable
     public static Tag.Get_objects.Get_objectsGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Get_objects.Get_objectsGetResponse();
+        return new Get_objects.Get_objectsGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

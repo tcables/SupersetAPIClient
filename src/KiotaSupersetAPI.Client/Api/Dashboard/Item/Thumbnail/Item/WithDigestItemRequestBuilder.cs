@@ -96,9 +96,9 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Thumbnail.Item.WithDigestItemRequestBuilder WithUrl(string rawUrl)
+    public WithDigestItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder(rawUrl, RequestAdapter);
+        return new WithDigestItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Computes async or get already computed dashboard thumbnail from cache.

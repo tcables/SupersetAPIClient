@@ -33,7 +33,7 @@ public partial class Bulk_createPostRequestBody : IAdditionalDataHolder, IParsab
     public static Tag.Bulk_create.Bulk_createPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Bulk_create.Bulk_createPostRequestBody();
+        return new Bulk_create.Bulk_createPostRequestBody();
     }
     /// <summary>
     /// The deserialization information for the current model

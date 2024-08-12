@@ -29,10 +29,10 @@ public partial class WithAnnotation_GetResponse : IAdditionalDataHolder, IParsab
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Item.WithAnnotation_GetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Item.Annotation.Item.WithAnnotation_GetResponse();
+        return new Item.WithAnnotation_GetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

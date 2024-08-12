@@ -18,27 +18,27 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <summary>The _info property</summary>
     public _info._infoRequestBuilder _info
     {
-        get => new Tag._info._infoRequestBuilder(PathParameters, RequestAdapter);
+        get => new _info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The bulk_create property</summary>
     public Bulk_create.Bulk_createRequestBuilder Bulk_create
     {
-        get => new Tag.Bulk_create.Bulk_createRequestBuilder(PathParameters, RequestAdapter);
+        get => new Bulk_create.Bulk_createRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorite_status property</summary>
     public Favorite_status.Favorite_statusRequestBuilder Favorite_status
     {
-        get => new Tag.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
+        get => new Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The get_objects property</summary>
     public Get_objects.Get_objectsRequestBuilder Get_objects
     {
-        get => new Tag.Get_objects.Get_objectsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Get_objects.Get_objectsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
     public Related.RelatedRequestBuilder Related
     {
-        get => new Tag.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
@@ -49,7 +49,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("object_type%2Did", position);
-            return new Tag.Item.Object_typeItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.Object_typeItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item collection</summary>
@@ -62,7 +62,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("object_type%2Did", position);
-            return new Tag.Item.Object_typeItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.Object_typeItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -279,7 +279,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public TagRequestBuilder WithUrl(string rawUrl)
     {
-        return new Tag.TagRequestBuilder(rawUrl, RequestAdapter);
+        return new TagRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Bulk deletes tags. This will remove all tagged objects with this tag.

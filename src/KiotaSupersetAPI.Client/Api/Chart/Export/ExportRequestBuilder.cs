@@ -75,7 +75,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public ExportRequestBuilder WithUrl(string rawUrl)
     {
-        return new Chart.Export.ExportRequestBuilder(rawUrl, RequestAdapter);
+        return new Export.ExportRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Download multiple charts as YAML files

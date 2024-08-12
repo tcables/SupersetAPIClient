@@ -14,9 +14,9 @@ public partial class WithPkResponse : AnnotationLayer.Item.WithPkDeleteResponse,
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Item.WithPkResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new AnnotationLayer.Item.WithPkResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.WithPkResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Item.WithPkResponse();
+        return new Item.WithPkResponse();
     }
 }

@@ -73,7 +73,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public ExportRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Export.ExportRequestBuilder(rawUrl, RequestAdapter);
+        return new Export.ExportRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Download database(s) and associated dataset(s) as a zip file

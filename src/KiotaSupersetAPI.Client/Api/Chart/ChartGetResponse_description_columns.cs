@@ -29,7 +29,7 @@ public partial class ChartGetResponse_description_columns : IAdditionalDataHolde
     public static Chart.ChartGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.ChartGetResponse_description_columns();
+        return new ChartGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

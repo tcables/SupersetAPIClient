@@ -26,10 +26,10 @@ public partial class WithAnnotation_DeleteResponse : IAdditionalDataHolder, IPar
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_DeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static AnnotationLayer.Item.Annotation.Item.WithAnnotation_DeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static WithAnnotation_DeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Item.Annotation.Item.WithAnnotation_DeleteResponse();
+        return new WithAnnotation_DeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

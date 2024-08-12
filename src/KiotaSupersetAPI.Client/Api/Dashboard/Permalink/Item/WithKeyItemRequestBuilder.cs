@@ -102,7 +102,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.Permalink.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Permalink.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

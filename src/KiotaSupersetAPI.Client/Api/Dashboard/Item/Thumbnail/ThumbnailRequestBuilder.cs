@@ -13,13 +13,13 @@ public partial class ThumbnailRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item.thumbnail.item collection</summary>
     /// <param name="position">A hex digest that makes this dashboard unique</param>
     /// <returns>A <see cref="Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
-    public Thumbnail.Item.WithDigestItemRequestBuilder this[string position]
+    public Item.WithDigestItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("digest", position);
-            return new Dashboard.Item.Thumbnail.Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithDigestItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

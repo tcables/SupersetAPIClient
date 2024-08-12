@@ -29,7 +29,7 @@ public partial class DatabaseGetResponse_description_columns : IAdditionalDataHo
     public static Database.DatabaseGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.DatabaseGetResponse_description_columns();
+        return new DatabaseGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

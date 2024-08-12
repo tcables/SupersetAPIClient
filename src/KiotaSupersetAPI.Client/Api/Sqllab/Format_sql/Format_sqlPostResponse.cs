@@ -29,7 +29,7 @@ public partial class Format_sqlPostResponse : IAdditionalDataHolder, IParsable
     public static Sqllab.Format_sql.Format_sqlPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Sqllab.Format_sql.Format_sqlPostResponse();
+        return new Format_sql.Format_sqlPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

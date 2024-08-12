@@ -29,7 +29,7 @@ public partial class TagDeleteResponse : IAdditionalDataHolder, IParsable
     public static Tag.TagDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.TagDeleteResponse();
+        return new TagDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

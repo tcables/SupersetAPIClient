@@ -14,9 +14,9 @@ public partial class Get_objectsResponse : Tag.Get_objects.Get_objectsGetRespons
     /// </summary>
     /// <returns>A <see cref="Tag.Get_objects.Get_objectsResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Tag.Get_objects.Get_objectsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Get_objects.Get_objectsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Get_objects.Get_objectsResponse();
+        return new Get_objects.Get_objectsResponse();
     }
 }

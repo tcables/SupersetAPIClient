@@ -29,7 +29,7 @@ public partial class Csrf_tokenGetResponse : IAdditionalDataHolder, IParsable
     public static Security.Csrf_token.Csrf_tokenGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Security.Csrf_token.Csrf_tokenGetResponse();
+        return new Csrf_token.Csrf_tokenGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

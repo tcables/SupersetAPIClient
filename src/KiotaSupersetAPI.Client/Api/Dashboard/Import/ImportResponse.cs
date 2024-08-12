@@ -14,9 +14,9 @@ public partial class ImportResponse : Dashboard.Import.ImportPostResponse, IPars
     /// </summary>
     /// <returns>A <see cref="Dashboard.Import.ImportResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dashboard.Import.ImportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Import.ImportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Import.ImportResponse();
+        return new Import.ImportResponse();
     }
 }

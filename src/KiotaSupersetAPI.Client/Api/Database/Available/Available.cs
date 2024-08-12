@@ -47,10 +47,10 @@ public partial class Available : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="Database.Available.Available"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Database.Available.Available CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Available CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Available.Available();
+        return new Available();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -50,7 +50,7 @@ public partial class RowlevelsecurityGetResponse : IAdditionalDataHolder, IParsa
     public static Rowlevelsecurity.RowlevelsecurityGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Rowlevelsecurity.RowlevelsecurityGetResponse();
+        return new RowlevelsecurityGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

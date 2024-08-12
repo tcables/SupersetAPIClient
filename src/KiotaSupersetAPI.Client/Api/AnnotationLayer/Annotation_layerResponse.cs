@@ -14,9 +14,9 @@ public partial class Annotation_layerResponse : AnnotationLayer.Annotation_layer
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Annotation_layerResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new AnnotationLayer.Annotation_layerResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Annotation_layerResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Annotation_layerResponse();
+        return new Annotation_layerResponse();
     }
 }

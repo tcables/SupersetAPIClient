@@ -81,7 +81,7 @@ public partial class ExecuteRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public ExecuteRequestBuilder WithUrl(string rawUrl)
     {
-        return new Sqllab.Execute.ExecuteRequestBuilder(rawUrl, RequestAdapter);
+        return new Execute.ExecuteRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

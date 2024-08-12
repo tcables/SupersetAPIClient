@@ -18,13 +18,13 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item.filter_state.item collection</summary>
     /// <param name="position">The value key.</param>
     /// <returns>A <see cref="Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder"/></returns>
-    public Filter_state.Item.WithKeyItemRequestBuilder this[string position]
+    public Item.WithKeyItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("key", position);
-            return new Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -115,9 +115,9 @@ public partial class Filter_stateRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filter_state.Filter_stateRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Filter_state.Filter_stateRequestBuilder WithUrl(string rawUrl)
+    public Filter_stateRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.Item.Filter_state.Filter_stateRequestBuilder(rawUrl, RequestAdapter);
+        return new Filter_stateRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Create a dashboard&apos;s filter state

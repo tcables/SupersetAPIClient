@@ -21,7 +21,7 @@ public partial class WithDatasource_typeItemRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("datasource_id", position);
-            return new Datasource.Item.Item.WithDatasource_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithDatasource_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item.item collection</summary>
@@ -34,7 +34,7 @@ public partial class WithDatasource_typeItemRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("datasource_id", position);
-            return new Datasource.Item.Item.WithDatasource_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithDatasource_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

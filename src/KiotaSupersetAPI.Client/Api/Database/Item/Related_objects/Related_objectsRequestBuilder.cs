@@ -72,7 +72,7 @@ public partial class Related_objectsRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Related_objects.Related_objectsRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.Related_objects.Related_objectsRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Related_objects.Related_objectsRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

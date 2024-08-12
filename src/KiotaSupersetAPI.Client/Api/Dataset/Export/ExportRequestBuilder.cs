@@ -74,7 +74,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public ExportRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dataset.Export.ExportRequestBuilder(rawUrl, RequestAdapter);
+        return new Export.ExportRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Download multiple datasets as YAML files

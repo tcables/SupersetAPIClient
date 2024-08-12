@@ -13,13 +13,13 @@ public partial class WithTable_nameItemRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item.table_extra.item.item collection</summary>
     /// <param name="position">Table schema</param>
     /// <returns>A <see cref="Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
-    public Table_extra.Item.Item.WithSchema_nameItemRequestBuilder this[string position]
+    public Item.WithSchema_nameItemRequestBuilder this[string position]
     {
         get
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("schema_name", position);
-            return new Database.Item.Table_extra.Item.Item.WithSchema_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithSchema_nameItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

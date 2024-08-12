@@ -31,7 +31,7 @@ public partial class AnnotationPostResponse : IAdditionalDataHolder, IParsable
     public static AnnotationLayer.Item.Annotation.AnnotationPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Item.Annotation.AnnotationPostResponse();
+        return new AnnotationPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

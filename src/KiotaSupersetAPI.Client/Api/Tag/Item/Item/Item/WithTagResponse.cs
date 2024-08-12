@@ -14,9 +14,9 @@ public partial class WithTagResponse : Tag.Item.Item.Item.WithTagDeleteResponse,
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Item.Item.WithTagResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Tag.Item.Item.Item.WithTagResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.WithTagResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Item.Item.Item.WithTagResponse();
+        return new Item.WithTagResponse();
     }
 }

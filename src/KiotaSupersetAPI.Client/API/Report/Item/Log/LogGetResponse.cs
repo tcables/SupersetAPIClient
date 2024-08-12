@@ -34,10 +34,10 @@ public partial class LogGetResponse : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="API.Report.Item.Log.LogGetResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Report.Item.Log.LogGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static LogGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Report.Item.Log.LogGetResponse();
+        return new LogGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

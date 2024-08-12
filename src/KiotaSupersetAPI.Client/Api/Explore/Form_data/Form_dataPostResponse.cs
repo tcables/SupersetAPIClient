@@ -29,7 +29,7 @@ public partial class Form_dataPostResponse : IAdditionalDataHolder, IParsable
     public static Explore.Form_data.Form_dataPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Explore.Form_data.Form_dataPostResponse();
+        return new Form_data.Form_dataPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

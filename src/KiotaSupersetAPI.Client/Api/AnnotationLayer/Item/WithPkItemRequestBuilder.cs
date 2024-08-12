@@ -18,7 +18,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>The annotation property</summary>
     public Annotation.AnnotationRequestBuilder Annotation
     {
-        get => new AnnotationLayer.Item.Annotation.AnnotationRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Annotation.AnnotationRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Item.WithPkItemRequestBuilder"/> and sets the default values.
@@ -230,7 +230,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new AnnotationLayer.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

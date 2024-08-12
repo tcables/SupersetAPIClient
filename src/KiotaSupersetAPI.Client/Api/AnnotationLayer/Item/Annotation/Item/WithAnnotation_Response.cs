@@ -14,9 +14,9 @@ public partial class WithAnnotation_Response : AnnotationLayer.Item.Annotation.I
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new WithAnnotation_Response CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Item.Annotation.Item.WithAnnotation_Response();
+        return new WithAnnotation_Response();
     }
 }

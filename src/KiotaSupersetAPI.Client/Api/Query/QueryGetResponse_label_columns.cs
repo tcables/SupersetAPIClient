@@ -29,7 +29,7 @@ public partial class QueryGetResponse_label_columns : IAdditionalDataHolder, IPa
     public static Query.QueryGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Query.QueryGetResponse_label_columns();
+        return new QueryGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

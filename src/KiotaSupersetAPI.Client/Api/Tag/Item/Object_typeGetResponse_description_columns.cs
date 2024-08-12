@@ -26,10 +26,10 @@ public partial class Object_typeGetResponse_description_columns : IAdditionalDat
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Object_typeGetResponse_description_columns"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Tag.Item.Object_typeGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Object_typeGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Item.Object_typeGetResponse_description_columns();
+        return new Object_typeGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

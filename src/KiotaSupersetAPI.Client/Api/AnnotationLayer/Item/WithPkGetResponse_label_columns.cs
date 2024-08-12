@@ -29,7 +29,7 @@ public partial class WithPkGetResponse_label_columns : IAdditionalDataHolder, IP
     public static AnnotationLayer.Item.WithPkGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Item.WithPkGetResponse_label_columns();
+        return new Item.WithPkGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -14,9 +14,9 @@ public partial class WithPkResponse : KiotaSupersetAPI.Client.API.Log.Item.WithP
     /// </summary>
     /// <returns>A <see cref="API.Log.Item.WithPkResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Log.Item.WithPkResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.WithPkResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Log.Item.WithPkResponse();
+        return new Item.WithPkResponse();
     }
 }

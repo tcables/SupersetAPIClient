@@ -26,7 +26,7 @@ public partial class MenuGetResponse_result_childs : IAdditionalDataHolder, IPar
     public static Menu.MenuGetResponse_result_childs CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Menu.MenuGetResponse_result_childs();
+        return new MenuGetResponse_result_childs();
     }
     /// <summary>
     /// The deserialization information for the current model

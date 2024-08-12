@@ -102,7 +102,7 @@ public partial class ValuesRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Column.Item.Values.ValuesRequestBuilder WithUrl(string rawUrl)
     {
-        return new Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder(rawUrl, RequestAdapter);
+        return new Column.Item.Values.ValuesRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

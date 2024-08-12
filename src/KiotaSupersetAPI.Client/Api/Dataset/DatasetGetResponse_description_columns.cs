@@ -29,7 +29,7 @@ public partial class DatasetGetResponse_description_columns : IAdditionalDataHol
     public static Dataset.DatasetGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.DatasetGetResponse_description_columns();
+        return new DatasetGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

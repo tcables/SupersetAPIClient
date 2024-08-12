@@ -31,7 +31,7 @@ public partial class DatasetPostResponse : IAdditionalDataHolder, IParsable
     public static Dataset.DatasetPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.DatasetPostResponse();
+        return new DatasetPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -14,9 +14,9 @@ public partial class PermalinkResponse : Explore.Permalink.PermalinkPostResponse
     /// </summary>
     /// <returns>A <see cref="Explore.Permalink.PermalinkResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Explore.Permalink.PermalinkResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Permalink.PermalinkResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Explore.Permalink.PermalinkResponse();
+        return new Permalink.PermalinkResponse();
     }
 }

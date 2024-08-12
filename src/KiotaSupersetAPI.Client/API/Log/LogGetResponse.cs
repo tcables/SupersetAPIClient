@@ -57,7 +57,7 @@ public partial class LogGetResponse : IAdditionalDataHolder, IParsable
     public static Log.LogGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Log.LogGetResponse();
+        return new LogGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

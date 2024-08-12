@@ -29,7 +29,7 @@ public partial class WithKeyGetResponse : IAdditionalDataHolder, IParsable
     public static Dashboard.Permalink.Item.WithKeyGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Permalink.Item.WithKeyGetResponse();
+        return new Permalink.Item.WithKeyGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

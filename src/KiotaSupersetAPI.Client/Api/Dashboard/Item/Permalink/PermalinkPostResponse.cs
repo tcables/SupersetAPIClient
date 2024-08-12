@@ -32,7 +32,7 @@ public partial class PermalinkPostResponse : IAdditionalDataHolder, IParsable
     public static Dashboard.Item.Permalink.PermalinkPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Permalink.PermalinkPostResponse();
+        return new Item.Permalink.PermalinkPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

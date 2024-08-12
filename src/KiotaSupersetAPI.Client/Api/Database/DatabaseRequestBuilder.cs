@@ -18,37 +18,37 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <summary>The _info property</summary>
     public _info._infoRequestBuilder _info
     {
-        get => new Database._info._infoRequestBuilder(PathParameters, RequestAdapter);
+        get => new _info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The available property</summary>
     public Available.AvailableRequestBuilder Available
     {
-        get => new Database.Available.AvailableRequestBuilder(PathParameters, RequestAdapter);
+        get => new Available.AvailableRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
     public Export.ExportRequestBuilder Export
     {
-        get => new Database.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The import property</summary>
     public Import.ImportRequestBuilder Import
     {
-        get => new Database.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Import.ImportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
     public Related.RelatedRequestBuilder Related
     {
-        get => new Database.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The test_connection property</summary>
     public Test_connection.Test_connectionRequestBuilder Test_connection
     {
-        get => new Database.Test_connection.Test_connectionRequestBuilder(PathParameters, RequestAdapter);
+        get => new Test_connection.Test_connectionRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The validate_parameters property</summary>
     public Validate_parameters.Validate_parametersRequestBuilder Validate_parameters
     {
-        get => new Database.Validate_parameters.Validate_parametersRequestBuilder(PathParameters, RequestAdapter);
+        get => new Validate_parameters.Validate_parametersRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
@@ -59,7 +59,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("pk", position);
-            return new Database.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item collection</summary>
@@ -72,7 +72,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-            return new Database.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -225,7 +225,7 @@ public partial class DatabaseRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public DatabaseRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.DatabaseRequestBuilder(rawUrl, RequestAdapter);
+        return new DatabaseRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Gets a list of databases, use Rison or JSON query parameters for filtering, sorting, pagination and  for selecting specific columns and metadata.

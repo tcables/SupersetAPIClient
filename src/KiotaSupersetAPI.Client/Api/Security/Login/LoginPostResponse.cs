@@ -32,7 +32,7 @@ public partial class LoginPostResponse : IAdditionalDataHolder, IParsable
     public static Security.Login.LoginPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Security.Login.LoginPostResponse();
+        return new Login.LoginPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

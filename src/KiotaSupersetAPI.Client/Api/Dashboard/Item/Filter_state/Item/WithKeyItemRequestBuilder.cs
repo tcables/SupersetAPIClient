@@ -235,9 +235,9 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Filter_state.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
+    public Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.Item.Filter_state.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

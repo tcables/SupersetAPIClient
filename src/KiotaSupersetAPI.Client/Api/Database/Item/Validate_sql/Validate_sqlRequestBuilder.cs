@@ -105,7 +105,7 @@ public partial class Validate_sqlRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Validate_sql.Validate_sqlRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.Validate_sql.Validate_sqlRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Validate_sql.Validate_sqlRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

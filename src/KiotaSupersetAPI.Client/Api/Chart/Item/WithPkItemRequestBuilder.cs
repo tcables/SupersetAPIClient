@@ -18,27 +18,27 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <summary>The cache_screenshot property</summary>
     public Cache_screenshot.Cache_screenshotRequestBuilder Cache_screenshot
     {
-        get => new Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Cache_screenshot.Cache_screenshotRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The data property</summary>
     public Data.DataRequestBuilder Data
     {
-        get => new Chart.Item.Data.DataRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Data.DataRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorites property</summary>
     public Favorites.FavoritesRequestBuilder Favorites
     {
-        get => new Chart.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The screenshot property</summary>
     public Screenshot.ScreenshotRequestBuilder Screenshot
     {
-        get => new Chart.Item.Screenshot.ScreenshotRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Screenshot.ScreenshotRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The thumbnail property</summary>
     public Thumbnail.ThumbnailRequestBuilder Thumbnail
     {
-        get => new Chart.Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Chart.Item.WithPkItemRequestBuilder"/> and sets the default values.
@@ -266,7 +266,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Chart.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

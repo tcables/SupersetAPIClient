@@ -26,10 +26,10 @@ public partial class WithMetric_DeleteResponse : IAdditionalDataHolder, IParsabl
     /// </summary>
     /// <returns>A <see cref="Dataset.Item.Metric.Item.WithMetric_DeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Dataset.Item.Metric.Item.WithMetric_DeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Item.WithMetric_DeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.Item.Metric.Item.WithMetric_DeleteResponse();
+        return new Item.WithMetric_DeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

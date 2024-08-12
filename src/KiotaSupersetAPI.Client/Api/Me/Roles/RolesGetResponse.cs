@@ -29,7 +29,7 @@ public partial class RolesGetResponse : IAdditionalDataHolder, IParsable
     public static Me.Roles.RolesGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Me.Roles.RolesGetResponse();
+        return new Roles.RolesGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

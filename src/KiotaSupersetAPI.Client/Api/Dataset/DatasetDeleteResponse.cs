@@ -29,7 +29,7 @@ public partial class DatasetDeleteResponse : IAdditionalDataHolder, IParsable
     public static Dataset.DatasetDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.DatasetDeleteResponse();
+        return new DatasetDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -76,7 +76,7 @@ public partial class Recent_activityRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Recent_activity.Recent_activityRequestBuilder WithUrl(string rawUrl)
     {
-        return new Log.Recent_activity.Recent_activityRequestBuilder(rawUrl, RequestAdapter);
+        return new Recent_activity.Recent_activityRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Get recent activity data for a user

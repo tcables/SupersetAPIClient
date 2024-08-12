@@ -14,9 +14,9 @@ public partial class Format_sqlResponse : Sqllab.Format_sql.Format_sqlPostRespon
     /// </summary>
     /// <returns>A <see cref="Sqllab.Format_sql.Format_sqlResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Sqllab.Format_sql.Format_sqlResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Format_sql.Format_sqlResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Sqllab.Format_sql.Format_sqlResponse();
+        return new Format_sql.Format_sqlResponse();
     }
 }

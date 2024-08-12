@@ -105,7 +105,7 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Bulk_create.Bulk_createRequestBuilder WithUrl(string rawUrl)
     {
-        return new Tag.Bulk_create.Bulk_createRequestBuilder(rawUrl, RequestAdapter);
+        return new Bulk_create.Bulk_createRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

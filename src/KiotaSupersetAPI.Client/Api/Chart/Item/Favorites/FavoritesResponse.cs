@@ -14,9 +14,9 @@ public partial class FavoritesResponse : Chart.Item.Favorites.FavoritesDeleteRes
     /// </summary>
     /// <returns>A <see cref="Chart.Item.Favorites.FavoritesResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Chart.Item.Favorites.FavoritesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.Favorites.FavoritesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.Item.Favorites.FavoritesResponse();
+        return new Item.Favorites.FavoritesResponse();
     }
 }

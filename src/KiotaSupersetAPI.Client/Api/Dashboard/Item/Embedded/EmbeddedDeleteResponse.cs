@@ -29,7 +29,7 @@ public partial class EmbeddedDeleteResponse : IAdditionalDataHolder, IParsable
     public static Dashboard.Item.Embedded.EmbeddedDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Embedded.EmbeddedDeleteResponse();
+        return new Item.Embedded.EmbeddedDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

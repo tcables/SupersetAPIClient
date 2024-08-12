@@ -72,7 +72,7 @@ public partial class Schemas_access_for_file_uploadRequestBuilder : BaseRequestB
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

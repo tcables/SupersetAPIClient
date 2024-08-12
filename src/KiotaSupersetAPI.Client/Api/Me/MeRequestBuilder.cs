@@ -18,7 +18,7 @@ public partial class MeRequestBuilder : BaseRequestBuilder
     /// <summary>The roles property</summary>
     public Roles.RolesRequestBuilder Roles
     {
-        get => new Me.Roles.RolesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Roles.RolesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Me.MeRequestBuilder"/> and sets the default values.
@@ -91,7 +91,7 @@ public partial class MeRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Me.MeRequestBuilder WithUrl(string rawUrl)
     {
-        return new Me.MeRequestBuilder(rawUrl, RequestAdapter);
+        return new MeRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

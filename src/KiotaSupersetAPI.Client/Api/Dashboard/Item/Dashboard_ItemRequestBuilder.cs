@@ -18,47 +18,47 @@ public partial class Dashboard_ItemRequestBuilder : BaseRequestBuilder
     /// <summary>The charts property</summary>
     public Charts.ChartsRequestBuilder Charts
     {
-        get => new Dashboard.Item.Charts.ChartsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Charts.ChartsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The copy property</summary>
     public Copy.CopyRequestBuilder Copy
     {
-        get => new Dashboard.Item.Copy.CopyRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Copy.CopyRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The datasets property</summary>
     public Datasets.DatasetsRequestBuilder Datasets
     {
-        get => new Dashboard.Item.Datasets.DatasetsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Datasets.DatasetsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The embedded property</summary>
     public Embedded.EmbeddedRequestBuilder Embedded
     {
-        get => new Dashboard.Item.Embedded.EmbeddedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Embedded.EmbeddedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorites property</summary>
     public Favorites.FavoritesRequestBuilder Favorites
     {
-        get => new Dashboard.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The filter_state property</summary>
     public Filter_state.Filter_stateRequestBuilder Filter_state
     {
-        get => new Dashboard.Item.Filter_state.Filter_stateRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Filter_state.Filter_stateRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The filtersets property</summary>
     public Filtersets.FiltersetsRequestBuilder Filtersets
     {
-        get => new Dashboard.Item.Filtersets.FiltersetsRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Filtersets.FiltersetsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The permalink property</summary>
     public Permalink.PermalinkRequestBuilder Permalink
     {
-        get => new Dashboard.Item.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The thumbnail property</summary>
     public Thumbnail.ThumbnailRequestBuilder Thumbnail
     {
-        get => new Dashboard.Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
+        get => new Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.Item.Dashboard_ItemRequestBuilder"/> and sets the default values.
@@ -282,7 +282,7 @@ public partial class Dashboard_ItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Dashboard_ItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.Item.Dashboard_ItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Dashboard_ItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

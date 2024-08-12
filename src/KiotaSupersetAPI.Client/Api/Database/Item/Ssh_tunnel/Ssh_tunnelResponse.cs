@@ -14,9 +14,9 @@ public partial class Ssh_tunnelResponse : Database.Item.Ssh_tunnel.Ssh_tunnelDel
     /// </summary>
     /// <returns>A <see cref="Database.Item.Ssh_tunnel.Ssh_tunnelResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Database.Item.Ssh_tunnel.Ssh_tunnelResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.Ssh_tunnel.Ssh_tunnelResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Item.Ssh_tunnel.Ssh_tunnelResponse();
+        return new Item.Ssh_tunnel.Ssh_tunnelResponse();
     }
 }

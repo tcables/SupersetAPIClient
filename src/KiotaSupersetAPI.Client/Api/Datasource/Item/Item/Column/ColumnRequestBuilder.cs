@@ -19,7 +19,7 @@ public partial class ColumnRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("column_name", position);
-            return new Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Column.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

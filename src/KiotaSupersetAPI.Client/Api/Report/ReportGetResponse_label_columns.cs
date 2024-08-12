@@ -29,7 +29,7 @@ public partial class ReportGetResponse_label_columns : IAdditionalDataHolder, IP
     public static Report.ReportGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Report.ReportGetResponse_label_columns();
+        return new ReportGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

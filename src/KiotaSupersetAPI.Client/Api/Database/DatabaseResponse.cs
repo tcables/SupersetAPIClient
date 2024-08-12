@@ -14,9 +14,9 @@ public partial class DatabaseResponse : Database.DatabaseGetResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Database.DatabaseResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Database.DatabaseResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new DatabaseResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.DatabaseResponse();
+        return new DatabaseResponse();
     }
 }

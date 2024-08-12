@@ -12,13 +12,7 @@ public partial class Annotation_layerGetResponse_label_columns : IAdditionalData
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The label for the column name. Will be translated by babel</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-    public string? ColumnName { get; set; }
-#nullable restore
-#else
     public string ColumnName { get; set; }
-#endif
     /// <summary>
     /// Instantiates a new <see cref="AnnotationLayer.Annotation_layerGetResponse_label_columns"/> and sets the default values.
     /// </summary>
@@ -34,7 +28,7 @@ public partial class Annotation_layerGetResponse_label_columns : IAdditionalData
     public static AnnotationLayer.Annotation_layerGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Annotation_layerGetResponse_label_columns();
+        return new Annotation_layerGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -14,9 +14,9 @@ public partial class ReportResponse : Report.ReportDeleteResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Report.ReportResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Report.ReportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new ReportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Report.ReportResponse();
+        return new ReportResponse();
     }
 }

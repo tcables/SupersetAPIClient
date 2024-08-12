@@ -31,7 +31,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     public static AnnotationLayer.Item.WithPkPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Item.WithPkPutResponse();
+        return new Item.WithPkPutResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

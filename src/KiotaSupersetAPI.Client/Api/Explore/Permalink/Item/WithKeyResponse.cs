@@ -14,9 +14,9 @@ public partial class WithKeyResponse : Explore.Permalink.Item.WithKeyGetResponse
     /// </summary>
     /// <returns>A <see cref="Explore.Permalink.Item.WithKeyResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Explore.Permalink.Item.WithKeyResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Permalink.Item.WithKeyResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Explore.Permalink.Item.WithKeyResponse();
+        return new Permalink.Item.WithKeyResponse();
     }
 }

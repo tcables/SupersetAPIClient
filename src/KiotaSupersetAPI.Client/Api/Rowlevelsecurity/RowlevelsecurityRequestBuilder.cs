@@ -18,12 +18,12 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <summary>The _info property</summary>
     public _info._infoRequestBuilder _info
     {
-        get => new Rowlevelsecurity._info._infoRequestBuilder(PathParameters, RequestAdapter);
+        get => new _info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
     public Related.RelatedRequestBuilder Related
     {
-        get => new Rowlevelsecurity.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.rowlevelsecurity.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
@@ -34,7 +34,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("pk", position);
-            return new Rowlevelsecurity.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.rowlevelsecurity.item collection</summary>
@@ -47,7 +47,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-            return new Rowlevelsecurity.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -268,7 +268,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public RowlevelsecurityRequestBuilder WithUrl(string rawUrl)
     {
-        return new Rowlevelsecurity.RowlevelsecurityRequestBuilder(rawUrl, RequestAdapter);
+        return new RowlevelsecurityRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Bulk delete RLS rules

@@ -47,7 +47,7 @@ public partial class ImportPostRequestBody : IAdditionalDataHolder, IParsable
     public static Dataset.Import.ImportPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.Import.ImportPostRequestBody();
+        return new Import.ImportPostRequestBody();
     }
     /// <summary>
     /// The deserialization information for the current model

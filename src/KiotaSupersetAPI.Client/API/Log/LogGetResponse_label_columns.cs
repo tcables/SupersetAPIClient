@@ -30,7 +30,7 @@ public partial class LogGetResponse_label_columns : IAdditionalDataHolder, IPars
     public static Log.LogGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Log.LogGetResponse_label_columns();
+        return new LogGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -13,7 +13,7 @@ public partial class WithColumn_nameItemRequestBuilder : BaseRequestBuilder
     /// <summary>The values property</summary>
     public Column.Item.Values.ValuesRequestBuilder Values
     {
-        get => new Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Column.Item.Values.ValuesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder"/> and sets the default values.

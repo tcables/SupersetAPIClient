@@ -14,9 +14,9 @@ public partial class Filter_stateResponse : Dashboard.Item.Filter_state.Filter_s
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filter_state.Filter_stateResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dashboard.Item.Filter_state.Filter_stateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Filter_stateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Filter_state.Filter_stateResponse();
+        return new Filter_stateResponse();
     }
 }

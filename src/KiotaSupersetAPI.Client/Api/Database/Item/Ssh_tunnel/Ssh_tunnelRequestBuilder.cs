@@ -102,7 +102,7 @@ public partial class Ssh_tunnelRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Ssh_tunnel.Ssh_tunnelRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -19,7 +19,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("key", position);
-            return new Dashboard.Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Permalink.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

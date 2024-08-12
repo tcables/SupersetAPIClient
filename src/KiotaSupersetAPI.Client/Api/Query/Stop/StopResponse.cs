@@ -14,9 +14,9 @@ public partial class StopResponse : Query.Stop.StopPostResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Query.Stop.StopResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Query.Stop.StopResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Stop.StopResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Query.Stop.StopResponse();
+        return new Stop.StopResponse();
     }
 }

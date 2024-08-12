@@ -14,9 +14,9 @@ public partial class TagResponse : Tag.TagDeleteResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="Tag.TagResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Tag.TagResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new TagResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.TagResponse();
+        return new TagResponse();
     }
 }

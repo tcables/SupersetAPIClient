@@ -50,7 +50,7 @@ public partial class ReportGetResponse : IAdditionalDataHolder, IParsable
     public static Report.ReportGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Report.ReportGetResponse();
+        return new ReportGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

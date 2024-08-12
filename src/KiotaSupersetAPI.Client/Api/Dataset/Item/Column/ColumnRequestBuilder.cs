@@ -21,7 +21,7 @@ public partial class ColumnRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("column_id", position);
-            return new Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dataset.item.column.item collection</summary>
@@ -34,7 +34,7 @@ public partial class ColumnRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("column_id", position);
-            return new Dataset.Item.Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Column.Item.WithColumn_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

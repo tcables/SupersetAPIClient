@@ -19,7 +19,7 @@ public partial class DistinctRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("column_name", position);
-            return new Dataset.Distinct.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Distinct.Item.WithColumn_nameItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

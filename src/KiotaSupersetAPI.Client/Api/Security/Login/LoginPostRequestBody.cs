@@ -36,7 +36,7 @@ public partial class LoginPostRequestBody : IAdditionalDataHolder, IParsable
     public static Security.Login.LoginPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Security.Login.LoginPostRequestBody();
+        return new Login.LoginPostRequestBody();
     }
     /// <summary>
     /// The deserialization information for the current model

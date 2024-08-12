@@ -13,7 +13,7 @@ public partial class CachekeyRequestBuilder : BaseRequestBuilder
     /// <summary>The invalidate property</summary>
     public Invalidate.InvalidateRequestBuilder Invalidate
     {
-        get => new Cachekey.Invalidate.InvalidateRequestBuilder(PathParameters, RequestAdapter);
+        get => new Invalidate.InvalidateRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Cachekey.CachekeyRequestBuilder"/> and sets the default values.

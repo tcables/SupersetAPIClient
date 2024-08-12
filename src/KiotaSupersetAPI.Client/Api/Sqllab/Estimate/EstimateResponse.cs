@@ -14,9 +14,9 @@ public partial class EstimateResponse : Sqllab.Estimate.EstimatePostResponse, IP
     /// </summary>
     /// <returns>A <see cref="Sqllab.Estimate.EstimateResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Sqllab.Estimate.EstimateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Estimate.EstimateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Sqllab.Estimate.EstimateResponse();
+        return new Estimate.EstimateResponse();
     }
 }

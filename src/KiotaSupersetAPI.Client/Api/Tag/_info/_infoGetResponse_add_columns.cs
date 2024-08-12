@@ -26,7 +26,7 @@ public partial class _infoGetResponse_add_columns : IAdditionalDataHolder, IPars
     public static Tag._info._infoGetResponse_add_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag._info._infoGetResponse_add_columns();
+        return new _info._infoGetResponse_add_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

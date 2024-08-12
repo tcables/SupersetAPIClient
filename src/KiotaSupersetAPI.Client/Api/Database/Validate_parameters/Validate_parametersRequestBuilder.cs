@@ -101,7 +101,7 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Validate_parameters.Validate_parametersRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Validate_parameters.Validate_parametersRequestBuilder(rawUrl, RequestAdapter);
+        return new Validate_parameters.Validate_parametersRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -29,7 +29,7 @@ public partial class FavoritesDeleteResponse : IAdditionalDataHolder, IParsable
     public static Dashboard.Item.Favorites.FavoritesDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Favorites.FavoritesDeleteResponse();
+        return new Item.Favorites.FavoritesDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

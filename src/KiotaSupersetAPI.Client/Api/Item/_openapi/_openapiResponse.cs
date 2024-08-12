@@ -14,9 +14,9 @@ public partial class _openapiResponse : _openapiGetResponse, IParsable
     /// </summary>
     /// <returns>A <see cref="API.Item._openapi._openapiResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new API.Item._openapi._openapiResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item._openapi._openapiResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new API.Item._openapi._openapiResponse();
+        return new Item._openapi._openapiResponse();
     }
 }

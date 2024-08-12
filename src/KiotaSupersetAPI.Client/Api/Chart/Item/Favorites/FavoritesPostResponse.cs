@@ -29,7 +29,7 @@ public partial class FavoritesPostResponse : IAdditionalDataHolder, IParsable
     public static Chart.Item.Favorites.FavoritesPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.Item.Favorites.FavoritesPostResponse();
+        return new Item.Favorites.FavoritesPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

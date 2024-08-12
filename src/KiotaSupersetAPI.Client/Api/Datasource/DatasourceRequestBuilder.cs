@@ -19,7 +19,7 @@ public partial class DatasourceRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("datasource_type", position);
-            return new Datasource.Item.WithDatasource_typeItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithDatasource_typeItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>

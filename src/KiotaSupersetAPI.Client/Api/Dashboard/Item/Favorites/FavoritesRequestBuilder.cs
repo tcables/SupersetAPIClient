@@ -150,7 +150,7 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Favorites.FavoritesRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.Item.Favorites.FavoritesRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Favorites.FavoritesRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

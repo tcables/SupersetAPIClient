@@ -30,7 +30,7 @@ public partial class CopyPostResponse : IAdditionalDataHolder, IParsable
     public static Dashboard.Item.Copy.CopyPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Copy.CopyPostResponse();
+        return new Item.Copy.CopyPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

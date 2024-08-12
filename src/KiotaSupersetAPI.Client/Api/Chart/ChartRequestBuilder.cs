@@ -18,37 +18,37 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
     /// <summary>The _info property</summary>
     public _info._infoRequestBuilder _info
     {
-        get => new Chart._info._infoRequestBuilder(PathParameters, RequestAdapter);
+        get => new _info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The data property</summary>
     public Data.DataRequestBuilder Data
     {
-        get => new Chart.Data.DataRequestBuilder(PathParameters, RequestAdapter);
+        get => new Data.DataRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
     public Export.ExportRequestBuilder Export
     {
-        get => new Chart.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorite_status property</summary>
     public Favorite_status.Favorite_statusRequestBuilder Favorite_status
     {
-        get => new Chart.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
+        get => new Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The import property</summary>
     public Import.ImportRequestBuilder Import
     {
-        get => new Chart.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
+        get => new Import.ImportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
     public Related.RelatedRequestBuilder Related
     {
-        get => new Chart.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
+        get => new Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The warm_up_cache property</summary>
     public Warm_up_cache.Warm_up_cacheRequestBuilder Warm_up_cache
     {
-        get => new Chart.Warm_up_cache.Warm_up_cacheRequestBuilder(PathParameters, RequestAdapter);
+        get => new Warm_up_cache.Warm_up_cacheRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
@@ -59,7 +59,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("pk", position);
-            return new Chart.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.item collection</summary>
@@ -72,7 +72,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pk", position);
-            return new Chart.Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithPkItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -293,7 +293,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public ChartRequestBuilder WithUrl(string rawUrl)
     {
-        return new Chart.ChartRequestBuilder(rawUrl, RequestAdapter);
+        return new ChartRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Bulk delete charts

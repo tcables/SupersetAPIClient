@@ -77,7 +77,7 @@ public partial class Warm_up_cacheRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Warm_up_cache.Warm_up_cacheRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder(rawUrl, RequestAdapter);
+        return new Warm_up_cache.Warm_up_cacheRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

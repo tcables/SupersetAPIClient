@@ -105,7 +105,7 @@ public partial class EstimateRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public EstimateRequestBuilder WithUrl(string rawUrl)
     {
-        return new Sqllab.Estimate.EstimateRequestBuilder(rawUrl, RequestAdapter);
+        return new Estimate.EstimateRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

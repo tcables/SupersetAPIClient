@@ -29,7 +29,7 @@ public partial class TagGetResponse_description_columns : IAdditionalDataHolder,
     public static Tag.TagGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.TagGetResponse_description_columns();
+        return new TagGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

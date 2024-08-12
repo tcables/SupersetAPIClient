@@ -26,10 +26,10 @@ public partial class WithTagDeleteResponse : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Item.Item.WithTagDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Tag.Item.Item.Item.WithTagDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Item.WithTagDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Item.Item.Item.WithTagDeleteResponse();
+        return new Item.WithTagDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

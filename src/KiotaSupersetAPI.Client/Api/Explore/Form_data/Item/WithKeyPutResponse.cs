@@ -29,7 +29,7 @@ public partial class WithKeyPutResponse : IAdditionalDataHolder, IParsable
     public static Explore.Form_data.Item.WithKeyPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Explore.Form_data.Item.WithKeyPutResponse();
+        return new Form_data.Item.WithKeyPutResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

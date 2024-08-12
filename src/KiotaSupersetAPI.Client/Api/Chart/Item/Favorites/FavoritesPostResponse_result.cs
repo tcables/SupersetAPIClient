@@ -26,7 +26,7 @@ public partial class FavoritesPostResponse_result : IAdditionalDataHolder, IPars
     public static Chart.Item.Favorites.FavoritesPostResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.Item.Favorites.FavoritesPostResponse_result();
+        return new Item.Favorites.FavoritesPostResponse_result();
     }
     /// <summary>
     /// The deserialization information for the current model

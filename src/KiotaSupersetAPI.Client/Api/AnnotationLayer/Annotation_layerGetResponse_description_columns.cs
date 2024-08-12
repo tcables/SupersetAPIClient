@@ -29,7 +29,7 @@ public partial class Annotation_layerGetResponse_description_columns : IAddition
     public static AnnotationLayer.Annotation_layerGetResponse_description_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new AnnotationLayer.Annotation_layerGetResponse_description_columns();
+        return new Annotation_layerGetResponse_description_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

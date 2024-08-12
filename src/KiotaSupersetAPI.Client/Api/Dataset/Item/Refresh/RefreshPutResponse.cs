@@ -29,7 +29,7 @@ public partial class RefreshPutResponse : IAdditionalDataHolder, IParsable
     public static Dataset.Item.Refresh.RefreshPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dataset.Item.Refresh.RefreshPutResponse();
+        return new Item.Refresh.RefreshPutResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

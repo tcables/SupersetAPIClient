@@ -74,9 +74,9 @@ public partial class WithSchema_nameItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Item.Table.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Table.Item.Item.WithSchema_nameItemRequestBuilder WithUrl(string rawUrl)
+    public WithSchema_nameItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Database.Item.Table.Item.Item.WithSchema_nameItemRequestBuilder(rawUrl, RequestAdapter);
+        return new WithSchema_nameItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

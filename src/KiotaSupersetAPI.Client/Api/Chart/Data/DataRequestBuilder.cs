@@ -24,7 +24,7 @@ public partial class DataRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("cache_key", position);
-            return new Chart.Data.Item.WithCache_keyItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Data.Item.WithCache_keyItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -89,7 +89,7 @@ public partial class DataRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public DataRequestBuilder WithUrl(string rawUrl)
     {
-        return new Chart.Data.DataRequestBuilder(rawUrl, RequestAdapter);
+        return new Data.DataRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

@@ -14,9 +14,9 @@ public partial class Test_connectionResponse : Database.Test_connection.Test_con
     /// </summary>
     /// <returns>A <see cref="Database.Test_connection.Test_connectionResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Database.Test_connection.Test_connectionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Test_connection.Test_connectionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Test_connection.Test_connectionResponse();
+        return new Test_connection.Test_connectionResponse();
     }
 }

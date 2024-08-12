@@ -14,9 +14,9 @@ public partial class ValuesResponse : Datasource.Item.Item.Column.Item.Values.Va
     /// </summary>
     /// <returns>A <see cref="Datasource.Item.Item.Column.Item.Values.ValuesResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Datasource.Item.Item.Column.Item.Values.ValuesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Column.Item.Values.ValuesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Datasource.Item.Item.Column.Item.Values.ValuesResponse();
+        return new Column.Item.Values.ValuesResponse();
     }
 }

@@ -28,10 +28,10 @@ public partial class Object_typePutResponse : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Object_typePutResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Tag.Item.Object_typePutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Object_typePutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Item.Object_typePutResponse();
+        return new Object_typePutResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

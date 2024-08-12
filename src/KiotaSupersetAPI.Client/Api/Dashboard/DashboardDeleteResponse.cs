@@ -29,7 +29,7 @@ public partial class DashboardDeleteResponse : IAdditionalDataHolder, IParsable
     public static Dashboard.DashboardDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.DashboardDeleteResponse();
+        return new DashboardDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

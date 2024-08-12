@@ -105,7 +105,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Permalink.PermalinkRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.Item.Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

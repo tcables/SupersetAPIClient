@@ -26,7 +26,7 @@ public partial class _infoGetResponse_edit_columns : IAdditionalDataHolder, IPar
     public static Database._info._infoGetResponse_edit_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database._info._infoGetResponse_edit_columns();
+        return new _info._infoGetResponse_edit_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

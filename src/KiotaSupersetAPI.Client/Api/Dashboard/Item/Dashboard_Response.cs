@@ -14,9 +14,9 @@ public partial class Dashboard_Response : Dashboard.Item.Dashboard_GetResponse, 
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Dashboard_Response"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dashboard.Item.Dashboard_Response CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.Dashboard_Response CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Dashboard_Response();
+        return new Item.Dashboard_Response();
     }
 }

@@ -27,10 +27,10 @@ public partial class WithObject_PostRequestBody : IAdditionalDataHolder, IParsab
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Item.WithObject_PostRequestBody"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Tag.Item.Item.WithObject_PostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static WithObject_PostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Item.Item.WithObject_PostRequestBody();
+        return new WithObject_PostRequestBody();
     }
     /// <summary>
     /// The deserialization information for the current model

@@ -50,7 +50,7 @@ public partial class DatabaseGetResponse : IAdditionalDataHolder, IParsable
     public static Database.DatabaseGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.DatabaseGetResponse();
+        return new DatabaseGetResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

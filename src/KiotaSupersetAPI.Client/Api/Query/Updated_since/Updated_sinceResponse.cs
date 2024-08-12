@@ -14,9 +14,9 @@ public partial class Updated_sinceResponse : Query.Updated_since.Updated_sinceGe
     /// </summary>
     /// <returns>A <see cref="Query.Updated_since.Updated_sinceResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Query.Updated_since.Updated_sinceResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Updated_since.Updated_sinceResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Query.Updated_since.Updated_sinceResponse();
+        return new Updated_since.Updated_sinceResponse();
     }
 }

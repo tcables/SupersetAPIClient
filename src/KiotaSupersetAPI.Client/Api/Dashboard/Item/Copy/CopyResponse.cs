@@ -14,9 +14,9 @@ public partial class CopyResponse : Dashboard.Item.Copy.CopyPostResponse, IParsa
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Copy.CopyResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dashboard.Item.Copy.CopyResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.Copy.CopyResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Copy.CopyResponse();
+        return new Item.Copy.CopyResponse();
     }
 }

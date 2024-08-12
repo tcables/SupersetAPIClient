@@ -14,9 +14,9 @@ public partial class _infoResponse : Rowlevelsecurity._info._infoGetResponse, IP
     /// </summary>
     /// <returns>A <see cref="Rowlevelsecurity._info._infoResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Rowlevelsecurity._info._infoResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new _info._infoResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Rowlevelsecurity._info._infoResponse();
+        return new _info._infoResponse();
     }
 }

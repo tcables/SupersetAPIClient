@@ -29,7 +29,7 @@ public partial class RefreshPostResponse : IAdditionalDataHolder, IParsable
     public static Security.Refresh.RefreshPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Security.Refresh.RefreshPostResponse();
+        return new Refresh.RefreshPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

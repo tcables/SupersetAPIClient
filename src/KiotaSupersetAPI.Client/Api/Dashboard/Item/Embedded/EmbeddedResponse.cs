@@ -14,9 +14,9 @@ public partial class EmbeddedResponse : Dashboard.Item.Embedded.EmbeddedDeleteRe
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Embedded.EmbeddedResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dashboard.Item.Embedded.EmbeddedResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Item.Embedded.EmbeddedResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Embedded.EmbeddedResponse();
+        return new Item.Embedded.EmbeddedResponse();
     }
 }

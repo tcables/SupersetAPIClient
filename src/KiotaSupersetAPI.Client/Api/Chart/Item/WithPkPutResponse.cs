@@ -31,7 +31,7 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     public static Chart.Item.WithPkPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.Item.WithPkPutResponse();
+        return new Item.WithPkPutResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

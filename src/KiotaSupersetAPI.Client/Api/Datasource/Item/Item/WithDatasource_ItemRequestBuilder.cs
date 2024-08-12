@@ -11,9 +11,9 @@ namespace KiotaSupersetAPI.Client.API.Datasource.Item.Item;
 public partial class WithDatasource_ItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The column property</summary>
-    public Item.Column.ColumnRequestBuilder Column
+    public Column.ColumnRequestBuilder Column
     {
-        get => new Datasource.Item.Item.Column.ColumnRequestBuilder(PathParameters, RequestAdapter);
+        get => new Column.ColumnRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/> and sets the default values.

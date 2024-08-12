@@ -26,10 +26,10 @@ public partial class WithKeyDeleteResponse : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filter_state.Item.WithKeyDeleteResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Dashboard.Item.Filter_state.Item.WithKeyDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Filter_state.Item.WithKeyDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Filter_state.Item.WithKeyDeleteResponse();
+        return new Item.WithKeyDeleteResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

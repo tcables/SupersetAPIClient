@@ -28,10 +28,10 @@ public partial class WithPkPutResponse : IAdditionalDataHolder, IParsable
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filtersets.Item.WithPkPutResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Dashboard.Item.Filtersets.Item.WithPkPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static Item.WithPkPutResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Filtersets.Item.WithPkPutResponse();
+        return new Item.WithPkPutResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

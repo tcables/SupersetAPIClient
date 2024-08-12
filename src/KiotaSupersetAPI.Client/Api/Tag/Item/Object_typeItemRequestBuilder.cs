@@ -18,7 +18,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <summary>The favorites property</summary>
     public Favorites.FavoritesRequestBuilder Favorites
     {
-        get => new Tag.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
+        get => new Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
@@ -29,7 +29,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             urlTplParams.Add("object_id", position);
-            return new Tag.Item.Item.WithObject_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithObject_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item.item collection</summary>
@@ -42,7 +42,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
         {
             var urlTplParams = new Dictionary<string, object>(PathParameters);
             if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("object_id", position);
-            return new Tag.Item.Item.WithObject_ItemRequestBuilder(urlTplParams, RequestAdapter);
+            return new Item.WithObject_ItemRequestBuilder(urlTplParams, RequestAdapter);
         }
     }
     /// <summary>
@@ -263,7 +263,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Object_typeItemRequestBuilder WithUrl(string rawUrl)
     {
-        return new Tag.Item.Object_typeItemRequestBuilder(rawUrl, RequestAdapter);
+        return new Object_typeItemRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

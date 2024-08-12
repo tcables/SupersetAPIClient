@@ -260,7 +260,7 @@ public partial class EmbeddedRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Embedded.EmbeddedRequestBuilder WithUrl(string rawUrl)
     {
-        return new Dashboard.Item.Embedded.EmbeddedRequestBuilder(rawUrl, RequestAdapter);
+        return new Item.Embedded.EmbeddedRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.

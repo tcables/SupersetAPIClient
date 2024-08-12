@@ -29,7 +29,7 @@ public partial class ChartGetResponse_label_columns : IAdditionalDataHolder, IPa
     public static Chart.ChartGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Chart.ChartGetResponse_label_columns();
+        return new ChartGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

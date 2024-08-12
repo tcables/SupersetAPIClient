@@ -18,12 +18,12 @@ public partial class ExploreRequestBuilder : BaseRequestBuilder
     /// <summary>The form_data property</summary>
     public Form_data.Form_dataRequestBuilder Form_data
     {
-        get => new Explore.Form_data.Form_dataRequestBuilder(PathParameters, RequestAdapter);
+        get => new Form_data.Form_dataRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The permalink property</summary>
     public Permalink.PermalinkRequestBuilder Permalink
     {
-        get => new Explore.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
+        get => new Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>
     /// Instantiates a new <see cref="Explore.ExploreRequestBuilder"/> and sets the default values.
@@ -86,7 +86,7 @@ public partial class ExploreRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public ExploreRequestBuilder WithUrl(string rawUrl)
     {
-        return new Explore.ExploreRequestBuilder(rawUrl, RequestAdapter);
+        return new ExploreRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Assembles Explore related information (form_data, slice, dataset) in a single endpoint.&lt;br/&gt;&lt;br/&gt; The information can be assembled from:&lt;br/&gt; - The cache using a form_data_key&lt;br/&gt; - The metadata database using a permalink_key&lt;br/&gt; - Build from scratch using dataset or slice identifiers.

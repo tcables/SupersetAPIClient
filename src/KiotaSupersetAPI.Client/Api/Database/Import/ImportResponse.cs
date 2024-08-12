@@ -14,9 +14,9 @@ public partial class ImportResponse : Database.Import.ImportPostResponse, IParsa
     /// </summary>
     /// <returns>A <see cref="Database.Import.ImportResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Database.Import.ImportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Import.ImportResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Import.ImportResponse();
+        return new Import.ImportResponse();
     }
 }

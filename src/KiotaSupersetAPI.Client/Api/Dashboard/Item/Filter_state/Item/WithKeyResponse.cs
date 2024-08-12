@@ -14,9 +14,9 @@ public partial class WithKeyResponse : Dashboard.Item.Filter_state.Item.WithKeyD
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filter_state.Item.WithKeyResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Dashboard.Item.Filter_state.Item.WithKeyResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Filter_state.Item.WithKeyResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Dashboard.Item.Filter_state.Item.WithKeyResponse();
+        return new Filter_state.Item.WithKeyResponse();
     }
 }

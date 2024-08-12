@@ -14,9 +14,9 @@ public partial class Bulk_createResponse : Tag.Bulk_create.Bulk_createPostRespon
     /// </summary>
     /// <returns>A <see cref="Tag.Bulk_create.Bulk_createResponse"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static new Tag.Bulk_create.Bulk_createResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static new Bulk_create.Bulk_createResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Bulk_create.Bulk_createResponse();
+        return new Bulk_create.Bulk_createResponse();
     }
 }

@@ -23,10 +23,10 @@ public partial class FavoritesPostResponse_result : IAdditionalDataHolder, IPars
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Favorites.FavoritesPostResponse_result"/></returns>
     /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-    public static Tag.Item.Favorites.FavoritesPostResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
+    public static FavoritesPostResponse_result CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Tag.Item.Favorites.FavoritesPostResponse_result();
+        return new FavoritesPostResponse_result();
     }
     /// <summary>
     /// The deserialization information for the current model

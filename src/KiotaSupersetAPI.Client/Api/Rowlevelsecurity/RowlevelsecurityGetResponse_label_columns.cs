@@ -29,7 +29,7 @@ public partial class RowlevelsecurityGetResponse_label_columns : IAdditionalData
     public static Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns();
+        return new RowlevelsecurityGetResponse_label_columns();
     }
     /// <summary>
     /// The deserialization information for the current model

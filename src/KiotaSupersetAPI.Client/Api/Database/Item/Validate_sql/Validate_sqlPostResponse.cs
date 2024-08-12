@@ -30,7 +30,7 @@ public partial class Validate_sqlPostResponse : IAdditionalDataHolder, IParsable
     public static Database.Item.Validate_sql.Validate_sqlPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
     {
         _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-        return new Database.Item.Validate_sql.Validate_sqlPostResponse();
+        return new Item.Validate_sql.Validate_sqlPostResponse();
     }
     /// <summary>
     /// The deserialization information for the current model

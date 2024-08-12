@@ -90,7 +90,7 @@ public partial class Csrf_tokenRequestBuilder : BaseRequestBuilder
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
     public Csrf_token.Csrf_tokenRequestBuilder WithUrl(string rawUrl)
     {
-        return new Security.Csrf_token.Csrf_tokenRequestBuilder(rawUrl, RequestAdapter);
+        return new Csrf_token.Csrf_tokenRequestBuilder(rawUrl, RequestAdapter);
     }
     /// <summary>
     /// Configuration for the request such as headers, query parameters, and middleware options.
