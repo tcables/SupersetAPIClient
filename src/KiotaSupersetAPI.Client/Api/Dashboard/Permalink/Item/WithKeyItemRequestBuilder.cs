@@ -100,7 +100,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.Permalink.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
+    public Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.Permalink.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
     }

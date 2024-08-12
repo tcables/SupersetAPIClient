@@ -12,7 +12,7 @@ public partial class Get_or_createPostResponse : IAdditionalDataHolder, IParsabl
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public Dataset.Get_or_create.Get_or_createPostResponse_result Result { get; set; }
+    public Get_or_create.Get_or_createPostResponse_result Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dataset.Get_or_create.Get_or_createPostResponse"/> and sets the default values.

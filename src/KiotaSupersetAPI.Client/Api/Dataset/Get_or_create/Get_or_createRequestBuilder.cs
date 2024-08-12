@@ -103,7 +103,7 @@ public partial class Get_or_createRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.Get_or_create.Get_or_createRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dataset.Get_or_create.Get_or_createRequestBuilder WithUrl(string rawUrl)
+    public Get_or_create.Get_or_createRequestBuilder WithUrl(string rawUrl)
     {
         return new Dataset.Get_or_create.Get_or_createRequestBuilder(rawUrl, RequestAdapter);
     }

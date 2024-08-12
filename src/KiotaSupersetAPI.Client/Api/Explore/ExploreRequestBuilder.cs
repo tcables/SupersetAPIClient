@@ -16,12 +16,12 @@ namespace KiotaSupersetAPI.Client.API.Explore;
 public partial class ExploreRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The form_data property</summary>
-    public Explore.Form_data.Form_dataRequestBuilder Form_data
+    public Form_data.Form_dataRequestBuilder Form_data
     {
         get => new Explore.Form_data.Form_dataRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The permalink property</summary>
-    public Explore.Permalink.PermalinkRequestBuilder Permalink
+    public Permalink.PermalinkRequestBuilder Permalink
     {
         get => new Explore.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
     }
@@ -84,7 +84,7 @@ public partial class ExploreRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Explore.ExploreRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Explore.ExploreRequestBuilder WithUrl(string rawUrl)
+    public ExploreRequestBuilder WithUrl(string rawUrl)
     {
         return new Explore.ExploreRequestBuilder(rawUrl, RequestAdapter);
     }

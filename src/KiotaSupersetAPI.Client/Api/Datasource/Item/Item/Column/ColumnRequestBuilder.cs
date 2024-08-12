@@ -13,7 +13,7 @@ public partial class ColumnRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item.item.column.item collection</summary>
     /// <param name="position">The name of the column to get values for</param>
     /// <returns>A <see cref="Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder"/></returns>
-    public Datasource.Item.Item.Column.Item.WithColumn_nameItemRequestBuilder this[string position]
+    public Column.Item.WithColumn_nameItemRequestBuilder this[string position]
     {
         get
         {

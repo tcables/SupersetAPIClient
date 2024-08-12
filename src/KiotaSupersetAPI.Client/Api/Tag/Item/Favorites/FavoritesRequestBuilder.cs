@@ -156,7 +156,7 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Favorites.FavoritesRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Tag.Item.Favorites.FavoritesRequestBuilder WithUrl(string rawUrl)
+    public Favorites.FavoritesRequestBuilder WithUrl(string rawUrl)
     {
         return new Tag.Item.Favorites.FavoritesRequestBuilder(rawUrl, RequestAdapter);
     }

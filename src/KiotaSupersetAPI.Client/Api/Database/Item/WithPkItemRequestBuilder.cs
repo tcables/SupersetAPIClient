@@ -16,57 +16,57 @@ namespace KiotaSupersetAPI.Client.API.Database.Item;
 public partial class WithPkItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The connection property</summary>
-    public Database.Item.Connection.ConnectionRequestBuilder Connection
+    public Connection.ConnectionRequestBuilder Connection
     {
         get => new Database.Item.Connection.ConnectionRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The function_names property</summary>
-    public Database.Item.Function_names.Function_namesRequestBuilder Function_names
+    public Function_names.Function_namesRequestBuilder Function_names
     {
         get => new Database.Item.Function_names.Function_namesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related_objects property</summary>
-    public Database.Item.Related_objects.Related_objectsRequestBuilder Related_objects
+    public Related_objects.Related_objectsRequestBuilder Related_objects
     {
         get => new Database.Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The schemas property</summary>
-    public Database.Item.Schemas.SchemasRequestBuilder Schemas
+    public Schemas.SchemasRequestBuilder Schemas
     {
         get => new Database.Item.Schemas.SchemasRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The schemas_access_for_file_upload property</summary>
-    public Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder Schemas_access_for_file_upload
+    public Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder Schemas_access_for_file_upload
     {
         get => new Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The select_star property</summary>
-    public Database.Item.Select_star.Select_starRequestBuilder Select_star
+    public Select_star.Select_starRequestBuilder Select_star
     {
         get => new Database.Item.Select_star.Select_starRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The ssh_tunnel property</summary>
-    public Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder Ssh_tunnel
+    public Ssh_tunnel.Ssh_tunnelRequestBuilder Ssh_tunnel
     {
         get => new Database.Item.Ssh_tunnel.Ssh_tunnelRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The table property</summary>
-    public Database.Item.Table.TableRequestBuilder Table
+    public Table.TableRequestBuilder Table
     {
         get => new Database.Item.Table.TableRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The table_extra property</summary>
-    public Database.Item.Table_extra.Table_extraRequestBuilder Table_extra
+    public Table_extra.Table_extraRequestBuilder Table_extra
     {
         get => new Database.Item.Table_extra.Table_extraRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The tables property</summary>
-    public Database.Item.Tables.TablesRequestBuilder Tables
+    public Tables.TablesRequestBuilder Tables
     {
         get => new Database.Item.Tables.TablesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The validate_sql property</summary>
-    public Database.Item.Validate_sql.Validate_sqlRequestBuilder Validate_sql
+    public Validate_sql.Validate_sqlRequestBuilder Validate_sql
     {
         get => new Database.Item.Validate_sql.Validate_sqlRequestBuilder(PathParameters, RequestAdapter);
     }
@@ -290,7 +290,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }

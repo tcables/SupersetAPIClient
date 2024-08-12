@@ -13,7 +13,7 @@ public partial class ThumbnailRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.item.thumbnail.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
-    public Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder this[string position]
+    public Thumbnail.Item.WithDigestItemRequestBuilder this[string position]
     {
         get
         {

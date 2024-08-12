@@ -103,7 +103,7 @@ public partial class Validate_sqlRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Item.Validate_sql.Validate_sqlRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Item.Validate_sql.Validate_sqlRequestBuilder WithUrl(string rawUrl)
+    public Validate_sql.Validate_sqlRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Item.Validate_sql.Validate_sqlRequestBuilder(rawUrl, RequestAdapter);
     }

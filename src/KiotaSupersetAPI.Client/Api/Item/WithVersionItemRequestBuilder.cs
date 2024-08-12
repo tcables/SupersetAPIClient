@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.API.Item;
 public partial class WithVersionItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _openapi property</summary>
-    public API.Item._openapi._openapiRequestBuilder _openapi
+    public _openapi._openapiRequestBuilder _openapi
     {
         get => new API.Item._openapi._openapiRequestBuilder(PathParameters, RequestAdapter);
     }

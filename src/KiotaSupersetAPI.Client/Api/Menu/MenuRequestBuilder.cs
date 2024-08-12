@@ -84,7 +84,7 @@ public partial class MenuRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Menu.MenuRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Menu.MenuRequestBuilder WithUrl(string rawUrl)
+    public MenuRequestBuilder WithUrl(string rawUrl)
     {
         return new Menu.MenuRequestBuilder(rawUrl, RequestAdapter);
     }

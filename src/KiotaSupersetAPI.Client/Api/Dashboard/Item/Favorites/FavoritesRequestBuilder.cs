@@ -148,7 +148,7 @@ public partial class FavoritesRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Favorites.FavoritesRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.Item.Favorites.FavoritesRequestBuilder WithUrl(string rawUrl)
+    public Favorites.FavoritesRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.Item.Favorites.FavoritesRequestBuilder(rawUrl, RequestAdapter);
     }

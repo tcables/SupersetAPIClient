@@ -18,7 +18,7 @@ public partial class Form_dataRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.explore.form_data.item collection</summary>
     /// <param name="position">The form_data key.</param>
     /// <returns>A <see cref="Explore.Form_data.Item.WithKeyItemRequestBuilder"/></returns>
-    public Explore.Form_data.Item.WithKeyItemRequestBuilder this[string position]
+    public Form_data.Item.WithKeyItemRequestBuilder this[string position]
     {
         get
         {
@@ -115,7 +115,7 @@ public partial class Form_dataRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Explore.Form_data.Form_dataRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Explore.Form_data.Form_dataRequestBuilder WithUrl(string rawUrl)
+    public Form_data.Form_dataRequestBuilder WithUrl(string rawUrl)
     {
         return new Explore.Form_data.Form_dataRequestBuilder(rawUrl, RequestAdapter);
     }

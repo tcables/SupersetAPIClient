@@ -71,7 +71,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Assets.Export.ExportRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Assets.Export.ExportRequestBuilder WithUrl(string rawUrl)
+    public ExportRequestBuilder WithUrl(string rawUrl)
     {
         return new Assets.Export.ExportRequestBuilder(rawUrl, RequestAdapter);
     }

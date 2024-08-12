@@ -100,7 +100,7 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.Item.Refresh.RefreshRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dataset.Item.Refresh.RefreshRequestBuilder WithUrl(string rawUrl)
+    public Refresh.RefreshRequestBuilder WithUrl(string rawUrl)
     {
         return new Dataset.Item.Refresh.RefreshRequestBuilder(rawUrl, RequestAdapter);
     }

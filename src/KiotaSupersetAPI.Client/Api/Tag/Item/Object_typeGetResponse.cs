@@ -13,13 +13,13 @@ public partial class Object_typeGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The description_columns property</summary>
-    public Tag.Item.Object_typeGetResponse_description_columns DescriptionColumns { get; set; }
+    public Object_typeGetResponse_description_columns DescriptionColumns { get; set; }
 
     /// <summary>The item id</summary>
     public string Id { get; set; }
 
     /// <summary>The label_columns property</summary>
-    public Tag.Item.Object_typeGetResponse_label_columns LabelColumns { get; set; }
+    public Object_typeGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
     public Models.TagRestAPI.Get.Get Result { get; set; }

@@ -16,44 +16,44 @@ namespace KiotaSupersetAPI.Client.API.Chart;
 public partial class ChartRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _info property</summary>
-    public Chart._info._infoRequestBuilder _info
+    public _info._infoRequestBuilder _info
     {
         get => new Chart._info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The data property</summary>
-    public Chart.Data.DataRequestBuilder Data
+    public Data.DataRequestBuilder Data
     {
         get => new Chart.Data.DataRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
-    public Chart.Export.ExportRequestBuilder Export
+    public Export.ExportRequestBuilder Export
     {
         get => new Chart.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorite_status property</summary>
-    public Chart.Favorite_status.Favorite_statusRequestBuilder Favorite_status
+    public Favorite_status.Favorite_statusRequestBuilder Favorite_status
     {
         get => new Chart.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The import property</summary>
-    public Chart.Import.ImportRequestBuilder Import
+    public Import.ImportRequestBuilder Import
     {
         get => new Chart.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public Chart.Related.RelatedRequestBuilder Related
+    public Related.RelatedRequestBuilder Related
     {
         get => new Chart.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The warm_up_cache property</summary>
-    public Chart.Warm_up_cache.Warm_up_cacheRequestBuilder Warm_up_cache
+    public Warm_up_cache.Warm_up_cacheRequestBuilder Warm_up_cache
     {
         get => new Chart.Warm_up_cache.Warm_up_cacheRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Chart.Item.WithPkItemRequestBuilder"/></returns>
-    public Chart.Item.WithPkItemRequestBuilder this[int position]
+    public Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
@@ -66,7 +66,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Chart.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Chart.Item.WithPkItemRequestBuilder this[string position]
+    public Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
@@ -291,7 +291,7 @@ public partial class ChartRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Chart.ChartRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Chart.ChartRequestBuilder WithUrl(string rawUrl)
+    public ChartRequestBuilder WithUrl(string rawUrl)
     {
         return new Chart.ChartRequestBuilder(rawUrl, RequestAdapter);
     }

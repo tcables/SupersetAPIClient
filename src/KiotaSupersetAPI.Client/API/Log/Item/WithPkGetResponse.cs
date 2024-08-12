@@ -14,7 +14,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The description_columns property</summary>
 
-    public Log.Item.WithPkGetResponse_description_columns DescriptionColumns { get; set; }
+    public WithPkGetResponse_description_columns DescriptionColumns { get; set; }
 
     /// <summary>The item id</summary>
 
@@ -22,7 +22,7 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
 
     /// <summary>The label_columns property</summary>
 
-    public Log.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
+    public WithPkGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
 

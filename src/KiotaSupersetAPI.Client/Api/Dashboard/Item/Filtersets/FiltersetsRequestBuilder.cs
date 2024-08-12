@@ -19,7 +19,7 @@ public partial class FiltersetsRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item.filtersets.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder"/></returns>
-    public Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder this[int position]
+    public Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
@@ -32,7 +32,7 @@ public partial class FiltersetsRequestBuilder : BaseRequestBuilder
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder this[string position]
+    public Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
@@ -164,7 +164,7 @@ public partial class FiltersetsRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filtersets.FiltersetsRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.Item.Filtersets.FiltersetsRequestBuilder WithUrl(string rawUrl)
+    public FiltersetsRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.Item.Filtersets.FiltersetsRequestBuilder(rawUrl, RequestAdapter);
     }

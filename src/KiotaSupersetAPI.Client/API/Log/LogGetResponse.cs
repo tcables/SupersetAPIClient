@@ -16,7 +16,7 @@ public partial class LogGetResponse : IAdditionalDataHolder, IParsable
     public double? Count { get; set; }
     /// <summary>The description_columns property</summary>
 
-    public Log.LogGetResponse_description_columns DescriptionColumns { get; set; }
+    public LogGetResponse_description_columns DescriptionColumns { get; set; }
 
     /// <summary>A list of item ids, useful when you don&apos;t know the column id</summary>
 
@@ -24,7 +24,7 @@ public partial class LogGetResponse : IAdditionalDataHolder, IParsable
 
     /// <summary>The label_columns property</summary>
 
-    public Log.LogGetResponse_label_columns LabelColumns { get; set; }
+    public LogGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>A list of columns</summary>
 

@@ -11,15 +11,15 @@ namespace KiotaSupersetAPI.Client.API.Rowlevelsecurity._info;
 public partial class _infoGetResponse : IAdditionalDataHolder, IParsable
 {
     /// <summary>The add_columns property</summary>
-    public Rowlevelsecurity._info._infoGetResponse_add_columns AddColumns { get; set; }
+    public _info._infoGetResponse_add_columns AddColumns { get; set; }
 
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The edit_columns property</summary>
-    public Rowlevelsecurity._info._infoGetResponse_edit_columns EditColumns { get; set; }
+    public _info._infoGetResponse_edit_columns EditColumns { get; set; }
 
     /// <summary>The filters property</summary>
-    public Rowlevelsecurity._info._infoGetResponse_filters Filters { get; set; }
+    public _info._infoGetResponse_filters Filters { get; set; }
 
     /// <summary>The user permissions for this API resource</summary>
     public List<string> Permissions { get; set; }

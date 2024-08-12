@@ -12,7 +12,7 @@ public partial class FavoritesPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public Tag.Item.Favorites.FavoritesPostResponse_result Result { get; set; }
+    public Favorites.FavoritesPostResponse_result Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Tag.Item.Favorites.FavoritesPostResponse"/> and sets the default values.

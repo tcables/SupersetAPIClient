@@ -18,7 +18,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.explore.permalink.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Explore.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
-    public Explore.Permalink.Item.WithKeyItemRequestBuilder this[string position]
+    public Item.WithKeyItemRequestBuilder this[string position]
     {
         get
         {
@@ -115,7 +115,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Explore.Permalink.PermalinkRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Explore.Permalink.PermalinkRequestBuilder WithUrl(string rawUrl)
+    public PermalinkRequestBuilder WithUrl(string rawUrl)
     {
         return new Explore.Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
     }

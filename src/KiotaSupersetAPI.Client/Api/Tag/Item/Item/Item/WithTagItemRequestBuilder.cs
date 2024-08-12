@@ -100,7 +100,7 @@ public partial class WithTagItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Item.Item.WithTagItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Tag.Item.Item.Item.WithTagItemRequestBuilder WithUrl(string rawUrl)
+    public Item.WithTagItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Tag.Item.Item.Item.WithTagItemRequestBuilder(rawUrl, RequestAdapter);
     }

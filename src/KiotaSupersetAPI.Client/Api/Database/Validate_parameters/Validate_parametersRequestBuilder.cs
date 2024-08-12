@@ -99,7 +99,7 @@ public partial class Validate_parametersRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Validate_parameters.Validate_parametersRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Validate_parameters.Validate_parametersRequestBuilder WithUrl(string rawUrl)
+    public Validate_parameters.Validate_parametersRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Validate_parameters.Validate_parametersRequestBuilder(rawUrl, RequestAdapter);
     }

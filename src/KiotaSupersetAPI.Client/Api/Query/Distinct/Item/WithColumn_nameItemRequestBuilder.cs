@@ -72,7 +72,7 @@ public partial class WithColumn_nameItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Query.Distinct.Item.WithColumn_nameItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Query.Distinct.Item.WithColumn_nameItemRequestBuilder WithUrl(string rawUrl)
+    public Item.WithColumn_nameItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Query.Distinct.Item.WithColumn_nameItemRequestBuilder(rawUrl, RequestAdapter);
     }

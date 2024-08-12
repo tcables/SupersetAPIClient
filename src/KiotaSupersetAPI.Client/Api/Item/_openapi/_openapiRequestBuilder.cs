@@ -106,7 +106,7 @@ public partial class _openapiRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="API.Item._openapi._openapiRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public API.Item._openapi._openapiRequestBuilder WithUrl(string rawUrl)
+    public _openapi._openapiRequestBuilder WithUrl(string rawUrl)
     {
         return new API.Item._openapi._openapiRequestBuilder(rawUrl, RequestAdapter);
     }

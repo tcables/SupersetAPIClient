@@ -18,7 +18,7 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item.item.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Tag.Item.Item.Item.WithTagItemRequestBuilder"/></returns>
-    public Tag.Item.Item.Item.WithTagItemRequestBuilder this[string position]
+    public Item.WithTagItemRequestBuilder this[string position]
     {
         get
         {
@@ -88,7 +88,7 @@ public partial class WithObject_ItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Tag.Item.Item.WithObject_ItemRequestBuilder WithUrl(string rawUrl)
+    public WithObject_ItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Tag.Item.Item.WithObject_ItemRequestBuilder(rawUrl, RequestAdapter);
     }

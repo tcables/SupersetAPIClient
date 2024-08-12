@@ -72,7 +72,7 @@ public partial class Cache_screenshotRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder WithUrl(string rawUrl)
+    public Cache_screenshot.Cache_screenshotRequestBuilder WithUrl(string rawUrl)
     {
         return new Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder(rawUrl, RequestAdapter);
     }

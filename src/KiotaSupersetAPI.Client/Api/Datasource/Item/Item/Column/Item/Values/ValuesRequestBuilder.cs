@@ -100,7 +100,7 @@ public partial class ValuesRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder WithUrl(string rawUrl)
+    public Column.Item.Values.ValuesRequestBuilder WithUrl(string rawUrl)
     {
         return new Datasource.Item.Item.Column.Item.Values.ValuesRequestBuilder(rawUrl, RequestAdapter);
     }

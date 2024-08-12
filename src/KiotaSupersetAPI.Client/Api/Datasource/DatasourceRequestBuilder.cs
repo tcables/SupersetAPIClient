@@ -13,7 +13,7 @@ public partial class DatasourceRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item collection</summary>
     /// <param name="position">The type of datasource</param>
     /// <returns>A <see cref="Datasource.Item.WithDatasource_typeItemRequestBuilder"/></returns>
-    public Datasource.Item.WithDatasource_typeItemRequestBuilder this[string position]
+    public Item.WithDatasource_typeItemRequestBuilder this[string position]
     {
         get
         {

@@ -18,7 +18,7 @@ public partial class WithTable_nameItemRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item.select_star.item.item collection</summary>
     /// <param name="position">Table schema</param>
     /// <returns>A <see cref="Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder"/></returns>
-    public Database.Item.Select_star.Item.Item.WithSchema_nameItemRequestBuilder this[string position]
+    public Select_star.Item.Item.WithSchema_nameItemRequestBuilder this[string position]
     {
         get
         {
@@ -86,7 +86,7 @@ public partial class WithTable_nameItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Item.Select_star.Item.WithTable_nameItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Item.Select_star.Item.WithTable_nameItemRequestBuilder WithUrl(string rawUrl)
+    public Select_star.Item.WithTable_nameItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Item.Select_star.Item.WithTable_nameItemRequestBuilder(rawUrl, RequestAdapter);
     }

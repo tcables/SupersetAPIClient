@@ -70,7 +70,7 @@ public partial class DataRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Chart.Item.Data.DataRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Chart.Item.Data.DataRequestBuilder WithUrl(string rawUrl)
+    public Data.DataRequestBuilder WithUrl(string rawUrl)
     {
         return new Chart.Item.Data.DataRequestBuilder(rawUrl, RequestAdapter);
     }

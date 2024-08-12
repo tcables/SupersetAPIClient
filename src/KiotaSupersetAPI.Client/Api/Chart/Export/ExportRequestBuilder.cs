@@ -73,7 +73,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Chart.Export.ExportRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Chart.Export.ExportRequestBuilder WithUrl(string rawUrl)
+    public ExportRequestBuilder WithUrl(string rawUrl)
     {
         return new Chart.Export.ExportRequestBuilder(rawUrl, RequestAdapter);
     }

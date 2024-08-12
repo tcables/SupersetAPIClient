@@ -231,7 +231,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Rowlevelsecurity.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Rowlevelsecurity.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Rowlevelsecurity.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }

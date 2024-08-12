@@ -16,14 +16,14 @@ namespace KiotaSupersetAPI.Client.API.Log;
 public partial class LogRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The recent_activity property</summary>
-    public Log.Recent_activity.Recent_activityRequestBuilder Recent_activity
+    public Recent_activity.Recent_activityRequestBuilder Recent_activity
     {
         get => new Log.Recent_activity.Recent_activityRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.log.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="API.Log.Item.WithPkItemRequestBuilder"/></returns>
-    public Log.Item.WithPkItemRequestBuilder this[int position]
+    public Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
@@ -36,7 +36,7 @@ public partial class LogRequestBuilder : BaseRequestBuilder
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="API.Log.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Log.Item.WithPkItemRequestBuilder this[string position]
+    public Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
@@ -190,7 +190,7 @@ public partial class LogRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="API.Log.LogRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Log.LogRequestBuilder WithUrl(string rawUrl)
+    public LogRequestBuilder WithUrl(string rawUrl)
     {
         return new Log.LogRequestBuilder(rawUrl, RequestAdapter);
     }

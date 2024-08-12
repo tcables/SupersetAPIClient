@@ -88,7 +88,7 @@ public partial class RefreshRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Security.Refresh.RefreshRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Security.Refresh.RefreshRequestBuilder WithUrl(string rawUrl)
+    public RefreshRequestBuilder WithUrl(string rawUrl)
     {
         return new Security.Refresh.RefreshRequestBuilder(rawUrl, RequestAdapter);
     }

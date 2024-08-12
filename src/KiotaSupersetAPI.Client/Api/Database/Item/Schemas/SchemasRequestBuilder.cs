@@ -72,7 +72,7 @@ public partial class SchemasRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Item.Schemas.SchemasRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Item.Schemas.SchemasRequestBuilder WithUrl(string rawUrl)
+    public Schemas.SchemasRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Item.Schemas.SchemasRequestBuilder(rawUrl, RequestAdapter);
     }

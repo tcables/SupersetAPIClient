@@ -75,7 +75,7 @@ public partial class Warm_up_cacheRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Chart.Warm_up_cache.Warm_up_cacheRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Chart.Warm_up_cache.Warm_up_cacheRequestBuilder WithUrl(string rawUrl)
+    public Warm_up_cache.Warm_up_cacheRequestBuilder WithUrl(string rawUrl)
     {
         return new Chart.Warm_up_cache.Warm_up_cacheRequestBuilder(rawUrl, RequestAdapter);
     }

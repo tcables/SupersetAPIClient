@@ -96,7 +96,7 @@ public partial class Updated_sinceRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Query.Updated_since.Updated_sinceRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Query.Updated_since.Updated_sinceRequestBuilder WithUrl(string rawUrl)
+    public Updated_since.Updated_sinceRequestBuilder WithUrl(string rawUrl)
     {
         return new Query.Updated_since.Updated_sinceRequestBuilder(rawUrl, RequestAdapter);
     }

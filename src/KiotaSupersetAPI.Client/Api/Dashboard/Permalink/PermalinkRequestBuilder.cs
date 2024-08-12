@@ -13,7 +13,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.permalink.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Dashboard.Permalink.Item.WithKeyItemRequestBuilder"/></returns>
-    public Dashboard.Permalink.Item.WithKeyItemRequestBuilder this[string position]
+    public Item.WithKeyItemRequestBuilder this[string position]
     {
         get
         {

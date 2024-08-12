@@ -12,7 +12,7 @@ public partial class WithKeyGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The stored state</summary>
-    public Dashboard.Permalink.Item.WithKeyGetResponse_state State { get; set; }
+    public Item.WithKeyGetResponse_state State { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.Permalink.Item.WithKeyGetResponse"/> and sets the default values.

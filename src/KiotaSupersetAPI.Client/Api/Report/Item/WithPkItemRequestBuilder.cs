@@ -16,7 +16,7 @@ namespace KiotaSupersetAPI.Client.API.Report.Item;
 public partial class WithPkItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The log property</summary>
-    public Report.Item.Log.LogRequestBuilder Log
+    public Log.LogRequestBuilder Log
     {
         get => new Report.Item.Log.LogRequestBuilder(PathParameters, RequestAdapter);
     }
@@ -240,7 +240,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Report.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Report.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Report.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }

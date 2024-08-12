@@ -175,7 +175,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.Item.Filtersets.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }

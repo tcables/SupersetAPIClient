@@ -103,7 +103,7 @@ public partial class ImportRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.Import.ImportRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dataset.Import.ImportRequestBuilder WithUrl(string rawUrl)
+    public ImportRequestBuilder WithUrl(string rawUrl)
     {
         return new Dataset.Import.ImportRequestBuilder(rawUrl, RequestAdapter);
     }

@@ -13,7 +13,7 @@ public partial class TableRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.database.item.table.item collection</summary>
     /// <param name="position">Table name</param>
     /// <returns>A <see cref="Database.Item.Table.Item.WithTable_nameItemRequestBuilder"/></returns>
-    public Database.Item.Table.Item.WithTable_nameItemRequestBuilder this[string position]
+    public Table.Item.WithTable_nameItemRequestBuilder this[string position]
     {
         get
         {

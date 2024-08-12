@@ -16,22 +16,22 @@ namespace KiotaSupersetAPI.Client.API.Dataset.Item;
 public partial class WithPkItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The column property</summary>
-    public Dataset.Item.Column.ColumnRequestBuilder Column
+    public Column.ColumnRequestBuilder Column
     {
         get => new Dataset.Item.Column.ColumnRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The metric property</summary>
-    public Dataset.Item.Metric.MetricRequestBuilder Metric
+    public Metric.MetricRequestBuilder Metric
     {
         get => new Dataset.Item.Metric.MetricRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The refresh property</summary>
-    public Dataset.Item.Refresh.RefreshRequestBuilder Refresh
+    public Refresh.RefreshRequestBuilder Refresh
     {
         get => new Dataset.Item.Refresh.RefreshRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related_objects property</summary>
-    public Dataset.Item.Related_objects.Related_objectsRequestBuilder Related_objects
+    public Related_objects.Related_objectsRequestBuilder Related_objects
     {
         get => new Dataset.Item.Related_objects.Related_objectsRequestBuilder(PathParameters, RequestAdapter);
     }
@@ -259,7 +259,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dataset.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Dataset.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }

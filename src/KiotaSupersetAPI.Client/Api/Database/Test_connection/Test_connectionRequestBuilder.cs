@@ -99,7 +99,7 @@ public partial class Test_connectionRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Test_connection.Test_connectionRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Test_connection.Test_connectionRequestBuilder WithUrl(string rawUrl)
+    public Test_connection.Test_connectionRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Test_connection.Test_connectionRequestBuilder(rawUrl, RequestAdapter);
     }

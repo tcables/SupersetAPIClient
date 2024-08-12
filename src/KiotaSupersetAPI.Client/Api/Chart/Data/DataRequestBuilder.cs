@@ -18,7 +18,7 @@ public partial class DataRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.chart.data.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Chart.Data.Item.WithCache_keyItemRequestBuilder"/></returns>
-    public Chart.Data.Item.WithCache_keyItemRequestBuilder this[string position]
+    public Item.WithCache_keyItemRequestBuilder this[string position]
     {
         get
         {
@@ -87,7 +87,7 @@ public partial class DataRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Chart.Data.DataRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Chart.Data.DataRequestBuilder WithUrl(string rawUrl)
+    public DataRequestBuilder WithUrl(string rawUrl)
     {
         return new Chart.Data.DataRequestBuilder(rawUrl, RequestAdapter);
     }

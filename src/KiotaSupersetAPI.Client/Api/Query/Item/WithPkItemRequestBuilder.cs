@@ -100,7 +100,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Query.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Query.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Query.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }

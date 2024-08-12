@@ -13,13 +13,13 @@ public partial class WithPkGetResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The description_columns property</summary>
-    public Query.Item.WithPkGetResponse_description_columns DescriptionColumns { get; set; }
+    public WithPkGetResponse_description_columns DescriptionColumns { get; set; }
 
     /// <summary>The item id</summary>
     public string Id { get; set; }
 
     /// <summary>The label_columns property</summary>
-    public Query.Item.WithPkGetResponse_label_columns LabelColumns { get; set; }
+    public WithPkGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>The result property</summary>
     public Models.QueryRestAPI.Get.Get Result { get; set; }

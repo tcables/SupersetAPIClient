@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.API.Datasource.Item.Item;
 public partial class WithDatasource_ItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The column property</summary>
-    public Datasource.Item.Item.Column.ColumnRequestBuilder Column
+    public Item.Column.ColumnRequestBuilder Column
     {
         get => new Datasource.Item.Item.Column.ColumnRequestBuilder(PathParameters, RequestAdapter);
     }

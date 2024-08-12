@@ -11,7 +11,7 @@ namespace KiotaSupersetAPI.Client.API.Cachekey;
 public partial class CachekeyRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The invalidate property</summary>
-    public Cachekey.Invalidate.InvalidateRequestBuilder Invalidate
+    public Invalidate.InvalidateRequestBuilder Invalidate
     {
         get => new Cachekey.Invalidate.InvalidateRequestBuilder(PathParameters, RequestAdapter);
     }

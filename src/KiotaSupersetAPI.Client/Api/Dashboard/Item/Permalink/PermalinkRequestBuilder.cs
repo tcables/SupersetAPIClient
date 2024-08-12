@@ -103,7 +103,7 @@ public partial class PermalinkRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Permalink.PermalinkRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.Item.Permalink.PermalinkRequestBuilder WithUrl(string rawUrl)
+    public Permalink.PermalinkRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.Item.Permalink.PermalinkRequestBuilder(rawUrl, RequestAdapter);
     }

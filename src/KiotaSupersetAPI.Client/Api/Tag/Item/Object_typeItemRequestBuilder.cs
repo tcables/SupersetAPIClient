@@ -16,14 +16,14 @@ namespace KiotaSupersetAPI.Client.API.Tag.Item;
 public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The favorites property</summary>
-    public Tag.Item.Favorites.FavoritesRequestBuilder Favorites
+    public Favorites.FavoritesRequestBuilder Favorites
     {
         get => new Tag.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
-    public Tag.Item.Item.WithObject_ItemRequestBuilder this[int position]
+    public Item.WithObject_ItemRequestBuilder this[int position]
     {
         get
         {
@@ -36,7 +36,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Tag.Item.Item.WithObject_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Tag.Item.Item.WithObject_ItemRequestBuilder this[string position]
+    public Item.WithObject_ItemRequestBuilder this[string position]
     {
         get
         {
@@ -261,7 +261,7 @@ public partial class Object_typeItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Tag.Item.Object_typeItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Tag.Item.Object_typeItemRequestBuilder WithUrl(string rawUrl)
+    public Object_typeItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Tag.Item.Object_typeItemRequestBuilder(rawUrl, RequestAdapter);
     }

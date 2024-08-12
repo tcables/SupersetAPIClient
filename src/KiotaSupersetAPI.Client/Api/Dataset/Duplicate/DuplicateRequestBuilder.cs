@@ -111,7 +111,7 @@ public partial class DuplicateRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.Duplicate.DuplicateRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dataset.Duplicate.DuplicateRequestBuilder WithUrl(string rawUrl)
+    public DuplicateRequestBuilder WithUrl(string rawUrl)
     {
         return new Dataset.Duplicate.DuplicateRequestBuilder(rawUrl, RequestAdapter);
     }

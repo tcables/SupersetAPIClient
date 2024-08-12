@@ -15,7 +15,7 @@ public partial class MetricRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dataset.item.metric.item collection</summary>
     /// <param name="position">The metric id for this dataset</param>
     /// <returns>A <see cref="Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder"/></returns>
-    public Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder this[int position]
+    public Metric.Item.WithMetric_ItemRequestBuilder this[int position]
     {
         get
         {
@@ -28,7 +28,7 @@ public partial class MetricRequestBuilder : BaseRequestBuilder
     /// <param name="position">The metric id for this dataset</param>
     /// <returns>A <see cref="Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder this[string position]
+    public Metric.Item.WithMetric_ItemRequestBuilder this[string position]
     {
         get
         {

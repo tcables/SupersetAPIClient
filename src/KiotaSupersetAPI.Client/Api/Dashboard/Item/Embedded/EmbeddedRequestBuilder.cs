@@ -258,7 +258,7 @@ public partial class EmbeddedRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Embedded.EmbeddedRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.Item.Embedded.EmbeddedRequestBuilder WithUrl(string rawUrl)
+    public Embedded.EmbeddedRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.Item.Embedded.EmbeddedRequestBuilder(rawUrl, RequestAdapter);
     }

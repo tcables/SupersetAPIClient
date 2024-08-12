@@ -16,19 +16,19 @@ namespace KiotaSupersetAPI.Client.API.AnnotationLayer;
 public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _info property</summary>
-    public AnnotationLayer._info._infoRequestBuilder _info
+    public _info._infoRequestBuilder _info
     {
         get => new AnnotationLayer._info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public AnnotationLayer.Related.RelatedRequestBuilder Related
+    public Related.RelatedRequestBuilder Related
     {
         get => new AnnotationLayer.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.AnnotationLayer.item collection</summary>
     /// <param name="position">The annotation layer pk for this annotation</param>
     /// <returns>A <see cref="AnnotationLayer.Item.WithPkItemRequestBuilder"/></returns>
-    public AnnotationLayer.Item.WithPkItemRequestBuilder this[int position]
+    public Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
@@ -41,7 +41,7 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
     /// <param name="position">The annotation layer pk for this annotation</param>
     /// <returns>A <see cref="AnnotationLayer.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public AnnotationLayer.Item.WithPkItemRequestBuilder this[string position]
+    public Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
@@ -258,7 +258,7 @@ public partial class Annotation_layerRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Annotation_layerRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public AnnotationLayer.Annotation_layerRequestBuilder WithUrl(string rawUrl)
+    public Annotation_layerRequestBuilder WithUrl(string rawUrl)
     {
         return new AnnotationLayer.Annotation_layerRequestBuilder(rawUrl, RequestAdapter);
     }

@@ -96,7 +96,7 @@ public partial class Get_objectsRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Tag.Get_objects.Get_objectsRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Tag.Get_objects.Get_objectsRequestBuilder WithUrl(string rawUrl)
+    public Get_objects.Get_objectsRequestBuilder WithUrl(string rawUrl)
     {
         return new Tag.Get_objects.Get_objectsRequestBuilder(rawUrl, RequestAdapter);
     }

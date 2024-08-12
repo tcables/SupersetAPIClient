@@ -16,47 +16,47 @@ namespace KiotaSupersetAPI.Client.API.Dashboard.Item;
 public partial class Dashboard_ItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The charts property</summary>
-    public Dashboard.Item.Charts.ChartsRequestBuilder Charts
+    public Charts.ChartsRequestBuilder Charts
     {
         get => new Dashboard.Item.Charts.ChartsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The copy property</summary>
-    public Dashboard.Item.Copy.CopyRequestBuilder Copy
+    public Copy.CopyRequestBuilder Copy
     {
         get => new Dashboard.Item.Copy.CopyRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The datasets property</summary>
-    public Dashboard.Item.Datasets.DatasetsRequestBuilder Datasets
+    public Datasets.DatasetsRequestBuilder Datasets
     {
         get => new Dashboard.Item.Datasets.DatasetsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The embedded property</summary>
-    public Dashboard.Item.Embedded.EmbeddedRequestBuilder Embedded
+    public Embedded.EmbeddedRequestBuilder Embedded
     {
         get => new Dashboard.Item.Embedded.EmbeddedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorites property</summary>
-    public Dashboard.Item.Favorites.FavoritesRequestBuilder Favorites
+    public Favorites.FavoritesRequestBuilder Favorites
     {
         get => new Dashboard.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The filter_state property</summary>
-    public Dashboard.Item.Filter_state.Filter_stateRequestBuilder Filter_state
+    public Filter_state.Filter_stateRequestBuilder Filter_state
     {
         get => new Dashboard.Item.Filter_state.Filter_stateRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The filtersets property</summary>
-    public Dashboard.Item.Filtersets.FiltersetsRequestBuilder Filtersets
+    public Filtersets.FiltersetsRequestBuilder Filtersets
     {
         get => new Dashboard.Item.Filtersets.FiltersetsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The permalink property</summary>
-    public Dashboard.Item.Permalink.PermalinkRequestBuilder Permalink
+    public Permalink.PermalinkRequestBuilder Permalink
     {
         get => new Dashboard.Item.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The thumbnail property</summary>
-    public Dashboard.Item.Thumbnail.ThumbnailRequestBuilder Thumbnail
+    public Thumbnail.ThumbnailRequestBuilder Thumbnail
     {
         get => new Dashboard.Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
     }
@@ -280,7 +280,7 @@ public partial class Dashboard_ItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Dashboard_ItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.Item.Dashboard_ItemRequestBuilder WithUrl(string rawUrl)
+    public Dashboard_ItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.Item.Dashboard_ItemRequestBuilder(rawUrl, RequestAdapter);
     }

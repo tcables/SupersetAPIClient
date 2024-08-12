@@ -16,19 +16,19 @@ namespace KiotaSupersetAPI.Client.API.Report;
 public partial class ReportRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _info property</summary>
-    public Report._info._infoRequestBuilder _info
+    public _info._infoRequestBuilder _info
     {
         get => new Report._info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public Report.Related.RelatedRequestBuilder Related
+    public Related.RelatedRequestBuilder Related
     {
         get => new Report.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.report.item collection</summary>
     /// <param name="position">The report schedule pk</param>
     /// <returns>A <see cref="Report.Item.WithPkItemRequestBuilder"/></returns>
-    public Report.Item.WithPkItemRequestBuilder this[int position]
+    public Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
@@ -41,7 +41,7 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// <param name="position">The report schedule pk</param>
     /// <returns>A <see cref="Report.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Report.Item.WithPkItemRequestBuilder this[string position]
+    public Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
@@ -266,7 +266,7 @@ public partial class ReportRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Report.ReportRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Report.ReportRequestBuilder WithUrl(string rawUrl)
+    public ReportRequestBuilder WithUrl(string rawUrl)
     {
         return new Report.ReportRequestBuilder(rawUrl, RequestAdapter);
     }

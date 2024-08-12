@@ -22,13 +22,13 @@ public partial class Available : IAdditionalDataHolder, IParsable
     public string Engine { get; set; }
 
     /// <summary>Dict with public properties form the DB Engine</summary>
-    public Database.Available.Available_engine_information EngineInformation { get; set; }
+    public Available_engine_information EngineInformation { get; set; }
 
     /// <summary>Name of the database</summary>
     public string Name { get; set; }
 
     /// <summary>JSON schema defining the needed parameters</summary>
-    public Database.Available.Available_parameters Parameters { get; set; }
+    public Available_parameters Parameters { get; set; }
 
     /// <summary>Is the database preferred?</summary>
     public bool? Preferred { get; set; }

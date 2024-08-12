@@ -12,7 +12,7 @@ public partial class Bulk_createPostResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public Tag.Bulk_create.Bulk_createPostResponse_result Result { get; set; }
+    public Bulk_create.Bulk_createPostResponse_result Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Tag.Bulk_create.Bulk_createPostResponse"/> and sets the default values.

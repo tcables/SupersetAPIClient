@@ -235,7 +235,7 @@ public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Explore.Form_data.Item.WithKeyItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Explore.Form_data.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
+    public Form_data.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Explore.Form_data.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
     }

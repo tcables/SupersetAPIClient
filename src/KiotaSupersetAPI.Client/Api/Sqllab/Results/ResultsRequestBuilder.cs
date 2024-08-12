@@ -76,7 +76,7 @@ public partial class ResultsRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Sqllab.Results.ResultsRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Sqllab.Results.ResultsRequestBuilder WithUrl(string rawUrl)
+    public ResultsRequestBuilder WithUrl(string rawUrl)
     {
         return new Sqllab.Results.ResultsRequestBuilder(rawUrl, RequestAdapter);
     }

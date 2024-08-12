@@ -72,7 +72,7 @@ public partial class Favorite_statusRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Chart.Favorite_status.Favorite_statusRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Chart.Favorite_status.Favorite_statusRequestBuilder WithUrl(string rawUrl)
+    public Favorite_status.Favorite_statusRequestBuilder WithUrl(string rawUrl)
     {
         return new Chart.Favorite_status.Favorite_statusRequestBuilder(rawUrl, RequestAdapter);
     }

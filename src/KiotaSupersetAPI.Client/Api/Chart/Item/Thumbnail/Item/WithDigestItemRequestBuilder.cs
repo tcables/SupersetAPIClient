@@ -71,7 +71,7 @@ public partial class WithDigestItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder WithUrl(string rawUrl)
+    public Thumbnail.Item.WithDigestItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Chart.Item.Thumbnail.Item.WithDigestItemRequestBuilder(rawUrl, RequestAdapter);
     }

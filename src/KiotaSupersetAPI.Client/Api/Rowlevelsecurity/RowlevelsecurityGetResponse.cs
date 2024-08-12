@@ -15,13 +15,13 @@ public partial class RowlevelsecurityGetResponse : IAdditionalDataHolder, IParsa
     /// <summary>The total record count on the backend</summary>
     public double? Count { get; set; }
     /// <summary>The description_columns property</summary>
-    public Rowlevelsecurity.RowlevelsecurityGetResponse_description_columns DescriptionColumns { get; set; }
+    public RowlevelsecurityGetResponse_description_columns DescriptionColumns { get; set; }
 
     /// <summary>A list of item ids, useful when you don&apos;t know the column id</summary>
     public List<string> Ids { get; set; }
 
     /// <summary>The label_columns property</summary>
-    public Rowlevelsecurity.RowlevelsecurityGetResponse_label_columns LabelColumns { get; set; }
+    public RowlevelsecurityGetResponse_label_columns LabelColumns { get; set; }
 
     /// <summary>A list of columns</summary>
     public List<string> ListColumns { get; set; }

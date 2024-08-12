@@ -16,7 +16,7 @@ namespace KiotaSupersetAPI.Client.API.Me;
 public partial class MeRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The roles property</summary>
-    public Me.Roles.RolesRequestBuilder Roles
+    public Roles.RolesRequestBuilder Roles
     {
         get => new Me.Roles.RolesRequestBuilder(PathParameters, RequestAdapter);
     }

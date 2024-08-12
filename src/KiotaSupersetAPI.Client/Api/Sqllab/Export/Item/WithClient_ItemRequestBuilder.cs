@@ -75,7 +75,7 @@ public partial class WithClient_ItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Sqllab.Export.Item.WithClient_ItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Sqllab.Export.Item.WithClient_ItemRequestBuilder WithUrl(string rawUrl)
+    public Item.WithClient_ItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Sqllab.Export.Item.WithClient_ItemRequestBuilder(rawUrl, RequestAdapter);
     }

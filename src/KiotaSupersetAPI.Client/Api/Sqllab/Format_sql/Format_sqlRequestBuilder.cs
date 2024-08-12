@@ -104,7 +104,7 @@ public partial class Format_sqlRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Sqllab.Format_sql.Format_sqlRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Sqllab.Format_sql.Format_sqlRequestBuilder WithUrl(string rawUrl)
+    public Format_sql.Format_sqlRequestBuilder WithUrl(string rawUrl)
     {
         return new Sqllab.Format_sql.Format_sqlRequestBuilder(rawUrl, RequestAdapter);
     }

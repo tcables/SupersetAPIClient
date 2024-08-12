@@ -11,12 +11,12 @@ namespace KiotaSupersetAPI.Client.API.Assets;
 public partial class AssetsRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The export property</summary>
-    public Assets.Export.ExportRequestBuilder Export
+    public Export.ExportRequestBuilder Export
     {
         get => new Assets.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The import property</summary>
-    public Assets.Import.ImportRequestBuilder Import
+    public Import.ImportRequestBuilder Import
     {
         get => new Assets.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
     }

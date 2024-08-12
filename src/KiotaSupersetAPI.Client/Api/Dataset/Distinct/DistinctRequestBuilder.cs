@@ -13,7 +13,7 @@ public partial class DistinctRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dataset.distinct.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Dataset.Distinct.Item.WithColumn_nameItemRequestBuilder"/></returns>
-    public Dataset.Distinct.Item.WithColumn_nameItemRequestBuilder this[string position]
+    public Item.WithColumn_nameItemRequestBuilder this[string position]
     {
         get
         {

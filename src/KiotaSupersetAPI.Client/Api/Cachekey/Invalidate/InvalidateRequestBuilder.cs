@@ -72,7 +72,7 @@ public partial class InvalidateRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Cachekey.Invalidate.InvalidateRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Cachekey.Invalidate.InvalidateRequestBuilder WithUrl(string rawUrl)
+    public InvalidateRequestBuilder WithUrl(string rawUrl)
     {
         return new Cachekey.Invalidate.InvalidateRequestBuilder(rawUrl, RequestAdapter);
     }

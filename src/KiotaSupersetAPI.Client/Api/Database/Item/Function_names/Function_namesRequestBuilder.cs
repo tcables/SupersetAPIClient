@@ -70,7 +70,7 @@ public partial class Function_namesRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Item.Function_names.Function_namesRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Item.Function_names.Function_namesRequestBuilder WithUrl(string rawUrl)
+    public Function_names.Function_namesRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Item.Function_names.Function_namesRequestBuilder(rawUrl, RequestAdapter);
     }

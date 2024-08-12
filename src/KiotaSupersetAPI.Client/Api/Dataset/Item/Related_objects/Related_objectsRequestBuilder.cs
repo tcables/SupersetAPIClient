@@ -70,7 +70,7 @@ public partial class Related_objectsRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.Item.Related_objects.Related_objectsRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dataset.Item.Related_objects.Related_objectsRequestBuilder WithUrl(string rawUrl)
+    public Related_objects.Related_objectsRequestBuilder WithUrl(string rawUrl)
     {
         return new Dataset.Item.Related_objects.Related_objectsRequestBuilder(rawUrl, RequestAdapter);
     }

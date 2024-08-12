@@ -103,7 +103,7 @@ public partial class ImportRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Import.ImportRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Import.ImportRequestBuilder WithUrl(string rawUrl)
+    public ImportRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Import.ImportRequestBuilder(rawUrl, RequestAdapter);
     }

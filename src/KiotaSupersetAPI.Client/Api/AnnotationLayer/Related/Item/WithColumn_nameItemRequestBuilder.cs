@@ -72,7 +72,7 @@ public partial class WithColumn_nameItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Related.Item.WithColumn_nameItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public AnnotationLayer.Related.Item.WithColumn_nameItemRequestBuilder WithUrl(string rawUrl)
+    public WithColumn_nameItemRequestBuilder WithUrl(string rawUrl)
     {
         return new AnnotationLayer.Related.Item.WithColumn_nameItemRequestBuilder(rawUrl, RequestAdapter);
     }

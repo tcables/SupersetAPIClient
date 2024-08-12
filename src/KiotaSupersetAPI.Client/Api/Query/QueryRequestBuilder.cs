@@ -16,29 +16,29 @@ namespace KiotaSupersetAPI.Client.API.Query;
 public partial class QueryRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The distinct property</summary>
-    public Query.Distinct.DistinctRequestBuilder Distinct
+    public Distinct.DistinctRequestBuilder Distinct
     {
         get => new Query.Distinct.DistinctRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public Query.Related.RelatedRequestBuilder Related
+    public Related.RelatedRequestBuilder Related
     {
         get => new Query.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The stop property</summary>
-    public Query.Stop.StopRequestBuilder Stop
+    public Stop.StopRequestBuilder Stop
     {
         get => new Query.Stop.StopRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The updated_since property</summary>
-    public Query.Updated_since.Updated_sinceRequestBuilder Updated_since
+    public Updated_since.Updated_sinceRequestBuilder Updated_since
     {
         get => new Query.Updated_since.Updated_sinceRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.query.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Query.Item.WithPkItemRequestBuilder"/></returns>
-    public Query.Item.WithPkItemRequestBuilder this[int position]
+    public Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
@@ -51,7 +51,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Query.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Query.Item.WithPkItemRequestBuilder this[string position]
+    public Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
@@ -141,7 +141,7 @@ public partial class QueryRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Query.QueryRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Query.QueryRequestBuilder WithUrl(string rawUrl)
+    public QueryRequestBuilder WithUrl(string rawUrl)
     {
         return new Query.QueryRequestBuilder(rawUrl, RequestAdapter);
     }

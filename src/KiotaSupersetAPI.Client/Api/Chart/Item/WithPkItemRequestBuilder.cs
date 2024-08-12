@@ -16,27 +16,27 @@ namespace KiotaSupersetAPI.Client.API.Chart.Item;
 public partial class WithPkItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The cache_screenshot property</summary>
-    public Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder Cache_screenshot
+    public Cache_screenshot.Cache_screenshotRequestBuilder Cache_screenshot
     {
         get => new Chart.Item.Cache_screenshot.Cache_screenshotRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The data property</summary>
-    public Chart.Item.Data.DataRequestBuilder Data
+    public Data.DataRequestBuilder Data
     {
         get => new Chart.Item.Data.DataRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorites property</summary>
-    public Chart.Item.Favorites.FavoritesRequestBuilder Favorites
+    public Favorites.FavoritesRequestBuilder Favorites
     {
         get => new Chart.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The screenshot property</summary>
-    public Chart.Item.Screenshot.ScreenshotRequestBuilder Screenshot
+    public Screenshot.ScreenshotRequestBuilder Screenshot
     {
         get => new Chart.Item.Screenshot.ScreenshotRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The thumbnail property</summary>
-    public Chart.Item.Thumbnail.ThumbnailRequestBuilder Thumbnail
+    public Thumbnail.ThumbnailRequestBuilder Thumbnail
     {
         get => new Chart.Item.Thumbnail.ThumbnailRequestBuilder(PathParameters, RequestAdapter);
     }
@@ -264,7 +264,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Chart.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Chart.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Chart.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }

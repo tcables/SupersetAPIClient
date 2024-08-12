@@ -17,49 +17,49 @@ namespace KiotaSupersetAPI.Client.API.Dataset;
 public partial class DatasetRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _info property</summary>
-    public Dataset._info._infoRequestBuilder _info
+    public _info._infoRequestBuilder _info
     {
         get => new Dataset._info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The distinct property</summary>
-    public Dataset.Distinct.DistinctRequestBuilder Distinct
+    public Distinct.DistinctRequestBuilder Distinct
     {
         get => new Dataset.Distinct.DistinctRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The duplicate property</summary>
-    public Dataset.Duplicate.DuplicateRequestBuilder Duplicate
+    public Duplicate.DuplicateRequestBuilder Duplicate
     {
         get => new Dataset.Duplicate.DuplicateRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
-    public Dataset.Export.ExportRequestBuilder Export
+    public Export.ExportRequestBuilder Export
     {
         get => new Dataset.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The get_or_create property</summary>
-    public Dataset.Get_or_create.Get_or_createRequestBuilder Get_or_create
+    public Get_or_create.Get_or_createRequestBuilder Get_or_create
     {
         get => new Dataset.Get_or_create.Get_or_createRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The import property</summary>
-    public Dataset.Import.ImportRequestBuilder Import
+    public Import.ImportRequestBuilder Import
     {
         get => new Dataset.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public Dataset.Related.RelatedRequestBuilder Related
+    public Related.RelatedRequestBuilder Related
     {
         get => new Dataset.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The warm_up_cache property</summary>
-    public Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder Warm_up_cache
+    public Warm_up_cache.Warm_up_cacheRequestBuilder Warm_up_cache
     {
         get => new Dataset.Warm_up_cache.Warm_up_cacheRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dataset.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Dataset.Item.WithPkItemRequestBuilder"/></returns>
-    public Dataset.Item.WithPkItemRequestBuilder this[int position]
+    public Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
@@ -72,7 +72,7 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Dataset.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Dataset.Item.WithPkItemRequestBuilder this[string position]
+    public Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
@@ -311,7 +311,7 @@ public partial class DatasetRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.DatasetRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dataset.DatasetRequestBuilder WithUrl(string rawUrl)
+    public DatasetRequestBuilder WithUrl(string rawUrl)
     {
         return new Dataset.DatasetRequestBuilder(rawUrl, RequestAdapter);
     }

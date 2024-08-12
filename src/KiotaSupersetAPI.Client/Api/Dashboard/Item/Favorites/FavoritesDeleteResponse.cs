@@ -12,7 +12,7 @@ public partial class FavoritesDeleteResponse : IAdditionalDataHolder, IParsable
     /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
     public IDictionary<string, object> AdditionalData { get; set; }
     /// <summary>The result property</summary>
-    public Dashboard.Item.Favorites.FavoritesDeleteResponse_result Result { get; set; }
+    public Favorites.FavoritesDeleteResponse_result Result { get; set; }
 
     /// <summary>
     /// Instantiates a new <see cref="Dashboard.Item.Favorites.FavoritesDeleteResponse"/> and sets the default values.

@@ -72,7 +72,7 @@ public partial class Favorite_statusRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Tag.Favorite_status.Favorite_statusRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Tag.Favorite_status.Favorite_statusRequestBuilder WithUrl(string rawUrl)
+    public Favorite_status.Favorite_statusRequestBuilder WithUrl(string rawUrl)
     {
         return new Tag.Favorite_status.Favorite_statusRequestBuilder(rawUrl, RequestAdapter);
     }

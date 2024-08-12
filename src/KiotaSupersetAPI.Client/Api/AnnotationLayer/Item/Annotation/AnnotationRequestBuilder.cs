@@ -18,7 +18,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.AnnotationLayer.item.annotation.item collection</summary>
     /// <param name="position">The annotation pk for this annotation</param>
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/></returns>
-    public AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder this[int position]
+    public Annotation.Item.WithAnnotation_ItemRequestBuilder this[int position]
     {
         get
         {
@@ -31,7 +31,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
     /// <param name="position">The annotation pk for this annotation</param>
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public AnnotationLayer.Item.Annotation.Item.WithAnnotation_ItemRequestBuilder this[string position]
+    public Annotation.Item.WithAnnotation_ItemRequestBuilder this[string position]
     {
         get
         {
@@ -248,7 +248,7 @@ public partial class AnnotationRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Item.Annotation.AnnotationRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public AnnotationLayer.Item.Annotation.AnnotationRequestBuilder WithUrl(string rawUrl)
+    public Annotation.AnnotationRequestBuilder WithUrl(string rawUrl)
     {
         return new AnnotationLayer.Item.Annotation.AnnotationRequestBuilder(rawUrl, RequestAdapter);
     }

@@ -70,7 +70,7 @@ public partial class AvailableRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Available.AvailableRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Available.AvailableRequestBuilder WithUrl(string rawUrl)
+    public AvailableRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Available.AvailableRequestBuilder(rawUrl, RequestAdapter);
     }

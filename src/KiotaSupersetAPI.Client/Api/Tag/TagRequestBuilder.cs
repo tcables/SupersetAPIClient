@@ -16,34 +16,34 @@ namespace KiotaSupersetAPI.Client.API.Tag;
 public partial class TagRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _info property</summary>
-    public Tag._info._infoRequestBuilder _info
+    public _info._infoRequestBuilder _info
     {
         get => new Tag._info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The bulk_create property</summary>
-    public Tag.Bulk_create.Bulk_createRequestBuilder Bulk_create
+    public Bulk_create.Bulk_createRequestBuilder Bulk_create
     {
         get => new Tag.Bulk_create.Bulk_createRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorite_status property</summary>
-    public Tag.Favorite_status.Favorite_statusRequestBuilder Favorite_status
+    public Favorite_status.Favorite_statusRequestBuilder Favorite_status
     {
         get => new Tag.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The get_objects property</summary>
-    public Tag.Get_objects.Get_objectsRequestBuilder Get_objects
+    public Get_objects.Get_objectsRequestBuilder Get_objects
     {
         get => new Tag.Get_objects.Get_objectsRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public Tag.Related.RelatedRequestBuilder Related
+    public Related.RelatedRequestBuilder Related
     {
         get => new Tag.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.tag.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Tag.Item.Object_typeItemRequestBuilder"/></returns>
-    public Tag.Item.Object_typeItemRequestBuilder this[int position]
+    public Item.Object_typeItemRequestBuilder this[int position]
     {
         get
         {
@@ -56,7 +56,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Tag.Item.Object_typeItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Tag.Item.Object_typeItemRequestBuilder this[string position]
+    public Item.Object_typeItemRequestBuilder this[string position]
     {
         get
         {
@@ -277,7 +277,7 @@ public partial class TagRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Tag.TagRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Tag.TagRequestBuilder WithUrl(string rawUrl)
+    public TagRequestBuilder WithUrl(string rawUrl)
     {
         return new Tag.TagRequestBuilder(rawUrl, RequestAdapter);
     }

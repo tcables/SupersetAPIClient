@@ -96,7 +96,7 @@ public partial class ChartsRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Charts.ChartsRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.Item.Charts.ChartsRequestBuilder WithUrl(string rawUrl)
+    public Charts.ChartsRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.Item.Charts.ChartsRequestBuilder(rawUrl, RequestAdapter);
     }

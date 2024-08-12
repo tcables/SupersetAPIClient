@@ -11,22 +11,22 @@ namespace KiotaSupersetAPI.Client.API.Security;
 public partial class SecurityRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The csrf_token property</summary>
-    public Security.Csrf_token.Csrf_tokenRequestBuilder Csrf_token
+    public Csrf_token.Csrf_tokenRequestBuilder Csrf_token
     {
         get => new Security.Csrf_token.Csrf_tokenRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The guest_token property</summary>
-    public Security.Guest_token.Guest_tokenRequestBuilder Guest_token
+    public Guest_token.Guest_tokenRequestBuilder Guest_token
     {
         get => new Security.Guest_token.Guest_tokenRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The login property</summary>
-    public Security.Login.LoginRequestBuilder Login
+    public Login.LoginRequestBuilder Login
     {
         get => new Security.Login.LoginRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The refresh property</summary>
-    public Security.Refresh.RefreshRequestBuilder Refresh
+    public Refresh.RefreshRequestBuilder Refresh
     {
         get => new Security.Refresh.RefreshRequestBuilder(PathParameters, RequestAdapter);
     }

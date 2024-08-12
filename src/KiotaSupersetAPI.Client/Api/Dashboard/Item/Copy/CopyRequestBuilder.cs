@@ -107,7 +107,7 @@ public partial class CopyRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.Item.Copy.CopyRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.Item.Copy.CopyRequestBuilder WithUrl(string rawUrl)
+    public Copy.CopyRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.Item.Copy.CopyRequestBuilder(rawUrl, RequestAdapter);
     }

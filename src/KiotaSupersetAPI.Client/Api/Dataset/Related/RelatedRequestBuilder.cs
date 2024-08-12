@@ -13,7 +13,7 @@ public partial class RelatedRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dataset.related.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Dataset.Related.Item.WithColumn_nameItemRequestBuilder"/></returns>
-    public Dataset.Related.Item.WithColumn_nameItemRequestBuilder this[string position]
+    public Item.WithColumn_nameItemRequestBuilder this[string position]
     {
         get
         {

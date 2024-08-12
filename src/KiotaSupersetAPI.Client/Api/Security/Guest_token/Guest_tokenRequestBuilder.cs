@@ -99,7 +99,7 @@ public partial class Guest_tokenRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Security.Guest_token.Guest_tokenRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Security.Guest_token.Guest_tokenRequestBuilder WithUrl(string rawUrl)
+    public Guest_token.Guest_tokenRequestBuilder WithUrl(string rawUrl)
     {
         return new Security.Guest_token.Guest_tokenRequestBuilder(rawUrl, RequestAdapter);
     }

@@ -70,7 +70,7 @@ public partial class Schemas_access_for_file_uploadRequestBuilder : BaseRequestB
     /// </summary>
     /// <returns>A <see cref="Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder WithUrl(string rawUrl)
+    public Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Item.Schemas_access_for_file_upload.Schemas_access_for_file_uploadRequestBuilder(rawUrl, RequestAdapter);
     }

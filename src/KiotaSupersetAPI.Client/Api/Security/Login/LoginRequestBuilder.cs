@@ -99,7 +99,7 @@ public partial class LoginRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Security.Login.LoginRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Security.Login.LoginRequestBuilder WithUrl(string rawUrl)
+    public LoginRequestBuilder WithUrl(string rawUrl)
     {
         return new Security.Login.LoginRequestBuilder(rawUrl, RequestAdapter);
     }

@@ -103,7 +103,7 @@ public partial class Bulk_createRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Tag.Bulk_create.Bulk_createRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Tag.Bulk_create.Bulk_createRequestBuilder WithUrl(string rawUrl)
+    public Bulk_create.Bulk_createRequestBuilder WithUrl(string rawUrl)
     {
         return new Tag.Bulk_create.Bulk_createRequestBuilder(rawUrl, RequestAdapter);
     }

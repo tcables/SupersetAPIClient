@@ -16,7 +16,7 @@ namespace KiotaSupersetAPI.Client.API.AnnotationLayer.Item;
 public partial class WithPkItemRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The annotation property</summary>
-    public AnnotationLayer.Item.Annotation.AnnotationRequestBuilder Annotation
+    public Annotation.AnnotationRequestBuilder Annotation
     {
         get => new AnnotationLayer.Item.Annotation.AnnotationRequestBuilder(PathParameters, RequestAdapter);
     }
@@ -228,7 +228,7 @@ public partial class WithPkItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="AnnotationLayer.Item.WithPkItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public AnnotationLayer.Item.WithPkItemRequestBuilder WithUrl(string rawUrl)
+    public WithPkItemRequestBuilder WithUrl(string rawUrl)
     {
         return new AnnotationLayer.Item.WithPkItemRequestBuilder(rawUrl, RequestAdapter);
     }

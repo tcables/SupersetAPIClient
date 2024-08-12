@@ -103,7 +103,7 @@ public partial class WithLog_ItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="API.Report.Item.Log.Item.WithLog_ItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Report.Item.Log.Item.WithLog_ItemRequestBuilder WithUrl(string rawUrl)
+    public Log.Item.WithLog_ItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Report.Item.Log.Item.WithLog_ItemRequestBuilder(rawUrl, RequestAdapter);
     }

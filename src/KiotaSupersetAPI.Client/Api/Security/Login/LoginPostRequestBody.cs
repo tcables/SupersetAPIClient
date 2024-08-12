@@ -15,7 +15,7 @@ public partial class LoginPostRequestBody : IAdditionalDataHolder, IParsable
     public string Password { get; set; }
 
     /// <summary>Choose an authentication provider</summary>
-    public Security.Login.LoginPostRequestBody_provider? Provider { get; set; }
+    public LoginPostRequestBody_provider? Provider { get; set; }
     /// <summary>If true a refresh token is provided also</summary>
     public bool? Refresh { get; set; }
     /// <summary>The username for authentication</summary>

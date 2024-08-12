@@ -96,7 +96,7 @@ public partial class _infoRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database._info._infoRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database._info._infoRequestBuilder WithUrl(string rawUrl)
+    public _info._infoRequestBuilder WithUrl(string rawUrl)
     {
         return new Database._info._infoRequestBuilder(rawUrl, RequestAdapter);
     }

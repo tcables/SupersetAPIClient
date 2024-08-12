@@ -100,7 +100,7 @@ public partial class WithMetric_ItemRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder WithUrl(string rawUrl)
+    public Metric.Item.WithMetric_ItemRequestBuilder WithUrl(string rawUrl)
     {
         return new Dataset.Item.Metric.Item.WithMetric_ItemRequestBuilder(rawUrl, RequestAdapter);
     }

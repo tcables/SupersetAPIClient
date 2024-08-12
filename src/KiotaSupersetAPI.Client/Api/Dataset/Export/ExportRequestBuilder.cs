@@ -72,7 +72,7 @@ public partial class ExportRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dataset.Export.ExportRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dataset.Export.ExportRequestBuilder WithUrl(string rawUrl)
+    public ExportRequestBuilder WithUrl(string rawUrl)
     {
         return new Dataset.Export.ExportRequestBuilder(rawUrl, RequestAdapter);
     }

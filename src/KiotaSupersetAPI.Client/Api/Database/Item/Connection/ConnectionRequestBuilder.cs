@@ -72,7 +72,7 @@ public partial class ConnectionRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Database.Item.Connection.ConnectionRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Database.Item.Connection.ConnectionRequestBuilder WithUrl(string rawUrl)
+    public Connection.ConnectionRequestBuilder WithUrl(string rawUrl)
     {
         return new Database.Item.Connection.ConnectionRequestBuilder(rawUrl, RequestAdapter);
     }

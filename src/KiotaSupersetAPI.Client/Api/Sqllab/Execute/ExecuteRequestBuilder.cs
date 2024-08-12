@@ -79,7 +79,7 @@ public partial class ExecuteRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Sqllab.Execute.ExecuteRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Sqllab.Execute.ExecuteRequestBuilder WithUrl(string rawUrl)
+    public ExecuteRequestBuilder WithUrl(string rawUrl)
     {
         return new Sqllab.Execute.ExecuteRequestBuilder(rawUrl, RequestAdapter);
     }

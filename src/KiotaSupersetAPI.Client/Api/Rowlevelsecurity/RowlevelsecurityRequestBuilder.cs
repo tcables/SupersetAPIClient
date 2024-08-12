@@ -16,19 +16,19 @@ namespace KiotaSupersetAPI.Client.API.Rowlevelsecurity;
 public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _info property</summary>
-    public Rowlevelsecurity._info._infoRequestBuilder _info
+    public _info._infoRequestBuilder _info
     {
         get => new Rowlevelsecurity._info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public Rowlevelsecurity.Related.RelatedRequestBuilder Related
+    public Related.RelatedRequestBuilder Related
     {
         get => new Rowlevelsecurity.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.rowlevelsecurity.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Rowlevelsecurity.Item.WithPkItemRequestBuilder"/></returns>
-    public Rowlevelsecurity.Item.WithPkItemRequestBuilder this[int position]
+    public Item.WithPkItemRequestBuilder this[int position]
     {
         get
         {
@@ -41,7 +41,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="Rowlevelsecurity.Item.WithPkItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Rowlevelsecurity.Item.WithPkItemRequestBuilder this[string position]
+    public Item.WithPkItemRequestBuilder this[string position]
     {
         get
         {
@@ -266,7 +266,7 @@ public partial class RowlevelsecurityRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Rowlevelsecurity.RowlevelsecurityRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Rowlevelsecurity.RowlevelsecurityRequestBuilder WithUrl(string rawUrl)
+    public RowlevelsecurityRequestBuilder WithUrl(string rawUrl)
     {
         return new Rowlevelsecurity.RowlevelsecurityRequestBuilder(rawUrl, RequestAdapter);
     }

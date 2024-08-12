@@ -16,39 +16,39 @@ namespace KiotaSupersetAPI.Client.API.Dashboard;
 public partial class DashboardRequestBuilder : BaseRequestBuilder
 {
     /// <summary>The _info property</summary>
-    public Dashboard._info._infoRequestBuilder _info
+    public _info._infoRequestBuilder _info
     {
         get => new Dashboard._info._infoRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The export property</summary>
-    public Dashboard.Export.ExportRequestBuilder Export
+    public Export.ExportRequestBuilder Export
     {
         get => new Dashboard.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The favorite_status property</summary>
-    public Dashboard.Favorite_status.Favorite_statusRequestBuilder Favorite_status
+    public Favorite_status.Favorite_statusRequestBuilder Favorite_status
     {
         get => new Dashboard.Favorite_status.Favorite_statusRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The import property</summary>
-    public Dashboard.Import.ImportRequestBuilder Import
+    public Import.ImportRequestBuilder Import
     {
         get => new Dashboard.Import.ImportRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The permalink property</summary>
-    public Dashboard.Permalink.PermalinkRequestBuilder Permalink
+    public Permalink.PermalinkRequestBuilder Permalink
     {
         get => new Dashboard.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>The related property</summary>
-    public Dashboard.Related.RelatedRequestBuilder Related
+    public Related.RelatedRequestBuilder Related
     {
         get => new Dashboard.Related.RelatedRequestBuilder(PathParameters, RequestAdapter);
     }
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.dashboard.item collection</summary>
     /// <param name="position">Either the id of the dashboard, or its slug</param>
     /// <returns>A <see cref="Dashboard.Item.Dashboard_ItemRequestBuilder"/></returns>
-    public Dashboard.Item.Dashboard_ItemRequestBuilder this[string position]
+    public Item.Dashboard_ItemRequestBuilder this[string position]
     {
         get
         {
@@ -269,7 +269,7 @@ public partial class DashboardRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Dashboard.DashboardRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Dashboard.DashboardRequestBuilder WithUrl(string rawUrl)
+    public DashboardRequestBuilder WithUrl(string rawUrl)
     {
         return new Dashboard.DashboardRequestBuilder(rawUrl, RequestAdapter);
     }

@@ -84,7 +84,7 @@ public partial class RolesRequestBuilder : BaseRequestBuilder
     /// </summary>
     /// <returns>A <see cref="Me.Roles.RolesRequestBuilder"/></returns>
     /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-    public Me.Roles.RolesRequestBuilder WithUrl(string rawUrl)
+    public RolesRequestBuilder WithUrl(string rawUrl)
     {
         return new Me.Roles.RolesRequestBuilder(rawUrl, RequestAdapter);
     }

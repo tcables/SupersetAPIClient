@@ -18,7 +18,7 @@ public partial class APIRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.api.item collection</summary>
     /// <param name="position">Unique identifier of the item</param>
     /// <returns>A <see cref="API.Item.WithVersionItemRequestBuilder"/></returns>
-    public API.Item.WithVersionItemRequestBuilder this[string position]
+    public Item.WithVersionItemRequestBuilder this[string position]
     {
         get
         {

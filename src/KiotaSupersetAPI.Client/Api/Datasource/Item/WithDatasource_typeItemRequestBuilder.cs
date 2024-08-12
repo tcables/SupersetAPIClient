@@ -15,7 +15,7 @@ public partial class WithDatasource_typeItemRequestBuilder : BaseRequestBuilder
     /// <summary>Gets an item from the KiotaSupersetAPI.Client.API.datasource.item.item collection</summary>
     /// <param name="position">The id of the datasource</param>
     /// <returns>A <see cref="Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/></returns>
-    public Datasource.Item.Item.WithDatasource_ItemRequestBuilder this[int position]
+    public Item.WithDatasource_ItemRequestBuilder this[int position]
     {
         get
         {
@@ -28,7 +28,7 @@ public partial class WithDatasource_typeItemRequestBuilder : BaseRequestBuilder
     /// <param name="position">The id of the datasource</param>
     /// <returns>A <see cref="Datasource.Item.Item.WithDatasource_ItemRequestBuilder"/></returns>
     [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-    public Datasource.Item.Item.WithDatasource_ItemRequestBuilder this[string position]
+    public Item.WithDatasource_ItemRequestBuilder this[string position]
     {
         get
         {
